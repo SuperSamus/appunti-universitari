@@ -1,40 +1,4 @@
-# Livelli
-
-## Gerarchia
-
-$\frac{L_i}{L_{i-1}}$
-
-```mermaid
-flowchart TB
-Applicazione --> S("Sistema Operativo") -- Interfaccia --> Assembler --> Microarchitettura --> Componenti --> Porte --> Hardware
-```
-
-## Modularità
-
-## Regolarità
-
-## Bit
-
-Binaria: $\{0,1\} \; \{F,V\} \; \{false,true\}$
-
-Bit: $\text{valore} \in \{0,1\}$
-
-Combinazioni: $2^n$
-
-\# di bit: $log_2(\#N)$
-
-| Computer | Processore | Bit registri | Valori |
-| --- | --- | --- | --- |
-| Apple II | Motorola 6502 | 8   | 256 |
-| IBM | Intel 8086 | 16  | 65536 |
-
-| Numero esponenziale | Numero | Simbolo |
-| --- | --- | --- |
-| $2^{10}$ | 1024 | K   |
-| $2^{20}$ | 1048576 | M   |
-| $2^{30}$ | 1073741824 | G   |
-
-### Sistema posizionale
+## Sistema posizionale
 
 Decimale: 217
 
@@ -66,7 +30,7 @@ $1*2^0+0*2^1+0*2^2+1*2^3+1*2^4+0*2^5+1*2^6+1*2^7=217$
 | 8   | byte |
 | 4   | nibble |
 
-### Convertire numero
+## Convertire numero
 
 Convertiamo $50_{10}$:
 
@@ -78,9 +42,9 @@ Convertiamo $50_{10}$:
 
 $110010_2$
 
-### Somma
+## Somma
 
-#### Decimale
+### Decimale
 
 $$
 \begin{matrix}
@@ -91,7 +55,7 @@ $$
 
 $$
 
-#### Binaria
+### Binaria
 
 $$
 \begin{matrix}
@@ -102,13 +66,13 @@ $$
 
 $$
 
-### Esadecimale
+## Esadecimale
 
 | 1010 | 1110 | 0000 | 0101 |
 | --- | --- | --- | --- |
 | A   | E   | 0   | 5   |
 
-### Complemento a 2
+## Complemento a 2
 
 Se si ha il primo bit che specifica il segno, si ha che abbiamo 2 zeri, e inoltre sono necessaria controlli per vedere se un numero è negativo.
 

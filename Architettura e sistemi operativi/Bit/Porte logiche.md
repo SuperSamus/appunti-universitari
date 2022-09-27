@@ -1,36 +1,10 @@
-Per rappresentare i numeri, useremo sempre il *complemento a 2*.
-
-## Floating point numbers (FP)
-
-Si potrebbe fare così:
-
-| Peso | 2   | 1   | 1/2 | 1/4 |
-| --- | --- | --- | --- | --- |
-| Cifra | 1   | 0   | .0  | 1   |
-
-Ma si preferisce fare in notazione scientifica:
-
-| 1 bit | 10 bit | 21 bit |
-| --- | --- | --- |
-| Segno | Esponente | Mantissa |
-
-## Ascii
-
-CTRL…NUM…A…Za…z
-
-## Endiness
-
-**Little Endian**: I primi byte sono i meno significativi. $1_{10}=01 \: 00_2$
-
-**Big Endian**: I primi byte sono i più significativi. $1_{10}=00 \: 01_2$
-
 ## Logica
 
 - $A \text{ AND } B=1 \iff A=1 \land B=1$
 - $A \text{ OR } B=1 \iff A=1 \lor B=1$
 - $\text{NOT } A=1 \iff A=0$
 - $A \text{ XOR } B=1 \iff A \neq B \iff ((\text{NOT } A) \text{ AND }(\text{NOT }B)) \text{ OR } (A \text{ AND } B)=1$
-![[b63ab9ba65b21bd415395e8dd74a623f.png]]
+![[Logic gates.png]]
 
 ### Tabella di verità XOR
 
