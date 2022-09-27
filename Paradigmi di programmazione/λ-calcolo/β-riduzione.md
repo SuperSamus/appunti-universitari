@@ -46,12 +46,19 @@ La β-riduzione, nonostante il nome, può *allungare* l'espressione. Ciò può r
 
 Per esempio:
 
-- $(\lambda x.xx)t \rightarrow_\beta tt$
-- $(\lambda x.xx)(\lambda x.xx) \rightarrow_\beta (\lambda x.xx)(\lambda x.xx) \rightarrow_\beta …$
+- $\Delta = (\lambda x.xx)$
+- $\Delta t \rightarrow_\beta tt$
+- $\Omega = \Delta \Delta \rightarrow_\beta \Delta \Delta \rightarrow_\beta …$
 
-TODO: Omega
+Altro esempio:
 
-$\Omega = (\lambda x.xx)(\lambda x.xx)$
+- $k = \lambda xy.y$
+- $k \Omega = (\lambda xy.y)(\Delta \Delta)$
+
+```mermaid
+flowchart LR
+A[kΩ] --> A & B[]
+```
 
 ## Forma normale
 
