@@ -19,7 +19,7 @@ Combinazioni: $2^n$
 | $2^{20}$ | 1048576 | M   |
 | $2^{30}$ | 1073741824 | G   |
 
-## Endiness
+## Endianness
 
 **Little Endian**: I primi byte sono i meno significativi. $1_{10}=01 \: 00_2$
 

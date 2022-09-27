@@ -1,4 +1,4 @@
-## Gestione memoria
+# Gestione memoria
 
 - Programma e dati - memoria
 - Zona dati

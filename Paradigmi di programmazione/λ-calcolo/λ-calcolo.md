@@ -91,7 +91,7 @@ $(\lambda x.t)s \rightarrow t[s/x]$ ([[Sostituzioni]])
 
 $(\lambda x.xy)x$: x è un segnaposto solo dentro la parentesi, fuori è solo una variabile, perché non è più legata dal lambda. $x \in FV(t)$
 
-## Variabili libere (FV)
+## Variabili libere #FV
 
 - $FV(x) =\{x\}$
 - $FV(ts)=FV(t) \cup FV(s)$
