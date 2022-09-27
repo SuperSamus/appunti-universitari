@@ -23,3 +23,7 @@ Non dobbiamo consentire alla funzione di catturare variabili.
 - $(\lambda x.t)[s/x]= \lambda x.t$
 - $(\lambda y.t)[s/x]=\lambda y.t[s/x] \quad (\text{se } y \not \in FV(s))$
 - $(\lambda y.t)[s/x]=(\lambda z.t[z/y])[s/x]=\lambda z.t[z/y][s/x] \quad (\text{se } z \not \in FV(t) \land z \not \in FV(s))$
+
+## Esercizi
+
+[[Esercizi sostituzioni]]

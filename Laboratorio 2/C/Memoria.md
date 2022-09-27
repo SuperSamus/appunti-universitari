@@ -5,10 +5,10 @@
     - Dati statici
         - Variabili globali
         - Variabili statiche
-    - Stack: record di attivazione
+    - #Stack: record di attivazione
         - 1 per ogni blocco di codice (incluso chiamate funzioni)
         - Spazio per variabili locali
-    - Heap: dati dinamici (*runtime*), frammentati
+    - #Heap: dati dinamici (*runtime*), frammentati
         - Memoria allocata dinamicamente, accessa coi [[puntatori]]
 
 ## Allocazione dinamica vs statica

@@ -14,7 +14,3 @@ Esempi:
 - $c_2 = \lambda f.\lambda x.f(fx)$;
 
 Generica procedura $F: \mathbb{N}^k\longrightarrow\mathbb{N}$ che itera un numero di volte una funzione: $t_Fc_{n_1}…c_{n_k}\longrightarrow_\beta c_F(n_1…n_k)$.
-
-## Esercizi
-
-[[Esercizi sostituzioni]]

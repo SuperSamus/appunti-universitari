@@ -1,5 +1,4 @@
-
-## Bin packing/Impacchettamento
+# Bin packing/Impacchettamento
 
 Abbiamo n oggetti da infilare in m contenitori.
 
@@ -15,8 +14,8 @@ Per ogni oggetto, dobbiamo scegliere in quale contenitore inserirlo. Oppure, pre
 
 $y_j$ non è "necessario", ma lo sfruttiamo per la funzione obiettivo. Di conseguenza, bisogna ricordarsi di usarlo anche nei vincoli.
 
-Vincoli[^3]:
-- Vincolo di semiassegnamento: $\displaystyle\sum_{j=1}^n x_{ij}=1 \quad i=1…n$
+Vincoli[^1]:
+- Vincolo di semi-assegnamento: $\displaystyle\sum_{j=1}^n x_{ij}=1 \quad i=1…n$
 - Vincolo di capacità: $\displaystyle\sum_{i=1}^n p_ix_{ij} \leq c_jy_j \quad j=1…n$
 
 Funzione obiettivo min: $f(x)=\displaystyle\sum_{i=1}^n y_i$
@@ -42,8 +41,6 @@ Se non ci fosse stato il vincolo di interezza ($x_{ij} \in \{0,1\}$), potevamo f
 - $c_3=5\frac{1}{2}+2\frac{1}{2}+5\frac{1}{2}+6\frac{1}{2}$
 
 
-[^1]: **Variabili quantitative**: rappresentano un valore numerico
-[^2]: **Variabili logiche**: discriminano tra 2 scelte alternative
-[^3]: Errori possibili:
+[^1]: Errori possibili:
 	- Vincolo di assegnamento sbagliato: $\displaystyle\sum_{j=1}^n \displaystyle\sum_{i=1}^nx_{ij}$ non assicura che lo stesso oggetto sia stato inserito più volte.
 	- Vincolo di capacità sbagliato: $\displaystyle\sum_{i=1}^n x_i \leq \displaystyle\sum_{j=1}^n c_jy_j$ permette agli oggetti di essere smistati in modi impossibili.

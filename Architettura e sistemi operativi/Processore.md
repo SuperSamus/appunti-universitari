@@ -61,12 +61,12 @@ Processore che è specializzato per la grafica.
 
 Contiene
 
-* Memoria
-* GPU
-* Processore
-* FPGA (field-programmable gate array)
-* DMA
-* Bus
+- Memoria
+- GPU
+- Processore
+- FPGA (field-programmable gate array)
+- DMA
+- Bus
 
 **SoC** System on Chip
 
@@ -78,3 +78,7 @@ GPU <--> VM
 FPGA --> P & GPU
 GPU --> Monitor
 ```
+## Vedi anche
+
+- [[Bit]]
+- [[Porte logiche]]

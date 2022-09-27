@@ -87,7 +87,7 @@ variabile|λ-astrazione|astrazione
 
 $(\lambda x.3x^2+4x+6)s=3s^2+4s+6$
 
-$(\lambda x.t)s \rightarrow t[s/x]$ (sostituzione)
+$(\lambda x.t)s \rightarrow t[s/x]$ ([[Sostituzioni]])
 
 $(\lambda x.xy)x$: x è un segnaposto solo dentro la parentesi, fuori è solo una variabile, perché non è più legata dal lambda. $x \in FV(t)$
 
@@ -97,6 +97,9 @@ $(\lambda x.xy)x$: x è un segnaposto solo dentro la parentesi, fuori è solo un
 - $FV(ts)=FV(t) \cup FV(s)$
 - $FV(\lambda x.t)=FV(t) \setminus \{x\}$
 
-## Esercizi
+## Vedi anche
 
-[[Esercizi λ-calcolo base]]
+- [[Esercizi λ-calcolo base]]
+- [[Numerali di Church]]
+- [[α-conversione]]
+- [[β-riduzione]]
