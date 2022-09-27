@@ -1,12 +1,4 @@
-## Programmazione imperativa
-
-Basata sulla macchina di Turing:
-- Variabili mutabili
-- Assegnamento
-- Computazione = trasformazione di stati
-- Istruzioni
-
-## Programmazione funzionale
+# Programmazione funzionale
 
 - Si può programmare solo con **espressioni**
 - Computazione = riscrittura di espressioni
@@ -22,8 +14,8 @@ Si evitano effetti collaterali.
 	- Non ci preoccupiamo di descrivere i passaggi in memoria, lo fa la macchina
 - Espressioni = Funzioni
 - Ricorsione
-- λ-calcolo
+- [[λ-calcolo]]
 
-#### Astrazione
+## Astrazione
 
 $\{x|\varphi (x)\}$
