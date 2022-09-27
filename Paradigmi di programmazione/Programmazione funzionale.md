@@ -1,6 +1,6 @@
 # Programmazione funzionale
 
-- Si può programmare solo con **espressioni**
+- Si può programmare solo con #espressioni
 - Computazione = riscrittura di espressioni
 
 `map f(map g xs) = map(f*g)xs`

@@ -97,6 +97,6 @@ $(\lambda x.xy)x$: x è un segnaposto solo dentro la parentesi, fuori è solo un
 - $FV(ts)=FV(t) \cup FV(s)$
 - $FV(\lambda x.t)=FV(t) \setminus \{x\}$
 
-### Esercizi
+## Esercizi
 
 [[Esercizi λ-calcolo base]]

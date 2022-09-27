@@ -53,4 +53,4 @@ C'è anche bisogno di:
 - CPU
 - Istruzioni
 
-Questo è l'approccio dell'**analisi imperativa**.
+Questo è l'approccio della [[programmazione imperativa]].
