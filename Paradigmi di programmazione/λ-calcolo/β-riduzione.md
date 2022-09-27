@@ -27,6 +27,7 @@ $(\lambda x.x(xy))t \rightarrow_\beta t(ty)$
 
 La β-riduzione non è deterministica nei passaggi:
 
+%%
 $A=(\lambda x.(\lambda y.yx)z)v$
 
 $B=(\lambda y.yv)z$
@@ -34,12 +35,13 @@ $B=(\lambda y.yv)z$
 $C=(\lambda x.zx)v$
 
 $D=zv$
+%%
 
 ```mermaid
 flowchart LR
-A --> B --> D
+A["(λx.(λy.yx)z)v"] --> B["(λy.yv)z"] --> D[zv]
 A --> D
-A --> C --> D
+A --> C["(λx.zx)v"] --> D
 ```
 
 La β-riduzione, nonostante il nome, può *allungare* l'espressione. Ciò può rendere difficile ottimizzare questo processo per i calcolatori.
@@ -57,7 +59,7 @@ Altro esempio:
 
 ```mermaid
 flowchart LR
-A[kΩ] --> A & B[]
+A[kΩ] --> A & B[λy.y]
 ```
 
 ## Forma normale
