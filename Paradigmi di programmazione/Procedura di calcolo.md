@@ -18,6 +18,6 @@ Per loro: $[\mathbb{N} \rightharpoonup \mathbb{N}] \supseteq Ricorsive$
 Questo è un approccio. Approcci sono:
 
 1. Funzioni ricorsive
-2. Church (λ-calcolo)
+2. Church ([[λ-calcolo]])
 3. Turing
     - Algoritmo = Regola che una persona può seguire in modo meccanico e preciso
