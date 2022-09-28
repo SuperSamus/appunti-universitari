@@ -32,8 +32,17 @@ Vincoli:
 - Vincolo di soglia: $t \geq \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
 - Vincolo di domanda: $\displaystyle\sum_{i=1}^n x_i \geq L$
 - Vincolo di budget: $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
+- $x_i \geq 0 \quad i=1…n$
 
 Funzione obiettivo min: $f(x)=t$
 
 ## Aggiunta
 L'attivazione del contratto con ciascun produttore ha un costo amministrativo $c$.
+
+Nuove variabili:
+- $y_i \in \{0,1\}$, $y_i=\begin{cases} 1 &\text{se compro da } i \\ 0 &\text{altrimenti} \end{cases}$,
+
+Vincoli cambiati:
+- Vincolo di budget: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i) \leq E$
+	- $y_i \in \{0,1\}$
+	- Sarebbe figo fare, $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare
