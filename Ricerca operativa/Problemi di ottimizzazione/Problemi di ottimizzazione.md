@@ -13,7 +13,7 @@ $z^\star \in R \quad \text{valore ottimo di (P) se}$
 - $z^\star \leq f(x) \; \forall x \in A$
 - $z^\star \leq f(x) \; \forall x \in A \Rightarrow z \leq z^\star$
 
-$x^\star \in X \text{soluzione ottima di (P) se}$
+$x^\star \in X \quad \text{soluzione ottima di (P) se}$
 
 - $x^\star \in A$
 - $f(x^\star) \leq f(x) \; \forall x \in A$

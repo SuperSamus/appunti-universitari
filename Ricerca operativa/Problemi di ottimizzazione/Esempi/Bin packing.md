@@ -15,7 +15,7 @@ Per ogni oggetto, dobbiamo scegliere in quale contenitore inserirlo. Oppure, pre
 $y_j$ non è "necessario", ma lo sfruttiamo per la funzione obiettivo. Di conseguenza, bisogna ricordarsi di usarlo anche nei vincoli.
 
 Vincoli[^1]:
-- Vincolo di semi-assegnamento: $\displaystyle\sum_{j=1}^n x_{ij}=1 \quad i=1…n$
+- Vincolo di #semiassegnamento: $\displaystyle\sum_{j=1}^n x_{ij}=1 \quad i=1…n$
 - Vincolo di capacità: $\displaystyle\sum_{i=1}^n p_ix_{ij} \leq c_jy_j \quad j=1…n$
 
 Funzione obiettivo min: $f(x)=\displaystyle\sum_{i=1}^n y_i$
