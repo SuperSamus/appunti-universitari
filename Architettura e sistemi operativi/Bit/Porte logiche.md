@@ -6,6 +6,8 @@
 - $A \text{ XOR } B=1 \iff A \neq B \iff ((\text{NOT } A) \text{ AND }(\text{NOT }B)) \text{ OR } (A \text{ AND } B)=1$
 ![[Immagine porte logiche.png]]
 
+Queste immagini sono semplificazioni. Vedi [[Transistor.excalidraw]].
+
 ### Tabella di verità XOR
 
 | Ingresso A | Ingresso B | Uscita Z |

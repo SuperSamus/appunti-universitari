@@ -1,6 +1,6 @@
 # Algebra booleana
 
-Assiomi:
+## Assiomi
 - NOT
 	- $\overline{0}=1$
 	- $\overline{1}=0$
