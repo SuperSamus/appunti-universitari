@@ -16,5 +16,6 @@ $x_i$ quanto gas comprare da ciascuno?
 Vincoli:
 - $\displaystyle\sum_{i=1}^n x_i \geq L$
 - $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
+- $x_i \geq 0 \quad i=1…n$
 
 Funzione obiettivo min: $f(x)=\displaystyle\sum_{i=1}^n x_i/d_i$
