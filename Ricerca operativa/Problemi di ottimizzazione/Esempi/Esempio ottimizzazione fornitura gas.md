@@ -44,5 +44,6 @@ Nuove variabili:
 
 Vincoli cambiati:
 - Vincolo di budget: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i) \leq E$
-	- $y_i \in \{0,1\}$
-	- Sarebbe figo fare, $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare
+	- Sarebbe figo fare $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare
+
+# TODO: come ha fatto prima?
