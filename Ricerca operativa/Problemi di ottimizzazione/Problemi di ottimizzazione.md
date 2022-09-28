@@ -60,6 +60,6 @@ $x^\star \in A \; \text{è soluzione ottima} \iff f(x^\star) \; \text{valore ott
 
 - [[Esempio ottimizzazione pezzi ferrosi]]
 - [[Esempio ottimizzazione wafer]]
+- [[Ottimizzazione problema dello zaino]]
+- [[Ottimizzazione bin packing]]
 - [[Esempio ottimizzazione fornitura gas]]
-- [[Problema dello zaino]]
-- [[Bin packing]]

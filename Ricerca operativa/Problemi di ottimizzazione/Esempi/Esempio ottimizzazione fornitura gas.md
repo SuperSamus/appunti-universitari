@@ -14,14 +14,26 @@ Da trovare:
 $x_i$ quanto gas comprare da ciascuno?
 
 Vincoli:
-- $\displaystyle\sum_{i=1}^n x_i \geq L$
-- $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
+- Vincolo di domanda: $\displaystyle\sum_{i=1}^n x_i \geq L$
+- Vincolo di budget: $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
 - $x_i \geq 0 \quad i=1…n$
 
 Funzione obiettivo min: $f(x)=f(x_1,…,x_n)=\displaystyle\max_{i=1…n} x_i/d_i$
 
-Questa non è una funzione lineare!
+Questa non è una funzione lineare! Non sappiamo risolverla!
 
-Creiamo una variabile ausiliaria: $t=\displaystyle\sum_{i=1}^n x_i/d_i$ (approssimazione superiore del)
+## Nuovi vincoli
+
+Creiamo una variabile ausiliaria: $t=\displaystyle\sum_{i=1}^n x_i/d_i$ (approssimazione superiore del valore max cercato)
 
 $t \geq \displaystyle\max_{i=1…n} x_i/d_i \iff t \geq \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
+
+Vincoli:
+- Vincolo di soglia: $t \geq \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
+- Vincolo di domanda: $\displaystyle\sum_{i=1}^n x_i \geq L$
+- Vincolo di budget: $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
+
+Funzione obiettivo min: $f(x)=t$
+
+## Aggiunta
+L'attivazione del contratto con ciascun produttore ha un costo amministrativo $c$.
