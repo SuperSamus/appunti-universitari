@@ -49,6 +49,8 @@ ABC+AB \overline{C}+\overline{A}B \\
 =B
 $$
 
+# TODO: sistema questa tabella
+
 | $ABC$ | $AB\overline{C}$ | $+$ | B   |
 | ----- | ---------------- | --- | --- |
 | 000   | 000              | 0   | 0   |
@@ -62,6 +64,22 @@ $$
 
 $$
 ABC+A\overline{B}\:\overline{C}+AB\overline{C} \\
-=ABC+A\overline{B}\:\overline{C}+A\overline{B}\:\overline{C}+AB\overline{C} \\
-=A(BC+\overline{B}\:)
+=ABC+AB\overline{C}+A\overline{B}\:\overline{C}+AB\overline{C} \\
+=AB(C+\overline{C})+A\overline{C}(\overline{B}+B) \\
+=AB+A\overline{C} \\
+=A(B+\overline{C})
 $$
+$$
+A\overline{B}\:\overline{C}+AB\overline{C}+\overline{A}BC+ABC \\
+=A\overline{C}(\overline{B}+B)+(\overline{A}+A)BC \\
+=A\overline{C}+BC
+$$
+
+| ABC | z   |
+| --- | --- |
+| 1-0 | 1   |
+| -11 | 1   |
+| 1-0 | 0   |
+| -01 | 0   | 
+
+Questo è un multiplexer, visto su [[Porte logiche#Altro esempio]].

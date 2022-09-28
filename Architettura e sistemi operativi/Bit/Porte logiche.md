@@ -29,7 +29,7 @@ B --o A1
 B --> A2
 ```
 
-### Altro esempio
+### Esempio
 
 Vogliamo una logica dove il risultato è 1 se solo se almeno 3 bit sono uguali a 1.
 
