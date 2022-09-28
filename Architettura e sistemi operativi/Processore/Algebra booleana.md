@@ -28,9 +28,7 @@ $ABC \: var \in \{0,1\}$
 - Involuzioni: $\overline{\overline{A}}=A$
 - De Morgan: $\overline{A*B}=\overline{A}+\overline{B}$
 
-Sfrutteremo queste regole per ridurre il numero di [[Porte logiche]] usate. Al momento, l'espressione somma di prodotti
-
-# TODO
+Sfrutteremo queste regole per ridurre il numero di [[Porte logiche]] usate. Al momento, l'espressione somma di prodotti (∀ "1" nella colonna z → Lemma AND di tanti ingressi quante sono le variabili d'input) con $k$ input ha al massimo $2^k-1$ z uguali a 1.
 
 ## Ottimizzazione
 
@@ -53,16 +51,16 @@ $$
 
 # TODO: sistema questa tabella
 
-| $ABC$ | $AB\overline{C}$ | $+$ | B   |
-| ----- | ---------------- | --- | --- |
-| 000   | 000              | 0   | 0   |
-| 001   | 000              | 0   | 0   |
-| 010   | 001              | 1   | 1   |
-| 011   | 001              | 1   | 1   |
-| 100   | 000              | 0   | 0   |
-| 101   | 000              | 0   | 0   |
-| 110   | 010              | 1   | 1   |
-| 111   | 100              | 1   | 1   |
+| $ABC$ |     |     | $AB\overline{C}$ | $+$ | B   |
+| ----- | --- | --- | ---------------- | --- | --- |
+| 000   | 000 | 0   | 0                |     |     |
+| 001   | 000 | 0   | 0                |     |     |
+| 010   | 001 | 1   | 1                |     |     |
+| 011   | 001 | 1   | 1                |     |     |
+| 100   | 000 | 0   | 0                |     |     |
+| 101   | 000 | 0   | 0                |     |     |
+| 110   | 010 | 1   | 1                |     |     |
+| 111   | 100 | 1   | 1                |     |     |
 
 $$
 ABC+A\overline{B}\:\overline{C}+AB\overline{C} \\
