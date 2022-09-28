@@ -80,7 +80,7 @@ $$
 | 1-0 | 1   |
 | -11 | 1   |
 | 1-0 | 0   |
-| -01 | 0   | 
+| -01 | 0   |
 
 Questo è un multiplexer, visto su [[Porte logiche#Altro esempio]].
 
@@ -95,21 +95,57 @@ NAND
 | 10  | 1   |
 | 11  | 0   |
 
-NND
+### NOT
+
 ```mermaid
 flowchart LR
 A -- 1 --> B[NAND] & B
 B -- 0 --> z
 ```
-AND
+
+### AND
+
 ```mermaid
 flowchart LR
 A & B --> N1[NAND]
 N1 & N1 --> N2[NAND]
 ```
-OR (De Morgan)
+
+### OR (De Morgan)
+
 ```mermaid
 flowchart LR
 A & A --> N1[NAND] --> N3[NAND]
 B & B --> N2[NAND] --> N3
 ```
+
+## Mappe di Karnaugh
+
+Può essere 2, 3 o 4 variabili
+
+### 2 variabili
+| AB  | z   |
+| --- | --- |
+| 00  | 1   |
+| 01  | 1   |
+| 10  | 1   |
+| 11  | 0   |
+
+| A\\B | 0   | 1   |
+| ---- | --- | --- |
+| 0    | 1   | 1   |
+| 1    | 1   | 0   |
+
+### 3 variabili
+| A\\BC | 00  | 01  | 11  | 10  |
+| ----- | --- | --- | --- | --- |
+| 0     |     |     |     |     |
+| 1     |     |     |     |     |
+
+### 4 variabili
+| AB\\CD | 00                                         | 01               | 11  | 10               |
+| ------ | ------------------------------------------ | ---------------- | --- | ---------------- |
+| 00     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |     |                  |
+| 01     | $AB\overline{D}$                           | $AB\overline{D}$ |     |                  |
+| 11     |                                            |                  |     | $AC\overline{D}$ |
+| 10     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |     | $AC\overline{D}$ |
