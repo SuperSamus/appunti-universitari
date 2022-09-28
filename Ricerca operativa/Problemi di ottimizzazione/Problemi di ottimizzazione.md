@@ -43,6 +43,7 @@ $x^\star \in A \; \text{è soluzione ottima} \iff f(x^\star) \; \text{valore ott
 - $f: X \rightarrow \mathbb{R}$
     - Lineare ($f(x)=cx=c_1x_1+c_2x_2+…+c_nx_n \; (c \in \mathbb{R}^n))$
     - Non lineare
+	    - Esempio: $f(t)=max\{t,2t\}=\begin{cases} 2t &\text{se } t \geq 0 \\ t &\text{se } t < 0 \end{cases}$
 - $A=\{x \in X : g_1(x) \leq 0,…,g_n(x) \leq 0\}$ (Minore/maggiore rimpiazzabili a piacimento)
     - $g_i:X \rightarrow \mathbb{R}$
         - Affine (= $f$ lineare + costante)

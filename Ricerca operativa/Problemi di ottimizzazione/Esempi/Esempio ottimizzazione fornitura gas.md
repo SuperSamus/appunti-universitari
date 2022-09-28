@@ -18,4 +18,6 @@ Vincoli:
 - $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
 - $x_i \geq 0 \quad i=1…n$
 
-Funzione obiettivo min: $f(x)=\displaystyle\sum_{i=1}^n x_i/d_i$
+Funzione obiettivo min: $f(x)=f(x_1,…,x_n)=\displaystyle\max_{i=1…n} x_i/d_i$
+
+Questa non è una funzione lineare!

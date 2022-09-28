@@ -10,7 +10,7 @@ Dobbiamo selettivamente inserire oggetti nello zaino per massimizzare il benefic
 
 Per ogni oggetto, decidiamo se inserirlo o meno.
 
-- $x_i \in \{0,1\}$, sarà 1 se infiliamo l'oggetto $i$ nello zaino, 0 altrimenti[^2]
+- $x_{ij} \in \{0,1\}$, $x=\begin{cases} 1 &\text{se } i \text{ nello zaino} \\ 0 &\text{altrimenti} \end{cases}$[^2]
 
 Vincoli:
 
