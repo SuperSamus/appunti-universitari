@@ -9,9 +9,8 @@ Dobbiamo infilare tutti gli oggetti usando meno contenitori possibili.
 
 Per ogni oggetto, dobbiamo scegliere in quale contenitore inserirlo. Oppure, preso un oggetto e un contenitore, decidiamo se inserirlo o meno.
 
-- $x_{ij} \in \{0,1\}$, $x=\begin{cases} 1 &\text{se } i → j \\ 0 &\text{altrimenti} \end{cases}$
-- - $x_{ij} \in \{0,1\}$, $x=\begin{cases} 1 &\text{se } i → j \\ 0 &\text{altrimenti} \end{cases}$
-- $y_j \in \{0,1\}$, 1 se usiamo il contenitore $j$, 0 altrimenti
+- $x_{ij} \in \{0,1\}$, $x_{ij}=\begin{cases} 1 &\text{se } i → j \\ 0 &\text{altrimenti} \end{cases}$
+- $y_j \in \{0,1\}$, $y_j=\begin{cases} 1 &\text{se usiamo il contenitore } j \\ 0 &\text{altrimenti} \end{cases}$
 
 $y_j$ non è "necessario", ma lo sfruttiamo per la funzione obiettivo. Di conseguenza, bisogna ricordarsi di usarlo anche nei vincoli.
 

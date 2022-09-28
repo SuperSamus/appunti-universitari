@@ -21,3 +21,7 @@ Vincoli:
 Funzione obiettivo min: $f(x)=f(x_1,…,x_n)=\displaystyle\max_{i=1…n} x_i/d_i$
 
 Questa non è una funzione lineare!
+
+Creiamo una variabile ausiliaria: $t=\displaystyle\sum_{i=1}^n x_i/d_i$ (approssimazione superiore del)
+
+$t \geq \displaystyle\max_{i=1…n} x_i/d_i \iff t \geq \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
