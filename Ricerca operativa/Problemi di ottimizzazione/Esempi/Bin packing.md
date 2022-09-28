@@ -9,13 +9,13 @@ Dobbiamo infilare tutti gli oggetti usando meno contenitori possibili.
 
 Per ogni oggetto, dobbiamo scegliere in quale contenitore inserirlo. Oppure, preso un oggetto e un contenitore, decidiamo se inserirlo o meno.
 
-- $x_{ij} \in \{0,1\}$, sarà 1 se infiliamo l'oggetto $i$ nel contenitore $j$, 0 altrimenti
-- $y_j \in \{0,1\}$, sarà 1 se usiamo il contenitore $j$, 0 altrimenti
+- $x_{ij} \in \{0,1\}$, 1 se $i$ → $j$, 0 altrimenti
+- $y_j \in \{0,1\}$, 1 se usiamo il contenitore $j$, 0 altrimenti
 
 $y_j$ non è "necessario", ma lo sfruttiamo per la funzione obiettivo. Di conseguenza, bisogna ricordarsi di usarlo anche nei vincoli.
 
 Vincoli[^1]:
-- Vincolo di #semiassegnamento: $\displaystyle\sum_{j=1}^n x_{ij}=1 \quad i=1…n$
+- [[Vincolo di semiassegnamento]]: $\displaystyle\sum_{j=1}^n x_{ij}=1 \quad i=1…n$
 - Vincolo di capacità: $\displaystyle\sum_{i=1}^n p_ix_{ij} \leq c_jy_j \quad j=1…n$
 
 Funzione obiettivo min: $f(x)=\displaystyle\sum_{i=1}^n y_i$
@@ -42,5 +42,4 @@ Se non ci fosse stato il vincolo di interezza ($x_{ij} \in \{0,1\}$), potevamo f
 
 
 [^1]: Errori possibili:
-	- Vincolo di assegnamento sbagliato: $\displaystyle\sum_{j=1}^n \displaystyle\sum_{i=1}^nx_{ij}$ non assicura che lo stesso oggetto sia stato inserito più volte.
 	- Vincolo di capacità sbagliato: $\displaystyle\sum_{i=1}^n x_i \leq \displaystyle\sum_{j=1}^n c_jy_j$ permette agli oggetti di essere smistati in modi impossibili.
