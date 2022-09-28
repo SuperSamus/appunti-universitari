@@ -37,6 +37,8 @@ https://www.youtube.com/watch?v=HqhE-8xXeCQ
 
 "Giocare" con transistor più piccoli è più veloce (gli elettroni entrano/escono più velocemente)
 
+Vedi [[Disegno transistor]]
+
 ### Legge Moore
 
 > Ogni 18 mesi le prestazioni raddoppiano

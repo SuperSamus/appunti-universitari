@@ -4,7 +4,7 @@
 - $A \text{ OR } B=1 \iff A=1 \lor B=1$
 - $\text{NOT } A=1 \iff A=0$
 - $A \text{ XOR } B=1 \iff A \neq B \iff ((\text{NOT } A) \text{ AND }(\text{NOT }B)) \text{ OR } (A \text{ AND } B)=1$
-![[Logic gates.png]]
+![[Immagine porte logiche.png]]
 
 ### Tabella di verità XOR
 
