@@ -37,13 +37,13 @@ Vincoli:
 Funzione obiettivo min: $f(x)=t$
 
 ## Aggiunta
+
 L'attivazione del contratto con ciascun produttore ha un costo amministrativo $c$.
 
 Nuove variabili:
 - $y_i \in \{0,1\}$, $y_i=\begin{cases} 1 &\text{se compro da } i \\ 0 &\text{altrimenti} \end{cases}$,
 
-Vincoli cambiati:
+Vincoli cambiati/nuovi:
 - Vincolo di budget: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i) \leq E$
-	- Sarebbe figo fare $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare
-
-# TODO: come ha fatto prima?
+- $x_i \leq Ly_i$ ($\iff y_i=0 \Rightarrow x_i=0$)
+	- Sarebbe figo fare $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare (idem $x_i > 0 \Rightarrow y_i=1$)
