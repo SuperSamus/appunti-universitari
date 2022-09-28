@@ -1,6 +1,7 @@
 # Algebra booleana
 
 ## Assiomi
+
 - NOT
 	- $\overline{0}=1$
 	- $\overline{1}=0$
@@ -41,6 +42,8 @@ Funzione obiettivo: combinazione a piacere tra:
 
 ### Semplificazione di espressioni booleane
 
+#### Esempio 1
+
 $$
 ABC+AB \overline{C}+\overline{A}B \\
 =AB*(C+\overline{C})+\overline{A}B \\
@@ -49,18 +52,20 @@ ABC+AB \overline{C}+\overline{A}B \\
 =B
 $$
 
-# TODO: sistema questa tabella
+| $A$ | $B$ | $C$ | $ABC$ | $AB\overline{C}$ | $\overline{A}B$ | $+$ | $B$ |
+| --- | --- | --- | ----- | ---------------- | --------------- | --- | --- |
+| 0   | 0   | 0   | 0     | 0                | 0               | 0   | 0   |
+| 0   | 0   | 1   | 0     | 0                | 0               | 0   | 0   |
+| 0   | 1   | 0   | 0     | 0                | 1               | 1   | 1   |
+| 0   | 1   | 1   | 0     | 0                | 1               | 1   | 1   |
+| 1   | 0   | 0   | 0     | 0                | 0               | 0   | 0   |
+| 1   | 0   | 1   | 0     | 0                | 0               | 0   | 0   |
+| 1   | 1   | 0   | 0     | 1                | 0               | 1   | 1   |
+| 1   | 1   | 1   | 1     | 0                | 0               | 1   | 1   |
 
-| $ABC$ |     |     | $AB\overline{C}$ | $+$ | B   |
-| ----- | --- | --- | ---------------- | --- | --- |
-| 000   | 000 | 0   | 0                |     |     |
-| 001   | 000 | 0   | 0                |     |     |
-| 010   | 001 | 1   | 1                |     |     |
-| 011   | 001 | 1   | 1                |     |     |
-| 100   | 000 | 0   | 0                |     |     |
-| 101   | 000 | 0   | 0                |     |     |
-| 110   | 010 | 1   | 1                |     |     |
-| 111   | 100 | 1   | 1                |     |     |
+Da 3 AND (da 3) e 1 OR (da 3), a semplicemente il valore di $B$!
+
+#### Esempio 2
 
 $$
 ABC+A\overline{B}\:\overline{C}+AB\overline{C} \\
@@ -124,6 +129,7 @@ B & B --> N2[NAND] --> N3
 Può essere 2, 3 o 4 variabili
 
 ### 2 variabili
+
 | AB  | z   |
 | --- | --- |
 | 00  | 1   |
@@ -137,6 +143,7 @@ Può essere 2, 3 o 4 variabili
 | 1    | 1   | 0   |
 
 ### 3 variabili
+
 | A\\BC | 00  | 01  | 11  | 10  |
 | ----- | --- | --- | --- | --- |
 | 0     |     |     |     |     |
@@ -144,7 +151,8 @@ Può essere 2, 3 o 4 variabili
 
 ### 4 variabili
 
-# TODO: sigh...
+# TODO: sigh…
+
 | AB\\CD | 00                                         | 01               | 11  | 10               |
 | ------ | ------------------------------------------ | ---------------- | --- | ---------------- |
 | 00     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |     |                  |
