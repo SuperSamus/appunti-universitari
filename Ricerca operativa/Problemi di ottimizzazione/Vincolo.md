@@ -2,6 +2,10 @@
 
 # Vincolo di assegnamento/accoppiamento
 
+$\{1,…,n\}$ oggetti
+
+$\{1,…,m\}$ elementi
+
 Oggetto → 1 solo elemento
 
 Elemento → 1 solo oggetto
@@ -21,6 +25,7 @@ Elemento → 1 solo oggetto
 $\displaystyle\sum_{j=1}^n \displaystyle\sum_{i=1}^nx_{ij}=n$ non assicura che lo stesso oggetto non sia stato inserito più volte.
 
 %%
+
 ## Vincolo di capacità
 
 - $\displaystyle\sum_{i=1}^n p_ix_{ij} \leq c_jy_j \quad j=1…n$
