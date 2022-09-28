@@ -8,7 +8,7 @@ Combinazioni: $2^n$
 
 \# di bit: $log_2(\#N)$
 
-| Computer | Processore | Bit registri | Valori |
+| Computer | [[Processore]] | Bit registri | Valori |
 | --- | --- | --- | --- |
 | Apple II | Motorola 6502 | 8   | 256 |
 | IBM | Intel 8086 | 16  | 65536 |
