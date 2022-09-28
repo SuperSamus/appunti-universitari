@@ -10,7 +10,7 @@ P --> G("Gestione (2° semestre) (Sistema Operativo)")
 
 ## Modello Von Neumann
 
-M ↔ P (Memoria e Processore)
+M ↔ P ([[Memoria]] e Processore)
 
 ```
 while (true) {
@@ -61,7 +61,7 @@ Processore che è specializzato per la grafica.
 
 Contiene
 
-- Memoria
+- [[Memoria]]
 - GPU
 - Processore
 - FPGA (field-programmable gate array)

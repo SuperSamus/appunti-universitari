@@ -49,7 +49,7 @@ Dati $\equiv$ Programma
 
 C'è anche bisogno di:
 
-- Memoria (dati programmi)
+- [[Memoria]] (dati programmi)
 - CPU
 - Istruzioni
 
