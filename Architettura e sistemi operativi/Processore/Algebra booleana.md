@@ -83,3 +83,33 @@ $$
 | -01 | 0   | 
 
 Questo è un multiplexer, visto su [[Porte logiche#Altro esempio]].
+
+# TODO: l'esempio che ha fatto dopo
+
+NAND
+
+| AB  | z   |
+| --- | --- |
+| 00  | 1   |
+| 01  | 1   |
+| 10  | 1   |
+| 11  | 0   |
+
+NND
+```mermaid
+flowchart LR
+A -- 1 --> B[NAND] & B
+B -- 0 --> z
+```
+AND
+```mermaid
+flowchart LR
+A & B --> N1[NAND]
+N1 & N1 --> N2[NAND]
+```
+OR (De Morgan)
+```mermaid
+flowchart LR
+A & A --> N1[NAND] --> N3[NAND]
+B & B --> N2[NAND] --> N3
+```
