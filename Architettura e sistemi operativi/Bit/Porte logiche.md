@@ -8,6 +8,10 @@
 
 Queste immagini sono semplificazioni. Vedi [[Transistor.excalidraw]].
 
+Per fare esercizi si fa il percorso:
+
+Definizione funzione a parole → Tabella di verità → Espressione somma prodotti → Rete /AND/OR/NOT
+
 ### Tabella di verità XOR
 
 | Ingresso A | Ingresso B | Uscita Z |

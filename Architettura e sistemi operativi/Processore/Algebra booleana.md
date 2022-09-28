@@ -28,6 +28,8 @@ $ABC \: var \in \{0,1\}$
 - Involuzioni: $\overline{\overline{A}}=A$
 - De Morgan: $\overline{A*B}=\overline{A}+\overline{B}$
 
+Sfrutteremo queste regole per ridurre il numero di [[Porte logiche]] usate. Al momento, l'espressione somma di prodotti
+
 # TODO
 
 ## Ottimizzazione
