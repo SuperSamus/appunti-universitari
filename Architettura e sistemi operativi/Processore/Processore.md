@@ -37,7 +37,7 @@ https://www.youtube.com/watch?v=HqhE-8xXeCQ
 
 "Giocare" con transistor più piccoli è più veloce (gli elettroni entrano/escono più velocemente)
 
-Vedi [[Disegno transistor]]
+Vedi [[Transistor.excalidraw]]
 
 ### Legge Moore
 
