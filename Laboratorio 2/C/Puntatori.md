@@ -79,4 +79,4 @@ struct Node {
 }
 ```
 
-[[Disegno linked list]]
+[[Linked list.excalidraw]]

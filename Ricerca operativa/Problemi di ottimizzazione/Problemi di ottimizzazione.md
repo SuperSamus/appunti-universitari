@@ -59,5 +59,6 @@ $x^\star \in A \; \text{è soluzione ottima} \iff f(x^\star) \; \text{valore ott
 
 - [[Esempio ottimizzazione pezzi ferrosi]]
 - [[Esempio ottimizzazione wafer]]
+- [[Esempio ottimizzazione fornitura gas]]
 - [[Problema dello zaino]]
 - [[Bin packing]]
