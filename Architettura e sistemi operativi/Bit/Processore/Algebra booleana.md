@@ -98,12 +98,12 @@ Questo è un [[Porte logiche#^b31833|multiplexer]] (con C che fa da arbitro).
 
 ## NAND
 
-| A|B  | z   |
+| A|B | z |
 | --- | --- |
-| 0|0  | 1   |
-| 0|1  | 1   |
-| 1|0  | 1   |
-| 1|1  | 0   |
+| 0|0 | 1 |
+| 0|1 | 1 |
+| 1|0 | 1 |
+| 1|1 | 0 |
 
 Permette di creare tutte le altre porte usando solo se stesso (stessa cosa per NOR). Non è il massimo dell'efficienza però:
 
@@ -130,6 +130,7 @@ N1 & N1 --> N2[NAND]
 ```
 
 ### OR
+
 Sfrutta De Morgan (Vedi [[Algebra booleana#^23603f|teoremi]])
 
 ```mermaid
@@ -173,7 +174,7 @@ Dopo 01 viene 11 (invece che 10 come accadrebbe nella tabella di verità) così 
 
 ### 4 variabili
 
-Nella tabella si possono vedere esempi di 2 celle adiacenti che condividono 3 variabili (una sola variabile cambia).
+In questa tabella si possono vedere esempi di 2 celle adiacenti che condividono 3 variabili (una sola variabile cambia).
 
 | AB\\CD | 00                                         | 01               | 11               | 10               |
 | ------ | ------------------------------------------ | ---------------- | ---------------- | ---------------- |
@@ -182,4 +183,31 @@ Nella tabella si possono vedere esempi di 2 celle adiacenti che condividono 3 va
 | 11     |                                            |                  |                  | $AC\overline{D}$ |
 | 10     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |                  | $AC\overline{D}$ |
 
-Inoltre, cambiare colonna non modifica $AB$, mentre cambiare riga non modifica $CD$.
+Inoltre, cambiare colonna non modifica $AB$, mentre cambiare riga non modifica $CD$:
+
+| AB\\CD | 00   | 01   | 11   | 10   |
+| ------ | ---- | ---- | ---- | ---- |
+| 00     |      |      |      |      |
+| 01     |      |      |      |      |
+| 11     | $AB$ | $AB$ | $AB$ | $AB$ |
+| 10     |      |      |      |      |
+
+Si può anche vedere "quadrati" dove 2 variabili restano uguali:
+
+| AB\\CD | 00  | 01   | 11   | 10  |
+| ------ | --- | ---- | ---- | --- |
+| 00     |     | $AD$ | $AD$ |     |
+| 01     |     | $AD$ | $AD$ |     |
+| 11     |     |      |      |     |
+| 10     |     |      |      |     |
+
+O un rettangolo per 1 variabile:
+
+| AB\\CD | 00  | 01  | 11  | 10  |
+| ------ | --- | --- | --- | --- |
+| 00     |     | $D$ | $D$ |     |
+| 01     |     | $D$ | $D$ |     |
+| 11     |     | $D$ | $D$ |     |
+| 10     |     | $D$ | $D$ |     |
+
+La comodità è, per esempio, se tutte queste celle dove $D=1$ avessero anche $z=1$, allora $z=…+D$.
