@@ -218,4 +218,6 @@ Ciò permette di cancellare variabili dell'espressione di $z$. Il numero di vari
 
 Esempio:
 
-![[Esempio mappa di Karnaugh.excalidraw]]
+![[Disegno esempio mappa di Karnaugh.excalidraw]]
+
+#### Somma
