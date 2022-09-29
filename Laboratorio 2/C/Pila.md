@@ -19,81 +19,88 @@ typedef struct N {
   struct N *next;
 } Nodo;
 
-typedef Nodo *Lista;
+typedef Nodo *Pila;
 
-void insert_ric(int, Lista *);
-void print(Lista);
-void insert(int, Lista *);
+void push(int, Pila *);
+
+// Pila push(int, Pila) non è una buona idea in C
+// Si creerebbero due pile con puntatori che puntano alle stesse cose
+// Sarebbe un disastro di aliasing
+
+int pop(Pila*);
+int peek(Pila);
+void print(Pila);
+void print_reverse(Pila);
+int size(Pila);
 
 int main() {
-  Lista l = NULL;
+  Pila p = NULL;
   int x;
   do {
     scanf("%d", &x);
-    insert(x, &l);
+    push(x, &p);
   } while (x >= 0);
 
-  print(l);
+  printf("La pila contiene %d elementi:\n", size(p));
+  print(p);
+  printf("L'elemento successivo nella pila è: %d\n", peek(p));
+  x = pop(&p);
+  printf("Ho rimosso l'elemento %d\n", x);
+  printf("La pila contiene %d elementi:\n", size(p));
+  print(p);
 }
 
-void insert_ric(int x, Lista *l) {
-  if ((*l) == NULL || (*l)->val > x) {
-    Nodo *nuovo = malloc(sizeof(Nodo));
-    if (nuovo == NULL) {
-      printf("Fatal error");
-      exit(1);
-    }
-    nuovo->val = x;
-    nuovo->next = *l;
-
-    *l = nuovo;
-  } else {
-    insert_ric(x, &(*l)->next);
+int pop(Pila *p) {
+  if (*p == NULL) {
+    return 0;
   }
+
+  Nodo *temp = *p;
+  int val = (*p)->val;
+  *p = (*p)->next;
+  free(temp);
+  return val;
 }
 
-void print(Lista p) {
+int peek(Pila p) {
   if (p == NULL) {
-    return;
+    return 0;
   }
-  printf("%d\n", p->val);
-  print(p->next);
+  return p->val;
 }
 
-void print_reverse(Lista p) {
-  if (p == NULL) {
-    return;
-  }
-  print(p->next);
-  printf("%d\n", p->val);
-}
-
-void insert(int x, Lista *l) {
-  Nodo *prec, *succ, *nuovo;
-
-  nuovo = malloc(sizeof(Nodo));
-  if (nuovo == NULL) {
-    printf("Fatal error");
+void push(int n, Pila *p) {
+  Nodo *nd = malloc(sizeof(Nodo));
+  if (nd == NULL) {
     exit(1);
   }
 
-  nuovo->val = x;
-  nuovo->next = NULL;
+  nd->val = n;
+  nd->next = *p;
+  *p = nd;
+}
 
-  prec = NULL;
-  succ = *l;
-
-  while (succ != NULL && succ->val < x) {
-    prec = succ;
-    succ = succ->next;
+void print(Pila p) {
+  if (p == NULL) {
+    return;
   }
+  printf("%d\n", p->val);
+  print(p->next);
+}
 
-  nuovo->next = succ;
-  if (prec != NULL) {
-    prec->next = nuovo;
-  } else {
-    *l = nuovo;
+void print_reverse(Pila p) {
+  if (p == NULL) {
+    return;
   }
+  print(p->next);
+  printf("%d\n", p->val);
+}
+
+int size(Pila p) {
+  if (p == NULL) {
+    return 0;
+  }
+  return 1 + size(p->next);
 }
 ```
 
