@@ -80,3 +80,5 @@ struct Node {
 ```
 
 ![[Linked list.excalidraw]]
+
+Usabile per esempio per implementare [[pile]].
