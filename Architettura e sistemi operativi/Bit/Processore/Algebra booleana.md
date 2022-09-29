@@ -89,6 +89,14 @@ $$
 
 Questo è un multiplexer, visto su [[Porte logiche#Esempio multiplexer]].
 
+## Esempio 3
+
+$$
+A\overline{B}\:\overline{C}+AB\overline{C}+\overline{A}BC+ABC \\
+= A\overline{C}(\overline{B}+B)+(\overline{A}+A)BC \\
+= A\overline{C}+BC
+$$
+
 # TODO: l'esempio che ha fatto dopo
 
 NAND
