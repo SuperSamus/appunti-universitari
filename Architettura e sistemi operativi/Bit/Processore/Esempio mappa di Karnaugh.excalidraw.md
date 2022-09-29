@@ -62,7 +62,7 @@ AB ^HqVht4aR
 
 
 # Embedded files
-a29818a8648bbccb9bda9b86f28ca6df7d42a83f: $$z=\overline{A}D+A\overline{B}\overline{C}+A\overline{B}C\overline{D}$$
+a29818a8648bbccb9bda9b86f28ca6df7d42a83f: $$z=\bar{A}D+A\bar{B}\bar{C}+A\bar{B}C\bar{D}$$
 
 %%
 # Drawing

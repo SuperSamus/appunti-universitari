@@ -21,9 +21,9 @@ Definizione funzione a parole → Tabella di verità → Espressione somma prodo
 | 1   | 0   | 0   |
 | 1   | 1   | 1   |
 
-$z=\overline{A}*\overline{B}+A*B$ cerca di ottenere 1 dalla tabella.
+$z=\bar{A}*\bar{B}+A*B$ cerca di ottenere 1 dalla tabella.
 
-$z=\overline{\overline{A}B+A\overline{B}}$ cerca di ottenere 0 dalla tabella (e infine nega il risultato). Utile per situazioni in cui ci sono più risultati con 0 che con 1.
+$z=\overline{\bar{A}B+A\bar{B}}$ cerca di ottenere 0 dalla tabella (e infine nega il risultato). Utile per situazioni in cui ci sono più risultati con 0 che con 1.
 
 Visualizzazione grafica (a mano sarebbe fatta diversamente):
 
@@ -51,7 +51,7 @@ Vogliamo una logica dove il risultato è 1 se solo se almeno 3 bit sono uguali a
 | 0   | 0   | 1   | 1   | 1   | 1   |
 | …   | …   | …   | …   | …   | …   | 
 
-Da quello che abbiamo finora in tabella, questa formula è giusta: $z=\overline{A} \: \overline{B}CDE+…$
+Da quello che abbiamo finora in tabella, questa formula è giusta: $z=\bar{A}\bar{B}CDE+…$
 
 Cerchiamo di trovare tutti i casi in cui il risultato è 1. Si può usare il simbolo $-$ per dire "don't care". (Assicurati però di non avere conflitti: per esempio, seconda riga prima colonna, il bit è 0 e non $-$.)
 
@@ -62,7 +62,7 @@ Cerchiamo di trovare tutti i casi in cui il risultato è 1. Si può usare il sim
 | 0   | 0   | 1   | 1   | 1   | 1   |
 | 0   | 1   | 0   | 1   | 1   | 1   |
 
-$z=ABC+\overline{A}BCD+\overline{A}\:\overline{B}CDE+\overline{A}B\overline{C}DE$
+$z=ABC+\bar{A}BCD+\bar{A}\bar{B}CDE+\bar{A}B\bar{C}DE$
 
 ### Esempio multiplexer
 
@@ -87,9 +87,9 @@ Totale = 16
 
 $$
 A_1=D_1 \\
-A_2=\overline{D_1}D_2 \\
-A_3=\overline{D_1}\:\overline{D_2}D_3 \\
-A_4=\overline{D_1}\:\overline{D_2}\:\overline{D_3}D_4
+A_2=\bar{D_1}D_2 \\
+A_3=\bar{D_1}\bar{D_2}D_3 \\
+A_4=\bar{D_1}\bar{D_2}\bar{D_3}D_4
 $$
 
 ```mermaid
@@ -136,5 +136,5 @@ H32 & I32 --> =N[=]
 Il costo di ritardo è:
 
 - Il confronto di ogni bit:
-	- $z=\overline{A}\:\overline{B}+AB$, che sono 1 livello di AND e 1 OR, quindi 2 livelli
+	- $z=\bar{A}\bar{B}+AB$, che sono 1 livello di AND e 1 OR, quindi 2 livelli
 - L'AND per tutti e 32 i bit. Se $n$ è il numero di ingressi per la porta AND, ci vogliono $\log_n32$ livelli (arrotondato per eccesso).

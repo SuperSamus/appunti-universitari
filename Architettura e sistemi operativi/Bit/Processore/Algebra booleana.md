@@ -3,8 +3,8 @@
 ## Assiomi
 
 - NOT
-	- $\overline{0}=1$
-	- $\overline{1}=0$
+	- $\bar{0}=1$
+	- $\bar{1}=0$
 - AND
 	- $0*0=0$
 	- $1*1=1$
@@ -24,12 +24,12 @@ $ABC \: var \in \{0,1\}$
 
 |     | Identità | Elemento nullo | Idempotenza | Complementi        | Commutativa | Associativa       |
 |:---:| -------- | -------------- | ----------- | ------------------ | ----------- | ----------------- |
-| AND | $A*1=A$  | $A*0=0$        | $A*A=A$     | $A*\overline{A}=0$ | $A*B=B*A$   | $(A*B)*C=A*(B*C)$ |
-| OR  | $A+1=1$  | $A+0=A$        | $A+A=A$     | $A+\overline{A}=1$ | $A+B=B+A$   | $(A+B)+C=A+(B+C)$ |
+| AND | $A*1=A$  | $A*0=0$        | $A*A=A$     | $A*\bar{A}=0$ | $A*B=B*A$   | $(A*B)*C=A*(B*C)$ |
+| OR  | $A+1=1$  | $A+0=A$        | $A+A=A$     | $A+\bar{A}=1$ | $A+B=B+A$   | $(A+B)+C=A+(B+C)$ |
 
 - Distributiva: $A*(B+C)=A*B+A*C$ |
-- Involuzioni: $\overline{\overline{A}}=A$
-- De Morgan: $\overline{A*B}=\overline{A}+\overline{B}$
+- Involuzioni: $\overline{\bar{A}}=A$
+- De Morgan: $\overline{A*B}=\bar{A}+\bar{B}$
 
 Sfrutteremo queste regole per ridurre il numero di [[Porte logiche]] usate. Al momento, l'espressione somma di prodotti (∀ "1" nella colonna z → Lemma AND di tanti ingressi quante sono le variabili d'input) con $k$ input ha al massimo $2^k-1$ z uguali a 1.
 
@@ -47,14 +47,14 @@ Funzione obiettivo: combinazione a piacere tra:
 #### Esempio 1
 
 $$
-ABC+AB \overline{C}+\overline{A}B \\
-=AB*(C+\overline{C})+\overline{A}B \\
-=AB+\overline{A}B \\
-=(A+\overline{A})B \\
+ABC+AB \bar{C}+\bar{A}B \\
+=AB*(C+\bar{C})+\bar{A}B \\
+=AB+\bar{A}B \\
+=(A+\bar{A})B \\
 =B
 $$
 
-| $A$ | $B$ | $C$ | $ABC$ | $AB\overline{C}$ | $\overline{A}B$ | $+$ | $B$ |
+| $A$ | $B$ | $C$ | $ABC$ | $AB\bar{C}$ | $\bar{A}B$ | $+$ | $B$ |
 | --- | --- | --- | ----- | ---------------- | --------------- | --- | --- |
 | 0   | 0   | 0   | 0     | 0                | 0               | 0   | 0   |
 | 0   | 0   | 1   | 0     | 0                | 0               | 0   | 0   |
@@ -70,19 +70,19 @@ Da 3 AND (da 3) e 1 OR (da 3), a semplicemente il valore di $B$!
 #### Esempio 2
 
 $$
-ABC+A\overline{B}\:\overline{C}+AB\overline{C} \\
-=ABC+AB\overline{C}+A\overline{B}\:\overline{C}+AB\overline{C} \\
-=AB(C+\overline{C})+A\overline{C}(\overline{B}+B) \\
-=AB+A\overline{C} \\
-=A(B+\overline{C})
+ABC+A\bar{B}\bar{C}+AB\bar{C} \\
+=ABC+AB\bar{C}+A\bar{B}\bar{C}+AB\bar{C} \\
+=AB(C+\bar{C})+A\bar{C}(\bar{B}+B) \\
+=AB+A\bar{C} \\
+=A(B+\bar{C})
 $$
 
 #### Esempio 3
 
 $$
-A\overline{B}\:\overline{C}+AB\overline{C}+\overline{A}BC+ABC \\
-= A\overline{C}(\overline{B}+B)+(\overline{A}+A)BC \\
-= A\overline{C}+BC
+A\bar{B}\bar{C}+AB\bar{C}+\bar{A}BC+ABC \\
+= A\bar{C}(\bar{B}+B)+(\bar{A}+A)BC \\
+= A\bar{C}+BC
 $$
 
 | A   | B   | C   | z   |
@@ -92,7 +92,7 @@ $$
 | 0   | -   | 0   | 0   |
 | -   | 0   | 1   | 0   |
 
-$z=A\overline{C}+BC=$ Prima riga + Seconda riga
+$z=A\bar{C}+BC=$ Prima riga + Seconda riga
 
 Questo è un [[Porte logiche#^b31833|multiplexer]] (con C che fa da arbitro).
 
@@ -178,10 +178,10 @@ In questa tabella si possono vedere esempi di 2 celle adiacenti che condividono 
 
 | AB\\CD | 00                                         | 01               | 11               | 10               |
 | ------ | ------------------------------------------ | ---------------- | ---------------- | ---------------- |
-| 00     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |                  |                  |
-| 01     |                                            | $AB\overline{D}$ | $AB\overline{D}$ |                  |
-| 11     |                                            |                  |                  | $AC\overline{D}$ |
-| 10     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |                  | $AC\overline{D}$ |
+| 00     | $\bar{B}\bar{C}\bar{D}$ |                  |                  |                  |
+| 01     |                                            | $AB\bar{D}$ | $AB\bar{D}$ |                  |
+| 11     |                                            |                  |                  | $AC\bar{D}$ |
+| 10     | $\bar{B}\bar{C}\bar{D}$ |                  |                  | $AC\bar{D}$ |
 
 Inoltre, cambiare colonna non modifica $AB$, mentre cambiare riga non modifica $CD$:
 
