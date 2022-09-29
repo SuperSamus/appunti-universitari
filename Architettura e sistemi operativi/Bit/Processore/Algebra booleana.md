@@ -74,20 +74,6 @@ ABC+A\overline{B}\:\overline{C}+AB\overline{C} \\
 =AB+A\overline{C} \\
 =A(B+\overline{C})
 $$
-$$
-A\overline{B}\:\overline{C}+AB\overline{C}+\overline{A}BC+ABC \\
-=A\overline{C}(\overline{B}+B)+(\overline{A}+A)BC \\
-=A\overline{C}+BC
-$$
-
-| A   | B   | C   | z   |
-| --- | --- | --- | --- |
-| 1   | -   | 0   | 1   |
-| -   | 1   | 1   | 1   |
-| 1   | -   | 0   | 0   |
-| -   | 0   | 1   | 0   |
-
-Questo è un multiplexer, visto su [[Porte logiche#Esempio multiplexer]].
 
 ## Esempio 3
 
@@ -97,9 +83,18 @@ A\overline{B}\:\overline{C}+AB\overline{C}+\overline{A}BC+ABC \\
 = A\overline{C}+BC
 $$
 
-# TODO: l'esempio che ha fatto dopo
+| A   | B   | C   | z   |
+| --- | --- | --- | --- |
+| 1   | -   | 0   | 1   |
+| -   | 1   | 1   | 1   |
+| 0   | -   | 0   | 0   |
+| -   | 0   | 1   | 0   |
 
-NAND
+$z=A\overline{C}+BC=$ Prima riga + Seconda riga 
+
+Questo è un multiplexer (con C che fa da arbitro), visto su [[Porte logiche#Esempio multiplexer]].
+
+## NAND
 
 | AB  | z   |
 | --- | --- |
