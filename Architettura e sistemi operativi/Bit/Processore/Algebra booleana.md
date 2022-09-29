@@ -16,7 +16,9 @@
 	- $1+0=1$
 	- $0+1=1$
 
-## Teoremi
+## Teorema
+
+^23603f
 
 $ABC \: var \in \{0,1\}$
 
@@ -75,7 +77,7 @@ ABC+A\overline{B}\:\overline{C}+AB\overline{C} \\
 =A(B+\overline{C})
 $$
 
-## Esempio 3
+#### Esempio 3
 
 $$
 A\overline{B}\:\overline{C}+AB\overline{C}+\overline{A}BC+ABC \\
@@ -90,18 +92,20 @@ $$
 | 0   | -   | 0   | 0   |
 | -   | 0   | 1   | 0   |
 
-$z=A\overline{C}+BC=$ Prima riga + Seconda riga 
+$z=A\overline{C}+BC=$ Prima riga + Seconda riga
 
-Questo è un multiplexer (con C che fa da arbitro), visto su [[Porte logiche#Esempio multiplexer]].
+Questo è un [[Porte logiche#^b31833|multiplexer]] (con C che fa da arbitro).
 
 ## NAND
 
-| AB  | z   |
+| A|B  | z   |
 | --- | --- |
-| 00  | 1   |
-| 01  | 1   |
-| 10  | 1   |
-| 11  | 0   |
+| 0|0  | 1   |
+| 0|1  | 1   |
+| 1|0  | 1   |
+| 1|1  | 0   |
+
+Permette di creare tutte le altre porte usando solo se stesso (stessa cosa per NOR). Non è il massimo dell'efficienza però:
 
 ### NOT
 
@@ -109,6 +113,12 @@ Questo è un multiplexer (con C che fa da arbitro), visto su [[Porte logiche#Ese
 flowchart LR
 A -- 1 --> B[NAND] & B
 B -- 0 --> z
+```
+
+```mermaid
+flowchart LR
+A -- 0 --> B[NAND] & B
+B -- 1 --> z
 ```
 
 ### AND
@@ -119,7 +129,8 @@ A & B --> N1[NAND]
 N1 & N1 --> N2[NAND]
 ```
 
-### OR (De Morgan)
+### OR
+Sfrutta De Morgan (Vedi [[Algebra booleana#^23603f|teoremi]])
 
 ```mermaid
 flowchart LR
