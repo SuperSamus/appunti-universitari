@@ -2,15 +2,15 @@
 
 Determinare quali delle seguenti espressioni sono λ-termini:
 
-- $\lambda \rightarrow NO$
-- $(\lambda x) \rightarrow NO$
-- $\lambda x.y \rightarrow y$
-- $xxxx \rightarrow x$
-- $\lambda (xy).x \rightarrow NO$
-- $x \rightarrow x$
-- $y \rightarrow y$
-- $xx \rightarrow y$
-- $(\lambda x.(x(\lambda y))) \rightarrow NO$
+- $\lambda$ NO
+- $(\lambda x)$ NO
+- $\lambda x.y$ SI
+- $xxxx$ NO
+- $\lambda (xy).x$ NO
+- $x$ SI
+- $y$ SI
+- $xx$ SI
+- $(\lambda x.(x(\lambda y)))$ NO
 
 Inserire le parentesi mancanti
 
