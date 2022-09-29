@@ -81,4 +81,4 @@ struct Node {
 
 ![[Lista concatenata.excalidraw]]
 
-Usabile per esempio per implementare una [[Lista]] o una [[Pila]].
+Usabile per esempio per implementare una [[Pila]].
