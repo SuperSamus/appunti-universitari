@@ -62,7 +62,7 @@ AB ^HqVht4aR
 
 
 # Embedded files
-a29818a8648bbccb9bda9b86f28ca6df7d42a83f: $$z=\overline{A}D+A\overline{B}\:\overline{C}+A\overline{B}C\overline{D}$$
+a29818a8648bbccb9bda9b86f28ca6df7d42a83f: $$z=\overline{A}D+A\overline{B}\overline{C}+A\overline{B}C\overline{D}$$
 
 %%
 # Drawing
@@ -1600,10 +1600,10 @@ a29818a8648bbccb9bda9b86f28ca6df7d42a83f: $$z=\overline{A}D+A\overline{B}\:\over
 		{
 			"id": "OD56iZKo",
 			"type": "image",
-			"x": -261.38664552431396,
-			"y": 118.96079424562754,
-			"width": 318.8420630668485,
-			"height": 30.805996431579562,
+			"x": -263.5406733909093,
+			"y": 119.16613835943528,
+			"width": 323.1501188000392,
+			"height": 30.395308203964085,
 			"angle": 0,
 			"strokeColor": "#000000",
 			"backgroundColor": "transparent",
