@@ -211,3 +211,10 @@ O un rettangolo per 1 variabile:
 | 10     |     | $D$ | $D$ |     |
 
 La comodità è, per esempio, se tutte queste celle dove $D=1$ avessero anche $z=1$, allora $z=…+D$.
+
+Infine, tecnicamente c'è anche la cella isolata
+
+Ciò permette di cancellare variabili dell'espressione di $z$. Il numero di variabili cancellate per ogni "adiacenza" è $\log_2 \text{\#celle adiacenti}$
+
+Esempio:
+
