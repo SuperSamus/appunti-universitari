@@ -8,6 +8,8 @@ Di solito contiene le seguenti funzionalità:
 - `peak`
 - `size`
 
+Implementazione con [[Linked list.excalidraw|Linked List]]:
+
 ```c
 
 ```
