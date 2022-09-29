@@ -79,6 +79,6 @@ struct Node {
 }
 ```
 
-![[Linked list.excalidraw]]
+![[Lista concatenata.excalidraw]]
 
-Usabile per esempio per implementare [[pile]].
+Usabile per esempio per implementare una [[Lista]] o una [[Pila]].
