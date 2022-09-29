@@ -80,14 +80,14 @@ A\overline{B}\:\overline{C}+AB\overline{C}+\overline{A}BC+ABC \\
 =A\overline{C}+BC
 $$
 
-| ABC | z   |
-| --- | --- |
-| 1-0 | 1   |
-| -11 | 1   |
-| 1-0 | 0   |
-| -01 | 0   |
+| A   | B   | C   | z   |
+| --- | --- | --- | --- |
+| 1   | -   | 0   | 1   |
+| -   | 1   | 1   | 1   |
+| 1   | -   | 0   | 0   |
+| -   | 0   | 1   | 0   |
 
-Questo è un multiplexer, visto su [[Porte logiche#Altro esempio]].
+Questo è un multiplexer, visto su [[Porte logiche#Esempio multiplexer]].
 
 # TODO: l'esempio che ha fatto dopo
 

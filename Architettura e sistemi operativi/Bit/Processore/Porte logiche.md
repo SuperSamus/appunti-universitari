@@ -64,7 +64,7 @@ Cerchiamo di trovare tutti i casi in cui il risultato è 1. Si può usare il sim
 
 $z=ABC+\overline{A}BCD+\overline{A}\:\overline{B}CDE+\overline{A}B\overline{C}DE$
 
-### Altro esempio
+### Esempio multiplexer
 
 Abbiamo diversi dispositivi D1-D4 che mandano un segnale. Se il segnalo che Di manda è uguale a 1, allora Ai diventa 1 a gli altri diventano 0. D1-D4 mandano il segnalo contemporaneamente, e un arbitro fa sì che il Di con i più basso abbia priorità con il segnale 1.
 
