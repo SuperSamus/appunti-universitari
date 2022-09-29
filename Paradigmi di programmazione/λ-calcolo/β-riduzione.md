@@ -17,6 +17,8 @@ $$
 
 ## β-conversione
 
+# TODO: mi devo guardare la registrazione
+
 $(\lambda x.t)s=_\beta t[s/x]$
 
 $t=_\beta s \iff t (_\beta \leftarrow u \rightarrow_\beta)^\star s$
