@@ -140,9 +140,13 @@ B & B --> N2[NAND] --> N3
 
 ## Mappe di Karnaugh
 
-Può essere 2, 3 o 4 variabili
+Alternativa alle tabelle di verità.
+
+Graficamente può essere di 2, 3 o 4 variabili d'ingresso.
 
 ### 2 variabili
+
+Tabella di verità:
 
 | AB  | z   |
 | --- | --- |
@@ -150,6 +154,8 @@ Può essere 2, 3 o 4 variabili
 | 01  | 1   |
 | 10  | 1   |
 | 11  | 0   |
+
+Mappa di Karnaugh
 
 | A\\B | 0   | 1   |
 | ---- | --- | --- |
@@ -163,13 +169,17 @@ Può essere 2, 3 o 4 variabili
 | 0     |     |     |     |     |
 | 1     |     |     |     |     |
 
+Dopo 01 viene 11 (invece che 10 come accadrebbe nella tabella di verità) così che cambi una sola variabile.
+
 ### 4 variabili
 
-# TODO: sigh…
+Nella tabella si possono vedere esempi di 2 celle adiacenti che condividono 3 variabili (una sola variabile cambia).
 
-| AB\\CD | 00                                         | 01               | 11  | 10               |
-| ------ | ------------------------------------------ | ---------------- | --- | ---------------- |
-| 00     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |     |                  |
-| 01     | $AB\overline{D}$                           | $AB\overline{D}$ |     |                  |
-| 11     |                                            |                  |     | $AC\overline{D}$ |
-| 10     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |     | $AC\overline{D}$ |
+| AB\\CD | 00                                         | 01               | 11               | 10               |
+| ------ | ------------------------------------------ | ---------------- | ---------------- | ---------------- |
+| 00     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |                  |                  |
+| 01     |                                            | $AB\overline{D}$ | $AB\overline{D}$ |                  |
+| 11     |                                            |                  |                  | $AC\overline{D}$ |
+| 10     | $\overline{B}\:\overline{C}\:\overline{D}$ |                  |                  | $AC\overline{D}$ |
+
+Inoltre, cambiare colonna non modifica $AB$, mentre cambiare riga non modifica $CD$.
