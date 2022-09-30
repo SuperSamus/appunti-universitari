@@ -1,4 +1,4 @@
-## Logica
+# Logica
 
 - $A \text{ AND } B=1 \iff A=1 \land B=1$
 - $A \text{ OR } B=1 \iff A=1 \lor B=1$
@@ -12,7 +12,7 @@ Per fare esercizi si fa il percorso:
 
 Definizione funzione a parole → Tabella di verità → Espressione somma prodotti → Rete /AND/OR/NOT
 
-### Tabella di verità XOR
+## Tabella di verità XOR
 
 | Ingresso A | Ingresso B | Uscita Z |
 | --- | --- | --- |

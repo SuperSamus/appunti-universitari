@@ -218,7 +218,7 @@ Ciò permette di cancellare variabili dell'espressione di $z$. Il numero di vari
 
 Esempio:
 
-![[Disegno esempio mappa di Karnaugh.excalidraw]]
+![[Mappa di Karnaugh.excalidraw]]
 
 #### Somma
 
@@ -243,7 +243,7 @@ $z_1=x_1\bar{y_1}\bar{y_0}+x_1\bar{x_0}\bar{y_1}+\bar{x_1}\bar{x_0}y_1+\bar{x_1}
 | 11                 | 1   | 0   | 0   | 1   |
 | 10                 | 0   | 1   | 1   | 0   |
 
-$z_2=\bar{x_0}y_0+x_0\bar{y_0}$
+$z_0=\bar{x_0}y_0+x_0\bar{y_0}$
 
 | $x_1x_0$\\$y_1y_0$ | 00  | 01  | 11  | 10  |
 | ------------------ | --- | --- | --- | --- |
