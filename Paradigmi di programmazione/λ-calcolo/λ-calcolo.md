@@ -101,3 +101,5 @@ $(\lambda x.xy)x$: x è un segnaposto solo dentro la parentesi, fuori è solo un
 - $FV(x) =\{x\}$
 - $FV(ts)=FV(t) \cup FV(s)$
 - $FV(\lambda x.t)=FV(t) \setminus \{x\}$
+
+$t$ è *chiuso* se $FV(t)=\emptyset$
