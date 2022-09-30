@@ -12,7 +12,7 @@
 - `int* intPtr` punta a un numero intero
 	- `intPtr+1` punta ad `intptr + i * sizeof(int)`
 
-## Allocazione [[memoria]]
+## Allocazione [[Gestione memoria|memoria]]
 
 - `int a;`
 	- Alloca spazio per `sizeof(int)`

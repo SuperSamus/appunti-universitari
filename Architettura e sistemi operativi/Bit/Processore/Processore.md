@@ -4,8 +4,8 @@
 
 ```mermaid
 flowchart LR
-P(Processore) --> C("Componente (1° semestre)")
-P --> G("Gestione (2° semestre) (Sistema Operativo)")
+P(Processore) --> Componente
+P --> Gestione
 ```
 
 ## Modello Von Neumann
@@ -15,7 +15,7 @@ P --> G("Gestione (2° semestre) (Sistema Operativo)")
 Implementazione fisica della [[macchina di Turing]].
 
 Concetti chiave:
-- [[Memoria]]
+- Memoria
 - Stato
 
 M ↔ P (Memoria e Processore)
@@ -29,6 +29,10 @@ while (true) {
     (interruzioni)
 }
 ```
+
+Grazie a questa possiamo fare:
+- Aritmetica e logica (CPU)
+- Scrivere e leggere memoria (memoria, registri, ...).
 
 ### Von Neumann bottleneck
 
@@ -71,7 +75,7 @@ Processore che è specializzato per la grafica.
 
 Contiene
 
-- [[Memoria]]
+- Memoria
 - GPU
 - Processore
 - FPGA (field-programmable gate array)
