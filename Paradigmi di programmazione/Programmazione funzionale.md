@@ -16,7 +16,7 @@ Non ci sono [[β-riduzione#^b5ae66|effetti collaterali]].
 	- [[Sostituzioni|Passaggio per nome/valore]]
 	- Esecuzione: [[β-riduzione]]
 
-$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }e|\text{fun } x \Rightarrow E| e(E)|…$
+$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }e|ife(e,e,e)\text{fun } x \Rightarrow E| e(E)|\text{ricorsione}|…$
 
 ## Esempi
 

@@ -110,6 +110,10 @@ Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
 - $e_1+e_2$ scrive $ab$, poi ritorna $5$
 - $e_1+e_2$ scrive $ba$, poi ritorna $5$
 
+### Trasparenza referenziale
+
+L'assenza di effetti collaterali, dove semplicemente $e \rightarrow^\star v$.
+
 ## Forma normale
 
 Un termine è in forma normale se non si può β-ridurre.
