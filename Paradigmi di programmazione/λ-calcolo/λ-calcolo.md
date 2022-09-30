@@ -2,21 +2,6 @@
 
 Sono un linguaggio generale per descrivere funzione e operatori come si combinano tra di loro. Arricchibile.
 
-## Esempio JavaScript
-
-$$
-p(x)=x^2+3x+6 \\
-(=\lambda x.x^2+3x+6)5 \\
-=5^2+3*5+6
-$$
-
-```javascript
-function foo(x) {
-    return x*x+3*x+6;
-}
-foo(a);
-```
-
 ## Esempio in matematica
 
 $x-y$, è ambigua da sola:
@@ -41,6 +26,20 @@ Per usare le funzioni si fa per esempio $(\lambda x.x-y)(1)$
 Ciò permette di avere funzioni in output: $(\lambda x. \lambda y.x-y)(a)(b)=(\lambda y.a-y)(b)=a-b$
 
 $xy$ vuol dire applicare $y$ a $x$ (sintatticamente, in matematica sarebbe una moltiplicazione).
+
+### Esempio
+
+```javascript
+function p(x) {
+    return x*x+3*x+6;
+}
+p(5);
+```
+
+$$
+p(x)=x^2+3x+6=(\lambda x.x^2+3x+6) \\
+p(5)=5^2+3*5+6=(\lambda x.x^2+3x+6)5
+$$
 
 ### *Curry*ing
 

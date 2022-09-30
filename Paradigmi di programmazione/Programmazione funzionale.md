@@ -12,8 +12,7 @@ Non ci sono *effetti collaterali*.
 - Le espressioni rappresentano *funzioni*
 - Programmazione *dichiarativa*
 	- Non ci preoccupiamo di descrivere i passaggi in memoria, lo fa la macchina
-- Ricorsione
-- [[λ-calcolo]]
+- Basato sul [[λ-calcolo]]
 
 $E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }e|\text{fun } x \Rightarrow E| e(E)|…$
 
@@ -47,13 +46,11 @@ $\text{map } f(\text{map } g([x_1,…,x_n])) \rightarrow^\star \text{map } f [g(
 
 Se due espressioni hanno effetti collaterali, allora non possono mai essere uguali.
 
-Esempio:
-
-$e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali
-
-- $f(x)=print(a)$
-- $g(x)=print(b)$
-- 
+Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
+- $e_1=print(a);return(2)$
+- $e_2=print(b);return(3)$
+- $e_1+e_2$ scrive $ab$, poi ritorna $5$
+- $e_1+e_2$ scrive $ba$, poi ritorna $5$
 
 ## Astrazione
 
