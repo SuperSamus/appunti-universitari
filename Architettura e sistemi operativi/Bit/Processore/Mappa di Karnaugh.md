@@ -1,6 +1,6 @@
 # Mappa di Karnaugh
 
-Alternativa alle tabelle di verità.
+Alternativa alle tabelle di verità per l'[[Algebra booleana]].
 
 Graficamente può essere di 2, 3 o 4 variabili d'ingresso.
 

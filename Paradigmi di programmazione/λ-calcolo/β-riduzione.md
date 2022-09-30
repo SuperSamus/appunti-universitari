@@ -73,7 +73,3 @@ Un termine è in forma normale se non si può β-ridurre.
 Un termine $t$ ha una forma normale se esiste un termine $s$ tale che $t$ β-riduce ad $s$ in un numero finito di passi.
 
 $\exists s \in NF.t \longrightarrow^\star_\beta s$.
-
-#### Esercizi:
-
-[[Esercizi β-riduzione]]

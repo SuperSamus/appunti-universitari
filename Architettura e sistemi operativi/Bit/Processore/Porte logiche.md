@@ -1,4 +1,6 @@
-# Logica
+# Porte logiche
+
+Circuito digitale in grado di implementare una particolare operazione logica di una o più variabili booleane. Usato per esempio nei [[Processore|processori]].
 
 - $A \text{ AND } B=1 \iff A=1 \land B=1$
 - $A \text{ OR } B=1 \iff A=1 \lor B=1$

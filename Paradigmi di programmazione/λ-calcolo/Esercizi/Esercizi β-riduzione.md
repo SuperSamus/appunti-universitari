@@ -1,4 +1,4 @@
-# Esercizi β-riduzione
+# Esercizi [[β-riduzione]]
 
 $SUCC = \lambda n.\lambda f.\lambda x.f(nfx)$
 

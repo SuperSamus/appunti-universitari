@@ -1,4 +1,4 @@
-# Esercizi sostituzioni
+# Esercizi [[sostituzioni]]
 
 - $(\lambda y.x)[y/x]=(\lambda z.x[z/y])[y/x]=(\lambda z.x)[y/x]=\lambda z.y$
 - $(\lambda y.x (\lambda w.vwx))[uv/x]=\lambda y.x[uv/x](\lambda w.vwx)[uv/x]=\lambda y.uv(\lambda w.(vwx)[uv/x]))=\lambda y.uv(\lambda w.vwuv)$

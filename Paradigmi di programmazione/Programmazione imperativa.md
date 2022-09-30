@@ -2,7 +2,13 @@
 
 Basata sulla [[macchina di Turing]]:
 - Variabili mutabili
+	- `x := x+1`
+		- L-valore: indirizzo in memoria
+		- R-valore: contenuto della memoria
 - Assegnamento
+	- `x := v`
+- Programma: sequenza di **istruzioni**
+	- Modificano lo stato/memoria della macchina
 - Computazione = trasformazione di stati
 - Istruzioni
 

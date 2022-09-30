@@ -140,7 +140,3 @@ flowchart LR
 A & A --> N1[NAND] --> N3[NAND]
 B & B --> N2[NAND] --> N3
 ```
-
-## Vedi anche
-
-- [[Mappa di Karnaugh]]

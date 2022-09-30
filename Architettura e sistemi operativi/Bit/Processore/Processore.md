@@ -86,7 +86,3 @@ GPU <--> VM
 FPGA --> P & GPU
 GPU --> Monitor
 ```
-## Vedi anche
-
-- [[Bit]]
-- [[Porte logiche]]
