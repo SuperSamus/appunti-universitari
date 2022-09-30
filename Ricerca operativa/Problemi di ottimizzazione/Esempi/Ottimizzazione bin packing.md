@@ -1,4 +1,4 @@
-# Bin packing/Impacchettamento
+# [[Problemi di ottimizzazione|Ottimizzazione]] bin packing/impacchettamento
 
 Abbiamo n oggetti da infilare in m contenitori.
 

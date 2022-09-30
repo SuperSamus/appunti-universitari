@@ -1,12 +1,12 @@
-# Esempio ottimizzazione wafer
+# Esempio [[Problemi di ottimizzazione|ottimizzazione]] wafer
 
 Azienda che produce processori possiede 3000 wafer di silicio. 1 wafer si può usare per:
 
-|     | C   | P   |
-| --- | --- | --- |
-| Quantità | 500 | 300 |
-| Resa | 60% | 50% |
-| Prezzo | 200 | 300 |
+|                | C      | P      |
+| -------------- | ------ | ------ |
+| Quantità       | 500    | 300    |
+| Resa           | 60%    | 50%    |
+| Prezzo         | 200    | 300    |
 | Produzione max | 700000 | 400000 |
 
 $X=\mathbb{N}^2$ (*vincolo di interezza*)

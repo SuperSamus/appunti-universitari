@@ -67,7 +67,7 @@ variabile|λ-astrazione|astrazione
 
 ### Esempi
 
-- $(\lambda x.x)$ è un termine, rappresenta la generica applicazione di *identità*. Non si può fare in matematica: $f(x)=x$ ha un dominio e codominio, non può essere generico su tutti i domini.
+- $(\lambda x.x)$ è un termine, rappresenta la generica applicazione di *identità* ($I$). Non si può fare in matematica: $f(x)=x$ ha un dominio e codominio, non può essere generico su tutti i domini.
 - $(\lambda x.y)$ restituisce la costante y.
 - $(\lambda z.y)$ fa la stessa cosa, ma è considerata un'applicazione diversa.
 - $x \in \lambda$

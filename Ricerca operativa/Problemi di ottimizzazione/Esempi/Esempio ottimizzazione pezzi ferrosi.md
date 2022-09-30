@@ -1,4 +1,4 @@
-# Esempio ottimizzazione pezzi ferrosi
+# Esempio [[Problemi di ottimizzazione|ottimizzazione]] pezzi ferrosi
 
 Vogliamo costruire 1000 pezzi ferrosi da 1 kg ciascuno, che devono possedere:
 

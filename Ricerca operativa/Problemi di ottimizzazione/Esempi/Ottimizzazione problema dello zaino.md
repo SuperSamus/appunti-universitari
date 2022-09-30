@@ -1,4 +1,4 @@
-# Problema dello zaino
+# [[Problemi di ottimizzazione|Ottimizzazione]] problema dello zaino
 
 Abbiamo n oggetti da infilare in uno zaino.
 
