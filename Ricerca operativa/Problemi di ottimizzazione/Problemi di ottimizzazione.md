@@ -4,7 +4,7 @@
 	- $A \subseteq X$ insieme delle soluzioni ammissibili (regione ammissibile)
 - $f:X \rightarrow R$ misura della "qualità" delle soluzioni (funzione obiettivo)
 - $(P) \quad min\{f(x):x \in A\}$
-- **Valore ottimo** = estremo inferiore $\{f(x):x \in A\}$
+- **Valore ottimo**: $\inf\{f(x):x \in A\}$
 	* *$z^\star \in R$ valore ottimo di $(P)$ se
 		- $z^\star \leq f(x) \; \forall x \in A$
 		- $z^\star \leq f(x) \; \forall x \in A \Rightarrow z \leq z^\star$

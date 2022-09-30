@@ -1,14 +1,18 @@
-Programma = λ-termini
-
-Esecuzione = $\rightarrow_\beta$
-
-# TODO
-
 ## Teorema di Church-Ross
 
-$t \rightarrow_\beta^\star s_1 \land t \rightarrow_\beta^\star s_2 \Rightarrow \exists n. s_1 \rightarrow_\beta^\star n \land s_2 \rightarrow_\beta^\star n$
+$t \rightarrow_\beta^\star s_1 \land t \rightarrow_\beta^\star s_2 \Rightarrow \exists u. s_1 \rightarrow_\beta^\star n \land s_2 \rightarrow_\beta^\star u$
 
-%%È impossibile che $s_1=_\alpha s_2 \land s_1,s_2 \in NF$%%
+```mermaid
+flowchart LR
+t --> s1 & s2 -.-> u
+```
+
+Se:
+- $t \rightarrow_\beta^\star s_1$
+- $t \rightarrow_\beta^\star s_2$
+- $s_1,s_2 \in NF$
+
+Allora $s_1=_\alpha s_2$.
 
 ### Corollario 1
 Unicità forme normali (modulo $=_\alpha$)
