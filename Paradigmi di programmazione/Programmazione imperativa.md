@@ -14,7 +14,7 @@ Basata sulla [[macchina di Turing]]. Per ottenere un risultato si istruisce la m
 		- Esempi: $I::=skip|x:=E|\text{while } E \text{ do } I|I;I$
 		- Dato $\sigma=\text{stato}$, $<\sigma,I> \rightarrow <\sigma',I'>$
 	- Espressioni: non modificano lo stato
-		- Esempi: $E:=n|b|E+E$
+		- Esempi: $E::=n|b|E+E$
 
 Imperativo: processo di astrazione della macchina fisica (stato & memoria)
 

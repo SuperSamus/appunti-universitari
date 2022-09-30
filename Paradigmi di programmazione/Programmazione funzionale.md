@@ -14,15 +14,19 @@ Si evitano *effetti collaterali*.
 - Ricorsione
 - [[λ-calcolo]]
 
-Esempi programmazione dichiarativa:
+$E::=0|1|...|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }e|\text{fun } x \Rightarrow E| e(E)|...$
 
-```haskell
-FACT n = if n == 0 than 1 else n + FACT(n - 1)
+Esempio fattoriale:
+
+```
+FACT = fun n => if (n == 0) then 1 else n + FACT(n - 1)
 ```
 
-`map f(map g xs)` = `map(f*g)xs`
+(fun x => e)(a) -> e[a/x]
 
-$[x_1,…,x_n] \rightarrow [g(x_1),…,g(x_n)] \rightarrow [f(g(x_1)),…,f(g(x_n))$
+- `map f(map g xs)` = `map(f*g)xs`
+	- $[x_1,…,x_n] \rightarrow [g(x_1),…,g(x_n)] \rightarrow [f(g(x_1)),…,f(g(x_n))$
+
 
 ## Astrazione
 
