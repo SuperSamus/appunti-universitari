@@ -83,15 +83,32 @@ Se:
 Allora $s_1=_\alpha s_2$.
 
 ### Corollario 1
+
 Unicità forme normali (modulo $=_\alpha$).
 
 ### Corollario 2
-$t =_\beta s \iff \exists u.t \rightarrow_\beta^\star u  _\beta^\star\leftarrow s$
+
+$t =_\beta s \iff \exists u.t \rightarrow_\beta^\star u _\beta^\star\leftarrow s$
 
 ### Corollario 3
-L'ordine delle $\beta$-riduzioni è irrilevante.
+
+L'ordine delle β-riduzioni è irrilevante.
 
 Ciò rende facilmente parallelizzabile il λ-calcolo.
+
+## Effetti collaterali
+
+^b5ae66
+
+Un effetto collaterale è un qualsiasi cosa che fa sì che il programma non sia una catena di β-riduzioni.
+
+Se due espressioni hanno effetti collaterali, allora non possono mai essere uguali.
+
+Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
+- $e_1=print(a);return(2)$
+- $e_2=print(b);return(3)$
+- $e_1+e_2$ scrive $ab$, poi ritorna $5$
+- $e_1+e_2$ scrive $ba$, poi ritorna $5$
 
 ## Forma normale
 

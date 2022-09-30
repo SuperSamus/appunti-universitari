@@ -7,7 +7,7 @@
 	- Due espressioni/programmi sono uguali se calcolano lo stesso risultato
 - Computazione = riscrittura di espressioni
 
-Non ci sono *effetti collaterali*.
+Non ci sono [[β-riduzione#^b5ae66|effetti collaterali]].
 
 - Le espressioni rappresentano *funzioni*
 - Programmazione *dichiarativa*
@@ -43,13 +43,3 @@ map f(map g x) // = map(f∘g)x
 ```
 
 $\text{map } f(\text{map } g([x_1,…,x_n])) \rightarrow^\star \text{map } f [g(x_1),…,g(x_n)] \rightarrow^\star [f(g(x_1)),…,f(g(x_n))$
-
-## Effetti collaterali
-
-Se due espressioni hanno effetti collaterali, allora non possono mai essere uguali.
-
-Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
-- $e_1=print(a);return(2)$
-- $e_2=print(b);return(3)$
-- $e_1+e_2$ scrive $ab$, poi ritorna $5$
-- $e_1+e_2$ scrive $ba$, poi ritorna $5$
