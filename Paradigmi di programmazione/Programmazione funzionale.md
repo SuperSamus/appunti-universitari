@@ -13,6 +13,8 @@ Non ci sono *effetti collaterali*.
 - Programmazione *dichiarativa*
 	- Non ci preoccupiamo di descrivere i passaggi in memoria, lo fa la macchina
 - Basato sul [[λ-calcolo]]
+	- [[Sostituzioni|Passaggio per nome/valore]]
+	- Esecuzione: [[β-riduzione]]
 
 $E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }e|\text{fun } x \Rightarrow E| e(E)|…$
 
@@ -51,7 +53,3 @@ Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
 - $e_2=print(b);return(3)$
 - $e_1+e_2$ scrive $ab$, poi ritorna $5$
 - $e_1+e_2$ scrive $ba$, poi ritorna $5$
-
-## Astrazione
-
-$\{x|\varphi (x)\}$
