@@ -40,8 +40,6 @@ Quando decode/exec è più veloce di fetch.
 
 ## Transistor
 
-https://www.youtube.com/watch?v=HqhE-8xXeCQ
-
 | Clock | Dimensioni | Componenti |
 |-------|------------|------------|
 | Khz   | 10 um      | 1000       |
