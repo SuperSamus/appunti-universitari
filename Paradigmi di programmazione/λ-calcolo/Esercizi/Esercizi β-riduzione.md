@@ -10,6 +10,8 @@ $SUCC = \lambda n.\lambda f.\lambda x.f(nfx)$
 Dimostra:
 - $SUCC \: c_n \rightarrow_\beta c_{n+1}$
 
+# TODO
+
 $ADD=\lambda n. \lambda m. \lambda f. \lambda y. nf(mfx)$
 
 Calcolare $ADD \: c_2c_3$
