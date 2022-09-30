@@ -9,8 +9,23 @@ Basata sulla [[macchina di Turing]]:
 	- `x := v`
 - Programma: sequenza di **istruzioni**
 	- Modificano lo stato/memoria della macchina
-- Computazione = trasformazione di stati
-- Istruzioni
+- Computazione = trasformazione di **stati**
+	- Istruzioni: modificano lo stato
+		- Esempi: $I::=skip|x:=E|\text{while } E \text{ do } I|I;I$
+		- Dato $\sigma=\text{stato}$, $<\sigma,I> \rightarrow <\sigma',I'>$
+	- Espressioni: non modificano lo stato
+		- Esempi: $E:=n|b|E+E$
+
+Imperativo: processo di astrazione della macchina fisica (stato & memoria)
+
+Esempio:
+
+```mermaid
+flowchart TB
+Java --> JVM --> Assembly --> A[Architettura VN]
+```
+
+È molto difficile gestire un programma con la programmazione imperativa: le variabili mutabili rendono difficile astrarre il tutto
 
 ## Esempio JavaScript
 $$
