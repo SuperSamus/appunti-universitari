@@ -1,10 +1,12 @@
 # α-conversione
 
+Forma di equivalenza del [[λ-calcolo]].
+
+Formalmente, la relazione $=_\alpha \subseteq \Lambda \times \lambda$
+
 $$
 \frac{}{\lambda x.t =_\alpha \lambda y.t[y/x]} \quad (x \not \in FV(t))
 $$
-
-Formalmente, la relazione $=_\alpha \subseteq \Lambda \times \lambda$
 
 $$
 \frac{}{t=_\alpha t} \text{ riflessiva} \quad \frac{t=_\alpha s}{s=_\alpha t} \text{ simmetrica} \quad \frac{t=_\alpha s \quad s=_\alpha u}{t=_\alpha u} \text{ transitiva}

@@ -10,7 +10,13 @@ P --> G("Gestione (2° semestre) (Sistema Operativo)")
 
 ## Modello Von Neumann
 
-M ↔ P ([[Memoria]] e Processore)
+Implementazione fisica della [[macchina di Turing]].
+
+Concetti chiave:
+- [[Memoria]]
+- Stato
+
+M ↔ P (Memoria e Processore)
 
 ```
 while (true) {

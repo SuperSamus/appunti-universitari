@@ -1,5 +1,7 @@
 # β-riduzione
 
+La più importante regola di riscrittura del [[λ-calcolo]].
+
 $(\lambda x.t)s \rightarrow_\beta t[s/x]$
 
 (Redex → Contractum)

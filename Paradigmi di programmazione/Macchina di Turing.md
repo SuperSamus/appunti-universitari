@@ -52,5 +52,3 @@ C'è anche bisogno di:
 - [[Memoria]] (dati programmi)
 - CPU
 - Istruzioni
-
-Questo è l'approccio della [[programmazione imperativa]].

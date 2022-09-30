@@ -1,4 +1,4 @@
-# Esercizi λ-calcolo base
+# Esercizi [[λ-calcolo]] base
 
 Determinare quali delle seguenti espressioni sono λ-termini:
 
