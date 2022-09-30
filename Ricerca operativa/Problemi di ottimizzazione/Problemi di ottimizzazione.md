@@ -1,34 +1,28 @@
 # Problemi di ottimizzazione
 
-$X \; \text{spazio delle soluzioni} \quad A \subseteq X \; \text{insieme delle soluzioni ammissibili (regione ammissibile)}$
+- $X$ spazio delle soluzioni
+	- $A \subseteq X$ insieme delle soluzioni ammissibili (regione ammissibile)
+- $f:X \rightarrow R$ misura della "qualità" delle soluzioni (funzione obiettivo)
+- $(P) \quad min\{f(x):x \in A\}$
+- **Valore ottimo** = estremo inferiore $\{f(x):x \in A\}$
+	* *$z^\star \in R$ valore ottimo di $(P)$ se
+		- $z^\star \leq f(x) \; \forall x \in A$
+		- $z^\star \leq f(x) \; \forall x \in A \Rightarrow z \leq z^\star$
+	* *$x^\star \in X$ soluzione ottima di $(P)$ se
+		- $x^\star \in A$
+		- $f(x^\star) \leq f(x) \; \forall x \in A$
 
-$f:X \rightarrow R \quad \text{misura della "qualità" delle soluzioni (funzione obiettivo)}$
-
-$(P) \quad min\{f(x):x \in A\}$
-
-$\text{valore ottimo}=\text{estremo inferiore}\{f(x):x \in A\}$
-
-$z^\star \in R \quad \text{valore ottimo di (P) se}$
-
-- $z^\star \leq f(x) \; \forall x \in A$
-- $z^\star \leq f(x) \; \forall x \in A \Rightarrow z \leq z^\star$
-
-$x^\star \in X \quad \text{soluzione ottima di (P) se}$
-
-- $x^\star \in A$
-- $f(x^\star) \leq f(x) \; \forall x \in A$
-
-$x^\star \in A \; \text{è soluzione ottima} \iff f(x^\star) \; \text{valore ottimo}$
+$x^\star \in A \text{ è soluzione ottima} \iff f(x^\star) \; \text{valore ottimo}$
 
 ## Possibili situazioni
 
 - $A= \emptyset \; \text{(valore ottimo} = +\infty)$
     - Esempio: $A=\{x \in \mathbb{R}: x \leq 0, x \geq 1\}$
-- $\exists \; \text{valore ottimo} \; \exists \text{soluzione ottima}$
+- $\exists \text{valore ottimo} \; \exists \text{soluzione ottima}$
     - Esempio: $min\{x^2: x \in \mathbb{R}\}$
-- $\exists \; \text{valore ottimo} \; \nexists \text{soluzione ottima}$
+- $\exists \text{valore ottimo} \; \nexists \text{soluzione ottima}$
     - Esempio: $min\{e^{-x}: x \in \mathbb{R}\}$
-- $\nexists \; \text{valore ottimo}$
+- $\nexists \text{valore ottimo}$
     - Esempio: $min\{log(x): x > 0\}$
     - Problema inferiormente illimitato: $\text{(valore ottimo} = +\infty)$
     - $\forall k \in \mathbb{N} \; \exists x^k \in A : f(x^k) < -k$
