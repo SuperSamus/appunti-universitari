@@ -10,6 +10,8 @@ P --> G("Gestione (2° semestre) (Sistema Operativo)")
 
 ## Modello Von Neumann
 
+^3ae1d1
+
 Implementazione fisica della [[macchina di Turing]].
 
 Concetti chiave:

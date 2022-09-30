@@ -2,6 +2,21 @@
 
 Sono un linguaggio generale per descrivere funzione e operatori come si combinano tra di loro. Arricchibile.
 
+## Esempio JavaScript
+
+$$
+p(x)=x^2+3x+6 \\
+(=\lambda x.x^2+3x+6)5 \\
+=5^2+3*5+6
+$$
+
+```javascript
+function foo(x) {
+    return x*x+3*x+6;
+}
+foo(a);
+```
+
 ## Esempio in matematica
 
 $x-y$, è ambigua da sola:
@@ -54,23 +69,14 @@ variabile|λ-astrazione|astrazione
 ### Esempi
 
 - $(\lambda x.x)$ è un termine, rappresenta la generica applicazione di *identità*. Non si può fare in matematica: $f(x)=x$ ha un dominio e codominio, non può essere generico su tutti i domini.
-
 - $(\lambda x.y)$ restituisce la costante y.
-
 - $(\lambda z.y)$ fa la stessa cosa, ma è considerata un'applicazione diversa.
-
 - $x \in \lambda$
-
 - $t \in \lambda \Rightarrow (\lambda x.t) \in \lambda$
-
 - $t \in \lambda \; \text{se} \; \lambda \Rightarrow (ts) \in \lambda$
-
 - $((\lambda y.y)(\lambda x.(xy)))$
-
 - $(x(\lambda x.(\lambda x.x)))$
-
 - $(x(\lambda y. (\lambda z.z)))$
-
 
 ## Convenzione notazionale
 

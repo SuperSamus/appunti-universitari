@@ -1,6 +1,6 @@
 # Programmazione imperativa
 
-Basata sulla [[macchina di Turing]]:
+Basata sulla [[macchina di Turing]]. Per ottenere un risultato si istruisce la macchina su *come* ottenerlo, sfruttando le funzionalità della [[Processore#^3ae1d1|macchina di Von Neumann]].
 - Variabili mutabili
 	- `x := x+1`
 		- L-valore: indirizzo in memoria
@@ -25,18 +25,4 @@ flowchart TB
 Java --> JVM --> Assembly --> A[Architettura VN]
 ```
 
-È molto difficile gestire un programma con la programmazione imperativa: le variabili mutabili rendono difficile astrarre il tutto
-
-## Esempio JavaScript
-$$
-p(x)=x^2+3x+6 \\
-(=\lambda x.x^2+3x+6)5 \\
-=5^2+3*5+6
-$$
-
-```javascript
-function foo(x) {
-    return x*x+3*x+6;
-}
-foo(a);
-```
+Con la programmazione imperativa si può usare molto poco la matematica che dà garanzie di *correttezza*: l'utilizzo delle variabili mutabili (assenti in matematica), e altri meccanismi come l'I/O, hanno *effetti collaterali*.
