@@ -35,8 +35,11 @@ $$
 =(\lambda b.\lambda x.\lambda y. bxy) \overline{true} \: ts \\
 \rightarrow_\beta(\lambda x.\lambda y.\overline{true} \: xy)ts \\
 \rightarrow_\beta(\lambda y.\overline{true} \: ty)s \\
-\rightarrow_\beta 
-
+\rightarrow_\beta \overline{true} \: ts \\
+= (\lambda xy.x)ts \\
+\rightarrow_\beta (\lambda y.t)s \\
+\rightarrow_\beta t
+$$
 
 
 
