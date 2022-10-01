@@ -57,3 +57,11 @@ $$
 \rightarrow_\beta (\lambda f. \lambda y. (\lambda x.f(fx))(f(f(fx)))) \\
 \rightarrow_\beta (\lambda f. \lambda y. f(f(f(f(fx)))))
 $$
+
+## Funzione di codifica
+
+Esiste sempre una funzione $\overline{F}$ che codifica una funzione "normale" nel λ-calcolo.
+
+$F: \mathbb{N}^k \rightharpoonup \mathbb{N}$
+
+$\exists \overline{F} \in \Lambda.\forall n_1,...,n_k.F(n_1,...,n_k)=m \quad \overline{F} \: \overline{n_1}...\overline{n_k} \rightarrow_\beta^\star \overline{m}$
