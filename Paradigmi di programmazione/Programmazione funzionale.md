@@ -20,11 +20,25 @@ $E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ife(
 
 ## Codifica
 
-Associare agli oggetti un λ-termine.
+Associare agli oggetti un λ-termine. Per esempio, i booleani $true$ e $false$ da soli sono inutili, ma possono essere sfruttati da altre espressioni:
+- $ife(true,\square,\triangle)\rightarrow_\beta^\star\square$
+- $ife(false,\square,\triangle)\rightarrow_\beta^\star\triangle$
 
-Per esempio, i booleani $true$ e $false$ da soli sono inutili, ma possono essere sfruttati nella codifica di altre espressioni:
-- $ife(true,\square,\triangle)=\square$
-- $ife(false,\square,\triangle)=\triangle$
+Come si codificano nel λ-calcolo?
+- $\overline{true}=\lambda xy.x$
+- $\overline{false}=\lambda xy.y$
+- $\overline{ife}=\lambda b.\lambda t.\lambda s.bts$
+
+Esempio:
+$$
+\overline{ife} \: \overline{true} \: ts \\
+=(\lambda b.\lambda x.\lambda y. bxy) \overline{true} \: ts \\
+\rightarrow_\beta(\lambda x.\lambda y.\overline{true} \: xy)ts \\
+\rightarrow_\beta(\lambda y.\overline{true} \: ty)s \\
+\rightarrow_\beta 
+
+
+
 
 ## Esempi
 
