@@ -41,7 +41,10 @@ $$
 \rightarrow_\beta t
 $$
 
-
+```mermaid
+flowchart LR
+F -- θ --> Λ1[Λ] -- β --> Λ2[Λ]
+```
 
 ## Esempi
 
