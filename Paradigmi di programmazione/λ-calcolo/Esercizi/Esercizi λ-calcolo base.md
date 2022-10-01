@@ -19,6 +19,6 @@ Inserire le parentesi mancanti
 - $ux(yz)(\lambda v.vy) \rightarrow ((((u)x)y)z)(\lambda v.vy))$
 - $\lambda xyz.xz(yz) \rightarrow (\lambda x. \lambda y. \lambda z.(((x)z)y)z)$
 
-Trova le #FV:
+Trova le FV:
 
 - $FV(xv(\lambda yz.yv)w)=\{x,v,v,w\}$
