@@ -126,4 +126,6 @@ Teorema: ogni λ-termine ha un punto fisso:
 - Normale: $x: f(x)=x$
 - λ-calcolo: $a: ta=_\beta a$
 
-Ciò implica che il λ-calcolo non si può usare per la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
+Dimostrazione: sia $F$ una chiusura, e $H=\lambda x.F(xx)$. Allora $HH=_\beta F(HH)$, quindi $HH$ è un punto fisso.
+
+Ciò implica che il λ-calcolo non si può usare per implementare la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
