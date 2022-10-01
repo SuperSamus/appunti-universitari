@@ -16,7 +16,7 @@ Non ci sono [[β-riduzione#^b5ae66|effetti collaterali]].
 	- [[Sostituzioni|Passaggio per nome/valore]]
 	- Esecuzione: [[β-riduzione]]
 
-$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }e|ife(e,e,e)\text{fun } x \Rightarrow E| e(E)|\text{ricorsione}|…$
+$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ife(E,E,E)\text{fun } x \Rightarrow E| EE|\text{let } x=E \text{ in }E'|\text{ricorsione}|…$
 
 ## Esempi
 
@@ -43,3 +43,8 @@ map f(map g x) // = map(f∘g)x
 ```
 
 $\text{map } f(\text{map } g([x_1,…,x_n])) \rightarrow^\star \text{map } f [g(x_1),…,g(x_n)] \rightarrow^\star [f(g(x_1)),…,f(g(x_n))$
+### Let
+
+```
+
+```
