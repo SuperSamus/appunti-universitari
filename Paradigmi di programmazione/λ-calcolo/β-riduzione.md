@@ -112,7 +112,7 @@ Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
 
 ### Trasparenza referenziale
 
-L'assenza di effetti collaterali, dove semplicemente $e \rightarrow^\star v$.
+L'assenza di effetti collaterali, dove se $e \rightarrow^\star v$, allora usare $v$ o $e$ non fa differenza.
 
 ## Forma normale
 
