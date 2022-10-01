@@ -18,6 +18,14 @@ Non ci sono [[β-riduzione#^b5ae66|effetti collaterali]].
 
 $E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ife(E,E,E)\text{fun } x \Rightarrow E| EE|\text{let } x=E \text{ in }E|\text{ricorsione}|…$
 
+## Codifica
+
+Associare agli oggetti un λ-termine.
+
+Per esempio, i booleani $true$ e $false$ da soli sono inutili, ma possono essere sfruttati nella codifica di altre espressioni:
+- $ife(true,\square,\triangle)=\square$
+- $ife(false,\square,\triangle)=\triangle$
+
 ## Esempi
 
 ### Fattoriale:
@@ -36,13 +44,6 @@ FACT = fun n => if (n == 0) then 1 else n + FACT(n - 1)
 // -> 6
 ```
 
-### Map
-
-```
-map f(map g x) // = map(f∘g)x
-```
-
-$\text{map } f(\text{map } g([x_1,…,x_n])) \rightarrow^\star \text{map } f [g(x_1),…,g(x_n)] \rightarrow^\star [f(g(x_1)),…,f(g(x_n))$
 ### Let
 
 ```
@@ -61,3 +62,11 @@ in
 ```
 
 $(\lambda(xy).e'')(ee')$
+
+### Map
+
+```
+map f(map g x) // = map(f∘g)x
+```
+
+$\text{map } f(\text{map } g([x_1,…,x_n])) \rightarrow^\star \text{map } f [g(x_1),…,g(x_n)] \rightarrow^\star [f(g(x_1)),…,f(g(x_n))$
