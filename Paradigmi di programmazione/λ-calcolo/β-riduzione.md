@@ -50,13 +50,12 @@ Per esempio:
 
 Altro esempio:
 
-- $k = \lambda xy.y$
-- $I=\lambda x.x$
-- $k \Omega = (\lambda xy.y)(\Delta \Delta)$
+- $k = \lambda x.y$
+- $k \Omega = (\lambda x.y)(\Delta \Delta)$
 
 ```mermaid
 flowchart LR
-A[kΩ] --> A & B[λy.y]
+A[kΩ] --> A & y
 ```
 
 ## Teorema di Church-Rosser
@@ -120,3 +119,11 @@ Un termine è in forma normale se non si può β-ridurre.
 Un termine $t$ ha una forma normale se esiste un termine $s$ tale che $t$ β-riduce ad $s$ in un numero finito di passi.
 
 $\exists s \in NF.t \longrightarrow^\star_\beta s$.
+
+## Punto fisso
+
+Teorema: ogni λ-termine ha un punto fisso:
+- Normale: $x: f(x)=x$
+- λ-calcolo: $a: ta=_\beta a$
+
+Ciò implica che il λ-calcolo non si può usare per la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
