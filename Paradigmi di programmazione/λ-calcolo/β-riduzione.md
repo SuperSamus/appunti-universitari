@@ -51,6 +51,7 @@ Per esempio:
 Altro esempio:
 
 - $k = \lambda xy.y$
+- $I=\lambda x.x$
 - $k \Omega = (\lambda xy.y)(\Delta \Delta)$
 
 ```mermaid
@@ -58,7 +59,7 @@ flowchart LR
 A[kΩ] --> A & B[λy.y]
 ```
 
-## Teorema di Church-Ross
+## Teorema di Church-Rosser
 
 $t \rightarrow_\beta^\star s_1 \land t \rightarrow_\beta^\star s_2 \Rightarrow \exists u. s_1 \rightarrow_\beta^\star n \land s_2 \rightarrow_\beta^\star u$
 

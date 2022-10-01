@@ -58,6 +58,12 @@ Resta però la decidibilità.
 
 FOL: $FOL \vdash A$
 
+### Paradosso di Russel
+
+$R=\{x|x \not \in x\}$
+
+$R \in R \iff R \not \in R$
+
 ### Church (1930)
 
 Funzioni ricorsive $\equiv$ [[λ-calcolo]] $\equiv$ [[Macchina di Turing]]
