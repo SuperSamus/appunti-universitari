@@ -17,14 +17,6 @@ $$
 \frac{t \rightarrow_\beta s}{\lambda x.t \rightarrow_\beta \lambda x.s}
 $$
 
-## β-conversione
-
-# TODO: mi devo guardare la registrazione
-
-$(\lambda x.t)s=_\beta t[s/x]$
-
-$t=_\beta s \iff t (_\beta \leftarrow u \rightarrow_\beta)^\star s$
-
 ## Esempi
 
 $(\lambda x.x(xy))t \rightarrow_\beta t(ty)$
@@ -113,6 +105,12 @@ Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
 ### Trasparenza referenziale
 
 L'assenza di effetti collaterali, dove se $e \rightarrow^\star v$ allora usare $v$ o $e$ non fa differenza.
+
+## β-conversione
+
+$(\lambda x.t)s=_\beta t[s/x]$
+
+$t=_\beta s \iff t (_\beta \leftarrow u \rightarrow_\beta)^\star s$
 
 ## Forma normale
 

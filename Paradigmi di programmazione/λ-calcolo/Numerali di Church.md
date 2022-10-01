@@ -42,7 +42,7 @@ $\overline{n}fx=(\lambda f.\lambda x.f^nx)fx$
 
 ### ADD
 
-- $\overline{ADD}=\lambda n. \lambda m. \lambda f. \lambda y. nf(mfx)$
+$\overline{ADD}=\lambda n. \lambda m. \lambda f. \lambda y. nf(mfx)$
 
 $\overline{ADD} \:\overline{n} \: \overline{m} \rightarrow_\beta f^n(f^mx)=f^{n+m}=\overline{n+m}$
 
