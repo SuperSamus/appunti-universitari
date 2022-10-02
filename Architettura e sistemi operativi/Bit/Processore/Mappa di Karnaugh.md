@@ -220,6 +220,6 @@ flowchart LR
 A --> AND1[AND]
 C --x AND1
 B & C --> AND2[AND]
-AND1 & AND2 --> OR
-
+AND1 & AND2 --> OR --> z
 ```
+
