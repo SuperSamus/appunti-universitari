@@ -155,4 +155,6 @@ B & C --> AND2[AND]
 AND1 & AND2 --> OR --> z
 ```
 
-Passando da $ABC=110$ a $ABC=111$, a causa del ritardo dell'operazione $NOT$ (nell'$AND$ sopra) si ha un breve periodo in cui $C=0$ e $\bar{C}=0$, rendendo il risultato 0.
+Passando da $ABC=110$ a $ABC=111$, a causa del ritardo dell'operazione $NOT$ (nell'$AND$ sopra) si ha un breve periodo in cui $C=0$ e $\bar{C}=0$, rendendo il risultato $0$ (nonostante dovrebbe essere $1$).
+
+![[Wave.png]]
