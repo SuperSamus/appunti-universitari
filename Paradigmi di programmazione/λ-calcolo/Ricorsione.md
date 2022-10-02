@@ -48,6 +48,14 @@ $$
 
 Ora che tutto è definito, definiamo $F \: n=e[F]$[^3] come zucchero sintattico per $fix(\lambda f.\lambda n.e[f])$.
 
+## Esercizio
+
+Definire $mult'$ tramite $fix$ (e $add$).
+
+$mult \: n \: m =_\beta mult' \: n \: m$
+
+$mult' = 
+
 
 
 [^1]: Sarebbero l'insieme delle parti (l'insieme di tutti i sottoinsiemi) dell'universo
