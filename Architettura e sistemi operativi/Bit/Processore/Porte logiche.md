@@ -41,7 +41,7 @@ $z=\bar{A}*\bar{B}+A*B$ cerca di ottenere 1 dalla tabella.
 
 $z=\overline{\bar{A}B+A\bar{B}}$ cerca di ottenere 0 dalla tabella (e infine nega il risultato). Utile per situazioni in cui ci sono più risultati con 0 che con 1.
 
-Visualizzazione grafica (a mano sarebbe fatta diversamente):
+Visualizzazione grafica (i circuiti non si disegnano così):
 
 ```mermaid
 flowchart LR
@@ -108,7 +108,7 @@ $z=BC+A\bar{C}$
 ```mermaid
 flowchart LR
 A --> AND1[AND]
-C --x AND1
+C --o AND1
 B & C --> AND2[AND]
 AND1 & AND2 --> OR --> z
 ```
