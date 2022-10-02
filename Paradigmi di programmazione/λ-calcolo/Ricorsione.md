@@ -30,7 +30,7 @@ Ciò implica che il λ-calcolo non si può usare per implementare la *logica*, i
 
 Questa cosa non si può fare: $t=_\beta\lambda n.ife(n==0.1,mult \: n(t(n-1)))$
 
-Però si può fare $\lambda f.\lambda n.ife(n==0.1,mult \: n(f(n-1)))$
+Però si può fare $s=\lambda f.\lambda n.ife(n==0.1,mult \: n(f(n-1)))$
 
 Da qui ci vorrebbe un λ-termine $fix$ tale che $fix \: t \rightarrow_\beta^\star t(fix \: t)$
 
