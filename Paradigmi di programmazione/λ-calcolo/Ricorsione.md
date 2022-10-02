@@ -28,12 +28,22 @@ Ciò implica che il λ-calcolo non si può usare per implementare la *logica*, i
 
 ## Fix
 
-Questa cosa non si può fare: $t=_\beta\lambda n.ife(n==0.1,mult \: n(t(n-1)))$
+Questa cosa non si può fare: $t=_\beta\lambda n.ife(n==0,1,mult \: n(t(n-1)))$
 
-Però si può fare $s=\lambda f.\lambda n.ife(n==0.1,mult \: n(f(n-1)))$
+Però si può fare $s=\lambda f.\lambda n.ife(n==0,1,mult \: n(f(n-1)))$
 
-Da qui ci vorrebbe un λ-termine $fix$ tale che $fix \: t \rightarrow_\beta^\star t(fix \: t)$
+Da qui ci vorrebbe un λ-termine $fix$ tale che $fix \: t \rightarrow_\beta^\star t(fix \: t)$.
 
+$fix \: s \rightarrow_\beta s(fix \: s) \rightarrow_\beta \lambda n.ife(n==0,1,mult \: n((fix \: s)(n-1))$
 
+Eseguiamolo con 2: 
+
+$$
+(fix \: s)2 \\
+\rightarrow_\beta^\star ife(2==0,1,mult \: n((fix \: s)(2-1)) \\
+\rightarrow_\beta^\star mult \: 2((fix \: s)1) \\
+\rightarrow_\beta^\star mult \: 2(s(fix \: s)1) \\
+\rightarrow_\beta^\star mult 
+$$
 
 [^1]: Sarebbero l'insieme delle parti (l'insieme di tutti i sottoinsiemi) dell'universo
