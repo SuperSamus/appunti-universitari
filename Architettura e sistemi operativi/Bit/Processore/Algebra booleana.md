@@ -96,8 +96,6 @@ $z=A\bar{C}+BC=$ Prima riga + Seconda riga
 
 Questo è un [[Porte logiche#^b31833|multiplexer]] (con C che fa da arbitro).
 
-# TODO: fare anche mappa di Karnaugh (registrazione 09/30)
-
 ## NAND
 
 | A|B | z |

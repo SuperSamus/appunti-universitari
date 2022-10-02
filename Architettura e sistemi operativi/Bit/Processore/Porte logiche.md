@@ -140,3 +140,19 @@ Il costo di ritardo è:
 - Il confronto di ogni bit:
 	- $z=\bar{A}\bar{B}+AB$, che sono 1 livello di AND e 1 OR, quindi 2 livelli
 - L'AND per tutti e 32 i bit. Se $n$ è il numero di ingressi per la porta AND, ci vogliono $\log_n32$ livelli (arrotondato per eccesso).
+
+## Ritardo
+
+Le operazioni nei circuiti richiedono un po' di tempo per essere eseguite, il che può far sì che i "percorsi" del circuito non siano sincronizzati come dovrebbero. Per esempio:
+
+$z=BC+A\bar{C}$
+
+```mermaid
+flowchart LR
+A --> AND1[AND]
+C --x AND1
+B & C --> AND2[AND]
+AND1 & AND2 --> OR --> z
+```
+
+Passando da $ABC=110$ a $ABC=111$, a causa del ritardo dell'operazione $NOT$ (nell'$AND$ sopra) si ha un breve periodo in cui $C=0$ e $\bar{C}=0$, rendendo il risultato 0.

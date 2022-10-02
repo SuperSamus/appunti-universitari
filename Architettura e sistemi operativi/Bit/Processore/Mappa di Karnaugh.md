@@ -208,18 +208,9 @@ Tabella di verità:
 
 Mappa di Karnaugh:
 
-| c\\ab | 00  | 01  | 11  | 10  |
+| C\\AB | 00  | 01  | 11  | 10  |
 | ----- | --- | --- | --- | --- |
 | 0     | 0   | 0   | 1   | 1   |
 | 1     | 0   | 1   | 1   | 0   |
 
-$z=cb+\bar{c}a$
-
-```mermaid
-flowchart LR
-A --> AND1[AND]
-C --x AND1
-B & C --> AND2[AND]
-AND1 & AND2 --> OR --> z
-```
-
+$z=BC+A\bar{C}$
