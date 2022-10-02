@@ -2,7 +2,7 @@
 
 ## Problema
 
-Nel [[λ-calcolo]] puro non si possono associare nomi alle espressioni. Come si può quindi far sì che una funzione chiami se stessa?
+Come si può definire nel [[λ-calcolo]] una funzione che chiama se stessa?
 
 In un linguaggio $e::=z|succ(e)$, il principio di induzione per una funzione $F:Exp \rightarrow \mathbb{N}$ si definisce come $\forall e. P(e) \Leftarrow P(z) \land \forall x.P(x) \rightarrow P(succ(x))$
 
@@ -20,11 +20,9 @@ Notevolmente:
 
 Data una funzione $F:A \rightarrow A$ , un punto fisso $x \in A$ della funzione $F$ ha la proprietà che $f(x)=x$.
 
-Teorema: ogni λ-termine ha un punto fisso: $ta=_\beta a$
+Teorema: ogni λ-termine ha un punto fisso: $ta=_\beta a$.[^2]
 
 Dimostrazione: sia $F$ una funzione, e $H=\lambda x.F(xx)$. Allora $HH=_\beta F(HH)$, quindi $HH$ è un punto fisso di $F$.
-
-Ciò implica che il λ-calcolo non si può usare per implementare la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
 
 ## Fix
 
@@ -43,7 +41,15 @@ $$
 \rightarrow_\beta^\star ife(2==0,1,mult \: n((fix \: s)(2-1)) \\
 \rightarrow_\beta^\star mult \: 2((fix \: s)1) \\
 \rightarrow_\beta^\star mult \: 2(s(fix \: s)1) \\
-\rightarrow_\beta^\star mult 
+\rightarrow_\beta^\star mult \: 2(mult \: 1((fix \: s)0)) \\
+\rightarrow_\beta^\star mult \: 2(mult \: 1(1)) \\
+\rightarrow_\beta^\star 2
 $$
 
+Ora che tutto è definito, definiamo $F \: n=e[F]$[^3] come zucchero sintattico per $fix(\lambda f.\lambda n.e[f])$.
+
+
+
 [^1]: Sarebbero l'insieme delle parti (l'insieme di tutti i sottoinsiemi) dell'universo
+[^2]: Ciò implica che il λ-calcolo non si può usare per implementare la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
+[^3]: Vuol dire che $e$ utilizza $F$
