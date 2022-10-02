@@ -18,11 +18,17 @@ Notevolmente:
 
 ## Punto fisso
 
-Data una funzione $F:A \rightarrow A$ , un punto fisso $x \in A$ della funzione $F$ ha la proprietà che $f(x)=x$.
+Data una funzione $f:A \rightarrow A$ , un punto fisso $x \in A$ della funzione $f$ ha la proprietà che $f(x)=x$.
 
-Teorema: ogni λ-termine ha un punto fisso: $\forall F \in \Lambda.\exists t \in \Lambda \quad Ft=_\beta t$.[^2]
+Teorema: ogni λ-termine ha un punto fisso: $\forall f \in \Lambda.\exists t \in \Lambda \quad ft=_\beta t$.[^2]
 
-Dimostrazione: sia $F$ una funzione, e $H=\lambda x.F(xx)$. Allora $HH=_\beta F(HH)$, quindi $HH$ è un punto fisso di $F$.
+Dimostrazione: sia $f$ una funzione, e $H=\lambda x.f(xx)$. Allora $HH \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))=_\beta f(HH)$, quindi $HH$ è un punto fisso di $f$.
+
+Da $HH$$ si può creare il **combinatore Curry**: $Y = \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$.
+
+Anche qui, $Yf \rightarrow_\beta (\lambda x.f(xx))(\lambda x.f(xx)) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))=_\beta f(Yf)$
+
+Questo ci porta a…
 
 ## Fix
 
@@ -34,7 +40,7 @@ Da qui ci vorrebbe un λ-termine $fix$ tale che $fix \: t \rightarrow_\beta^\sta
 
 $fix \: s \rightarrow_\beta s(fix \: s) \rightarrow_\beta \lambda n.ife(n==0,1,mult \: n((fix \: s)(n-1))$
 
-Eseguiamolo con 2: 
+Eseguiamolo con 2:
 
 $$
 (fix \: s)2 \\
