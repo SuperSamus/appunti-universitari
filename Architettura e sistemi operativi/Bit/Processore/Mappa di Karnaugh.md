@@ -247,3 +247,7 @@ $z=BC+A\bar{C}$
 | 10     | 0   | -   | 1   | -   |
 
 $m=AB+CD$ (riga 3 o colonna 3), oppure $m=BD+AC$ (due quadrati), …
+
+MUX: Sceglie 1 fra $2^k$ ingressi ($k$ bit di controllo)
+
+DEMUX: Manda l'ingresso su 1 delle $2^k$ uscite
