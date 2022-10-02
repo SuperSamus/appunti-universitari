@@ -197,7 +197,7 @@ $z_1=x_1\bar{x_0}y_0+x_1\bar{y_1}y_0+\bar{x_1}x_0y_1+x_0y_1\bar{y_0}$
 
 $z_0=x_0y_0$
 
-### [[Porte logiche|Multiplexer]]
+### [[Porte logiche#^b31833|Multiplexer]]
 
 Tabella di verità:
 
@@ -214,3 +214,12 @@ Mappa di Karnaugh:
 | 1     | 0   | 1   | 1   | 0   |
 
 $z=cb+\bar{c}a$
+
+```mermaid
+flowchart LR
+A --> AND1[AND]
+C --x AND1
+B & C --> AND2[AND]
+AND1 & AND2 --> OR
+
+```
