@@ -199,3 +199,24 @@ Esempio con 2 bit di controllo (semplificato):
 | 0       | 1       | 1   | 0     | 1     | 0     | 0     |
 | 1       | 0       | 1   | 0     | 0     | 1     | 0     |
 | 1       | 1       | 1   | 0     | 0     | 0     | 1     |
+
+## Codificatore
+
+Abbiamo $2^k$ bit, di cui solo 1 è uguale a 1.
+
+Esempio con $k=2$ (4 ingressi):
+
+```mermaid
+flowchart TD
+x1 & x2 & x3 & x4 --> COD --> z
+```
+
+| $x_1$ | $x_2$ | $x_3$ | $x_4$ | $z_1$ | $z_0$ |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| 0     | 0     | 0     | 1     | 0     | 0     |
+| 0     | 0     | 1     | 0     | 0     | 1     |
+| 0     | 1     | 0     | 0     | 1     | 0     |
+| 1     | 0     | 0     | 0     | 1     | 1      |
+
+$z_1=\bar{x_1}x_2\bar{x_3}x_4+x_1\bar{x_2}\bar{x_3}\bar{x_4} \quad z_0=\bar{x_1}\bar{x_2}x_3\bar{x_4}+x_1\bar{x_2}\bar{x_3}\bar{x_4}$
+
