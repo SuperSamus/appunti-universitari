@@ -123,6 +123,8 @@ Passando da $ABC=110$ a $ABC=111$, a causa del ritardo dell'operazione $NOT$ (ne
 
 ^b31833
 
+![[Multiplexer.png]]
+
 Abbiamo diversi dispositivi D1-D4 che mandano un segnale. Se il segnalo che Di manda è uguale a 1, allora Ai diventa 1 a gli altri diventano 0. D1-D4 mandano il segnalo contemporaneamente, e un arbitro fa sì che il Di con i più basso abbia priorità con il segnale 1.
 
 ```mermaid
@@ -161,7 +163,9 @@ D3 --o L3
 D4 --> L3
 ```
 
-## Demux
+## DeMultiplexer
+
+![[DeMultiplexer.png]]
 
 Manda l'ingresso su 1 delle $2^k$ uscite
 
@@ -178,7 +182,7 @@ Esempio con 1 bit di controllo:
 | 1    | 0   | 0     | 0     |
 | 1    | 1   | 0     | 1     |
 
-Semplificata:
+Semplificata (niente risultato 0):
 
 | $ctl$ | $a$ | $z_1$ | $z_2$ |
 | ---- | --- | ----- | ----- |
@@ -187,11 +191,11 @@ Semplificata:
 
 $z_1=\overline{ctl}*a \quad z_2=ctl*a$
 
-Esempio con 2 bit di controllo:
+Esempio con 2 bit di controllo (semplificato):
 
-| $ctl$ | $a$ | $z_1$ | $z_2$ |
-| ---- | --- | ----- | ----- |
-| 0    | 0   | 0     | 0     |
-| 0    | 1   | 1     | 0     |
-| 1    | 0   | 0     | 0     |
-| 1    | 1   | 0     | 1     |
+| $ctl_1$ | $ctl_0$ | $a$   | $z_1$ | $z_2$ | $z_3$ | $z_4$ |
+| ------- | ------- | --- | ----- | ----- | ----- | ----- |
+| 0       | 0       | 1   | 1     | 0     | 0     | 0     |
+| 0       | 1       | 1   | 0     | 1     | 0     | 0     |
+| 1       | 0       | 1   | 0     | 0     | 1     | 0     |
+| 1       | 1       | 1   | 0     | 0     | 0     | 1     |
