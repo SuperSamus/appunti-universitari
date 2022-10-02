@@ -245,3 +245,5 @@ $z=BC+A\bar{C}$
 | 01     | 0   | -   | 1   | -   |
 | 11     | -   | 1   | 1   | 1   |
 | 10     | 0   | -   | 1   | -   |
+
+$m=AB+CD$ (riga 3 o colonna 3), oppure $m=BD+AC$ (due quadrati), …
