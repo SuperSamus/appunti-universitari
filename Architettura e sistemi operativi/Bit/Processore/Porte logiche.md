@@ -10,6 +10,20 @@ Circuito digitale in grado di implementare una particolare operazione logica di 
 
 Queste immagini sono semplificazioni. Vedi [[Transistor.excalidraw]].
 
+Nota che in realtà una normale porta AND o OR supportano solo 2 ingressi. Per creare un circuito che "simula" una porta AND con 4 ingressi, usando solo AND da 2 ingressi:
+
+```mermaid
+flowchart LR
+A --> AND1[AND] --> AND3[AND]
+B --> AND1
+C --> AND2[AND] --> AND3
+D --> AND2
+```
+
+Ciò causa un ritardo del doppio rispetto a fare l'AND su 2 variabili.
+
+Senza un circuito dedicato (per fare i conti in parallelo) o una porta dedicata, il ritardo cresce in maniera esponenziale.
+
 Per fare esercizi si fa il percorso:
 
 Definizione funzione a parole → Tabella di verità → Espressione somma prodotti → Rete /AND/OR/NOT
@@ -51,7 +65,7 @@ Vogliamo una logica dove il risultato è 1 se solo se almeno 3 bit sono uguali a
 | 0   | 0   | 1   | 0   | 1   | 0   |
 | 0   | 0   | 1   | 1   | 0   | 0   |
 | 0   | 0   | 1   | 1   | 1   | 1   |
-| …   | …   | …   | …   | …   | …   | 
+| …   | …   | …   | …   | …   | …   |
 
 Da quello che abbiamo finora in tabella, questa formula è giusta: $z=\bar{A}\bar{B}CDE+…$
 
@@ -66,7 +80,46 @@ Cerchiamo di trovare tutti i casi in cui il risultato è 1. Si può usare il sim
 
 $z=ABC+\bar{A}BCD+\bar{A}\bar{B}CDE+\bar{A}B\bar{C}DE$
 
-### Esempio multiplexer
+### Confrontare 2 numeri da 32 bit
+
+Bisogna vedere bit a bit.
+
+```mermaid
+flowchart TB
+H1 & I1 --> =1[=]
+H2 & I2 --> =2[=]
+...
+H32 & I32 --> =N[=]
+=1 & =2 & =N --> AND
+```
+
+Il costo di ritardo è:
+
+- Il confronto di ogni bit:
+	- $z=\bar{A}\bar{B}+AB$, che sono 1 livello di AND e 1 OR, quindi 2 livelli
+- L'AND per tutti e 32 i bit. Se $n$ è il numero di ingressi per la porta AND, ci vogliono $\log_n32$ livelli (arrotondato per eccesso).
+
+## Ritardo
+
+Le operazioni nei circuiti richiedono un po' di tempo per essere eseguite, il che può far sì che i "percorsi" del circuito non siano sincronizzati come dovrebbero. Per esempio:
+
+$z=BC+A\bar{C}$
+
+```mermaid
+flowchart LR
+A --> AND1[AND]
+C --x AND1
+B & C --> AND2[AND]
+AND1 & AND2 --> OR --> z
+```
+
+Passando da $ABC=110$ a $ABC=111$, a causa del ritardo dell'operazione $NOT$ (nell'$AND$ sopra) si ha un breve periodo in cui $C=0$ e $\bar{C}=0$, rendendo il risultato $0$ (nonostante dovrebbe essere $1$).
+
+![[Wave.png]]
+
+# TODO: La registrazione ha fatto ciao ciao
+
+## Multiplexer
 
 ^b31833
 
@@ -108,55 +161,37 @@ D3 --o L3
 D4 --> L3
 ```
 
-Nota che in realtà una normale porta AND o OR supportano solo 2 ingressi. Per creare un circuito che "simula" una porta AND con 4 ingressi, usando solo AND da 2 ingressi:
+## Demux
 
-```mermaid
-flowchart LR
-A --> AND1[AND] --> AND3[AND]
-B --> AND1
-C --> AND2[AND] --> AND3
-D --> AND2
+Manda l'ingresso su 1 delle $2^k$ uscite
+
+```
+if (ctl==0) then {z1=a; z2=0} else {z1=0; z2=a;}
 ```
 
-Ciò causa un ritardo del doppio rispetto a fare l'AND su 2 variabili.
+Esempio con 1 bit di controllo:
 
-Senza un circuito dedicato (per fare i conti in parallelo) o una porta dedicata, il ritardo cresce in maniera esponenziale.
+| $ctl$ | $a$ | $z_1$ | $z_2$ |
+| ---- | --- | ----- | ----- |
+| 0    | 0   | 0     | 0     |
+| 0    | 1   | 1     | 0     |
+| 1    | 0   | 0     | 0     |
+| 1    | 1   | 0     | 1     |
 
-### Confrontare 2 numeri da 32 bit
+Semplificata:
 
-Bisogna vedere bit a bit.
+| $ctl$ | $a$ | $z_1$ | $z_2$ |
+| ---- | --- | ----- | ----- |
+| 0    | 1   | 1     | 0     |
+| 1    | 1   | 0     | 1     |
 
-```mermaid
-flowchart TB
-H1 & I1 --> =1[=]
-H2 & I2 --> =2[=]
-...
-H32 & I32 --> =N[=]
-=1 & =2 & =N --> AND
-```
+$z_1=\overline{ctl}*a \quad z_2=ctl*a$
 
-Il costo di ritardo è:
+Esempio con 2 bit di controllo:
 
-- Il confronto di ogni bit:
-	- $z=\bar{A}\bar{B}+AB$, che sono 1 livello di AND e 1 OR, quindi 2 livelli
-- L'AND per tutti e 32 i bit. Se $n$ è il numero di ingressi per la porta AND, ci vogliono $\log_n32$ livelli (arrotondato per eccesso).
-
-## Ritardo
-
-Le operazioni nei circuiti richiedono un po' di tempo per essere eseguite, il che può far sì che i "percorsi" del circuito non siano sincronizzati come dovrebbero. Per esempio:
-
-$z=BC+A\bar{C}$
-
-```mermaid
-flowchart LR
-A --> AND1[AND]
-C --x AND1
-B & C --> AND2[AND]
-AND1 & AND2 --> OR --> z
-```
-
-Passando da $ABC=110$ a $ABC=111$, a causa del ritardo dell'operazione $NOT$ (nell'$AND$ sopra) si ha un breve periodo in cui $C=0$ e $\bar{C}=0$, rendendo il risultato $0$ (nonostante dovrebbe essere $1$).
-
-![[Wave.png]]
-
-# TODO: La registrazione ha fatto ciao ciao
+| $ctl$ | $a$ | $z_1$ | $z_2$ |
+| ---- | --- | ----- | ----- |
+| 0    | 0   | 0     | 0     |
+| 0    | 1   | 1     | 0     |
+| 1    | 0   | 0     | 0     |
+| 1    | 1   | 0     | 1     |
