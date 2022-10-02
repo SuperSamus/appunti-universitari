@@ -138,6 +138,8 @@ $c=x_1y_1+x_1x_0y_0+x_0y_1y_0$
 
 ### Moltiplicazione $2 \times 2$
 
+Tabella di verità:
+
 | $x_1x_0$ | $y_1y_0$ | $z_3z_2z_1z_0$ |
 | -------- | -------- | -------------- |
 | 00       | 00       | 0000           |
@@ -195,4 +197,20 @@ $z_1=x_1\bar{x_0}y_0+x_1\bar{y_1}y_0+\bar{x_1}x_0y_1+x_0y_1\bar{y_0}$
 
 $z_0=x_0y_0$
 
-# TODO: quello che ha fatto nella lezione del 30/09
+### [[Porte logiche|Multiplexer]]
+
+Tabella di verità:
+
+| c   | a   | b   | z   |
+| --- | --- | --- | --- |
+| 0   | 1   | -   | 1   |
+| 1   | -   | 1   | 1   |
+
+Mappa di Karnaugh:
+
+| c\\ab | 00  | 01  | 11  | 10  |
+| ----- | --- | --- | --- | --- |
+| 0     | 0   | 0   | 1   | 1   |
+| 1     | 0   | 1   | 1   | 0   |
+
+$z=cb+\bar{c}a$
