@@ -2,9 +2,9 @@
 
 ## Definizione
 
-In un linguaggio $e::=0|succ(e)$
+In un linguaggio $e::=z|succ(e)$, il principio di induzione per una funzione $F:Exp \rightarrow \mathbb{N}$ si definisce come $\forall e. P(e) \Leftarrow P(z) \land \forall x.P(x) \rightarrow P(succ(x))$
 
-Per esempio: $F=\lambda n.ife(Eq \: n \: 0,1,mul \: F(pred \: n))$
+
 
 ## Punto fisso
 
