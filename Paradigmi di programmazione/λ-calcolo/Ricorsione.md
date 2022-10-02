@@ -1,5 +1,9 @@
 # Ricorsione
 
+## Problema
+
+Nel [[λ-calcolo]] non si possono associare nomi alle espressioni. Come si può quindi far sì che una funzione chiami se stessa?
+
 ## Definizione
 
 In un linguaggio $e::=z|succ(e)$, il principio di induzione per una funzione $F:Exp \rightarrow \mathbb{N}$ si definisce come $\forall e. P(e) \Leftarrow P(z) \land \forall x.P(x) \rightarrow P(succ(x))$
@@ -9,7 +13,9 @@ In modo simile, si può costruire una funzione $\varphi: P(u) \rightarrow P(u)$[
 - $\varphi(\varphi(\emptyset))=\{z, succ(z)\}$
 - $\varphi(\varphi(\varphi(\emptyset)))=\{z, succ(z), succ(succ(z))\}$
 
-
+Notevolmente:
+- $\varphi(A)=A$
+- $\varphi(Exp)=Exp$
 
 ## Punto fisso
 
