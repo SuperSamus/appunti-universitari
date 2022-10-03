@@ -70,7 +70,10 @@ Da qui:
 - $Yf \rightarrow_\beta (\lambda x.f(xx))(\lambda x.f(xx)) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))$
 - $f(Yf) \rightarrow_\beta f((\lambda f.(\lambda x.f(xx))(\lambda x.f(xx)))f) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))$
 
-Quindi $Yf =_\beta f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una β-equivalenza. 
+Quindi $Yf =_\beta f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una β-equivalenza. Proviamo un'altra cosa:
+- $A=\lambda xy.y(xxy)$
+- $\Theta=AA$
+- $\Theta f=(\lambda xy.y(xxy))Af \rightarrow_\beta (\lambda y.y(AAy))f \rightarrow_\beta f(AAf)=f(\Theta f)$
 
 [^1]: Sarebbero l'insieme delle parti (l'insieme di tutti i sottoinsiemi) dell'universo
 [^2]: Ciò implica che con il λ-calcolo non si può usare per implementare la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
