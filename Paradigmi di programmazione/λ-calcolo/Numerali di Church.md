@@ -60,7 +60,7 @@ $$
 
 ## MULT
 
-$\overline{MULT} = λn.λm.λf.n (mf)$
+$\overline{MULT} = λn.λm.λf.n(mf)$
 
 ## Funzione di codifica
 

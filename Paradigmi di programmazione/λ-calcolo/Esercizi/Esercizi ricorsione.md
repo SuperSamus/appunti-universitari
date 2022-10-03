@@ -14,7 +14,11 @@ $\Theta fact=\Theta(\lambda f.\lambda n.ife(n==0,1,mult \: n (f (pred \: n))))$
 
 ### Exp (anche direttamente)
 
-$exp=\lambda n.\lambda m.\lambda f.\lambda x.m(MULT \: n)$ o qualcosa del genere
+$$
+exp=\lambda n.\lambda m.\lambda f.\lambda x.m(MULT \: n)1 \\
+=\lambda n.\lambda m.\lambda f.\lambda x.m((\lambda n.\lambda m.\lambda f.n(mf))n)(\lambda f.\lambda x.fx) \\
+\rightarrow_\beta \lambda n.\lambda m.\lambda f.\lambda x.m(\lambda m.\lambda f.n(mf))(\lambda f.\lambda x.fx)
+$$
 
 $\Theta exp=\Theta(\lambda f. \lambda n.\lambda m. ife(m==0,1,mult \: n(f \: n (pred \: m))))$
 
