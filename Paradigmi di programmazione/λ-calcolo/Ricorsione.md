@@ -48,20 +48,6 @@ $$
 
 Ora che tutto è definito, definiamo $F \: n=e[F]$[^3] come zucchero sintattico per $fix(\lambda f.\lambda n.e[f])$.
 
-## Esercizio
-
-Definire $mult'$ tramite $fix$ (e $add$).
-
-$mult \: n \: m =_\beta mult' \: n \: m$
-
-$mult' = \lambda f. \lambda n.\lambda m. ife(m==0,0,add \: n(f \: n (pred \: m)))$
-
-$$
-fix \: mult' \\
-\rightarrow_\beta mult'(fix \: mult') \\
-\rightarrow_\beta \lambda n.\lambda m. ife(m==0,0,add \: n((fix \: mult')n(pred \: m)))
-$$
-
 ## Definizione Fix
 
 Da $HH$$ si può creare il **combinatore Curry**: $Y = \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$.
