@@ -74,6 +74,7 @@ Quindi $Yf =_\beta f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una
 - $A=\lambda xy.y(xxy)$
 - $\Theta=AA$
 - $\Theta f=(\lambda xy.y(xxy))Af \rightarrow_\beta (\lambda y.y(AAy))f \rightarrow_\beta f(AAf)=f(\Theta f)$
+Quindi $fix=\Theta$.
 
 [^1]: Sarebbero l'insieme delle parti (l'insieme di tutti i sottoinsiemi) dell'universo
 [^2]: Ciò implica che con il λ-calcolo non si può usare per implementare la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
