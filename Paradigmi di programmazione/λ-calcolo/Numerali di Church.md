@@ -42,7 +42,7 @@ $\overline{n}fx=(\lambda f.\lambda x.f^nx)fx$
 
 ### ADD
 
-$\overline{ADD}=\lambda n. \lambda m. \lambda f. \lambda y. nf(mfx)$
+$\overline{ADD}=\lambda n. \lambda m. \lambda f. \lambda x. nf(mfx)$
 
 $\overline{ADD} \:\overline{n} \: \overline{m} \rightarrow_\beta f^n(f^mx)=f^{n+m}=\overline{n+m}$
 
@@ -50,13 +50,17 @@ $\overline{ADD} \:\overline{n} \: \overline{m} \rightarrow_\beta f^n(f^mx)=f^{n+
 
 $$
 \overline{ADD} \: \overline{2} \: \overline{3} \\
-= (\lambda n. \lambda m. \lambda f. \lambda y. (nf(mfx)))(\lambda f.\lambda x.f(fx))(\lambda f.\lambda x.f(f(fx))) \\
-\rightarrow_\beta (\lambda m. \lambda f. \lambda y. (\lambda f.\lambda x.f(fx))f(mfx))(\lambda f.\lambda x.f(f(fx))) \\
-\rightarrow_\beta (\lambda f. \lambda y. (\lambda f.\lambda x.f(fx))f(\lambda f.\lambda x.f(f(fx)))fx) \\
-\rightarrow_\beta (\lambda f. \lambda y. (\lambda f.\lambda x.f(fx))f(f(f(fx)))) \\
-\rightarrow_\beta (\lambda f. \lambda y. (\lambda x.f(fx))(f(f(fx)))) \\
-\rightarrow_\beta (\lambda f. \lambda y. f(f(f(f(fx)))))
+= (\lambda n. \lambda m. \lambda f. \lambda x. (nf(mfx)))(\lambda f.\lambda x.f(fx))(\lambda f.\lambda x.f(f(fx))) \\
+\rightarrow_\beta (\lambda m. \lambda f. \lambda x. (\lambda f.\lambda x.f(fx))f(mfx))(\lambda f.\lambda x.f(f(fx))) \\
+\rightarrow_\beta (\lambda f. \lambda x. (\lambda f.\lambda x.f(fx))f(\lambda f.\lambda x.f(f(fx)))fx) \\
+\rightarrow_\beta (\lambda f. \lambda x. (\lambda f.\lambda x.f(fx))f(f(f(fx)))) \\
+\rightarrow_\beta (\lambda f. \lambda x. (\lambda x.f(fx))(f(f(fx)))) \\
+\rightarrow_\beta (\lambda f. \lambda x. f(f(f(f(fx)))))
 $$
+
+## MULT
+
+$\overline{MULT} = λn.λm.λf.n (mf)$
 
 ## Funzione di codifica
 
