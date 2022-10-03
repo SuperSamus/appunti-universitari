@@ -10,9 +10,13 @@ $\Theta \: mult' = \Theta(\lambda f. \lambda n.\lambda m. ife(m==0,0,add \: n(f 
 
 ### Fact
 
-$\Theta fact$=\Theta(\lambda f.\lambda n.ife(n==0,1,f))
+$\Theta fact=\Theta(\lambda f.\lambda n.ife(n==0,1,mult \: n (f (pred \: n))))$
 
 ### Exp (anche direttamente)
+
+$exp=\lambda n.\lambda m.\lambda f.\lambda x.$
+
+$\Theta exp=\Theta(\lambda f. \lambda n.\lambda m. ife(m==0,1,mult \: n(f \: n (pred \: m))))$
 
 ### Pred
 
