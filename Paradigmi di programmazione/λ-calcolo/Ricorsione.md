@@ -24,12 +24,6 @@ Teorema: ogni λ-termine ha un punto fisso: $\forall f \in \Lambda.\exists t \in
 
 Dimostrazione: sia $f$ una funzione, e $H=\lambda x.f(xx)$. Allora $HH \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))=_\beta f(HH)$, quindi $HH$ è un punto fisso di $f$.
 
-Da $HH$$ si può creare il **combinatore Curry**: $Y = \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$.
-
-Anche qui, $Yf \rightarrow_\beta (\lambda x.f(xx))(\lambda x.f(xx)) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))=_\beta f(Yf)$
-
-Questo ci porta a…
-
 ## Fix
 
 Questa cosa non si può fare: $t=_\beta\lambda n.ife(n==0,1,mult \: n(t(n-1)))$
@@ -68,6 +62,15 @@ fix \: mult' \\
 \rightarrow_\beta \lambda n.\lambda m. ife(m==0,0,add \: n((fix \: mult')n(pred \: m)))
 $$
 
+## Definizione Fix
+
+Da $HH$$ si può creare il **combinatore Curry**: $Y = \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$.
+
+Da qui:
+- $Yf \rightarrow_\beta (\lambda x.f(xx))(\lambda x.f(xx)) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))$
+- $f(Yf) \rightarrow_\beta f((\lambda f.(\lambda x.f(xx))(\lambda x.f(xx)))f) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))$
+
+Quindi $Yf =_\beta f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una β-equivalenza. 
 
 [^1]: Sarebbero l'insieme delle parti (l'insieme di tutti i sottoinsiemi) dell'universo
 [^2]: Ciò implica che con il λ-calcolo non si può usare per implementare la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
