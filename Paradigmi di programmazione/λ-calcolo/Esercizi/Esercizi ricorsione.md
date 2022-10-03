@@ -10,6 +10,8 @@ $\Theta \: mult' = \Theta(\lambda f. \lambda n.\lambda m. ife(m==0,0,add \: n(f 
 
 ### Fact
 
+$\Theta fact$=\Theta(\lambda f.\lambda n.ife(n==0,1,f))
+
 ### Exp (anche direttamente)
 
 ### Pred
@@ -25,4 +27,6 @@ $nil$ e $cons$ sono definiti come:
 Definire le funzioni:
 - $ADDLIST [n_1...n_k]=\displaystyle\sum_{i=1}^kn_i$
 - $PRODLIST[n_1...n_k]=\displaystyle\prod_{i=1}^kn_i$
-- 
+- $COMP \:f \: g=_\beta f \circ g$
+- $MAP$
+	- Ricorda che $MAP \: f(MAP \: g \: l)=_\beta MAP(f \circ g)l$
