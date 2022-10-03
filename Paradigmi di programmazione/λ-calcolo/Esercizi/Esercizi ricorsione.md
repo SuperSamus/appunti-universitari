@@ -24,7 +24,7 @@ $\Theta exp=\Theta(\lambda f. \lambda n.\lambda m. ife \: m==0,1 \: (mult \: n(f
 
 ### Pred
 
-$\Theta pred=\Theta(\lambda f. \lambda s. \lambda n. ife \: (succ))$
+$\Theta pred=\Theta(\lambda f. \lambda s. \lambda n. ife \: ((succ \: s)==n)s(f(succ \: s)n))0$
 
 ## Liste
 
@@ -36,6 +36,7 @@ $nil$ e $cons$ sono definiti come:
 
 Definire le funzioni:
 - $ADDLIST [n_1...n_k]=\displaystyle\sum_{i=1}^kn_i$
+	- $\Theta \:addlist=\Theta (\lambda f.\lambda n.ife \: n)
 - $PRODLIST[n_1...n_k]=\displaystyle\prod_{i=1}^kn_i$
 - $COMP \:f \: g=_\beta f \circ g$
 - $MAP$
