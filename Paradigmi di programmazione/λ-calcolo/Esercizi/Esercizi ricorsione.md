@@ -30,14 +30,17 @@ $\Theta pred=\Theta(\lambda f. \lambda s. \lambda n. ife \: ((succ \: s)==n)s(f(
 
 Nel linguaggio $e::=...|nil|e::e|...$, una lista si rappresenta per esempio come $1::(2::(3::nil))$.
 
+$a := [1, 2, 3] = λcn.c 1 (c 2 (c 3 n))$
+
 Le operazioni base $nil$ (costruisci una lista vuota) e $cons$ (aggiungi un valore a inizio lista) sono definite come:
 - $nil \stackrel{\Delta}{=}\lambda x.\lambda y.y$
 - $cons\stackrel{\Delta}{=}\lambda h.\lambda t.\lambda x.\lambda y.ht$
 
 Definire le funzioni:
 - $ADDLIST [n_1...n_k]=\displaystyle\sum_{i=1}^kn_i$
-%%	- $\Theta ADDLIST=\Theta(\lambda f.\lambda l. ife \: (l == nil) \: 0 \: (ADD ((\lambda c.\lambda x. x)l)(f(\lambda c.\lambda x. \lambda n. n)l)))$%%
+	- $ADDLIST=\lambda l.l(mult)0=\lambda l.l(\lambda n. \lambda m. \lambda f. \lambda x. nf(mfx))(\lambda f.\lambda x.x)$
 - $PRODLIST[n_1...n_k]=\displaystyle\prod_{i=1}^kn_i$
+	- $PRODLIST=\lambda l.l(mult)1=\lambda l.l(\lambda n. \lambda m. \lambda f.n(mf)(\lambda f.\lambda x.fx)$
 - $COMP \:f \: g=_\beta f \circ g$
 - $MAP$
 	- Ricorda che $MAP \: f(MAP \: g \: l)=_\beta MAP(f \circ g)l$
