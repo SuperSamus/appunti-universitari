@@ -47,3 +47,8 @@ Vincoli cambiati/nuovi:
 - Vincolo di budget: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i) \leq E$
 - $x_i \leq Ly_i$ ($\iff y_i=0 \Rightarrow x_i=0$)
 	- Sarebbe figo fare $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare (idem $x_i > 0 \Rightarrow y_i=1$)
+	- Anche usare $x_iy_i$ nella funzione obiettivo renderebbe la funzione non lineare, perché è quadratica.
+
+## Revisione
+
+Abbiamo tu
