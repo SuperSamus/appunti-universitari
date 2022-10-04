@@ -44,3 +44,4 @@ Definire le funzioni:
 - $COMP \:f \: g=_\beta f \circ g$
 - $MAP$
 	- Ricorda che $MAP \: f(MAP \: g \: l)=_\beta MAP(f \circ g)l$
+	- $MAP=\lambda f.\lambda l.\lambda c.l(cf)$
