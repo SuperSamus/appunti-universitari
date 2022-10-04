@@ -1,6 +1,6 @@
 # Esercizi [[ricorsione]]
 
-Definire $fact$ sia con $Y$ che $\Theta$:
+Definire le seguenti operazioni sia con $Y$ che $\Theta$:
 
 ### Mult (con $add$)
 
