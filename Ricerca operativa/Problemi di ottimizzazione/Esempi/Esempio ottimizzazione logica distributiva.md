@@ -1,12 +1,13 @@
 # Esempio ottimizzazione logica distributiva
 
-Il Ministro dell'Energia ha $m$ depositi di riserve di gas acquistate per rifornire $n$ regioni. Ciascuna regione $i$ dovrà attingere a $b_i$ milioni di $m^3$ da queste riserve, mentre ogni deposito $j$ ne contiene $u_j$. Ogni regione viene rifornita da un unico deposito ($d_{ij}$). Il costo di spedizione sostenuto dal deposito $j$ verso la regione $i$ è $c_{ij}$ euro per milioni di $m^3$. Se il deposito rifornisce almeno una regione ($x_j$) serve un costo fisso $c_j$ per la gestione.
+Il Ministro dell'Energia ha $m$ depositi di riserve di gas acquistate per rifornire $n$ regioni. Ciascuna regione $i$ dovrà attingere a $b_i$ milioni di $m^3$ da queste riserve, mentre ogni deposito $j$ ne contiene $u_j$. Ogni regione viene rifornita da un unico deposito. Il costo di spedizione sostenuto dal deposito $j$ verso la regione $i$ è $c_{ij}$ euro per milioni di $m^3$. Se il deposito rifornisce almeno una regione serve un costo fisso $c_j$ per la gestione.
 Soddisfa le necessità minimizzando il costo.
 
 Variabili extra:
-- $d_{ij} \in \{0,1\} \quad d_{ij}=\begin{cases} 1 &\text{se la regione } i \text{ viene rifornita dal deposito } j \\ 0 &\text{altrimenti} \end{cases}$
-- 
+- $x_{ij} \in \{0,1\} \quad x_{ij}=\begin{cases} 1 &\text{se la regione } i \text{ viene rifornita dal deposito } j \\ 0 &\text{altrimenti} \end{cases}$
+- $y_j \in \{0,1\} \quad y_j=\begin{cases} 1 &\text{se il deposito } j \text{ rifornisce almeno una regione} \\ 0 &\text{altrimenti} \end{cases}$
 
 Vincoli:
-- $\displaystyle\sum_{i=1}^n (d_{ij}b_i) \leq u_j \quad j=1...m$
-- 
+- Vincoli di capacità: $\displaystyle\sum_{j=1}^m x_{ij}b_i \leq u_j \quad i=1...n$
+- Vincoli di semiassegnamento: $\displaystyle\sum_{j=1}^m x_{ij}=1 \quad i=1...n$
+- Se il deposito viene usato, paga il costo fisso:
