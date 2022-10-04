@@ -36,6 +36,7 @@ Le operazioni base $nil$ (costruisci una lista vuota) e $cons$ (aggiungi un valo
 
 Definire le funzioni:
 - $ADDLIST [n_1...n_k]=\displaystyle\sum_{i=1}^kn_i$
+%%	- $\Theta ADDLIST=\Theta(\lambda f.\lambda l. ife \: (l == nil) \: 0 \: (ADD ((\lambda c.\lambda x. x)l)(f(\lambda c.\lambda x. \lambda n. n)l)))$%%
 - $PRODLIST[n_1...n_k]=\displaystyle\prod_{i=1}^kn_i$
 - $COMP \:f \: g=_\beta f \circ g$
 - $MAP$
