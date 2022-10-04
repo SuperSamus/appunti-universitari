@@ -26,35 +26,37 @@ Dimostrazione: sia $f$ una funzione, e $H=\lambda x.f(xx)$. Allora $HH \rightarr
 
 ## Fix
 
-Questa cosa non si può fare: $t=_\beta\lambda n.ife(n==0,1,mult \: n(t(n-1)))$
+Questa cosa non si può fare: $t=_\beta\lambda n.ife \: n==0 \: \underline{1} \: (\underline{mult} \: n(t(\underline{prec} \: n)))$
 
-Però si può fare $s=\lambda f.\lambda n.ife(n==0,1,mult \: n(f(n-1)))$
+Però si può fare $s=\lambda f.\lambda n.ife \: n==0 \: \underline{1} \: (\underline{mult} \: n(f(\underline{prec} \: n)))$
 
 Da qui ci vorrebbe un λ-termine $fix$ tale che $fix \: t \rightarrow_\beta^\star t(fix \: t)$.
 
-$fix \: s \rightarrow_\beta s(fix \: s) \rightarrow_\beta \lambda n.ife(n==0,1,mult \: n((fix \: s)(n-1))$
+$fix \: s \rightarrow_\beta s(fix \: s) \rightarrow_\beta \lambda n.ife \: n==0 \: \underline{1} \: (\underline{mult} \: n((fix \: s)(\underline{prec} \: n)))$
 
 Eseguiamolo con 2:
 
 $$
 (fix \: s)2 \\
-\rightarrow_\beta^\star ife(2==0,1,mult \: n((fix \: s)(2-1)) \\
-\rightarrow_\beta^\star mult \: 2((fix \: s)1) \\
-\rightarrow_\beta^\star mult \: 2(s(fix \: s)1) \\
-\rightarrow_\beta^\star mult \: 2(mult \: 1((fix \: s)0)) \\
-\rightarrow_\beta^\star mult \: 2(mult \: 1(1)) \\
-\rightarrow_\beta^\star 2
+\rightarrow_\beta^\star ife \: 2==0 \: \underline{1} \: (mult \: n((fix \: s)(\underline{prec} \: \underline{2}))) \\
+\rightarrow_\beta^\star mult \: \underline{2}((fix \: s)\underline{1}) \\
+\rightarrow_\beta^\star mult \: \underline{2}(s(fix \: s)\underline{1}) \\
+\rightarrow_\beta^\star mult \: \underline{2}(mult \: \underline{1}((fix \: s)\underline{0})) \\
+\rightarrow_\beta^\star mult \: \underline{2}(mult \: \underline{1}(\underline{1})) \\
+\rightarrow_\beta^\star \underline{2}
 $$
 
 Ora che tutto è definito, definiamo $F \: n=e[F]$[^3] come zucchero sintattico per $fix(\lambda f.\lambda n.e[f])$.
 
 ## Definizione Fix
 
-Da $HH$$ si può creare il **combinatore Curry**: $Y = \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$.
+Da $HH$$ si può creare il **combinatore Curry**: $Y \stackrel{\Delta}{=} \lambda f.(\lambda x.f(xx))(\lambda x.f(xx))$.
+
+Con $\Delta_f \stackrel{\Delta}{=} \lambda x.f(xx)$
 
 Da qui:
-- $Yf \rightarrow_\beta (\lambda x.f(xx))(\lambda x.f(xx)) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))$
-- $f(Yf) \rightarrow_\beta f((\lambda f.(\lambda x.f(xx))(\lambda x.f(xx)))f) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))$
+- $Yf \rightarrow_\beta (\lambda x.f(xx))(\lambda x.f(xx)) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))=f(\Delta_f\Delta_f)$
+- $f(Yf) \rightarrow_\beta f((\lambda f.(\lambda x.f(xx))(\lambda x.f(xx)))f) \rightarrow_\beta f((\lambda x.f(xx))(\lambda x.f(xx)))=f(\Delta_f\Delta_f)$
 
 Quindi $Yf =_\beta f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una β-equivalenza. Proviamo un'altra cosa:
 - $A=\lambda xy.y(xxy)$
