@@ -30,7 +30,7 @@ $\Theta pred=\Theta(\lambda f. \lambda s. \lambda n. ife \: ((succ \: s)==n)s(f(
 
 Nel linguaggio $e::=...|nil|e::e|...$, una lista si rappresenta per esempio come $1::(2::(3::nil))$.
 
-$nil$ e $cons$ sono definiti come:
+Le operazioni base $nil$ (costruisci una lista vuota) e $cons$ (aggiungi un valore a inizio lista) sono definite come:
 - $nil \stackrel{\Delta}{=}\lambda x.\lambda y.y$
 - $cons\stackrel{\Delta}{=}\lambda h.\lambda t.\lambda x.\lambda y.ht$
 
