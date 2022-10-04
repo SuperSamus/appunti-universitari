@@ -20,7 +20,7 @@ exp=\lambda n.\lambda m.\lambda f.\lambda x.m(mult \: n)1 \\
 \rightarrow_\beta \lambda n.\lambda m.\lambda f.\lambda x.m(\lambda m.\lambda f.n(mf))(\lambda f.\lambda x.fx)
 $$
 
-$\Theta exp=\Theta(\lambda f. \lambda n.\lambda m. ife \: m==0,1 \: (mult \: n(f \: n (pred \: m))))$
+$\Theta exp'=\Theta(\lambda f. \lambda n.\lambda m. ife \: m==0,1 \: (mult \: n(f \: n (pred \: m))))$
 
 ### Pred
 
