@@ -38,11 +38,11 @@ Eseguiamolo con 2:
 
 $$
 (fix \: s)2 \\
-\rightarrow_\beta^\star \underline{ite} \: (\underline{eq} \: \underline{2} \: \underline{0}) \: \underline{1} \: (mult \: n((fix \: s)(\underline{prec} \: \underline{2}))) \\
-\rightarrow_\beta^\star mult \: \underline{2}((fix \: s)\underline{1}) \\
-\rightarrow_\beta^\star mult \: \underline{2}(s(fix \: s)\underline{1}) \\
-\rightarrow_\beta^\star mult \: \underline{2}(mult \: \underline{1}((fix \: s)\underline{0})) \\
-\rightarrow_\beta^\star mult \: \underline{2}(mult \: \underline{1}(\underline{1})) \\
+\rightarrow_\beta^\star \underline{ite} \: (\underline{eq} \: \underline{2} \: \underline{0}) \: \underline{1} \: (\underline{mult} \: n((fix \: s)(\underline{prec} \: \underline{2}))) \\
+\rightarrow_\beta^\star \underline{mult} \: \underline{2}((fix \: s)\underline{1}) \\
+\rightarrow_\beta^\star \underline{mult} \: \underline{2}(s(fix \: s)\underline{1}) \\
+\rightarrow_\beta^\star \underline{mult} \: \underline{2}(\underline{mult} \: \underline{1}((fix \: s)\underline{0})) \\
+\rightarrow_\beta^\star \underline{mult} \: \underline{2}(\underline{mult} \: \underline{1}(\underline{1})) \\
 \rightarrow_\beta^\star \underline{2}
 $$
 
