@@ -41,7 +41,7 @@ Funzione obiettivo min: $f(x)=t$
 L'attivazione del contratto con ciascun produttore ha un costo amministrativo $c$.
 
 Nuove variabili:
-- $y_i \in \{0,1\}$, $y_i=\begin{cases} 1 &\text{se compro da } i \\ 0 &\text{altrimenti} \end{cases}$,
+- $y_i \in \{0,1\}$, $y_i=\begin{cases} 1 &\text{se compro da } i \\ 0 &\text{altrimenti} \end{cases}$
 
 Vincoli cambiati/nuovi:
 - Vincolo di budget: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i) \leq E$
@@ -49,6 +49,20 @@ Vincoli cambiati/nuovi:
 	- Sarebbe figo fare $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare (idem $x_i > 0 \Rightarrow y_i=1$)
 	- Anche usare $x_iy_i$ nella funzione obiettivo renderebbe la funzione non lineare, perché è quadratica.
 
+### Funzione a carico fisso
+
+$g(x)=\begin{cases} 0 &\text{se } x=0 \\ c+c_1x &\text{se } 0<x\leq L \end{cases}$
+
+È brutta: non è lineare.
+
+$$
+f(x,y)=cy+c_1x \q
+
 ## Revisione
 
-Abbiamo tu
+Abbiamo un budget infinito che vogliamo minimizzare, e un limite di tempo $D$.
+
+Nuovo vincolo:
+- $x_i/d_i \leq D$
+
+Nuova funzione obiettivo min: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i)$ (che rimpiazza il rispettivo vincolo)
