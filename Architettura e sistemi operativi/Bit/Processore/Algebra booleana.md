@@ -20,7 +20,7 @@
 
 ^23603f
 
-$ABC \: var \in \{0,1\}$
+$ABC \: var ∈ \{0,1\}$
 
 |     | Identità | Elemento nullo | Idempotenza | Complementi        | Commutativa | Associativa       |
 |:---:| -------- | -------------- | ----------- | ------------------ | ----------- | ----------------- |

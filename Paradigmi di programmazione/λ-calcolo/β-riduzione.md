@@ -2,33 +2,33 @@
 
 La più importante regola di riscrittura del [[λ-calcolo]].
 
-$(\lambda x.t)s \rightarrow_\beta t[s/x]$
+$(λx.t)s →_β t[s/x]$
 
 (Redex → Contractum)
 
-Formalmente, la relazione $\rightarrow_\beta \subseteq \Lambda \times \Lambda$
+Formalmente, la relazione $→_β ⊆ Λ ⨉ Λ$
 
 $$
-\frac{}{(\lambda x.t)s \rightarrow_\beta t[s/x]}
+\frac{}{(λx.t)s →_β t[s/x]}
 $$
 
 $$
-\frac{t \rightarrow_\beta s}{tu \rightarrow_\beta su} \quad \frac{t \rightarrow_\beta s}{ut \rightarrow_\beta us} \quad
-\frac{t \rightarrow_\beta s}{\lambda x.t \rightarrow_\beta \lambda x.s}
+\frac{t →_β s}{tu →_β su} \quad \frac{t →_β s}{ut →_β us} \quad
+\frac{t →_β s}{λx.t →_β λx.s}
 $$
 
 ## Esempi
 
-$(\lambda x.x(xy))t \rightarrow_\beta t(ty)$
+$(λx.x(xy))t →_β t(ty)$
 
 La β-riduzione non è deterministica nei passaggi:
 
 %%
-$A=(\lambda x.(\lambda y.yx)z)v$
+$A=(λx.(λy.yx)z)v$
 
-$B=(\lambda y.yv)z$
+$B=(λy.yv)z$
 
-$C=(\lambda x.zx)v$
+$C=(λx.zx)v$
 
 $D=zv$
 %%
@@ -44,14 +44,14 @@ La β-riduzione, nonostante il nome, può *allungare* l'espressione. Ciò può r
 
 Per esempio:
 
-- $\Delta = (\lambda x.xx)$
-- $\Delta t \rightarrow_\beta tt$
-- $\Omega = \Delta \Delta \rightarrow_\beta \Delta \Delta \rightarrow_\beta …$
+- $Δ = (λx.xx)$
+- $Δ t →_β tt$
+- $Ω = Δ Δ →_β Δ Δ →_β …$
 
 Altro esempio:
 
-- $k = \lambda x.y$
-- $k \Omega = (\lambda x.y)(\Delta \Delta)$
+- $k = λx.y$
+- $kΩ = (λx.y)(Δ Δ)$
 
 ```mermaid
 flowchart LR
@@ -60,7 +60,7 @@ A[kΩ] --> A & y
 
 ## Teorema di Church-Rosser
 
-$t \rightarrow_\beta^\star s_1 \land t \rightarrow_\beta^\star s_2 \Rightarrow \exists u. s_1 \rightarrow_\beta^\star n \land s_2 \rightarrow_\beta^\star u$
+$t →_β^* s_1 ∧ t →_β^* s_2 ⇒ ∃ u. s_1 →_β^* n ∧ s_2 →_β^* u$
 
 ```mermaid
 flowchart LR
@@ -68,19 +68,19 @@ t --> s1 & s2 -.-> u
 ```
 
 Se:
-- $t \rightarrow_\beta^\star s_1$
-- $t \rightarrow_\beta^\star s_2$
-- $s_1,s_2 \in NF$
+- $t →_β^* s_1$
+- $t →_β^* s_2$
+- $s_1,s_2 ∈ NF$
 
-Allora $s_1=_\alpha s_2$.
+Allora $s_1=_α s_2$.
 
 ### Corollario 1
 
-Unicità forme normali (modulo $=_\alpha$).
+Unicità forme normali (modulo $=_α$).
 
 ### Corollario 2
 
-$t =_\beta s \iff \exists u.t \rightarrow_\beta^\star u _\beta^\star\leftarrow s$
+$t =_β s ⟺ ∃ u.t →_β^* u _β^*← s$
 
 ### Corollario 3
 
@@ -90,9 +90,9 @@ Ciò rende facilmente parallelizzabile il λ-calcolo.
 
 ## β-conversione
 
-$(\lambda x.t)s=_\beta t[s/x]$
+$(λx.t)s=_β t[s/x]$
 
-$t=_\beta s \iff t (_\beta \leftarrow u \rightarrow_\beta)^\star s$
+$t=_β s ⟺ t (_β ← u →_β)^* s$
 
 ## Forma normale
 
@@ -100,7 +100,7 @@ Un termine è in forma normale se non si può β-ridurre.
 
 Un termine $t$ ha una forma normale se esiste un termine $s$ tale che $t$ β-riduce ad $s$ in un numero finito di passi.
 
-$\exists s \in NF.t \longrightarrow^\star_\beta s$.
+$∃ s ∈ NF.t \longrightarrow^*_β s$.
 
 ## Effetti collaterali
 
@@ -118,27 +118,27 @@ Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
 
 ### Trasparenza referenziale
 
-L'assenza di effetti collaterali, dove se $e \rightarrow^\star v$ allora usare $v$ o $e$ non fa differenza.
+L'assenza di effetti collaterali, dove se $e →^* v$ allora usare $v$ o $e$ non fa differenza.
 
 ## Strategie di valutazione
 
-$(\lambda x.x^2+2x+3)(\underline{2+3}))$
+$(λx.x^2+2x+3)(\underline{2+3}))$
 
 - Chiamata per nome (CbN): rimpiazza $x$ con $2+3$
-	- $\rightarrow_\beta t[s/x]$
+	- $→_β t[s/x]$
 - Chiamata per valore (CbV): valuta $2+3$, e rimpiazza $x$ con il risultato
-	- $\rightarrow^\star(\lambda x.t)v \rightarrow_\beta t[v/x]$
+	- $→^*(λx.t)v →_β t[v/x]$
 
 ### Teoremi
 
-Ci sono $t\downarrow_{CbN}$ ($t$ termina) e $t\uparrow_{CbV}$ ($t$ non termina).
-- $KI\Omega \stackrel{\Delta}{=} (\lambda x.\lambda y.x)I\Omega$
-	- CbV: $KI\Omega$
-	- CbN: $(\lambda y.I)\Omega$
-		- CbV: $(\lambda y.I)\Omega$
+Ci sono $t↓_{CbN}$ ($t$ termina) e $t↑_{CbV}$ ($t$ non termina).
+- $KIΩ ≜ (λx.λy.x)IΩ$
+	- CbV: $KIΩ$
+	- CbN: $(λy.I)Ω$
+		- CbV: $(λy.I)Ω$
 		- CbN: $I$
 
-Non vale viceversa. Teorema: se $t\rightarrow_\beta^\star s \not \rightarrow$ allora $t \xrightarrow{CbN}_\beta^\star s$
+Non vale viceversa. Teorema: se $t→_β^* s \not →$ allora $t \xrightarrow{CbN}_β^* s$
 
 CbV però è più efficiente.
 

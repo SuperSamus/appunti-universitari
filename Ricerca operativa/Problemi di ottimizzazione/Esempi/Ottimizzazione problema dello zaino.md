@@ -10,12 +10,12 @@ Dobbiamo selettivamente inserire oggetti nello zaino per massimizzare il benefic
 
 Per ogni oggetto, decidiamo se inserirlo o meno.
 
-- $x_i \in \{0,1\}$, $x_i=\begin{cases} 1 &\text{se metto } i \text{ nello zaino} \\ 0 &\text{altrimenti} \end{cases}$[^2]
+- $x_i ∈ \{0,1\}$, $x_i=\begin{cases} 1 &\text{se metto } i \text{ nello zaino} \\ 0 &\text{altrimenti} \end{cases}$[^2]
 
 Vincoli:
 
-- $\displaystyle\sum_{i=1}^n p_ix_i \leq c$
+- $∑\limits_{i=1}^n p_ix_i ≤ c$
 
-Funzione obiettivo max: $\displaystyle\sum_{i=1}^n b_ix_i$
+Funzione obiettivo max: $∑\limits_{i=1}^n b_ix_i$
 [^1]: **Variabili quantitative**: rappresentano un valore numerico
 [^2]: **Variabili logiche**: discriminano tra 2 scelte alternative

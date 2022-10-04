@@ -1,6 +1,6 @@
 # Esercizi [[sostituzioni]]
 
-- $(\lambda y.x)[y/x]=(\lambda z.x[z/y])[y/x]=(\lambda z.x)[y/x]=\lambda z.y$
-- $(\lambda y.x (\lambda w.vwx))[uv/x]=\lambda y.x[uv/x](\lambda w.vwx)[uv/x]=\lambda y.uv(\lambda w.(vwx)[uv/x]))=\lambda y.uv(\lambda w.vwuv)$
-- $(\lambda y.x (\lambda x.x))[\lambda y.xy/x]=\lambda y.x[\lambda y.xy/x](\lambda x.x)[\lambda y.xy/x]=\lambda y.\lambda y.xy(\lambda x.x)$
-- $(\lambda x.zy)[uv/x]=\lambda x.zy$
+- $(λy.x)[y/x]=(λz.x[z/y])[y/x]=(λz.x)[y/x]=λz.y$
+- $(λy.x (λw.vwx))[uv/x]=λy.x[uv/x](λw.vwx)[uv/x]=λy.uv(λw.(vwx)[uv/x]))=λy.uv(λw.vwuv)$
+- $(λy.x (λx.x))[λy.xy/x]=λy.x[λy.xy/x](λx.x)[λy.xy/x]=λy.λy.xy(λx.x)$
+- $(λx.zy)[uv/x]=λx.zy$

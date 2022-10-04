@@ -136,7 +136,7 @@ $z_0=\bar{x_0}y_0+x_0\bar{y_0}$
 
 $c=x_1y_1+x_1x_0y_0+x_0y_1y_0$
 
-### Moltiplicazione $2 \times 2$
+### Moltiplicazione $2 ⨉ 2$
 
 Tabella di verità:
 

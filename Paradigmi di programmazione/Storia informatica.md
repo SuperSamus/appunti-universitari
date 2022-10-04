@@ -4,9 +4,9 @@ Nata ad inizio 1900, riposta alla **crisi dei fondamenti**.
 
 - Inizio 1600: sviluppo calcolo
     - Paradosso infinito
-        - $\mathbb{N}=\mathbb{Z} (\equiv \mathbb{N}*\mathbb{N})$
+        - $ℕ=ℤ (≡ ℕ*ℕ)$
     - Infinitesimi
-        - $dx, dy \neq 0$
+        - $dx, dy ≠ 0$
         - Chain rule: $\frac{dx}{dy}=\frac{dx}{dz}\frac{dz}{dy}$
     - Definizione limiti
     - …
@@ -20,14 +20,14 @@ La matematica sta perdendo il suo criterio di certezza.
 
 - Consistenza delle analisi <- Geometria
     - Teoria dei sistemi numerici
-        - **Aritmetica** ($\mathbb{N},+,…$)
+        - **Aritmetica** ($ℕ,+,…$)
 
 ### Frege
 
 - **Logismo**: fondare la matematica sulla logica (invece che il contrario)
 - *Ideografia*
     - Libro che introduce tra le varie cose la **logica del primo ordine** (#FOL)
-    - Modus ponens: $A \rightarrow B, A \vdash B$
+    - Modus ponens: $A → B, A \vdash B$
 
 Mancava solo di costruire l'aritmetica su questo linguaggio. Ma la teoria che creò è risultata inconsistente.
 
@@ -39,14 +39,14 @@ Uno dei matematici più famosi del 1900, conosciuto per i lavori di logica e per
     - Dagli assiomi si ottengono nuove formule, che diventano **teoremi**
     - #FOL (first-order logic) + Assiomi
         - Peano Arithmetic (PA)
-            - $\forall{x} \quad \neg (0=Successor(x))$
-            - $\forall x,y \quad x+y=y+x$
+            - $∀x \quad \neg (0=Successor(x))$
+            - $∀x,y \quad x+y=y+x$
             - …
 - Cosa deve avere una teoria T:
     - Consistenza
-        - La teoria non contraddice se stessa $\neg(T \land \neg T)$
+        - La teoria non contraddice se stessa $\neg(T ∧ \neg T)$
     - Completezza
-        - La teoria dimostra tutto il dimostrabile $T \vdash A \lor T \vdash \neg A$)
+        - La teoria dimostra tutto il dimostrabile $T \vdash A ∨ T \vdash \neg A$)
     - Decidibilità
         - Data una formula nella FOL, esiste una procedura meccanica che determina se la formula è dimostrabile.
 
@@ -60,13 +60,13 @@ FOL: $FOL \vdash A$
 
 ### Paradosso di Russel
 
-$R=\{x|x \not \in x\}$
+$R=\{x|x \not ∈ x\}$
 
-$R \in R \iff R \not \in R$
+$R ∈ R ⟺ R \not ∈ R$
 
 ### Church (1930)
 
-Funzioni ricorsive $\equiv$ [[λ-calcolo]] $\equiv$ [[Macchina di Turing]]
+Funzioni ricorsive ≡ [[λ-calcolo]] ≡ [[Macchina di Turing]]
 
 Vecchia definizione funzione: $\{(x,y)|f(x)=y\}$
 

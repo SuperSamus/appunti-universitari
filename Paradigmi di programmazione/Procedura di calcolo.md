@@ -2,18 +2,18 @@
 
 Dati in input -> Dati in output
 
-- $f: \mathbb{N} \rightarrow \mathbb{N}$ **NO**
+- $f: ℕ → ℕ$ **NO**
     - Procedure troppo restrittive, non possono non ritornare niente.
-- $f: \mathbb{N} \rightharpoonup \mathbb{N}$
+- $f: ℕ ⇀ ℕ$
     - Funzione parziale
 
 Ma tutte le funzioni parziali sono calcolabili? Ce ne sono troppe… Alcune funzioni sono calcolabili:
 
 1. Funzioni elementari (come $Successore$)
-2. $f,g \; \text{calcolabili} \Rightarrow g \circ f \; \text{calcolabili}$
+2. $f,g \; \text{calcolabili} ⇒ g ∘ f \; \text{calcolabili}$
 3. Funzioni ricorsive (che comprendono tra l'altro 1. e 2.)
 
-Per loro: $[\mathbb{N} \rightharpoonup \mathbb{N}] \supseteq Ricorsive$
+Per loro: $[ℕ ⇀ ℕ] ⊇ Ricorsive$
 
 Questo è un approccio. Approcci sono:
 

@@ -2,38 +2,38 @@
 
 Forma di equivalenza del [[λ-calcolo]].
 
-Formalmente, la relazione $=_\alpha \subseteq \Lambda \times \lambda$
+Formalmente, la relazione $=_α ⊆ Λ ⨉ λ$
 
 $$
-\frac{}{\lambda x.t =_\alpha \lambda y.t[y/x]} \quad (x \not \in FV(t))
-$$
-
-$$
-\frac{}{t=_\alpha t} \text{ riflessiva} \quad \frac{t=_\alpha s}{s=_\alpha t} \text{ simmetrica} \quad \frac{t=_\alpha s \quad s=_\alpha u}{t=_\alpha u} \text{ transitiva}
+\frac{}{λx.t =_α λy.t[y/x]} \quad (x \not ∈ FV(t))
 $$
 
 $$
-\frac{t=_\alpha t' \quad s=_\alpha s'}{ts=_\alpha t's'} \quad \frac{t=_\alpha s}{\lambda x.t=_\alpha \lambda x.s}
+\frac{}{t=_α t} \text{ riflessiva} \quad \frac{t=_α s}{s=_α t} \text{ simmetrica} \quad \frac{t=_α s \quad s=_α u}{t=_α u} \text{ transitiva}
+$$
+
+$$
+\frac{t=_α t' \quad s=_α s'}{ts=_α t's'} \quad \frac{t=_α s}{λx.t=_α λx.s}
 $$
 
 ## Esempi
 
-- `function succ(x) {x+1}` $=_\alpha$ `function succ(y) {y+1}`
-- $\lim\limits_{x \to +\infty} e^{-x}=_\alpha \lim\limits_{y \to +\infty} e^{-y}$
-- $\lambda xy.x(xy)=_\alpha \lambda ab.a(ab)$
-	- $\lambda y.x(xy) =_\alpha \lambda b.x(xb)$
-	- $\Rightarrow \lambda x.\lambda y.x(xy)=_\alpha \lambda x.\lambda b.x(xb) =_\alpha \lambda a.\lambda b.a(ab)$
+- `function succ(x) {x+1}` $=_α$ `function succ(y) {y+1}`
+- $\lim\limits_{x \to +∈fty} e^{-x}=_α \lim\limits_{y \to +∈fty} e^{-y}$
+- $λxy.x(xy)=_α λab.a(ab)$
+	- $λy.x(xy) =_α λb.x(xb)$
+	- $⇒ λx.λy.x(xy)=_α λx.λb.x(xb) =_α λa.λb.a(ab)$
 
 ## Lemma
 
 $$
-\frac{t =_\alpha t' \quad s=_\alpha s'}{t[s/x]=_\alpha t'[s'/x]}
+\frac{t =_α t' \quad s=_α s'}{t[s/x]=_α t'[s'/x]}
 $$
 
 ## NB
 
 Ogni volta che definiamo un'operazione sul λ-calcolo (come sostituzione, ottimizzazione…), bisogno dimostrare che l'operazione è invariante per l'α-equivalenza (non dipende dalla scelta dei nomi dei parametri formali.)
 
-$F: \Lambda^n \rightarrow \Lambda$
+$F: Λ^n → Λ$
 
-$t_1=_\alpha s_1,…, t_n =_\alpha s_n \Rightarrow F(t_1,…,t_n)=_\alpha F(s_1,…,s_n)$
+$t_1=_α s_1,…, t_n =_α s_n ⇒ F(t_1,…,t_n)=_α F(s_1,…,s_n)$

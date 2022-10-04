@@ -14,9 +14,9 @@ Da trovare:
 $x_i$ quanto gas comprare da ciascuno?
 
 Vincoli:
-- Vincolo di domanda: $\displaystyle\sum_{i=1}^n x_i \geq L$
-- Vincolo di budget: $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
-- $x_i \geq 0 \quad i=1…n$
+- Vincolo di domanda: $∑\limits_{i=1}^n x_i ≥ L$
+- Vincolo di budget: $∑\limits_{i=1}^n x_ic_i ≤ E$
+- $x_i ≥ 0 \quad i=1…n$
 
 Funzione obiettivo min: $f(x_1,…,x_n)=\displaystyle\max_{i=1…n} x_i/d_i$
 
@@ -24,15 +24,15 @@ Questa non è una funzione lineare! Non sappiamo risolverla!
 
 ## Nuovi vincoli
 
-Creiamo una variabile ausiliaria: $t=\displaystyle\sum_{i=1}^n x_i/d_i$ (approssimazione superiore del valore max cercato)
+Creiamo una variabile ausiliaria: $t=∑\limits_{i=1}^n x_i/d_i$ (approssimazione superiore del valore max cercato)
 
-$t \geq \displaystyle\max_{i=1…n} x_i/d_i \iff t \geq \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
+$t ≥ \displaystyle\max_{i=1…n} x_i/d_i ⟺ t ≥ \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
 
 Vincoli:
-- Vincolo di soglia: $t \geq \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
-- Vincolo di domanda: $\displaystyle\sum_{i=1}^n x_i \geq L$
-- Vincolo di budget: $\displaystyle\sum_{i=1}^n x_ic_i \leq E$
-- $x_i \geq 0 \quad i=1…n$
+- Vincolo di soglia: $t ≥ \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
+- Vincolo di domanda: $∑\limits_{i=1}^n x_i ≥ L$
+- Vincolo di budget: $∑\limits_{i=1}^n x_ic_i ≤ E$
+- $x_i ≥ 0 \quad i=1…n$
 
 Funzione obiettivo min: $t$
 
@@ -41,12 +41,12 @@ Funzione obiettivo min: $t$
 L'attivazione del contratto con ciascun produttore ha un costo amministrativo $c$.
 
 Nuove variabili:
-- $y_i \in \{0,1\}$, $y_i=\begin{cases} 1 &\text{se compro da } i \\ 0 &\text{altrimenti} \end{cases}$
+- $y_i ∈ \{0,1\}$, $y_i=\begin{cases} 1 &\text{se compro da } i \\ 0 &\text{altrimenti} \end{cases}$
 
 Vincoli cambiati/nuovi:
-- Vincolo di budget: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i) \leq E$
-- $x_i \leq Ly_i$ ($\iff y_i=0 \Rightarrow x_i=0$)
-	- Sarebbe figo fare $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare (idem $x_i > 0 \Rightarrow y_i=1$)
+- Vincolo di budget: $∑\limits_{i=1}^n (x_ic_i+cy_i) ≤ E$
+- $x_i ≤ Ly_i$ ($⟺ y_i=0⇒x_i=0$)
+	- Sarebbe figo fare $y_i=\begin{cases} 1 &\text{se } x_i>0 \\ 0 &\text{altrimenti} \end{cases}$, ma è una relazione logica, non lineare (idem $x_i > 0⇒y_i=1$)
 	- Anche usare $x_iy_i$ nella funzione obiettivo renderebbe la funzione non lineare, perché è quadratica.
 
 ## Revisione
@@ -54,6 +54,6 @@ Vincoli cambiati/nuovi:
 Abbiamo un budget infinito che vogliamo minimizzare, e un limite di tempo $D$.
 
 Nuovo vincolo:
-- $x_i/d_i \leq D$
+- $x_i/d_i ≤ D$
 
-Nuova funzione obiettivo min: $\displaystyle\sum_{i=1}^n (x_ic_i+cy_i)$ (che rimpiazza il rispettivo vincolo)
+Nuova funzione obiettivo min: $∑\limits_{i=1}^n (x_ic_i+cy_i)$ (che rimpiazza il rispettivo vincolo)

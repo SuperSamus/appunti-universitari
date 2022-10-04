@@ -7,9 +7,9 @@ Quintupla $<Q,a,b,x,S>$
 - Sposto il nastro: sinistra/destra/fermo
 - Arriva allo stato S.
 
-$f: \mathbb{N} \rightharpoonup \mathbb{N} \; \text{calcolabile} \Leftrightarrow \exists M. \forall n \in \mathbb{N} \quad M(n) \downarrow \land M(n) = m \Leftrightarrow f(n) \downarrow \land f(n)=m$
+$f: ℕ ⇀ ℕ \; \text{calcolabile} ⟺ ∃ M. ∀n ∈ ℕ \quad M(n) ↓ ∧ M(n) = m ⟺ f(n) ↓ ∧ f(n)=m$
 
-Una funzione f è calcolabile se e solo se esiste una macchina di Turing in grado di implementare in tempo finito ($\downarrow$).
+Una funzione f è calcolabile se e solo se esiste una macchina di Turing in grado di implementare in tempo finito ($↓$).
 
 ## Halting problem
 
@@ -22,8 +22,8 @@ Halting problem: questo problema è indecidibile.
 $$
 f(n) =
   \begin{cases}
-    M_n(n) \downarrow \\
-    \uparrow
+    M_n(n)↓ \\
+    ↑
   \end{cases}
 
 $$
@@ -32,7 +32,7 @@ $$
 
 Esiste una macchina di Turing $M$ universale $U$.
 
-$U(n,m) \rightarrow M_n(m)$
+$U(n,m) → M_n(m)$
 
 ### Macchina
 
@@ -40,7 +40,7 @@ $U(n,m) \rightarrow M_n(m)$
 - Istruzione (programma)
 - Input/dati
 
-Dati $\equiv$ Programma
+Dati ≡ Programma
 
 #### Macchina programmabile
 

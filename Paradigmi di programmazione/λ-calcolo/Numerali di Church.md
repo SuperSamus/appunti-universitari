@@ -1,61 +1,61 @@
 # Numerali di Church
 
-Codifica che consente ai numeri $n \in \mathbb{N}$ e alle loro operazioni di essere rappresentati con il [[λ-calcolo]]: $\mathbb{N}\longrightarrow\Lambda$
+Codifica che consente ai numeri $n ∈ ℕ$ e alle loro operazioni di essere rappresentati con il [[λ-calcolo]]: $ℕ\longrightarrowΛ$
 
-Ad ogni $n \in \mathbb{N}$ associo un termine $\underline{n}= \lambda f.\lambda x.f^n(x)$
+Ad ogni $n ∈ ℕ$ associo un termine $\underline{n}= λf.λx.f^n(x)$
 
 - $f^0x = x$
 - $f^{n+1}x = f(f^n)$
 
 Esempi:
 
-- $\underline{0} = \lambda f.\lambda x.x$
-- $\underline{1} = \lambda f.\lambda x.fx$;
-- $\underline{2} = \lambda f.\lambda x.f(fx)$;
-- $\underline{n}=\lambda f.\lambda x. f^nx=\lambda f.\lambda x.f^nx$
+- $\underline{0} = λf.λx.x$
+- $\underline{1} = λf.λx.fx$;
+- $\underline{2} = λf.λx.f(fx)$;
+- $\underline{n} = λf.λx.f^nx=λf.λx.f^nx$
 
-Generica procedura $F: \mathbb{N}^k\longrightarrow\mathbb{N}$ che itera un numero di volte una funzione: $t_Fc_{n_1}…c_{n_k}\longrightarrow_\beta c_F(n_1…n_k)$.
+Generica procedura $F: ℕ^k\longrightarrowℕ$ che itera un numero di volte una funzione: $t_Fc_{n_1}…c_{n_k}\longrightarrow_β c_F(n_1…n_k)$.
 
 ## Operazioni
 
 ### SUCC
 
-$\underline{SUCC} = \lambda n.\lambda f.\lambda x.f(nfx)$
+$\underline{SUCC} = λn.λf.λx.f(nfx)$
 
  $$
 \underline{SUCC} \: \underline{n} \\
-=(\lambda n.\lambda f.\lambda x.f(nfx))\underline{n} \\
-\rightarrow_\beta \lambda f.\lambda x.f(\underline{n}fx) \\
-\rightarrow_\beta \lambda f. \lambda x.f(f^nx) \\
+=(λn.λf.λx.f(nfx))\underline{n} \\
+→_β λf.λx.f(\underline{n}fx) \\
+→_β λf.λx.f(f^nx) \\
 =\underline{n+1}
 $$
 
-$\forall n. \underline{n}fx \rightarrow_\beta f^nx$
+$∀n. \underline{n}fx →_β f^nx$
 
-$\underline{n}fx=(\lambda f.\lambda x.f^nx)fx$
+$\underline{n}fx=(λf.λx.f^nx)fx$
 
 #### Esempi
 
-* $\underline{SUCC} \: \underline{0} \rightarrow_\beta \lambda f. \lambda x. f(\underline{0}fx) = \lambda f. \lambda x. f((\lambda f.\lambda x.x)fx) \rightarrow_\beta \lambda f.\lambda x. fx$
-* $\underline{SUCC} \: \underline{1} \rightarrow_\beta \lambda f. \lambda x. f(\underline{1}fx) = \lambda f. \lambda x. f((\lambda f.\lambda x.fx)fx) \rightarrow_\beta \lambda f.\lambda x. f(fx)$
-* $\underline{SUCC} \: \underline{2} \rightarrow_\beta \lambda f. \lambda x. f(\underline{1}fx) = \lambda f. \lambda x. f((\lambda f.\lambda x.f(fx))fx) \rightarrow_\beta \lambda f.\lambda x. f(f(fx))$
+* $\underline{SUCC} \: \underline{0} →_β λf.λx.f(\underline{0}fx) = λf.λx.f((λf.λx.x)fx) →_β λf.λx.fx$
+* $\underline{SUCC} \: \underline{1} →_β λf.λx.f(\underline{1}fx) = λf.λx.f((λf.λx.fx)fx) →_β λf.λx.f(fx)$
+* $\underline{SUCC} \: \underline{2} →_β λf.λx.f(\underline{1}fx) = λf.λx.f((λf.λx.f(fx))fx) →_β λf.λx.f(f(fx))$
 
 ### ADD
 
-$\underline{ADD}=\lambda n. \lambda m. \lambda f. \lambda x. nf(mfx)$
+$\underline{ADD}=λn.λm.λf.λx.nf(mfx)$
 
-$\underline{ADD} \:\underline{n} \: \underline{m} \rightarrow_\beta f^n(f^mx)=f^{n+m}=\underline{n+m}$
+$\underline{ADD} \:\underline{n} \: \underline{m} →_β f^n(f^mx)=f^{n+m}=\underline{n+m}$
 
 #### Esempi
 
 $$
 \underline{ADD} \: \underline{2} \: \underline{3} \\
-= (\lambda n. \lambda m. \lambda f. \lambda x. (nf(mfx)))(\lambda f.\lambda x.f(fx))(\lambda f.\lambda x.f(f(fx))) \\
-\rightarrow_\beta (\lambda m. \lambda f. \lambda x. (\lambda f.\lambda x.f(fx))f(mfx))(\lambda f.\lambda x.f(f(fx))) \\
-\rightarrow_\beta (\lambda f. \lambda x. (\lambda f.\lambda x.f(fx))f(\lambda f.\lambda x.f(f(fx)))fx) \\
-\rightarrow_\beta (\lambda f. \lambda x. (\lambda f.\lambda x.f(fx))f(f(f(fx)))) \\
-\rightarrow_\beta (\lambda f. \lambda x. (\lambda x.f(fx))(f(f(fx)))) \\
-\rightarrow_\beta (\lambda f. \lambda x. f(f(f(f(fx)))))
+= (λn.λm.λf.λx.(nf(mfx)))(λf.λx.f(fx))(λf.λx.f(f(fx))) \\
+→_β (λm.λf.λx.(λf.λx.f(fx))f(mfx))(λf.λx.f(f(fx))) \\
+→_β (λf.λx.(λf.λx.f(fx))f(λf.λx.f(f(fx)))fx) \\
+→_β (λf.λx.(λf.λx.f(fx))f(f(f(fx)))) \\
+→_β (λf.λx.(λx.f(fx))(f(f(fx)))) \\
+→_β (λf.λx.f(f(f(f(fx)))))
 $$
 
 ## MULT
@@ -66,6 +66,6 @@ $\underline{MULT} = λn.λm.λf.n(mf)$
 
 Esiste sempre una funzione $\underline{F}$ che codifica una funzione "normale" nel λ-calcolo.
 
-$F: \mathbb{N}^k \rightharpoonup \mathbb{N}$
+$F: ℕ^k ⇀ ℕ$
 
-$\exists \underline{F} \in \Lambda.\forall n_1,...,n_k.F(n_1,...,n_k)=m \quad \underline{F} \: \underline{n_1}...\underline{n_k} \rightarrow_\beta^\star \underline{m}$
+$∃ \underline{F} ∈ Λ.∀n_1,...,n_k.F(n_1,...,n_k)=m \quad \underline{F} \: \underline{n_1}...\underline{n_k} →_β^* \underline{m}$

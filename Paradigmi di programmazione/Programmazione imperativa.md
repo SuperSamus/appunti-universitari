@@ -12,7 +12,7 @@ Basata sulla [[macchina di Turing]]. Per ottenere un risultato si istruisce la m
 - Computazione = trasformazione di **stati**
 	- Istruzioni: modificano lo stato
 		- Esempi: $I::=skip|x:=E|\text{while } E \text{ do } I|I;I$
-		- Dato $\sigma=\text{stato}$, $<\sigma,I> \rightarrow <\sigma',I'>$
+		- Dato $\sigma=\text{stato}$, $<\sigma,I> → <\sigma',I'>$
 	- Espressioni: non modificano lo stato
 		- Esempi: $E::=n|b|E+E$
 

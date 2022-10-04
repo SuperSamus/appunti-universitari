@@ -2,7 +2,7 @@
 
 Binaria: $\{0,1\} \; \{F,V\} \; \{false,true\}$
 
-Bit: $\text{valore} \in \{0,1\}$
+Bit: $\text{valore} ∈ \{0,1\}$
 
 Combinazioni: $2^n$
 

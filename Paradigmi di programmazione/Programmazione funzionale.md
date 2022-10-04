@@ -16,29 +16,29 @@ Non ci sono [[β-riduzione#^b5ae66|effetti collaterali]].
 	- [[Sostituzioni|Passaggio per nome/valore]]
 	- Esecuzione: [[β-riduzione]]
 
-$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ite(E,E,E)\text{fun } x \Rightarrow E| EE|\text{let } x=E \text{ in }E|fix \: e|…$
+$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ite(E,E,E)\text{fun } x⇒E| EE|\text{let } x=E \text{ in }E|fix \: e|…$
 
 ## Codifica
 
 Associare agli oggetti un λ-termine. Per esempio, i booleani $true$ e $false$ da soli sono inutili, ma possono essere sfruttati da altre espressioni:
-- $ite(true,\square,\triangle)\rightarrow_\beta^\star\square$
-- $ite(false,\square,\triangle)\rightarrow_\beta^\star\triangle$
+- $ite(true,\square,\triangle)→_β^*\square$
+- $ite(false,\square,\triangle)→_β^*\triangle$
 
 Come si codificano nel λ-calcolo?
-- $\underline{true}=\lambda xy.x$
-- $\underline{false}=\lambda xy.y$
-- $\underline{ite}=\lambda b.\lambda t.\lambda s.bts$
+- $\underline{true}=λxy.x$
+- $\underline{false}=λxy.y$
+- $\underline{ite}=λb.λt.λs.bts$
 
 Esempio:
 $$
 \underline{ite} \: \underline{true} \: ts \\
-=(\lambda b.\lambda x.\lambda y. bxy) \underline{true} \: ts \\
-\rightarrow_\beta(\lambda x.\lambda y.\underline{true} \: xy)ts \\
-\rightarrow_\beta(\lambda y.\underline{true} \: ty)s \\
-\rightarrow_\beta \underline{true} \: ts \\
-= (\lambda xy.x)ts \\
-\rightarrow_\beta (\lambda y.t)s \\
-\rightarrow_\beta t
+=(λb.λx.λy.bxy) \underline{true} \: ts \\
+→_β(λx.λy.\underline{true} \: xy)ts \\
+→_β(λy.\underline{true} \: ty)s \\
+→_β \underline{true} \: ts \\
+= (λxy.x)ts \\
+→_β (λy.t)s \\
+→_β t
 $$
 
 ```mermaid
@@ -81,7 +81,7 @@ in
     e''
 ```
 
-$(\lambda x.\lambda y.e'')e(e')$
+$(λx.λy.e'')e(e')$
 
 ### Map
 
@@ -89,4 +89,4 @@ $(\lambda x.\lambda y.e'')e(e')$
 map f(map g x) // = map(f∘g)x
 ```
 
-$\text{map } f(\text{map } g([x_1,…,x_n])) \rightarrow^\star \text{map } f [g(x_1),…,g(x_n)] \rightarrow^\star [f(g(x_1)),…,f(g(x_n))$
+$\text{map } f(\text{map } g([x_1,…,x_n])) →^* \text{map } f [g(x_1),…,g(x_n)] →^* [f(g(x_1)),…,f(g(x_n))$
