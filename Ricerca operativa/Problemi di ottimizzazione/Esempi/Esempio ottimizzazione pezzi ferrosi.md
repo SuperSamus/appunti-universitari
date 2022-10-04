@@ -26,6 +26,6 @@ Vincoli:
 - $0,45x_A+0,5x_B+0,4x_c+100x_{Mn} \geq 0,45 * 1000$
 - $3,25 \leq 4x_A+1x_B+0,6x_c+0x_{Mn} \leq 5,5 * 1000$
 
-Funzione obiettivo min: $f(x)=25x_A+30x_B+18x_c+10000x_{Mn}$
+Funzione obiettivo min: $25x_A+30x_B+18x_c+10000x_{Mn}$
 
 Questo è un problema di **programmazione lineare**.

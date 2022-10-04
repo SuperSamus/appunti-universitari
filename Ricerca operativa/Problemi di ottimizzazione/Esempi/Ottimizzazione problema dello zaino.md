@@ -16,6 +16,6 @@ Vincoli:
 
 - $\displaystyle\sum_{i=1}^n p_ix_i \leq c$
 
-Funzione obiettivo max: $f(x)=\displaystyle\sum_{i=1}^n b_ix_i$
+Funzione obiettivo max: $\displaystyle\sum_{i=1}^n b_ix_i$
 [^1]: **Variabili quantitative**: rappresentano un valore numerico
 [^2]: **Variabili logiche**: discriminano tra 2 scelte alternative

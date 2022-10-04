@@ -18,7 +18,7 @@ Vincoli[^1]:
 - Vincolo di semiassegnamento: $\displaystyle\sum_{j=1}^n x_{ij}=1 \quad i=1…n$
 - Vincolo di capacità: $\displaystyle\sum_{i=1}^n p_ix_{ij} \leq c_jy_j \quad j=1…n$
 
-Funzione obiettivo min: $f(x)=\displaystyle\sum_{i=1}^n y_i$
+Funzione obiettivo min: $\displaystyle\sum_{i=1}^n y_i$
 
 ### Esempio
 

@@ -25,17 +25,17 @@ Associare agli oggetti un λ-termine. Per esempio, i booleani $true$ e $false$ d
 - $ite(false,\square,\triangle)\rightarrow_\beta^\star\triangle$
 
 Come si codificano nel λ-calcolo?
-- $\overline{true}=\lambda xy.x$
-- $\overline{false}=\lambda xy.y$
-- $\overline{ite}=\lambda b.\lambda t.\lambda s.bts$
+- $\underline{true}=\lambda xy.x$
+- $\underline{false}=\lambda xy.y$
+- $\underline{ite}=\lambda b.\lambda t.\lambda s.bts$
 
 Esempio:
 $$
-\overline{ite} \: \overline{true} \: ts \\
-=(\lambda b.\lambda x.\lambda y. bxy) \overline{true} \: ts \\
-\rightarrow_\beta(\lambda x.\lambda y.\overline{true} \: xy)ts \\
-\rightarrow_\beta(\lambda y.\overline{true} \: ty)s \\
-\rightarrow_\beta \overline{true} \: ts \\
+\underline{ite} \: \underline{true} \: ts \\
+=(\lambda b.\lambda x.\lambda y. bxy) \underline{true} \: ts \\
+\rightarrow_\beta(\lambda x.\lambda y.\underline{true} \: xy)ts \\
+\rightarrow_\beta(\lambda y.\underline{true} \: ty)s \\
+\rightarrow_\beta \underline{true} \: ts \\
 = (\lambda xy.x)ts \\
 \rightarrow_\beta (\lambda y.t)s \\
 \rightarrow_\beta t

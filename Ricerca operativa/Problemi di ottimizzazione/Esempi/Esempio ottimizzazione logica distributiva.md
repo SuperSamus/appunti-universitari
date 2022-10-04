@@ -8,6 +8,7 @@ Variabili extra:
 - $y_j \in \{0,1\} \quad y_j=\begin{cases} 1 &\text{se il deposito } j \text{ rifornisce almeno una regione} \\ 0 &\text{altrimenti} \end{cases}$
 
 Vincoli:
-- Vincoli di capacità: $\displaystyle\sum_{j=1}^m x_{ij}b_i \leq u_j \quad i=1...n$
+- Vincoli di capacità: $\displaystyle\sum_{j=1}^m b_ix_{ij} \leq u_jy_j \quad i=1...n$
+	- Inoltre, se il deposito non viene usato, non ha capacità.
 - Vincoli di semiassegnamento: $\displaystyle\sum_{j=1}^m x_{ij}=1 \quad i=1...n$
-- Se il deposito viene usato, paga il costo fisso:
+Funzione obiettivo min: $- $\displaystyle\sum_{j=1}^m \displaystyle\sum_{i=1}^n c_{ij}b_ix_{ij}+\frac{c_jy_j}{n}$
