@@ -36,7 +36,6 @@ $nil$ e $cons$ sono definiti come:
 
 Definire le funzioni:
 - $ADDLIST [n_1...n_k]=\displaystyle\sum_{i=1}^kn_i$
-	- $\Theta \:addlist=\Theta (\lambda f.\lambda n.ife \: n)
 - $PRODLIST[n_1...n_k]=\displaystyle\prod_{i=1}^kn_i$
 - $COMP \:f \: g=_\beta f \circ g$
 - $MAP$
