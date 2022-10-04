@@ -16,22 +16,22 @@ Non ci sono [[β-riduzione#^b5ae66|effetti collaterali]].
 	- [[Sostituzioni|Passaggio per nome/valore]]
 	- Esecuzione: [[β-riduzione]]
 
-$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ife(E,E,E)\text{fun } x \Rightarrow E| EE|\text{let } x=E \text{ in }E|fix \: e|…$
+$E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ite(E,E,E)\text{fun } x \Rightarrow E| EE|\text{let } x=E \text{ in }E|fix \: e|…$
 
 ## Codifica
 
 Associare agli oggetti un λ-termine. Per esempio, i booleani $true$ e $false$ da soli sono inutili, ma possono essere sfruttati da altre espressioni:
-- $ife(true,\square,\triangle)\rightarrow_\beta^\star\square$
-- $ife(false,\square,\triangle)\rightarrow_\beta^\star\triangle$
+- $ite(true,\square,\triangle)\rightarrow_\beta^\star\square$
+- $ite(false,\square,\triangle)\rightarrow_\beta^\star\triangle$
 
 Come si codificano nel λ-calcolo?
 - $\overline{true}=\lambda xy.x$
 - $\overline{false}=\lambda xy.y$
-- $\overline{ife}=\lambda b.\lambda t.\lambda s.bts$
+- $\overline{ite}=\lambda b.\lambda t.\lambda s.bts$
 
 Esempio:
 $$
-\overline{ife} \: \overline{true} \: ts \\
+\overline{ite} \: \overline{true} \: ts \\
 =(\lambda b.\lambda x.\lambda y. bxy) \overline{true} \: ts \\
 \rightarrow_\beta(\lambda x.\lambda y.\overline{true} \: xy)ts \\
 \rightarrow_\beta(\lambda y.\overline{true} \: ty)s \\
@@ -54,11 +54,11 @@ F -- θ --> Λ1[Λ] -- β --> Λ2[Λ]
 FACT = fun n => if (n == 0) then 1 else n + FACT(n - 1)
 // (fun x => e)(a) -> e[a/x]
 // FACT(3) = (fun n => if(n==0,1,n*FACT(n-1)))(3)
-// -> ife(3==0,1,3*FACT(3-1))
-// -> ife(false,1,3*FACT(3-1))
+// -> ite(3==0,1,3*FACT(3-1))
+// -> ite(false,1,3*FACT(3-1))
 // -> 3*FACT(3-1)
 // -> 3*FACT(2)
-// = 3*(fun n => ife(...))(2)
+// = 3*(fun n => ite(...))(2)
 // ...
 // -> 3 * 2 * 1
 // -> 6

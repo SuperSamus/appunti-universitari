@@ -26,19 +26,19 @@ Dimostrazione: sia $f$ una funzione, e $H=\lambda x.f(xx)$. Allora $HH \rightarr
 
 ## Fix
 
-Questa cosa non si può fare: $t=_\beta\lambda n.ife \: n==0 \: \underline{1} \: (\underline{mult} \: n(t(\underline{prec} \: n)))$
+Questa cosa non si può fare: $t=_\beta\lambda n.\underline{ite} \: (\underline{eq} \: n \: \underline{0}) \: \underline{1} \: (\underline{mult} \: n(t(\underline{prec} \: n)))$
 
-Però si può fare $s=\lambda f.\lambda n.ife \: n==0 \: \underline{1} \: (\underline{mult} \: n(f(\underline{prec} \: n)))$
+Però si può fare $s=\lambda f.\lambda n.\underline{ite} \: (\underline{eq} \: n \: \underline{0}) \: \underline{1} \: (\underline{mult} \: n(f(\underline{prec} \: n)))$
 
 Da qui ci vorrebbe un λ-termine $fix$ tale che $fix \: t \rightarrow_\beta^\star t(fix \: t)$.
 
-$fix \: s \rightarrow_\beta s(fix \: s) \rightarrow_\beta \lambda n.ife \: n==0 \: \underline{1} \: (\underline{mult} \: n((fix \: s)(\underline{prec} \: n)))$
+$fix \: s \rightarrow_\beta s(fix \: s) \rightarrow_\beta \lambda n.\underline{ite} \: (\underline{eq} \: n \: \underline{0}) \: \underline{1} \: (\underline{mult} \: n((fix \: s)(\underline{prec} \: n)))$
 
 Eseguiamolo con 2:
 
 $$
 (fix \: s)2 \\
-\rightarrow_\beta^\star ife \: 2==0 \: \underline{1} \: (mult \: n((fix \: s)(\underline{prec} \: \underline{2}))) \\
+\rightarrow_\beta^\star \underline{ite} \: (\underline{eq} \: \underline{2} \: \underline{0}) \: \underline{1} \: (mult \: n((fix \: s)(\underline{prec} \: \underline{2}))) \\
 \rightarrow_\beta^\star mult \: \underline{2}((fix \: s)\underline{1}) \\
 \rightarrow_\beta^\star mult \: \underline{2}(s(fix \: s)\underline{1}) \\
 \rightarrow_\beta^\star mult \: \underline{2}(mult \: \underline{1}((fix \: s)\underline{0})) \\
