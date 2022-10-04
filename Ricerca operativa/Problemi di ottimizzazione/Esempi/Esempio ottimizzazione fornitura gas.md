@@ -24,15 +24,12 @@ Questa non è una funzione lineare! Non sappiamo risolverla!
 
 ## Nuovi vincoli
 
-Creiamo una variabile ausiliaria: $t=∑\limits_{i=1}^n x_i/d_i$ (approssimazione superiore del valore max cercato)
+Creiamo una variabile ausiliaria (approssimazione superiore del valore max cercato):
 
-$t ≥ \displaystyle\max_{i=1…n} x_i/d_i ⟺ t ≥ \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
+$t ≥ \displaystyle\max_{i=1…n} x_i/d_i ⟺ t ≥ x_i/d_i \quad i=1…n$
 
-Vincoli:
-- Vincolo di soglia: $t ≥ \displaystyle\max_{i=1…n} x_i/d_i \quad i=1…n$
-- Vincolo di domanda: $∑\limits_{i=1}^n x_i ≥ L$
-- Vincolo di budget: $∑\limits_{i=1}^n x_ic_i ≤ E$
-- $x_i ≥ 0 \quad i=1…n$
+Nuovi vincoli:
+- Vincolo di soglia: $t ≥ x_i/d_i \quad i=1…n$
 
 Funzione obiettivo min: $t$
 
