@@ -81,7 +81,7 @@ in
     e''
 ```
 
-$(\lambda(xy).e'')(ee')$
+$(\lambda x.\lambda y.e'')e(e')$
 
 ### Map
 

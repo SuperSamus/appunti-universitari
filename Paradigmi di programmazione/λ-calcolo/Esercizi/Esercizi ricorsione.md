@@ -41,7 +41,6 @@ Definire le funzioni:
 	- $ADDLIST=\lambda l.l(mult)0=\lambda l.l(\lambda n. \lambda m. \lambda f. \lambda x. nf(mfx))(\lambda f.\lambda x.x)$
 - $PRODLIST[n_1...n_k]=\displaystyle\prod_{i=1}^kn_i$
 	- $PRODLIST=\lambda l.l(mult)1=\lambda l.l(\lambda n. \lambda m. \lambda f.n(mf)(\lambda f.\lambda x.fx)$
-- $COMP \:f \: g=_\beta f \circ g$
 - $MAP$
 	- Ricorda che $MAP \: f(MAP \: g \: l)=_\beta MAP(f \circ g)l$
 	- $MAP=\lambda f.\lambda l.\lambda c.l(cf)$
