@@ -24,15 +24,19 @@ Elemento → 1 solo oggetto
 
 $\displaystyle\sum_{j=1}^n \displaystyle\sum_{i=1}^nx_{ij}=n$ non assicura che lo stesso oggetto non sia stato inserito più volte.
 
+%%
+
 ## Vincolo di capacità
 
 - $p_i>0$ "peso" dell'oggetto $i$
-- $c_j$ capacità del contenitore $j$
+- $c_j>0$ capacità del contenitore $j$
+- $x_{ij} \in \{0,1\} \quad x_{ij}=\begin{cases} 1 &\text{se } i → j \\ 0 &\text{altrimenti} \end{cases}$
+- $y_j \in \{0,1\} \quad y_j=\begin{cases} 1 &\text{se il contenitore } j \text{ viene usato} \\ 0 &\text{altrimenti} \end{cases}$
 - $\displaystyle\sum_{i=1}^n p_ix_{ij} \leq c_jy_j \quad j=1…n$
 
 ### Errore
 
-$\displaystyle\sum_{i=1}^n x_i \leq \displaystyle\sum_{j=1}^n c_jy_j$ permette agli oggetti di essere smistati in modi impossibili.
+$\displaystyle\sum_{i=1}^n p_i \leq \displaystyle\sum_{j=1}^n c_jy_j$ permette agli oggetti di essere smistati in modi impossibili.
 
 ### Funzione a carico fisso
 
