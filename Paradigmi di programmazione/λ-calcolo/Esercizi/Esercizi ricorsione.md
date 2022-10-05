@@ -40,7 +40,7 @@ Le operazioni base $nil$ (costruisci una lista vuota) e $cons$ (aggiungi un valo
 Definire le funzioni:
 - $ADDLIST [n_1...n_k]=∑\limits_{i=1}^kn_i$
 	- $\underline{ADDLIST}=λl.l(\underline{mult})0=λl.l(λn.λm.λf.λx.nf(mfx))(λf.λx.x)$
-- $PRODLIST[n_1...n_k]=\displaystyle∏_{i=1}^kn_i$
+- $PRODLIST[n_1...n_k]=∏\limits_{i=1}^kn_i$
 	- $\underline{PRODLIST}=λl.l(\underline{mult})1=λl.l(λn.λm.λf.n(mf)(λf.λx.fx)$
 - $MAP$
 	- Ricorda che $\underline{MAP} \: f(\underline{MAP} \: g \: l)=_β \underline{MAP}(f ∘ g)l$
