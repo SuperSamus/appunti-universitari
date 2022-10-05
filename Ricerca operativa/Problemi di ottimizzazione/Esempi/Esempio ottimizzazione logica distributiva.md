@@ -20,7 +20,7 @@ La stessa regione ora può essere rifornita da quanti depositi vuole.
 
 Si rifà tutto!
 
-Variabili extra:
+Da trovare:
 - $x_{ij} ∈ ℝ_{≥ 0}$ quanto gas prende la regione $i$ dal deposito $j$
 - $y_j ∈ \{0,1\} \quad y_j=\begin{cases} 1 &\text{se il deposito } j \text{ rifornisce almeno una regione} \\ 0 &\text{altrimenti} \end{cases}$
 
