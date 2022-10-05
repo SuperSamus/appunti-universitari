@@ -6,12 +6,12 @@ Sapendo che il punto vendita $i$ ha domanda $d_i$, si formuli in termini di Prog
 aperti, in modo da rispettare le capacità e minimizzando il costo totale di attivazione (suggerimento: la decisione di non aprire un magazzino può essere espressa assegnandogli capacità zero).
 
 Da trovare:
-- $s_{ij} \in \{0,1\}$ se il punto vendita $i$ compra dal magazzino $j$
-- $h_{kj} \in \{0,1\}$ se il magazzino $j$ sceglie la capacità $k=1…3$
+- $s_{ij} ∈ \{0,1\}$ se il punto vendita $i$ compra dal magazzino $j$
+- $h_{kj} ∈ \{0,1\}$ se il magazzino $j$ sceglie la capacità $k=1…3$
 
 Vincoli:
-- Ogni negozio sceglie un magazzino: $\displaystyle\sum_{j=1}^m s_{ij}=1 \quad i=1...n$
-- Ogni magazzino sceglie al massimo una capacità: $\displaystyle\sum_{h=1}^3 k_{hj} \leq 1 \quad j=1…m$
-- Ogni magazzino ha abbastanza capacità per tutti i negozi: $\displaystyle\sum_{h=1}^3 u_hk_{hj} \geq \sum_{i=1}^n d_is_{ij} \quad j=1…m$
+- Ogni negozio sceglie un magazzino: $\displaystyle∑_{j=1}^m s_{ij}=1   i=1...n$
+- Ogni magazzino sceglie al massimo una capacità: $\displaystyle∑_{h=1}^3 k_{hj} ≤ 1   j=1…m$
+- Ogni magazzino ha abbastanza capacità per tutti i negozi: $\displaystyle∑_{h=1}^3 u_hk_{hj} ≥ ∑_{i=1}^n d_is_{ij}   j=1…m$
 
-Funzione obiettivo min: $\displaystyle\sum_{j=1}^m\sum_{h=1}^3 c_{hj}$
+Funzione obiettivo min: $\displaystyle∑_{j=1}^m∑_{h=1}^3 c_{hj}$

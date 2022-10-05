@@ -1,8 +1,9 @@
+
 # Esercizi [[ricorsione]]
 
 Definire le seguenti operazioni sia con $Y$ che $Θ$:
 
-### \underline{mult} (con $\underline{add}$)
+### Mult (con $\underline{add}$)
 
 $\underline{mult} \: n \: m =_β \underline{mult}' \: n \: m$
 
