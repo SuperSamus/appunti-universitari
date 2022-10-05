@@ -7,7 +7,7 @@ aperti, in modo da rispettare le capacità e minimizzando il costo totale di att
 
 Da trovare:
 - $s_{ij} ∈ \{0,1\} \quad s_{ij}=\begin{cases} 1 &\text{se il punto vendita } i \text{ compra dal magazzino } j \\ 0 &\text{altrimenti} \end{cases}$
-- $k_{hj} ∈ \{0,1\} \quad k_{ij}=\begin{cases} 1 &\text{se } d_{ij} ≤ 10 \\ 0 &\text{altrimenti} \end{cases}$ se il magazzino $j$ sceglie la capacità $h=1…3$
+- $k_{hj} ∈ \{0,1\} \quad k_{ij}=\begin{cases} 1 &\text{se il magazzino } j \text{sceglie la capacità } h=1…3 \\ 0 &\text{altrimenti} \end{cases}$
 
 Vincoli:
 - Ogni negozio sceglie un magazzino: $∑\limits_{j=1}^m s_{ij}=1   i=1…n$

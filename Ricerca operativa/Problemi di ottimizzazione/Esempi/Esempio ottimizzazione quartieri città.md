@@ -4,7 +4,7 @@ Una città è costituita da $n$ quartieri. Il direttore dell’azienda sanitaria
 L'azienda sanitaria deve decidere come assegnare i quartieri ai presidi rispettando il vincolo di equilibrio e minimizzando il costo totale di assegnamento. Aiuta il direttore formulando il problema come problema di Programmazione Lineare Intera.
 
 Da trovare:
-- $s_{ij} ∈ \{0,1\}$ se il quartiere $i$ viene assegnato al presidio $j$
+- $s_{ij} ∈ \{0,1\} \quad s_{ij}=\begin{cases} 1 &\text{se il quartiere } i \text{ viene assegnato al presidio } j \\ 0 &\text{altrimenti} \end{cases}$
 
 Vincoli:
 - Ogni quartiere sceglie un presidio: $∑\limits_{j=1}^m s_{ij}=1 \quad i=1…n$
