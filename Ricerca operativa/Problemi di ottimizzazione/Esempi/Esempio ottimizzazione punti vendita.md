@@ -10,7 +10,7 @@ Da trovare:
 - $h_{kj} ∈ \{0,1\}$ se il magazzino $j$ sceglie la capacità $k=1…3$
 
 Vincoli:
-- Ogni negozio sceglie un magazzino: $∑\limits_{j=1}^m s_{ij}=1   i=1...n$
+- Ogni negozio sceglie un magazzino: $∑\limits_{j=1}^m s_{ij}=1   i=1…n$
 - Ogni magazzino sceglie al massimo una capacità: $∑\limits_{h=1}^3 k_{hj} ≤ 1   j=1…m$
 - Ogni magazzino ha abbastanza capacità per tutti i negozi: $∑\limits_{h=1}^3 u_hk_{hj} ≥ ∑_{i=1}^n d_is_{ij}   j=1…m$
 
