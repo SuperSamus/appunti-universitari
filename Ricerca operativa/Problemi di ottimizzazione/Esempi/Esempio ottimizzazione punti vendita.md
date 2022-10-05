@@ -7,8 +7,11 @@ aperti, in modo da rispettare le capacità e minimizzando il costo totale di att
 
 Da trovare:
 - $s_{ij} \in \{0,1\}$ se il punto vendita $i$ compra dal magazzino $j$
-- $h_{kj} \in \{0,1\} \quad k=1…3$ se il magazzino $j$ sceglie la capacità $k$
+- $h_{kj} \in \{0,1\}$ se il magazzino $j$ sceglie la capacità $k=1…3$
 
 Vincoli:
-- Ogni magazzino sceglie al massimo una capacità: $\displaystyle\sum_{k=1}^3 h_{kj} \leq 1 \quad j=1…m$
-- Ogni magazzino ha abbastanza capacità per tutti i negozi: $\displaystyle\sum_{k=1}^3 u_kh_{kj} \geq \displaystyle\sum_{i=1}^n d_is_{ij} \quad j=1…m$
+- Ogni negozio sceglie un magazzino: $\displaystyle\sum_{j=1}^m s_{ij}=1 \quad i=1...n$
+- Ogni magazzino sceglie al massimo una capacità: $\displaystyle\sum_{h=1}^3 k_{hj} \leq 1 \quad j=1…m$
+- Ogni magazzino ha abbastanza capacità per tutti i negozi: $\displaystyle\sum_{h=1}^3 u_hk_{hj} \geq \sum_{i=1}^n d_is_{ij} \quad j=1…m$
+
+Funzione obiettivo min: $\displaystyle\sum_{j=1}^m\sum_{h=1}^3 c_{hj}$
