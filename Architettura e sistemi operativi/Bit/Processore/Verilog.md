@@ -17,15 +17,15 @@
 
 ```verilog
 primitive(   );
-...
+// ...
 endprimitive
 
 module(   );
-...
+// ...
 endmodule
 ```
 
-Implementiamo la [[Mappa di Karnaugh#^93d855|somma]].
+Implementiamo la somma.
 
 ```verilog
 primitive z(output z, input x, input y, input r);
@@ -42,4 +42,29 @@ primitive z(output z, input x, input y, input r);
   endtable
 
 endprimitive
+
+module fa(output c, output z, input x, input y, input r);
+
+  z uscita(z,x,y,r);
+  c carryo(c,x,y,r);
+
+endmodule;
+```
+
+Implementiamo un [[Porte logiche#^b31833|multiplexer]]:
+
+```verilog
+// Dopo aver implementato mux1
+module mux4(output[3:0]z, input[3:0]x1, ..., input 3:0x4, input [1:0]ctl);
+
+  mux1 m4(z[3], x1[3], x2[3], /* ...,*/ x4[3], ctl);
+  mux1 m3(z[2], x1[2], /* ...,*/ ctl);
+  // ...
+
+endmodule
+```
+
+Testbench
+
+```ver
 ```

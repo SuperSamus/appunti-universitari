@@ -81,8 +81,6 @@ Esempio:
 
 #### Somma
 
-^93d855
-
 In una somma tra le variabili da 2 bit $X$ ($x_1x_0$) e $Y$ ($y_1y_0$), ricava:
 - $z_1$: La prima cifra della somma
 - $z_2$: La seconda cifra della somma
