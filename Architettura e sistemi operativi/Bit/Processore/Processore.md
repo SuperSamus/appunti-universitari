@@ -76,7 +76,7 @@ Contiene
 - Memoria
 - GPU
 - Processore
-- FPGA (field-programmable gate array)
+- FPGA (field-programmable gate array) ^4d0651
 - DMA
 - Bus
 
