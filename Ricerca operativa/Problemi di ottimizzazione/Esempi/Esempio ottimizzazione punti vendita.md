@@ -6,8 +6,8 @@ Sapendo che il punto vendita $i$ ha domanda $d_i$, si formuli in termini di Prog
 aperti, in modo da rispettare le capacità e minimizzando il costo totale di attivazione (suggerimento: la decisione di non aprire un magazzino può essere espressa assegnandogli capacità zero).
 
 Da trovare:
-- $s_{ij} ∈ \{0,1\}$ se il punto vendita $i$ compra dal magazzino $j$
-- $k_{hj} ∈ \{0,1\}$ se il magazzino $j$ sceglie la capacità $h=1…3$
+- $s_{ij} ∈ \{0,1\} \quad s_{ij}=\begin{cases} 1 &\text{se il punto vendita } i \text{ compra dal magazzino } j \\ 0 &\text{altrimenti} \end{cases}$
+- $k_{hj} ∈ \{0,1\} \quad k_{ij}=\begin{cases} 1 &\text{se } d_{ij} ≤ 10 \\ 0 &\text{altrimenti} \end{cases}$ se il magazzino $j$ sceglie la capacità $h=1…3$
 
 Vincoli:
 - Ogni negozio sceglie un magazzino: $∑\limits_{j=1}^m s_{ij}=1   i=1…n$

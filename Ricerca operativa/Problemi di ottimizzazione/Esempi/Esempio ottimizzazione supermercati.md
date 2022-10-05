@@ -1,4 +1,5 @@
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] supermercati
+
 Dati:
 - $m$ siti potenziali per costruzione supermercati
 - $c_j$ costo costruzione di un supermercato nella località $j$
@@ -9,4 +10,7 @@ Dati:
 Da trovare:
 - $x_j ∈ \{0,1\}$ se costruiamo supermercato in $j$.
 
-Funzione obiettivo: $∑\limits_{i=1}^m c_jx_j$
+Vincoli:
+- $∑\limits_{j=1}^m a_{ij}x_j ≥ 1 \quad =1…n$
+
+Funzione obiettivo: $∑\limits_{j=1}^m c_jx_j$
