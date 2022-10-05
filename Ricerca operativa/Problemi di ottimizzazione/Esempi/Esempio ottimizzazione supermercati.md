@@ -1,3 +1,5 @@
+%%
+
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] supermercati
 
 Dati:
