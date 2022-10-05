@@ -66,18 +66,6 @@ module mux4(output[3:0]z, input[3:0]x1, ..., input 3:0x4, input [1:0]ctl);
 endmodule
 ```
 
-Testbench
-
-# TODO: 'sto professore scrive un programma con la penna invece che con un editor di testo, e 'un se capisce niente
-
 ```verilog
-module testFA();
-
-// Dichiarare tanti reg quanti sono gli ingressi
-reg inx, iny, inr;
-// DIchiarare tanti wire quanti gli output
-wire z, c;
-
-FA modulotest(c, z, mx, my);
 
 ```
