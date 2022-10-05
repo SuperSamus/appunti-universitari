@@ -1,14 +1,14 @@
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] fornitura gas
 
-Bisogna acquistare $L$ milioni di $m^3$ di gas da stoccare. È stato messo a disposizione uno stanziamento da $E$ milioni di euro. $n$ produttori hanno dichiarato le loro tempistiche di fornitura e richieste economiche: il produttore $i$ può fornite $d_i$ milioni di $m^3$ al giorno al prezzo unitario $c_i$ (espresso in milioni di euro).
+Bisogna acquistare $L$ milioni di m³ di gas da stoccare. È stato messo a disposizione uno stanziamento da $E$ milioni di euro. $n$ produttori hanno dichiarato le loro tempistiche di fornitura e richieste economiche: il produttore $i$ può fornite $d_i$ milioni di m³ al giorno al prezzo unitario $c_i$ (espresso in milioni di euro).
 
-Quanto gas acquistare da ciascun produttore per minimizzare il tempo complessivo di fornitura (il numero di giorni necessari a ricevere tutti gli $L$ $m^3$ di gas) nel rispetto dello stanziamento disponibile?
+Quanto gas acquistare da ciascun produttore per minimizzare il tempo complessivo di fornitura (il numero di giorni necessari a ricevere tutti gli $L$ m³ di gas) nel rispetto dello stanziamento disponibile?
 
-- $L$ milioni $m^3$ da acquistare
+- $L$ milioni m³ da acquistare
 - $E$ stanziamento disponibile
 - $n$ produttori
-- $d_i$ milioni $m^3$ gas al giorno
-- $c_i$ costo 1 milioni $m^3$
+- $d_i$ milioni m³ gas al giorno
+- $c_i$ costo 1 milioni m³
 
 Da trovare:
 $x_i$ quanto gas comprare da ciascuno?
