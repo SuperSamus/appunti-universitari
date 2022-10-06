@@ -1,6 +1,6 @@
 # OCaml
 
-$ξ∋e::=x|\underline{n}|"s"|e+e|e*e|e\textasciicircum e|\text{let }x=e \text{ in }e$
+$ξ∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|e+e|e*e|e\textasciicircum e|\text{let }x=e \text{ in }e$
 
 $P=\{e∈E|FV(e)=∅\}$
 
@@ -30,6 +30,7 @@ y^x
 ```
 
 ## Tipi
+
 $τ ∋ z::=num|str$
 
 $e:z$
@@ -45,11 +46,13 @@ $(Γ,e,z)→Γ⊢e:z$
 $Γ,e→z \text{ t.c. } Γ⊢e:z$
 
 ### Regole di introduzione:
+
 $$
 \frac{}{Γ,x:z⊢x:z} \\
 \frac{}{Γ⊢\underline{n}:\text{num}} \\
 \frac{}{Γ⊢"s":str}
 $$
+
 ### Regole di eliminazione
 
 $$
@@ -58,6 +61,25 @@ $$
 Γ⊢e_1:z\\
 \frac{Γ,x:z⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ} \\
 \frac{}{Γ,x:z⊢x:z} \\
-\frac{}{Γ⊢\underline{n}:\text{num}} \\
-\frac{}{Γ⊢"s"::\text{str}} \\
 $$
+
+### Assiomi
+
+$$
+\frac{}{Γ⊢\underline{n}:\text{num}} \\
+\frac{}{Γ⊢\textquotedblleft s \textquotedblright ::\text{str}} \\
+$$
+Inversione:
+- Se $Γ⊢e:z$, allora
+	- Se $e=e_1+e_2$, abbiamo:
+		- $z=\text{num} \quad Γ⊢e_1:\text{num} \quad Γ⊢e_2:\text{num}$
+
+Unicità:
+TODO
+
+## TI (Type Inference)
+Input $(Γ,e)
+
+Output 
+
+TODO: sigh... È il professore capace di non scrivere in modo disordinato a far capire bene di cosa sta parlando?
