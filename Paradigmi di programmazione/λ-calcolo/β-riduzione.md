@@ -148,12 +148,22 @@ CbN e Call-by-Need si comportano in maniera imprevedibile (o indesiderabile) con
 
 ### Definizione formale
 
-$(\lambda x.t)s \xrightarrow{CbV}_β t[s/x] \quad (\text{se } s \not \xrightarrow{CbV}_β)$
+$(λx.t)s \xrightarrow{CbV}_β t[s/x] \quad (\text{se } s \not \xrightarrow{CbV}_β)$
 
 $$
 \frac{t \xrightarrow{CbV}_β t'}{ts \xrightarrow{CbV}_β t's} \quad
 \frac{s \xrightarrow{CbV}_β s' \quad t \not \xrightarrow{CbV}_β}{ts \xrightarrow{CbV}_β ts'}
 $$
+Per esempio, dati:
+- $K = λx.λy.x$
+- $M=K(II)((λx.xx)(λy.yz)u)$
+- $N=(λx.xx)(λy.yz)u$
+
 $$
-\frac{K(II)((\lambdax.xx)(\lambda y.yz)u)}
+M \xrightarrow{CbV}_β(KI)N \\
+\xrightarrow{CbV}_β(λy.I)N \\
+\xrightarrow{CbV}_β (λy.I)((λx.xx)(uz)) \\
+\xrightarrow{CbV}_β ((λy.I)(uz))(uz) \\
+\xrightarrow{CbV}_β I(uz) \\
+\xrightarrow{CbV}_β uz
 $$
