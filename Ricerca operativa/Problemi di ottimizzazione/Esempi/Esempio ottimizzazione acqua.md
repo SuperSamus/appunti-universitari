@@ -1,8 +1,10 @@
-%%
-
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] acqua
 
-L'acqua deve raggiungere un depuratore.
+I numeri tra parentesi sono la quantità d'acqua che viene sporcata in quel nodo, identificato dal numero fuori dalla parentesi.
+
+Tutta questa acqua deve essere mandata nel depuratore (a destra), minimizzando i costi (mostrati negli archi, per unità d'acqua).
+
+Per esempio:
 
 ```mermaid
 flowchart LR
