@@ -2,6 +2,8 @@
 
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] supermercati
 
+Siamo una catena si supermercati che vuole entrare nel mercato della Toscana aprire un certo numero di punti vendita. La catena ha indivuato un certo numero di siti potenziali, e deciderai in quali di questi siti li costruirai.
+
 Dati:
 - $m$ siti potenziali per costruzione supermercati
 - $c_j$ costo costruzione di un supermercato nella località $j$
@@ -22,16 +24,20 @@ Funzione obiettivo min: $∑\limits_{j=1}^m c_jx_j$
 
 ### Selezione di sottoinsiemi
 
-$N=\{1,…,n\}$
-
-$F_1,F_2,...,F_n⊆N$
-
-$c_1,c_2,...,c_n$ costo di selezione
+- $N=\{1,…,n\}$
+- $F_1,F_2,...,F_n⊆N$
+- $c_1,c_2,...,c_n$ costo di selezione
+- $a_{ij} ∈ \{0,1\} \quad a_{ij}=\begin{cases} 1 &\text{se } i ∈ F \\ 0 &\text{altrimenti} \end{cases}$
 
 Problema di copertura: selezionare sottoinsiemi in modo che ciascun elemento di $N$ appartenga almeno ad uno dei sottoinsiemi selezionati, al minor costo possibile.
 
-$x_j ∈ \{0,1\} \quad x_j=\begin{cases} 1 &\text{se selezioniamo} F_j \\ 0 &\text{altrimenti} \end{cases}$
+Da trovare:
+- $x_j ∈ \{0,1\} \quad x_j=\begin{cases} 1 &\text{se selezioniamo } F_j \\ 0 &\text{altrimenti} \end{cases}$
 
+VIncoli:
+- Vincolo di copertura: $∑\limits_{j=1}^m a_{ij}x_j ≥ 1 \quad i ∈ N$
+	- Con $=$: vincolo di partizione
+	- Con $≤$: vincolo di riempimento (obiettivo max)
 
 
 Funzione obiettivo min: $∑\limits_{j=1}^m c_jx_j$
