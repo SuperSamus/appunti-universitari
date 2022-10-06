@@ -145,3 +145,15 @@ CbV però è più efficiente.
 Call-by-Need (lazy): inizialmente CbN, ma valuta il valore appena serve valutarlo. Utile per qualsiasi cosa infinita (come gli iteratori), dato che evita calcoli inutili.
 
 CbN e Call-by-Need si comportano in maniera imprevedibile (o indesiderabile) con gli effetti collaterali. Se li si vuole avere, CbV è l'unica scelta sensata.
+
+### Definizione formale
+
+$(\lambda x.t)s \xrightarrow{CbV}_β t[s/x] \quad (\text{se } s \not \xrightarrow{CbV}_β)$
+
+$$
+\frac{t \xrightarrow{CbV}_β t'}{ts \xrightarrow{CbV}_β t's} \quad
+\frac{s \xrightarrow{CbV}_β s' \quad t \not \xrightarrow{CbV}_β}{ts \xrightarrow{CbV}_β ts'}
+$$
+$$
+\frac{K(II)((\lambdax.xx)(\lambda y.yz)u)}
+$$
