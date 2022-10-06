@@ -2,6 +2,8 @@
 
 ```mermaid
 flowchart LR
-L --> Sintassi --> Comandi & Istruzioni & **Espressioni**
-L --> Semantica
+L --> SI["Sintassi\n(frasi)"] --> Comandi & Istruzioni & **Espressioni** --> RSI["Regole per frasi\nsintatticamente\nben formate"]
+L --> SE["Semantica\n(Operazionale)"] --> RSE["Computazione\ngenererata da\nuna frase\nben formata"] --> STI[Sistemi di\ntransizione]
 ```
+
+$e→e'$ (semantica dinamica)
