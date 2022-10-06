@@ -2,6 +2,8 @@
 
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] acqua
 
+L'acqua deve raggiungere un depuratore.
+
 ```mermaid
 flowchart LR
 2["2(3)"] -- 2 --> 1
