@@ -19,3 +19,19 @@ Vincoli:
 	- Con $≤$: vincolo di riempimento
 
 Funzione obiettivo min: $∑\limits_{j=1}^m c_jx_j$
+
+### Selezione di sottoinsiemi
+
+$N=\{1,…,n\}$
+
+$F_1,F_2,...,F_n⊆N$
+
+$c_1,c_2,...,c_n$ costo di selezione
+
+Problema di copertura: selezionare sottoinsiemi in modo che ciascun elemento di $N$ appartenga almeno ad uno dei sottoinsiemi selezionati, al minor costo possibile.
+
+$x_j ∈ \{0,1\} \quad x_j=\begin{cases} 1 &\text{se selezioniamo} F_j \\ 0 &\text{altrimenti} \end{cases}$
+
+
+
+Funzione obiettivo min: $∑\limits_{j=1}^m c_jx_j$
