@@ -23,4 +23,3 @@ Non dobbiamo consentire alla funzione di catturare variabili.
 - $(λx.t)[s/x]= λx.t$
 - $(λy.t)[s/x]=λy.t[s/x] \quad (\text{se } y \not ∈ FV(s))$
 - $(λy.t)[s/x]=(λz.t[z/y])[s/x]=λz.t[z/y][s/x] \quad (\text{se } z \not ∈ FV(t) ∧ z \not ∈ FV(s))$
-- 

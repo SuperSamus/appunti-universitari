@@ -111,8 +111,8 @@ Un effetto collaterale è un qualsiasi cosa che fa sì che il programma non sia 
 Se due espressioni hanno effetti collaterali, allora non possono mai essere uguali.
 
 Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
-- $e_1=print(a);return(2)$
-- $e_2=print(b);return(3)$
+- $e_1≜print(a);return(2)$
+- $e_2≜print(b);return(3)$
 - $e_1+e_2$ scrive $ab$, poi ritorna $5$
 - $e_1+e_2$ scrive $ba$, poi ritorna $5$
 
@@ -138,7 +138,7 @@ Ci sono $t↓_{CbN}$ ($t$ termina) e $t↑_{CbV}$ ($t$ non termina).
 		- CbV: $(λy.I)Ω$
 		- CbN: $I$
 
-Non vale viceversa. Teorema: se $t→_β^* s \not →$ allora $t \xrightarrow{CbN}_β^* s$
+Non vale viceversa. Teorema: se $t→_β^* s \not →_β$ allora $t \xrightarrow{CbN}_β^* s$
 
 CbV però è più efficiente.
 
@@ -158,13 +158,15 @@ $$
 \frac{s \xrightarrow{CbV}_β s' \quad t \not \xrightarrow{CbV}_β}{ts \xrightarrow{CbV}_β ts'}
 $$
 Per esempio, dati:
-- $K = λx.λy.x$
-- $M=K(II)((λx.xx)(λy.yz)u)$
-- $N=(λx.xx)(λy.yz)u$
+- $K ≜ λx.λy.x$
+- $M ≜ K(II)((λx.xx)(λy.yz)u)$
+- $N ≜ (λx.xx)(λy.yz)u$
 
 $$
-M \xrightarrow{CbV}_β(KI)N \\
+M=(KII)N \\
+\xrightarrow{CbV}_β(KI)N \\
 \xrightarrow{CbV}_β(λy.I)N \\
+=(λy.I)((λx.xx)((λy.yz)u)) \\
 \xrightarrow{CbV}_β (λy.I)((λx.xx)(uz)) \\
 \xrightarrow{CbV}_β ((λy.I)(uz))(uz) \\
 \xrightarrow{CbV}_β I(uz) \\

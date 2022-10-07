@@ -25,6 +25,4 @@ flowchart TB
 Java --> JVM --> Assembly --> A[Architettura VN]
 ```
 
-Con la programmazione imperativa si può usare molto poco la matematica che dà garanzie di *correttezza*: l'utilizzo delle variabili mutabili (assenti in matematica), e altri meccanismi come l'I/O, hanno[[β-riduzione#^b5ae66|effetti collaterali]].
-
-## Effetti collaterali
+Con la programmazione imperativa si può usare molto poco la matematica che dà garanzie di *correttezza*: l'utilizzo delle variabili mutabili (assenti in matematica), e altri meccanismi come l'I/O, hanno [[β-riduzione#^b5ae66|effetti collaterali]].
