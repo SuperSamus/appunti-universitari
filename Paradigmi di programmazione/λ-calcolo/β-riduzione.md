@@ -151,6 +151,9 @@ CbN e Call-by-Need si comportano in maniera imprevedibile (o indesiderabile) con
 $(λx.t)s \xrightarrow{CbV}_β t[s/x] \quad (\text{se } s \not \xrightarrow{CbV}_β)$
 
 $$
+\frac{t \xrightarrow{CbV}_β s}{λx.t \xrightarrow{CbV}_β λx.s}
+$$
+$$
 \frac{t \xrightarrow{CbV}_β t'}{ts \xrightarrow{CbV}_β t's} \quad
 \frac{s \xrightarrow{CbV}_β s' \quad t \not \xrightarrow{CbV}_β}{ts \xrightarrow{CbV}_β ts'}
 $$
