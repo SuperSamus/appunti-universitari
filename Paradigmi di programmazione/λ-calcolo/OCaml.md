@@ -71,8 +71,7 @@ $$
 $$
 \frac{Γ⊢e_1:\text{num} \quad Γ:e_2:num}{Γ⊢e_1+e_2:\text{num}} \\
 \frac{Γ⊢e_1:\text{str} \quad Γ:e_2:str}{Γ⊢e_1\textasciicircum e_2:\text{str}} \\
-Γ⊢e_1:τ\\
-\frac{Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ} \\
+\frac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
 $$
 
 ### Assiomi
