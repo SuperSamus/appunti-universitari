@@ -7,7 +7,7 @@ $P=\{ℰ∈E|FV(e)=∅\}$
 $e=_αe'$
 
 $$
-\text{let }x=e \text{ in }e \\
+\text{let }x=e \text{ in }e' \\
 =_α \\
 \text{let }y=e \text{ in }e'[y/x] \quad y \not ∈ FV(e')
 $$
@@ -20,7 +20,9 @@ let y = 5+2 in
 x+y
 ```
 
-Errore di sintassi:
+## Tipi
+
+Errore di semantica statica (non serve eseguire il programma per riceverlo):
 
 ```
 let x = "ciao" in
@@ -28,7 +30,7 @@ let y = 0 in
 y^x
 ```
 
-## Tipi
+**Sistema di tipi**: un meccanismo che impone vincoli sulla formazione delle frasi di un linguaggio per garantirne la sensatezza.
 
 $τ ∋ z::=num|str$
 
