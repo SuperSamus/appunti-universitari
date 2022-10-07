@@ -66,8 +66,8 @@ A[Yf] & B["y(Yf)"] --> C["t(Δ_fΔ_f)"]
 ```
 
 Proviamo un'altra cosa:
-- $A=λxy.y(xxy)$
-- $Θ=AA$
+- $A≜λxy.y(xxy)$
+- $Θ≜AA$
 - $Θf=(λxy.y(xxy))Af →_β (λy.y(AAy))f →_β f(AAf)=f(Θf)$
 
 Quindi $fix=Θ$.
