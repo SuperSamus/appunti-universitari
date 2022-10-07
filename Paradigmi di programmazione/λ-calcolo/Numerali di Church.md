@@ -73,4 +73,4 @@ Esiste sempre una funzione $\underline{F}$ che codifica una funzione "normale" n
 
 $F: ℕ^k ⇀ ℕ$
 
-$∃ \underline{F} ∈ Λ.∀n_1,...,n_k.F(n_1,...,n_k)=m \quad \underline{F} \: \underline{n_1}...\underline{n_k} →_β^* \underline{m}$
+$∃ \underline{F} ∈ Λ.∀n_1,…,n_k.F(n_1,…,n_k)=m \quad \underline{F} \: \underline{n_1}…\underline{n_k} →_β^* \underline{m}$

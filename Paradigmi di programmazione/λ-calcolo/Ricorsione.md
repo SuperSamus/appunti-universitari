@@ -58,7 +58,14 @@ Da qui:
 - $Yf →_β (λx.f(xx))(λx.f(xx)) →_β f((λx.f(xx))(λx.f(xx)))=f(Δ_fΔ_f)$
 - $f(Yf) →_β f((λf.(λx.f(xx))(λx.f(xx)))f) →_β f((λx.f(xx))(λx.f(xx)))=f(Δ_fΔ_f)$
 
-Quindi $Yf =_β f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una β-equivalenza. Proviamo un'altra cosa:
+Quindi $Yf =_β f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una β-equivalenza.
+
+```mermaid
+flowchart TD
+A[Yf] & B["y(Yf)"] --> C["t(Δ_fΔ_f)"]
+```
+
+Proviamo un'altra cosa:
 - $A=λxy.y(xxy)$
 - $Θ=AA$
 - $Θf=(λxy.y(xxy))Af →_β (λy.y(AAy))f →_β f(AAf)=f(Θf)$
