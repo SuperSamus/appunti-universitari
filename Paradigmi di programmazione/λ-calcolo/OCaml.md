@@ -74,24 +74,26 @@ $$
 \frac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
 $$
 
-### Assiomi
+### Teorema inversione
 
-$$
-\frac{}{Γ⊢\underline{n}:\text{num}} \\
-\frac{}{Γ⊢\textquotedblleft s \textquotedblright ::\text{str}} \\
-$$
-Inversione:
-- Se $Γ⊢e:τ$, allora
-	- Se $e=e_1+e_2$, abbiamo:
-		- $τ=\text{num} \quad Γ⊢e_1:\text{num} \quad Γ⊢e_2:\text{num}$
+Se $Γ⊢e:τ$, e se $e=e_1+e_2$, abbiamo:
 
-Unicità:
-TODO
+$τ=\text{num} \quad Γ⊢e_1:\text{num} \quad Γ⊢e_2:\text{num}$
 
-## TI (Type Inference)
+Lo stesso modo per tutti i costruttori.
 
-Input $(Γ,e)
+### Teorema unicità
 
-Output
+$∀e.∀τ. \text{ esiste al massimo in tipo } t \text{ t.c } Γ⊢e:τ$
 
-TODO: sigh… È il professore capace di non scrivere in modo disordinato a far capire bene di cosa sta parlando?
+## Algoritmo TI (Type Inference)
+
+Input: $(Γ,e)$
+
+Output: $z \text{ t.c. } Γ⊢e:τ \text{ se esiste, fail altrimenti}$
+
+```
+case e of
+    e==n => τ ≜ num
+    
+```
