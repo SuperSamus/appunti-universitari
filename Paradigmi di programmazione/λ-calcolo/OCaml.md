@@ -32,9 +32,9 @@ y^x
 
 **Sistema di tipi**: un meccanismo che impone vincoli sulla formazione delle frasi di un linguaggio per garantirne la sensatezza.
 
-$τ ∋ z::=num|str$
+$Τ ∋ τ::=num|str$
 
-$e:z$
+$e:τ$
 
 Per esempio:
 
@@ -44,22 +44,22 @@ $$
 
 Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il λ-calcolo non previene in nessun modo).
 
-$e$ però può essere tante cose (come un segnaposto), quindi $e:z$ da solo non basta.
+## Giudizi di tipo
 
-Ci vuole quindi un ambiente: $Γ::=x_1:z_1,...,x_n:z_n$
+$e$ può essere tante cose (come un segnaposto), quindi $e:τ$ da solo non basta.
+
+Ci vuole quindi un ambiente: $Γ::=x_1:τ_1,...,x_n:τ_n$, dove  $Γ⊢e:τ$.
 
 Per esempio: $x:str,y:str⊢x\textasciicircum y:str$
 
- $Γ⊢e:z$
-
-$(Γ,e,z)→Γ⊢e:z$
-
-$Γ,e→z \text{ t.c. } Γ⊢e:z$
+Proprietà:
+- $(Γ,e,τ)→Γ⊢e:τ$
+- $Γ,e→τ \text{ t.c. } Γ⊢e:τ$
 
 ### Regole di introduzione:
 
 $$
-\frac{}{Γ,x:z⊢x:z} \\
+\frac{}{Γ,x:τ⊢x:τ} \\
 \frac{}{Γ⊢\underline{n}:\text{num}} \\
 \frac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
 $$
@@ -69,9 +69,9 @@ $$
 $$
 \frac{Γ⊢e_1:\text{num} \quad Γ:e_2:num}{Γ⊢e_1+e_2:\text{num}} \\
 \frac{Γ⊢e_1:\text{str} \quad Γ:e_2:str}{Γ⊢e_1\textasciicircum e_2:\text{str}} \\
-Γ⊢e_1:z\\
-\frac{Γ,x:z⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ} \\
-\frac{}{Γ,x:z⊢x:z} \\
+Γ⊢e_1:τ\\
+\frac{Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ} \\
+\frac{}{Γ,x:τ⊢x:τ} \\
 $$
 
 ### Assiomi
@@ -81,9 +81,9 @@ $$
 \frac{}{Γ⊢\textquotedblleft s \textquotedblright ::\text{str}} \\
 $$
 Inversione:
-- Se $Γ⊢e:z$, allora
+- Se $Γ⊢e:τ$, allora
 	- Se $e=e_1+e_2$, abbiamo:
-		- $z=\text{num} \quad Γ⊢e_1:\text{num} \quad Γ⊢e_2:\text{num}$
+		- $τ=\text{num} \quad Γ⊢e_1:\text{num} \quad Γ⊢e_2:\text{num}$
 
 Unicità:
 TODO
