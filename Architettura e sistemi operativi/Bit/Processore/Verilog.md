@@ -81,3 +81,13 @@ wire z, c;
 FA modulotest(c, z, mx, my);
 
 ```
+
+## Tipi di blocchi
+- `initial`
+	- `begin`-`end`
+- `always`
+	- `begin`-`end`
+- `if(expr)`
+- `for()`
+- `case(x)`
+- 
