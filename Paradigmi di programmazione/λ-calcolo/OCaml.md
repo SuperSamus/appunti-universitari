@@ -1,16 +1,15 @@
 # OCaml
 
-$ξ∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|e+e|e*e|e\textasciicircum e|\text{let }x=e \text{ in }e$
+$ℰ∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|e+e|e*e|e\textasciicircum e|\text{let }x=e \text{ in }e$
 
-$P=\{e∈E|FV(e)=∅\}$
+$P=\{ℰ∈E|FV(e)=∅\}$
 
 $e=_αe'$
 
 $$
 \text{let }x=e \text{ in }e \\
 =_α \\
-\text{let }y=e \text{ in }e'[y/x] \\
-y \not ∈ FV(e')
+\text{let }y=e \text{ in }e'[y/x] \quad y \not ∈ FV(e')
 $$
 
 Esempi di programmi:
@@ -78,8 +77,9 @@ Unicità:
 TODO
 
 ## TI (Type Inference)
+
 Input $(Γ,e)
 
-Output 
+Output
 
-TODO: sigh... È il professore capace di non scrivere in modo disordinato a far capire bene di cosa sta parlando?
+TODO: sigh… È il professore capace di non scrivere in modo disordinato a far capire bene di cosa sta parlando?
