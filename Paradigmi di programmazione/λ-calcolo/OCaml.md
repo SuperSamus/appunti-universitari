@@ -36,11 +36,21 @@ $τ ∋ z::=num|str$
 
 $e:z$
 
-Giudizio di tipo: $Γ⊢e:z$
+Per esempio:
 
 $$
 \frac{e_1:num \quad e_2:num}{e_1+e_2:num}
 $$
+
+Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il λ-calcolo non previene in nessun modo).
+
+$e$ però può essere tante cose (come un segnaposto), quindi $e:z$ da solo non basta.
+
+Ci vuole quindi un ambiente: $Γ::=x_1:z_1,...,x_n:z_n$
+
+Per esempio: $x:str,y:str⊢x\textasciicircum y:str$
+
+ $Γ⊢e:z$
 
 $(Γ,e,z)→Γ⊢e:z$
 
@@ -51,7 +61,7 @@ $Γ,e→z \text{ t.c. } Γ⊢e:z$
 $$
 \frac{}{Γ,x:z⊢x:z} \\
 \frac{}{Γ⊢\underline{n}:\text{num}} \\
-\frac{}{Γ⊢"s":str}
+\frac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
 $$
 
 ### Regole di eliminazione
