@@ -1,8 +1,8 @@
 # OCaml
 
-$ℰ∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|e+e|e*e|e\textasciicircum e|\text{let }x=e \text{ in }e$
+$E∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|e+e|e*e|e\textasciicircum e|\text{let }x=e \text{ in }e$
 
-$P=\{ℰ∈E|FV(e)=∅\}$
+$P=\{e∈E|FV(e)=∅\}$
 
 $e=_αe'$
 
@@ -48,15 +48,17 @@ Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il �
 
 $e$ può essere tante cose (come un segnaposto), quindi $e:τ$ da solo non basta.
 
-Ci vuole quindi un ambiente: $Γ::=x_1:τ_1,...,x_n:τ_n$, dove  $Γ⊢e:τ$.
+Ci vuole quindi un ambiente: $Γ::=x_1:τ_1,…,x_n:τ_n$, dove $Γ⊢e:τ$.
 
 Per esempio: $x:str,y:str⊢x\textasciicircum y:str$
 
-Proprietà:
-- $(Γ,e,τ)→Γ⊢e:τ$
-- $Γ,e→τ \text{ t.c. } Γ⊢e:τ$
+Proprietà da avere:
+- Se il tipo viene dato, deve essere corretto: $(Γ,e,τ)→Γ⊢e:τ$
+- Se il tipo non viene dato, deve poter essere trovato e corretto: $Γ,e→τ \text{ t.c. } Γ⊢e:τ$
 
 ### Regole di introduzione:
+
+Valori: $E⊃V∋v::=x|\underline{n}|\textquotedblleft s \textquotedblright$
 
 $$
 \frac{}{Γ,x:τ⊢x:τ} \\
@@ -71,7 +73,6 @@ $$
 \frac{Γ⊢e_1:\text{str} \quad Γ:e_2:str}{Γ⊢e_1\textasciicircum e_2:\text{str}} \\
 Γ⊢e_1:τ\\
 \frac{Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ} \\
-\frac{}{Γ,x:τ⊢x:τ} \\
 $$
 
 ### Assiomi
