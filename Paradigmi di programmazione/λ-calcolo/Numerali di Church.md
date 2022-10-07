@@ -18,6 +18,11 @@ Generica procedura $F: ℕ^k\longrightarrowℕ$ che itera un numero di volte una
 
 ## Operazioni
 
+Per implementare le operazioni, bisogna dimostrare le proprietà che hanno. Per esempio:
+- $ADD(\underline{n},\underline{m})→_β^*\underline{n+m}$
+- $ADD(\underline{n},\underline{m})→_β^*ADD(\underline{m},\underline{n})$
+	- Questo è difficile da dimostrare, ma non ci interessa molto dato che vogliamo solo programmare.
+
 ### SUCC
 
 $\underline{SUCC} = λn.λf.λx.f(nfx)$
