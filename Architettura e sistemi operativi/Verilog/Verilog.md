@@ -72,7 +72,9 @@ module fa(output c, output z, input x, input y, input r);
 endmodule;
 
 // Sfruttiamo il modulo fa per sommare coppie di 8 bit
-module adder(output carry, output [7:0] z, input [7:0] a, input [7:0] b);
+module adder(output carry, output [N-1:0] z, input [N-1:0] a, input [7:0] b);
+
+    parame
     genvar i;
     wire [6:0] c;
     
