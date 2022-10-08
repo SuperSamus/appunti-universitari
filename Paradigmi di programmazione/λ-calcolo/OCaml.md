@@ -98,3 +98,11 @@ case e of
     e=="s" => τ ≜ str
     e==x => if (x:τ)∈Γ then τ else fail
 ```
+
+Esempio:
+
+```
+e=let x = e1 in e2
+    => if TI(Γ, e1) == τ
+        then if TI(Γ,x:τ,e2) ==
+```
