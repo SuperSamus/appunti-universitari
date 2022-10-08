@@ -72,20 +72,22 @@ module fa(output c, output z, input x, input y, input r);
 endmodule;
 
 // Sfruttiamo il modulo fa per sommare coppie di 8 bit
-module adder(output carry, output [N-1:0] z, input [N-1:0] a, input [7:0] b);
+module adder(output carry, output [N-1:0] z, input [N-1:0] a, input [N-1:0] b);
 
-    parame
+    parameter N = 8;
+
     genvar i;
-    wire [6:0] c;
-    
+    wire [N-2:0] c;
+
+    // Il primo ha un carry pari a 0
     fa f0(c[0],z[0],a[0],b[0],1'b0);
-    fa f1(c[1],z[1],a[1],b[1],c[0]);
-    fa f2(c[2],z[2],a[2],b[2],c[1]);
-    fa f3(c[3],z[3],a[3],b[3],c[2]);
-    fa f4(c[4],z[4],a[4],b[4],c[3]);
-    fa f5(c[5],z[5],a[5],b[5],c[4]);
-    fa f6(c[6],z[6],a[6],b[6],c[5]);
-    fa f7(carry,z[7],a[7],b[7],c[6]);
+    // Quelli intermedi prendono il riporto dal precedente e propagano il riporto a quelli successivi
+    generate
+        for(i=1;i<N-1;i=1+1)
+	        fa f(c[i], z[i], a[i], b[i], c[i-1]);
+	endgenerate
+    // L'ultimo genera il segnale di riporto del modulo intero
+    fa f7(carry,z[N-1],a[N-1],b[N-1],c[N-2]);
 endmodule
 ```
 
