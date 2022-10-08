@@ -59,6 +59,8 @@ primitive c(output z, input x, input y, input r);
 
 endprimitive
 
+// Da qui si può creare un modulo per collegare il tutto
+
 module fa(output c, output z, input x, input y, input r);
 
   z uscita(z,x,y,r);
@@ -67,16 +69,14 @@ module fa(output c, output z, input x, input y, input r);
 endmodule;
 ```
 
-
-
-Implementiamo un [[Porte logiche#^b31833|multiplexer]]:
+Implementiamo un:
 
 ```verilog
 // Dopo aver implementato mux1
 module mux4(output[3:0]z, input[3:0]x1, ..., input 3:0x4, input [1:0]ctl);
 
-  mux1 m4(z[3], x1[3], x2[3], /* ...,*/ x4[3], ctl);
-  mux1 m3(z[2], x1[2], /* ...,*/ ctl);
+  mux1 m4(z[3], x1[3], x2[3], x3[3], x4[3], ctl);
+  mux1 m3(z[2], x1[2], x2[2], x3[2], x4[2], ctl);
   // ...
 
 endmodule
@@ -99,6 +99,7 @@ FA modulotest(c, z, mx, my);
 ```
 
 ## Tipi di blocchi
+
 - `initial`
 	- `begin`-`end`
 - `always`
@@ -106,4 +107,3 @@ FA modulotest(c, z, mx, my);
 - `if(expr)`
 - `for()`
 - `case(x)`
-- 
