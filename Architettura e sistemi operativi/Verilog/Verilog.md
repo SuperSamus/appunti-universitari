@@ -84,29 +84,35 @@ module mux4(output[3:0]z, input[3:0]x1, ..., input[3:0]x4, input [1:0]ctl);
   // ...
 
 endmodule
+
+// Direttive
+$dumpfile(" ");
+$dumpvars;
+// ...
+$finish;
 ```
 
 ## Testbench
 
 Cosa fare:
-- Creare un modulo dove si dichiarano:
-	- Tante variabili di tipo `reg` quanti sono gli ingressi
-	- Tanti `wire` quanti sono gli output
-- Chiamare un istanza del modulo sotto test
-- Creare un programma in cui si creano registri, per ve
-
 ```verilog
+// Creare un modulo dove si dichiarano
 module testFA();
-
-// Dichiarare tanti reg quanti sono gli ingressi
-reg inx, iny, inr;
-// DIchiarare tanti wire quanti gli output
-wire z, c;
-
+    // tanti reg quanti sono gli ingressi
+    reg inx, iny, inr;
+    // tanti wire quanti gli output
+    wire z, c;
 endmodule
 
+// Chiamare un istanza del modulo sotto test
 FA modulotest(c, z, inx, iny, inr);
 
+// Creare un programma in cui si creano registri, per vedere che fine fanno i wire
+initial begin
+    // Per esempio
+    inx=0; iny=0; inr=0;
+    #1 inx=1;
+end
 ```
 
 ## Tipi di blocchi
