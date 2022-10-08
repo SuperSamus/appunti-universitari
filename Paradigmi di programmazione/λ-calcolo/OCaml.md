@@ -95,6 +95,6 @@ Output: $z \text{ t.c. } Γ⊢e:τ \text{ se esiste, fail altrimenti}$
 ```
 case e of
     e==n => τ ≜ num
-    e=="s" => z ≜ str
-    e==x =>
+    e=="s" => τ ≜ str
+    e==x => if (x:τ)∈Γ then τ else fail
 ```
