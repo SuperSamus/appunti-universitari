@@ -26,7 +26,7 @@ module(   );
 endmodule
 ```
 
-Implementiamo la somma.
+Implementiamo la somma (1 bit + 1 bit + il bit di riporto iniziale). Abbiamo bisogno di due primitive: una per il risultato, e una per il carry.
 
 ```verilog
 primitive z(output z, input x, input y, input r);
@@ -39,6 +39,21 @@ primitive z(output z, input x, input y, input r);
     1 0 0 : 1  ;
     1 0 1 : 0  ;
     1 1 0 : 0  ;
+    1 1 1 : 1  ;
+  endtable
+
+endprimitive
+
+primitive c(output z, input x, input y, input r);
+
+  table
+    0 0 0 : 0  ;
+    0 0 1 : 0  ;
+    0 1 0 : 0  ;
+    0 1 1 : 1  ;
+    1 0 0 : 0  ;
+    1 0 1 : 1  ;
+    1 1 0 : 1  ;
     1 1 1 : 1  ;
   endtable
 
