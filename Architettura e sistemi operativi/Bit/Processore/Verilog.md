@@ -8,6 +8,7 @@
 			- Produrre un chip
 			- [[Processore#^4d0651|FPGA]]: Circuiti programmabili
 	- Scrivere test: simulazione per assicurarsi che il modulo sia scritto bene
+- Da non confondere con SystemVerilog (che è un suo superset)
 
 ## Reti combinatorie
 
