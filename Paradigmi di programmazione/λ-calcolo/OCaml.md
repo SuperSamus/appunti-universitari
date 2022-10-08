@@ -44,7 +44,7 @@ $$
 
 Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il λ-calcolo non previene in nessun modo).
 
-## Giudizi di tipo
+### Giudizi di tipo
 
 $e$ può essere tante cose (come un segnaposto), quindi $e:τ$ da solo non basta.
 
@@ -56,7 +56,7 @@ Proprietà da avere:
 - Se il tipo viene dato, deve essere corretto: $(Γ,e,τ)→Γ⊢e:τ$
 - Se il tipo non viene dato, deve poter essere trovato e corretto: $Γ,e→τ \text{ t.c. } Γ⊢e:τ$
 
-### Regole di introduzione:
+#### Regole di introduzione:
 
 Valori: $E⊃V∋v::=x|\underline{n}|\textquotedblleft s \textquotedblright$
 
@@ -66,7 +66,7 @@ $$
 \frac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
 $$
 
-### Regole di eliminazione
+#### Regole di eliminazione
 
 $$
 \frac{Γ⊢e_1:\text{num} \quad Γ:e_2:num}{Γ⊢e_1+e_2:\text{num}} \\
@@ -74,7 +74,7 @@ $$
 \frac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
 $$
 
-### Teorema inversione
+#### Teorema inversione
 
 Se $Γ⊢e:τ$, e se $e=e_1+e_2$, abbiamo:
 
@@ -82,11 +82,11 @@ $τ=\text{num} \quad Γ⊢e_1:\text{num} \quad Γ⊢e_2:\text{num}$
 
 Lo stesso modo per tutti i costruttori.
 
-### Teorema unicità
+#### Teorema unicità
 
 $∀e.∀τ. \text{ esiste al massimo in tipo } t \text{ t.c } Γ⊢e:τ$
 
-## Algoritmo TI (Type Inference)
+### Algoritmo TI (Type Inference)
 
 Input: $(Γ,e)$
 
@@ -104,5 +104,21 @@ Esempio:
 ```
 e=let x = e1 in e2
     => if TI(Γ, e1) == τ
-        then if TI(Γ,x:τ,e2) ==
+        then if TI(Γ,x:τ,e2) == σ
+        then σ
+        else fail
+    else fail
 ```
+
+Complessità: lineare.
+
+### Type safety
+
+- Progress
+- Preservation
+
+Se l'espressione è tipabile, si può eseguire.
+
+Se $Γ⊢e:τ$ allora una delle due:
+- $e=v$ valore
+- $∃e':e→e'$
