@@ -88,12 +88,15 @@ $∀e.∀τ. \text{ esiste al massimo in tipo } t \text{ t.c } Γ⊢e:τ$
 
 #### Teorema sostituzione
 
+$$
+\frac{Γ,x:τ⊢e:σ \quad Γ⊢e':τ}{Γ⊢e[e'/x]:σ}
+$$
 
 ### Algoritmo TI (Type Inference)
 
 Input: $(Γ,e)$
 
-Output: $z \text{ t.c. } Γ⊢e:τ \text{ se esiste, fail altrimenti}$
+Output: $τ \text{ t.c. } Γ⊢e:τ \text{ se esiste, fail altrimenti}$
 
 ```
 case e of
