@@ -26,7 +26,9 @@ module(   );
 endmodule
 ```
 
-Implementiamo la somma (1 bit + 1 bit + il bit di riporto iniziale). Abbiamo bisogno di due primitive: una per il risultato, e una per il carry.
+### Somma
+
+1 bit + 1 bit + il bit di riporto iniziale. Abbiamo bisogno di due primitive: una per il risultato, e una per il carry.
 
 ```verilog
 primitive z(output z, input x, input y, input r);
@@ -69,7 +71,9 @@ module fa(output c, output z, input x, input y, input r);
 endmodule;
 ```
 
-Implementiamo un:
+### [[Porte logiche#^b31833|Multiplexer]]
+
+
 
 ```verilog
 // Dopo aver implementato mux1
