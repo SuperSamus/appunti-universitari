@@ -73,11 +73,11 @@ endmodule;
 
 ### [[Porte logiche#^b31833|Multiplexer]]
 
-
+![[Multiple multiplexers.excalidraw]]
 
 ```verilog
 // Dopo aver implementato mux1
-module mux4(output[3:0]z, input[3:0]x1, ..., input 3:0x4, input [1:0]ctl);
+module mux4(output[3:0]z, input[3:0]x1, ..., input[3:0]x4, input [1:0]ctl);
 
   mux1 m4(z[3], x1[3], x2[3], x3[3], x4[3], ctl);
   mux1 m3(z[2], x1[2], x2[2], x3[2], x4[2], ctl);
@@ -86,9 +86,14 @@ module mux4(output[3:0]z, input[3:0]x1, ..., input 3:0x4, input [1:0]ctl);
 endmodule
 ```
 
-Testbench
+## Testbench
 
-# TODO: 'sto professore scrive un programma con la penna invece che con un editor di testo, e 'un se capisce niente
+Cosa fare:
+- Creare un modulo dove si dichiarano:
+	- Tante variabili di tipo `reg` quanti sono gli ingressi
+	- Tanti `wire` quanti sono gli output
+- Chiamare un istanza del modulo sotto test
+- Creare un programma in cui si creano registri, per ve
 
 ```verilog
 module testFA();
@@ -98,7 +103,9 @@ reg inx, iny, inr;
 // DIchiarare tanti wire quanti gli output
 wire z, c;
 
-FA modulotest(c, z, mx, my);
+endmodule
+
+FA modulotest(c, z, inx, iny, inr);
 
 ```
 
