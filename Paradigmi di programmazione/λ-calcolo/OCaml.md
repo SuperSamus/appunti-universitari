@@ -86,6 +86,9 @@ Lo stesso modo per tutti i costruttori.
 
 $∀e.∀τ. \text{ esiste al massimo in tipo } t \text{ t.c } Γ⊢e:τ$
 
+#### Teorema sostituzione
+
+
 ### Algoritmo TI (Type Inference)
 
 Input: $(Γ,e)$
@@ -114,10 +117,15 @@ Complessità: lineare.
 
 ### Type safety
 
-- Progress
-- Preservation
-
 Se l'espressione è tipabile, si può eseguire.
+
+#### Progress
+
+$$
+\frac{Γ⊢e:τ \quad e→e'}{Γ⊢e':τ}
+$$
+
+#### Preservation
 
 Se $Γ⊢e:τ$ allora una delle due:
 - $e=v$ valore
