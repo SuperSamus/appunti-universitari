@@ -222,10 +222,15 @@ x1 & x2 & x3 & x4 --> COD --> z
 
 $z_1=\bar{x_1}x_2\bar{x_3}x_4+x_1\bar{x_2}\bar{x_3}\bar{x_4} \quad z_0=\bar{x_1}\bar{x_2}x_3\bar{x_4}+x_1\bar{x_2}\bar{x_3}\bar{x_4}$
 
-## Set Reset (SR)
+## Flip-Flop Set Reset (SR)
+
+Sistema di memoria elementare.
+- Alzare il voltaggio di SET restituisce Q=1
+- Alzare il voltaggi di RESET restituisce Q=0
+- 
 
 ```mermaid
 flowchart LR
-R > NOR1[NOR] --> Q & NOR2[NOR]
-S –> NOR2 –> N[NOT Q] & NOR1
+R --> NOR1[NOR] --> Q & NOR2[NOR]
+S --> NOR2 --> N[NOT Q] & NOR1
 ```
