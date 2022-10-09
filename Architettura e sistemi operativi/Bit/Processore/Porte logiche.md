@@ -224,10 +224,13 @@ $z_1=\bar{x_1}x_2\bar{x_3}x_4+x_1\bar{x_2}\bar{x_3}\bar{x_4} \quad z_0=\bar{x_1}
 
 ## Flip-Flop Set Reset (SR)
 
-Sistema di memoria elementare.
-- Alzare il voltaggio di SET restituisce Q=1
-- Alzare il voltaggi di RESET restituisce Q=0
-- 
+Sistema di memoria elementare:
+- Alzare il voltaggio di SET restituisce Q=1 e NOT Q=0
+- Alzare il voltaggio di RESET restituisce Q=1 e NOT Q=0
+- Non alzare il voltaggio di nessuno dei due restituisce il Q di prima
+	- FInché SET/RESET non vengono mai usati i NOR aspettano
+	- Appena SET/RESET viene usato (dati che un 1 da solo è sufficiente per NOR) i NOR si inviano a vicenda 1/0
+- Alzare entrambi i voltaggi... meglio non farlo
 
 ```mermaid
 flowchart LR
