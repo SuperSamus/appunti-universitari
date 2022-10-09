@@ -146,6 +146,10 @@ $finish;
 	- `possibilità2: begin comandi end`
 	- `default: comando`
 	- `endcase`
+- `$display`
+	- Equivalente di `printf`
+- `$monitor`
+	- Printa la variabile ogni volta che cambia
 
 Assegna uno alla volta:
 
