@@ -239,11 +239,20 @@ R --> NOR1[NOR] --> Q & NOR2[NOR]
 S --> NOR2 --> N[NOT Q] & NOR1
 ```
 
-### D-latch
+### D latch
+
+Evitiamo il problema di avere sia SET che RESET uguali a 1:
+- Se CLOCK=0, gli Q restano uguali indipendentemente da D
+- Se CLOCK=1
+	- D=1 scatena un SET
+	- D=0 scatena un RESET
 
 ```mermaid
 flowchart LR
-CLOCK --> AND1[AND] & AND2[AND] --> SR --> Q & N[NOT Q]
-D --> AND2
-D --o AND1
+CLOCK --> AND1[AND] & AND2[AND]
+D --o AND1 -- R --> SR
+D --> AND2 -- S --> SR
+SR --> Q & N[NOT Q]
 ```
+
+### D flip-flop
