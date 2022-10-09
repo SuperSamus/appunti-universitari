@@ -136,12 +136,18 @@ $dumpvars;
 $finish;
 ```
 
-## Tipi di blocchi
+## Behavior
 
 - `initial`
 	- `begin`-`end`
-- `always`
+	- Viene eseguito quando accendiamo il modulo
+- `always@(event)`
 	- `begin`-`end`
+	- Viene eseguito ogni volta che cambia qualcosa dentro le parentesi tonde
+	- Se `@(event)` viene omesso, viene ripetuto in continuazione
 - `if(expr)`
+	- `being`-`end`
+	- Può essere seguito da `else`
+		- `begin-end`
 - `for()`
 - `case(x)`
