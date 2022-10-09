@@ -161,3 +161,17 @@ $finish;
 	- `possibilità2: begin comandi end`
 	- `default: comando`
 	- `endcase`
+
+Assegna uno alla volta:
+
+```
+a = 1;
+b = 0;
+```
+
+Assegna contemporaneamente:
+
+```
+a <= 1;
+b <= 0;
+```
