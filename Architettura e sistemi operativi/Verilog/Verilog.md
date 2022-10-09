@@ -211,11 +211,13 @@ endmodule
 
 // Se vogliamo fare entrambi i bit di output
 
-module z(output reg [1:0] z, input a, input b, input c, input d);
+module cod(output reg [1:0] z, input a, input b, input c, input d);
     always@(a or b or c or d) begin
         case ({a,b,c,d})
-            4'b1000, 4'b0100: z = 1
-            default: z = 0
+            4'b1000: z = 2'b11
+            4'b0100: z = 2'b10
+            4'b0010: z = 2'b01
+            default: z = 2'b00
         endcase
     end
 endmodule
