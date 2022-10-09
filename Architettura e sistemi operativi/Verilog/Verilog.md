@@ -227,7 +227,9 @@ endmodule
 
 ```verilog
 // Confrontare le chiavi
-// Ci sono tanti modi per farlo
-module comp4(output z, input [3:0] x, input [3:0] y)
-    assign z = ~(x[3]^y[3]) && ~(x[2]^y[2]) && ~(x[1]^y[1]) && ~(x[0]^y[0])
+module comp4(output z, input [N-1:0] x, input [N-1:0] y);
+    parameter N = 4;
+
+    assign z = (a == b ^ 1'b1: 1'b0);
+endmodule
 ```
