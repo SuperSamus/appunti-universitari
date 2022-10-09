@@ -202,6 +202,8 @@ Esempio con 2 bit di controllo (semplificato):
 
 ## Codificatore
 
+^93c33a
+
 Abbiamo $2^k$ bit, di cui solo 1 è uguale a 1.
 
 Esempio con $k=2$ (4 ingressi):

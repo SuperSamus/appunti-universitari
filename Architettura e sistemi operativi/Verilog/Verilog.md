@@ -107,9 +107,30 @@ endmodule
 
 ```
 
+### [[Porte logiche#^93c33a|Codificatore]]
+
+```verilog
+primitive z1(output z, input a, input b, input c, input d);
+    table
+        0 0 0 0 : 0
+        0 0 0 1 : 0
+        // ...
+        0 1 0 0 : 1
+        1 0 0 0 : 1
+    endtable
+endprimitive
+
+// Alternativamente 
+
+module z1(output z, input a, input b, input c, input d);
+    assign z = ~a && b && ~ c && ~d || a && ~b && ~c
+endprimitive
+```
+
 ## Testbench
 
 Cosa fare:
+
 ```verilog
 // Creare un modulo dove si dichiarano
 module testFA();
