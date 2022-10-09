@@ -221,3 +221,11 @@ x1 & x2 & x3 & x4 --> COD --> z
 | 1     | 0     | 0     | 0     | 1     | 1      |
 
 $z_1=\bar{x_1}x_2\bar{x_3}x_4+x_1\bar{x_2}\bar{x_3}\bar{x_4} \quad z_0=\bar{x_1}\bar{x_2}x_3\bar{x_4}+x_1\bar{x_2}\bar{x_3}\bar{x_4}$
+
+## Set Reset (SR)
+
+```mermaid
+flowchart LR
+R > NOR1[NOR] --> Q & NOR2[NOR]
+S –> NOR2 –> N[NOT Q] & NOR1
+```
