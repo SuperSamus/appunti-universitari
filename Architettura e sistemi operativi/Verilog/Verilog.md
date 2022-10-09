@@ -91,42 +91,6 @@ module adder(output carry, output [N-1:0] z, input [N-1:0] a, input [N-1:0] b);
 endmodule
 ```
 
-### [[Porte logiche#^b31833|Multiplexer]]
-
-![[Multiple multiplexers.excalidraw]]
-
-```verilog
-// Dopo aver implementato mux1
-module mux4(output [3:0] z, input [3:0] x1, ..., input [3:0] x4, input [1:0] ctl);
-
-  mux1 m4(z[3], x1[3], x2[3], x3[3], x4[3], ctl);
-  mux1 m3(z[2], x1[2], x2[2], x3[2], x4[2], ctl);
-  // ...
-
-endmodule
-
-```
-
-### [[Porte logiche#^93c33a|Codificatore]]
-
-```verilog
-primitive z1(output z, input a, input b, input c, input d);
-    table
-        0 0 0 0 : 0
-        0 0 0 1 : 0
-        // ...
-        0 1 0 0 : 1
-        1 0 0 0 : 1
-    endtable
-endprimitive
-
-// Alternativamente 
-
-module z1(output z, input a, input b, input c, input d);
-    assign z = ~a && b && ~ c && ~d || a && ~b && ~c
-endprimitive
-```
-
 ## Testbench
 
 Cosa fare:
@@ -195,4 +159,64 @@ Assegna contemporaneamente:
 ```
 a <= 1;
 b <= 0;
+```
+
+## Altri esempi
+
+### [[Porte logiche#^b31833|Multiplexer]]
+
+![[Multiple multiplexers.excalidraw]]
+
+```verilog
+// Dopo aver implementato mux1
+module mux4(output [3:0] z, input [3:0] x1, ..., input [3:0] x4, input [1:0] ctl);
+
+  mux1 m4(z[3], x1[3], x2[3], x3[3], x4[3], ctl);
+  mux1 m3(z[2], x1[2], x2[2], x3[2], x4[2], ctl);
+  // ...
+
+endmodule
+
+```
+
+### [[Porte logiche#^93c33a|Codificatore]]
+
+```verilog
+primitive z1(output z, input a, input b, input c, input d);
+    table
+        0 0 0 0 : 0
+        0 0 0 1 : 0
+        // ...
+        0 1 0 0 : 1
+        1 0 0 0 : 1
+    endtable
+endprimitive
+
+// Alternativamente 
+
+module z1(output z, input a, input b, input c, input d);
+    assign z = ~a && b && ~ c && ~d || a && ~b && ~c && ~d
+endmodule
+
+// Alternativamente
+
+module z1(output reg z, input a, input b, input c, input d);
+    always@(a or b or c or d) begin
+        case ({a,b,c,d})
+            4'b1000, 4'b0100: z = 1
+            default: z = 0
+        endcase
+    end
+endmodule
+
+// Se vogliamo fare entrambi i bit di output
+
+module z(output reg [1:0] z, input a, input b, input c, input d);
+    always@(a or b or c or d) begin
+        case ({a,b,c,d})
+            4'b1000, 4'b0100: z = 1
+            default: z = 0
+        endcase
+    end
+endmodule
 ```
