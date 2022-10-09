@@ -222,18 +222,28 @@ x1 & x2 & x3 & x4 --> COD --> z
 
 $z_1=\bar{x_1}x_2\bar{x_3}x_4+x_1\bar{x_2}\bar{x_3}\bar{x_4} \quad z_0=\bar{x_1}\bar{x_2}x_3\bar{x_4}+x_1\bar{x_2}\bar{x_3}\bar{x_4}$
 
-## Flip-Flop Set Reset (SR)
+## Flip-Flop
+
+### Set Reset (SR)
 
 Sistema di memoria elementare:
 - Alzare il voltaggio di SET restituisce Q=1 e NOT Q=0
 - Alzare il voltaggio di RESET restituisce Q=1 e NOT Q=0
 - Non alzare il voltaggio di nessuno dei due restituisce il Q di prima
-	- FInché SET/RESET non vengono mai usati i NOR aspettano
-	- Appena SET/RESET viene usato (dati che un 1 da solo è sufficiente per NOR) i NOR si inviano a vicenda 1/0
+	- Appena SET/RESET viene usato (dati che un 1 da solo è sufficiente per OR) i NOR si inviano a vicenda 1/0
 - Alzare entrambi i voltaggi... meglio non farlo
 
 ```mermaid
 flowchart LR
 R --> NOR1[NOR] --> Q & NOR2[NOR]
 S --> NOR2 --> N[NOT Q] & NOR1
+```
+
+### D-latch
+
+```mermaid
+flowchart LR
+CLOCK --> AND1[AND] & AND2[AND] --> SR --> Q & N[NOT Q]
+D --> AND2
+D --o AND1
 ```
