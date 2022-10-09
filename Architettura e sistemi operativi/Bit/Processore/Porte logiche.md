@@ -256,3 +256,12 @@ SR --> Q & N[NOT Q]
 ```
 
 ### D flip-flop
+
+Con questo design si aggiunge un ritardo:
+
+```mermaid
+flowchart LR
+D --> DL1[D latch] -- "Q --> D" --> DL2[D latch] --> Q
+CLOCK --o DL1
+CLOCK --> DL2
+```
