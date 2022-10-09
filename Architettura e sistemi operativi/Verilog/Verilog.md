@@ -138,16 +138,26 @@ $finish;
 
 ## Behavior
 
-- `initial`
-	- `begin`-`end`
-	- Viene eseguito quando accendiamo il modulo
-- `always@(event)`
-	- `begin`-`end`
-	- Viene eseguito ogni volta che cambia qualcosa dentro le parentesi tonde
-	- Se `@(event)` viene omesso, viene ripetuto in continuazione
-- `if(expr)`
-	- `being`-`end`
-	- Può essere seguito da `else`
-		- `begin-end`
-- `for()`
-- `case(x)`
+- `initial begin`
+	- `comandi`
+		- Vengono eseguiti quando accendiamo il modulo
+	- `end`
+- `always@(event) begin`
+	- `comandi`
+		- Vengono eseguiti ogni volta che `event`
+		- Se `@(event)` viene omesso, vengono ripetuto in continuazione
+	- `end`
+- `if(expr) begin`
+	- `comandi`
+	- `end`
+	- Può essere seguito da `else begin`
+		- `comandi`
+		- `end`
+- `for(inizio; condizione; passo) begin
+	- `comandi`
+	- `end`
+- `case(expr)`
+	- `possibilità1: comando`
+	- `possibilità2: begin comandi end`
+	- `default: comando`
+	- `endcase`
