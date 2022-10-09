@@ -222,3 +222,11 @@ module cod(output reg [1:0] z, input a, input b, input c, input d);
     end
 endmodule
 ```
+
+### Mappa (Chiavi/Valori 4 bit)
+
+```verilog
+// Confrontare le chiavi
+module comp(output z, input [3:0] x, input [3:0] y)
+    assign z = ~(x[3]^y[3]) && 
+```
