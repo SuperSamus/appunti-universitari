@@ -1,7 +1,7 @@
 
 # Esercizi [[ricorsione]]
 
-Definire le seguenti operazioni sia con $Y$ che $Θ$:
+Definire le seguenti operazioni ricorsivamente:
 
 ### Mult (con $\underline{add}$)
 
@@ -16,7 +16,7 @@ $Θfact=Θ(λf.λn.\underline{ite} \: (\underline{eq} \: n \: \underline{0}) \: 
 ### Exp (anche direttamente)
 
 $$
-exp=λn.λm.λf.λx.m(\underline{mult} \: n)1 \\
+exp≜λn.λm.λf.λx.m(\underline{mult} \: n)1 \\
 =λn.λm.λf.λx.m((λn.λm.λf.n(mf))n)(λf.λx.fx) \\
 →_β λn.λm.λf.λx.m(λm.λf.n(mf))(λf.λx.fx)
 $$
