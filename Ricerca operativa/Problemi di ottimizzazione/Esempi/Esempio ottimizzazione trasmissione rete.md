@@ -43,9 +43,21 @@ Questi vincoli lo rendono un problema di programmazione lineare intera: i vincol
 Per esempio, immaginiamo che in questo grafo questa sia la soluzione ottima:
 ```mermaid
 flowchart LR
-s -- 1/2 --> A & B -- 1/2 --> C -- 1/2 --> D & E -- 1/2 --> t
+s -- 1/2 --> A & B
+A -- 1/2 --> C
+s --> C
+B -- 1/2 --> C
+C -- 1/2 --> D & E
+D -- 1/2 --> t
+C --> t
+E -- 1/2 --> t
 ```
 
 Non è un cammino. Però:
 - I bilanci nel vincolo di conservazione sono soddisfatti
 - Assumiamo che con il vincolo di interezza la soluzione ottima sia $s→C→t$, e che sia peggiore.
+	- Ciò dovrebbe voler dire che il costo di ½ cammino sopra + ½ cammino sotto < cammino centrale.
+	- Inoltre, i cammini sopra e sotto dovrebbero costare uguali, sennò sarebbe meglio prendere interamente uno dei due.
+		- Ma a questo punto si può anche prendere interamente uno dei due cammini e non cambierebbe il costo.
+
+Quindi, rimuovere il vincolo di interezza
