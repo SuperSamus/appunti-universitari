@@ -17,7 +17,7 @@ flowchart LR
 ```
 Dati:
 - $A$ archi
-- $b_i$ quantità d'acqua prodotta dal nodo $i$
+- $b_i$ quantità d'acqua prodotta dal nodo $i∈A$
 
 Da trovare:
 - $x_{ij}$ m³ acqua che transitano attraverso $(i,j)$
