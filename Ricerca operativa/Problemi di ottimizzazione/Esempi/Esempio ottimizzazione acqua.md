@@ -16,8 +16,8 @@ flowchart LR
 3 -- 2 --> 4
 ```
 Dati:
-- $A$ archi
-- $b_i$ quantità d'acqua prodotta dal nodo $i∈A$ (per il depuratore, è automaticamente la somma della produzione negativa)
+- L'impianto è un grafo $G=(N,A)$, con tubi $(i,j)∈A$
+- $b_i$ quantità d'acqua prodotta dal nodo $i∈N$ (per il depuratore, è automaticamente la somma della produzione negativa)
 
 Da trovare:
 - $x_{ij}$ m³ acqua che transitano attraverso $(i,j)$
