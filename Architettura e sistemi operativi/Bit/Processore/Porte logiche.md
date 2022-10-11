@@ -231,7 +231,7 @@ Sistema di memoria elementare:
 - Alzare il voltaggio di RESET restituisce Q=1 e NOT Q=0
 - Non alzare il voltaggio di nessuno dei due restituisce il Q di prima
 	- Appena SET/RESET viene usato (dati che un 1 da solo è sufficiente per OR) i NOR si inviano a vicenda 1/0
-- Alzare entrambi i voltaggi... meglio non farlo
+- Alzare entrambi i voltaggi… meglio non farlo
 
 ```mermaid
 flowchart LR
