@@ -35,3 +35,17 @@ Vincoli:
 	- Stella uscente: $FN(i)=\{j ∈ N : (i,j) ∈ A\}$
 
 Funzione obiettivo min: $∑\limits_{(i,j)∈A}x_{ij}c_{ij}$
+
+### Problema non intero
+
+Questi vincoli lo rendono un problema di programmazione lineare intera: i vincoli di interezza (di $x_{ij}$ in questo caso) rendono il calcolo della soluzione più complicato. Si può fare invece con $0≤x_{ij}≤1$?
+
+Per esempio, immaginiamo che in questo grafo questa sia la soluzione ottima:
+```mermaid
+flowchart LR
+s -- 1/2 --> A & B -- 1/2 --> C -- 1/2 --> D & E -- 1/2 --> t
+```
+
+Non è un cammino. Però:
+- I bilanci nel vincolo di conservazione sono soddisfatti
+- Assumiamo che con il vincolo di interezza la soluzione ottima sia $s→C→t$, e che sia peggiore.
