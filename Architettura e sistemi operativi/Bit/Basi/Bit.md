@@ -30,5 +30,3 @@ Combinazioni: $2^n$
 - [[Interi]]
 - [[Floating point]]
 - Ascii (CTRL…NUM…A…Za…z)
-
-Vedere [[Porte logiche]].
