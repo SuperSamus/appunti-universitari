@@ -91,5 +91,9 @@ $z=b_1b_0$
 | 10       | 11       | 00         | 
 
 %%
-$b_1=\bar{x_1}x_0\bar{b_1}b_0+\bar{x_1}\bar{x_0}b_1\bar{b_0}$
+$b_1'=\bar{x_1}x_0\bar{b_1}b_0+\bar{x_1}\bar{x_0}b_1\bar{b_0}$
+
+$b_0'=\bar{x_1}\bar{x_0}$
 %%
+
+TODO: Riguardare seconda parte
