@@ -97,3 +97,45 @@ $b_0'=\bar{x_1}\bar{x_0}$
 %%
 
 TODO: Riguardare seconda parte
+
+## Rete che calcola parità di una sequenza di bit
+
+input: $011010111101000$
+z_:      $101100101001111$
+
+Mealy:
+
+```mermaid
+flowchart LR
+si(((si))) -- 1/0 --> sol((sol)) -- 1/1 --> si
+si -- 0/1 --> si
+sol -- 0/0 --> sol
+```
+
+Moore:
+
+```mermaid
+flowchart LR
+si(((si/1))) -- 1 --> sol((sol/0)) -- 1 --> si
+si -- 0 --> si
+sol -- 0 --> sol
+```
+
+1. \# bit del registro di stato: 1
+2. Tabella verità 
+
+Mealy:
+
+| s   | x   | s'  |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   | 
+
+| s   | x   | z   |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 0   |
+| 1   | 0   | 0   |
+| 1   | 1   | 1   |
