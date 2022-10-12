@@ -147,8 +147,20 @@ Il corpo di una funzione non si tocca finché non viene chiamata.
 
 Regola di introduzione: come produrre valori di in certo tipo
 
-Regole di eliminazione: dato in termine di un certo tipo, cosa ci si può fare
-
 $$
 \frac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2}
 $$
+
+Regole di eliminazione: dato in termine di un certo tipo, cosa ci si può fare
+
+$$
+\frac{Γ⊢t:τ_1→τ_2 \quad Γ⊢s:τ_1}{Γ⊢ts:τ_2}
+$$
+
+Combiniamo le regole:
+
+$$
+\frac{\frac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2} \quad Γ⊢s:τ_1}{Γ⊢ts:τ_2}
+$$
+
+Abbiamo un β-redex!
