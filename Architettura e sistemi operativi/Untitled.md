@@ -1,7 +1,5 @@
 # Automi
 
-Riconosce `aba` (alfabeto $\{a,b,c\}$) in `abcabbaba`
-
 - Automa di Mealy
 	- $z=f_z(s,x)$
 	- $s'=f_s(s,x)$
@@ -10,6 +8,8 @@ Riconosce `aba` (alfabeto $\{a,b,c\}$) in `abcabbaba`
 	- $s'=f_s(s,x)$
 
 Entrambi gli automi hanno bisogno di un registro per memorizzare lo stato.
+
+Vediamoli per riconoscere `aba` (alfabeto $\{a,b,c\}$) , in una stringa (come `abcabbaba`).
 
 ## Mealy
 
@@ -23,6 +23,41 @@ s2 -- b/0 --> s3((s3))
 s3 -- a/1 --> s1
 s3 -- b,c/0 --> s1
 ```
+
+```mermaid
+flowchart LR
+a -- x --> fs' & fz
+fs' -- s2 --> reg -- s1 --> fs' & fz
+fz -- 0 --> z
+```
+
+$f_s'$
+
+| $x_1x_0$ | $b_1b_0$ | $b_1'b_0'$ |
+| -------- | -------- | ---------- |
+| 00       | 00       | 01         |
+| 01       | 00       | 00         |
+| 10       | 00       | 00         |
+| 00       | 01       | 01         |
+| 01       | 01       | 10         |
+| 10       | 01       | 00         |
+| 00       | 10       | 00         |
+| 01       | 10       | 00         |
+| 10       | 10       | 00         |
+
+$b_1'=\bar{x_1}x_0\bar{b_1}b_0$
+
+$b_0'=\bar{x_1}\bar{x_0}\bar{b_1}\bar{b_0}+\bar{x_1}\bar{x_0}\bar{b_1}b_0$
+
+
+$f_z$
+
+| $x_1x_0$ | $b_1b_0$ | $z$ |
+| -------- | -------- | --- |
+| 00       | 10       | 1   |
+
+$z=\bar{x_1}\bar{x_0}b_1\bar{b_0}$
+
 
 ## Moore
 
