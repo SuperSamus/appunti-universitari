@@ -14,8 +14,7 @@ Da trovare:
 
 Vincoli:
 - Vincoli di capacità: $x_{ij}≤y_{ij}u_{ij} \quad (i,j)∈A$
-- Conservazione del flusso: $∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} = b_i \quad i ∈ N$
-	- $b_i=\begin{cases} -p &\text{se } i=s \\ p &\text{se } i=t \\ 0 &\text{altrimenti} \end{cases}$
+- Conservazione del flusso: $∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} = \begin{cases} -p &\text{se } i=s \\ p &\text{se } i=t \\ 0 &\text{altrimenti} \end{cases} \quad i ∈ N$
 	- Stella entrante: $BN(i)=\{j ∈ N : (j,i) ∈ A\}$
 	- Stella uscente: $FN(i)=\{j ∈ N : (i,j) ∈ A\}$
 
@@ -29,10 +28,7 @@ Da trovare:
 - $x_{ij}=\begin{cases} 1 &\text{se si affitta la linea } (i,j)∈A \\ 0 &\text{altrimenti} \end{cases}$
 
 Vincoli:
-- Conservazione del flusso: $∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} = b_i \quad i ∈ N$
-	- $b_i=\begin{cases} -1 &\text{se } i=s \\ 1 &\text{se } i=t \\ 0 &\text{altrimenti} \end{cases}$
-	- Stella entrante: $BN(i)=\{j ∈ N : (j,i) ∈ A\}$
-	- Stella uscente: $FN(i)=\{j ∈ N : (i,j) ∈ A\}$
+- Conservazione del flusso: $∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} = \begin{cases} -1 &\text{se } i=s \\ 1 &\text{se } i=t \\ 0 &\text{altrimenti} \end{cases} \quad i ∈ N$
 
 Funzione obiettivo min: $∑\limits_{(i,j)∈A}x_{ij}c_{ij}$
 
