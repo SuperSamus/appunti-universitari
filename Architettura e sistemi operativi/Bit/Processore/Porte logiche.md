@@ -241,7 +241,7 @@ S --> NOR2 --> N[NOT Q] & NOR1
 
 ### D latch
 
-Evitiamo il problema di avere sia SET che RESET uguali a 1:
+Evitiamo il problema di avere sia SET che RESET uguali a 1, con un CLOCK che alterna tra 0 e 1:
 - Se CLOCK=0, gli Q restano uguali indipendentemente da D
 - Se CLOCK=1
 	- D=1 scatena un SET
