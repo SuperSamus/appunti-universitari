@@ -32,7 +32,7 @@ y^x
 
 **Sistema di tipi**: un meccanismo che impone vincoli sulla formazione delle frasi di un linguaggio per garantirne la sensatezza.
 
-$Τ ∋ τ::=num|str$
+$Τ ∋ τ::=num|str|bool|τ→τ$
 
 $e:τ$
 
@@ -133,3 +133,10 @@ $$
 Se $Γ⊢e:τ$ allora una delle due:
 - $e=v$ valore
 - $∃e':e→e'$
+
+### Funzioni
+
+Le funzioni sono tipi. Per esempio:
+- $num → bool$
+- $num → (num → bool)$
+- $(num→num)→(num→(num→num))$
