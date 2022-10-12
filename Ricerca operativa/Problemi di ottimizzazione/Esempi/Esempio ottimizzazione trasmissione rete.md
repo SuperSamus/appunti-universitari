@@ -66,3 +66,6 @@ Vincoli:
 	- $b_i=\begin{cases} -(|N|-1) &\text{se } i=s \\ 1 &\text{altrimenti} \end{cases}$
 
 $x_{ij}$ sarà il numero di cammini che usano l'arco $(i,j)$, quindi $x_{ij} ∉ \{0,1\}$.
+
+
+TODO: Riguardare fine prima parte video 12/10/2022
