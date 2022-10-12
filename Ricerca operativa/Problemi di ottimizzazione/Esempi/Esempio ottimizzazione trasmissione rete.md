@@ -60,4 +60,4 @@ Non è un cammino. Però:
 	- Inoltre, i cammini sopra e sotto dovrebbero costare uguali, sennò sarebbe meglio prendere interamente uno dei due.
 		- Ma a questo punto si può anche prendere interamente uno dei due cammini e non cambierebbe il costo.
 
-Quindi, rimuovere il vincolo di interezza
+Quindi, rimuovere il vincolo di interezza non cambia il costo totale. I cammini con $x_{ij}$ frazionario sono semplicemente strade alternative.
