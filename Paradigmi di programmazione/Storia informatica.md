@@ -60,9 +60,9 @@ FOL: $FOL \vdash A$
 
 ### Paradosso di Russel
 
-$R=\{x|x \not ∈ x\}$
+$R=\{x|x ∉ x\}$
 
-$R ∈ R ⟺ R \not ∈ R$
+$R ∈ R ⟺ R ∉ R$
 
 ### Church (1930)
 

@@ -9,7 +9,7 @@ $e=_αe'$
 $$
 \text{let }x=e \text{ in }e' \\
 =_α \\
-\text{let }y=e \text{ in }e'[y/x] \quad y \not ∈ FV(e')
+\text{let }y=e \text{ in }e'[y/x] \quad y ∉ FV(e')
 $$
 
 Esempi di programmi:

@@ -5,7 +5,7 @@ Forma di equivalenza del [[λ-calcolo]].
 Formalmente, la relazione $=_α ⊆ Λ ⨉ λ$
 
 $$
-\frac{}{λx.t =_α λy.t[y/x]} \quad (x \not ∈ FV(t))
+\frac{}{λx.t =_α λy.t[y/x]} \quad (x ∉ FV(t))
 $$
 
 $$
