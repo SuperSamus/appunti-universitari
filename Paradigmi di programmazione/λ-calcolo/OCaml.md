@@ -140,3 +140,15 @@ Le funzioni sono tipi. Per esempio:
 - $num → bool$
 - $num → (num → bool)$
 - $(num→num)→(num→(num→num))$
+
+Il corpo di una funzione non si tocca finché non viene chiamata.
+
+#### Costruttore/Distruttori
+
+Regola di introduzione: come produrre valori di in certo tipo
+
+Regole di eliminazione: dato in termine di un certo tipo, cosa ci si può fare
+
+$$
+\frac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2}
+$$
