@@ -2,7 +2,7 @@
 
 I numeri tra parentesi sono la quantità d'acqua che viene prodotta in quel nodo, identificato dal numero fuori dalla parentesi.
 
-Tutta questa acqua deve essere mandata nel depuratore (a destra), minimizzando i costi (mostrati negli archi, per unità d'acqua).
+Tutta questa acqua deve essere mandata nel depuratore  rappresentato dal nodo 1, minimizzando i costi (mostrati negli archi, per unità d'acqua).
 
 Per esempio:
 
@@ -17,7 +17,7 @@ flowchart LR
 ```
 Dati:
 - L'impianto è un grafo $G=(N,A)$, con tubi $(i,j)∈A$
-- $b_i$ quantità d'acqua prodotta dal nodo $i∈N$ (per il depuratore, è automaticamente la somma della produzione negativa)
+- $b_i$ quantità d'acqua prodotta dal nodo $i∈N$ (e $b_1=-∑\limits_{i∈N∖\{1\}} b_i$)
 
 Da trovare:
 - $x_{ij}$ m³ acqua che transitano attraverso $(i,j)$
