@@ -24,7 +24,6 @@ Trova le FV:
 - $FV(xv(λyz.yv)w)=\{x,v,v,w\}$
 
 Fai la β-riduzione:
-
 $$
 (λx.λy.x)((λz.yz)(λw.w)) \\
 →_β (λx.λy.x)(y(λw.w)) \\

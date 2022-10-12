@@ -33,7 +33,7 @@ Nel linguaggio $e::=...|nil|e::e|...$, una lista si rappresenta per esempio come
 
 $a := [1, 2, 3] = λcn.c 1 (c 2 (c 3 n))$
 
-Le operazioni base $nil$ (costruisci una lista vuota) e $cons$ (aggiungi un valore a inizio lista) sono definite come:
+Le operazioni base $\underline{nil}$ (costruisci una lista vuota) e $\underline{cons}$ (aggiungi un valore a inizio lista) sono definite come:
 - $\underline{nil} ≜λx.λy.y$
 - $\underline{cons} ≜λh.λt.λx.λy.ht$
 

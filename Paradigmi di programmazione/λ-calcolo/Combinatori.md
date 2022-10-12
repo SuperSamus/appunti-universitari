@@ -1,6 +1,6 @@
 # Combinatori
 
-- $I≜x.x$
+- $I≜λx.x$
 - $K≜λx.λy.x$
 - $Y ≜ λf.(λx.f(xx))(λx.f(xx))$
 - $A≜λx.λy.y(xxy)$
@@ -11,11 +11,18 @@
 		- $Θk=k(Θk)=(λx.λy.x)(Θk)→_β λy.Θk=O$
 - $S≜λx.λy.λz.xz(yz)$
 
-Il λ-calcolo è equivalente a questo sistema di soli due simboli:
+## Risolvere il problema delle [[sostituzioni]]
 
-- $Kxy→_w x$ ($→_w$ è una *weak-reduction*)
+Evitare di sostituire variabili libere rendendole accidentalmente legate è difficile. Come si risolve?
+
+Il λ-calcolo è equivalente a questo sistema $C$ di soli due simboli ($→_w$ è una *weak-reduction*):
+
+- $Kxy→_w x$
 - $Sxyz →_w xz(yz)$
-$t::=x|S|K|tt$
+
+In questo modo, la complessità del λ-calcolo diventa solo: $t::=x|S|K|tt$
+
+Non è il massimo però programmare solo con queste cose, ma si può lasciare questo lavoro ai compilatori/interpreti dei linguaggi di [[programmazione funzionale]]:
 
 ```mermaid
 flowchart LR
