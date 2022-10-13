@@ -16,7 +16,7 @@ int main() {
 
 ## Debugger
 
-- GDB/**LLDB** permettono di analizzare il programma passo per pass
+- **GDB**/**LLDB** permettono di analizzare il programma passo per pass
+	- È necessario compilare il programma con il flag `-g` (su `gcc`/`clang`) in modo da avere i simboli di debug nel programma
+	- Si può impostare *breakpoint* sulle righe di codice e *watchpoint* per le variabili
 - **Valgrind** permette di analizzare la memoria allocata e localizzare memory leak
-
-Non si può fare il debugging su librerie precompilate.
