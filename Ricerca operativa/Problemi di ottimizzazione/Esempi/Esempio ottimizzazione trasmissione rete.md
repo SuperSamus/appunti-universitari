@@ -67,5 +67,4 @@ Vincoli:
 
 $x_{ij}$ sarà il numero di cammini che usano l'arco $(i,j)$, quindi $x_{ij} ∉ \{0,1\}$.
 
-
-TODO: Riguardare fine prima parte video 12/10/2022
+Nota che è possibile che il grafo non sia connesso, in questo caso non esisterà soluzione. Si può risolvere creando un arco esageratamente costoso dalla 
