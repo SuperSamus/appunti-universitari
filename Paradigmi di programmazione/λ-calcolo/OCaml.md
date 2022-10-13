@@ -22,6 +22,8 @@ x+y
 
 ## Tipi
 
+^8e19a5
+
 Errore di semantica statica (non serve eseguire il programma per riceverlo):
 
 ```
