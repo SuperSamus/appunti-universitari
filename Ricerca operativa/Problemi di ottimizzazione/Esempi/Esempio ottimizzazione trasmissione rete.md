@@ -71,3 +71,34 @@ $x_{ij}$ sarà il numero di cammini che usano l'arco $(i,j)$, quindi $x_{ij} ∉
 Nota che è possibile che il grafo non sia connesso, in questo caso non esisterà soluzione. Si può risolvere creando un arco esageratamente costoso (se $+∞$ non si potesse fare, $(|N|-1)(\max\limits_{(i,j)∈A} c_{ij})+1$ va bene) dalla radice a tutti i nodi.
 
 Stiamo anche assumendo che non ci siano cicli di costo negativo.
+
+##### Albero dei cammini minimi
+
+Questo percorso non è di cammino minimo:
+
+```mermaid
+flowchart LR
+A --> B
+s --> A & B
+B --> C & D
+```
+
+Però uno di questi due potrebbe esserlo:
+
+s→A→B è meglio rispetto a s→B
+
+```mermaid
+flowchart LR
+A --> B
+s --> A
+B --> C & D
+```
+
+
+s→B è meglio rispetto a s→A→B
+
+```mermaid
+flowchart LR
+s --> A & B
+B --> C & D
+```
