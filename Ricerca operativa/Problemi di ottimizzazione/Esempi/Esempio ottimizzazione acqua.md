@@ -16,7 +16,7 @@ flowchart LR
 3 -- 2 --> 4
 ```
 Dati:
-- L'impianto è un grafo $G=(N,A)$, con tubi $(i,j)∈A$
+- L'impianto è un [[Ottimizzazione grafi|grafo]] $G=(N,A)$, con tubi $(i,j)∈A$
 - $b_i$ quantità d'acqua prodotta dal nodo $i∈N$ (e $b_1=-∑\limits_{i∈N∖\{1\}} b_i$)
 
 Da trovare:
