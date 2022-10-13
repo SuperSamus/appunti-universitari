@@ -15,10 +15,20 @@ $$
 
 ---
 
-$λx.xx$
+$Δ=λx.xx$
 
 $$
-\cfrac{\cfrac{x:t_1⊢x:U→τ_2 \quad \cfrac{}{x:_1⊢x:U}}{x:τ_1⊢xx:τ_2}}{∅⊢λx.xx:τ_1→τ_2}
+\cfrac{\cfrac{x:τ_1⊢x:U→τ_2 \quad \cfrac{}{x:τ_1⊢x:U}}{x:τ_1⊢xx:τ_2}}{∅⊢λx.xx:τ_1→τ_2}
 $$
 
-Ci vorrebbe un tipo dove $U=U→τ_2
+Ci vorrebbe un tipo dove $U=U→τ_2$. Il nostro sistema di tipi è troppo semplice per permetterlo.
+
+---
+
+$I=λx.x$
+
+$$
+\cfrac{x:τ⊢x:τ}{∅⊢λx.x:τ→τ}
+$$
+
+È un tipo ambiguo. OCaml lo supporta.

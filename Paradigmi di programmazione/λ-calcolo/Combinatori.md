@@ -1,6 +1,7 @@
 # Combinatori
 
 - $I≜λx.x$
+- $Δ=λx.xx$
 - $K≜λx.λy.x$
 - $Y ≜ λf.(λx.f(xx))(λx.f(xx))$
 - $A≜λx.λy.y(xxy)$
