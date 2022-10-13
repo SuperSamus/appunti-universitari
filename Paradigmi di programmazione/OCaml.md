@@ -24,6 +24,7 @@ eta * anno;;
 - string
 
 ### Casting
+
 int + float (come `3 + 3.2`) non si può fare implicitamente:
 
 $$
@@ -36,7 +37,7 @@ Bisogna usare funzioni come `int_to_float` o `float_to_int` per convertire espli
 
 $T→S$
 
-$T_1*T_2*...*T_n$ (*tuple*)
+$T_1*T_2*…*T_n$ (*tuple*)
 
 Per esempio:
 ```OCaml
