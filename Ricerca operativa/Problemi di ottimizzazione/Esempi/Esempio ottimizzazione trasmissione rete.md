@@ -1,7 +1,7 @@
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] trasmissione rete
 
 Dati:
-- Rete descritta da grafo $G=(N,A)$, con linee $(i,j)∈A$
+- Rete descritta da [[Ottimizzazione grafi|grafo]] $G=(N,A)$, con linee $(i,j)∈A$
 - $u_{ij}∈ℕ$ capacità di trasmissione per la linea (in numero di pacchetti)
 - $c_{ij}>0$ prezzo della linea
 - $p∈ℕ$ pacchetti da inviare dalla sorgente $s∈N$ alla destinazione $t∈N$
@@ -85,7 +85,7 @@ B --> C & D
 
 Però uno di questi due potrebbe esserlo:
 
-s→A→B è meglio rispetto a s→B
+Se s→A→B è meglio rispetto a s→B
 
 ```mermaid
 flowchart LR
@@ -95,7 +95,7 @@ B --> C & D
 ```
 
 
-s→B è meglio rispetto a s→A→B
+Se s→B è meglio rispetto a s→A→B
 
 ```mermaid
 flowchart LR

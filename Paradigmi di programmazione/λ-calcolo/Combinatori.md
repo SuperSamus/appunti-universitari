@@ -8,7 +8,7 @@
 	- $Θt→_β^*t(Θt)$
 - $O=λy.Θk$ (Ogre)
 	- $Ot→_β^* O$
-		- $Θk=k(Θk)=(λx.λy.x)(Θk)→_β λy.Θk=O$
+		- $ΘK=K(ΘK)=(λx.λy.x)(ΘK)→_β λy.ΘK=O$
 - $S≜λx.λy.λz.xz(yz)$
 
 ## Risolvere il problema delle [[sostituzioni]]
