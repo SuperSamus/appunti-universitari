@@ -13,6 +13,31 @@
 - **Definizione**
     - Se manca: **compiler error**
 
+## [[Puntatori]] a funzioni
+
+Le funzioni in C non sono variabili, ma si può ottenere il puntatore a una funzione, che si può passare ad altre funzioni per essere chiamata.
+
+Si può anche avere [[array]] di puntatori a funzioni.
+
+```c
+#inlcude <stdio.h>
+
+int sum(int,int) {return x+y;}
+int mul(int,int) {return x*y;}
+
+int main() {
+  int (*f[2])(int,int)={sum,mul};
+  printf("3+6=%d\n", (*f[0]*)(3,6));
+  printf("3*6=%d\n", (*f[1]*)(3,6));
+}
+```
+
+Alcune funzioni di `<stdlib.h>` chiedono funzioni come argomento. Per esempio:
+
+```c
+void qsort(void* base, size_t num, size_t size, int (*compar)(const void*, const void*));
+```
+
 ## Parametri riga di comando
 
 ```c
