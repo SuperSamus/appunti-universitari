@@ -14,7 +14,7 @@ char* s="ciao";
 | →   |     |     | c   | i   | a   | o   | \\0 |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
-Attenzione: le variabili dichiarate con `char*` sono costanti, non vivono in memoria, quindi **non** si possono modificare.
+Attenzione: le variabili dichiarate con `char*` senza `malloc` sono costanti, non vivono in memoria, quindi **non** si possono modificare.
 
 ## Operazioni
 
