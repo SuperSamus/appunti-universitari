@@ -9,12 +9,12 @@ $(λx.t)s →_β t[s/x]$
 Formalmente, la relazione $→_β ⊆ Λ ⨉ Λ$
 
 $$
-\frac{}{(λx.t)s →_β t[s/x]}
+\cfrac{}{(λx.t)s →_β t[s/x]}
 $$
 
 $$
-\frac{t →_β s}{tu →_β su} \quad \frac{t →_β s}{ut →_β us} \quad
-\frac{t →_β s}{λx.t →_β λx.s}
+\cfrac{t →_β s}{tu →_β su} \quad \cfrac{t →_β s}{ut →_β us} \quad
+\cfrac{t →_β s}{λx.t →_β λx.s}
 $$
 
 ## Esempi

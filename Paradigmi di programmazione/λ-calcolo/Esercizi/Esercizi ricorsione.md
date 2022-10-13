@@ -1,4 +1,3 @@
-
 # Esercizi [[ricorsione]]
 
 Definire le seguenti operazioni ricorsivamente:

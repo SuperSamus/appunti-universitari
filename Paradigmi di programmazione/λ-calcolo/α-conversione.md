@@ -5,15 +5,15 @@ Forma di equivalenza del [[λ-calcolo]].
 Formalmente, la relazione $=_α ⊆ Λ ⨉ λ$
 
 $$
-\frac{}{λx.t =_α λy.t[y/x]} \quad (x ∉ FV(t))
+\cfrac{}{λx.t =_α λy.t[y/x]} \quad (x ∉ FV(t))
 $$
 
 $$
-\frac{}{t=_α t} \text{ riflessiva} \quad \frac{t=_α s}{s=_α t} \text{ simmetrica} \quad \frac{t=_α s \quad s=_α u}{t=_α u} \text{ transitiva}
+\cfrac{}{t=_α t} \text{ riflessiva} \quad \cfrac{t=_α s}{s=_α t} \text{ simmetrica} \quad \cfrac{t=_α s \quad s=_α u}{t=_α u} \text{ transitiva}
 $$
 
 $$
-\frac{t=_α t' \quad s=_α s'}{ts=_α t's'} \quad \frac{t=_α s}{λx.t=_α λx.s}
+\cfrac{t=_α t' \quad s=_α s'}{ts=_α t's'} \quad \cfrac{t=_α s}{λx.t=_α λx.s}
 $$
 
 ## Esempi
@@ -27,7 +27,7 @@ $$
 ## Lemma
 
 $$
-\frac{t =_α t' \quad s=_α s'}{t[s/x]=_α t'[s'/x]}
+\cfrac{t =_α t' \quad s=_α s'}{t[s/x]=_α t'[s'/x]}
 $$
 
 ## NB

@@ -1,11 +1,3 @@
-# OCaml
-
-$ML→CAML→OCaml$
-
-Linguaggio compilato in bytecode, eseguito da un interprete (per le $→_β$).
-
-Basato sulle espressioni.
-
 $E∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|true|false|e+e|e*e|e\textasciicircum e|ite(e,e,e)|\text{let }x=e \text{ in }e|λx.e|ee$
 
 $P=\{e∈E|FV(e)=∅\}$
@@ -20,15 +12,13 @@ $$
 
 Esempi di programmi:
 
-```ocaml
+```
 let x = 3+2 in
 let y = 5+2 in
 x+y
 ```
 
 ## Tipi
-
-^8e19a5
 
 Errore di semantica statica (non serve eseguire il programma per riceverlo):
 
@@ -47,7 +37,7 @@ $e:τ$
 Per esempio:
 
 $$
-\frac{e_1:num \quad e_2:num}{e_1+e_2:num}
+\cfrac{e_1:num \quad e_2:num}{e_1+e_2:num}
 $$
 
 Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il λ-calcolo non previene in nessun modo).
@@ -69,17 +59,17 @@ Proprietà da avere:
 Valori: $E⊃V∋v::=x|\underline{n}|\textquotedblleft s \textquotedblright$
 
 $$
-\frac{}{Γ,x:τ⊢x:τ} \\
-\frac{}{Γ⊢\underline{n}:\text{num}} \\
-\frac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
+\cfrac{}{Γ,x:τ⊢x:τ} \\
+\cfrac{}{Γ⊢\underline{n}:\text{num}} \\
+\cfrac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
 $$
 
 #### Regole di eliminazione
 
 $$
-\frac{Γ⊢e_1:\text{num} \quad Γ:e_2:num}{Γ⊢e_1+e_2:\text{num}} \\
-\frac{Γ⊢e_1:\text{str} \quad Γ:e_2:str}{Γ⊢e_1\textasciicircum e_2:\text{str}} \\
-\frac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
+\cfrac{Γ⊢e_1:\text{num} \quad Γ:e_2:num}{Γ⊢e_1+e_2:\text{num}} \\
+\cfrac{Γ⊢e_1:\text{str} \quad Γ:e_2:str}{Γ⊢e_1\textasciicircum e_2:\text{str}} \\
+\cfrac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
 $$
 
 #### Teorema inversione
@@ -97,7 +87,7 @@ $∀e.∀τ. \text{ esiste al massimo in tipo } t \text{ t.c } Γ⊢e:τ$
 #### Teorema sostituzione
 
 $$
-\frac{Γ,x:τ⊢e:σ \quad Γ⊢e':τ}{Γ⊢e[e'/x]:σ}
+\cfrac{Γ,x:τ⊢e:σ \quad Γ⊢e':τ}{Γ⊢e[e'/x]:σ}
 $$
 
 ### Algoritmo TI (Type Inference)
@@ -133,7 +123,7 @@ Se l'espressione è tipabile, si può eseguire.
 #### Progress
 
 $$
-\frac{Γ⊢e:τ \quad e→e'}{Γ⊢e':τ}
+\cfrac{Γ⊢e:τ \quad e→e'}{Γ⊢e':τ}
 $$
 
 #### Preservation
@@ -156,19 +146,19 @@ Il corpo di una funzione non si tocca finché non viene chiamata.
 Regola di introduzione: come produrre valori di in certo tipo
 
 $$
-\frac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2}
+\cfrac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2}
 $$
 
 Regole di eliminazione: dato in termine di un certo tipo, cosa ci si può fare
 
 $$
-\frac{Γ⊢t:τ_1→τ_2 \quad Γ⊢s:τ_1}{Γ⊢ts:τ_2}
+\cfrac{Γ⊢t:τ_1→τ_2 \quad Γ⊢s:τ_1}{Γ⊢ts:τ_2}
 $$
 
 Combiniamo le regole:
 
 $$
-\frac{\frac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2} \quad Γ⊢s:τ_1}{Γ⊢ts:τ_2}
+\cfrac{\cfrac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2} \quad Γ⊢s:τ_1}{Γ⊢ts:τ_2}
 $$
 
 Abbiamo un β-redex!
