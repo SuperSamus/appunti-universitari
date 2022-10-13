@@ -1,5 +1,11 @@
 # OCaml
 
+$ML→CAML→OCaml$
+
+Linguaggio compilato in bytecode, eseguito da un interprete (per le $→_β$).
+
+Basato sulle espressioni.
+
 $E∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|true|false|e+e|e*e|e\textasciicircum e|ite(e,e,e)|\text{let }x=e \text{ in }e|λx.e|ee$
 
 $P=\{e∈E|FV(e)=∅\}$
