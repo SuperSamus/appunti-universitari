@@ -1,6 +1,6 @@
 # OCaml
 
-$E∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|e+e|e*e|e\textasciicircum e|\text{let }x=e \text{ in }e$
+$E∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|true|false|e+e|e*e|e\textasciicircum e|ite(e,e,e)|\text{let }x=e \text{ in }e|λx.e|ee$
 
 $P=\{e∈E|FV(e)=∅\}$
 

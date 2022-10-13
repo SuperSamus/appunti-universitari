@@ -1,4 +1,4 @@
-# λ-calculus
+# λ-calcolo
 
 Sono un linguaggio generale per descrivere funzione e operatori come si combinano tra di loro. È di *ordine superiore*: può avere funzioni come input e output. Arricchibile.
 
