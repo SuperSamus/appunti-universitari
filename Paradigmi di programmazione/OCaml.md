@@ -41,5 +41,15 @@ $T_1*T_2*…*T_n$ (*tuple*)
 
 Per esempio:
 ```OCaml
-let x: (int, bool, string) = (10, true, "hello");;
+let x: int*bool*string = (10, true, "hello");;
 ```
+
+## Let
+
+%%
+$\text{let }x=t;;→<Σ,s>$
+TODO: Può non cancellare il secondo dopo?
+$$
+\cfrac{}{}
+$$
+%%
