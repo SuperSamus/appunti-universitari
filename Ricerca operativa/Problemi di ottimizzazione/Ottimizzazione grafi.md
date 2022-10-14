@@ -101,14 +101,25 @@ Prendiamo questo grafo, dove le linee non tratteggiate sono di commini minimi:
 
 ```mermaid
 flowchart LR
-s --> A
-s --> C --> i
+r --> A
+r --> C --> i
 A --> B
 B --> h
 h --> j
 A .-> h
-s .-> B .-> j
+r .-> B .-> j
 C .-> B
 i .-> j .-> C
 ```
-$d_h \; d_j \; d_i$ Costo dei cammini da $s$
+
+$d_h \; d_j \; d_i$ Costo dei cammini da $r$ sull'albero
+
+$d_h+c_{hj}=d_j$
+
+$d_i+c_{ij}≥d_j$
+
+Quindi:
+- Condizioni di Bellman
+	- $(N,A_T)$ è un albero dei cammini minimi ⇔ $d_i+c_{ij}≥d_j \quad ∀(i,j)∈A$
+- Etichetta del nodo $i$
+	- $d_i=$ costo dell'unico cammino da $r$ a $i$ sull'albero ($d_r=0$)
