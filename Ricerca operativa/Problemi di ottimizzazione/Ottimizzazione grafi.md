@@ -95,15 +95,20 @@ s --> A & B
 B --> C & D
 ```
 
-Prendiamo per esempio questo grafo, dove le linee non tratteggiate sono di commini minimi:
+---
+
+Prendiamo questo grafo, dove le linee non tratteggiate sono di commini minimi:
 
 ```mermaid
 flowchart LR
-s --> A -.-> h
-s -.-> B -.-> j
+s --> A
 s --> C --> i
+A --> B
 B --> h
 h --> j
-C -.-> B
-i -.-> j -.-> C
+A .-> h
+s .-> B .-> j
+C .-> B
+i .-> j .-> C
 ```
+$d_h \; d_j \; d_i$ Costo dei cammini da $s$
