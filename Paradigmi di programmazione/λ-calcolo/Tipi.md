@@ -30,14 +30,14 @@ y^x
 
 **Sistema di tipi**: un meccanismo che impone vincoli sulla formazione delle frasi di un linguaggio per garantirne la sensatezza.
 
-$Τ ∋ τ::=num|str|bool|τ→τ$
+$Τ ∋ τ::=nat|str|bool|τ→τ$
 
 $e:τ$
 
 Per esempio:
 
 $$
-\cfrac{e_1:num \quad e_2:num}{e_1+e_2:num}
+\cfrac{e_1:nat \quad e_2:nat}{e_1+e_2:nat}
 $$
 
 Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il λ-calcolo non previene in nessun modo).
@@ -60,14 +60,14 @@ Valori: $E⊃V∋v::=x|\underline{n}|\textquotedblleft s \textquotedblright$
 
 $$
 \cfrac{}{Γ,x:τ⊢x:τ} \\
-\cfrac{}{Γ⊢\underline{n}:\text{num}} \\
+\cfrac{}{Γ⊢\underline{n}:\text{nat}} \\
 \cfrac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
 $$
 
 #### Regole di eliminazione
 
 $$
-\cfrac{Γ⊢e_1:\text{num} \quad Γ:e_2:num}{Γ⊢e_1+e_2:\text{num}} \\
+\cfrac{Γ⊢e_1:\text{nat} \quad Γ:e_2:nat}{Γ⊢e_1+e_2:\text{nat}} \\
 \cfrac{Γ⊢e_1:\text{str} \quad Γ:e_2:str}{Γ⊢e_1\textasciicircum e_2:\text{str}} \\
 \cfrac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
 $$
@@ -76,7 +76,7 @@ $$
 
 Se $Γ⊢e:τ$, e se $e=e_1+e_2$, abbiamo:
 
-$τ=\text{num} \quad Γ⊢e_1:\text{num} \quad Γ⊢e_2:\text{num}$
+$τ=\text{nat} \quad Γ⊢e_1:\text{nat} \quad Γ⊢e_2:\text{nat}$
 
 Lo stesso modo per tutti i costruttori.
 
@@ -98,7 +98,7 @@ Output: $τ \text{ t.c. } Γ⊢e:τ \text{ se esiste, fail altrimenti}$
 
 ```
 case e of
-    e==n => τ ≜ num
+    e==n => τ ≜ nat
     e=="s" => τ ≜ str
     e==x => if (x:τ)∈Γ then τ else fail
 ```
@@ -135,8 +135,8 @@ Se $Γ⊢e:τ$ allora una delle due:
 ### Funzioni
 
 Le funzioni sono tipi. Per esempio:
-- $num → bool$
-- $num → (num → bool)$
+- $nat → bool$
+- $nat → (nat → bool)$
 - $(num→num)→(num→(num→num))$
 
 Il corpo di una funzione non si tocca finché non viene chiamata.

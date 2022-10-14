@@ -3,14 +3,14 @@
 $ite(true,λx.x+5,λy.y+2)$
 
 $$
-\cfrac{\cfrac{}{∅⊢true:bool} \quad \cfrac{\cfrac{x:num⊢x:num \quad \cfrac{}{x:num⊢5:num}}{x:num⊢x+5:num}}{∅⊢λx.x+5:num→num} \quad ∅⊢λy.y+2:num→num}{∅⊢ite(true,λx.x+5,λy.y+2):num→num}
+\cfrac{\cfrac{}{∅⊢true:bool} \quad \cfrac{\cfrac{x:num⊢x:nat \quad \cfrac{}{x:num⊢5:nat}}{x:num⊢x+5:nat}}{∅⊢λx.x+5:num→num} \quad ∅⊢λy.y+2:num→num}{∅⊢ite(true,λx.x+5,λy.y+2):num→num}
 $$
  ---
 
 $ite(true,λx.x+5,2)$ Errore
 
 $$
-\cfrac{\cfrac{}{∅⊢true:bool} \quad \cfrac{\cfrac{x:num⊢x:num \quad \cfrac{}{x:num⊢5:num}}{x:num⊢x+5:num}}{∅⊢λx.x+5:num→num} \quad \cfrac{\text{X}}{∅⊢2:num→num}}{∅⊢ite(true,λx.x+5,2):num→num}
+\cfrac{\cfrac{}{∅⊢true:bool} \quad \cfrac{\cfrac{x:num⊢x:nat \quad \cfrac{}{x:num⊢5:nat}}{x:num⊢x+5:nat}}{∅⊢λx.x+5:num→num} \quad \cfrac{\text{X}}{∅⊢2:num→num}}{∅⊢ite(true,λx.x+5,2):num→num}
 $$
 
 ---

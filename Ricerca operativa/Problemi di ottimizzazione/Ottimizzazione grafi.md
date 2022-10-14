@@ -77,7 +77,7 @@ B --> C & D
 
 Però uno di questi due potrebbe esserlo:
 
-Se s→A→B è meglio rispetto a s→B
+Se s→A→B è meglio rispetto a s→B:
 
 ```mermaid
 flowchart LR
@@ -87,10 +87,23 @@ B --> C & D
 ```
 
 
-Se s→B è meglio rispetto a s→A→B
+Se s→B è meglio rispetto a s→A→B:
 
 ```mermaid
 flowchart LR
 s --> A & B
 B --> C & D
+```
+
+Prendiamo per esempio questo grafo, dove le linee non tratteggiate sono di commini minimi:
+
+```mermaid
+flowchart LR
+s --> A -.-> h
+s -.-> B -.-> j
+s --> C --> i
+B --> h
+h --> j
+C -.-> B
+i -.-> j -.-> C
 ```
