@@ -146,4 +146,12 @@ flowchart LR
 - $d_4=10$
 - $d_5=8$
 
-No: $d_3=d_1+c_{13}=0+7=7>d_2+c_{23}=5+1=6$
+Dobbiamo verificare la condizione di Bellman per ogni arco che non è dell'albero.
+- $d_2+c_{23}=5+1=6<7=d_3$
+
+E abbiamo già verificato che la condizione di Bellman non è verificata: l'albero non è dei cammini minimi.
+
+Per certificare che non lo è basta solo trovare una condizione falsa. Non tutte le etichette sbagliate hanno per forza la condizione falsa, per esempio:
+$d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ (avevamo visto che dovrebbe essere $d_3=6$, e $6+3=9<10=d_4$, ma dato che controlliamo con il $d_3$ sbagliato non si noterebbe che anche $d_4$ è sbagliato)
+
+per certificare è di cammino minimo bisogna controllare tutti.
