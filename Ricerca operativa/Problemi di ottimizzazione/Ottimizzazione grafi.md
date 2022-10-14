@@ -151,7 +151,6 @@ Dobbiamo verificare la condizione di Bellman per ogni arco che non è dell'alber
 
 E abbiamo già verificato che la condizione di Bellman non è verificata: l'albero non è dei cammini minimi.
 
-Per certificare che non lo è basta solo trovare una condizione falsa. Non tutte le etichette sbagliate hanno per forza la condizione falsa, per esempio:
-$d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ (avevamo visto che dovrebbe essere $d_3=6$, e $6+3=9<10=d_4$, ma dato che controlliamo con il $d_3$ sbagliato non si noterebbe che anche $d_4$ è sbagliato)
+Per certificare che l'albero non è di cammini minimi basta solo trovare una condizione non soddisfatta. Attenzione: non tutte le etichette sbagliate hanno per forza la condizione non soddisfatta, per esempio:
 
-per certificare è di cammino minimo bisogna controllare tutti.
+$d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto che dovrebbe essere $d_3=6$, e $6+3=9<10=d_4$, ma dato che controlliamo con il $d_3$ sbagliato non si nota che anche $d_4$ è sbagliato)
