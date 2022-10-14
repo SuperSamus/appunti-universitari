@@ -125,7 +125,7 @@ Passando da $ABC=110$ a $ABC=111$, a causa del ritardo dell'operazione $NOT$ (ne
 
 ![[Multiplexer.png]]
 
-Abbiamo diversi dispositivi D1-D4 che mandano un segnale. Se il segnalo che Di manda è uguale a 1, allora Ai diventa 1 a gli altri diventano 0. D1-D4 mandano il segnalo contemporaneamente, e un arbitro fa sì che il Di con i più basso abbia priorità con il segnale 1.
+Abbiamo diversi dispositivi D1-D4 che mandano un segnale. Se il segnalo che Di manda è uguale a 1, allora Ai diventa 1 e gli altri diventano 0. D1-D4 mandano il segnale contemporaneamente, e un arbitro fa sì che il Di con i più basso abbia priorità con il segnale 1.
 
 ```mermaid
 flowchart LR
@@ -182,7 +182,7 @@ Esempio con 1 bit di controllo:
 | 1    | 0   | 0     | 0     |
 | 1    | 1   | 0     | 1     |
 
-Semplificata (niente risultato 0):
+Semplificata (niente $a=0$):
 
 | $ctl$ | $a$ | $z_1$ | $z_2$ |
 | ---- | --- | ----- | ----- |
