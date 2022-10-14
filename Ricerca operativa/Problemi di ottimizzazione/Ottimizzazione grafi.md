@@ -64,7 +64,7 @@ Nota che è possibile che il grafo non sia connesso, in questo caso non esister�
 
 Stiamo anche assumendo che non ci siano cicli di costo negativo.
 
-##### Albero dei cammini minimi
+### Albero dei cammini minimi
 
 Questo percorso non è di cammino minimo:
 
@@ -123,3 +123,15 @@ Quindi:
 	- $(N,A_T)$ è un albero dei cammini minimi ⇔ $d_i+c_{ij}≥d_j \quad ∀(i,j)∈A$
 - Etichetta del nodo $i$
 	- $d_i=$ costo dell'unico cammino da $r$ a $i$ sull'albero ($d_r=0$)
+
+#### Verifica
+
+Questo albero è dei cammini minimi?
+
+```mermaid
+flowchart LR
+1 -- 5 --> 2
+2 -- 5 --> 4
+1 -- 7 --> 3
+2 -- 1 --> 3
+```
