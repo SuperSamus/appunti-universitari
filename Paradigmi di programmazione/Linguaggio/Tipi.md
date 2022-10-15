@@ -29,7 +29,8 @@ $e$ può essere tante cose (come un segnaposto), quindi $e:τ$ da solo non basta
 Ci vuole quindi un ambiente/contesto (finito):
 - $Γ:Var→Type$
 - $Γ::=x_1:τ_1,…,x_n:τ_n$
-- $Γ⊢e:τ$.
+- $Γ⊢e:τ \quad FV(e)⊆Dom(Γ)$
+- $Γ(x)≜\text{il tipo di }x$
 
 Per esempio: $x:str,y:str⊢x\textasciicircum y:str$
 
@@ -37,21 +38,35 @@ Proprietà da avere:
 - Se il tipo viene dato, deve essere corretto: $(Γ,e,τ)→Γ⊢e:τ$
 - Se il tipo non viene dato, deve poter essere trovato e corretto: $Γ,e→τ \text{ t.c. } Γ⊢e:τ$
 
+### Unione disgiunta funzioni
+
+$$
+\begin{matrix} f:A→B \\ g:A'→B' \end{matrix} \quad A∩A'=∅ \quad f+g:A∪A'→B∪B' \quad (f+g)(x)≜\begin{cases} f(x) & \text{se } x∈A \\ g(x) & \text{se } x∈A' \end{cases}
+$$
+
+Utile quando si ha due ambienti diversi:
+
+$$
+(Γ+Δ)(x)≜\begin{cases} Γ(x) & \text{se } x∈Dom(Γ) \\ Δ(x) & \text{se } x∈Dom(Δ) \end{cases}
+$$
+
 ### Regole di introduzione:
 
 Valori: $E⊃V∋v::=x|\underline{n}|\textquotedblleft s \textquotedblright$
 
 $$
-\cfrac{}{Γ,x:τ⊢x:τ} \\
-\cfrac{}{Γ⊢\underline{n}:\text{nat}} \\
+\cfrac{}{Γ,x:τ⊢x:τ} \quad
+\cfrac{}{Γ⊢\underline{n}:\text{nat}} \quad
+\cfrac{}{Γ⊢\underline{b}:\text{bool}} \quad
 \cfrac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
 $$
 
 ### Regole di eliminazione
 
 $$
-\cfrac{Γ⊢e_1:\text{nat} \quad Γ:e_2:nat}{Γ⊢e_1+e_2:\text{nat}} \\
+\cfrac{Γ⊢e_1:\text{nat} \quad Γ:e_2:nat}{Γ⊢e_1+e_2:\text{nat}} \quad
 \cfrac{Γ⊢e_1:\text{str} \quad Γ:e_2:str}{Γ⊢e_1\textasciicircum e_2:\text{str}} \\
+\cfrac{Γ⊢e_1:bool \quad Γ⊢e_2:τ \quad Γ⊢e_3:τ}{Γ⊢ite(e_1,e_2,e_3):τ} \quad
 \cfrac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
 $$
 
