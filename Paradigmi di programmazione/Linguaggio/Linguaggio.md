@@ -55,3 +55,15 @@ $$
 \cfrac{\cfrac{}{succ \: \underline{0}→\underline{1}}}{pred(succ \: \underline{0})→pred(\underline{1})} \quad
 \cfrac{}{prec \: \underline{1}→0}
 $$
+
+## Unione disgiunta funzioni
+
+$$
+\begin{matrix} f:A→B \\ g:A'→B' \end{matrix} \quad A∩A'=∅ \quad f+g:A∪A'→B∪B' \quad (f+g)(x)≜\begin{cases} f(x) & \text{se } x∈A \\ g(x) & \text{se } x∈A' \end{cases}
+$$
+
+Utile quando si ha due ambienti diversi:
+
+$$
+(Γ+Δ)(x)≜\begin{cases} Γ(x) & \text{se } x∈A \\ Δ(x) & \text{se } x∈A' \end{cases}
+$$
