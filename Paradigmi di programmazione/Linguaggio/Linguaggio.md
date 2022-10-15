@@ -24,9 +24,13 @@ x+y
 
 ## Semantica
 
-$t,s::=x|\underline{n}|\underline{b}|succ \: t|pred \: t|ite(t,t,t)|\text{let }x=e \text{ in }e$
+Con la sintassi:
+- $t,s::=x|\underline{n}|\underline{b}|succ \: t|pred \: t|ite(t,t,t)|\text{let }x=e \text{ in }e$
+- $v,w::=x|\underline{n}|\underline{b}$
 
-$v,w::=x|\underline{n}|\underline{b}$
+La riduzione porta un termine a un altro termine. $→⊆t×t$
+
+È deterministica: 
 
 $$
 \cfrac{t→t'}{ite(t,s,u)→ite(t',s,y)} \quad
@@ -46,6 +50,8 @@ $$
 
 ### Esempio
 
+$pred(succ \: \underline{0})$
 $$
-\cfrac{}{succ \: \underline{n}→\underline{n+1}}
+\cfrac{\cfrac{}{succ \: \underline{0}→\underline{1}}}{pred(succ \: \underline{0})→pred(\underline{1})} \quad
+\cfrac{}{prec \: \underline{1}→0}
 $$
