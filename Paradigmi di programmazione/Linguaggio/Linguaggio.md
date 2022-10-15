@@ -40,5 +40,12 @@ $$
 $$
 
 $$
+\cfrac{}{prec \: \underline{n}→\underline{n-1}} \quad
+\cfrac{}{succ \: \underline{n}→\underline{n+1}}
+$$
+
+### Esempio
+
+$$
 \cfrac{}{succ \: \underline{n}→\underline{n+1}}
 $$
