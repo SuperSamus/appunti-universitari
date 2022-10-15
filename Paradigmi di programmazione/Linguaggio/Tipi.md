@@ -26,7 +26,10 @@ Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il �
 
 $e$ può essere tante cose (come un segnaposto), quindi $e:τ$ da solo non basta.
 
-Ci vuole quindi un ambiente: $Γ::=x_1:τ_1,…,x_n:τ_n$, dove $Γ⊢e:τ$.
+Ci vuole quindi un ambiente/contesto (finito):
+- $Γ:Var→Type$
+- $Γ::=x_1:τ_1,…,x_n:τ_n$
+- $Γ⊢e:τ$.
 
 Per esempio: $x:str,y:str⊢x\textasciicircum y:str$
 
