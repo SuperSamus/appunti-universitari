@@ -88,6 +88,12 @@ $$
 \cfrac{Γ,x:τ⊢e:σ \quad Γ⊢e':τ}{Γ⊢e[e'/x]:σ}
 $$
 
+### Teorema indebolimento
+
+$$
+\cfrac{Γ⊢e:τ_2}{Γ,x:τ_1⊢e:τ_2}
+$$
+
 ## Algoritmo TI (Type Inference)
 
 Input: $(Γ,e)$
