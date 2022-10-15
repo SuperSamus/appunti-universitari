@@ -30,7 +30,7 @@ Con la sintassi:
 
 La riduzione porta un termine a un altro termine. $→⊆t×t$
 
-È deterministica: 
+È deterministica. $\begin{matrix} t→s_1 \\ t→s_2 \end{matrix} ⇒ s_1 =_α s_2$
 
 $$
 \cfrac{t→t'}{ite(t,s,u)→ite(t',s,y)} \quad
