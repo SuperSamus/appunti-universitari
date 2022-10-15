@@ -1,24 +1,4 @@
-Sintassi: $E∋e::=x|\underline{n}|\textquotedblleft s \textquotedblright|true|false|e+e|e*e|e\textasciicircum e|ite(e,e,e)|\text{let }x=e \text{ in }e|λx.e|ee$
-
-$P=\{e∈E|FV(e)=∅\}$
-
-$e=_αe'$
-
-$$
-\text{let }x=e \text{ in }e' \\
-=_α \\
-\text{let }y=e \text{ in }e'[y/x] \quad y ∉ FV(e')
-$$
-
-Esempi di programmi:
-
-```
-let x = 3+2 in
-let y = 5+2 in
-x+y
-```
-
-## Tipi
+# Tipi
 
 Errore di semantica statica (non serve eseguire il programma per riceverlo):
 
@@ -42,7 +22,7 @@ $$
 
 Questi sistemi servono a prevenire operazioni come $ADD \: ADD \: ADD$ (che il λ-calcolo non previene in nessun modo).
 
-### Giudizi di tipo
+## Giudizi di tipo
 
 $e$ può essere tante cose (come un segnaposto), quindi $e:τ$ da solo non basta.
 
@@ -54,7 +34,7 @@ Proprietà da avere:
 - Se il tipo viene dato, deve essere corretto: $(Γ,e,τ)→Γ⊢e:τ$
 - Se il tipo non viene dato, deve poter essere trovato e corretto: $Γ,e→τ \text{ t.c. } Γ⊢e:τ$
 
-#### Regole di introduzione:
+### Regole di introduzione:
 
 Valori: $E⊃V∋v::=x|\underline{n}|\textquotedblleft s \textquotedblright$
 
@@ -64,7 +44,7 @@ $$
 \cfrac{}{Γ⊢\textquotedblleft s\textquotedblright:str}
 $$
 
-#### Regole di eliminazione
+### Regole di eliminazione
 
 $$
 \cfrac{Γ⊢e_1:\text{nat} \quad Γ:e_2:nat}{Γ⊢e_1+e_2:\text{nat}} \\
@@ -72,7 +52,7 @@ $$
 \cfrac{Γ⊢e_1:τ \quad Γ,x:τ⊢e_2:σ}{Γ⊢\text{let }x=e_1 \text{ in } e_2:σ}
 $$
 
-#### Teorema inversione
+### Teorema inversione
 
 Se $Γ⊢e:τ$, e se $e=e_1+e_2$, abbiamo:
 
@@ -80,17 +60,17 @@ $τ=\text{nat} \quad Γ⊢e_1:\text{nat} \quad Γ⊢e_2:\text{nat}$
 
 Lo stesso modo per tutti i costruttori.
 
-#### Teorema unicità
+### Teorema unicità
 
 $∀e.∀τ. \text{ esiste al massimo in tipo } t \text{ t.c } Γ⊢e:τ$
 
-#### Teorema sostituzione
+### Teorema sostituzione
 
 $$
 \cfrac{Γ,x:τ⊢e:σ \quad Γ⊢e':τ}{Γ⊢e[e'/x]:σ}
 $$
 
-### Algoritmo TI (Type Inference)
+## Algoritmo TI (Type Inference)
 
 Input: $(Γ,e)$
 
@@ -116,17 +96,17 @@ e=let x = e1 in e2
 
 Complessità: lineare.
 
-### Type safety
+## Type safety
 
 Se l'espressione è tipabile, si può eseguire.
 
-#### Progress
+### Progress
 
 $$
 \cfrac{Γ⊢e:τ \quad e→e'}{Γ⊢e':τ}
 $$
 
-#### Preservation
+### Preservation
 
 Se $Γ⊢e:τ$ allora una delle due:
 - $e=v$ valore
@@ -141,7 +121,7 @@ Le funzioni sono tipi. Per esempio:
 
 Il corpo di una funzione non si tocca finché non viene chiamata.
 
-#### Costruttore/Distruttori
+### Costruttore/Distruttori
 
 Regola di introduzione: come produrre valori di in certo tipo
 

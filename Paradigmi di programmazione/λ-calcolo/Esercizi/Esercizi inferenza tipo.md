@@ -1,4 +1,4 @@
-# Esercizi inferenza [[tipi]]
+# Esercizi inferenza [[Tipi]]
 
 $ite(true,λx.x+5,λy.y+2)$
 
