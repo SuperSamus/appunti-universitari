@@ -156,13 +156,17 @@ Per certificare che l'albero non è di cammini minimi basta solo trovare una con
 $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto che dovrebbe essere $d_3=6$, e $6+3=9<10=d_4$, ma dato che controlliamo con il $d_3$ sbagliato non si nota che anche $d_4$ è sbagliato)
 
 #### Algoritmo
+
 - Inizializzazione (albero fittizio)
-	- $p_r=-, d_i=0, p_i=r,d_i=M \quad i≠r,Q=\{r\}$
-
-#### Procedura
-
-1. Se TODO allora STOP
-2. Scegliere TODO
-3. TODO
-4. Per ogni arco $(u,v)∈A$: se $d_u+c_{uv}<d_v$, allora $\begin{cases} \text{se } p_v=u & d_v=d_u+c_{uv} \\ \text{se } TODO & TODO \end{cases}$
-5. Ritornare a 1.
+	- $p_r=-, d_i=0, p_i=r,d_i=M \quad i≠r \quad Q=\{r\}$
+	- $p_i$ nodo padre rispetto al nodo $i$
+	- $Q=\{\text{coda di archi che potrebbero violare 'Bellman'}\}$
+- Procedura
+	1. Se $Q=∅$ allora STOP
+	2. Scegliere $u∈Q$
+	3. $Q=Q∖\{u\}$
+	4. Per ogni arco $(u,v)∈A$: se $d_u+c_{uv}<d_v$, allora
+		- $p_v=u$
+		- $d_v=d_u+c_{uv}$
+		- Se $v∉Q$ allora $Q=Q∪\{v\}$
+	5. Ritornare a 1.
