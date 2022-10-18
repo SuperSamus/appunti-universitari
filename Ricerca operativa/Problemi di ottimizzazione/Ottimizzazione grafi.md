@@ -166,3 +166,4 @@ $p_r=-, d_i=0, p_i=r,d_i=M,TODO$
 2. Scegliere TODO
 3. TODO
 4. Per ogni arco $(u,v)∈A$: se $d_u+c_{uv}<d_v$, allora $\begin{cases} \text{se } p_v=u & d_v=d_u+c_{uv} \\ \text{se } TODO & TODO \end{cases}$
+5. Ritornare a 1.
