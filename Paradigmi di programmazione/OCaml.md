@@ -78,10 +78,13 @@ let scambia_add (x,y) = (y+5,x+5) (* -> int *)
 (* +: int -> int *)
 ```
 
+---
 
 ```OCaml
 let maggiore x y = if x > y then x else y
 ```
 
 Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
-- `if else` vuol dire che 
+- `if else` fa sì che $'a='b$, quindi $'a→'a→'a$
+- $>:'a→'a→bool$, tuttavia `>` non si può fare su tutti i tipi (come le funzioni)
+	- OCaml *non* previene l'utilizzo di tipi incompatibili, prende solo il tipo più generico possibile, che vuol dire che si può avere errori di runtime (altri linguaggi come Haskell o Rust invece hanno meccanismi per prevenirlo)
