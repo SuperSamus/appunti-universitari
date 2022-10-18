@@ -157,7 +157,7 @@ $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto 
 
 #### Algoritmo
 - Inizializzazione (albero fittizio)
-	- $p_r=-, d_i=0, p_i=r,d_i=M,TODO$
+	- $p_r=-, d_i=0, p_i=r,d_i=M \quad i≠r,Q=\{r\}$
 
 #### Procedura
 
