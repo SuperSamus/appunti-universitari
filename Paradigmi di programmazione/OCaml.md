@@ -99,5 +99,21 @@ Lista ≜ Sequenza *finita* e *immutabile* di espressioni *dello stesso tipo* (m
 [true;true && false]: bool list
 []: 'a list
 [[2;3];[3;4];[]]: (int list) list
-[[];[fun x -> x]]: 'a -> 'a list
+```
+
+Che tipo è questo?
+```OCaml
+[[];[fun x -> x]]
+```
+
+Vincoli:
+- Il primo elemento `'a list`
+- Il secondo elemento `'a->'a list`
+- Combinandoli, si sceglie quello più restrittivo, quindi otteniamo `('a->'a list) list`
+
+Per sfruttare le liste si usa la ricorsione:
+```OCaml
+let f (x:'a list) =
+    match x with
+       
 ```
