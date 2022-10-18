@@ -64,7 +64,7 @@ Nota che è possibile che il grafo non sia connesso, in questo caso non esister�
 
 Stiamo anche assumendo che non ci siano cicli di costo negativo.
 
-### Albero dei cammini minimi
+### Albero dei cammini minimi (Shortest Path Tree, SPT)
 
 Questo percorso non è di cammino minimo:
 
@@ -154,3 +154,6 @@ E abbiamo già verificato che la condizione di Bellman non è verificata: l'albe
 Per certificare che l'albero non è di cammini minimi basta solo trovare una condizione non soddisfatta. Attenzione: non tutte le etichette sbagliate hanno per forza la condizione non soddisfatta, per esempio:
 
 $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto che dovrebbe essere $d_3=6$, e $6+3=9<10=d_4$, ma dato che controlliamo con il $d_3$ sbagliato non si nota che anche $d_4$ è sbagliato)
+
+#### Inizializzazione (albero fittizio)
+
