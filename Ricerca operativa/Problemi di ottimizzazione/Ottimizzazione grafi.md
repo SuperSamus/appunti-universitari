@@ -159,8 +159,8 @@ $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto 
 
 - Inizializzazione (albero fittizio)
 	- $p_r=-, d_i=0, p_i=r,d_i=M \quad i≠r \quad Q=\{r\}$
-	- $p_i$ nodo padre rispetto al nodo $i$
-	- $Q=\{\text{coda di archi che potrebbero violare 'Bellman'}\}$
+		- $p_i$ nodo padre rispetto al nodo $i$
+		- $Q=\{\text{coda di archi che potrebbero violare 'Bellman'}\}$
 - Procedura
 	1. Se $Q=∅$ allora STOP
 	2. Scegliere $u∈Q$
@@ -170,3 +170,5 @@ $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto 
 		- $d_v=d_u+c_{uv}$
 		- Se $v∉Q$ allora $Q=Q∪\{v\}$
 	5. Ritornare a 1.
+
+Inizializzazione alternativa: qualsiasi albero di cammini, così si risparmia sulle iterazioni.
