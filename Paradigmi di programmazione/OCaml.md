@@ -2,7 +2,7 @@
 
 $ML→CAML→OCaml$
 
-Linguaggio compilato in bytecode, eseguito da un interprete (per le $→_β$).
+Linguaggio [[Programmazione funzionale|funzionale]] compilato in bytecode, eseguito da un interprete (per le $→_β$).
 
 Consente di scrivere:
 
@@ -14,7 +14,7 @@ let anno: int = 2022;;
 eta * anno;;
 ```
 
-## Tipi di base
+## [[Tipi]] di base
 
 - int
 - unit
@@ -22,6 +22,7 @@ eta * anno;;
 - bool
 - char
 - string
+- T list
 
 ### Casting
 
@@ -88,3 +89,15 @@ Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
 - `if else` fa sì che $'a='b$, quindi $'a→'a→'a$
 - $>:'a→'a→bool$, tuttavia `>` non si può fare su tutti i tipi (come le funzioni)
 	- OCaml *non* previene l'utilizzo di tipi incompatibili, prende solo il tipo più generico possibile, che vuol dire che si può avere errori di runtime (altri linguaggi come Haskell o Rust invece hanno meccanismi per prevenirlo)
+
+## Liste
+
+Lista ≜ Sequenza *finita* e *immutabile* di espressioni *dello stesso tipo* (mentre le tuple possono avere i tipi che vogliono)
+
+```OCaml
+[1;2;3]: int list
+[true;true && false]: bool list
+[]: 'a list
+[[2;3];[3;4];[]]: (int list) list
+[[];[fun x -> x]]: 'a -> 'a list
+```
