@@ -57,3 +57,19 @@ $$
 \cfrac{}{}
 $$
 %%
+
+TODO:
+Si è visto che esistono tipi $'a→int$, (tipi generici, inferiti automaticamente).
+L'istanziazione non è esplicita, ma automatica.
+
+Zucchero sintattico:
+```ocaml
+let id (x: int) = x (*int -> int*)
+let id = fun (x:int) -> x
+```
+
+Esempio:
+```ocaml
+let scambia (x,y) = (y,x) (* 'a*'b -> 'b*'a *)
+let scambia = fun (x,y) -> (y,x)
+```
