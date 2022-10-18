@@ -155,7 +155,7 @@ Per certificare che l'albero non è di cammini minimi basta solo trovare una con
 
 $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto che dovrebbe essere $d_3=6$, e $6+3=9<10=d_4$, ma dato che controlliamo con il $d_3$ sbagliato non si nota che anche $d_4$ è sbagliato)
 
-#### Algoritmo
+#### Algoritmo SPT (SHortest Path Tree)
 
 - Inizializzazione (albero fittizio)
 	- $p_r=-, d_i=0, p_i=r,d_i=M \quad i≠r \quad Q=\{r\}$
@@ -172,3 +172,7 @@ $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto 
 	5. Ritornare a 1.
 
 Inizializzazione alternativa: qualsiasi albero di cammini, così si risparmia sulle iterazioni.
+
+##### Implementazione di Q
+
+Coda di priorità (Dijkstra): $u∈Q \; t.c. \; d_u=\min\{d_i:i∈Q\}$
