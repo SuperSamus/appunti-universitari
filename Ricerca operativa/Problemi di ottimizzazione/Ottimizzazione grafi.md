@@ -157,3 +157,12 @@ $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto 
 
 #### Inizializzazione (albero fittizio)
 
+TODO
+$p_r=-, d_i=0, p_i=r,d_i=M,TODO$
+
+#### Procedura
+
+1. Se TODO allora STOP
+2. Scegliere TODO
+3. TODO
+4. Per ogni arco $(u,v)∈A$: se $d_u+c_{uv}<d_v$, allora $\begin{cases} \text{se } p_v=u & d_v=d_u+c_{uv} \\ \text{se } TODO & TODO \end{cases}$
