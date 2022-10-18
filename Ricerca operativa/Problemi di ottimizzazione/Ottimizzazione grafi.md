@@ -64,7 +64,7 @@ Nota che è possibile che il grafo non sia connesso, in questo caso non esister�
 
 Stiamo anche assumendo che non ci siano cicli di costo negativo.
 
-### Albero dei cammini minimi (Shortest Path Tree, SPT)
+### Albero dei cammini minimi
 
 Questo percorso non è di cammino minimo:
 
@@ -155,10 +155,9 @@ Per certificare che l'albero non è di cammini minimi basta solo trovare una con
 
 $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto che dovrebbe essere $d_3=6$, e $6+3=9<10=d_4$, ma dato che controlliamo con il $d_3$ sbagliato non si nota che anche $d_4$ è sbagliato)
 
-#### Inizializzazione (albero fittizio)
-
-TODO
-$p_r=-, d_i=0, p_i=r,d_i=M,TODO$
+#### Algoritmo
+- Inizializzazione (albero fittizio)
+	- $p_r=-, d_i=0, p_i=r,d_i=M,TODO$
 
 #### Procedura
 
