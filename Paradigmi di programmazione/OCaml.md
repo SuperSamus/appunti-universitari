@@ -111,9 +111,31 @@ Vincoli:
 - Il secondo elemento `'a->'a list`
 - Combinandoli, si sceglie quello più restrittivo, quindi otteniamo `('a->'a list) list`
 
-Per sfruttare le liste si usa la ricorsione:
+L'operatore *cons* aggiunge un elemento di fronte alla lista:
+```Ocaml
+1 :: [2; 3] (* [1; 2; 3] *)
+```
+
+Per sfruttare le liste si usa il pattern matching:
 ```OCaml
 let f (x:'a list) =
     match x with
-       
+        | [] -> (**)
+        | y::ys -> (**)
+```
+
+Esempi con ricorsione:
+```OCaml
+let rec sum_list(xs: int list) =
+    match xs with
+        | [] -> 0
+        | y::ys -> y + sum_list ys;;
+
+let rec filter xs p =
+    match xs with
+        | [] -> []
+        | y::ys -> if (p y) then y::(filter ys p) else (filter ys p);;
+
+let rec append xs ys =
+    match 
 ```
