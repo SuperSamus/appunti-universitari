@@ -63,13 +63,25 @@ Si è visto che esistono tipi $'a→int$, (tipi generici, inferiti automaticamen
 L'istanziazione non è esplicita, ma automatica.
 
 Zucchero sintattico:
-```ocaml
+```OCaml
 let id (x: int) = x (*int -> int*)
-let id = fun (x:int) -> x
+(* let id = fun (x:int) -> x *)
 ```
 
-Esempio:
-```ocaml
+Esempi:
+
+```OCaml
 let scambia (x,y) = (y,x) (* 'a*'b -> 'b*'a *)
-let scambia = fun (x,y) -> (y,x)
+(* let scambia = fun (x,y) -> (y,x) *)
+
+let scambia_add (x,y) = (y+5,x+5) (* -> int *)
+(* +: int -> int *)
 ```
+
+
+```OCaml
+let maggiore x y = if x > y then x else y
+```
+
+Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
+- `if else` vuol dire che 
