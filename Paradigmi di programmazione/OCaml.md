@@ -92,7 +92,7 @@ Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
 
 ## Liste
 
-Lista ≜ Sequenza *finita* e *immutabile* di espressioni *dello stesso tipo* (mentre le tuple possono avere i tipi che vogliono)
+Lista ≜ Sequenza *finita*, *ordinata* e *immutabile* di espressioni *dello stesso tipo* (mentre le tuple possono avere i tipi che vogliono)
 
 ```OCaml
 [1;2;3]: int list
@@ -111,12 +111,12 @@ Vincoli:
 - Il secondo elemento `'a->'a list`
 - Combinandoli, si sceglie quello più restrittivo, quindi otteniamo `('a->'a list) list`
 
-L'operatore *cons* aggiunge un elemento di fronte alla lista:
+L'operatore *cons* crea una nuova lista, con un nuovo elemento di fronte alla lista:
 ```Ocaml
 1 :: [2; 3] (* [1; 2; 3] *)
 ```
 
-Per sfruttare le liste si usa il pattern matching:
+Per utilizzare gli elementi di una lista si usa il pattern matching:
 ```OCaml
 let f (x:'a list) =
     match x with
@@ -137,5 +137,7 @@ let rec filter xs p =
         | y::ys -> if (p y) then y::(filter ys p) else (filter ys p);;
 
 let rec append xs ys =
-    match 
+    match xs with
+        | [] -> ys
+        | z::zs -> z::(append zs ys)
 ```
