@@ -201,7 +201,7 @@ $∑\limits_{(i,j)∈A}\widehat{c_{ij}}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}
 
 Non è restrittivo supporre $c_{ij}≥0$. Questo *non* è vero per l'albero dei cammini minimi.
 
-### Albero di copertura di costo minimo (MST Minimum Spanning Tree)
+### Albero di copertura
 
 $G=(N,A)$ grafo non orientato $(i,j)≡(j,i)$ (si preferisce $i<j$)
 
@@ -213,30 +213,34 @@ Costo di $A_T=∑\limits_{(i,j)∈A_T}c_{ij}$
 
 $x_{ij}∈\{0,1\} \quad x_{ij}=\begin{cases} 1 & \text{se } (i,j) \text{ appartiene all'albero} \\ 0 & \text{altrimenti} \end{cases}$
 
-Funzione obiettivo min: $∑\limits_{(i,j)∈A}c_{ij}x_{ij}$
-
 Vincoli:
 - Ogni nodo è connesso ad almeno un altro nodo $∑\limits_{(j∈A(i)}x_{ij}≥1 \quad i∈N$
 	- $A(i)=\{j∈N:(i,j)∈A\}$
-- Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=n-1$
+- Il numero di archi è minimo, così non ci sono cicli $∑\limits_{((i,j)∈A}x_{ij}=n-1$
 
 #### Taglio
 
 ```
-1 --- 2 --- 3    N'
--------------- A(N',N'')
-4 --- 5 --- 6    N''
+1 --- 2 --- 3 --- 4    N'
+      |
+------x------------ A(N',N'')
+      |
+5 --- 6 --- 7 --- 8    N''
 ```
 
 $(N',N'') \text{ t.c. } \begin{cases} N'∩N''=∅ \\ N'∪N''=N \end{cases}$
 
 Insieme degli archi che passano attraverso taglio: $A(N',N'')=\{(i,j)∈A:i∈N',j∈N'' \text{ oppure } i∈N'',j∈N'\}$
 
-Vincoli TODO:
-- %%Ogni nodo è connesso ad almeno un altro nodo del taglio%% $∑\limits_{(i,j)∈A(N',N'')}x_{ij}≥1 \quad ∀(N',N') \text{ taglio}$
-- Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=n-1$
+Vincoli:
+- In ogni taglio ci deve essere almeno un arco $∑\limits_{(i,j)∈A(N',N'')}x_{ij}≥1 \quad ∀(N',N') \text{ taglio}$
+- Il numero di archi è minimo, così non ci sono cicli $∑\limits_{(i,j)∈A}x_{ij}=n-1$
 
-Questo rimpiazza i vincoli precedenti.
+Se vogliamo essere generici, questi vincoli rimpiazzano quelli precedenti.
+
+#### MST (Minimum Spanning Tree)
+
+Un albero di copertura t.c. questa funzione sia minima: $∑\limits_{(i,j)∈A}c_{ij}x_{ij}$
 
 #### Esempio
 
