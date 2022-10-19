@@ -171,8 +171,12 @@ $d_4=d_2+c_{24}=5+5=10=d_3+c_{34}=7+3=10$ soddisfa la condizione (avevamo visto 
 		- Se $v∉Q$ allora $Q=Q∪\{v\}$
 	5. Ritornare a 1.
 
-Inizializzazione alternativa: qualsiasi albero di cammini, così si risparmia sulle iterazioni.
+Inizializzazione alternativa: qualsiasi albero di cammini (mantenendo le etichette), così si risparmia sulle iterazioni.
 
 ##### Implementazione di Q
 
 Coda di priorità (Dijkstra): $u∈Q \; t.c. \; d_u=\min\{d_i:i∈Q\}$
+
+Lista (Bellman-Ford): Fila→FIFO
+
+Teorema: Se $c_{ij}≥0$ per ogni $(i,j)∈A$,a allora nell'algoritmo di Dijkstra ogni nodo viene inserito e conseguentemente estratto da $Q$ al più 1 volta.
