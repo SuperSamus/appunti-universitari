@@ -28,3 +28,5 @@ RAM: Random Access Memory
 	- Va "rinfrescato" (leggendolo) periodicamente
 - Statiche
 	- Mantiene l'informazione se alimentato
+
+TODO
