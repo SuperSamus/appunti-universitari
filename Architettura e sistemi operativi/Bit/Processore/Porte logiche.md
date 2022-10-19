@@ -165,6 +165,8 @@ D4 --> L3
 
 ## DeMultiplexer
 
+^5e85c1
+
 ![[DeMultiplexer.png]]
 
 Manda l'ingresso su 1 delle $2^k$ uscite
