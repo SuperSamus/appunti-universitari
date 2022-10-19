@@ -195,11 +195,11 @@ Teorema: Se nel grafo non sono presenti cicli di costo (complessivo) negativo, a
 
 Si può aumentare il costo di tutti gli archi per una costante per renderli tutti positivi, ed avere un problema equivalente?
 
-$c_{ij}≥0$: sia $M≥0$ t.c. $\hat{c_{ij}}=c_{ij}+M≥0 \quad ∀(i,j)∈A$
+$c_{ij}≥0$: sia $M≥0$ t.c. $\widehat{c_{ij}}=c_{ij}+M≥0 \quad ∀(i,j)∈A$
 
-$∑\limits_{(i,j)∈A}\hat{c_{ij}}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M∑\limits_{(i,j)∈A}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M(n-1)$
+$∑\limits_{(i,j)∈A}\widehat{c_{ij}}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M∑\limits_{(i,j)∈A}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M(n-1)$
 
-Non è restrittivo supporre $c_{ij}≥0$
+Non è restrittivo supporre $c_{ij}≥0$. Questo *non* è vero per l'albero dei cammini minimi.
 
 ### Albero di copertura di costo minimo (MST Minimum Spanning Tree)
 
