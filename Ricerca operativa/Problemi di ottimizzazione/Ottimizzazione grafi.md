@@ -192,3 +192,13 @@ $O(n^2)$ selezione etichette + $O(m)$ "operazioni" = $O(n^2)$ (dato che $m≤n^2
 Heap binario: $O(m \log n$): $\begin{matrix} m≅n & ← & \text{Sparso} \\ m≅n^2 & ← & \text{Denso} \end{matrix}$
 
 Teorema: Se nel grafo non sono presenti cicli di costo (complessivo) negativo, allora nell'algoritmo di Bellman-Ford ogni nodo viene inserito e conseguentemente estratto da $Q$ al più $(n-1)$ volte → $O(mn)$
+
+### Albero di copertura di costo minimo
+
+$G=(N,A)$ grafo non orientato $(i,j)≡(j,i)$ (si preferisce $i<j$)
+
+Gli archi hanno un costo $c_{ij}$, con $(i,j)∈A$
+
+$(N,A_T)$ Albero di copertura (sottografo connesso privo di cicli)
+
+Costo di $A_T=∑\limits_{(i,j)∈A_T}c_{ij}$
