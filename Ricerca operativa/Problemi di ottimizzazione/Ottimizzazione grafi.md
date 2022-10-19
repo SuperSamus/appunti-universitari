@@ -193,6 +193,8 @@ Heap binario: $O(m \log n$): $\begin{matrix} m≅n & ← & \text{Sparso} \\ m≅
 
 Teorema: Se nel grafo non sono presenti cicli di costo (complessivo) negativo, allora nell'algoritmo di Bellman-Ford ogni nodo viene inserito e conseguentemente estratto da $Q$ al più $(n-1)$ volte → $O(mn)$
 
+Si può aumentare il costo di tutti gli archi per una costante per renderl
+
 ### Albero di copertura di costo minimo
 
 $G=(N,A)$ grafo non orientato $(i,j)≡(j,i)$ (si preferisce $i<j$)
@@ -203,7 +205,7 @@ $(N,A_T)$ Albero di copertura (sottografo connesso privo di cicli)
 
 Costo di $A_T=∑\limits_{(i,j)∈A_T}c_{ij}$
 
-$x_{ij}=\begin{cases} 1 & \text{se } (i,j) \text{ appartiene all'albero} \\ 0 & \text{altrimenti} \end{cases}$
+$x_{ij}∈\{0,1\} \quad x_{ij}=\begin{cases} 1 & \text{se } (i,j) \text{ appartiene all'albero} \\ 0 & \text{altrimenti} \end{cases}$
 
 Funzione obiettivo min: $∑\limits_{(i,j)∈A}c_{ij}x_{ij}$
 
@@ -212,11 +214,20 @@ Vincoli:
 	- $A(i)=\{j∈N:(i,j)∈A\}$
 - Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
 
-Taglio: $(N',N'') \text{ t.c. } \begin{cases} N'∩N''=∅ \\ N'∪N''=N \end{cases}$
-Insieme degli archi nel taglio $A(N',N'')=\{(i,j)∈A:i∈N',j∈N'' \text{ oppure } i∈N'',j∈N'\}$
+#### Taglio
 
 ```mermaid
 flowchart LR
 1 --- 2 --- 3
 4 --- 5 --- 6
 ```
+
+$(N',N'') \text{ t.c. } \begin{cases} N'∩N''=∅ \\ N'∪N''=N \end{cases}$
+
+Insieme degli archi nel taglio: $A(N',N'')=\{(i,j)∈A:i∈N',j∈N'' \text{ oppure } i∈N'',j∈N'\}$
+
+Vincoli:
+- %%Ogni nodo è connesso ad almeno un altro nodo del taglio%% $∑\limits_{(i,j)∈A(N',N'')}x_{ij}≥1 \quad ∀(N',N') \text{ taglio}$
+- Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
+
+Questo rimpiazza i vincoli precedenti.
