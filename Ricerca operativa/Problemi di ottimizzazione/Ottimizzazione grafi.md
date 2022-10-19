@@ -180,3 +180,11 @@ Coda di priorità (Dijkstra): $u∈Q \; t.c. \; d_u=\min\{d_i:i∈Q\}$
 Lista (Bellman-Ford): Fila→FIFO
 
 Teorema: Se $c_{ij}≥0$ per ogni $(i,j)∈A$,a allora nell'algoritmo di Dijkstra ogni nodo viene inserito e conseguentemente estratto da $Q$ al più 1 volta.
+
+###### Complessità
+
+- Iterazioni iniziale: "al più" $O(n)$ (\# nodi)
+- Procedura:
+	- Selezione etichetta $O(n)$
+	- Verifica Bellman + aggiornamenti $O(m)$ (\# archi)
+
