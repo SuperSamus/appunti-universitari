@@ -218,7 +218,7 @@ Funzione obiettivo min: $∑\limits_{(i,j)∈A}c_{ij}x_{ij}$
 Vincoli:
 - Ogni nodo è connesso ad almeno un altro nodo $∑\limits_{(j∈A(i)}x_{ij}≥1 \quad i∈N$
 	- $A(i)=\{j∈N:(i,j)∈A\}$
-- Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
+- Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=n-1$
 
 #### Taglio
 
@@ -234,7 +234,7 @@ Insieme degli archi che passano attraverso taglio: $A(N',N'')=\{(i,j)∈A:i∈N'
 
 Vincoli TODO:
 - %%Ogni nodo è connesso ad almeno un altro nodo del taglio%% $∑\limits_{(i,j)∈A(N',N'')}x_{ij}≥1 \quad ∀(N',N') \text{ taglio}$
-- Il numero di archi fa sì che non ci siano cicli TODO $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
+- Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=n-1$
 
 Questo rimpiazza i vincoli precedenti.
 
@@ -274,7 +274,17 @@ costo di ciascun arco $(i,j)∈A_T$ è ≤ costo di ciascun arco del ciclo che s
 - Costruzione dell'albero arco per arco
 	- $S=\{\text{archi inseriti}\} \quad R=\{\text{archi scartati}\}$
 - Inserzione
-	- Seleziono un taglio $A(N',N'') \text{ t.c. } A(N',N'')∩S=∅$
+	- Selezionare un taglio $A(N',N'') \text{ t.c. } A(N',N'')∩S=∅$
 	- Inserire in $S$ l'arco $(i,j)∈A(N',N'')$ t.c.
-		- $(i,j)∈R$
+		- $(i,j)∉R$
 		- $c_{ij}=\min\{c_{ke}:(k,e)∈A(N',N'')∖R\}$ (non può essere ∅)
+- Cancellazione
+	- Selezionare ciclo $C$ t.c. $C∩R=∅$
+	- Scartare $(i,j)∈C$ t.c.
+		- $(i,j)∉S$
+		- $c_{ij}=\max\{c_{ke}:(k,e)∈C∖S\}$ (non può essere ∅)
+
+Iterazione: effettuare una inserzione oppure ima cancellazione finché $|S|=n-1$
+
+Proprietà di Greedy MST:
+- Se $(S,R)$ sono tale che esiste un albero di costo $(N,A_T)$ minimo per cui $S≤A_T$ e $R∩A_T=∅$, allora 
