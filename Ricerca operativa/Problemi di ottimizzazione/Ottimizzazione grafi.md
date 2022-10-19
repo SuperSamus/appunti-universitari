@@ -208,6 +208,15 @@ $x_{ij}=\begin{cases} 1 & \text{se } (i,j) \text{ appartiene all'albero} \\ 0 & 
 Funzione obiettivo min: $∑\limits_{(i,j)∈A}c_{ij}x_{ij}$
 
 Vincoli:
-- $∑\limits_{(j∈A(i)}x_{ij}≥1 \quad i∈N$
+- Ogni nodo è connesso ad almeno un altro nodo $∑\limits_{(j∈A(i)}x_{ij}≥1 \quad i∈N$
 	- $A(i)=\{j∈N:(i,j)∈A\}$
-- $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
+- Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
+
+Taglio: $(N',N'') \text{ t.c. } \begin{cases} N'∩N''=∅ \\ N'∪N''=N \end{cases}$
+Insieme degli archi nel taglio $A(N',N'')=\{(i,j)∈A:i∈N',j∈N'' \text{ oppure } i∈N'',j∈N'\}$
+
+```mermaid
+flowchart LR
+1 --- 2 --- 3
+4 --- 5 --- 6
+```
