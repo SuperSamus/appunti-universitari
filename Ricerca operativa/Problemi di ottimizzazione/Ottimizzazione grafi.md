@@ -214,7 +214,7 @@ Costo di $A_T=∑\limits_{(i,j)∈A_T}c_{ij}$
 $x_{ij}∈\{0,1\} \quad x_{ij}=\begin{cases} 1 & \text{se } (i,j) \text{ appartiene all'albero} \\ 0 & \text{altrimenti} \end{cases}$
 
 Vincoli:
-- Ogni nodo è connesso ad almeno un altro nodo $∑\limits_{(j∈A(i)}x_{ij}≥1 \quad i∈N$
+- Ogni nodo è raggiungibile $∑\limits_{(j∈A(i)}x_{ij}≥1 \quad i∈N$
 	- $A(i)=\{j∈N:(i,j)∈A\}$
 - Il numero di archi è minimo, così non ci sono cicli $∑\limits_{((i,j)∈A}x_{ij}=n-1$
 
@@ -222,9 +222,9 @@ Vincoli:
 
 ```
 1 --- 2 --- 3 --- 4    N'
-      |
-------x------------ A(N',N'')
-      |
+      |       \
+------x--------x--- A(N',N'')
+      |         \
 5 --- 6 --- 7 --- 8    N''
 ```
 
