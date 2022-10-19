@@ -202,3 +202,12 @@ Gli archi hanno un costo $c_{ij}$, con $(i,j)∈A$
 $(N,A_T)$ Albero di copertura (sottografo connesso privo di cicli)
 
 Costo di $A_T=∑\limits_{(i,j)∈A_T}c_{ij}$
+
+$x_{ij}=\begin{cases} 1 & \text{se } (i,j) \text{ appartiene all'albero} \\ 0 & \text{altrimenti} \end{cases}$
+
+Funzione obiettivo min: $∑\limits_{(i,j)∈A}c_{ij}x_{ij}$
+
+Vincoli:
+- $∑\limits_{(j∈A(i)}x_{ij}≥1 \quad i∈N$
+	- $A(i)=\{j∈N:(i,j)∈A\}$
+- $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
