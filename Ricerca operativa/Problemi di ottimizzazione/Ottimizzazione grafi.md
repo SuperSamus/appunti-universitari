@@ -193,11 +193,11 @@ Heap binario: $O(m \log n$): $\begin{matrix} m≅n & ← & \text{Sparso} \\ m≅
 
 Teorema: Se nel grafo non sono presenti cicli di costo (complessivo) negativo, allora nell'algoritmo di Bellman-Ford ogni nodo viene inserito e conseguentemente estratto da $Q$ al più $(n-1)$ volte → $O(mn)$
 
-Si può aumentare il costo di tutti gli archi per una costante per renderli tutti positivi, e avere un semplice algoritmo per ottenere il risultato originale?
+Si può aumentare il costo di tutti gli archi per una costante per renderli tutti positivi, ed avere un problema equivalente?
 
 $c_{ij}≥0$: sia $M≥0$ t.c. $\hat{c_{ij}}=c_{ij}+M≥0 \quad ∀(i,j)∈A$
 
-$∑\limits_{(i,j)∈A}\hat{c_{ij}}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M TODO$
+$∑\limits_{(i,j)∈A}\hat{c_{ij}}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M∑\limits_{(i,j)∈A}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M(n-1)$
 
 Non è restrittivo supporre $c_{ij}≥0$
 
