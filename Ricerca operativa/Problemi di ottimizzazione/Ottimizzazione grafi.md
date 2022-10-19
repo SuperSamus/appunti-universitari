@@ -286,5 +286,10 @@ costo di ciascun arco $(i,j)∈A_T$ è ≤ costo di ciascun arco del ciclo che s
 
 Iterazione: effettuare una inserzione oppure ima cancellazione finché $|S|=n-1$
 
-Proprietà di Greedy MST:
-- Se $(S,R)$ sono tale che esiste un albero di costo $(N,A_T)$ minimo per cui $S≤A_T$ e $R∩A_T=∅$, allora 
+Proprietà di Greedy MST: se $(S,R)$ sono tale che esiste un albero di costo $(N,A_T)$ minimo per cui $S≤A_T$ e $R∩A_T=∅$, allora effettuando una inserzione oppure una cancellazione si ottiene un $(S',R')$ che soddisfa la medesima proprietà, (ovvero esiste un albero di copertura di costo minimo $(N,A_T')$ t.c $S'⊆A_T'$ e $R'∩A_T'=∅$).
+
+##### Algoritmo di Kruskal
+
+- Si ordinano gli archi per non decrescente
+- Si esaminano gli archi in quell'ordine
+- Se l'arco esaminato non forma un ciclo con $S$, allora si aggiunge ad $S$, altrimenti a $R$
