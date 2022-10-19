@@ -225,14 +225,15 @@ Vincoli:
 ```mermaid
 flowchart LR
 1 --- 2 --- 3
+T1[Taglio] ----- T2[Taglio]
 4 --- 5 --- 6
 ```
 
 $(N',N'') \text{ t.c. } \begin{cases} N'∩N''=∅ \\ N'∪N''=N \end{cases}$
 
-Insieme degli archi nel taglio: $A(N',N'')=\{(i,j)∈A:i∈N',j∈N'' \text{ oppure } i∈N'',j∈N'\}$
+Insieme degli archi che passano attraverso taglio: $A(N',N'')=\{(i,j)∈A:i∈N',j∈N'' \text{ oppure } i∈N'',j∈N'\}$
 
-Vincoli:
+Vincoli TODO:
 - %%Ogni nodo è connesso ad almeno un altro nodo del taglio%% $∑\limits_{(i,j)∈A(N',N'')}x_{ij}≥1 \quad ∀(N',N') \text{ taglio}$
 - Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
 
@@ -247,14 +248,24 @@ flowchart LR
 8 --- 10
 ```
 
-Magari sarebbe meglio togliere un arco e metterne un altro, tipo:
+Se non è di costo minimo, magari sarebbe meglio togliere un arco e metterne un altro, per esempio:
 
 ```mermaid
 flowchart LR
 1 --- 2 --- 3 & 7
 3 --- 4 --- 5 & 6
-5 --- 7 --- 8 & 9
+7 --- 8 & 9
 8 --- 10
 ```
 
-Ottimalità per cicli: $(N,A_T)$ albero di copertura di costo minimo ⇒ costo di ciascun arco $(i,j)∉A_T$ è ≥ costo di ciascu
+##### Ottimalità per cicli
+
+$(N,A_T)$ albero di copertura di costo minimo
+⇔
+costo di ciascun arco $(i,j)∉A_T$ è ≥ costo di ciascun arco del ciclo che si viene a creare aggiungendo l'arco $(i,j)$ a $A_T$
+
+##### Ottimalità per tagli
+
+$(N,A_T)$ albero di copertura di costo minimo
+⇔
+costo di ciascun arco $(i,j)∈A_T$ è ≤ costo di ciascun arco del ciclo che si viene a creare rimuovendo l'arco $(i,j)$ da $A_T$
