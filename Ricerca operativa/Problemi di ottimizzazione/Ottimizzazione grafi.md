@@ -199,7 +199,7 @@ $c_{ij}≥0$: sia $M≥0$ t.c. $\widehat{c_{ij}}=c_{ij}+M≥0 \quad ∀(i,j)∈A
 
 $∑\limits_{(i,j)∈A}\widehat{c_{ij}}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M∑\limits_{(i,j)∈A}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M(n-1)$
 
-Non è restrittivo supporre $c_{ij}≥0$. Questo *non* è vero per l'albero dei cammini minimi.
+Non è restrittivo supporre $c_{ij}≥0$. Questo *non* è vero per l'albero dei cammini minimi. TODO: Dimostrarlo a casa.
 
 ### Albero di copertura
 
@@ -235,8 +235,6 @@ Insieme degli archi che passano attraverso taglio: $A(N',N'')=\{(i,j)∈A:i∈N'
 Vincoli:
 - In ogni taglio ci deve essere almeno un arco $∑\limits_{(i,j)∈A(N',N'')}x_{ij}≥1 \quad ∀(N',N') \text{ taglio}$
 - Il numero di archi è minimo, così non ci sono cicli $∑\limits_{(i,j)∈A}x_{ij}=n-1$
-
-Se vogliamo essere generici, questi vincoli rimpiazzano quelli precedenti.
 
 #### MST (Minimum Spanning Tree)
 
