@@ -1,0 +1,3 @@
+Memoria
+
+Vettore di parola 
