@@ -184,7 +184,9 @@ Teorema: Se $c_{ij}≥0$ per ogni $(i,j)∈A$,a allora nell'algoritmo di Dijkstr
 ###### Complessità
 
 - Iterazioni iniziale: "al più" $O(n)$ (\# nodi)
-- Procedura:
-	- Selezione etichetta $O(n)$
-	- Verifica Bellman + aggiornamenti $O(m)$ (\# archi)
+- Selezione etichetta $O(n)$
+- Verifica Bellman + aggiornamenti $O(m)$ (\# archi, dove $m≤n^2$)
 
+$O(n^2)$ selezione etichette + $O(m)$ "operazioni" = $O(n^2)$
+
+Heap binario: $O(m \log n$)
