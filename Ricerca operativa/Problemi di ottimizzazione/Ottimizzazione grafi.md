@@ -185,8 +185,10 @@ Teorema: Se $c_{ij}≥0$ per ogni $(i,j)∈A$,a allora nell'algoritmo di Dijkstr
 
 - Iterazioni iniziale: "al più" $O(n)$ (\# nodi)
 - Selezione etichetta $O(n)$
-- Verifica Bellman + aggiornamenti $O(m)$ (\# archi, dove $m≤n^2$)
+- Verifica Bellman + aggiornamenti $O(m)$ (\# archi)
 
-$O(n^2)$ selezione etichette + $O(m)$ "operazioni" = $O(n^2)$
+$O(n^2)$ selezione etichette + $O(m)$ "operazioni" = $O(n^2)$ (dato che $m≤n^2$)
 
-Heap binario: $O(m \log n$)
+Heap binario: $O(m \log n$): $\begin{matrix} m≅n & ← & \text{Sparso} \\ m≅n^2 & ← & \text{Denso} \end{matrix}$
+
+Teorema: Se nel grafo non sono presenti cicli di costo (complessivo) negativo, allora nell'algoritmo di Bellman-Ford ogni nodo viene inserito e conseguentemente estratto da $Q$ al più $(n-1)$ volte → $O(mn)$
