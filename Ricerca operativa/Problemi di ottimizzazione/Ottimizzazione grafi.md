@@ -175,7 +175,7 @@ Inizializzazione alternativa: qualsiasi albero di cammini (mantenendo le etichet
 
 ##### Implementazione di Q
 
-Coda di priorità (Dijkstra): $u∈Q \; t.c. \; d_u=\min\{d_i:i∈Q\}$
+Coda di priorità (Dijkstra): $u∈Q \text{ t.c. } d_u=\min\{d_i:i∈Q\}$
 
 Lista (Bellman-Ford): Fila→FIFO
 
@@ -193,7 +193,13 @@ Heap binario: $O(m \log n$): $\begin{matrix} m≅n & ← & \text{Sparso} \\ m≅
 
 Teorema: Se nel grafo non sono presenti cicli di costo (complessivo) negativo, allora nell'algoritmo di Bellman-Ford ogni nodo viene inserito e conseguentemente estratto da $Q$ al più $(n-1)$ volte → $O(mn)$
 
-Si può aumentare il costo di tutti gli archi per una costante per renderl
+Si può aumentare il costo di tutti gli archi per una costante per renderli tutti positivi, e avere un semplice algoritmo per ottenere il risultato originale?
+
+$c_{ij}≥0$: sia $M≥0$ t.c. $\hat{c_{ij}}=c_{ij}+M≥0 \quad ∀(i,j)∈A$
+
+$∑\limits_{(i,j)∈A}\hat{c_{ij}}x_{ij}=∑\limits_{(i,j)∈A}c_{ij}x_{ij}+M TODO$
+
+Non è restrittivo supporre $c_{ij}≥0$
 
 ### Albero di copertura di costo minimo
 
@@ -231,3 +237,24 @@ Vincoli:
 - Il numero di archi fa sì che non ci siano cicli $∑\limits_{((i,j)∈A}x_{ij}=|N|-1$
 
 Questo rimpiazza i vincoli precedenti.
+
+#### Esempio
+
+```mermaid
+flowchart LR
+1 --- 2 --- 3 --- 4 --- 5 & 6
+5 --- 7 --- 8 & 9
+8 --- 10
+```
+
+Magari sarebbe meglio togliere un arco e metterne un altro, tipo:
+
+```mermaid
+flowchart LR
+1 --- 2 --- 3 & 7
+3 --- 4 --- 5 & 6
+5 --- 7 --- 8 & 9
+8 --- 10
+```
+
+Ottimalità per cicli: $(N,A_T)$ albero di copertura di costo minimo ⇒ costo di ciascun arco $(i,j)∉A_T$ è ≥ costo di ciascu
