@@ -141,3 +141,13 @@ let rec append xs ys =
         | [] -> ys
         | z::zs -> z::(append zs ys)
 ```
+
+TODO Map:
+$map:('a→'b)→'a \: list→'b \: list$
+
+```OCaml
+let rec map f xs =
+    match xs with
+        | [] -> []
+        | y::ys -> (f y)::(map f ys);;
+```
