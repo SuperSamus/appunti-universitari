@@ -27,7 +27,13 @@ La libreria `stdio.h` ha funzionalità come:
 - Stream `stdin`, `stdout`, `stderr`
 - Funzioni come `fopen`, `fclose`
 
-### Tipi di file
+### Lettura
+
+- `fgetc` legge un carattere e lo restituisce
+- `fscanf` simile a `scanf`
+- `fgets` legge al massimo `n-1` carattteri e li salva in `str`
+
+#### Tipi di file
 
 Bisogna leggerli con la stessa rappresentazione con cui sono stati scritti
 
