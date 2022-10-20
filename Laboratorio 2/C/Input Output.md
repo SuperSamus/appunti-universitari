@@ -26,3 +26,10 @@ La libreria `stdio.h` ha funzionalità come:
 - Costante `EOF`
 - Stream `stdin`, `stdout`, `stderr`
 - Funzioni come `fopen`, `fclose`
+
+### Tipi di file
+
+Bisogna leggerli con la stessa rappresentazione con cui sono stati scritti
+
+- Testuali
+- Binari
