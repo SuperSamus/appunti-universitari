@@ -31,7 +31,7 @@ La libreria `stdio.h` ha funzionalità come:
 
 - `fgetc` legge un carattere e lo restituisce
 - `fscanf` simile a `scanf`
-- `fgets` legge al massimo `n-1` carattteri e li salva in `str`
+- `fgets` legge al massimo `n-1` caratteri e li salva in `str`
 
 #### Tipi di file
 
