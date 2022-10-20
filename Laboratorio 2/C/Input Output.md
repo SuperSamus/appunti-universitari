@@ -16,3 +16,13 @@
 - Double floating point `f`
 - Carattere `c`
 - Stringa `s`
+
+## File
+
+In C i file sono visti come *stream* (flussi di dati) da una fonte a una destinazione.
+
+La libreria `stdio.h` ha funzionalità come:
+- Struct `FILE`
+- Costante `EOF`
+- Stream `stdin`, `stdout`, `stderr`
+- Funzioni come `fopen`, `fclose`
