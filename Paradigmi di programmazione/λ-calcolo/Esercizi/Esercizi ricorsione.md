@@ -43,4 +43,5 @@ Definire le funzioni:
 	- $\underline{PRODLIST}≜λl.l(\underline{mult})1=λl.l(λn.λm.λf.n(mf)(λf.λx.fx)$
 - $MAP$
 	- Ricorda che $\underline{MAP} \: f(\underline{MAP} \: g \: l)=_β \underline{MAP}(f ∘ g)l$
+	- $map:(α)
 	- $\underline{MAP}≜λf.λl.λc.l(cf)$
