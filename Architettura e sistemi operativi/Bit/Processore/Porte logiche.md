@@ -257,9 +257,11 @@ D --> AND2 -- S --> SR
 SR --> Q & N[NOT Q]
 ```
 
+Problema: Q viene aggiornato in continuazione finché CLOCK=1.
+
 ### D flip-flop
 
-Con questo design si aggiunge un ritardo:
+Con questo design Q viene aggiornato solo nell'istante in cui CLOCK diventa 1:
 
 ```mermaid
 flowchart LR
