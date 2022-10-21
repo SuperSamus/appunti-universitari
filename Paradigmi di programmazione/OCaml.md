@@ -22,7 +22,9 @@ eta * anno;;
 - bool
 - char
 - string
-- T list
+- 'a
+- ('a, 'b)
+- 'a list
 
 ### Casting
 
