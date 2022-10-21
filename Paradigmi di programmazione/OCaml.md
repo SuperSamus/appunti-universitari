@@ -51,13 +51,11 @@ fun x y -> x + y;;
 
 ## Let
 
-%%
 $\text{let }x=t;;→〈Σ,s〉$
-TODO: Può il professore non cancellare il secondo dopo?
+
 $$
-\cfrac{}{}
+\cfrac{〈Σ,t〉→〈Σ',v〉}{〈Σ,\text{let }x=t;;〉→〈Σ',x↦v〉}
 $$
-%%
 
 TODO:
 Si è visto che esistono tipi $'a→int$, (tipi generici, inferiti automaticamente).
