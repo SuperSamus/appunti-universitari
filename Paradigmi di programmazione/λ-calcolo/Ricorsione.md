@@ -75,3 +75,5 @@ Quindi $fix=Θ$.
 [^1]: Sarebbero l'insieme delle parti (l'insieme di tutti i sottoinsiemi) dell'universo
 [^2]: Ciò implica che con il λ-calcolo non si può usare per implementare la *logica*, in quanto richiede che certe funzionalità (come le negazione logica) *non* abbiano alcun punto fisso.
 [^3]: Vuol dire che $e$ utilizza $F$
+
+## Ricorsione in testa/coda
