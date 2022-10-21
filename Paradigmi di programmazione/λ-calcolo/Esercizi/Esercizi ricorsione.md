@@ -28,14 +28,6 @@ $\underline{pred}≜Θ(λf.λs.λn.\underline{ite} \: (\underline{eq} \: (\under
 
 ## Liste
 
-Nel linguaggio $e::=...|nil|e::e|...$, una lista si rappresenta per esempio come $1::(2::(3::nil))$.
-
-$a := [1, 2, 3] = λcn.c 1 (c 2 (c 3 n))$
-
-Le operazioni base $\underline{nil}$ (costruisci una lista vuota) e $\underline{cons}$ (aggiungi un valore a inizio lista) sono definite come:
-- $\underline{nil} ≜λx.λy.y$
-- $\underline{cons} ≜λh.λt.λx.λy.ht$
-
 Definire le funzioni:
 - $ADDLIST [n_1...n_k]≜∑\limits_{i=1}^kn_i$
 	- $\underline{ADDLIST}≜λl.l(\underline{mult})0=λl.l(λn.λm.λf.λx.nf(mfx))(λf.λx.x)$

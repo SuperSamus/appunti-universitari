@@ -63,7 +63,7 @@ $$
 →_β (λf.λx.f(f(f(f(fx)))))
 $$
 
-## MULT
+### MULT
 
 $\underline{MULT} = λn.λm.λf.n(mf)$
 
@@ -74,3 +74,17 @@ Esiste sempre una funzione $\underline{F}$ che codifica una funzione "normale" n
 $F: ℕ^k ⇀ ℕ$
 
 $∃ \underline{F} ∈ Λ.∀n_1,…,n_k.F(n_1,…,n_k)=m \quad \underline{F} \: \underline{n_1}…\underline{n_k} →_β^* \underline{m}$
+
+## Liste
+
+Nel linguaggio $e::=...|nil|e::e|...$, una lista si rappresenta per esempio come $1::(2::(3::nil))$.
+
+$a := [1, 2, 3] = λcn.c 1 (c 2 (c 3 n))$
+
+Le operazioni base $\underline{nil}$ (costruisci una lista vuota) e $\underline{cons}$ (aggiungi un valore a inizio lista) sono definite come:
+- $\underline{nil} ≜λx.λy.y$
+- $\underline{cons} ≜λh.λt.λx.λy.ht$
+
+Altre funzioni:
+- $foldr⊕[x_1...x_n]z → (x_1⊕(x_2⊕...(x_n⊕z)))$
+- $foldl⊕[x_1...x_n]A → (((A⊕x_1)⊕x_2)...x_n)$

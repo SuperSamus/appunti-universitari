@@ -152,6 +152,11 @@ let rec append xs ys =
     match xs with
         | [] -> ys
         | z::zs -> z::(append zs ys)
+
+let rec fold_left f a xs =
+    match xs with
+        | [] -> a
+        | y::ys -> fold_left f (f a y) ys
 ```
 
 $map:('a→'b)→'a \: list→'b \: list$
