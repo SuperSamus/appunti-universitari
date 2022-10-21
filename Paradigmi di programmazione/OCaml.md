@@ -23,8 +23,16 @@ eta * anno;;
 - char
 - string
 - 'a
-- ('a, 'b)
-- 'a list
+- (T1, ..., Tn)
+- T list
+- {tag1: T1, …, tagn: Tn}
+
+Se possono creare tipi per rendere il codice più chiaro:
+```OCaml
+type Punto = {x: float; y: float}
+let p: Punto = {x = 4.0; y = -3.0}
+distanza p q = sqrt ((p.x-q.x)**2 + (p.y-q.y)**2)
+```
 
 ### Casting
 
