@@ -16,6 +16,7 @@ eta * anno;;
 
 ## [[Tipi]] di base
 
+```
 - int
 - unit
 - float
@@ -23,10 +24,12 @@ eta * anno;;
 - char
 - string
 - 'a
-- $T → S$
-- $(T_1,...,T_n)$
-- $T \: list$
-- $\{tag_1: T_1, …, tag_n: T_n\}$
+- T → S
+- T_1*…*T_n
+- T list
+- {tag1: T_1,…, tagn: Tn}
+- T1 [of S1]|…|Tn [of Sn]
+```
 
 ### Casting
 
