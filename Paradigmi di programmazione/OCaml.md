@@ -23,16 +23,10 @@ eta * anno;;
 - char
 - string
 - 'a
+- T → S
 - (T1, ..., Tn)
 - T list
 - {tag1: T1, …, tagn: Tn}
-
-Se possono creare tipi per rendere il codice più chiaro:
-```OCaml
-type Punto = {x: float; y: float}
-let p: Punto = {x = 4.0; y = -3.0}
-distanza p q = sqrt ((p.x-q.x)**2 + (p.y-q.y)**2)
-```
 
 ### Casting
 
@@ -46,17 +40,34 @@ Bisogna usare funzioni come `int_to_float` o `float_to_int` per convertire espli
 
 ### Tipi composti
 
-$T→S$
+Funzioni $T→S$
 
-$T_1*T_2*…*T_n$ (*tuple*)
+Tuple $T_1*T_2*…*T_n$
+
+Record $\{tag_1: T_1, …, tag_n: T_n\}$ (**record**)
+
+La parte "interna" dei tipi composti è immutabile, perché sennò rappresenterebbero stati.
 
 Per esempio:
 ```OCaml
 let x: int*bool*string = (10, true, "hello");;
-fun x -> t: int -> int;; (* x non affilato con il precedente *)
+
+fun x -> t: int -> int;;
 (fun x -> t) s u;;
 fun x -> fun y -> x + y;;
 (* equivalente a... *) fun x y -> x + y;;
+
+let p: {x: float; y: float} = {x = 4.0; y = -3.0}
+let distanza p q =
+    let dx = (p.x-q.x)**2.0
+        dy + (p.y-q.y)**2.0
+    in sqrt (dx + dy)
+```
+
+Si possono creare tipi per rendere il codice più chiaro:
+```OCaml
+type Punto = {x: float; y: float}
+let p: Punto = {x = 4.0; y = -3.0}
 ```
 
 ## Let
