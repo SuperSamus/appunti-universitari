@@ -63,6 +63,14 @@ let p: float*float = (.2, .3);;
 let (x, y) = p in x + y
 ```
 
+%%
+```OCaml
+fun f n -> f n + 1
+f (fun (x,y) -> x + y) (2,3)
+```
+%%
+Il risultato è 6: `f n + 1 -> (fun (x,y) -> x + y) n + 1` 
+
 TODO:
 Si è visto che esistono tipi $'a→int$, (tipi generici, inferiti automaticamente).
 L'istanziazione non è esplicita, ma automatica.
