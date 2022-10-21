@@ -24,7 +24,7 @@ eta * anno;;
 - char
 - string
 - 'a
-- T → S
+- T -> S
 - T_1*…*T_n
 - T list
 - {tag1: T_1,…, tagn: Tn}
@@ -47,7 +47,7 @@ Funzioni $T→S$
 
 Tuple $T_1*T_2*…*T_n$
 
-Record $\{tag_1: T_1, …, tag_n: T_n\}$ (**record**)
+Record $\{tag_1: T_1, …, tag_n: T_n\}$
 
 La parte "interna" dei tipi composti è immutabile, perché sennò rappresenterebbero stati.
 
