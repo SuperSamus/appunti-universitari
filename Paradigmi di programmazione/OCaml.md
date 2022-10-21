@@ -142,7 +142,6 @@ let rec append xs ys =
         | z::zs -> z::(append zs ys)
 ```
 
-TODO Map:
 $map:('a→'b)→'a \: list→'b \: list$
 
 ```OCaml
