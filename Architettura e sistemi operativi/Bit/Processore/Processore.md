@@ -29,7 +29,8 @@ while (true) {
     (interruzioni)
 }
 ```
-%%Si può anche contare MEM = Memory access, WB = Register write back%%
+
+(Esistono anche MEM = Memory access, WB = Register write back)
 
 Grazie a questa possiamo fare:
 - Aritmetica e logica (CPU)
