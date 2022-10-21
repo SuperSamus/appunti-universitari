@@ -23,10 +23,10 @@ eta * anno;;
 - char
 - string
 - 'a
-- T → S
-- (T1, ..., Tn)
-- T list
-- {tag1: T1, …, tagn: Tn}
+- $T → S$
+- $(T_1,...,T_n)$
+- $T \: list$
+- $\{tag_1: T_1, …, tag_n: T_n\}$
 
 ### Casting
 
@@ -69,6 +69,22 @@ Si possono creare tipi per rendere il codice più chiaro:
 type Punto = {x: float; y: float}
 let p: Punto = {x = 4.0; y = -3.0}
 ```
+
+### Unione
+
+$x∈A∪B⇔x∈A∨x∈B$
+
+Disgiunta: $z∈A+B=\{z.a|a∈A\}∪\{z.b|b∈B\}$
+
+```ocaml
+type num_string =
+    | txt of string
+    | num of int
+```
+
+$$
+\cfrac{s∈string}{txt \: s∈num\_string} \quad \cfrac{n∈int}{num \: n∈num\_string}
+$$
 
 ## Let
 
