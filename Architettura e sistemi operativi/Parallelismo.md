@@ -20,3 +20,17 @@ Se bisogna fare tre operazioni che richiedono una certa quantità di tempo ciasc
       |-----|---|----|
 ```
 
+Il parallelismo spesso richiede risorse extra (*overhead*) per coordinarsi.
+
+## Pipeline processore
+
+```
+    tf    td    te    twb
+--> F --> D --> E --> WB -->
+```
+
+$L=t_f+t_d+t_e+t_{wb}$
+
+$T_S=\max\{t_f,t_d,t_e,t_{wb}\}$
+
+Speedup $sp(nw)=4⇔nw≥4$
