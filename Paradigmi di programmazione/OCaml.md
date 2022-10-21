@@ -45,8 +45,8 @@ Per esempio:
 let x: int*bool*string = (10, true, "hello");;
 fun x -> t: int -> int;; (* x non affilato con il precedente *)
 (fun x -> t) s u;;
-fun x -> fun y -> x + y;; (* equivalente a... *)
-fun x y -> x + y;;
+fun x -> fun y -> x + y;;
+(* equivalente a... *) fun x y -> x + y;;
 ```
 
 ## Let
