@@ -43,7 +43,7 @@ $T_1*T_2*…*T_n$ (*tuple*)
 Per esempio:
 ```OCaml
 let x: int*bool*string = (10, true, "hello");;
-fun x -> t: int -> int;;
+fun x -> t: int -> int;; (* x non affilato con il precedente *)
 (fun x -> t) s u;;
 fun x -> fun y -> x + y;; (* equivalente a... *)
 fun x y -> x + y;;
@@ -56,6 +56,12 @@ $\text{let }x=t;;→〈Σ,s〉$
 $$
 \cfrac{〈Σ,t〉→〈Σ',v〉}{〈Σ,\text{let }x=t;;〉→〈Σ',x↦v〉}
 $$
+
+Permette anche di destrutturare le tuple:
+```OCaml
+let p: float*float = (.2, .3);;
+let (x, y) = p in x + y
+```
 
 TODO:
 Si è visto che esistono tipi $'a→int$, (tipi generici, inferiti automaticamente).
