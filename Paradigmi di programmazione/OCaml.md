@@ -131,7 +131,7 @@ f (fun (x,y) -> x + y) (2,3) (* 6 *)
 
 ### Tipi generici
 
-Il tipo generico è scritto come `'a`, e può rimpiazzato da qualunque tipo. Generalmente usato nelle funzioni, che lo rimpiazzano.
+Il tipo generico è scritto come `'a`, e può rimpiazzato da qualunque tipo. Generalmente usato nelle funzioni, che lo rimpiazzano nella dichiarazione (se possibile) o nell'esecuzione (altrimenti).
 
 Nota che il corpo della funzione non viene eseguito finché non viene eseguita. Queste due funzioni sono diverse:
 
@@ -157,7 +157,7 @@ let maggiore x y = if x > y then x else y
 ```
 
 Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
-- `if else` fa sì che $'a='b$, quindi $'a→'a→'a$
+- `if else` devono ritornare variabili dello stesso tipo, e può ritornare o `'a` o `'b`, quindi $'a='b$ e `?='a`. La funzione è semplificata al tipo $'a→'a→'a$.
 - $>:'a→'a→bool$, tuttavia `>` non si può fare su tutti i tipi (come le funzioni)
 	- OCaml *non* previene l'utilizzo di tipi incompatibili, prende solo il tipo più generico possibile, che vuol dire che si può avere errori di runtime (altri linguaggi come Haskell o Rust invece hanno meccanismi per prevenirlo)
 
