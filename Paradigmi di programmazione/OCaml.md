@@ -97,25 +97,16 @@ $$
 \cfrac{〈Σ,t〉→〈Σ',v〉}{〈Σ,\text{let }x=t;;〉→〈Σ',x↦v〉}
 $$
 
-Permette anche di destrutturare le tuple:
+Permette anche di destrutturare i tipi composti:
 ```OCaml
 let p: float*float = (.2, .3);;
 let (x, y) = p in x + y
 ```
 
-%%
-```OCaml
-fun f n -> f n + 1;;
-f (fun (x,y) -> x + y) (2,3)
-```
-Il risultato è 6.
-%%
-
-TODO:
-Si è visto che esistono tipi $'a→int$, (tipi generici, inferiti automaticamente).
-L'istanziazione non è esplicita, ma automatica.
+## Funzioni
 
 Zucchero sintattico:
+
 ```OCaml
 let id (x: int) = x (*int -> int*)
 (* let id = fun (x:int) -> x *)
@@ -130,6 +121,33 @@ let scambia (x,y) = (y,x) (* 'a*'b -> 'b*'a *)
 let scambia_add (x,y) = (y+5,x+5) (* -> int *)
 (* +: int -> int *)
 ```
+
+Anche le funzioni possono destrutturare i tipi composti:
+
+```OCaml
+fun f n -> f n + 1;;
+f (fun (x,y) -> x + y) (2,3) (* 6 *)
+```
+
+### Tipi generici
+
+Le funzioni non richiedono di scrivere esplicitamente il tipo degli input, si può usare qualsiasi tipo compatibile con il corpo della funzione. Il tipo generico è scritto come `'a`.
+
+Nota che il corpo della funzione non viene eseguito finché:
+
+```OCaml
+fun x -> x + 2
+fun x -> x + (1+1)
+```
+
+
+$$
+\cfrac{t→_βs}{λx.t→_βλx.s}
+$$
+
+TODO:
+Si è visto che esistono tipi $'a→int$, (tipi generici, inferiti automaticamente).
+L'istanziazione non è esplicita, ma automatica.
 
 ---
 
