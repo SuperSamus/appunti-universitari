@@ -173,7 +173,7 @@ Per utilizzare gli elementi di una lista si usa il pattern matching:
 let f (x:'a list) =
     match x with
         | [] -> (**)
-        | y::ys -> (**)
+        | y::ys -> (**);;
 ```
 
 Esempi con ricorsione:
