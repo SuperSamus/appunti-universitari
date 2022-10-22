@@ -131,15 +131,16 @@ f (fun (x,y) -> x + y) (2,3) (* 6 *)
 
 ### Tipi generici
 
-Le funzioni non richiedono di scrivere esplicitamente il tipo degli input, si può usare qualsiasi tipo compatibile con il corpo della funzione. Il tipo generico è scritto come `'a`.
+Il tipo generico è scritto come `'a`, e può rimpiazzato da qualunque tipo. Generalmente usato nelle funzioni, che lo rimpiazzano.
 
-Nota che il corpo della funzione non viene eseguito finché:
+Nota che il corpo della funzione non viene eseguito finché non viene eseguita. Queste due funzioni sono diverse:
 
 ```OCaml
 fun x -> x + 2
 fun x -> x + (1+1)
 ```
 
+In altre parole, OCaml *non* riduce le funzioni alla forma normale, quindi *non* fa questo:
 
 $$
 \cfrac{t→_βs}{λx.t→_βλx.s}
