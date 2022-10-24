@@ -41,4 +41,8 @@ Questo design è di solito usato per le RAM: Random Access Memory
 - Statiche
 	- Mantiene l'informazione se alimentato
 
+Esistono anche le ROM (Read Only Memoria), ma negli incroci wordline/bitline c'è un fusibile bruciabile con corrente sulla wordline/bitline corrispondente: lasciarlo intatto equivale a 0, bruciarlo equivale a 1.
+
+Ci sono anche le EEPROM (Electrically Erasable Programmable ROM), dove il fusibile è scrivibile un numero limitato di volte (più di uno almeno).
+
 (Implementazioni non disegnate qui)
