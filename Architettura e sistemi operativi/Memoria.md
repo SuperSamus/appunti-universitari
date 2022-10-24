@@ -8,20 +8,27 @@ Implementazione:
 
 ```mermaid
 flowchart TB
-r1[reg] & r2[reg] & r3[reg] & r4[reg] --> Demux
-Ind -- /2 --> Demux
+Ind -- /2 --> Mux & Demux
 WE -- /1 --> Mux
-Mux & In --> r1[reg 00] & r2[reg 01] & r3[reg 10] & r4[reg 11]
-Ind -- /2 --> Mux
+Mux & In --> r1[reg 00] & r2[reg 01] & r3[reg 10] & r4[reg 11] --> Demux
 ```
 
 Esempio: `write(2, 12)`
 - `In=1100` (che finisce su tutti gli ingressi dei registri)
-- `Ind=10`
-- 
-
+- `Ind=10`, quindi `reg 10` sarà l'unico a ricevere `WE=1` (Write Enable), mentre tutti gli altri lo hanno a 0
+- L'`OUT` di `Demux` è il contenuto di `reg 10`, quindi `1100`
 
 Questo è estremamente costoso, soprattutto con così tanti registri. Inoltre, dato che i [[Porte logiche#^b31833|Multiplexer]] costano più dei [[Porte logiche#^5e85c1|Demultiplexer]], leggere richiede più tempo che scrivere.
+
+Esempio in [[Verilog]]:
+```verilog
+reg[3:0] M[3:0];
+
+assign out = M[IND];
+
+always@(posedge clock)
+    if(WE) M[IND]=IN;
+```
 
 Altro design TODO:
 
