@@ -30,18 +30,10 @@ always@(posedge clock)
     if(WE) M[IND]=IN;
 ```
 
-Altro design TODO:
+Altro design:
+![[Design memoria.excalidraw]]
 
-```mermaid
-flowchart LR
-Ind -- /2 --> Demux
-Demux --> 00 --> 01 --> W
-```
 
-```mermaid
-flowchart LR
-
-```
 
 RAM: Random Access Memory
 - Dinamiche
