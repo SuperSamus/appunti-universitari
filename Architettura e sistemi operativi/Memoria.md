@@ -42,10 +42,12 @@ Questo design è di solito usato per le RAM: Random Access Memory
 	- Mantiene l'informazione se alimentato
 
 Se si vogliono combinare più moduli RAM (per esempio 2 moduli di RAM di 1GB di 8 bit), ci sono due opzioni:
-- Il bit più significativo indica il modulo, gli altri bit l'indirizzo
+- Il bit più significativo indica il modulo, gli altri bit indicano l'indirizzo
 	- Il primo modulo in questo caso occupa gli indirizzi $[0,2^{30})$, e il secondo $[2^{30}, 2^{31})$
-	- Serve sempre un multiplexer per accedere ag
-- Il bit 
+	- Serve sempre un multiplexer per scegliere il modulo giusto
+- Gli altri bit indicano l'indirizzo, il bit meno significativo indica il modulo
+	- Il primo modulo occupa gli indirizzi pari, il secondo gli indirizzi dispari, insieme $[0,2^{31})$
+	- Se si vuole accedere a due indirizzi consecutivi (partendo da un indirizzo pari), non serve un multiplexer, risparmiando quindi un accesso
 
 Esistono anche le ROM (Read Only Memoria), ma negli incroci wordline/bitline c'è un fusibile bruciabile con corrente sulla wordline/bitline corrispondente: lasciarlo intatto equivale a 0, bruciarlo equivale a 1.
 
