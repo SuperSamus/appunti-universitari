@@ -49,6 +49,8 @@ Se si vogliono combinare più moduli RAM (per esempio 2 moduli di RAM di 1GB di 
 	- Il primo modulo occupa gli indirizzi pari, il secondo gli indirizzi dispari, insieme $[0,2^{31})$
 	- Se si vuole accedere a due indirizzi consecutivi (partendo da un indirizzo pari), non serve un multiplexer, risparmiando quindi un accesso
 
+![[Moduli RAM.excalidraw]]
+
 Esistono anche le ROM (Read Only Memoria), ma negli incroci wordline/bitline c'è un fusibile bruciabile con corrente sulla wordline/bitline corrispondente: lasciarlo intatto equivale a 0, bruciarlo equivale a 1.
 
 Ci sono anche le EEPROM (Electrically Erasable Programmable ROM), dove il fusibile è scrivibile un numero limitato di volte (più di uno almeno).
