@@ -41,6 +41,12 @@ Questo design è di solito usato per le RAM: Random Access Memory
 - Statiche
 	- Mantiene l'informazione se alimentato
 
+Se si vogliono combinare più moduli RAM (per esempio 2 moduli di RAM di 1GB di 8 bit), ci sono due opzioni:
+- Il bit più significativo indica il modulo, gli altri bit l'indirizzo
+	- Il primo modulo in questo caso occupa gli indirizzi $[0,2^{30})$, e il secondo $[2^{30}, 2^{31})$
+	- Serve sempre un multiplexer per accedere ag
+- Il bit 
+
 Esistono anche le ROM (Read Only Memoria), ma negli incroci wordline/bitline c'è un fusibile bruciabile con corrente sulla wordline/bitline corrispondente: lasciarlo intatto equivale a 0, bruciarlo equivale a 1.
 
 Ci sono anche le EEPROM (Electrically Erasable Programmable ROM), dove il fusibile è scrivibile un numero limitato di volte (più di uno almeno).
