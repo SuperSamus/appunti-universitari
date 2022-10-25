@@ -294,12 +294,12 @@ type exp =
     | Valb of bool
     | Valn of int
     | Ite of exp * exp * exp
-    | Op of op * exp * exp
+    | Op of op * exp * exp;;
 
 type op =
     | Add
     | And
-    | Eq
+    | Eq;;
 
-
+Ite(Op(Eq,Op(Add,Valn(3),Valn(2)),Valn(5)),Valn(0),Valn(1))
 ```
