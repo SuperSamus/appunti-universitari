@@ -54,3 +54,13 @@ S3((S3/11)) -- 1 --> S0
 | 1    | 1    | 0   | 1    | 1    | 1    | 1    |
 | 1    | 1    | 1   | 0    | 0    | 0    | 0    | 
 
+$Z0=\bar{S0}X+S0\bar{X}$
+
+$Z1=\bar{S1}S0X+S1\bar{S0}+S1S0\bar{X}$
+
+```Verilog
+module statouscita(output [1:0]z, input [1:0]s, input x);
+    assign z[0] = (~s[0] & x) | (s[0] & ~x);
+    assign z[1] = (~s1 & s[0] & x) | (s[1] & ~s[0]) | (s[1] & s[0] & ~x)
+endmodule
+```
