@@ -43,24 +43,63 @@ S3((S3/11)) -- 1 --> S0
 
 ### Tabella di verità
 
-| $S1_{old}$ | $S0_{old}$ | $X$ | $S1_{new}$ | $S0_{new}$ | $z1$ | $z0$ |
-| ---- | ---- | --- | ---- | ---- | ---- | ---- |
-| 0    | 0    | 0   | 0    | 0    | 0    | 0    |
-| 0    | 0    | 1   | 0    | 1    | 0    | 1    |
-| 0    | 1    | 0   | 0    | 1    | 0    | 1    |
-| 0    | 1    | 1   | 1    | 0    | 1    | 0    |
-| 1    | 0    | 0   | 1    | 0    | 1    | 0    |
-| 1    | 0    | 1   | 1    | 1    | 1    | 1    |
-| 1    | 1    | 0   | 1    | 1    | 1    | 1    |
-| 1    | 1    | 1   | 0    | 0    | 0    | 0    | 
+| $S1_{old}$ | $S0_{old}$ | $X$ | $S1_{new}$ | $S0_{new}$ | $Z1$ | $Z0$ | 
+| ---------- | ---------- | --- | ---------- | ---------- | ---- | ---- |
+| 0          | 0          | 0   | 0          | 0          | 0    | 0    |
+| 0          | 0          | 1   | 0          | 1          | 0    | 1    |
+| 0          | 1          | 0   | 0          | 1          | 0    | 1    |
+| 0          | 1          | 1   | 1          | 0          | 1    | 0    |
+| 1          | 0          | 0   | 1          | 0          | 1    | 0    |
+| 1          | 0          | 1   | 1          | 1          | 1    | 1    |
+| 1          | 1          | 0   | 1          | 1          | 1    | 1    |
+| 1          | 1          | 1   | 0          | 0          | 0    | 0    |
 
 $Z0=\bar{S0}X+S0\bar{X}$
 
 $Z1=\bar{S1}S0X+S1\bar{S0}+S1S0\bar{X}$
 
+### Verilog
+
 ```Verilog
 module statouscita(output [1:0]z, input [1:0]s, input x);
     assign z[0] = (~s[0] & x) | (s[0] & ~x);
     assign z[1] = (~s1 & s[0] & x) | (s[1] & ~s[0]) | (s[1] & s[0] & ~x)
+endmodule
+```
+
+Ci serve un modulo registro a due bit per memorizzare $S$:
+
+```Verilog
+module registro(output [N-1:0]z, input [N-1:0]inval, input we, input clock);
+    parameter N=2;
+
+    reg[N-1:0] S;
+
+    initial
+        begin
+            S = 2'b00;
+        end
+
+    always @(posedge clock)
+        begin
+            if (we==1) S = inval
+        end
+
+    assign z = S;
+endmodule
+```
+
+Infine ci verve un modulo che fa il wiring dei moduli e dei registri
+
+```Verilog
+module countermod4(output [N-1:0]z, input x, input clock);
+    parameter N=2;
+
+    wire [N-1:0] rin;
+    wire [N-1:0] rout;
+
+    registro #(N) regs(rout, rin, 1'b1, clock);
+    statouscita newst(rin, rout, x);
+    assign z = rin;
 endmodule
 ```
