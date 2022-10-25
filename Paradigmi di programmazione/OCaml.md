@@ -273,3 +273,18 @@ let rec leaves t =
         | Leaf x -> [x]
         | Node(x, t1, t2) -> (leaves t1)@(leaves t2)
 ```
+
+### Interprete
+
+$e::=true|false|n|o(e,e)|ite(e,e,e)$
+
+$op::=+|\&|==$
+
+Noi scriviamo $ite(3+2==5,0,1)$, ma l'inteprete vede questo albero di d:
+
+```mermaid
+flowchart TB
+ite --> eq(==) & 0 & 1
+eq --> + & 5
++ --> 3 & 2
+```
