@@ -43,7 +43,7 @@ S3((S3/11)) -- 1 --> S0
 
 ### Tabella di verità
 
-| $S1_{old}$ | $S0_{old}$ | $X$ | $S1_{new}$ | $S0_{new}$ | $Z1$ | $Z0$ | 
+| $S1_{old}$ | $S0_{old}$ | $X$ | $S1_{new}$ | $S0_{new}$ | $Z1$ | $Z0$ |
 | ---------- | ---------- | --- | ---------- | ---------- | ---- | ---- |
 | 0          | 0          | 0   | 0          | 0          | 0    | 0    |
 | 0          | 0          | 1   | 0          | 1          | 0    | 1    |
@@ -63,7 +63,7 @@ $Z1=\bar{S1}S0X+S1\bar{S0}+S1S0\bar{X}$
 ```Verilog
 module statouscita(output [1:0]z, input [1:0]s, input x);
     assign z[0] = (~s[0] & x) | (s[0] & ~x);
-    assign z[1] = (~s1 & s[0] & x) | (s[1] & ~s[0]) | (s[1] & s[0] & ~x)
+    assign z[1] = (~s1 & s[0] & x) | (s[1] & ~s[0]) | (s[1] & s[0] & ~x);
 endmodule
 ```
 
@@ -82,7 +82,7 @@ module registro(output [N-1:0]z, input [N-1:0]inval, input we, input clock);
 
     always @(posedge clock)
         begin
-            if (we==1) S = inval
+            if (we==1) S = inval;
         end
 
     assign z = S;
@@ -103,3 +103,5 @@ module countermod4(output [N-1:0]z, input x, input clock);
     assign z = rin;
 endmodule
 ```
+
+Ora ci mancano solo i testbench.
