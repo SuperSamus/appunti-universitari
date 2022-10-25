@@ -24,7 +24,11 @@ Il parallelismo spesso richiede risorse extra (*overhead*) rispetto alla teoria:
 - Il tempo di startup (per esempio, si distribuisce il lavoro ai vari worker)
 - Il tempo di raccolta (per esempio, dopo una somma fatta in parallelo, bisogna sommare le varie parti finali)
 
-Speedup: $sp(nw)=\cfrac{T_{sec}}{T_{par(nw)}}$ ($nw$ è il numero di workers)
+Misure primitive:
+- Latenza
+- Tempo di servizio (banda)
+
+Speedup: $sp(nw)=\cfrac{T_{miglior_sequenziale}}{T_{parallelo(nw)}}$ ($nw$ è il numero di workers)
 
 ## Pipeline processore
 
