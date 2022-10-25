@@ -246,7 +246,7 @@ Quindi, si può dire che le liste in OCaml sono costruite come:
 ```OCaml
 type 'a list =
     | Nil
-    | Concat of 'a * ('a list)
+    | Concat of 'a * 'a list
 ```
 
 Si può fare il pattern matching:
@@ -257,4 +257,12 @@ let rec elem x xs =
         | Nil -> false
         | Concat(y, ys) -> if(x=y) then true else elem x ys;;
 (* elem: 'a->'a list'->bool *)
+```
+
+Un albero binario:
+
+```OCaml
+type 'a tree ?
+    | Leaf of 'a
+    | Node of 'a * 'a tree * 'a tree
 ```
