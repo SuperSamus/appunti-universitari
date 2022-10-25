@@ -1,0 +1,19 @@
+# Esercizio contatore
+
+## Approccio strutturale
+
+- Definiamo una codifica per i simboli di entrata e di uscita
+- Costruiamo una macchina a stati finiti
+- Deriviamo la tabella di verità delle transizioni di stato e delle uscite
+- Ricaviamo la formula combinatorie per le uscite e per lo stato ovvero implementiamo un modulo Verilog per le uscite e per lo stato
+- Determiniamo il numero di registri necessari in base agli stati da memorizzare, ovvero implementiamo un modulo registro in Verilog
+- Connettiamo le reti combinatorie per realizzare la rete sequenziale, ovvero creiamo un `module` con componenti `wire` che invoca opportunamente gli altri moduli e definiamo il `module` `test`
+
+Quindi:
+- Ingressi $I=\{0,1\}$ Uscite $U=\{00,01,10,11\}$ Stati $S=\{S0,S1,S2,S3\}$
+- Costruiamo la macchina a stati finiti
+
+```mermaid
+flowchart LR
+S0((S0)) -- 1/01 --> S!(S1)
+```
