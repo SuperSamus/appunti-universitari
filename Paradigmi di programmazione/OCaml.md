@@ -262,7 +262,14 @@ let rec elem x xs =
 Un albero binario:
 
 ```OCaml
-type 'a tree ?
+type 'a tree =
     | Leaf of 'a
     | Node of 'a * 'a tree * 'a tree
+```
+
+```OCaml
+let rec leaves t =
+    match t with
+        | Leaf x -> [x]
+        | Node(x, t1, t2) -> (leaves t1)@(leaves t2)
 ```
