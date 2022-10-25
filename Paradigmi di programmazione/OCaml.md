@@ -14,7 +14,9 @@ let anno: int = 2022;;
 eta * anno;;
 ```
 
-## [[Tipi]] di base
+## [[Tipi]]
+
+### Base
 
 ```
 - int
@@ -222,3 +224,30 @@ let rec map f xs =
         | [] -> []
         | y::ys -> (f y)::(map f ys);;
 ```
+
+### Tipi ricorsivi
+
+```OCaml
+type list_int =
+    | Nil
+    | Concat of int * list_int
+
+Nil : list_int
+Concat(5, Nil) : list_int
+Concat(3, Concat(5, Nil)): list_int
+```
+
+$Nil⤳[]$
+
+$Concat(n,ns)⤳n::ns$
+
+Quindi, si può dire che le liste in OCaml sono costruite come:
+
+```OCaml
+type 'a list' =
+    | Nil
+    | Concat of 'a * ('a list')
+```
+
+Si può fare il pattern matching:
+
