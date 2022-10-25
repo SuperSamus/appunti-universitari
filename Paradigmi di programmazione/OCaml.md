@@ -280,11 +280,26 @@ $e::=true|false|n|o(e,e)|ite(e,e,e)$
 
 $op::=+|\&|==$
 
-Noi scriviamo $ite(3+2==5,0,1)$, ma l'inteprete vede questo albero di d:
+Noi scriviamo $ite(3+2==5,0,1)$, ma l'interprete vede questo albero di derivazione astratta (AST):
 
 ```mermaid
 flowchart TB
 ite --> eq(==) & 0 & 1
 eq --> + & 5
 + --> 3 & 2
+```
+
+```OCaml
+type exp =
+    | Valb of bool
+    | Valn of int
+    | Ite of exp * exp * exp
+    | Op of op * exp * exp
+
+type op =
+    | Add
+    | And
+    | Eq
+
+
 ```
