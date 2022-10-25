@@ -33,7 +33,7 @@ Speedup: $sp(nw)=\cfrac{T_{miglior_sequenziale}}{T_{parallelo(nw)}}$ ($nw$ è il
 ## Pipeline processore
 
 TODO: rivedere fine 21 ottobre
-%%
+
 ```
    tf=1  td=2  te=3  twb=2
 --> F --> D --> E --> WB -->
@@ -41,7 +41,15 @@ TODO: rivedere fine 21 ottobre
 
 $L=t_f+t_d+t_e+t_{wb}$
 
-$T_{spaziale}=\max\{t_f,t_d,t_e,t_{wb}\}$
+Il tempo di servizio si allinea sullo stadio più lungo:
+
+```
+>>> tf
+ ->->-> td
+   -->-->--> te
+      -> -> -> twb
+```
+
+$T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
 
 $sp(nw)=4⇔nw≥4$
-%%
