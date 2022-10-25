@@ -32,8 +32,6 @@ Speedup: $sp(nw)=\cfrac{T_{miglior_sequenziale}}{T_{parallelo(nw)}}$ ($nw$ è il
 
 ## Pipeline processore
 
-TODO: rivedere fine 21 ottobre
-
 ```
    tf=1  td=2  te=3  twb=2
 --> F --> D --> E --> WB -->
