@@ -37,7 +37,9 @@ Speedup: $sp(nw)=\cfrac{T_{miglior_sequenziale}}{T_{parallelo(nw)}}$ ($nw$ è il
 --> F --> D --> E --> WB -->
 ```
 
-$L=t_f+t_d+t_e+t_{wb}$
+Latenza $L=t_f+t_d+t_e+t_{wb}$
+
+Con 4 stadi, abbiamo $k=4$.
 
 Il tempo di servizio si allinea sullo stadio più lungo:
 
@@ -51,3 +53,12 @@ Il tempo di servizio si allinea sullo stadio più lungo:
 $T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
 
 $sp(nw)=4⇔nw≥4$
+
+Più genericamente:
+```
+    f1     f2     f3     f4
+--> s1 --> s2 --> s3 --> s4 -->
+    t1     t2     t3     t4
+```
+
+$t_I
