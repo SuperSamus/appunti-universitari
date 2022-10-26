@@ -288,10 +288,26 @@ costo di ciascun arco $(i,j)∈A_T$ è ≤ costo di ciascun arco del ciclo che s
 
 Iterazione: effettuare una inserzione oppure ima cancellazione finché $|S|=n-1$
 
-Proprietà di Greedy MST: se $(S,R)$ sono tale che esiste un albero di costo $(N,A_T)$ minimo per cui $S≤A_T$ e $R∩A_T=∅$, allora effettuando una inserzione oppure una cancellazione si ottiene un $(S',R')$ che soddisfa la medesima proprietà, (ovvero esiste un albero di copertura di costo minimo $(N,A_T')$ t.c $S'⊆A_T'$ e $R'∩A_T'=∅$).
+Proprietà di Greedy MST: se $(S,R)$ sono tali che esiste un albero di costo $(N,A_T)$ minimo per cui $S≤A_T$ e $R∩A_T=∅$, allora effettuando una inserzione oppure una cancellazione si ottiene un $(S',R')$ che soddisfa la medesima proprietà, (ovvero esiste un albero di copertura di costo minimo $(N,A_T')$ t.c $S'⊆A_T'$ e $R'∩A_T'=∅$).
 
 ##### Algoritmo di Kruskal
 
-- Si ordinano gli archi per non decrescente
+- Si ordinano gli archi per ordine non decrescente
 - Si esaminano gli archi in quell'ordine
 - Se l'arco esaminato non forma un ciclo con $S$, allora si aggiunge ad $S$, altrimenti a $R$
+
+## Trasporta il flusso massimo
+
+```mermaid
+flowchart LR
+1 -- 6 --> 2 -- 5 --> 4 -- 6 --> 7
+1 -- 1 --> 6 -- 4 --> 4 -- 1 --> 5
+1 -- 4 --> 3 -- 4 --> 5 -- 5 --> 7
+```
+
+L'obiettivo è di trasportare la maggior quantità di flusso possibile da $1$ e $7$. Tuttavia, i tubi hanno una capacità massima nel trasporto di acqua, e tutti gli altri nodi non ammettono di ricevere più acqua di quella mandano. Come si distribuisce il flusso?
+
+Dati:
+
+
+Funzione obiettivo max: $V$ 
