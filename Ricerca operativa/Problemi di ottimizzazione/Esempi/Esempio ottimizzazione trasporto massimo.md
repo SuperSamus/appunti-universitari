@@ -40,12 +40,12 @@ $(i,j)$ è **saturo** se $x_{ij}=u_{ij}$
 
 ```mermaid
 flowchart LR
-1 -- 4/6 --> 2 -- 4/5 --> 4 -- 6/6 --> 7
-1 -- 1/1 --> 6 -- 3/4 --> 4 -- 1/1 --> 5
-1 -- 4/4 --> 3 -- 2/4 --> 5 -- 3/5 --> 7
+1 == 4/6 ==> 2 == 4/5 ==> 4 -- 6/6 --> 7
+1 -- 1/1 --> 6 -- 3/4 --> 4 == 1/1 ==> 5
+1 -- 4/4 --> 3 -- 2/4 --> 5 == 3/5 ==> 7
 3 -- 2/2 --> 6 -- 0/2 --> 2
 ```
 
 Ora $V=8+1=9$
 
-Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $P=\{1,2,4,7\}$, ma $(4,7)$ è già saturo
+Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $\{1,2,4,7\}$, ma $(4,7)$ è già saturo, quindi in $4$ si accumula un'unità di flusso. Possiamo allora riportare questo eccesso indietro, verso il nodo $6$, causando ora un eccesso di 1 lì. Si può rifare la stessa cosa verso il nodo $3$, che però ha spazio libero in $(3,5)$, come c'è spazio in $(5,7)$
