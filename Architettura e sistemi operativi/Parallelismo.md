@@ -146,5 +146,15 @@ Regole di riscrittura:
 
 ```mermaid
 flowchart LR
-Input --> |Collezione| split --> |1/2 coll.| f1[f] & f2[f]  --> compositore --> |"f(xm)...f(x1)"| Output
+Input --> |Collezione| split --> |1/2 coll.| f1[f] & f2[f]  --> compositore --> |Collezione| Output
 ```
+
+L'input è uno solo, quindi $T_S$ e $T_C$ non hanno senso. Solo la latenza ha senso.
+
+Dati:
+- $m$ numero elementi della collezione
+- $t_f$ tempo per calcolare un elemento
+
+$L=t_{split}+⌈\cfrac{m}{nw}⌉t_f+t_{comp}$
+
+Non ci vogliono per forza più worker: i calcolatori possono avere operazioni per calcolare insieme più numeri di un vettore (*calcolo vettoriale*). Per esempio i processori x86 hanno instruction set come SSE o AVX per questo scopo.
