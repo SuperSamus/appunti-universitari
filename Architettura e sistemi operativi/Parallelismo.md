@@ -101,9 +101,9 @@ Si può considerare come una pipeline di 3 stadi.
 
 $T_S=\max\{t_{sched},t_f,t_{gath}\}$
 
-Per le massime performance, dato $t_e$ come il tempo per assegnare un lavoro, ci bastano $nw=\cfrac{t_f}{t_e}$. Qui si può vedere che dopo ogni $t_f$, 
-
+Per le massime performance, dato $t_e$ come il tempo per assegnare un lavoro, ci bastano $nw≥\cfrac{t_f}{t_e}$. Qui si può vedere che dopo ogni $t_f$, lo scheduler è riuscito a dare lavoro a $nw$ lavoratori prima che uno spazio si liberasse, togliendo la necessità di lavoratori in più:
 ```
+          > Il primo lavoratore ha finito
 |-|-|-|-|-|-|-|-| sched
   |-------|-------| f
     |-------|-------| f
@@ -111,3 +111,5 @@ Per le massime performance, dato $t_e$ come il tempo per assegnare un lavoro, ci
         |-------|-------| f
           |-|-|-|-|-|-|-|-| gath
 ```
+
+$T_C=nw*t_e+\cfrac{m}{nw}t_f+t_{gath}$
