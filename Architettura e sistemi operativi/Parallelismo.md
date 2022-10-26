@@ -33,7 +33,6 @@ Dati:
 - - $t_i$: latenza dello stadio $i$
 - $k$ numero di stadi
 - $m$ numero di task
-	- Di solito $m>>k$
 
 Speedup: $sp(nw)=\cfrac{T_{miglior\_sequenziale}}{T_{parallelo(nw)}}=\cfrac{m(∑t_i)}{m(\max\{t_i\})}=\cfrac{∑t_i}{\max\{t_i\}}$
 
@@ -55,6 +54,9 @@ Il tempo di servizio si allinea sullo stadio più lungo. Con $m=3$:
  ->->-> td
    -->-->--> te
       -> -> -> twb
+
+|------|-----|
+   L   (m-1)Ts
 ```
 
 - $T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
@@ -62,7 +64,7 @@ Il tempo di servizio si allinea sullo stadio più lungo. Con $m=3$:
 
 Più genericamente:
 ```
-            f1     f2     f3     f4
+ Input      f1     f2     f3     f4
 xm...x1 --> s1 --> s2 --> s3 --> s4 -->
             t1     t2     t3     t4
 ```
@@ -70,15 +72,16 @@ xm...x1 --> s1 --> s2 --> s3 --> s4 -->
 - $L=∑\limits_{i=i}^4 t_i$
 - $T_{servizio}=\max\{t_i\}$
 - $T_{completamento}=∑\limits_{i=i}^4 t_i+(m-1)\max\{t_i\}$
-	- $T_C≈m(T_s)$
+	- Di solito nel mondo reale $m>>k$, quindi $T_C≈m(T_S)$
 - $t_i$: latenza di $f_i$
-Si può aumentare l'efficienza combinando diversi stati TODO:
+
+Si può aumentare l'efficienza facendo lavorare più stati a uno stesso worker, senza cambiare $T_S$. In questo modo $T_C$ rimane quasi uguale, però la latenza peggiora. Per esempio:
 ```mermaid
 flowchart LR
 subgraph 3t
-S1["S1 (1t)"] --> S2["S2 (2t)"]
+S1(("S1 (1t)")) --> S2(("S2 (2t)"))
 end
-3t --> S3["S3 (3t)"] --> S4["S4 (2t)"]
+3t --> S3(("S3 (3t)")) --> S4(("S4 (2t)"))
 ```
 TODO
 
