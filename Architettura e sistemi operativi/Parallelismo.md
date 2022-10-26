@@ -69,16 +69,16 @@ Più genericamente:
 
 - $L=∑\limits_{i=i}^4 t_i$
 - $T_{completamento}=∑t_i+(m-1)\max\{t_i\}$
-	- $T_C≅m(T_s)$
+	- $T_C≈m(T_s)$
 - $T_{servizio}=\max\{t_i\}$
 - $t_i$: latenza di $f_i$
 Si può aumentare l'efficienza combinando diversi stati TODO:
 ```mermaid
 flowchart LR
 subgraph 3t
-S1("S1 (1t)") --> S2("S2 (2t)")
+S1["S1 (1t)"] --> S2["S2 (2t)"]
 end
-3t --> S3("S3 (3t)") --> S4("S4 (2t)")
+3t --> S3["S3 (3t)"] --> S4["S4 (2t)"]
 ```
 TODO
 
@@ -86,5 +86,5 @@ TODO
 
 ```mermaid
 flowchart LR
-Input -- "xm...x1" --> shced --> f1[f] & f2[f] & f3[f] & f[...] & fn[f] --> gather --> result["f(xm)...f(x1)"]
+Input -- "xm...x1" --> schedule --> f1[f] & f2[f] & f[...] & fn[f] --> gather -- "f(xm)...f(x1)" --> Output
 ```
