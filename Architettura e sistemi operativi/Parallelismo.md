@@ -75,7 +75,7 @@ xm...x1 --> s1 --> s2 --> s3 --> s4 -->
 	- Di solito nel mondo reale $m>>k$, quindi $T_C≈m(T_S)$
 - $t_i$: latenza di $f_i$
 
-Si può aumentare l'efficienza facendo lavorare più stati a uno stesso worker, senza cambiare $T_S$. In questo modo $T_C$ rimane quasi uguale, però la latenza peggiora. Per esempio:
+Si può aumentare l'efficienza facendo lavorare più stati a uno stesso worker Per esempio:
 ```mermaid
 flowchart LR
 subgraph 3t
@@ -83,7 +83,11 @@ S1(("S1 (1t)")) --> S2(("S2 (2t)"))
 end
 3t --> S3(("S3 (3t)")) --> S4(("S4 (2t)"))
 ```
-TODO
+
+Vediamo com'è lo speedup:
+- Se $nw>k$ 
+
+Senza cambiare $T_S$. In questo modo $T_C$ rimane quasi uguale, però la latenza peggiora.
 
 ### Farm
 
