@@ -252,8 +252,8 @@ Evitiamo il problema di avere sia SET che RESET uguali a 1, con un CLOCK che alt
 ```mermaid
 flowchart LR
 CLOCK --> AND1[AND] & AND2[AND]
-D --o AND1 -- R --> SR
-D --> AND2 -- S --> SR
+D --o AND1 --> |R| SR
+D --> AND2 --> |S| SR
 SR --> Q & N[NOT Q]
 ```
 
@@ -265,7 +265,7 @@ Con questo design Q può essere cambiato solo nell'istante in cui CLOCK diventa 
 
 ```mermaid
 flowchart LR
-D --> DL1[D latch] -- "Q --> D" --> DL2[D latch] --> Q
+D --> DL1[D latch] --> |"Q| D" --> DL2[D latch] --> Q
 CLOCK --o DL1
 CLOCK --> DL2
 ```

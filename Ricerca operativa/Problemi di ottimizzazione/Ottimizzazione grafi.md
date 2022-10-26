@@ -31,14 +31,14 @@ Questi vincoli lo rendono un problema di programmazione lineare intera: i vincol
 Per esempio, immaginiamo che in questo grafo questa sia la soluzione ottima:
 ```mermaid
 flowchart LR
-s -- 1/2 --> A & B
-A -- 1/2 --> C
+s --> |1/2| A & B
+A --> |1/2| C
 s --> C
-B -- 1/2 --> C
-C -- 1/2 --> D & E
-D -- 1/2 --> t
+B --> |1/2| C
+C --> |1/2| D & E
+D --> |1/2| t
 C --> t
-E -- 1/2 --> t
+E --> |1/2| t
 ```
 
 Non è un cammino. Però:
@@ -130,14 +130,14 @@ Questo albero è dei cammini minimi?
 
 ```mermaid
 flowchart LR
-1 -- 5 --> 2
-2 -- 5 --> 4
-1 -- 7 --> 3
-2 -. 1 .-> 3
-3 -. 3 .-> 4
-2 -- 3 --> 5
-3 -. 2 .-> 5
-5 -. 1 .-> 4
+1 --> |5| 2
+2 --> |5| 4
+1 --> |7| 3
+2 -.-> |1| 3
+3 -.-> |3| 4
+2 --> |3| 5
+3 -.-> |2| 5
+5 -.-> |1| 4
 ```
 
 - $d_1=0$

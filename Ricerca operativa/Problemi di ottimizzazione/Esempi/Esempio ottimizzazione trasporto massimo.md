@@ -2,10 +2,10 @@
 
 ```mermaid
 flowchart LR
-1 -- 6 --> 2 -- 5 --> 4 -- 6 --> 7
-1 -- 1 --> 6 -- 4 --> 4 -- 1 --> 5
-1 -- 4 --> 3 -- 4 --> 5 -- 5 --> 7
-3 -- 2 --> 6 -- 2 --> 2
+1 --> |6| 2 --> |5| 4 --> |6| 7
+1 --> |1| 6 --> |4| 4 --> |1| 5
+1 --> |4| 3 --> |4| 5 --> |5| 7
+3 --> |2| 6 --> |2| 2
 ```
 
 L'obiettivo è di trasportare la maggior quantità di flusso possibile da $1$ e $7$. Tuttavia, i tubi (archi) hanno una capacità massima nel trasporto di acqua ($u_{ij}$), e i nodi non ammettono di ricevere più acqua di quella mandano (e ovviamente anche il contrario). Come si distribuisce il flusso?
@@ -21,10 +21,10 @@ Proviamo una soluzione ammissibile (negli archi c'è scritto $x_{ij}/u_{ij}$):
 
 ```mermaid
 flowchart LR
-1 -- 3/6 --> 2 -- 3/5 --> 4 -- 6/6 --> 7
-1 -- 1/1 --> 6 -- 3/4 --> 4 -- 0/1 --> 5
-1 -- 4/4 --> 3 -- 2/4 --> 5 -- 2/5 --> 7
-3 -- 2/2 --> 6 -- 0/2 --> 2
+1 --> |3/6| 2 --> |3/5| 4 --> |6/6| 7
+1 --> |1/1| 6 --> |3/4| 4 --> |0/1| 5
+1 --> |4/4| 3 --> |2/4| 5 --> |2/5| 7
+3 --> |2/2| 6 --> |0/2| 2
 ```
 
 In questo caso la soluzione ammissibile è $V=8$. Si può fare di meglio?
@@ -40,10 +40,10 @@ $(i,j)$ è **saturo** se $x_{ij}=u_{ij}$
 
 ```mermaid
 flowchart LR
-1 == 4/6 ==> 2 == 4/5 ==> 4 -- 6/6 --> 7
-1 -- 1/1 --> 6 -- 3/4 --> 4 == 1/1 ==> 5
-1 -- 4/4 --> 3 -- 2/4 --> 5 == 3/5 ==> 7
-3 -- 2/2 --> 6 -- 0/2 --> 2
+1 ==> |4/6| 2 ==> |4/5| 4 --> |6/6| 7
+1 --> |1/1| 6 --> |3/4| 4 ==> |1/1| 5
+1 --> |4/4| 3 --> |2/4| 5 ==> |3/5| 7
+3 --> |2/2| 6 --> |0/2| 2
 ```
 
 Ora $V=8+1=9$

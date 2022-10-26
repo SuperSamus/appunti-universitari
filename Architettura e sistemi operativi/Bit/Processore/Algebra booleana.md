@@ -111,14 +111,14 @@ Permette di creare tutte le altre porte usando solo se stesso (stessa cosa per N
 
 ```mermaid
 flowchart LR
-A -- 1 --> B[NAND] & B
-B -- 0 --> z
+A --> |1| B[NAND] & B
+B --> |0| z
 ```
 
 ```mermaid
 flowchart LR
-A -- 0 --> B[NAND] & B
-B -- 1 --> z
+A --> |0| B[NAND] & B
+B --> |1| z
 ```
 
 ### AND

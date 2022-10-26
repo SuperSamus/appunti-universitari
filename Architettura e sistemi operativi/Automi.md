@@ -15,20 +15,20 @@ Vediamoli per riconoscere `aba` (alfabeto $\{a,b,c\}$) , in una stringa (come `a
 
 ```mermaid
 flowchart LR
-s1 -- b/0 --> s1
-s1 -- c/0 --> s1
-s1(((s1))) -- a/0 --> s2((s2)) -- c/0 --> s1
-s2 -- a/0 --> s2
-s2 -- b/0 --> s3((s3))
-s3 -- a/1 --> s1
-s3 -- b,c/0 --> s1
+s1 --> |b/0| s1
+s1 --> |c/0| s1
+s1(((s1))) --> |a/0| s2((s2)) --> |c/0| s1
+s2 --> |a/0| s2
+s2 --> |b/0| s3((s3))
+s3 --> |a/1| s1
+s3 --> |b,c/0| s1
 ```
 
 ```mermaid
 flowchart LR
-a -- x --> fs' & fz
-fs' -- s2 --> reg -- s1 --> fs' & fz
-fz -- 0 --> z
+a --> |x| fs' & fz
+fs' --> |s2| reg --> |s1| fs' & fz
+fz --> |0| z
 ```
 
 Con il carattere ($\{a,b,c\}$) rappresentato dai bit $x_1x_0$, lo stato corrente da $b_1b_0$, il nuovo stato da $b_1'b_0'$, e il valore di riporto (quello a destra dello `/`) con $z$:
@@ -63,14 +63,14 @@ $z=b_1\bar{b_0}\bar{x_1}\bar{x_0}$
 
 ```mermaid
 flowchart LR
-s1 -- b --> s1
-s1 -- c --> s1
-s1(((s1/0))) -- a --> s2((s2/0)) -- c --> s1
-s2 -- a --> s2
-s2 -- b --> s3((s3/0))
-s3 -- b,c --> s1
-s3 -- a --> s4((s4/1)) -- a --> s2
-s4 -- b,c --> s1
+s1 --> |b| s1
+s1 --> |c| s1
+s1(((s1/0))) --> |a| s2((s2/0)) --> |c| s1
+s2 --> |a| s2
+s2 --> |b| s3((s3/0))
+s3 --> |b,c| s1
+s3 --> |a| s4((s4/1)) --> |a| s2
+s4 --> |b,c| s1
 ```
 
 $z=b_1b_0$
@@ -105,18 +105,18 @@ Mealy:
 
 ```mermaid
 flowchart LR
-si(((si))) -- 1/0 --> sol((sol)) -- 1/1 --> si
-si -- 0/1 --> si
-sol -- 0/0 --> sol
+si(((si))) --> |1/0| sol((sol)) --> |1/1| si
+si --> |0/1| si
+sol --> |0/0| sol
 ```
 
 Moore:
 
 ```mermaid
 flowchart LR
-si(((si/1))) -- 1 --> sol((sol/0)) -- 1 --> si
-si -- 0 --> si
-sol -- 0 --> sol
+si(((si/1))) --> |1| sol((sol/0)) --> |1| si
+si --> |0| si
+sol --> |0| sol
 ```
 
 1. \# bit del registro di stato: 1

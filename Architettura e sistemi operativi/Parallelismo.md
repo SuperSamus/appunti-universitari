@@ -86,5 +86,5 @@ TODO
 
 ```mermaid
 flowchart LR
-Input -- "xm...x1" --> schedule --> f1[f] & f2[f] & f[...] & fn[f] --> gather -- "f(xm)...f(x1)" --> Output
+Input --> |"xm...x1"| schedule --> f1[f] & f2[f] & f[...] & fn[f] --> gather --> |"f(xm)...f(x1)"| Output
 ```
