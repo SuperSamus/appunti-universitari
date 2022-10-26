@@ -74,7 +74,7 @@ xm...x1 --> s1 --> s2 --> s3 --> s4 -->
 	- Di solito nel mondo reale $m>>k$, quindi $T_C≈m(T_S)$
 - $t_i$: latenza di $f_i$
 
-Si può aumentare l'efficienza facendo lavorare più stati a uno stesso worker. Per esempio:
+Si può aumentare l'efficienza facendo lavorare più stati adiacente a uno stesso worker. Per esempio:
 ```mermaid
 flowchart LR
 subgraph 3t
@@ -85,7 +85,9 @@ end
 
 Lo speedup non è cambiato, in quanto $T_S$ è uguale. In questo modo $T_C$ rimane quasi uguale, però la latenza peggiora.
 
-Questo è un caso perticolare. Se per esempio 
+Questo è un caso particolare. Se per esempio $t=\{2,2,3,1\}$, avere meno di 4 worker può solo peggiorare $T_S$. Tuttavia, 2 o 3 worker hanno lo stesso miglior $T_S$ (cioè 4), quindi non è così semplice.
+
+Il tempo per eseguire le funzioni può inoltre essere variabile per diversi motivi (es. ambientali). Nelle pipeline si mette quindi un registro tra le varie reti combinatorie, così che ciascuna aspetti che il segnale di clock (uguale per tutti) vada alto e non si metta a leggere durante la scrittura.
 
 ### Farm
 
