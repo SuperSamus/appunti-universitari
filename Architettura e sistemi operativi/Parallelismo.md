@@ -34,7 +34,7 @@ Dati:
 - $k$ numero di stadi
 - $m$ numero di task
 
-Speedup: $sp(nw)=\cfrac{T_{miglior\_sequenziale}}{T_{parallelo(nw)}}=\cfrac{m(∑t_i)}{m(\max\{t_i\})}=\cfrac{∑t_i}{\max\{t_i\}}$
+Speedup: $sp(nw)=\cfrac{T_{miglior\_sequenziale}}{T_{parallelo(nw)}}$
 
 ## Pipeline processore
 
@@ -60,6 +60,8 @@ Il tempo di servizio si allinea sullo stadio più lungo. Con $m=3$:
 ```
 
 - $T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
+
+Abbiamo in questo caso uno speedup $sp(nw)=\cfrac{m(∑t_i)}{m(\max\{t_i\})}=\cfrac{∑t_i}{\max\{t_i\}}$.
 
 ### Genericamente
 
@@ -126,6 +128,6 @@ Con $PIPE(S_1,S_2,S_3,S_4)$, abbiamo $T_S=3$.
 
 Ma se possiamo trasformare il terzo stato in una farm con 2 worker, otteniamo $PIPE(S_1,S_2,FARM(S_3,2),S_4)$, e $T_S=\max\{2,2,\cfrac{3}{2},1\}=2$.
 
-Dividiamo di più: $PIPE(FARM(S_1,2),FARM(S_2,2),FARM(S_3,2),S_4)$, allora $T_S=1$.
+Dividiamo di più: $PIPE(FARM(S_1,2),FARM(S_2,2),FARM(S_3,2),S_4)$, allora $T_S=1$. Questi però sono 7 worker per uno speedup di 3. Forse è preferibile $PIPE(S_1,S_2,FARM(S_{34},2))$ per un $T_S=2$ Anche se forse non è il massimo dell'efficienza: se $t_{sched}$ o $t_{gath}$, si paga un alto overhead in continuazione.
 
-Ma forse è meglio $FARM(PIPE(S_1,S_2,S_3,S_4),7)$
+Invece con qualcosa come $FARM(S_{1234},7)$ l'overhead si paga una volta sola.
