@@ -107,10 +107,12 @@ Per le massime performance, dato $t_e$ come il tempo per assegnare un lavoro, ci
 ```
           > Il primo lavoratore ha finito
 |-|-|-|-|-|-|-|-| sched
+
   |-------|-------| f
     |-------|-------| f
       |-------|-------| f
         |-------|-------| f
+
           |-|-|-|-|-|-|-|-| gath
 ```
 
@@ -128,6 +130,21 @@ Con $PIPE(S_1,S_2,S_3,S_4)$, abbiamo $T_S=3$.
 
 Ma se possiamo trasformare il terzo stato in una farm con 2 worker, otteniamo $PIPE(S_1,S_2,FARM(S_3,2),S_4)$, e $T_S=\max\{2,2,\cfrac{3}{2},1\}=2$.
 
-Dividiamo di più: $PIPE(FARM(S_1,2),FARM(S_2,2),FARM(S_3,2),S_4)$, allora $T_S=1$. Questi però sono 7 worker per uno speedup di 3. Forse è preferibile $PIPE(S_1,S_2,FARM(S_{34},2))$ per un $T_S=2$ Anche se forse non è il massimo dell'efficienza: se $t_{sched}$ o $t_{gath}$, si paga un alto overhead in continuazione.
+Dividiamo di più: $PIPE(FARM(S_1,2),FARM(S_2,2),FARM(S_3,2),S_4)$, allora $T_S=1$. Questi però sono 7 worker. Forse è preferibile $PIPE(S_1,S_2,FARM(S_{34},2))$ per un $T_S=2$ con 4 worker.
 
-Invece con qualcosa come $FARM(S_{1234},7)$ l'overhead si paga una volta sola.
+Tutto questo però assume che $t_{sched}$ e $t_{gath}$ siano bassi, perché se non lo sono si paga un alto overhead in continuazione, e si rischia di alzare $T_S$. Invece con qualcosa come $FARM(S_{1234},7)$ l'overhead si paga una volta sola.
+
+Genericamente, quello che si può fare ai programmi è:
+
+$Prog=Seq|Pipe(Prog,Prog)|Farm(Prog)|Comp(Prog,Prog)$
+
+Regole di riscrittura:
+- $Prog↔Farm(Prog)$
+- $Pipe(Prog,Prog)↔Comp(Prog,Prog)$
+
+## Map
+
+```mermaid
+flowchart LR
+Input --> |Collezione| split --> |1/2 coll.| f1[f] & f2[f]  --> compositore --> |"f(xm)...f(x1)"| Output
+```
