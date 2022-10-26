@@ -28,3 +28,5 @@ flowchart LR
 ```
 
 In questo caso la soluzione ammissibile è $V=8$. Si può fare di meglio?
+
+Si potrebbe aumentare la quantità di flusso lungo questo cammino orientato: $P=\{1,2,4,5,7\}$.
