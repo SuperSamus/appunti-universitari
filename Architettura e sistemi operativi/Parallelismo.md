@@ -101,14 +101,13 @@ Si può considerare come una pipeline di 3 stadi.
 
 $T_S=\max\{t_{sched},t_f,t_{gath}\}$
 
-Dato $t_e$ come il tempo per assegnare un lavoro, $T_C=nw*t_e$.
+Per le massime performance, dato $t_e$ come il tempo per assegnare un lavoro, ci bastano $nw=\cfrac{t_f}{t_e}$. Qui si può vedere che dopo ogni $t_f$, 
 
 ```
-|-|-|-|-|-| sched
+|-|-|-|-|-|-|-|-| sched
   |-------|-------| f
     |-------|-------| f
       |-------|-------| f
         |-------|-------| f
-          |-------|-------| f
-         |-|-|-|-|
+          |-|-|-|-|-|-|-|-| gath
 ```
