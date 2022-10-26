@@ -68,9 +68,9 @@ xm...x1 --> s1 --> s2 --> s3 --> s4 -->
 ```
 
 - $L=∑\limits_{i=i}^4 t_i$
-- $T_{completamento}=∑t_i+(m-1)\max\{t_i\}$
-	- $T_C≈m(T_s)$
 - $T_{servizio}=\max\{t_i\}$
+- $T_{completamento}=∑\limits_{i=i}^4 t_i+(m-1)\max\{t_i\}$
+	- $T_C≈m(T_s)$
 - $t_i$: latenza di $f_i$
 Si può aumentare l'efficienza combinando diversi stati TODO:
 ```mermaid
