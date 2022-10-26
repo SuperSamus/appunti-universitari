@@ -62,9 +62,9 @@ Il tempo di servizio si allinea sullo stadio più lungo. Con $m=3$:
 
 Più genericamente:
 ```
-    f1     f2     f3     f4
---> s1 --> s2 --> s3 --> s4 -->
-    t1     t2     t3     t4
+            f1     f2     f3     f4
+xm...x1 --> s1 --> s2 --> s3 --> s4 -->
+            t1     t2     t3     t4
 ```
 
 - $L=∑\limits_{i=i}^4 t_i$
