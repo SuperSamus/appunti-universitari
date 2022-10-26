@@ -117,3 +117,15 @@ $T_C=nw*t_e+\cfrac{m}{nw}t_f+t_{gath}≈\cfrac{m}{nw}t_f=m(T_S)$
 $sp(nw)=\cfrac{mt_f}{m(\frac{t_f}{nw})}=nw$
 
 Ricordando però che $nw$ si riferisce al numero di worker effettivamente usati, non semplicemente messi lì.
+
+---
+
+Tornando all'esempio di prima, la pipeline coi tempi $t=\{2,2,3,1\}$.
+
+Con $PIPE(S_1,S_2,S_3,S_4)$, abbiamo $T_S=3$.
+
+Ma se possiamo trasformare il terzo stato in una farm con 2 worker, otteniamo $PIPE(S_1,S_2,FARM(S_3,2),S_4)$, e $T_S=\max\{2,2,\cfrac{3}{2},1\}=2$.
+
+Dividiamo di più: $PIPE(FARM(S_1,2),FARM(S_2,2),FARM(S_3,2),S_4)$, allora $T_S=1$.
+
+Ma forse è meglio $FARM(PIPE(S_1,S_2,S_3,S_4),7)$
