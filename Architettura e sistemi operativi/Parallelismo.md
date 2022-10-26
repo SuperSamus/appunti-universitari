@@ -60,7 +60,6 @@ Il tempo di servizio si allinea sullo stadio più lungo. Con $m=3$:
 ```
 
 - $T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
-- $sp(nw)=4⇔nw≥4$
 
 Più genericamente:
 ```
@@ -75,7 +74,7 @@ xm...x1 --> s1 --> s2 --> s3 --> s4 -->
 	- Di solito nel mondo reale $m>>k$, quindi $T_C≈m(T_S)$
 - $t_i$: latenza di $f_i$
 
-Si può aumentare l'efficienza facendo lavorare più stati a uno stesso worker Per esempio:
+Si può aumentare l'efficienza facendo lavorare più stati a uno stesso worker. Per esempio:
 ```mermaid
 flowchart LR
 subgraph 3t
@@ -84,10 +83,9 @@ end
 3t --> S3(("S3 (3t)")) --> S4(("S4 (2t)"))
 ```
 
-Vediamo com'è lo speedup:
-- Se $nw>k$ 
+Lo speedup non è cambiato, in quanto $T_S$ è uguale. In questo modo $T_C$ rimane quasi uguale, però la latenza peggiora.
 
-Senza cambiare $T_S$. In questo modo $T_C$ rimane quasi uguale, però la latenza peggiora.
+Questo è un caso perticolare. Se per esempio 
 
 ### Farm
 
