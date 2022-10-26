@@ -61,9 +61,10 @@ Il tempo di servizio si allinea sullo stadio più lungo. Con $m=3$:
 
 - $T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
 
-Più genericamente:
+### Genericamente
+
 ```
- Input      f1     f2     f3     f4
+ Input      f1     f2     f3     f4     Output
 xm...x1 --> s1 --> s2 --> s3 --> s4 -->
             t1     t2     t3     t4
 ```
@@ -93,5 +94,21 @@ Il tempo per eseguire le funzioni può inoltre essere variabile per diversi moti
 
 ```mermaid
 flowchart LR
-Input --> |"xm...x1"| schedule --> f1[f] & f2[f] & f[...] & fn[f] --> gather --> |"f(xm)...f(x1)"| Output
+Input --> |"xm...x1"| schedulatore --> f1[f] & f2[f] & f[...] & fn[f] --> gatherer --> |"f(xm)...f(x1)"| Output
+```
+
+Si può considerare come una pipeline di 3 stadi.
+
+$T_S=\max\{t_{sched},t_f,t_{gath}\}$
+
+Dato $t_e$ come il tempo per assegnare un lavoro, $T_C=nw*t_e$.
+
+```
+|-|-|-|-|-| sched
+  |-------|-------| f
+    |-------|-------| f
+      |-------|-------| f
+        |-------|-------| f
+          |-------|-------| f
+         |-|-|-|-|
 ```
