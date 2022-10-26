@@ -33,13 +33,13 @@ Speedup: $sp(nw)=\cfrac{T_{miglior_sequenziale}}{T_{parallelo(nw)}}$ ($nw$ è il
 ## Pipeline processore
 
 ```
-   tf=1  td=2  te=3  twb=2
 --> F --> D --> E --> WB -->
+   tf=1  td=2  te=3  twb=2
 ```
 
 Latenza $L=t_f+t_d+t_e+t_{wb}$
 
-Con 4 stadi, abbiamo $k=4$.
+Con 4 stadi ($F, D, E ,WB$), abbiamo $k=4$.
 
 Il tempo di servizio si allinea sullo stadio più lungo:
 
@@ -50,15 +50,18 @@ Il tempo di servizio si allinea sullo stadio più lungo:
       -> -> -> twb
 ```
 
-$T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
-
-$sp(nw)=4⇔nw≥4$
+- $T_{servizio}=\max\{t_f,t_d,t_e,t_{wb}\}$
+- $sp(nw)=4⇔nw≥4$
 
 Più genericamente:
 ```
-    f1     f2     f3     f4
---> s1 --> s2 --> s3 --> s4 -->
-    t1     t2     t3     t4
+           f1     f2     f3     f4
+xm...x1--> s1 --> s2 --> s3 --> s4 -->
+           t1     t2     t3     t4
 ```
 
-$t_I
+- $t_i$: latenza di $f_i$
+- $L=∑\limits_{i=i}^4 t_i$
+- $T_{completamento}=∑t_i+(m-1)\max\{t_i\}$
+	- $T_C≅m(T_s)$
+- $T_{servizio}=\max\{t_i\}$
