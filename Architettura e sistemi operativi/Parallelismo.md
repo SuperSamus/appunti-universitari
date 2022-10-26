@@ -112,4 +112,8 @@ Per le massime performance, dato $t_e$ come il tempo per assegnare un lavoro, ci
           |-|-|-|-|-|-|-|-| gath
 ```
 
-$T_C=nw*t_e+\cfrac{m}{nw}t_f+t_{gath}$
+$T_C=nw*t_e+\cfrac{m}{nw}t_f+t_{gath}≈\cfrac{m}{nw}t_f=m(T_S)$
+
+$sp(nw)=\cfrac{mt_f}{m(\frac{t_f}{nw})}=nw$
+
+Ricordando però che $nw$ si riferisce al numero di worker effettivamente usati, non semplicemente messi lì.
