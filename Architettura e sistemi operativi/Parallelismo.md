@@ -158,3 +158,17 @@ Dati:
 $L=t_{split}+⌈\cfrac{m}{nw}⌉t_f+t_{comp}$
 
 Non ci vogliono per forza più worker: i calcolatori possono avere operazioni per calcolare insieme più numeri di un vettore (*calcolo vettoriale*). Per esempio i processori x86 hanno instruction set come SSE o AVX per questo scopo.
+
+### Reduce
+
+Simile a Map, ma si usano operazioni commutative e associative, in modo da poter avere un albero di operazioni.
+
+Per esempio, somma di un vettore $\{n_1,n_2,n_3,n_4\}$:
+```mermaid
+flowchart TB
+n1 & n2 --> +1((+))
+n3 & n4 --> +2((+))
++1 & +2 --> +3((+))
+```
+
+Profondità: $\log_2 n$ (Tecnicamente questo si può fare anche con Map)
