@@ -66,3 +66,33 @@ flowchart LR
 - $θ^+=\min\{u_{ij}-x_{ij}:(i,j)∈P^+\}$
 - $θ^-=\min\{x_{ij}:(i,j)∈P^-\}$
 - $θ=\min\{θ^+,θ^-\}$
+
+$P$ è un *cammino aumentante* se:
+- $P$ è un cammino da $s$ a $t$
+- $θ>0$
+
+Bilanci:
+```
+--------->
++θ    +θ
+--> i -->
+
+
+--------->
++θ     -θ
+--> i <--
+
+
+<---------
+-θ    -θ
+--> i -->
+
+
+--------->
+ -θ   +θ
+<-- i -->
+```
+
+Un flusso $x$ è di valore massimo
+⇔
+Non esistono cammini aumentanti rispetto al flusso $x$
