@@ -30,8 +30,9 @@ Misure primitive:
 
 Dati:
 - $nw$ numero di workers
+- - $t_i$: latenza dello stadio $i$
 - $k$ numero di stadi
-- $m$ numero di task 
+- $m$ numero di task
 	- Di solito $m>>k$
 
 Speedup: $sp(nw)=\cfrac{T_{miglior\_sequenziale}}{T_{parallelo(nw)}}=\cfrac{m(∑t_i)}{m(\max\{t_i\})}=\cfrac{∑t_i}{\max\{t_i\}}$
@@ -66,17 +67,24 @@ Più genericamente:
     t1     t2     t3     t4
 ```
 
-- $t_i$: latenza di $f_i$
 - $L=∑\limits_{i=i}^4 t_i$
 - $T_{completamento}=∑t_i+(m-1)\max\{t_i\}$
 	- $T_C≅m(T_s)$
 - $T_{servizio}=\max\{t_i\}$
-
+- $t_i$: latenza di $f_i$
 Si può aumentare l'efficienza combinando diversi stati TODO:
 ```mermaid
 flowchart LR
 subgraph 3t
 S1("S1 (1t)") --> S2("S2 (2t)")
 end
-3t --> S3 --> S4
+3t --> S3("S3 (3t)") --> S4("S4 (2t)")
+```
+TODO
+
+### Farm
+
+```mermaid
+flowchart LR
+Input -- "xm...x1" --> shced --> f1[f] & f2[f] & f3[f] & f[...] & fn[f] --> gather --> result["f(xm)...f(x1)"]
 ```
