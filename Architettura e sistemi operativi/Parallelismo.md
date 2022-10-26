@@ -28,7 +28,13 @@ Misure primitive:
 - Latenza
 - Tempo di servizio (banda)
 
-Speedup: $sp(nw)=\cfrac{T_{miglior_sequenziale}}{T_{parallelo(nw)}}$ ($nw$ è il numero di workers)
+Dati:
+- $nw$ numero di workers
+- $k$ numero di stadi
+- $m$ numero di task 
+	- Di solito $m>>k$
+
+Speedup: $sp(nw)=\cfrac{T_{miglior\_sequenziale}}{T_{parallelo(nw)}}=\cfrac{m(∑t_i)}{m(\max\{t_i\})}=\cfrac{∑t_i}{\max\{t_i\}}$
 
 ## Pipeline processore
 
@@ -41,7 +47,7 @@ Latenza $L=t_f+t_d+t_e+t_{wb}$
 
 Con 4 stadi ($F, D, E ,WB$), abbiamo $k=4$.
 
-Il tempo di servizio si allinea sullo stadio più lungo:
+Il tempo di servizio si allinea sullo stadio più lungo. Con $m=3$:
 
 ```
 >>> tf
@@ -55,9 +61,9 @@ Il tempo di servizio si allinea sullo stadio più lungo:
 
 Più genericamente:
 ```
-           f1     f2     f3     f4
-xm...x1--> s1 --> s2 --> s3 --> s4 -->
-           t1     t2     t3     t4
+    f1     f2     f3     f4
+--> s1 --> s2 --> s3 --> s4 -->
+    t1     t2     t3     t4
 ```
 
 - $t_i$: latenza di $f_i$
@@ -65,3 +71,12 @@ xm...x1--> s1 --> s2 --> s3 --> s4 -->
 - $T_{completamento}=∑t_i+(m-1)\max\{t_i\}$
 	- $T_C≅m(T_s)$
 - $T_{servizio}=\max\{t_i\}$
+
+Si può aumentare l'efficienza combinando diversi stati TODO:
+```mermaid
+flowchart LR
+subgraph 3t
+S1("S1 (1t)") --> S2("S2 (2t)")
+end
+3t --> S3 --> S4
+```
