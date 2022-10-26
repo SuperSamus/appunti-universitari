@@ -48,4 +48,21 @@ flowchart LR
 
 Ora $V=8+1=9$
 
-Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $\{1,2,4,7\}$, ma $(4,7)$ è già saturo, quindi in $4$ si accumula un'unità di flusso. Possiamo allora riportare questo eccesso indietro, verso il nodo $6$, causando ora un eccesso di 1 lì. Si può rifare la stessa cosa verso il nodo $3$, che però ha spazio libero in $(3,5)$, come c'è spazio in $(5,7)$
+Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $\{1,2,4,7\}$, ma $(4,7)$ è già saturo, quindi in $4$ si accumula un'unità di flusso. Possiamo allora riportare questo eccesso indietro, verso il nodo $6$, causando ora un eccesso di 1 lì. Si può rifare la stessa cosa verso il nodo $3$, che però ha spazio libero in $(3,5)$, come c'è spazio in $(5,7)$. Abbiamo quindi questo cammino, anche se non è orientato.
+
+```mermaid
+flowchart LR
+1 ==> |5/6| 2 ==> |5/5| 4 --> |6/6| 7
+1 --> |1/1| 6 ==> |2/4| 4 --> |1/1| 5
+1 --> |4/4| 3 ==> |3/4| 5 ==> |4/5| 7
+3 ==> |1/2| 6 --> |0/2| 2
+```
+
+- $P=\{1,2,4,6,3,5,7\}$
+- $P^+ \; (1,2) \; (2,4) \; (3,5) \; (5,7)$ Concordi con il verso del cammino.
+	- Il flusso è *aumentato* ↑
+- $P^- \; (6,4) \; (3,6)$ Concordi con il verso del cammino
+	- Il flusso è *diminuito* ↓
+- $θ^+=\min\{u_{ij}-x_{ij}:(i,j)∈P^+\}$
+- $θ^-=\min\{x_{ij}:(i,j)∈P^-\}$
+- $θ=\min\{θ^+,θ^-\}$
