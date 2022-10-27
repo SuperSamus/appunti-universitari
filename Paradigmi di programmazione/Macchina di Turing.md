@@ -52,3 +52,5 @@ C'è anche bisogno di:
 - Memoria (dati programmi)
 - CPU
 - Istruzioni
+
+Macchina astratta ≜ Insieme di funzionalità (strutture dati e algoritmi) che simulano il comportamento di una macchina fisica
