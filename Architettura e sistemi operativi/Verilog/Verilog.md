@@ -76,19 +76,27 @@ module adder(output carry, output [N-1:0] z, input [N-1:0] a, input [N-1:0] b);
 
     parameter N = 8;
 
-    genvar i;
     wire [N-2:0] c;
 
     // Il primo ha un carry pari a 0
     fa f0(c[0],z[0],a[0],b[0],1'b0);
     // Quelli intermedi prendono il riporto dal precedente e propagano il riporto a quelli successivi
     generate
+        genvar i;
         for(i=1;i<N-1;i=1+1)
 	        fa f(c[i], z[i], a[i], b[i], c[i-1]);
 	endgenerate
     // L'ultimo genera il segnale di riporto del modulo intero
     fa f7(carry,z[N-1],a[N-1],b[N-1],c[N-2]);
 endmodule
+```
+
+Nota che Verilog permette di usare scorciatoie per evitare di creare le prime due primitive:
+
+```Verilog
+module fa(output c, output z, input x, input y, input r);
+    assign { c, z } = a + b + r;
+endmodule;
 ```
 
 ## Testbench
@@ -122,6 +130,8 @@ $finish;
 ```
 
 ## Behavior
+
+I vari `begin-end` si possono omettere se il blocco si applica solo al comando successivo.
 
 - `initial begin`
 	- `comandi`
