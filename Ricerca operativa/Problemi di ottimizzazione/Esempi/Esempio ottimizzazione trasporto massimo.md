@@ -106,13 +106,18 @@ Non esistono cammini aumentanti rispetto al flusso $x$
 
 Il massimo valore dei flussi ammissibili è uguale alla minima capacità dei tagli che separano $s$ a $t$.
 
-Ciò si può sfruttare per l'**algoritmo dei cammini aumentanti** (*Ford-Fulkerson*.
+Ciò si può sfruttare per l'**algoritmo dei cammini aumentanti** (*Ford-Fulkerson*).
 
-Assumendo un $x$ iniziale "intero" ($x_{ij}∈ℤ_+$) e una capacità del taglio finita ($u_{ij}∈ℤ_+)$
+Assumendo un $x$ iniziale "intero" ($x_{ij}∈ℤ_+$) e una capacità del taglio finita ($u_{ij}∈ℤ_+)$:
 - $u(\{s\},N∖\{s\})≤(n-1)U$
 - $U=\max\{u_{ij}:(i,j)∈A\}$
-- Costo peggiore: $O(nmu)$
+- Complessità: $O(nmu)$
 	- Numero di iterazioni: $O(nU)$
+	- Costo iterazione: $O(m)$
+
+Si può garantire la finitezza con una variante di *Edmonds-Karp*, con visite FIFO:
+- Complessità: $O(nm^2)$
+	- Numero di iterazioni: $O(nm)$
 	- Costo iterazione: $O(m)$
 
 ### Bilanci
