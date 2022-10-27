@@ -349,4 +349,16 @@ type ty =
 
 ```OCaml
 let rec tyinf e =
+    match e with
+        | Val v -> match v with
+            | Valb b -> Some Tybool
+            | Valn n -> Some Tyint
+        | Op (Add,e1,e2) ->
+            let t1 = tyinf e1
+                t2 = tyinf e2
+            in
+            match t1,t2 with
+                | Some Tyint, Some Tyint -> Some Tyint
+                | _, _ -> None
+(* ... *)
 ```
