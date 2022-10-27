@@ -1,4 +1,4 @@
-# Esempio ottimizzazione trasporto massimo
+# Esempio [[Problemi di ottimizzazione|ottimizzazione]] trasporto massimo
 
 ```mermaid
 flowchart LR
@@ -71,7 +71,19 @@ $P$ è un *cammino aumentante* se:
 - $P$ è un cammino da $s$ a $t$
 - $θ>0$
 
-Si può fare ancora meglio? Facendo un taglio che separa l'origine da tutto, sembra che al massimo si possa ottenere $6+1+4=11$, idem separando la destina
+### [[Ottimizzazione grafi#^64bc6c|Tagli]]
+
+Si può fare ancora meglio? Facendo un taglio che separa l'origine da tutto e prendendo gli archi diretti nel taglio, sembra che al massimo si possa ottenere $6+1+4=11$, idem separando la destinazione da tutto, $6+5=11$. Tuttavia il taglio che separa $\{1,2\}$ da tutto il resto dice un altra storia: $5+1+4=10$ (si esclude l'arco inverso nel taglio $(6,2)$), e abbiamo già raggiunto un $V=10$.
+
+Generalmente:
+- $(N_s,N_t)$ taglio che separa $s$ da $t$
+	- $(N_s,N_t)$ taglio
+	- $s∈N_s,t∈N_t$
+- $A^+(N_s,N_t)=\{(i,j∈A:i∈N_s,j∈N_t\}$ archi diretti nel taglio
+- $A^-(N_s,N_t)=\{(i,j∈A:i∈N_t,j∈N_s\}$ archi inversi nel taglio
+- $u(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}u_{ij}$
+
+
 
 ### Bilanci
 
@@ -102,7 +114,7 @@ Non esistono cammini aumentanti rispetto al flusso $x$
 
 ### Grafo residuo
 
-Per rilevare potenziali cammini, si ragiona così (**):
+Per rilevare potenziali cammini, si ragiona così:
 
 ```mermaid
 flowchart TB
