@@ -159,6 +159,16 @@ $$
 \cfrac{t→_βs}{λx.t→_βλx.s}
 $$
 
+### Option
+
+Per ogni tipo è definibile l'unione `option`
+
+```OCaml
+type 'a option =
+    | None
+    | Some of 'a;;
+```
+
 ## Liste
 
 Lista ≜ Sequenza *finita*, *ordinata* e *immutabile* di espressioni *dello stesso tipo* (mentre le tuple possono avere i tipi che vogliono)
@@ -289,6 +299,8 @@ eq --> + & 5
 + --> 3 & 2
 ```
 
+Sintassi:
+
 ```OCaml
 type val =
     | Valb of bool
@@ -301,10 +313,27 @@ type op =
 
 type exp =
     | Val of val
-    | Ite of exp * exp * exp
     | Op of op * exp * exp;;
+    | Ite of exp * exp * exp
 
 eval(Ite(Op(Eq,Op(Add,Valn(3),Valn(2)),Valn(5)),Valn(0),Valn(1)))
 ```
 
 `eval` è definito come $eval:exp→val \; option$
+
+```OCaml
+let rec eval e =
+    match e with
+        | Val v -> Some v
+        | Op(f,e1,e2) -> 
+            let v1 = eval e1
+                v2 = eval e2
+            in
+            match v1,v2 with
+                | None,_ | _, None -> None
+                | Some w1, Some w2 ->
+                    match f with
+                        | Add -> match w1, w2
+        | Ite()
+        
+```
