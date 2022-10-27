@@ -48,7 +48,7 @@ flowchart LR
 
 Ora $V=8+1=9$
 
-Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $\{1,2,4,7\}$, ma $(4,7)$ è già saturo, quindi in $4$ si accumula un'unità di flusso. Possiamo allora riportare questo eccesso indietro, verso il nodo $6$, causando ora un eccesso di 1 lì. Si può rifare la stessa cosa verso il nodo $3$, che però ha spazio libero in $(3,5)$, come c'è spazio in $(5,7)$. Abbiamo quindi questo cammino, anche se non è orientato.
+Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $\{1,2,4,7\}$, ma $(4,7)$ è già saturo, quindi in $4$ si accumula un'unità di flusso. Possiamo allora riportare questo eccesso indietro, verso il nodo $6$, causando ora un eccesso di 1 lì. Si può rifare la stessa cosa verso il nodo $3$, che però ha spazio libero in $(3,5)$, come c'è spazio in $(5,7)$. Abbiamo quindi questo cammino con $V=10$, anche se non è orientato.
 
 ```mermaid
 flowchart LR
@@ -96,3 +96,16 @@ Bilanci:
 Un flusso $x$ è di valore massimo
 ⇔
 Non esistono cammini aumentanti rispetto al flusso $x$
+
+Per rilevare potenziali cammini, si ragiona così:
+
+```mermaid
+flowchart TB
+subgraph Arco
+i --> |xij/uij| j
+end
+Arco --> |non saturo xij<uij| Allora
+subgraph Allora
+i1[i] --> j1[j]
+end
+```
