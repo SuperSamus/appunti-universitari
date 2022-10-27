@@ -161,7 +161,7 @@ $$
 
 ### Option
 
-Per ogni tipo è definibile l'unione `option`
+Per ogni tipo è definibile l'unione `'a option`
 
 ```OCaml
 type 'a option =
@@ -316,7 +316,7 @@ type exp =
     | Op of op * exp * exp;;
     | Ite of exp * exp * exp
 
-eval(Ite(Op(Eq,Op(Add,Valn(3),Valn(2)),Valn(5)),Valn(0),Valn(1)))
+eval(Ite(Op(Eq,Op(Add,Valn 3,Valn 2),Valn 5),Valn 0,Valn 1))
 ```
 
 `eval` è definito come $eval:exp→val \; option$
@@ -333,7 +333,20 @@ let rec eval e =
                 | None,_ | _, None -> None
                 | Some w1, Some w2 ->
                     match f with
-                        | Add -> match w1, w2
-        | Ite()
-        
+                        | Add -> match w1, w2 with
+                            | Valn n1, Valn n2 -> Some Valn(n1+n2)
+                            | _, _ -> None;;
+(* ... *)
+```
+
+Inferenza di tipo
+
+```OCaml
+type ty =
+    | Tybool
+    | Tyint
+```
+
+```OCaml
+let rec tyinf e =
 ```
