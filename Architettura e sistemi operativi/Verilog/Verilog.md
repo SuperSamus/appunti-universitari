@@ -159,7 +159,7 @@ I vari `begin-end` si possono omettere se il blocco si applica solo al comando s
 - `$display`
 	- Equivalente di `printf`
 - `$monitor`
-	- Stampa la variabile ogni volta che cambia
+	- Stampa la stringa ogni volte che una delle variabili cambia
 
 Assegna uno alla volta:
 
