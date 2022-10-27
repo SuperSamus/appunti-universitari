@@ -92,8 +92,19 @@ Quindi formalmente, proviamo a trovare un cammino aumentante. L'unico arco possi
 
 - $N_s=\{\text{nodi visitati}\}=\{1,2\}$
 - $N_t=\{\text{nodi non visitati}\}=\{3,4,5,6,7\}$
+- $(i,j)∈A^+(N_s,N_t)→x_{ij}=u_{ij}$
+- $(i,j)∈A^-(N_s,N_t)→x_{ij}=0$
+- $v=x(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}x_{ij}-∑\limits_{(i,j)∈A^-(N_s,N_t)}x_{ij}=∑\limits_{(i,j)∈A^+(N_s,N_t)}u_{ij}=u(N_s,N_t)$
 
+Questo dimostra il ⇐ di:
 
+### Teorema flusso massimo - taglio di capacità minima (max flow - min cut)
+
+Un flusso $x$ è di valore massimo
+⇔
+Non esistono cammini aumentanti rispetto al flusso $x$
+
+Il massimo valore dei flussi ammissibili è uguale alla minima capacità dei tagli che separano $s$ a $t$.
 
 ### Bilanci
 
@@ -117,10 +128,6 @@ Quindi formalmente, proviamo a trovare un cammino aumentante. L'unico arco possi
  -θ   +θ
 <-- i -->
 ```
-
-Un flusso $x$ è di valore massimo
-⇔
-Non esistono cammini aumentanti rispetto al flusso $x$
 
 ### Grafo residuo
 
