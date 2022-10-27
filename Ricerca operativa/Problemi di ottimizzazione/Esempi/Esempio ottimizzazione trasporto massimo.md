@@ -88,6 +88,13 @@ Generalmente:
 
 Se $v=x(N_s,N_t)=u(N_s,N_t)$, allora il flusso è di valore massimo e il taglio è di capacità minima.
 
+Quindi formalmente, proviamo a trovare un cammino aumentante. L'unico arco possibile è $(1,2)$, e il cammino è già terminato.
+
+- $N_s=\{\text{nodi visitati}\}=\{1,2\}$
+- $N_t=\{\text{nodi non visitati}\}=\{3,4,5,6,7\}$
+
+
+
 ### Bilanci
 
 ```
