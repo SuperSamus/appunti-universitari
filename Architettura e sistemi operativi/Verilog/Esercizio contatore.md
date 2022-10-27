@@ -105,3 +105,20 @@ endmodule
 ```
 
 Ora ci mancano solo i testbench.
+
+## Approccio behavioral
+
+Si programma direttamente la rete sequenziale utilizzando assegnamenti, blocchi `always`, `if-then-else`, `generate`...
+
+```Verilog
+module countermod4(output [1:0]z, input x, input clock);
+    reg [1:0] s, news;
+
+    initial begin
+        s <= 0;
+        news <= 0;
+    end
+
+    always @(posedge clock)
+        s <= news;
+```
