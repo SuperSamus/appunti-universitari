@@ -81,9 +81,10 @@ Generalmente:
 	- $s∈N_s,t∈N_t$
 - $A^+(N_s,N_t)=\{(i,j∈A:i∈N_s,j∈N_t\}$ archi diretti nel taglio
 - $A^-(N_s,N_t)=\{(i,j∈A:i∈N_t,j∈N_s\}$ archi inversi nel taglio
-- $u(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}u_{ij}$
+- $u(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}u_{ij}$ capacità nel taglio
+- $x(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}x_{ij}-∑\limits_{(i,j)∈A^-(N_s,N_t)}x_{ij}$ flusso nel taglio
 
-
+**Proposizione**: sia $y$ il valore di un flusso ammissibile $x=(x_{ij}$) e sia $(N_s.N_t)$ un taglio che separa $s$ da $t$. Allora $v=x(N_s,N_t)≤u(N_s,N_t)$.
 
 ### Bilanci
 
