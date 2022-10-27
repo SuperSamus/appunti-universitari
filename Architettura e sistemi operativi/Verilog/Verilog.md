@@ -149,20 +149,27 @@ $finish;
 - `$display`
 	- Equivalente di `printf`
 - `$monitor`
-	- Printa la variabile ogni volta che cambia
+	- Stampa la variabile ogni volta che cambia
 
 Assegna uno alla volta:
 
-```
+```Verilog
 a = 1;
 b = 0;
 ```
 
-Assegna contemporaneamente:
+Assegna contemporaneamente (non bloccante):
 
-```
+```Verilog
 a <= 1;
 b <= 0;
+```
+
+Quest'ultimo si può usare per esempio per scambiare due variabili, senza necessità di usare una terza variabile temporanea:
+
+```Verilog
+a <= b;
+b <= a;
 ```
 
 ## Altri esempi
