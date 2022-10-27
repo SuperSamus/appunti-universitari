@@ -97,15 +97,33 @@ Un flusso $x$ è di valore massimo
 ⇔
 Non esistono cammini aumentanti rispetto al flusso $x$
 
-Per rilevare potenziali cammini, si ragiona così:
+Per rilevare potenziali cammini, si ragiona così (*grafo residuo*):
 
 ```mermaid
 flowchart TB
 subgraph Arco
 i --> |xij/uij| j
 end
-Arco --> |non saturo xij<uij| Allora
-subgraph Allora
+Arco --> |"non saturo xij&lt;uij"| CodaTesta
+subgraph CodaTesta
 i1[i] --> j1[j]
 end
+Arco --> |"non vuoto xij&gt;0"| TestaCoda
+subgraph TestaCoda
+j2[j] --> i2[i]
+end
 ```
+
+Applichiamolo al grafo di prima mentre $V=9$:
+
+```mermaid
+flowchart LR
+1 <--> |4/6| 2 <--> |4/5| 4
+7 --> |6/6| 4
+6 --> |1/1| 1
+6 >--> |3/4| 4 --> |1/1| 5
+3 --> |4/4| 1
+3 --> |2/4| 5 --> |3/5| 7
+3 --> |2/2| 6 --> |0/2| 2
+```
+
