@@ -71,7 +71,10 @@ $P$ è un *cammino aumentante* se:
 - $P$ è un cammino da $s$ a $t$
 - $θ>0$
 
-Bilanci:
+Si può fare ancora meglio? Facendo un taglio che separa l'origine da tutto, sembra che al massimo si possa ottenere $6+1+4=11$, idem separando la destina
+
+### Bilanci
+
 ```
 --------->
 +θ    +θ
@@ -97,7 +100,9 @@ Un flusso $x$ è di valore massimo
 ⇔
 Non esistono cammini aumentanti rispetto al flusso $x$
 
-Per rilevare potenziali cammini, si ragiona così (*grafo residuo*):
+### Grafo residuo
+
+Per rilevare potenziali cammini, si ragiona così (**):
 
 ```mermaid
 flowchart TB
@@ -126,4 +131,3 @@ flowchart LR
 6 --> |2/2| 3 --> |4/4| 1
 6 --> |0/2| 2
 ```
-
