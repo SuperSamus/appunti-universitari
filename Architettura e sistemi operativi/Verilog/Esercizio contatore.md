@@ -100,7 +100,8 @@ module countermod4(output [N-1:0]z, input x, input clock);
 
     registro #(N) regs(rout, rin, 1'b1, clock);
     statouscita newst(rin, rout, x);
-    assign z = rin;
+    assign
+        z = rin;
 endmodule
 ```
 
@@ -121,4 +122,11 @@ module countermod4(output [1:0]z, input x, input clock);
 
     always @(posedge clock)
         s <= news;
+
+    always @(x,s)
+        news <= s+x;
+
+    assign
+        z = news;
+endmodule
 ```
