@@ -290,16 +290,21 @@ eq --> + & 5
 ```
 
 ```OCaml
-type exp =
+type val =
     | Valb of bool
-    | Valn of int
-    | Ite of exp * exp * exp
-    | Op of op * exp * exp;;
+    | Valn of int;;
 
 type op =
     | Add
     | And
     | Eq;;
 
-Ite(Op(Eq,Op(Add,Valn(3),Valn(2)),Valn(5)),Valn(0),Valn(1))
+type exp =
+    | Val of val
+    | Ite of exp * exp * exp
+    | Op of op * exp * exp;;
+
+eval(Ite(Op(Eq,Op(Add,Valn(3),Valn(2)),Valn(5)),Valn(0),Valn(1)))
 ```
+
+`eval` è definito come $eval:exp→val \; option$
