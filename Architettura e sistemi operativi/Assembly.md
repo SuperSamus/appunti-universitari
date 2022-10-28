@@ -7,3 +7,8 @@ Linguaggio di programmazione simile alla rappresentazione binaria della macchina
 ARM: Advanced RISC Machine
 
 RISC: Reduced Instruction Set Computer
+
+Principi:
+- Regolarità ⇒ Semplicità
+- Piccolo è bello
+- 
