@@ -83,7 +83,7 @@ module adder(output carry, output [N-1:0] z, input [N-1:0] a, input [N-1:0] b);
     // Quelli intermedi prendono il riporto dal precedente e propagano il riporto a quelli successivi
     generate
         genvar i;
-        for(i=1;i<N-1;i=1+1)
+        for(i=1;i<N-1;i=i+1)
 	        fa f(c[i], z[i], a[i], b[i], c[i-1]);
 	endgenerate
     // L'ultimo genera il segnale di riporto del modulo intero
