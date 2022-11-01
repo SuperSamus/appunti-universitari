@@ -1,8 +1,16 @@
 # Automi
 
-- Automa di Mealy
+Automa di Mealy
 	- $z=f_z(s,x)$
 	- $s'=f_s(s,x)$
+
+```mermaid
+flowchart LR
+x --> fs
+fs --> |s'| reg --> |s| fs & fz
+fz --> z
+```
+
 - Automa di Moore
 	- $z=f_z(s)$
 	- $s'=f_s(s,x)$
@@ -26,8 +34,8 @@ s3 --> |b,c/0| s1
 
 ```mermaid
 flowchart LR
-x --> fs' & fz
-fs' --> |s2| reg --> |s1| fs' & fz
+x --> fs & fz
+fs --> |s'| reg --> |s| fs & fz
 fz --> z
 ```
 
@@ -86,8 +94,6 @@ $z=b_1b_0$
 $b_1'=\bar{b_1}b_0\bar{x_1}x_0+b_1\bar{b_0}\bar{x_1}\bar{x_0}$
 
 $b_0'=\bar{x_1}\bar{x_0}$
-
-TODO: Riguardare seconda parte
 
 ## Rete che calcola parità di una sequenza di bit
 
