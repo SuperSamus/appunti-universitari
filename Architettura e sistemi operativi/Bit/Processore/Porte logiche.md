@@ -263,6 +263,8 @@ Se è necessaria la sincronizzazione nel circuito (ovvero se non si sta parlando
 
 ### D flip-flop
 
+^5dfc12
+
 Con questo design Q può essere cambiato solo nell'istante in cui CLOCK diventa 1 (*rising edge*):
 
 ```mermaid
@@ -274,4 +276,4 @@ CLOCK --> DL2
 
 È il design utilizzato nei registri.
 
-Ogni volta che il clock si accende, tutti i registri dovrebbero essere attesa dell'accensione del clock. Questo vuol dire che il clock non può alternarsi oltre a una certa velocità.
+Ogni volta che il clock si accende, tutti i registri dovrebbero essere attesa dell'accensione del clock. Questo vuol dire c'è un limite alla velocità del clock, che dipende dal circuito che richiede più tempo.
