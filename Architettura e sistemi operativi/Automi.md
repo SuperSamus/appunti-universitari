@@ -31,30 +31,23 @@ fs' --> |s2| reg --> |s1| fs' & fz
 fz --> |0| z
 ```
 
-Con il carattere ($\{a,b,c\}$) rappresentato dai bit $x_1x_0$, lo stato corrente da $b_1b_0$, il nuovo stato da $b_1'b_0'$, e il valore di riporto (quello a destra dello `/`) con $z$:
+Con il carattere $\{a,b,c\}$ rappresentato dai bit $x_1x_0$, lo stato corrente da $b_1b_0$, il nuovo stato da $b_1'b_0'$, e il valore di riporto (quello a destra dello `/`) con $z$:
 
-| $b_1b_0$ | $x_1x_0$ | $b_1'b_0'$ |
-| -------- | -------- | ---------- |
-| 00       | 00       | 01         |
-| 00       | 01       | 00         |
-| 00       | 10       | 00         |
-| 01       | 00       | 01         |
-| 01       | 01       | 10         |
-| 01       | 10       | 00         |
-| 10       | 00       | 00         |
-| 10       | 01       | 00         |
-| 10       | 10       | 00         |
+| $b_1b_0$ | $x_1x_0$ | $b_1'b_0'$ | $z$ |
+| -------- | -------- | ---------- | --- |
+| 00       | 00       | 01         | 0   |
+| 00       | 01       | 00         | 0   |
+| 00       | 10       | 00         | 0   |
+| 01       | 00       | 01         | 0   |
+| 01       | 01       | 10         | 0   |
+| 01       | 10       | 00         | 0   |
+| 10       | 00       | 00         | 1   | 
+| 10       | 01       | 00         | 0   |
+| 10       | 10       | 00         | 0   |
 
 $b_1'=\bar{b_1}b_0\bar{x_1}x_0$
 
 $b_0'=\bar{b_1}\bar{b_0}\bar{x_1}\bar{x_0}+\bar{b_1}b_0\bar{x_1}\bar{x_0}$
-
-
-$f_z$
-
-| $b_1b_0$ | $x_1x_0$ | $z$ |
-| -------- | -------- | --- |
-| 10       | 00       | 1   |
 
 $z=b_1\bar{b_0}\bar{x_1}\bar{x_0}$
 
@@ -98,8 +91,10 @@ TODO: Riguardare seconda parte
 
 ## Rete che calcola parità di una sequenza di bit
 
-input: $011010111101000$
-z_:      $101100101001111$
+```
+input: 011010111101000
+z_:    101100101001111
+```
 
 Mealy:
 
