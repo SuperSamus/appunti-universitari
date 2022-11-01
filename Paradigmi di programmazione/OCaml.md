@@ -8,8 +8,8 @@ Consente di scrivere:
 
 ```OCaml
 (* Dichiarazioni *)
-let eta = 18;;
-let anno: int = 2022;;
+let eta = 18 in
+let anno: int = 2022 in
 (* Espressioni *)
 eta * anno;;
 ```
@@ -65,7 +65,7 @@ fun x -> fun y -> x + y;;
 let p: {x: float; y: float} = {x = 4.0; y = -3.0}
 let distanza p q =
     let dx = (p.x-q.x)**2.0
-        dy + (p.y-q.y)**2.0
+    and dy + (p.y-q.y)**2.0
     in sqrt (dx + dy)
 ```
 
@@ -327,7 +327,7 @@ let rec eval e =
         | Val v -> Some v
         | Op(f,e1,e2) -> 
             let v1 = eval e1
-                v2 = eval e2
+            and v2 = eval e2
             in
             match v1,v2 with
                 | None,_ | _, None -> None
@@ -355,7 +355,7 @@ let rec tyinf e =
             | Valn n -> Some Tyint
         | Op (Add,e1,e2) ->
             let t1 = tyinf e1
-                t2 = tyinf e2
+            and t2 = tyinf e2
             in
             match t1,t2 with
                 | Some Tyint, Some Tyint -> Some Tyint
