@@ -1,8 +1,19 @@
 # Automi
 
 Automa di Mealy
-	- $z=f_z(s,x)$
-	- $s'=f_s(s,x)$
+- $z=f_z(s,x)$
+- $s'=f_s(s,x)$
+
+```mermaid
+flowchart LR
+x --> fs & fz
+fs --> |s'| reg --> |s| fs & fz
+fz --> z
+```
+
+Automa di Moore
+- $z=f_z(s)$
+- $s'=f_s(s,x)$
 
 ```mermaid
 flowchart LR
@@ -11,15 +22,13 @@ fs --> |s'| reg --> |s| fs & fz
 fz --> z
 ```
 
-- Automa di Moore
-	- $z=f_z(s)$
-	- $s'=f_s(s,x)$
-
 Entrambi gli automi hanno bisogno di un [[Porte logiche#^5dfc12|registro]] per memorizzare lo stato.
+
+## Riconoscimento stringa
 
 Vediamoli per riconoscere `aba` (alfabeto $\{a,b,c\}$) , in una stringa (come `abcabbaba`).
 
-## Mealy
+### Mealy
 
 ```mermaid
 flowchart LR
@@ -30,13 +39,6 @@ s2 --> |a/0| s2
 s2 --> |b/0| s3((S3))
 s3 --> |a/1| s1
 s3 --> |b,c/0| s1
-```
-
-```mermaid
-flowchart LR
-x --> fs & fz
-fs --> |s'| reg --> |s| fs & fz
-fz --> z
 ```
 
 Con il carattere $\{a,b,c\}$ rappresentato dai bit $x_1x_0$, lo stato corrente da $b_1b_0$, il nuovo stato da $b_1'b_0'$, e il valore di riporto (quello a destra dello `/`) con $z$:
@@ -60,7 +62,7 @@ $b_0'=\bar{b_1}\bar{b_0}\bar{x_1}\bar{x_0}+\bar{b_1}b_0\bar{x_1}\bar{x_0}$
 $z=b_1\bar{b_0}\bar{x_1}\bar{x_0}$
 
 
-## Moore
+### Moore
 
 ```mermaid
 flowchart LR
@@ -74,26 +76,28 @@ s3 --> |a| s4((S4/1)) --> |a| s2
 s4 --> |b,c| s1
 ```
 
-$z=b_1b_0$
+Il risultato è $1$ solo in $S_4$, cioè $z=b_1b_0$.
 
-| $b_1b_0$ | $x_1x_0$ | $b_1'b_0'$ |
-| -------- | -------- | ---------- |
-| 00       | 00       | 01         |
-| 00       | 01       | 00         |
-| 00       | 10       | 00         |
-| 01       | 00       | 01         |
-| 01       | 01       | 10         |
-| 01       | 10       | 00         |
-| 10       | 00       | 11         |
-| 10       | 01       | 00         |
-| 10       | 10       | 00         |
-| 11       | 00       | 01         |
-| 11       | 01       | 00         |
-| 11       | 10       | 00         |
+| $b_1b_0$ | $x_1x_0$ | $b_1'b_0'$ | $z$ |
+| -------- | -------- | ---------- | --- |
+| 00       | 00       | 01         | 0   |
+| 00       | 01       | 00         | 0   |
+| 00       | 10       | 00         | 0   |
+| 01       | 00       | 01         | 0   |
+| 01       | 01       | 10         | 0   |
+| 01       | 10       | 00         | 0   |
+| 10       | 00       | 11         | 1   |
+| 10       | 01       | 00         | 0   |
+| 10       | 10       | 00         | 0   |
+| 11       | 00       | 01         | 0   |
+| 11       | 01       | 00         | 0   |
+| 11       | 10       | 00         | 0   | 
 
 $b_1'=\bar{b_1}b_0\bar{x_1}x_0+b_1\bar{b_0}\bar{x_1}\bar{x_0}$
 
 $b_0'=\bar{x_1}\bar{x_0}$
+
+$z=b_1\bar{b_0}\bar{x_1}\bar{x_0}$
 
 ## Rete che calcola parità di una sequenza di bit
 
@@ -122,6 +126,7 @@ si --> |0| si
 sd --> |0| sd
 ```
 
+In questo caso il numero di nodi è uguale in entrambi, e si può condividere la tabella.
 
 | $s$ | $x$ | $s'$ | $z$ |
 | --- | --- | ---- | --- |
