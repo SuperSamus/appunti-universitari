@@ -226,6 +226,8 @@ $z_1=\bar{x_1}x_2\bar{x_3}x_4+x_1\bar{x_2}\bar{x_3}\bar{x_4} \quad z_0=\bar{x_1}
 
 ## Flip-Flop
 
+Necessari per avere [[memoria]].
+
 ### Set Reset (SR)
 
 Sistema di memoria elementare:
@@ -257,7 +259,7 @@ D --> AND2 --> |S| SR
 SR --> Q & N[NOT Q]
 ```
 
-Problema: Q può essere cambiato in continuazione finché CLOCK=1.
+Se è necessaria la sincronizzazione nel circuito (ovvero se non si sta parlando di un assegnamento continuo), c'è un problema: Q può essere cambiato in continuazione finché CLOCK=1.
 
 ### D flip-flop
 
@@ -265,7 +267,11 @@ Con questo design Q può essere cambiato solo nell'istante in cui CLOCK diventa 
 
 ```mermaid
 flowchart LR
-D --> DL1[D latch] --> |"Q| D" --> DL2[D latch] --> Q
+D --> DL1[D latch] --> |"Q --> D"| DL2[D latch] --> Q
 CLOCK --o DL1
 CLOCK --> DL2
 ```
+
+È il design utilizzato nei registri.
+
+Ogni volta che il clock si accende, tutti i registri dovrebbero essere attesa dell'accensione del clock. Se il clock si alterna troppo velocemente, i registri riceveranno valori sbagliati. 
