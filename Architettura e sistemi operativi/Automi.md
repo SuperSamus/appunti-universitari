@@ -17,9 +17,9 @@ Vediamoli per riconoscere `aba` (alfabeto $\{a,b,c\}$) , in una stringa (come `a
 flowchart LR
 s1 --> |b/0| s1
 s1 --> |c/0| s1
-s1(((s1))) --> |a/0| s2((s2)) --> |c/0| s1
+s1(((S1))) --> |a/0| s2((S2)) --> |c/0| s1
 s2 --> |a/0| s2
-s2 --> |b/0| s3((s3))
+s2 --> |b/0| s3((S3))
 s3 --> |a/1| s1
 s3 --> |b,c/0| s1
 ```
@@ -58,11 +58,11 @@ $z=b_1\bar{b_0}\bar{x_1}\bar{x_0}$
 flowchart LR
 s1 --> |b| s1
 s1 --> |c| s1
-s1(((s1/0))) --> |a| s2((s2/0)) --> |c| s1
+s1(((S1/0))) --> |a| s2((S2/0)) --> |c| s1
 s2 --> |a| s2
-s2 --> |b| s3((s3/0))
+s2 --> |b| s3((S3/0))
 s3 --> |b,c| s1
-s3 --> |a| s4((s4/1)) --> |a| s2
+s3 --> |a| s4((S4/1)) --> |a| s2
 s4 --> |b,c| s1
 ```
 
@@ -102,18 +102,18 @@ Mealy:
 
 ```mermaid
 flowchart LR
-si(((si))) --> |1/0| sol((sol)) --> |1/1| si
+si(((Si))) --> |1/0| sd((Sd)) --> |1/1| si
 si --> |0/1| si
-sol --> |0/0| sol
+sd --> |0/0| sd
 ```
 
 Moore:
 
 ```mermaid
 flowchart LR
-si(((si/1))) --> |1| sol((sol/0)) --> |1| si
+si(((Si/1))) --> |1| sd((Sd/0)) --> |1| si
 si --> |0| si
-sol --> |0| sol
+sd --> |0| sd
 ```
 
 
