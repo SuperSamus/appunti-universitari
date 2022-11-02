@@ -173,6 +173,7 @@ end
 
 Applichiamolo al grafo di prima mentre $V=9$:
 %% TODO: https://github.com/mermaid-js/mermaid/issues/3208 %%
+
 ```mermaid
 flowchart LR
 1 <--> |4/6| 2 <--> |4/5| 4
@@ -186,10 +187,30 @@ flowchart LR
 
 ## Altro
 
-### Accoppiamento di massima cardinalità
-
-L'accoppiamento è un insieme di archi senza nodi comuni
-
 ### Numero di cammini che non condividono alcun arco
 
-Se si cerca in un normale grafo orientato il numero di cammini da $s$ a $t$ che non condividono nessun arco, si può replicare il problema impostando a tutti gli archi un costo di $1$.
+Se si cerca in un normale grafo orientato il numero di cammini da $s$ a $t$ che non condividono nessun arco, si può replicare il problema con un problema di flusso massimo in cui tutti gli archi hanno un costo di $1$.
+
+### Accoppiamento di massima cardinalità
+
+L'accoppiamento è un insieme di archi senza nodi comuni.
+
+Per esempio, con questo grafo:
+
+```mermaid
+flowchart TB
+1a --- 1b & 2b
+2a --- 1b & 2b & 3b & 4b
+3a --- 3b & 4b & 5b
+```
+
+Si può replicare il problema con un problema di flusso massimo con questo grafo:
+
+```mermaid
+flowchart TB
+s --> |1| 1a & 2a & 3a
+1a --> |1| 1b & 2b
+2a --> |1| 1b & 2b & 3b & 4b
+3a --> |1| 3b & 4b & 5b
+1b & 2b & 3b & 4b & 5b --> |1| t
+```
