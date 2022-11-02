@@ -86,7 +86,7 @@ Generalmente:
 
 **Proposizione**: sia $y$ il valore di un flusso ammissibile $x=(x_{ij}$) e sia $(N_s.N_t)$ un taglio che separa $s$ da $t$. Allora $v=x(N_s,N_t)≤u(N_s,N_t)$.
 
-Se $v=x(N_s,N_t)=u(N_s,N_t)$, allora il flusso è di valore massimo e il taglio è di capacità minima.
+Se $v=x(N_s,N_t)=u(N_s,N_t)$, allora il flusso è di valore massimo e il taglio è di capacità minima. (Nota: è possibile che esista più di un flusso massimo)
 
 Quindi formalmente, proviamo a trovare un cammino aumentante. L'unico arco possibile è $(1,2)$, e il cammino è già terminato.
 
