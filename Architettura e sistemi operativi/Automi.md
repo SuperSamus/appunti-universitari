@@ -14,6 +14,7 @@ fz --> z
 Automa di Moore
 - $z=f_z(s)$
 - $s'=f_s(s,x)$
+- Il numero di nodi è sempre maggiore o uguale rispetto all'automa di Mealy
 
 ```mermaid
 flowchart LR
