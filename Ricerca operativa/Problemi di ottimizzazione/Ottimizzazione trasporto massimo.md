@@ -71,7 +71,7 @@ $P$ è un *cammino aumentante* se:
 - $P$ è un cammino da $s$ a $t$
 - $θ>0$
 
-### [[Ottimizzazione grafi#^64bc6c|Tagli]]
+## [[Ottimizzazione grafi#^64bc6c|Tagli]]
 
 Si può fare ancora meglio? Facendo un taglio che separa l'origine da tutto e prendendo gli archi diretti nel taglio, sembra che al massimo si possa ottenere $6+1+4=11$, idem separando la destinazione da tutto, $6+5=11$. Tuttavia il taglio che separa $\{1,2\}$ da tutto il resto dice un altra storia: $5+1+4=10$ (si esclude l'arco inverso nel taglio $(6,2)$), e abbiamo già raggiunto un $V=10$.
 
@@ -129,7 +129,7 @@ Si può garantire la finitezza con la variante di *Edmonds-Karp*, con visite FIF
 	- Numero di iterazioni: $O(nm)$
 	- Costo iterazione: $O(m)$
 
-### Bilanci
+## Bilanci
 
 ```
 --------->
