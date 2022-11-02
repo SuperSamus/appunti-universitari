@@ -1,4 +1,4 @@
-# Esempio [[Problemi di ottimizzazione|ottimizzazione]] trasporto massimo
+# [[Problemi di ottimizzazione|Ottimizzazione]] trasporto massimo
 
 ```mermaid
 flowchart LR
@@ -106,7 +106,16 @@ Non esistono cammini aumentanti rispetto al flusso $x$
 
 Il massimo valore dei flussi ammissibili è uguale alla minima capacità dei tagli che separano $s$ a $t$.
 
-Ciò si può sfruttare per l'**algoritmo dei cammini aumentanti** (*Ford-Fulkerson*).
+Ciò si può sfruttare per:
+
+#### Algoritmo dei cammini aumentanti (*Ford-Fulkerson*)
+
+1. Ricerca di un cammino aumentante (visita del grafo)
+	* Se ∄ un cammino aumentante, allora STOP
+2. "Aumentare" il flusso lungo il cammino di $θ$
+	* $+θ$ su cammini concordi del cammino
+	* $-θ$ su cammini discordi del cammino
+3. Ritornare a 1.
 
 Assumendo un $x$ iniziale "intero" ($x_{ij}∈ℤ_+$) e una capacità del taglio finita ($u_{ij}∈ℤ_+)$:
 - $u(\{s\},N∖\{s\})≤(n-1)U$
@@ -115,7 +124,7 @@ Assumendo un $x$ iniziale "intero" ($x_{ij}∈ℤ_+$) e una capacità del taglio
 	- Numero di iterazioni: $O(nU)$
 	- Costo iterazione: $O(m)$
 
-Si può garantire la finitezza con una variante di *Edmonds-Karp*, con visite FIFO:
+Si può garantire la finitezza con la variante di *Edmonds-Karp*, con visite FIFO:
 - Complessità: $O(nm^2)$
 	- Numero di iterazioni: $O(nm)$
 	- Costo iterazione: $O(m)$
