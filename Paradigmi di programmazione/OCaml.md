@@ -290,23 +290,23 @@ $e::=true|false|n|o(e,e)|ite(e,e,e)$
 
 $op::=+|\&|==$
 
-L'interprete traduce il codice in un albero di derivazione astratta (AST).
+L'interprete tra le varie cose traduce il codice in un albero di derivazione astratta (AST).
 
 ```mermaid
 flowchart LR
-L --> ASint --> AST1[AST] --> AStat[Analisti statica] --> TC[Type checking/inference] & AST2[AST]
-AST2 --> eval --> Result
+L --> ASint --> AST1[AST] --> AStat[Analisti statica] --> TC[Type checking/inference] & CD[Controllo dinamico]
+CD --> Eval --> Result
 subgraph ASint[Analisi sintattica]
     subgraph AL[Analisi lessicale]
         Scanner --> TL[Token list]
     end
     subgraph AG[Analisi grammaticale]
-        Parsed --> AST3[AST]
+        Parsed --> AST2[AST]
     end
 end
 ```
 
-Per esempio, il codice $ite(3+2==5,0,1)$ viene tradotto in:
+Per esempio, il codice $ite(3+2==5,0,1)$ viene tradotto in questo AST:
 
 ```mermaid
 flowchart TB
