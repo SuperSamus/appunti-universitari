@@ -1,6 +1,6 @@
 # Porte logiche
 
-Circuito digitale in grado di implementare una particolare operazione logica di una o più variabili booleane, rappresentate da [[bit]]. Usato per esempio nei [[Processore|processori]].
+Circuito digitale in grado di implementare una particolare operazione logica di una o più variabili booleane, rappresentate da [[Bit]]. Usato per esempio nei [[Processore|processori]].
 
 - $A \text{ AND } B=1 ⟺ A=1 ∧ B=1$
 - $A \text{ OR } B=1 ⟺ A=1 ∨ B=1$
@@ -226,7 +226,7 @@ $z_1=\bar{x_1}x_2\bar{x_3}x_4+x_1\bar{x_2}\bar{x_3}\bar{x_4} \quad z_0=\bar{x_1}
 
 ## Flip-Flop
 
-Necessari per avere [[memoria]].
+Necessari per avere [[Memoria]].
 
 ### Set Reset (SR)
 
