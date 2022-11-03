@@ -11,7 +11,7 @@ Consente di scrivere:
 let eta = 18 in
 let anno: int = 2022 in
 (* Espressioni *)
-eta * anno;;
+eta * anno
 ```
 
 ## [[Tipi]]
@@ -55,24 +55,24 @@ La parte "interna" dei tipi composti è immutabile, perché sennò rappresentere
 
 Per esempio:
 ```OCaml
-let x: int*bool*string = (10, true, "hello");;
+let x: int*bool*string = (10, true, "hello")
 
-fun x -> t: int -> int;;
-(fun x -> t) s u;;
-fun x -> fun y -> x + y;;
-(* equivalente a... *) fun x y -> x + y;;
+fun x -> t: int -> int
+(fun x -> t) s u
+fun x -> fun y -> x + y
+(* equivalente a... *) fun x y -> x + y
 
-let p: {x: float; y: float} = {x = 4.0; y = -3.0};;
+let p: {x: float; y: float} = {x = 4.0; y = -3.0}
 let distanza p q =
     let dx = (p.x-q.x)**2.0
     and dy + (p.y-q.y)**2.0
-    in sqrt (dx + dy);;
+    in sqrt (dx + dy)
 ```
 
 Si possono creare tipi per rendere il codice più chiaro:
 ```OCaml
-type Punto = {x: float; y: float};;
-let p: Punto = {x = 4.0; y = -3.0};;
+type Punto = {x: float; y: float}
+let p: Punto = {x = 4.0; y = -3.0}
 ```
 
 ### Unione
@@ -84,7 +84,7 @@ Disgiunta: $z∈A+B=\{z.a|a∈A\}∪\{z.b|b∈B\}$
 ```ocaml
 type num_string =
     | txt of string
-    | num of int;;
+    | num of int
 ```
 
 $$
@@ -93,16 +93,16 @@ $$
 
 ## Let
 
-$\text{let }x=t;;→〈Σ,s〉$
+$\text{let }x=t→〈Σ,s〉$
 
 $$
-\cfrac{〈Σ,t〉→〈Σ',v〉}{〈Σ,\text{let }x=t;;〉→〈Σ',x↦v〉}
+\cfrac{〈Σ,t〉→〈Σ',v〉}{〈Σ,\text{let }x=t〉→〈Σ',x↦v〉}
 $$
 
 Permette anche di destrutturare i tipi composti:
 ```OCaml
-let p: float*float = (.2, .3);;
-let (x, y) = p in x + y;;
+let p: float*float = (.2, .3)
+let (x, y) = p in x + y
 ```
 
 ## Funzioni
@@ -110,25 +110,25 @@ let (x, y) = p in x + y;;
 Zucchero sintattico:
 
 ```OCaml
-let id (x: int) = x;; (*int -> int*)
-(* let id = fun (x:int) -> x;; *)
+let id (x: int) = x (*int -> int*)
+(* let id = fun (x:int) -> x *)
 ```
 
 Esempi:
 
 ```OCaml
-let scambia (x,y) = (y,x);; (* 'a*'b -> 'b*'a *)
-(* let scambia = fun (x,y) -> (y,x);; *)
+let scambia (x,y) = (y,x) (* 'a*'b -> 'b*'a *)
+(* let scambia = fun (x,y) -> (y,x) *)
 
-let scambia_add (x,y) = (y+5,x+5);; (* -> int *)
+let scambia_add (x,y) = (y+5,x+5) (* -> int *)
 (* +: int -> int *)
 ```
 
 Anche le funzioni possono destrutturare i tipi composti:
 
 ```OCaml
-fun f n -> f n + 1;;
-f (fun (x,y) -> x + y) (2,3);; (* 6 *)
+fun f n -> f n + 1
+f (fun (x,y) -> x + y) (2,3) (* 6 *)
 ```
 
 ### Tipi generici
@@ -138,7 +138,7 @@ Il tipo generico è scritto come `'a`, e può rimpiazzato da qualunque tipo. Gen
 Per esempio:
 
 ```OCaml
-let maggiore x y = if x > y then x else y;;
+let maggiore x y = if x > y then x else y
 ```
 
 Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
@@ -149,8 +149,8 @@ Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
 Nota che il corpo della funzione non viene eseguito finché non viene eseguita. Queste due funzioni sono diverse:
 
 ```OCaml
-fun x -> x + 2;;
-fun x -> x + (1+1);;
+fun x -> x + 2
+fun x -> x + (1+1)
 ```
 
 In altre parole, OCaml *non* riduce le funzioni alla forma normale, quindi *non* fa questo:
@@ -166,7 +166,7 @@ Per ogni tipo è definibile l'unione `'a option`
 ```OCaml
 type 'a option =
     | None
-    | Some of 'a;;
+    | Some of 'a
 ```
 
 ## Liste
@@ -182,7 +182,7 @@ Lista ≜ Sequenza *finita*, *ordinata* e *immutabile* di espressioni *dello ste
 
 Che tipo è questo?
 ```OCaml
-[[];[fun x -> x]];;
+[[];[fun x -> x]]
 ```
 
 Vincoli:
@@ -192,7 +192,7 @@ Vincoli:
 
 L'operatore *cons* crea una nuova lista, con un nuovo elemento di fronte alla lista:
 ```Ocaml
-1 :: [2; 3];; (* [1; 2; 3] *)
+1 :: [2; 3] (* [1; 2; 3] *)
 ```
 
 Per utilizzare gli elementi di una lista si usa il pattern matching:
@@ -200,7 +200,7 @@ Per utilizzare gli elementi di una lista si usa il pattern matching:
 let f (x:'a list) =
     match x with
         | [] -> (**)
-        | y::ys -> (**);;
+        | y::ys -> (**)
 ```
 
 Esempi con ricorsione:
@@ -208,22 +208,22 @@ Esempi con ricorsione:
 let rec sum_list(xs: int list) =
     match xs with
         | [] -> 0
-        | y::ys -> y + sum_list ys;;
+        | y::ys -> y + sum_list ys
 
 let rec filter xs p =
     match xs with
         | [] -> []
-        | y::ys -> if (p y) then y::(filter ys p) else (filter ys p);;
+        | y::ys -> if (p y) then y::(filter ys p) else (filter ys p)
 
 let rec append xs ys =
     match xs with
         | [] -> ys
-        | z::zs -> z::(append zs ys);;
+        | z::zs -> z::(append zs ys)
 
 let rec fold_left f a xs =
     match xs with
         | [] -> a
-        | y::ys -> fold_left f (f a y) ys;;
+        | y::ys -> fold_left f (f a y) ys
 ```
 
 $map:('a→'b)→'a \: list→'b \: list$
@@ -232,7 +232,7 @@ $map:('a→'b)→'a \: list→'b \: list$
 let rec map f xs =
     match xs with
         | [] -> []
-        | y::ys -> (f y)::(map f ys);;
+        | y::ys -> (f y)::(map f ys)
 ```
 
 ### Tipi ricorsivi
@@ -240,11 +240,11 @@ let rec map f xs =
 ```OCaml
 type list_int =
     | Nil
-    | Concat of int * list_int;;
+    | Concat of int * list_int
 
 Nil (* : list_int *)
-Concat(5, Nil);; (* : list_int *)
-Concat(3, Concat(5, Nil));; (* : list_int *)
+Concat(5, Nil) (* : list_int *)
+Concat(3, Concat(5, Nil)) (* : list_int *)
 ```
 
 $Nil⤳[]$
@@ -256,7 +256,7 @@ Quindi, si può dire che le liste in OCaml sono costruite come:
 ```OCaml
 type 'a list =
     | Nil
-    | Concat of 'a * 'a list;;
+    | Concat of 'a * 'a list
 ```
 
 Si può fare il pattern matching:
@@ -265,7 +265,7 @@ Si può fare il pattern matching:
 let rec elem x xs =
     match xs with
         | Nil -> false
-        | Concat(y, ys) -> if(x=y) then true else elem x ys;;
+        | Concat(y, ys) -> if(x=y) then true else elem x ys
 (* elem: 'a->'a list'->bool *)
 ```
 
@@ -274,14 +274,14 @@ Un albero binario:
 ```OCaml
 type 'a tree =
     | Leaf of 'a
-    | Node of 'a * 'a tree * 'a tree;;
+    | Node of 'a * 'a tree * 'a tree
 ```
 
 ```OCaml
 let rec leaves t =
     match t with
         | Leaf x -> [x]
-        | Node(x, t1, t2) -> (leaves t1)@(leaves t2);;
+        | Node(x, t1, t2) -> (leaves t1)@(leaves t2)
 ```
 
 ## Interprete
@@ -304,19 +304,19 @@ Sintassi:
 ```OCaml
 type val =
     | Valb of bool
-    | Valn of int;;
+    | Valn of int
 
 type op =
     | Add
     | And
-    | Eq;;
+    | Eq
 
 type exp =
     | Val of val
     | Op of op * exp * exp
-    | Ite of exp * exp * exp;;
+    | Ite of exp * exp * exp
 
-eval(Ite(Op(Eq,Op(Add,Valn 3,Valn 2),Valn 5),Valn 0,Valn 1));;
+eval(Ite(Op(Eq,Op(Add,Valn 3,Valn 2),Valn 5),Valn 0,Valn 1))
 ```
 
 `eval` è definito come $eval:exp→val \; option$
@@ -344,7 +344,7 @@ Inferenza di tipo
 ```OCaml
 type ty =
     | Tybool
-    | Tyint;;
+    | Tyint
 ```
 
 ```OCaml
@@ -373,24 +373,42 @@ OCaml può applicare ottimizzazioni come questa:
 
 $map \: f(map \: g \: xs) ≈ map (f∘g) xs$
 
-## Costrutti imperativi (preferibilmente da evitare) 
+## Costrutti imperativi 
 
+Preferibilmente da evitare, in quanto hanno [[β-riduzione#^b5ae66|effetti collaterali]].
 - Array
 - Record (mutabili)
 - Cicli/iterazioni (`for`,`while`)
 - Eccezioni
 - Riferimenti / Variabili mutabili
 
+### Assegnamento
+
+Consentito con `<-`. Ritorna una *unit* `()`.
+
+Esempio:
+```OCaml
+type persona = { nome: string, cognome: string, mutable eta: int}
+let pippo = (* ... *)
+pippo.eta <- 10
+```
+
 ### Array
 
-Tipo `'a array`, dimensione fissata.
-
-Consente l'assegnamento con `<-`
+Tipo `'a array`, dimensione fissata, mutabile.
 
 ```OCaml
-let a = [|3,2,5|];;
-Array.make 3 0;; (* [|0; 0; 0|] *)
+let a = [|3,2,5|]
+Array.make 3 0 (* [|0; 0; 0|] *)
 
-a.(0);; (* 3 *)
-a.(0) <- 4 (* Comando che modifica l'array, ritorna unit `()` *)
+a.(0) (* 3 *)
+a.(0) <- 4 (* Modifica l'array *)
+```
+
+### Riferimenti
+
+Aggiornabili con `:=`:
+```OCaml
+let x = ref 12 (* : int ref {content:12} *)
+x := 14 (* : () *)
 ```

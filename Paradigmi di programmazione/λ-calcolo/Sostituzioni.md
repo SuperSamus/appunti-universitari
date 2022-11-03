@@ -49,7 +49,7 @@ CbV però è più efficiente.
 
 Call-by-Need (lazy): inizialmente CbN, ma valuta il valore appena serve valutarlo. Utile per qualsiasi cosa infinita (come gli iteratori), dato che evita calcoli inutili.
 
-CbN e Call-by-Need si comportano in maniera imprevedibile (o indesiderabile) con gli effetti collaterali. Se li si vuole avere, CbV è l'unica scelta sensata.
+CbN e Call-by-Need si comportano in maniera imprevedibile (o indesiderabile) con gli [[β-riduzione#^b5ae66|effetti collaterali]]. Se li si vuole avere, CbV è l'unica scelta sensata.
 
 ### Definizione formale
 
