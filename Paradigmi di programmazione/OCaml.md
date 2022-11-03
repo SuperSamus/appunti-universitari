@@ -284,7 +284,7 @@ let rec leaves t =
         | Node(x, t1, t2) -> (leaves t1)@(leaves t2)
 ```
 
-### Interprete
+## Interprete
 
 $e::=true|false|n|o(e,e)|ite(e,e,e)$
 
@@ -362,3 +362,29 @@ let rec tyinf e =
                 | _, _ -> None
 (* ... *)
 ```
+
+### Ottimizzazioni
+
+Grazie a questa legge TODO di chi?
+
+$e_1≈e_2⇒c[e_1]≈c[e_2]$
+
+OCaml può applicare ottimizzazioni come questa:
+
+$map \: f(map \: g \: xs) ≈ map (f∘g) xs$
+
+## Array
+
+Tipo `'a array`, dimensione fissata.
+
+```OCaml
+
+```
+
+## Altre funzionalità
+
+- Array
+- Record (mutabili)
+- Cicli/iterazioni (`for`,`while`)
+- Eccezioni
+- Riferimenti / Variabili mutabili
