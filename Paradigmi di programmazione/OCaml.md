@@ -376,8 +376,8 @@ $map \: f(map \: g \: xs) ≈ map (f∘g) xs$
 ## Costrutti imperativi 
 
 Preferibilmente da evitare, in quanto hanno [[β-riduzione#^b5ae66|effetti collaterali]].
+- Record mutabili
 - Array
-- Record (mutabili)
 - Cicli/iterazioni (`for`,`while`)
 - Eccezioni
 - Riferimenti / Variabili mutabili
@@ -395,7 +395,7 @@ pippo.eta <- 10
 
 ### Array
 
-Tipo `'a array`, dimensione fissata, mutabile.
+Tipo `'a array`. Dimensione fissata. Mutabile. Si può ottenere l'elemento `n` con `.(n)`.
 
 ```OCaml
 let a = [|3,2,5|]
@@ -407,8 +407,19 @@ a.(0) <- 4 (* Modifica l'array *)
 
 ### Riferimenti
 
-Aggiornabili con `:=`:
+Aggiornabili con `:=` (che ritorna *unit* `()`). Accessibili con `!`.
+
 ```OCaml
-let x = ref 12 (* : int ref {content:12} *)
-x := 14 (* : () *)
+let x = ref 12 (* int ref {content:12} *)
+let y = x
+x := 14
+!y (* ritorna 14 a causa dell'aliasing *)
+```
+
+### Cicli
+
+```OCaml
+for <variabile> = <start> to <end> do
+    <comando che ritorna ()>;<comando che ritorna ()>;<...>;
+done
 ```
