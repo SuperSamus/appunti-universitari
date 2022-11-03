@@ -290,7 +290,13 @@ $e::=true|false|n|o(e,e)|ite(e,e,e)$
 
 $op::=+|\&|==$
 
-Noi scriviamo $ite(3+2==5,0,1)$, ma l'interprete vede questo albero di derivazione astratta (AST):
+L'interpete traduce il codice in un albero di derivazione astratta (AST).
+
+$L⟶\text{Analisi sintattica}⟶AST⟶\text{Analisit statica}⟶\text{Type checking/inference}$
+
+
+
+Per esempio, il codice $ite(3+2==5,0,1)$ viene tradotto in:
 
 ```mermaid
 flowchart TB
