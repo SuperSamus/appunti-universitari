@@ -79,5 +79,6 @@ Src2 può quasi sempre essere anche una costante (`#N`).
 	- `GE`
 	- Se può combinare un comando con un confronto, in questo modo il comando viene eseguito solo se il FLAGS soddisfa il confronto (esempio `ADDEQ`)
 - Salto
-	- `B`
-	- `BL`
+	- `B` (Branch to label)
+	- `BL` (Uguale a B, ma prima copia l'indirizzo della prossima istruzione nel LR)
+- `MOV` copia i dati da un registro a un altro
