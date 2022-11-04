@@ -47,7 +47,7 @@ Operandi: Dest Src1 Src2
 
 Dest = Src1 *op* Src2
 
-Src2 può quasi sempre essere anche una costante.
+Src2 può quasi sempre essere anche una costante (`#N`).
 
 - `ADD`
 - `SUB`
@@ -63,18 +63,21 @@ Src2 può quasi sempre essere anche una costante.
 	- Se si vuole usare più registri (R1 e R2) per evitare l'overflow:
 		- `SMULL` (Signed)
 		- `UMULL` (Unsigned)
-- FLAG (variabili booleane, proprietà del risultato di un operazione)
+- FLAGS (variabili booleane, proprietà del risultato di un operazione)
 	- `Z` Zero (vero se il risultato è uguale a `0`)
 	- `N` Negativo (vero se il risultato è negativo)
 	- `C` Carry (vero se ha avuto un riporto)
 	- `V` Overflow (simile a `C`)
-- Settare
-	- `CMP R1, R2` (R1-R2→FLAG)
-	- `ADDS R1, R2, R3` (→set FLAGS)
-- Confronto (aggiungi `B` all'inizio per settare FLAG)
+	- Settare
+		- `CMP R1, R2` (R1-R2→FLAGS)
+		- `ADDS R1, R2, R3` (→set FLAGS)
+- Confronto (aggiungi `B` all'inizio per settare FLAGS)
 	- `EQ`
 	- `NE`
 	- `GT`
 	- `LT`
 	- `GE`
-	- 
+	- Se può combinare un comando con un confronto, in questo modo il comando viene eseguito solo se il FLAGS soddisfa il confronto (esempio `ADDEQ`)
+- Salto
+	- `B`
+	- `BL`
