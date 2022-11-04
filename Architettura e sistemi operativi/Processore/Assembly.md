@@ -43,7 +43,16 @@ Istruzioni di:
 
 #### Operative (Aritmetico/Logiche)
 
-Operandi: Dest, Src1
+Operandi: Dest Src1 Src2
+
+Dest = Src1 *op* Src2
+
+Src2 può essere anche una costante.
 
 - `ADD`
 - `SUB`
+- Logical Shift (Src2 indica di quanti bit spostare)
+	- `LSL` (Logical Shift Left)
+	- `LSR` (Logical Shift Right)
+- `ASR`
+- `ROR`
