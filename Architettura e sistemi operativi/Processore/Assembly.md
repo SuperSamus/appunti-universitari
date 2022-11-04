@@ -51,8 +51,15 @@ Src2 può essere anche una costante.
 
 - `ADD`
 - `SUB`
-- Logical Shift (Src2 indica di quanti bit spostare)
-	- `LSL` (Logical Shift Left)
-	- `LSR` (Logical Shift Right)
-- `ASR`
-- `ROR`
+- Shift (Src2 indica di quanti bit spostare)
+	- Logical Shift (i bit vacanti vengono riempiti con `0`)
+		- `LSL` (Logical Shift Left)
+		- `LSR` (Logical Shift Right)
+	- `ASR` (Arithmetic Shift Right) (dopo lo shift, il bit di segno viene copiato)
+	- `ROR` (Rotate Right) (i bit vacanti vengono riempiti dai bit scartati)
+- `BIC`
+- Moltiplicazione
+	- `MUL` Il risultato può andare in overflow
+	- Se si vuole usare più registri (R1 e R2) per evitare l'overflow:
+		- `SMULL` (Signed)
+		- `UMULL` (Unsigned)
