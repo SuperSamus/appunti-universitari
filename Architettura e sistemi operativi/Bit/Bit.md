@@ -21,6 +21,8 @@ Combinazioni: $2^n$
 
 ## Endianness
 
+^32cef1
+
 **Little Endian**: I primi byte sono i meno significativi. $1_{10}=01 \: 00_2$
 
 **Big Endian**: I primi byte sono i più significativi. $1_{10}=00 \: 01_2$
