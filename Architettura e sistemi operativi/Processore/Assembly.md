@@ -34,6 +34,8 @@ ARM è [[Bit#^32cef1|Little Endian]].
 - `LDR(B)` (Load register) M→R
 - `STR(B)` (Store register) R→M
 
+Tutte le istruzioni sono in memoria, il program counter tiene traccia dell'istruzione da eseguire, e dopo averla eseguita, aumenta del numero di byte da cui sono composte le istruzioni (4 se a 32 bit).
+
 ### ISA (Instruction Set Architecture)
 
 Istruzioni di:
@@ -78,9 +80,9 @@ Src2 può quasi sempre essere anche una costante (`#N`).
 	- `LT`
 	- `GE`
 - Salto
-	- `B` Branch to label (sposta l'esecuzione nell'etichetta specificata)
+	- `B` Branch to label (fa puntare il program counter all'etichetta specificata)
 	- `BL` (Prima copia l'indirizzo della prossima istruzione nel LR, poi fa branch)
 - Utilizzo FLAGS
 	- `ADDEQ`/`ADDNE`/`ADDLT` (fai l'addizione se `EQ` è vero)
 	- `BEQ`/`BNE`/`BLT` (fai il branch se il rispettivo flag è vero)
-- `MOV` copia i dati da un registro a un altro (copia la)
+- `MOV` copia i dati da un registro a un altro (oppure copia la costante nel registro)
