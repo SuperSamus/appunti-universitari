@@ -47,7 +47,7 @@ Operandi: Dest Src1 Src2
 
 Dest = Src1 *op* Src2
 
-Src2 può essere anche una costante.
+Src2 può quasi sempre essere anche una costante.
 
 - `ADD`
 - `SUB`
@@ -57,9 +57,24 @@ Src2 può essere anche una costante.
 		- `LSR` (Logical Shift Right)
 	- `ASR` (Arithmetic Shift Right) (dopo lo shift, il bit di segno viene copiato)
 	- `ROR` (Rotate Right) (i bit vacanti vengono riempiti dai bit scartati)
-- `BIC`
+- `BIC` (Bit Clear)
 - Moltiplicazione
 	- `MUL` Il risultato può andare in overflow
 	- Se si vuole usare più registri (R1 e R2) per evitare l'overflow:
 		- `SMULL` (Signed)
 		- `UMULL` (Unsigned)
+- FLAG (variabili booleane, proprietà del risultato di un operazione)
+	- `Z` Zero (vero se il risultato è uguale a `0`)
+	- `N` Negativo (vero se il risultato è negativo)
+	- `C` Carry (vero se ha avuto un riporto)
+	- `V` Overflow (simile a `C`)
+- Settare
+	- `CMP R1, R2` (R1-R2→FLAG)
+	- `ADDS R1, R2, R3` (→set FLAGS)
+- Confronto (aggiungi `B` all'inizio per settare FLAG)
+	- `EQ`
+	- `NE`
+	- `GT`
+	- `LT`
+	- `GE`
+	- 
