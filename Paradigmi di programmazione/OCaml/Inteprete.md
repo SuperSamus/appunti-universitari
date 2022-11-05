@@ -93,6 +93,19 @@ let rec tyinf e =
 (* ... *)
 ```
 
+## Token
+
+
+
+```OCaml
+type token =
+    | Tkn_num of int
+    | Tkn_op of string
+    | Tkn_lpar
+    | Tkn_rpar
+    | Tkn_end
+```
+
 ## Ottimizzazioni
 
 ^4a0b50
