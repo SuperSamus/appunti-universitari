@@ -381,7 +381,7 @@ let rec tyinf e =
 
 ### Ottimizzazioni
 
-Grazie a questa legge TODO di chi?
+Grazie alla legge degli indiscernibili di Leibniz:
 
 $e_1≈e_2⇒c[e_1]≈c[e_2]$
 
