@@ -75,11 +75,21 @@ Per assicurarsi di avere una grammatica deterministica (non ambigua), definiamo:
 - Fattore $f:=n|(e)$
 
 ```OCaml
+(* Implementata in manier imperativa *)
 let parse s =
     let tokens = ref (scanner s) in
-    let lookahed = match !tokens with
+        (* unit -> token *)
+        let lookahed () = match !tokens with
+            | [] -> raise (**)
+            | t::_ -> t
+        (* unit -> unit *)
+        and consume () = match !tokens with
         | [] -> raise (**)
-        | t::__
+        | t::tkns -> tokens := tkns
+        in
+            let rec exp () =
+                let t1 = term() in
+                match
     
 ```
 
@@ -125,11 +135,11 @@ let rec eval e =
 (* ... *)
 ```
 
-Per esempio, la stringa $ite(3+2==5,0,1)$ viene alla fine tradotto in questo albero di derivazione astratta (AST):
+Per esempio, la stringa $ite(3+2==5,0,1)$ viene alla fine tradotto in questo albero di derivazione astratta (AST):%%Hey Mermaid, perché non fai l'albero come si deve?%%
 
 ```mermaid
 flowchart TB
-ite --> eq(==) & 0 & 1
+ite --> eq[==] & 0 & 1
 eq --> + & 5
 + --> 3 & 2
 ```
