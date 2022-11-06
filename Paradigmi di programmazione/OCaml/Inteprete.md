@@ -69,13 +69,27 @@ let scanner s =
 
 $parser::token \: list→exp$
 
+Per assicurarsi di avere una grammatica deterministica (non ambigua), definiamo:
+- Espressione $e:=t+e|t-e|t$
+- Termine $t:=f*t|f/t|t$
+- Fattore $f:=n|(e)$
+
+```OCaml
+let parse s =
+    let tokens = ref (scanner s) in
+    let lookahed = match !tokens with
+        | [] -> raise (**)
+        | t::__
+    
+```
+
 ### AST
 
 Generato grazie ai token (questi esempi usano una grammatica diversa perché il professore non riesce a essere coerente):
 
 ```OCaml
 type val =
-    | Valb of bool (* Non implementato qui nello scanner *)
+    | Valb of bool
     | Valn of int
 
 type op =
