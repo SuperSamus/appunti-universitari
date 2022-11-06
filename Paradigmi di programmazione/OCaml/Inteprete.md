@@ -58,13 +58,16 @@ let scanner s =
             let c = String.sub s pos 1 in
             let tokens = scanner_rec s (pos + 1)
             match c with
-                | "" -> tokens
+                | " " -> tokens
                 | "(" -> Tkn_lpar::tokens
                 | ")" -> Tkn_rpar::tokens
                 | "+"|"-"|"*"|"/" -> (Tkn_op c)::tokens
                 | "0"|"1"|(*...*)|"9" -> match tokens with
-	                | Tkn_num n::tokens -> n * 10 + (int_of_string n)
-	                
+                    (* Concatena la cifra con quelle precendenti*)
+	                | (Tkn_num n)::tokens -> (Tkn_num (int_of_string(c^(string_of_int n))))::tokens
+	                | _ -> (Tkn_num (int_of_string c))::tokens
+	            | _ -> raise (ParseError ("Parse error: ", c)
+	in scanner_rec s 0
 ```
 
 ### AST
