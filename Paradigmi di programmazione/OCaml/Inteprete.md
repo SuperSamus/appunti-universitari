@@ -31,7 +31,7 @@ eq --> + & 5
 + --> 3 & 2
 ```
 
-Sintassi equivalente in [[OCaml]]:
+## Sintassi equivalente in [[OCaml]]
 
 ```OCaml
 type val =
@@ -51,7 +51,7 @@ type exp =
 eval(Ite(Op(Eq,Op(Add,Valn 3,Valn 2),Valn 5),Valn 0,Valn 1))
 ```
 
-`eval` è definito come $eval:exp→val \; option$
+`eval` qui è definito come $eval:exp→val \; option$
 
 ```OCaml
 let rec eval e =
@@ -97,7 +97,7 @@ let rec tyinf e =
 
 ## Token
 
-TODO
+Generati dallo scanner, sono usati per generare l'AST. 
 
 ```OCaml
 type token =
@@ -106,6 +106,8 @@ type token =
     | Tkn_lpar
     | Tkn_rpar
     | Tkn_end
+
+exception ParseError of string * string
 ```
 
 ## Ottimizzazioni
