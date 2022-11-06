@@ -1,12 +1,8 @@
 # Interprete
 
-$e::=true|false|n|o(e,e)|ite(e,e,e)$
-
-$op::=+|\&|==$
-
-$eval::exp→int$
-
-$syntax::string→exp$
+Definizione di $Γ$:
+- $e::=n|e \: op \: e|(e)$
+- $op::=+|*|-|/$
 
 ```mermaid
 flowchart LR
@@ -22,14 +18,9 @@ subgraph ASint[Analisi sintattica]
 end
 ```
 
-Per esempio, la stringa $ite(3+2==5,0,1)$ viene alla fine tradotto in questo albero di derivazione astratta (AST):
+$eval::exp→int$
 
-```mermaid
-flowchart TB
-ite --> eq(==) & 0 & 1
-eq --> + & 5
-+ --> 3 & 2
-```
+$syntax::string→exp$
 
 ## Sintassi in [[OCaml]]
 
@@ -47,6 +38,10 @@ type token =
 
 exception ParseError of string * string
 ```
+
+$scanner::string→token \: list$
+
+$L_Γ∋s∈Σ*$
 
 Implementazione:
 
@@ -70,9 +65,13 @@ let scanner s =
 	in scanner_rec s 0
 ```
 
+### Parser
+
+$parser::token \: list→exp$
+
 ### AST
 
-Generato grazie ai token:
+Generato grazie ai token (questi esempi usano una grammatica diversa perché il professore non riesce a essere coerente):
 
 ```OCaml
 type val =
@@ -112,7 +111,16 @@ let rec eval e =
 (* ... *)
 ```
 
-Inferenza di tipo
+Per esempio, la stringa $ite(3+2==5,0,1)$ viene alla fine tradotto in questo albero di derivazione astratta (AST):
+
+```mermaid
+flowchart TB
+ite --> eq(==) & 0 & 1
+eq --> + & 5
++ --> 3 & 2
+```
+
+#### Inferenza di tipo
 
 ```OCaml
 type ty =
