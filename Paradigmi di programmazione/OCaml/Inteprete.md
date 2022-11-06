@@ -64,6 +64,7 @@ let scanner s =
                 | "+"|"-"|"*"|"/" -> (Tkn_op c)::tokens
                 | "0"|"1"|(*...*)|"9" -> match tokens with
 	                | Tkn_num n::tokens -> n * 10 + (int_of_string n)
+	                
 ```
 
 ### AST
