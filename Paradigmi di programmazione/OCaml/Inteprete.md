@@ -55,7 +55,15 @@ let scanner s =
     let rec scanner_rec s pos =
         if pos = String.length s then [Tkn_end]
         else
-            let c = String.sub s pos 1
+            let c = String.sub s pos 1 in
+            let tokens = scanner_rec s (pos + 1)
+            match c with
+                | "" -> tokens
+                | "(" -> Tkn_lpar::tokens
+                | ")" -> Tkn_rpar::tokens
+                | "+"|"-"|"*"|"/" -> (Tkn_op c)::tokens
+                | "0"|"1"|(*...*)|"9" -> match tokens with
+	                | Tkn_num n::tokens -> n * 10 + (int_of_string n)
 ```
 
 ### AST
