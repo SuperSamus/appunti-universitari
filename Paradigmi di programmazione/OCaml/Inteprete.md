@@ -54,7 +54,8 @@ Implementazione:
 let scanner s =
     let rec scanner_rec s pos =
         if pos = String.length s then [Tkn_end]
-        else 
+        else
+            let c = String.sub s pos 1
 ```
 
 ### AST
