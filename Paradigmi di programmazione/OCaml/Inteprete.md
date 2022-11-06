@@ -4,7 +4,9 @@ $e::=true|false|n|o(e,e)|ite(e,e,e)$
 
 $op::=+|\&|==$
 
-L'interprete tra le varie cose traduce il codice in un albero di derivazione astratta (AST).
+$eval::exp→int$
+
+$syntax::string→exp$
 
 ```mermaid
 flowchart LR
@@ -20,7 +22,7 @@ subgraph ASint[Analisi sintattica]
 end
 ```
 
-Per esempio, la stringa $ite(3+2==5,0,1)$ viene tradotta in un espressione che corrisponde a questo AST:
+Per esempio, la stringa $ite(3+2==5,0,1)$ viene tradotta in un espressione che corrisponde a questo albero di derivazione astratta AST:
 
 ```mermaid
 flowchart TB
