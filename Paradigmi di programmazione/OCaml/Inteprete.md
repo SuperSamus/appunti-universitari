@@ -76,7 +76,7 @@ Generato grazie ai token:
 
 ```OCaml
 type val =
-    | Valb of bool
+    | Valb of bool (* Non implementato qui nello scanner *)
     | Valn of int
 
 type op =
