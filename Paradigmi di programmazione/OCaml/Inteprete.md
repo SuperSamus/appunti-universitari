@@ -22,7 +22,7 @@ subgraph ASint[Analisi sintattica]
 end
 ```
 
-Per esempio, la stringa $ite(3+2==5,0,1)$ viene tradotta in un espressione che corrisponde a questo albero di derivazione astratta AST:
+Per esempio, la stringa $ite(3+2==5,0,1)$ viene alla fine tradotto in questo albero di derivazione astratta (AST):
 
 ```mermaid
 flowchart TB
@@ -32,6 +32,29 @@ eq --> + & 5
 ```
 
 ## Sintassi equivalente in [[OCaml]]
+
+### Scanner
+
+```OCaml
+let scanner s =
+```
+
+### Token
+
+Generati dallo scanner, sono usati per generare l'AST. 
+
+```OCaml
+type token =
+    | Tkn_num of int
+    | Tkn_op of string
+    | Tkn_lpar
+    | Tkn_rpar
+    | Tkn_end
+
+exception ParseError of string * string
+```
+
+### AST
 
 ```OCaml
 type val =
@@ -93,21 +116,6 @@ let rec tyinf e =
                 | Some Tyint, Some Tyint -> Some Tyint
                 | _, _ -> None
 (* ... *)
-```
-
-## Token
-
-Generati dallo scanner, sono usati per generare l'AST. 
-
-```OCaml
-type token =
-    | Tkn_num of int
-    | Tkn_op of string
-    | Tkn_lpar
-    | Tkn_rpar
-    | Tkn_end
-
-exception ParseError of string * string
 ```
 
 ## Ottimizzazioni
