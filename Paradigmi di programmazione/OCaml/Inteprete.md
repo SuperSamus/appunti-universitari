@@ -31,17 +31,11 @@ eq --> + & 5
 + --> 3 & 2
 ```
 
-## Sintassi equivalente in [[OCaml]]
+## Sintassi in [[OCaml]]
 
 ### Scanner
 
-```OCaml
-let scanner s =
-```
-
-### Token
-
-Generati dallo scanner, sono usati per generare l'AST. 
+Dalla stringa (di codice), genera i seguenti token:
 
 ```OCaml
 type token =
@@ -54,7 +48,18 @@ type token =
 exception ParseError of string * string
 ```
 
+Implementazione:
+
+```OCaml
+let scanner s =
+    let rec scanner_rec s pos =
+        if pos = String.length s then [Tkn_end]
+        else 
+```
+
 ### AST
+
+Generato grazie ai token:
 
 ```OCaml
 type val =
