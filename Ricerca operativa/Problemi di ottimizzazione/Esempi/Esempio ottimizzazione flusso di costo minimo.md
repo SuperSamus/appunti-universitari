@@ -22,3 +22,5 @@ I $b_i$ sono:
 - $3$ per $i=4$
 - $3$ per $i=6$
 - $0$ per tutto il resto
+
+$x=(x_{ij})∈ℝ^n$ pseudoflusso se $0≤x_{ij}≤u_{ij}$
