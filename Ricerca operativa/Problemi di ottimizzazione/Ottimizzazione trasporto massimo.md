@@ -154,6 +154,8 @@ Si può garantire la finitezza con la variante di *Edmonds-Karp*, con visite FIF
 
 ### Grafo residuo
 
+^8639e2
+
 Per rilevare potenziali cammini, si ragiona così:
 
 ```mermaid
@@ -167,12 +169,23 @@ i1[i] --> j1[j]
 end
 Arco --> |"non vuoto xij&gt;0"| TestaCoda
 subgraph TestaCoda
-j2[j] --> i2[i]
+i2[j] <-- j2[i]
 end
 ```
 
 Applichiamolo al grafo di prima mentre $V=9$:
 %% TODO: https://github.com/mermaid-js/mermaid/issues/3208 %%
+```mermaid
+flowchart LR
+1 <-- |4| 2 <-- |4| 4 <-- |6| 7
+1 --> |2| 2 --> |1| 4
+1 <-- |1| 6 <-- |3| 4 <-- |1| 5
+6 --> |1| 4
+1 <-- |4| 3 <-- |2| 5 <-- |3| 7
+3 --> |2| 5 --> |2| 7
+3 <-- |2/2| 6 --> |0/2| 2
+```
+
 
 ```mermaid
 flowchart LR

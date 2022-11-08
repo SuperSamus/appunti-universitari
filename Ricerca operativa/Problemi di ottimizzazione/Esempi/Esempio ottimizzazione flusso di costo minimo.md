@@ -51,15 +51,17 @@ flowchart LR
 3 --> |2/3 1$| 4
 ```
 
-Ciò creerà questo grafo residuo:
+Ciò creerà questo [[Ottimizzazione trasporto massimo#^8639e2|grafo residuo]]:
 
 ```mermaid
 flowchart LR
 1 --> |1 1$| 2
+1 <-- |2 -1$| 2
 2 <-- |2 -1$| 3
 1 --> |3 3$| 3
 2 --> |3 5$| 4
-3 --> |3 1$| 4
+3 --> |1 1$| 4
+3 <-- |2 -1$| 4
 ```
 
 Si vede che il flusso di costo minimo ha costo 10:
