@@ -232,8 +232,13 @@ type exp =
 $v::=\underline{n}|\underline{b}|λx.e$
 
 $$
-\cfrac{Σ🢒e⇒v \quad Σ[x↦v🢒e'⇒v']}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
+\cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
+
+$$
+Σ🢒λx.e⇒
+$$
+TODO
 
 ## Ottimizzazioni
 
