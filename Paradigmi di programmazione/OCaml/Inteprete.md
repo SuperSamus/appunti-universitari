@@ -208,6 +208,27 @@ $$
     in Val(n1+n2)
 ```
 
+### "MiniCAML"
+
+$e::=\underline{n}|e+e|e*e|\underline{b}|ite(e,e,e)|\text{let }x=e \text{ in } e|λx.e|e \: e$
+
+Variabili/identificatori:
+- Costanti: $\underline{n},\underline{b}$
+- Operazioni: $+,-,ite(\_,\_,\_)$
+- Operazioni: $λx, \text{let } x =\_ \text{ in } \_$
+- Tipi: $int \: bool$
+
+```OCaml
+type ide = string
+type tname = TInt | TBool
+type exp =
+    | VInt of int
+    | VBool of bool
+    | Let of ide * e * e
+    | Larm of ide * e
+    | App of exp * exp
+```
+
 ## Ottimizzazioni
 
 ^4a0b50
