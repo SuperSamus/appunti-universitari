@@ -79,7 +79,7 @@ Per assicurarsi di avere una grammatica deterministica (non ambigua), definiamo:
 let parse s =
     let tokens = ref (scanner s) in
         (* unit -> token *)
-        let lookahed () = match !tokens with
+        let lookahead () = match !tokens with
             | [] -> raise (**)
             | t::_ -> t
         (* unit -> unit *)
@@ -87,10 +87,16 @@ let parse s =
         | [] -> raise (**)
         | t::tkns -> tokens := tkns
         in
-            let rec exp () =
+            let rec fact () = (* ... *)
+            in let rec term () = (* ... *)
+            in let rec exp () =
                 let t1 = term() in
-                match
-    
+                    match lookahead () with
+                        | Tkn_op "+" -> consume (); op(Add, t1, exp ())
+                        | Tkn_op "-" -> consume (); op(Sub, t1, exp ())
+                        | Tkn_op "*" -> consume (); op(Mul, t1, exp ())
+                        | Tkn_op "/" -> consume (); op(Div, t1, exp ())
+                        | _ -> t1
 ```
 
 ### AST
