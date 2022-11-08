@@ -174,7 +174,6 @@ end
 ```
 
 Applichiamolo al grafo di prima mentre $V=9$:
-%% TODO: https://github.com/mermaid-js/mermaid/issues/3208 %%
 ```mermaid
 flowchart LR
 1 <-- |4| 2 <-- |4| 4 <-- |6| 7
@@ -183,7 +182,7 @@ flowchart LR
 6 --> |1| 4
 1 <-- |4| 3 <-- |2| 5 <-- |3| 7
 3 --> |2| 5 --> |2| 7
-3 <-- |2/2| 6 --> |0/2| 2
+3 <-- |2| 6 --> |2| 2
 ```
 
 

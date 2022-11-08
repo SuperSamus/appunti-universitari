@@ -1,6 +1,6 @@
 # Esempio [[Problemi di ottimizzazione|ottimizzazione]] flusso di costo minimo
 
-Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$$.
+Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$$ per ogni unità trasportata.
 
 ```mermaid
 flowchart LR
@@ -40,14 +40,14 @@ flowchart LR
 - $b_1=-5$
 - $b_4=5$
 
-Proviamo a vedere questo flusso (invalido):
+Proviamo a vedere questo flusso (invalido), di costo 6$:
 
 ```mermaid
 flowchart LR
 1 --> |2/3 1$| 2
 2 --> |2/2 1$| 3
-1 --> |0/3 0$| 3
-2 --> |0/3 0$| 4
+1 --> |0/3 3$| 3
+2 --> |0/3 5$| 4
 3 --> |2/3 1$| 4
 ```
 
@@ -63,17 +63,5 @@ flowchart LR
 3 --> |1 1$| 4
 3 <-- |2 -1$| 4
 ```
-
-Si vede che il flusso di costo minimo ha costo 10:
-
-```mermaid
-flowchart LR
-1 --> |3/3 1$| 2
-2 --> |0/2 0$| 3
-1 --> |2/3 3$| 3
-2 --> |3/3 5$| 4
-3 --> |2/3 1$| 4
-```
-
 
 $x=(x_{ij})∈ℝ^n$ pseudoflusso se $0≤x_{ij}≤u_{ij}$
