@@ -18,9 +18,9 @@ subgraph ASint[Analisi sintattica]
 end
 ```
 
-$eval::exp→int$
-
-$syntax::string→exp$
+- $eval::exp→int$
+	- Implementazione della semantica operazionale
+- $syntax::string→exp$
 
 ## Sintassi in [[OCaml]]
 
@@ -172,6 +172,26 @@ let rec tyinf e =
                 | Some Tyint, Some Tyint -> Some Tyint
                 | _, _ -> None
 (* ... *)
+```
+
+## Semantica operazionale
+
+```mermaid
+flowchart LR
+s --> s' --> SS[Small step] & BS[Big step]
+```
+
+Small Step
+$\cfrac{e→e'}{e+f→e'+f}$
+Big Step
+
+### Strutturali
+
+```mermaid
+flowchart TB
+O --> - & +
+- --> x1 & x2 & c1
++ --> c2 & y1 & y2 & z3
 ```
 
 ## Ottimizzazioni
