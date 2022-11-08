@@ -194,6 +194,20 @@ O --> - & +
 + --> c2 & y1 & y2 & z3
 ```
 
+### Definendo eval
+
+$$
+\cfrac{e_1 ⇒ \underline{n_1} \quad e_2 ⇒ \underline{n_2}}{Add(e_1, e_2)⇒\underline{n_1+n_2}}
+$$
+
+```OCaml
+| Add(e1,e2) ->
+    let
+        n1 = eval n1
+        n2 = eval n2
+    in Val(n1+n2)
+```
+
 ## Ottimizzazioni
 
 ^4a0b50
