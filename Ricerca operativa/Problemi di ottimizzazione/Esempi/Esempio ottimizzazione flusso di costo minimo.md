@@ -64,4 +64,16 @@ flowchart LR
 3 <-- |2 -1$| 4
 ```
 
+Proviamo ad aggiungere un'unità di flusso per $1→3→5$:
+```mermaid
+flowchart LR
+1 --> |2/3 1$| 2
+2 --> |2/2 1$| 3
+1 --> |1/3 3$| 3
+2 --> |0/3 5$| 4
+3 --> |3/3 1$| 4
+```
+
+Costo $=6+4=10$, ma mancano ancora 2 unità.
+
 $x=(x_{ij})∈ℝ^n$ pseudoflusso se $0≤x_{ij}≤u_{ij}$
