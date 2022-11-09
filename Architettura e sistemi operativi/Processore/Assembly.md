@@ -117,7 +117,7 @@ cout:
     /**/
 ```
 
-###
+### Conta istanze
 
 ```
 int count = 0;
@@ -125,7 +125,7 @@ for (int i = 0; i < n; ++i)
     if (v[i] == x) ++count
 ```
 
-Nella memoria `v`,  cercando `x` (R1) con `n` in R2, `count` in R3 e $i$ in R4:
+Nella memoria `v` (che parte dall'indirizzo in R0),  cercando `x` (R1) con `n` in R2, `count` in R3 e $i$ in R4:
 
 ```ASM
     MOV R3, #0
@@ -133,6 +133,9 @@ Nella memoria `v`,  cercando `x` (R1) con `n` in R2, `count` in R3 e $i$ in R4:
 for:
     CMP R4, R2
     BEQ endfor
-    LDR R5, [R0,R4]
-    CMP R5, R
+    LDR R5, [R0], #4 ; i numeri sono da 4 byte
+    CMP R5, R1
+    ADDEQ R3, R3, #1
+    ADD R4, R4, #1
+    B for
 ```
