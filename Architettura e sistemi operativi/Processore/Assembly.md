@@ -86,3 +86,14 @@ Src2 può quasi sempre essere anche una costante (`#N`).
 	- `ADDEQ`/`ADDNE`/`ADDLT` (fai l'addizione se `EQ` è vero)
 	- `BEQ`/`BNE`/`BLT` (fai il branch se il rispettivo flag è vero)
 - `MOV` copia i dati da un registro a un altro (oppure copia la costante nel registro)
+
+## Esempi
+
+```
+if (x pari) ++y;
+```
+
+`x` in R0, `y` in R1
+
+```
+```
