@@ -89,6 +89,8 @@ Src2 può quasi sempre essere anche una costante (`#N`).
 
 ## Esempi
 
+### Aggiungi se pari
+
 ```
 if (x pari) ++y;
 ```
@@ -103,5 +105,34 @@ Si vede se un bit è pari guardando il bit meno significativo.
     BNE cout
     ADD R1, R1, #1
 cout:
-    
+    /**/
+```
+
+Si poteva fare con meno istruzioni:
+
+```ASM
+    ANDS R0, R0, #1
+    ADDEQ R1, R1, #1
+cout:
+    /**/
+```
+
+###
+
+```
+int count = 0;
+for (int i = 0; i < n; ++i)
+    if (v[i] == x) ++count
+```
+
+Nella memoria `v`,  cercando `x` (R1) con `n` in R2, `count` in R3 e $i$ in R4:
+
+```ASM
+    MOV R3, #0
+    Mov R4, #0
+for:
+    CMP R4, R2
+    BEQ endfor
+    LDR R5, [R0,R4]
+    CMP R5, R
 ```
