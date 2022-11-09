@@ -99,7 +99,7 @@ if (x pari) ++y;
 
 Si vede se un bit è pari guardando il bit meno significativo.
 
-```ASM
+```armasm
     LSL R0, R0 #31 ; oppure AND R0, R0, #1
     CMP R0, #0
     BNE cout
@@ -110,7 +110,7 @@ cout:
 
 Si poteva fare con meno istruzioni:
 
-```ASM
+```armasm
     ANDS R0, R0, #1
     ADDEQ R1, R1, #1
 cout:
@@ -127,7 +127,7 @@ for (int i = 0; i < n; ++i)
 
 Nella memoria `v` (che parte dall'indirizzo in R0),  cercando `x` (R1) con `n` in R2, `count` in R3 e $i$ in R4:
 
-```ASM
+```armasm
     MOV R3, #0
     Mov R4, #0
 for:
@@ -138,4 +138,21 @@ for:
     ADDEQ R3, R3, #1
     ADD R4, R4, #1
     B for
+```
+
+### Confronto stringhe
+
+```
+str1 = "abcd"; // Indirizzo parte da R0
+str2 = "qztf"; // Indirizzo parte da R1
+```
+
+```armasm
+loop:
+    LDRB R4, [R0], #1
+    LDRB R5, [R1], #1
+    CMP R4, R5
+    BLT
+    BEQ loop
+    B
 ```
