@@ -1,4 +1,4 @@
-# Esempio [[Problemi di ottimizzazione|ottimizzazione]] flusso di costo minimo
+# [[Problemi di ottimizzazione|Ottimizzazione]] flusso di costo minimo
 
 Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$$ per ogni unità trasportata.
 
@@ -130,6 +130,12 @@ flowchart LR
 
 Costo: $16+3-1+5=23$.
 
-$x=(x_{ij})∈ℝ^n$ pseudoflusso se rispetta i vincoli di capacità $0≤x_{ij}≤u_{ij}$, anche se non rispetta i bilanci dei nodi.
+$x=(x_{ij})∈ℝ^n$ pseudoflusso se rispetta i vincoli di capacità $0≤x_{ij}≤u_{ij}$
 
-$e_i(x)=∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} - b_i$
+Sbilanciamento del nodo $i$ rispetto alle pseudoflusso $x$: se è $0$, il flusso è bilanciato: $e_i(x)=∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} - b_i$
+
+Nodi con accesso di flusso (surplus): $O_x=\{i∈N:e_i(x)>0\}$
+
+Nodi con difetto di flusso (deficit): $D_x=\{i∈N:e_i(x)<0\}$
+
+Sbilanciamento complessivo di $x$ $∑\limits_{i∈O_x}e_i(x)$
