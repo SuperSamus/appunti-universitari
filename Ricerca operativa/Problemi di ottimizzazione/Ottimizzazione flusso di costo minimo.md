@@ -139,3 +139,5 @@ Nodi con accesso di flusso (surplus): $O_x=\{i∈N:e_i(x)>0\}$
 Nodi con difetto di flusso (deficit): $D_x=\{i∈N:e_i(x)<0\}$
 
 Sbilanciamento complessivo di $x$ $∑\limits_{i∈O_x}e_i(x)$
+
+Nota che i cicli aumentanti di costo negativo non sono ammessi: $x$ flusso ammissibile di costo minimo ⇔ $x$ non ammette cicli aumentanti di costo negativo
