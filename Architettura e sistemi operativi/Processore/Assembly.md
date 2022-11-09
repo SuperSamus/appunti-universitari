@@ -95,5 +95,13 @@ if (x pari) ++y;
 
 `x` in R0, `y` in R1
 
-```
+Si vede se un bit è pari guardando il bit meno significativo.
+
+```ASM
+    LSL R0, R0 #31 ; oppure AND R0, R0, #1
+    CMP R0, #0
+    BNE cout
+    ADD R1, R1, #1
+cout:
+    
 ```
