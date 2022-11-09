@@ -44,11 +44,11 @@ Proviamo a vedere questo flusso (invalido), di costo 6$:
 
 ```mermaid
 flowchart LR
-1 --> |2/3 1$| 2
-2 --> |2/2 1$| 3
+1 ==> |2/3 1$| 2
+2 ==> |2/2 1$| 3
 1 --> |0/3 3$| 3
 2 --> |0/3 5$| 4
-3 --> |2/3 1$| 4
+3 ==> |2/3 1$| 4
 ```
 
 Ciò creerà questo [[Ottimizzazione trasporto massimo#^8639e2|grafo residuo]]:
@@ -64,16 +64,71 @@ flowchart LR
 3 <-- |2 -1$| 4
 ```
 
-Proviamo ad aggiungere un'unità di flusso per $1→3→5$:
+Proviamo ad aggiungere un'unità di flusso per $1→3→4$:
+
 ```mermaid
 flowchart LR
 1 --> |2/3 1$| 2
 2 --> |2/2 1$| 3
-1 --> |1/3 3$| 3
+1 ==> |1/3 3$| 3
 2 --> |0/3 5$| 4
+3 ==> |3/3 1$| 4
+```
+
+Costo $=6+1+3=10$, ma mancano ancora 2 unità.
+
+Grafo residuo:
+
+```mermaid
+flowchart LR
+1 --> |1 1$| 2
+1 <-- |2 -1$| 2
+2 <-- |2 -1$| 3
+1 --> |2 3$| 3
+1 <-- |1 -3$| 3
+2 --> |3 5$| 4
+3 <-- |3 -1$| 4
+```
+
+
+Spingiamo un'altra unità per $1→2→4$:
+
+
+```mermaid
+flowchart LR
+1 ==> |3/3 1$| 2
+2 --> |2/2 1$| 3
+1 --> |1/3 3$| 3
+2 ==> |1/3 5$| 4
 3 --> |3/3 1$| 4
 ```
 
-Costo $=6+4=10$, ma mancano ancora 2 unità.
+Costo $=10+3+5=18$, manca un'ultima unità.
+
+Grafo residuo:
+
+```mermaid
+flowchart LR
+1 <-- |3 -1$| 2
+2 <-- |2 -1$| 3
+1 --> |2 3$| 3
+1 <-- |1 -3$| 3
+2 --> |2 5$| 4
+2 --> |1 -5$| 4
+3 <-- |3 -1$| 4
+```
+
+Il grafo mostra chiaramente un unico cammino rimasto per l'ultima unità: $1→3→2→4$.
+
+```mermaid
+flowchart LR
+1 --> |3/3 1$| 2
+2 ==> |1/2 1$| 3
+1 ==> |2/3 3$| 3
+2 ==> |2/3 5$| 4
+3 --> |3/3 1$| 4
+```
+
+Costo: $18+3-1+5=25$.
 
 $x=(x_{ij})∈ℝ^n$ pseudoflusso se $0≤x_{ij}≤u_{ij}$
