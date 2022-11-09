@@ -100,7 +100,7 @@ if (x pari) ++y;
 Si vede se un bit è pari guardando il bit meno significativo.
 
 ```armasm
-    LSL R0, R0 #31 ; oppure AND R0, R0, #1
+    LSL R0, R0 #31 # oppure AND R0, R0, #1
     CMP R0, #0
     BNE cout
     ADD R1, R1, #1
@@ -133,7 +133,7 @@ Nella memoria `v` (che parte dall'indirizzo in R0),  cercando `x` (R1) con `n` i
 for:
     CMP R4, R2
     BEQ endfor
-    LDR R5, [R0], #4 ; i numeri sono da 4 byte
+    LDR R5, [R0], #4 @ i numeri sono da 4 byte
     CMP R5, R1
     ADDEQ R3, R3, #1
     ADD R4, R4, #1
