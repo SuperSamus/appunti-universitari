@@ -26,7 +26,7 @@ I $b_i$ sono:
 
 Abbiamo i soliti vincoli di [[ottimizzazione grafi]]. Se avere più di una sorgente o più di un pozzo può dare fastidio, basta immaginare una super sorgente $s$ con $b_s=-4-2=-6$ collegata a costo 0 alle vere sorgenti, e idem per i pozzi.
 
-## Version più semplice
+## Versione più semplice passo-passo
 
 ```mermaid
 flowchart LR
@@ -40,7 +40,7 @@ flowchart LR
 - $b_1=-5$
 - $b_4=5$
 
-Proviamo a vedere questo flusso (invalido), di costo 6$:
+Proviamo a vedere questo pseudoflusso, di costo 6$:
 
 ```mermaid
 flowchart LR
@@ -64,7 +64,7 @@ flowchart LR
 3 <-- |2 -1$| 4
 ```
 
-Proviamo ad aggiungere un'unità di flusso per $1→3→4$:
+Il cammino di costo minimo è $1→3→4$, aggiungiamoci un'unità:
 
 ```mermaid
 flowchart LR
@@ -90,8 +90,7 @@ flowchart LR
 3 <-- |3 -1$| 4
 ```
 
-
-Spingiamo un'altra unità per $1→2→4$:
+Il cammino di costo minimo è $1→2→4$, spingiamoci un'altra unità:
 
 
 ```mermaid
@@ -103,7 +102,7 @@ flowchart LR
 3 --> |3/3 1$| 4
 ```
 
-Costo $=10+3+5=18$, manca un'ultima unità.
+Costo $=10+1+5=16$, manca un'ultima unità.
 
 Grafo residuo:
 
@@ -129,6 +128,8 @@ flowchart LR
 3 --> |3/3 1$| 4
 ```
 
-Costo: $18+3-1+5=25$.
+Costo: $16+3-1+5=23$.
 
-$x=(x_{ij})∈ℝ^n$ pseudoflusso se $0≤x_{ij}≤u_{ij}$
+$x=(x_{ij})∈ℝ^n$ pseudoflusso se rispetta i vincoli di capacità $0≤x_{ij}≤u_{ij}$, anche se non rispetta i bilanci dei nodi.
+
+$e_i(x)=∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} - b_i$
