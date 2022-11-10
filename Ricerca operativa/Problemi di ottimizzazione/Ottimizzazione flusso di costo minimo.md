@@ -2,31 +2,7 @@
 
 Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$$ per ogni unità trasportata.
 
-```mermaid
-flowchart LR
-1 --> |2 2$| 2
-1 --> |6 1$| 3
-1 <-- |3 -1$| 5
-3 --> |5 4$| 2
-3 --> |5 1$| 5
-2 <-- |2 -2$| 6
-2 --> |6 1$| 4
-5 --> |3 2$| 4
-4 --> |2 2$| 6
-5 --> |4 3$| 6
-```
-
-I $b_i$ sono:
-- Sorgenti:
-	- $b_1=-4$
-	- $b_5=-2$
-- Pozzi
-	- $b_4=b_6=3$
-- $0$ per tutto il resto
-
-Abbiamo i soliti vincoli di [[ottimizzazione grafi]]. Se avere più di una sorgente o più di un pozzo può dare fastidio, basta immaginare una super sorgente $s$ con $b_s=-4-2=-6$ collegata a costo 0 alle vere sorgenti, e idem per i pozzi.
-
-## Versione più semplice passo-passo
+Abbiamo i soliti vincoli di [[ottimizzazione grafi]].
 
 ```mermaid
 flowchart LR
@@ -39,6 +15,7 @@ flowchart LR
 
 - $b_1=-5$
 - $b_4=5$
+- $b_i=0$ per tutti gli altri $i$
 
 Proviamo a vedere questo pseudoflusso, di costo 6$:
 
@@ -140,9 +117,13 @@ Nodi con difetto di flusso (deficit): $D_x=\{i∈N:e_i(x)<0\}$
 
 Sbilanciamento complessivo di $x$ $∑\limits_{i∈O_x}e_i(x)$
 
-Nota che i cicli aumentanti di costo negativo non sono ammessi: $x$ flusso ammissibile di costo minimo ⇔ $x$ non ammette cicli aumentanti di costo negativo.
+Se nel grafo residuo c'è un ciclo aumentante di costo negativo, allora il flusso non può essere di costo minimo:
 
-## Tornando al grafo di prima
+$x$ flusso ammissibile di costo minimo
+⇔
+$x$ non ammette cicli aumentanti di costo negativo
+
+## Un grafo più complesso
 
 ```mermaid
 flowchart LR
@@ -157,6 +138,16 @@ flowchart LR
 4 --> |2 2$| 6
 5 --> |4 3$| 6
 ```
+
+I $b_i$ sono:
+- Sorgenti:
+	- $b_1=-4$
+	- $b_5=-2$
+- Pozzi
+	- $b_4=b_6=3$
+- $b_i=0$ per tutti gli altri $i$
+
+Se avere più di una sorgente o più di un pozzo può dare fastidio, basta immaginare una super sorgente $s$ con $b_s=-4-2=-6$ collegata a costo 0 alle vere sorgenti, e idem per i pozzi.
 
 Proviamo questo pseudoflusso:
 
@@ -195,4 +186,12 @@ flowchart LR
 5 <-- |2 -3$| 6
 ```
 
-Il ciclo $\{2,3,5,4\}$ è aumentante: costo $=-4+1+2-1=-2$
+Il ciclo $\{2,3,5,4\}$ è aumentante: costo $=-4+1+2-1=-2$, con capacità $2$: si può risparmiare un costo $-2*2=-4$ senza cambiare il bilanciamento.
+
+### Pseudoflusso minimale
+
+Pseudoflusso di costo minimo tra tutti gli pseudoflussi con gli stessi sbilanciamenti
+
+$x$ pseudoflusso minimale
+⇔
+$x$ non ammette cicli aumentanti di costo negativo
