@@ -211,6 +211,8 @@ $x$ pseudoflusso minimale, $p$ cammino aumentante di costo minimo tra tutti i ca
 ⇓
 Inviando flusso sul cammino si ottiene un altro pseudoflusso minimale (con sbilanciamento complessivo diminuito di $θ$)
 
+(E ovviamente con tutti i flussi a 0 si parte con uno pseudoflusso minimale. escludendo cicli aumentanti di costo negativo)
+
 $\bar{x_{ij}}=\begin{cases}0 & \text{se } c_{ij}≥0 \\ u_{ij} & \text{se }c_{ij}<0 \end{cases}$
 
 Nel suo grafo residuo: costi ≥ 0
