@@ -217,7 +217,7 @@ $\bar{x_{ij}}=\begin{cases}0 & \text{se } c_{ij}≥0 \\ u_{ij} & \text{se }c_{ij
 
 Nel suo grafo residuo: costi ≥ 0
 ↓
-pseudoflusso minimale
+Pseudoflusso minimale
 
 Complessità:
 - SPT.L - Bellman-For per iterazione $O(mn)$
