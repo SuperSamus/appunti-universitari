@@ -204,3 +204,11 @@ Inizializzazione: $x$ pseudoflusso minimale
 	- Se non esiste alcun cammino aumentante, allora STOP (non esistono soluzioni ammissibili)
 	- Altrimenti "aumentare" di $θ$ unità il flusso lungo il cammino trovato dove $θ=\min\{\text{capacità sul cammino},e_x(s),-e_x(t)\}$, con $s∈O_x$ origine del cammino e $t∈D_x$ destinazione del cammino
 3. Ritornare a 1.
+
+Si basa sulla proprietà:
+
+$x$ pseudoflusso minimale, $p$ cammino aumentante di costo minimo tra tutti i cammini da $s∈O_x$ e $t∈O_x$
+⇓
+Inviando flusso sul cammino si ottiene un altro pseudoflusso minimale (con sbilanciamento complessivo diminuito di $θ$)
+
+$\bar{x_{ij}}=\begin{cases}0 & \text{se } c_{ij}≥0 \\ u_{ij}\end{cases}$
