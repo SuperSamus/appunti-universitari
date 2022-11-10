@@ -1,8 +1,9 @@
 # Automi
 
 Automa di Mealy
-- $z=f_z(s,x)$
 - $s'=f_s(s,x)$
+- $z=f_z(s,x)$
+- L'output si aggiorna appena l'input viene modificato.
 
 ```mermaid
 flowchart LR
@@ -12,9 +13,10 @@ fz --> z
 ```
 
 Automa di Moore
-- $z=f_z(s)$
 - $s'=f_s(s,x)$
+- $z=f_z(s')$
 - Il numero di nodi è sempre maggiore o uguale rispetto all'automa di Mealy
+- L'output si aggiorna un ciclo in ritardo, in quanto il registro deve prima aggiornarsi al nuovo stato.
 
 ```mermaid
 flowchart LR
