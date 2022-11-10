@@ -8,12 +8,12 @@ flowchart LR
 1 --> |6 1$| 3
 3 --> |5 4$| 2
 3 --> |5 1$| 5
+2 <-- |2 -2$| 6
 2 --> |6 1$| 4
 5 --> |3 2$| 4
 4 --> |2 2$| 6
 5 --> |4 3$| 6
 5 --> |4 -1$| 1
-6 --> |2 -2$| 2
 ```
 
 I $b_i$ sono:
@@ -140,4 +140,52 @@ Nodi con difetto di flusso (deficit): $D_x=\{i∈N:e_i(x)<0\}$
 
 Sbilanciamento complessivo di $x$ $∑\limits_{i∈O_x}e_i(x)$
 
-Nota che i cicli aumentanti di costo negativo non sono ammessi: $x$ flusso ammissibile di costo minimo ⇔ $x$ non ammette cicli aumentanti di costo negativo
+Nota che i cicli aumentanti di costo negativo non sono ammessi: $x$ flusso ammissibile di costo minimo ⇔ $x$ non ammette cicli aumentanti di costo negativo.
+
+## Tornando al grafo di prima
+
+```mermaid
+flowchart LR
+1 --> |2 2$| 2
+1 --> |6 1$| 3
+3 --> |5 4$| 2
+3 --> |5 1$| 5
+2 <-- |2 -2$| 6
+2 --> |6 1$| 4
+5 --> |3 2$| 4
+4 --> |2 2$| 6
+5 --> |4 3$| 6
+5 --> |4 -1$| 1
+```
+
+Proviamo questo pseudoflusso:
+
+```mermaid
+flowchart LR
+1 --> |2| 2
+1 --> |2| 3
+3 --> |2| 2
+3 --> |2| 5
+2 <-- |2| 6
+2 --> |6| 4
+5 --> |0| 4
+4 --> |1| 6
+5 --> |2| 6
+5 --> |3| 1
+```
+
+Ciò creerà questo grafo residuo (i nodi sono rimpiazzati dagli sbilanciamenti):
+
+```mermaid
+flowchart LR
+1[3] <-- |2 -2$| 2[0]
+1 --> |4 1$| 3[-2]
+3 --> |5 4$| 2
+3 --> |5 1$| 5
+2 <-- |2 -2$| 6
+2 --> |6 1$| 4
+5 --> |3 2$| 4
+4 --> |2 2$| 6
+5 --> |4 3$| 6
+5 --> |4 -1$| 1
+```

@@ -152,7 +152,7 @@ loop:
     LDRB R4, [R0], #1
     LDRB R5, [R1], #1
     CMP R4, R5
-    BLT
+    BLT ...
     BEQ loop
-    B
+    B ...
 ```
