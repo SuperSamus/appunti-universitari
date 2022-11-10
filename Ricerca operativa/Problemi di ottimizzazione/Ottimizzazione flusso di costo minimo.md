@@ -6,6 +6,7 @@ Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$$ per ogni unità 
 flowchart LR
 1 --> |2 2$| 2
 1 --> |6 1$| 3
+1 <-- |3 -1$| 5
 3 --> |5 4$| 2
 3 --> |5 1$| 5
 2 <-- |2 -2$| 6
@@ -13,7 +14,6 @@ flowchart LR
 5 --> |3 2$| 4
 4 --> |2 2$| 6
 5 --> |4 3$| 6
-5 --> |4 -1$| 1
 ```
 
 I $b_i$ sono:
@@ -148,6 +148,7 @@ Nota che i cicli aumentanti di costo negativo non sono ammessi: $x$ flusso ammis
 flowchart LR
 1 --> |2 2$| 2
 1 --> |6 1$| 3
+1 <-- |3 -1$| 5
 3 --> |5 4$| 2
 3 --> |5 1$| 5
 2 <-- |2 -2$| 6
@@ -155,7 +156,6 @@ flowchart LR
 5 --> |3 2$| 4
 4 --> |2 2$| 6
 5 --> |4 3$| 6
-5 --> |4 -1$| 1
 ```
 
 Proviamo questo pseudoflusso:
@@ -164,6 +164,7 @@ Proviamo questo pseudoflusso:
 flowchart LR
 1 --> |2| 2
 1 --> |2| 3
+1 <-- |3| 5
 3 --> |2| 2
 3 --> |2| 5
 2 <-- |2| 6
@@ -171,7 +172,6 @@ flowchart LR
 5 --> |0| 4
 4 --> |1| 6
 5 --> |2| 6
-5 --> |3| 1
 ```
 
 Ciò creerà questo grafo residuo (i nodi sono rimpiazzati dagli sbilanciamenti):
@@ -180,12 +180,19 @@ Ciò creerà questo grafo residuo (i nodi sono rimpiazzati dagli sbilanciamenti)
 flowchart LR
 1[3] <-- |2 -2$| 2[0]
 1 --> |4 1$| 3[-2]
-3 --> |5 4$| 2
-3 --> |5 1$| 5
-2 <-- |2 -2$| 6
-2 --> |6 1$| 4
+1 <-- |2 -1$| 3
+1 --> |3 -1$| 5[-1]
+3 --> |3 4$| 2
+3 <-- |2 -4$| 2
+3 --> |3 1$| 5
+3 <-- |2 -1$| 5
+2 --> |2 2$| 6[-2]
+2 <-- |6 -1$| 4[2]
 5 --> |3 2$| 4
-4 --> |2 2$| 6
-5 --> |4 3$| 6
-5 --> |4 -1$| 1
+4 --> |1 2$| 6
+4 <-- |1 -2$| 6
+5 --> |2 3$| 6
+5 <-- |2 -3$| 6
 ```
+
+Il ciclo $\{2,3,5,4\}$ è aumentante: costo $=-4+1+2-1=-2$
