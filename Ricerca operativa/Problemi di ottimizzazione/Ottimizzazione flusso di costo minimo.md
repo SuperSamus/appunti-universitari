@@ -211,4 +211,14 @@ $x$ pseudoflusso minimale, $p$ cammino aumentante di costo minimo tra tutti i ca
 ⇓
 Inviando flusso sul cammino si ottiene un altro pseudoflusso minimale (con sbilanciamento complessivo diminuito di $θ$)
 
-$\bar{x_{ij}}=\begin{cases}0 & \text{se } c_{ij}≥0 \\ u_{ij}\end{cases}$
+$\bar{x_{ij}}=\begin{cases}0 & \text{se } c_{ij}≥0 \\ u_{ij} & \text{se }c_{ij}<0 \end{cases}$
+
+Nel suo grafo residuo: costi ≥ 0
+↓
+pseudoflusso minimale
+
+Complessità:
+- SPT.L - Bellman-For per iterazione $O(mn)$
+- \# iterazione $g(x)=∑\limits_{i∈O_x}e_i(x)≤∑\limits_{(i,j)∈A:c_{ij}<0}u_{ij}+∑\limits_{i∈N:b_i>0}b_i$
+
+Complessivamente: $O(\bar{g}mn)$
