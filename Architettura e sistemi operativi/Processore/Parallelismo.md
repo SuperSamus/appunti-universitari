@@ -30,7 +30,7 @@ Misure primitive:
 
 Dati:
 - $nw$ numero di workers
-- - $t_i$: latenza dello stadio $i$
+- $t_i$: latenza dello stadio $i$
 - $k$ numero di stadi
 - $m$ numero di task
 
