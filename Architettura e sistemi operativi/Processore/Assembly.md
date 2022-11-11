@@ -156,3 +156,13 @@ loop:
     BEQ loop
     B ...
 ```
+
+## Direttive
+
+- `text`
+- `global`
+- `function`
+- `data`
+	- `word`
+	- `string`
+	- `fill`
