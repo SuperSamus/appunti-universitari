@@ -7,4 +7,7 @@ Per esempio, la *libreria standard* consente di scrivere in programma che opera 
 ## Il paradigma a oggetti
 
 - Sistema software: insieme di oggetti cooperanti
-- Gli ogge
+- Gli oggetti sono caratterizzati da
+	- Uno stato
+	- Un insieme di funzionalità
+- Gli oggetti cooperano scambiandosi messaggi
