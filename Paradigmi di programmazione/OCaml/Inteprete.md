@@ -243,9 +243,28 @@ type exp =
 
 $v::=\underline{n}|\underline{b}|λx.e$
 
+#### Ambiente
+
+Le dichiarazioni `let` creano un ambiente. Per esempio:
+```OCaml
+let x = 3
+x + x
+```
+$⤳x↦3|x+x$
+
+La semantica operazionale non è una relazione da espressioni a valori, ma rispetto a un ambiente Σ.
+
+$$
+Σ🢒e⇒v
+$$
+
+Esempio:
+
 $$
 \cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
+
+Si può notare che la complessità è ridotta rispetta 
 
 $$
 Σ🢒λx.e⇒
