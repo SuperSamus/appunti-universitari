@@ -258,6 +258,8 @@ $$
 Σ🢒e⇒v
 $$
 
+Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉$
+
 Rispetto al descrivere formalmente un [[linguaggio]], non è necessario descrivere la regole di [[sostituzione]].
 
 ##### Esempi:
@@ -269,13 +271,13 @@ $$
 
 ###### Chiusura
 $$
-Σ🢒λx.e⇒〈x,e,Σ〉
+\cfrac{}{Σ🢒λx.e⇒〈x,e,Σ〉}
 $$
 (Se venisse restituita la λ-espressione direttamente, si avrebbe uno *scoping dinamico* invece che *statico*)
 
 ###### Applicazione
 $$
-\cfrac{Σ🢒e⇒ \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒e\:e'⇒}
+\cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒w}{Σ🢒e\:e'⇒w}
 $$
 
 ## Ottimizzazioni
