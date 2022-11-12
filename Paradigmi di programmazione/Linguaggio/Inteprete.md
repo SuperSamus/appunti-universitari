@@ -280,6 +280,12 @@ $$
 \cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒w}{Σ🢒e\:e'⇒w}
 $$
 
+###### "Esecuzione" variabile
+$$
+\cfrac{}{Σ🢒x⇒Σ(x)}
+$$
+
+
 ## Ottimizzazioni
 
 ^4a0b50
