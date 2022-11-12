@@ -189,29 +189,33 @@ Small Step
 $\cfrac{e→e'}{e+f→e'+f}$
 Big Step
 
-### Strutturali
+Queste tipologie di semantiche operazionali sono **strutturali**.
 
 ```mermaid
 flowchart TB
 O --> - & +
 - --> x1 & x2 & c1
-+ --> c2 & y1 & y2 & z3
++ --> c2 & *
+* --> y1 & y2 & z3
 ```
 
 ### Definendo eval
 
+eval⤳Implementazione della semantica operazionale
 
-
+Per esempio:
 $$
 \cfrac{e_1 ⇒ \underline{n_1} \quad e_2 ⇒ \underline{n_2}}{Add(e_1, e_2)⇒\underline{n_1+n_2}}
 $$
 
 ```OCaml
-| Add(e1,e2) ->
-    let
-        n1 = eval n1
-        n2 = eval n2
-    in Val(n1+n2)
+let eval ast =
+    match ast with
+        | Add(e1,e2) ->
+            let
+                n1 = eval n1
+                n2 = eval n2
+            in Val(n1+n2)
 ```
 
 ### "MiniCAML"
