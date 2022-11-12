@@ -1,8 +1,8 @@
 # Interprete
 
-Definizione di $Γ$:
-- $e::=n|e \: op \: e|(e)$
-- $op::=+|*|-|/$
+Per un linguaggio basato su espressioni, lo schema generale di un interprete è:
+
+$Σ^*⊇L\xrightarrow{p}AST\xrightarrow{eval}AST_{val}$
 
 ```mermaid
 flowchart LR
@@ -23,6 +23,10 @@ end
 - $syntax::string→exp$
 
 ## Sintassi in [[OCaml]]
+
+Definizione di $Γ$:
+- $e::=n|e \: op \: e|(e)$
+- $op::=+|*|-|/$
 
 ### Scanner
 
@@ -195,6 +199,8 @@ O --> - & +
 ```
 
 ### Definendo eval
+
+
 
 $$
 \cfrac{e_1 ⇒ \underline{n_1} \quad e_2 ⇒ \underline{n_2}}{Add(e_1, e_2)⇒\underline{n_1+n_2}}
