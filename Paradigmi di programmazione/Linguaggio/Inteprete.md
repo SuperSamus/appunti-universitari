@@ -260,16 +260,23 @@ $$
 
 Rispetto al descrivere formalmente un [[linguaggio]], non è necessario descrivere la regole di [[sostituzione]].
 
-Esempi:
+##### Esempi:
 
+###### Let
 $$
 \cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
 
+###### Chiusura
 $$
-Σ🢒λx.e⇒
+Σ🢒λx.e⇒〈x,e,Σ〉
 $$
-TODO
+(Se venisse restituita la λ-espressione direttamente, si avrebbe uno *scoping dinamico* invece che *statico*)
+
+###### Applicazione
+$$
+\cfrac{Σ🢒e⇒ \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒e\:e'⇒}
+$$
 
 ## Ottimizzazioni
 
