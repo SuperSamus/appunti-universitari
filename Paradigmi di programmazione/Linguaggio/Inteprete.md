@@ -260,9 +260,16 @@ $$
 
 Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉$
 
-Rispetto al descrivere formalmente un [[linguaggio]], non è necessario descrivere la regole di [[sostituzione]].
+```OCaml
+type a' env = ide -> a'
+type val =
+    | Int of int (* `VInt` è un `exp`, `Int` è un `val` *)
+    | Bool of bool
+    | Closure of ide * exp * val env
+```
 
 #### Esempi:
+Rispetto al descrivere formalmente un [[linguaggio]], non è necessario descrivere la regole di [[sostituzione]].
 
 ##### Let
 $$
