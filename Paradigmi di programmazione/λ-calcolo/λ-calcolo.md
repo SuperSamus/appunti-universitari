@@ -92,7 +92,7 @@ variabile|λ-astrazione|astrazione
 
 $(λx.3x^2+4x+6)s=3s^2+4s+6$
 
-$(λx.t)s → t[s/x]$ ([[Sostituzioni]])
+$(λx.t)s → t[s/x]$ ([[Sostituzione]])
 
 $(λx.xy)x$: x è un segnaposto solo dentro la parentesi, fuori è solo una variabile, perché non è più legata dal lambda. $x ∈ FV(t)$
 

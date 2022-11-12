@@ -258,13 +258,13 @@ $$
 Σ🢒e⇒v
 $$
 
-Esempio:
+Rispetto al descrivere formalmente un [[linguaggio]], non è necessario descrivere la regole di [[sostituzione]].
+
+Esempi:
 
 $$
 \cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
-
-Rispetto al descrivere formalmente un [[linguaggio]], non è necessario descrivere la regole di [[Sostituzioni]]
 
 $$
 Σ🢒λx.e⇒

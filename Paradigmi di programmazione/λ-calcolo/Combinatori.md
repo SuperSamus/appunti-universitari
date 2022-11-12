@@ -12,7 +12,7 @@
 		- $ΘK=K(ΘK)=(λx.λy.x)(ΘK)→_β λy.ΘK=O$
 - $S≜λx.λy.λz.xz(yz)$
 
-## Risolvere il problema delle [[sostituzioni]]
+## Risolvere il problema della [[sostituzione]]
 
 Evitare di sostituire variabili libere rendendole accidentalmente legate è difficile. Come si risolve?
 

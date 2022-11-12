@@ -13,7 +13,7 @@ Non ci sono [[β-riduzione#^b5ae66|effetti collaterali]].
 - Programmazione *dichiarativa*
 	- Non ci preoccupiamo di descrivere i passaggi in memoria, lo fa la macchina
 - Basato sul [[λ-calcolo]]
-	- [[Sostituzioni|Passaggio per nome/valore]]
+	- [[Sostituzione|Passaggio per nome/valore]]
 	- Esecuzione: [[β-riduzione]]
 
 $E::=0|1|…|true|false|E+E|E*E|\text{if } E \text{ then } E \text{ else }E|ite(E,E,E)\text{fun } x⇒E| EE|\text{let } x=E \text{ in }E|fix \: e|…$
