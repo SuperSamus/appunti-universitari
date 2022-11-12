@@ -235,9 +235,10 @@ type tname = TInt | TBool
 type exp =
     | VInt of int
     | VBool of bool
-    | Let of ide * e * e
-    | Larm of ide * e
     | Add of exp * exp
+    | Let of ide * e * e
+    | Lam of ide * e
+    | App of exp * exp
 ```
 
 $v::=\underline{n}|\underline{b}|λx.e$
