@@ -219,7 +219,7 @@ let eval ast =
         (*...*)
 ```
 
-### "MiniCAML"
+## "MiniCAML"
 
 $e::=\underline{n}|e+e|e*e|\underline{b}|ite(e,e,e)|\text{let }x=e \text{ in } e|λx.e|e \: e$
 
@@ -243,7 +243,7 @@ type exp =
 
 $v::=\underline{n}|\underline{b}|λx.e$
 
-#### Ambiente
+### Ambiente
 
 Le dichiarazioni `let` creano un ambiente. Per esempio:
 ```OCaml
@@ -252,7 +252,7 @@ x + x
 ```
 $⤳x↦3|x+x$
 
-La semantica operazionale non è una relazione da espressioni a valori, ma rispetto a un ambiente Σ.
+La semantica operazionale non è una relazione da espressioni a valori, ma rispetto a un ambiente $Σ:ide→α$ (bisognerebbe aggiungere anche $option$).
 
 $$
 Σ🢒e⇒v
@@ -262,25 +262,25 @@ Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉$
 
 Rispetto al descrivere formalmente un [[linguaggio]], non è necessario descrivere la regole di [[sostituzione]].
 
-##### Esempi:
+#### Esempi:
 
-###### Let
+##### Let
 $$
 \cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
 
-###### Chiusura
+##### Chiusura
 $$
 \cfrac{}{Σ🢒λx.e⇒〈x,e,Σ〉}
 $$
 (Se venisse restituita la λ-espressione direttamente, si avrebbe uno *scoping dinamico* invece che *statico*)
 
-###### Applicazione
+##### Applicazione
 $$
 \cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒w}{Σ🢒e\:e'⇒w}
 $$
 
-###### "Esecuzione" variabile
+##### "Esecuzione" variabile
 $$
 \cfrac{}{Σ🢒x⇒Σ(x)}
 $$
