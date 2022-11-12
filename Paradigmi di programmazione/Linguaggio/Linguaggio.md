@@ -16,9 +16,9 @@ $$
 
 Esempi di programmi:
 
-```
-let x = 3+2 in
-let y = 5+2 in
+```OCaml
+let x = 3 + 2 in
+let y = 5 + 2 in
 x+y
 ```
 

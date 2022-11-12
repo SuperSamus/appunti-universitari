@@ -74,9 +74,9 @@ e''
 
 Di solito in un linguaggio funzionale si rappresenta con:
 
-```
-let x=e
-    y=e'
+```OCaml
+let x = e
+and y = e'
 in
     e''
 ```
