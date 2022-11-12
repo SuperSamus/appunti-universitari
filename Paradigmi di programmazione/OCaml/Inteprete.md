@@ -237,7 +237,7 @@ type exp =
     | VBool of bool
     | Let of ide * e * e
     | Larm of ide * e
-    | App of exp * exp
+    | Add of exp * exp
 ```
 
 $v::=\underline{n}|\underline{b}|λx.e$
