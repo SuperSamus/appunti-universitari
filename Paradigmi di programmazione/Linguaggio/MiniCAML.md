@@ -41,7 +41,7 @@ $$
 Σ🢒e⇒v
 $$
 
-Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉|〈f,x,t,Δ〉$
+Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉|〈f,x,t,Φ〉$
 
 ```OCaml
 type a' env = ide -> a'
@@ -49,7 +49,7 @@ type val =
     | Int of int (* `ExpInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
-    | ClosureRec of ide * ide * exp * exp
+    | ClosureRec of ide * ide * exp * exp (* Invece che contenere un ambiente, viene contenuta la funzione che deve essere chiamata ricorsivamente *)
     | Unbound (* Se la variabile non c'è nell'ambiente *)
 ```
 
@@ -92,9 +92,9 @@ $$
 \cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
-##### Ricorsiva
+##### Applicazione ricorsiva
 $$
-\cfrac{Σ🢒e⇒〈f,x,t,Δ〉 \quad Σ🢒e'⇒v \quad Δ[f↦〈f,x,t,Δ〉][x↦t]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
+\cfrac{Σ🢒e⇒〈f,x,t,Φ〉 \quad Σ🢒e'⇒v \quad Φ[f↦〈f,x,t,Φ〉][x↦t]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
 #### "Esecuzione" variabile
@@ -122,7 +122,7 @@ let rec eval e s = match e with
 	    and v = eval e2 s
 	    in match clos with
 	        | Closure(x,f,p) -> eval f (bind p x v)
-	        | ClosureRec(f,x,t,p) -> 
+	        | ClosureRec(f,x,t,p) -> eval t 
 	        | _ -> error
 	(*...*)
 
