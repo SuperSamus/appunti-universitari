@@ -1,6 +1,6 @@
 # MiniCAML
 
-Il nostro subset di [[OCaml]], dove si implementerà anche un [[Inteprete]].
+Il nostro subset di [[OCaml]], dove si implementerà anche un [[inteprete]].
 
 $e::=\underline{n}|e+e|e*e|\underline{b}|ite(e,e,e)|\text{let }x=e \text{ in } e|λx.e|e \: e$
 
@@ -47,9 +47,10 @@ type val =
     | Int of int (* `VInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
+    | Unbound (* Se la variabile non c'è nell'ambiente *)
 ```
 
-### Esempi:
+### Definizioni:
 Rispetto all'altra descrizione formale di un [[linguaggio]], con queste semantica operazionale non è necessario descrivere la regole di [[sostituzione]].
 
 #### Let
