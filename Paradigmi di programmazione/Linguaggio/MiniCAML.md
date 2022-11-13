@@ -2,7 +2,9 @@
 
 Il nostro subset di [[OCaml]], dove si implementerà anche un [[inteprete]].
 
-$e::=\underline{n}|e+e|e*e|\underline{b}|ite(e,e,e)|\text{let }x=e \text{ in } e|λx.e|e \: e$
+(Nota: il professore non riesce ad essere coerente con la sintassi)
+
+$e::=\underline{n}|\underline{b}|e+e|e*e|ite(e,e,e)|λx.e|e \: e|\text{let }x=e \text{ in } e|\text{let rec }fx=e\text{ in }e$
 
 Variabili/identificatori:
 - Costanti: $\underline{n},\underline{b}$
@@ -12,7 +14,6 @@ Variabili/identificatori:
 
 ```OCaml
 type ide = string
-type tname = TInt | TBool
 type exp =
     | ExpInt of int
     | ExpBool of bool
@@ -47,6 +48,7 @@ type val =
     | Int of int (* `ExpInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
+    | RecClosure of ide * exp * val env
     | Unbound (* Se la variabile non c'è nell'ambiente *)
 ```
 
@@ -60,17 +62,17 @@ $bind:val\:env→ide→val→val\:env$
 let bind s x v = fun y -> if (x = y) then v else (s y)
 ```
 
-### Definizioni:
+### Definizioni
 Rispetto all'altra descrizione formale di un [[linguaggio]], con queste semantica operazionale non è necessario descrivere la regole di [[sostituzione]].
-
-#### Let
-$$
-\cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
-$$
 
 #### Somma
 $$
 \cfrac{Σ🢒e_1⇒\underline{n_1} \quad Σ🢒e_1⇒\underline{n_2}}{Σ🢒Add(e_1,e_2)⇒\underline{n_1+n_2}}
+$$
+
+#### Let
+$$
+\cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
 
 #### Chiusura
@@ -103,10 +105,15 @@ let rec eval e s = match e with
 	    let v1 = eval e1 s
 	    and v2 = eval e2 s
 	    in int_plus v1 v2
-	| Let(x,e,e') ->
-	    let v = eval e s
-	    in eval e' (bind s x v)
+	| Let(x,e1,e2) ->
+	    let v = eval e1 s
+	    in eval e2 (bind s x v)
 	| Lam(x,e) -> Closure(x,e,s)
-	| App(e, e')
+	| App(e1,e2) ->
+	    let clos = eval e1 s
+	    and v = eval e2 s
+	    in match clos with
+	        | Closure(x,f,p) -> eval f (bind p x v)
+	        | _ -> error
 	(*...*)
 ```
