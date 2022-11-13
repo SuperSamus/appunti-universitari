@@ -49,7 +49,7 @@ type val =
     | Int of int (* `ExpInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
-    | ClosureRec of ide * ide * exp * val env
+    | ClosureRec of ide * ide * exp * exp (* Ma non ci dovrebbe essere un ambiente nelle chiusure? *)
     | Unbound (* Se la variabile non c'è nell'ambiente *)
 ```
 
@@ -77,9 +77,9 @@ $$
 $$
 
 #### LetRec
-(Credo, perché il professore ha scritto qualcosa di insensato)
+(Il professore non ci tiene a speigare come questa magica chiusura dovrebbe funzionare)
 $$
-\cfrac{Σ🢒e⇒v \quad Σ[f↦〈f,x,e',Σ〉][e↦v]🢒e'⇒v'}{Σ🢒\text{let rec }f\:x=e \text{ in } e'⇒v'}
+\cfrac{Σ[f↦〈f,x,e,e'〉]🢒e'⇒v'}{Σ🢒\text{let rec }f\:x=e \text{ in } e'⇒v'}
 $$
 
 #### Chiusura
@@ -90,7 +90,7 @@ $$
 
 #### Applicazione
 $$
-\cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒w}{Σ🢒e\:e'⇒w}
+\cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
 #### "Esecuzione" variabile
