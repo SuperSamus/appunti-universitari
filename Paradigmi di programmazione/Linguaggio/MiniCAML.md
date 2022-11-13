@@ -14,8 +14,8 @@ Variabili/identificatori:
 type ide = string
 type tname = TInt | TBool
 type exp =
-    | VInt of int
-    | VBool of bool
+    | ExpInt of int
+    | ExpBool of bool
     | Add of exp * exp
     | Let of ide * e * e
     | Lam of ide * e
@@ -44,7 +44,7 @@ Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉$
 ```OCaml
 type a' env = ide -> a'
 type val =
-    | Int of int (* `VInt` è un `exp`, `Int` è un `val` *)
+    | Int of int (* `ExpInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
     | Unbound (* Se la variabile non c'è nell'ambiente *)
@@ -74,21 +74,6 @@ $$
 \cfrac{}{Σ🢒x⇒Σ(x)}
 $$
 
-## Eval
-
-$eval:exp→env→val$
-
-```OCaml
-eval e empty-env ->
-let empty-env = fun i -> Undefined
-```
-
-$$
-\cfrac{Σ🢒e_1⇒\underline{n_1} \quad Σ🢒e_1⇒\underline{n_2}}{Σ🢒Add(e_1,e_2)⇒\underline{n_1+n_2}}
-$$
-
-Nota che non abbiamo un sistema di tipo per prevenire l'addizione tra `bool`.
-
 ## Bind
 
 Lega una variabile all'ambiente: prende (tra le varie cose) un ambiente come input, per restituire un ambiente come output.
@@ -98,3 +83,18 @@ $bind:val\:env→ide→val→val\:env$
 ```OCaml
 let bind s x v = fun y -> if (x = y) then v else (s y)
 ```
+
+## Eval
+
+$eval:exp→env→val$
+
+```OCaml
+let eval e s = match e with
+    | Add(e1,e2) -> let v1, v2 = eval e1, s1
+```
+
+$$
+\cfrac{Σ🢒e_1⇒\underline{n_1} \quad Σ🢒e_1⇒\underline{n_2}}{Σ🢒Add(e_1,e_2)⇒\underline{n_1+n_2}}
+$$
+
+Nota che non abbiamo un sistema di tipo per prevenire l'addizione tra `bool`.
