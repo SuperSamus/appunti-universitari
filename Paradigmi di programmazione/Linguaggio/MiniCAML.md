@@ -94,7 +94,7 @@ $$
 
 ##### Applicazione ricorsiva
 $$
-\cfrac{Σ🢒e⇒〈f,x,t,Φ〉 \quad Σ🢒e'⇒v \quad Φ[f↦〈f,x,t,Φ〉][x↦t]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
+\cfrac{Σ🢒e⇒〈f,x,t,Φ〉 \quad Σ🢒e'⇒v \quad Φ[f↦〈f,x,t,Φ〉][x↦v]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
 #### "Esecuzione" variabile
@@ -121,8 +121,8 @@ let rec eval e s = match e with
 	    let clos = eval e1 s
 	    and v = eval e2 s
 	    in match clos with
-	        | Closure(x,f,p) -> eval f (bind p x v)
-	        | ClosureRec(f,x,t,p) -> eval t 
+	        | Closure(x,t,p) -> eval t (bind p x v)
+	        | ClosureRec(f,x,t,p) -> eval t (bind (bind p x v) f ClosureRec(f,x,t,p))
 	        | _ -> error
 	(*...*)
 
