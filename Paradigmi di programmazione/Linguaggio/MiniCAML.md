@@ -86,15 +86,21 @@ let bind s x v = fun y -> if (x = y) then v else (s y)
 
 ## Eval
 
-$eval:exp→env→val$
+$eval:exp→val\:env→val$
 
 ```OCaml
-let eval e s = match e with
-    | Add(e1,e2) -> let v1, v2 = eval e1, s1
+let rec eval e s = match e with
+    | Add(e1,e2) ->
+	    let v1 = eval e1 s
+	    and v2 = eval e2 s
+	    in int_plus v1 v2
+	(*...*)
+
+let intplus v1 v2 = match v1, v2 with
+    | Int n1, Int n2 -> Int(n1+n2)
+    (*...*)
 ```
 
 $$
 \cfrac{Σ🢒e_1⇒\underline{n_1} \quad Σ🢒e_1⇒\underline{n_2}}{Σ🢒Add(e_1,e_2)⇒\underline{n_1+n_2}}
 $$
-
-Nota che non abbiamo un sistema di tipo per prevenire l'addizione tra `bool`.
