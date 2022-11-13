@@ -41,7 +41,7 @@ $$
 Σ🢒e⇒v
 $$
 
-Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉|〈f,x,e,Σ〉$
+Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉|〈f,x,t,Δ〉$
 
 ```OCaml
 type a' env = ide -> a'
@@ -49,7 +49,7 @@ type val =
     | Int of int (* `ExpInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
-    | ClosureRec of ide * ide * exp * exp (* Ma non ci dovrebbe essere un ambiente nelle chiusure? *)
+    | ClosureRec of ide * ide * exp * exp
     | Unbound (* Se la variabile non c'è nell'ambiente *)
 ```
 
@@ -76,8 +76,7 @@ $$
 \cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
 
-#### LetRec
-(Il professore non ci tiene a speigare come questa magica chiusura dovrebbe funzionare)
+##### LetRec
 $$
 \cfrac{Σ[f↦〈f,x,e,e'〉]🢒e'⇒v'}{Σ🢒\text{let rec }f\:x=e \text{ in } e'⇒v'}
 $$
@@ -93,6 +92,11 @@ $$
 \cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
+##### Ricorsiva
+$$
+\cfrac{Σ🢒e⇒〈f,x,t,Δ〉 \quad Σ🢒e'⇒v \quad Δ[f↦〈f,x,t,Δ〉][x↦t]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
+$$
+
 #### "Esecuzione" variabile
 $$
 \cfrac{}{Σ🢒x⇒Σ(x)}
@@ -103,10 +107,6 @@ $$
 $eval:exp→val\:env→val$
 
 ```OCaml
-let intplus v1 v2 = match v1, v2 with
-    | Int n1, Int n2 -> Int(n1+n2)
-    (*...*)
-
 let rec eval e s = match e with
     | Add(e1,e2) ->
 	    let v1 = eval e1 s
@@ -115,13 +115,18 @@ let rec eval e s = match e with
 	| Let(x,e1,e2) ->
 	    let v = eval e1 s
 	    in eval e2 (bind s x v)
-	| 
+	| LetRec(f,x,e1,e2) -> eval e2 (bind s f ClosureRec(f,x,e1,e2))
 	| Lam(x,e) -> Closure(x,e,s)
 	| App(e1,e2) ->
 	    let clos = eval e1 s
 	    and v = eval e2 s
 	    in match clos with
 	        | Closure(x,f,p) -> eval f (bind p x v)
+	        | ClosureRec(f,x,t,p) -> 
 	        | _ -> error
 	(*...*)
+
+let intplus v1 v2 = match v1, v2 with
+    | Int n1, Int n2 -> Int(n1+n2)
+    (*...*)
 ```
