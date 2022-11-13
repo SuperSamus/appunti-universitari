@@ -4,7 +4,7 @@ Il nostro subset di [[OCaml]], dove si implementerà anche un [[inteprete]].
 
 (Nota: il professore non riesce ad essere coerente con la sintassi)
 
-$e::=\underline{n}|\underline{b}|e+e|e*e|ite(e,e,e)|λx.e|e \: e|\text{let }x=e \text{ in } e|\text{let rec }fx=e\text{ in }e$
+$e::=\underline{n}|\underline{b}|e+e|e*e|ite(e,e,e)|λx.e|e \: e|\text{let }x=e \text{ in } e|\text{let rec }f\:x=e\text{ in }e$
 
 Variabili/identificatori:
 - Costanti: $\underline{n},\underline{b}$
@@ -18,8 +18,9 @@ type exp =
     | ExpInt of int
     | ExpBool of bool
     | Add of exp * exp
-    | Let of ide * e * e
-    | Lam of ide * e
+    | Let of ide * exp * exp
+    | LetRec of ide * ide * exp * exp
+    | Lam of ide * exp
     | App of exp * exp
 ```
 
@@ -40,7 +41,7 @@ $$
 Σ🢒e⇒v
 $$
 
-Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉$
+Con $v::=\underline{n}|\underline{b}|〈x,e,Σ〉|〈f,x,e,Σ〉$
 
 ```OCaml
 type a' env = ide -> a'
@@ -48,7 +49,7 @@ type val =
     | Int of int (* `ExpInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
-    | RecClosure of ide * exp * val env
+    | ClosureRec of ide * ide * exp * val env
     | Unbound (* Se la variabile non c'è nell'ambiente *)
 ```
 
@@ -73,6 +74,11 @@ $$
 #### Let
 $$
 \cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
+$$
+
+#### LetRec
+$$
+\cfrac{Σ[f↦〈f,x,e,Δ〉]🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let rec }f\:x=e \text{ in } e'⇒v'}
 $$
 
 #### Chiusura
@@ -108,6 +114,7 @@ let rec eval e s = match e with
 	| Let(x,e1,e2) ->
 	    let v = eval e1 s
 	    in eval e2 (bind s x v)
+	| 
 	| Lam(x,e) -> Closure(x,e,s)
 	| App(e1,e2) ->
 	    let clos = eval e1 s
