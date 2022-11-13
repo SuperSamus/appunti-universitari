@@ -88,3 +88,13 @@ $$
 $$
 
 Nota che non abbiamo un sistema di tipo per prevenire l'addizione tra `bool`.
+
+## Bind
+
+Lega una variabile all'ambiente: prende (tra le varie cose) un ambiente come input, per restituire un ambiente come output.
+
+$bind:val\:env→ide→val→val\:env$
+
+```OCaml
+let bind s x v = fun y -> if (x = y) then v else (s y)
+```
