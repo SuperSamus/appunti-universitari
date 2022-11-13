@@ -77,8 +77,9 @@ $$
 $$
 
 #### LetRec
+(Credo, perché il professore ha scritto qualcosa di insensato)
 $$
-\cfrac{Σ[f↦〈f,x,e,Δ〉]🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let rec }f\:x=e \text{ in } e'⇒v'}
+\cfrac{Σ🢒e⇒v \quad Σ[f↦〈f,x,e',Σ〉][e↦v]🢒e'⇒v'}{Σ🢒\text{let rec }f\:x=e \text{ in } e'⇒v'}
 $$
 
 #### Chiusura
