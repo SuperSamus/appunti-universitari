@@ -185,18 +185,6 @@ flowchart LR
 3 <-- |2| 6 --> |2| 2
 ```
 
-
-```mermaid
-flowchart LR
-1 <--> |4/6| 2 <--> |4/5| 4
-7 --> |6/6| 4
-6 --> |1/1| 1
-6 <--> |3/4| 4 --> |1/1| 5
-3 <--> |2/4| 5 <--> |3/5| 7
-6 --> |2/2| 3 --> |4/4| 1
-6 --> |0/2| 2
-```
-
 ## Altro
 
 ### Numero di cammini che non condividono alcun arco
