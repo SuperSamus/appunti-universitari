@@ -49,7 +49,7 @@ type val =
     | Int of int (* `ExpInt` è un `exp`, `Int` è un `val` *)
     | Bool of bool
     | Closure of ide * exp * val env
-    | ClosureRec of ide * ide * exp * exp (* Invece che contenere un ambiente, viene contenuta la funzione che deve essere chiamata ricorsivamente *)
+    | ClosureRec of ide * ide * exp * exp (* Invece che contenere un ambiente con le variabili fuori, viene contenuta la funzione che deve essere chiamata ricorsivamente *)
     | Unbound (* Se la variabile non c'è nell'ambiente *)
 ```
 
@@ -89,7 +89,7 @@ $$
 
 #### Applicazione
 $$
-\cfrac{Σ🢒e⇒〈x,f,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒f⇒v'}{Σ🢒e\:e'⇒v'}
+\cfrac{Σ🢒e⇒〈x,t,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
 ##### Applicazione ricorsiva
