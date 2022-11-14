@@ -69,6 +69,7 @@ flowchart LR
 
 $P$ è un *cammino aumentante* se:
 - $P$ è un cammino da $s$ a $t$
+	- Più genericamente, da un nodo con surplus verso un nodo con deficit
 - $θ>0$
 
 ## [[Ottimizzazione grafi#^64bc6c|Tagli]]
