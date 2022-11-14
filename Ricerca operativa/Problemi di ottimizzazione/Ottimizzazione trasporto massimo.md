@@ -67,7 +67,7 @@ flowchart LR
 - $θ^-=\min\{x_{ij}:(i,j)∈P^-\}$
 - $θ=\min\{θ^+,θ^-\}$
 
-$P$ è un *cammino aumentante* se:
+$P$ è un *cammino aumentante* se: ^8f170a
 - $P$ è un cammino da $s$ a $t$
 	- Più genericamente, da un nodo con surplus verso un nodo con deficit
 - $θ>0$

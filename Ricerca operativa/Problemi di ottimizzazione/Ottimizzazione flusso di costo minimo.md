@@ -41,7 +41,7 @@ flowchart LR
 3 <-- |2 -1$| 4
 ```
 
-Il cammino di costo minimo è $1→3→4$, aggiungiamoci un'unità:
+Il [[Ottimizzazione trasporto massimo#^8f170a|cammino aumentante]] di costo minimo è $1→3→4$, aggiungiamoci un'unità:
 
 ```mermaid
 flowchart LR
