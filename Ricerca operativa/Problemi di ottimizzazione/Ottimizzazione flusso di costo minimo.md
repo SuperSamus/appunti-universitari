@@ -115,7 +115,7 @@ Nodi con accesso di flusso (surplus): $O_x=\{i∈N:e_i(x)>0\}$
 
 Nodi con difetto di flusso (deficit): $D_x=\{i∈N:e_i(x)<0\}$
 
-Sbilanciamento complessivo di $x$ $∑\limits_{i∈O_x}e_i(x)$
+Sbilanciamento complessivo di $x$: $∑\limits_{i∈O_x}e_i(x)$
 
 Se nel grafo residuo c'è un ciclo aumentante di costo negativo, allora il flusso non può essere di costo minimo:
 
