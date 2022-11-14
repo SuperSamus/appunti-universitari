@@ -202,7 +202,7 @@ Inizializzazione: $x$ pseudoflusso minimale
 1. Se $x$ è ammissibile ($g(x)=0$) allora STOP
 2. Ricerca di un cammino aumentante di costo minimo
 	- Se non esiste alcun cammino aumentante, allora STOP (non esistono soluzioni ammissibili)
-	- Altrimenti "aumentare" di $θ$ unità il flusso lungo il cammino trovato dove $θ=\min\{\text{capacità sul cammino},e_x(s),-e_x(t)\}$, con $s∈O_x$ origine del cammino e $t∈D_x$ destinazione del cammino
+	- Altrimenti "aumentare" di $θ$ unità il flusso lungo il cammino trovato dove $θ=\min\{\text{capacità sul cammino},e_s(x),-e_t(x)\}$, con $s∈O_x$ origine del cammino e $t∈D_x$ destinazione del cammino
 3. Ritornare a 1.
 
 Si basa sulla proprietà:
