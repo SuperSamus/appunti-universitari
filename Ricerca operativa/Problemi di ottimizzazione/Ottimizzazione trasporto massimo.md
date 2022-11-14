@@ -92,9 +92,34 @@ Quindi formalmente, proviamo a trovare un cammino aumentante. L'unico arco possi
 
 - $N_s=\{\text{nodi visitati}\}=\{1,2\}$
 - $N_t=\{\text{nodi non visitati}\}=\{3,4,5,6,7\}$
+
+```mermaid
+flowchart LR
+1 --> |5/6| 2 --> |5/5| 4 --> |6/6| 7
+1 --> |1/1| 6 --> |2/4| 4 --> |1/1| 5
+1 --> |4/4| 3 --> |3/4| 5 --> |4/5| 7
+3 --> |1/2| 6 --> |0/2| 2
+subgraph Ns
+    1
+    2
+end
+subgraph Nt
+    3
+    4
+    5
+    6
+    7
+end
+```
+
+Abbiamo che:
 - $(i,j)∈A^+(N_s,N_t)→x_{ij}=u_{ij}$
 - $(i,j)∈A^-(N_s,N_t)→x_{ij}=0$
-- $v=x(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}x_{ij}-∑\limits_{(i,j)∈A^-(N_s,N_t)}x_{ij}=∑\limits_{(i,j)∈A^+(N_s,N_t)}u_{ij}=u(N_s,N_t)$
+
+Quindi:
+$$
+v=x(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}x_{ij}-∑\limits_{(i,j)∈A^-(N_s,N_t)}x_{ij}=∑\limits_{(i,j)∈A^+(N_s,N_t)}u_{ij}=u(N_s,N_t)
+$$
 
 Questo dimostra il ⇐ di:
 
