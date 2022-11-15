@@ -20,7 +20,7 @@ $x^* ∈ A \text{ è soluzione ottima} ⟺ f(x^*) \; \text{valore ottimo}$
     - Esempio: $A=\{x ∈ ℝ: x ≤ 0, x ≥ 1\}$
 - $∃ \text{valore ottimo} \; ∃ \text{soluzione ottima}$
     - Esempio: $min\{x^2: x ∈ ℝ\}$
-- $∃ \text{valore ottimo} \; \nexists \text{soluzione ottima}$
+- $∃ \text{valore ottimo} \; ∄\text{soluzione ottima}$
     - Esempio: $min\{e^{-x}: x ∈ ℝ\}$
 - $\nexists \text{valore ottimo}$
     - Esempio: $min\{log(x): x > 0\}$
