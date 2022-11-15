@@ -167,16 +167,24 @@ $$
 
 Abbiamo un β-redex!
 
-## Tipi composti
+## Tuple
 
-### Tuple
-
-$$
-\cfrac{∀i∈[1,k].Γ⊢e_1:τ_1}{[l_1e_1,…,l_k:e_k]→[l_1:τ_1,…,l_k:τ_k]}
-$$
-
-### Struct
+### Semantica statica
 
 $$
-\cfrac{Γ⊢e:[l_1:τ_1,...,l_k:τ_k],\quad 1≤j≤k}{Γ⊢e.l_j:τ_j}
+\cfrac{∀i∈[1,k].Γ⊢e_i:τ_i}{[l_1e_1,…,l_k:e_k]→[l_1:τ_1,…,l_k:τ_k]}
+$$
+
+$$
+\cfrac{Γ⊢e:[l_1:τ_1,...,l_k:τ_k],\quad 1≤i≤k}{Γ⊢e.l_i:τ_i}
+$$
+
+### Semantica dinamica
+
+$$
+\cfrac{∀i∈[1,k].Σ🢒e_i:v_i}{Σ🢒[l_1e_1,…,l_k:e_k]⇒[l_1:v_1,…,l_k:v_k]}
+$$
+
+$$
+\cfrac{Σ🢒e⇒[l_1:v_1,...,l_k:v_k],\quad 1≤j≤k}{Σ🢒e.l_i⇒v_i}
 $$
