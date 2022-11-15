@@ -93,8 +93,21 @@ Vincoli:
 - $x_1≥-4$
 - $x_2,x_3,x_4≥0$
 
-$x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come variabile di scarto. $x_3$ si può usare come sostituzione ($x_3=2-x_2)
+$x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come variabile di scarto. $x_3$ si può usare come sostituzione ($x_3=2-x_2$).
 
+- $-x_1+2x_2≤4$
+- $x_1+x_2≤5$
+- $x_2≤2$
+- $-x_2≤0$
+- $-x_1≤4$
+
+##### Risolviamo
+
+- $c=(2,1)$
+- $b=\begin{bmatrix} 4 \\ 5 \\ 2 \\ 0 \\ 4 \end{bmatrix}$
+- $A=\begin{bmatrix} -1 & 2 \\ 1 & 1 \\ 0 & 1 \\ 0 & -1 \\ -1 & 0 \end{bmatrix}$
+
+Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$
 
 ### Programmazione non lineare
 
