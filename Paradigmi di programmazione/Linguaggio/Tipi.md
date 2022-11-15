@@ -166,3 +166,17 @@ $$
 $$
 
 Abbiamo un β-redex!
+
+## Tipi composti
+
+### Tuple
+
+$$
+\cfrac{∀i∈[1,k].Γ⊢e_1:τ_1}{[l_1e_1,…,l_k:e_k]→[l_1:τ_1,…,l_k:τ_k]}
+$$
+
+### Struct
+
+$$
+\cfrac{Γ⊢e:[l_1:τ_1,...,l_k:τ_k],\quad 1≤j≤k}{Γ⊢e.l_j:τ_j}
+$$
