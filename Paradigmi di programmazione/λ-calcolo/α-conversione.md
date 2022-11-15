@@ -19,7 +19,7 @@ $$
 ## Esempi
 
 - `function succ(x) {x+1}` $=_α$ `function succ(y) {y+1}`
-- $\lim\limits_{x \to +∈fty} e^{-x}=_α \lim\limits_{y \to +∈fty} e^{-y}$
+- $\lim\limits_{x \to +∈∞} e^{-x}=_α \lim\limits_{y \to +∈∞} e^{-y}$
 - $λxy.x(xy)=_α λab.a(ab)$
 	- $λy.x(xy) =_α λb.x(xb)$
 	- $⇒ λx.λy.x(xy)=_α λx.λb.x(xb) =_α λa.λb.a(ab)$
