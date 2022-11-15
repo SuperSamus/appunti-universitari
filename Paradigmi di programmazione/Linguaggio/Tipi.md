@@ -167,7 +167,9 @@ $$
 
 Abbiamo un β-redex!
 
-## Tuple
+## Record
+
+^4de39f
 
 ### Semantica statica
 
@@ -176,7 +178,7 @@ $$
 $$
 
 $$
-\cfrac{Γ⊢e:[l_1:τ_1,...,l_k:τ_k],\quad 1≤i≤k}{Γ⊢e.l_i:τ_i}
+\cfrac{Γ⊢e:[l_1:τ_1,…,l_k:τ_k]\quad 1≤i≤k}{Γ⊢e.l_i:τ_i}
 $$
 
 ### Semantica dinamica
@@ -186,5 +188,5 @@ $$
 $$
 
 $$
-\cfrac{Σ🢒e⇒[l_1:v_1,...,l_k:v_k],\quad 1≤j≤k}{Σ🢒e.l_i⇒v_i}
+\cfrac{Σ🢒e⇒[l_1:v_1,…,l_k:v_k]\quad 1≤j≤k}{Σ🢒e.l_i⇒v_i}
 $$

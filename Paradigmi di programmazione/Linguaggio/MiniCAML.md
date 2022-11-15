@@ -124,9 +124,22 @@ let rec eval e s = match e with
 	        | Closure(x,t,p) -> eval t (bind p x v)
 	        | ClosureRec(f,x,t,p) -> eval t (bind (bind p x v) f ClosureRec(f,x,t,p))
 	        | _ -> error
+	| Record(rbody) -> Record(evalRecord rbody)
+    | Select(e, l) -> match eval e with
+        | Record(rbody) -> lookupRecord rbody l
+        | _ -> raise TypeMismatch
 	(*...*)
 
 let intplus v1 v2 = match v1, v2 with
     | Int n1, Int n2 -> Int(n1+n2)
     (*...*)
+```
+
+## [[Tipi^4de39f|Record]]
+
+TODO
+```OCaml
+let eval Record recordbody = match recordbody with
+    | [] -> []
+    | (Lab l, e)::t -> (Lab l, eval e)::evalRecord t
 ```
