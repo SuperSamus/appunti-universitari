@@ -43,7 +43,7 @@ $$
 
 ### *Curry*ing
 
-$A ⨉ B → C ≡ A → (B → C)$
+$curry(A⨉B→C)=A→(B→C)$
 
 Il currying è il seguente isomorfismo, che trasforma una funzione in una da ordine superiore: $λx,y.t → λx.λy.t$
 

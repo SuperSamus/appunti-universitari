@@ -63,15 +63,19 @@ $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste s
 - Vincolo: $Ax≤b$
 	- $A_1·x≤b_1$
 	- …
-	- $A_n·x≤b_n$
+	- $A_m·x≤b_m$
 
-$Ax=\begin{bmatrix} A_1·x \\ ... \\ A_n·x \end{bmatrix}≤b$
+$Ax=\begin{bmatrix} A_1·x \\ ... \\ A_m·x \end{bmatrix}≤b$
 
 Con:
 - $A∈ℝ^{m×n}$ e $A_i∈ℝ^n$
-- $b∈ℝ^n$ e $b_i∈ℝ$
-- $x∈ℝ^m$
+- $x∈ℝ^n$
+- $b∈ℝ^m$ e $b_i∈ℝ$
 - $m≥n$ (il numero di vincoli è ≥ il numero di variabili)
+
+##### Trasformazioni equivalenti
+
+- min c·x
 
 ### Programmazione non lineare
 
