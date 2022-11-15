@@ -65,10 +65,13 @@ $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste s
 	- …
 	- $A_n·x≤b_n$
 
-Con $A_i∈ℝ^n$ e $b_i∈ℝ$
+$Ax=\begin{bmatrix} A_1·x \\ ... \\ A_n·x \end{bmatrix}≤b$
 
-Versione matriciale:
-$A=\begin{bmatrix} - \end{bmatrix}
+Con:
+- $A∈ℝ^{m×n}$ e $A_i∈ℝ^n$
+- $b∈ℝ^n$ e $b_i∈ℝ$
+- $x∈ℝ^m$
+- $m≥n$ (il numero di vincoli è ≥ il numero di variabili)
 
 ### Programmazione non lineare
 
