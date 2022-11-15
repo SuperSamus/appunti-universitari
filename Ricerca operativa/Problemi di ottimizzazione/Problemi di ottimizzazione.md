@@ -52,15 +52,23 @@ $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste s
 **Lineare intera**: $X= ℤ^n, X=\{0,1\}^n$
 
 - Variabili: $x=(x_1,…,x_n)∈ℝ^n$
-- Funzione obiettivo: $f(x)=c_1x_1+…+c_nx_n=c*x$
+- Funzione obiettivo: $f(x)=c_1x_1+…+c_nx_n=c·x$
 	- ($c=(c_1,…,c_n)∈ℝ^n$)
-- Vincoli: $a*x=a_1x_1+…+a_nx_n \begin{matrix}≥ \\ = \\ ≤ \end{matrix} b \quad a,x∈ℝ^n$
+- Vincoli: $a_i·x=a_{i_1}x_1+…+a_{i_n}x_n \begin{matrix}≥ \\ = \\ ≤ \end{matrix}$
+	- $a_i=(a_{i_1},…,a_{i_n})∈ℝ^n$
 
 #### Formulazione canonica
 
-TODO
+- Funzione obiettivo: $\max c·x$
+- Vincolo: $Ax≤b$
+	- $A_1·x≤b_1$
+	- …
+	- $A_n·x≤b_n$
 
-$\max c*x$
+Con $A_i∈ℝ^n$ e $b_i∈ℝ$
+
+Versione matriciale:
+$A=\begin{bmatrix} - \end{bmatrix}
 
 ### Programmazione non lineare
 
