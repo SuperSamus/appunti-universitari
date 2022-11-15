@@ -45,7 +45,21 @@ $x^* ∈ A \text{ è soluzione ottima} ⟺ f(x^*) \; \text{valore ottimo}$
 
 ## Tipi di programmazione
 
-- **Programmazione lineare**: $f$ lineare, $g_i$ affini
-    - **Lineare intera**: $X= ℤ^n, X=\{0,1\}^n$
-    - Con le funzioni lineari, la soluzione ottima esiste sempre
-- **Programmazione non lineare**: almeno una funzione è non lineare
+### Programmazione lineare
+
+$f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste sempre.
+
+**Lineare intera**: $X= ℤ^n, X=\{0,1\}^n$
+
+- Variabili: $x=(x_1,…,x_n)∈ℝ^n$
+- Funzione obiettivo: $f(x)=c_1x_1+…+c_nx_n=c*x$
+	- ($c=(c_1,…,c_n)∈ℝ^n$)
+- Vincoli: $a*x=a_1x_1+…+a_nx_n \begin{matrix}≥ \\ = \\ ≤ \end{matrix} b \quad a,x∈ℝ^n$
+
+#### Formulazione canonica
+
+$\max c*x$
+
+### Programmazione non lineare
+
+Almeno una funzione è non lineare.
