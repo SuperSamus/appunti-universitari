@@ -58,6 +58,8 @@ $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste s
 
 #### Formulazione canonica
 
+TODO
+
 $\max c*x$
 
 ### Programmazione non lineare
