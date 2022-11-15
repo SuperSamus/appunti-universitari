@@ -135,9 +135,19 @@ let intplus v1 v2 = match v1, v2 with
     (*...*)
 ```
 
-## [[Tipi^4de39f|Record]]
+## [[Tipi#^4de39f|Record]]
 
 TODO
+
+$$
+\cfrac{∀i∈[1,k].Σ🢒e_i:v_i}{Σ🢒[l_1e_1,…,l_k:e_k]⇒[l_1:v_1,…,l_k:v_k]}
+$$
+
+$$
+\cfrac{Σ🢒e⇒[l_1:v_1,…,l_k:v_k]\quad 1≤j≤k}{Σ🢒e.l_i⇒v_i}
+$$
+
+
 ```OCaml
 let eval Record recordbody = match recordbody with
     | [] -> []
