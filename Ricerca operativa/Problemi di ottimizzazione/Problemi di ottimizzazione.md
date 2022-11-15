@@ -75,7 +75,13 @@ Con:
 
 ##### Trasformazioni equivalenti
 
-- min c·x
+- $\min c·x≡-\max(-c)·x$
+- $A_i·x=b_i≡A_i·x≤b_i∧A_ix≥b_i$
+- $A_i·x≥b_i≡(-A_i)·x≤-b_i$
+- $A_i·x≥b_i≡A_ix-s=b_i\quad s≥0$
+- $A_i·x≤b_i≡A_ix+s=b_i\quad s≥0$
+
+$s∈ℝ$ variabile di scarto
 
 ### Programmazione non lineare
 

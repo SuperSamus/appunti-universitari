@@ -66,7 +66,7 @@ $R ∈ R ⟺ R ∉ R$
 
 ### Church (1930)
 
-Funzioni ricorsive ≡ [[λ-calcolo]] ≡ [[Macchina di Turing]]
+Funzioni ricorsive ≅ [[λ-calcolo]] ≅ [[Macchina di Turing]]
 
 Vecchia definizione funzione: $\{(x,y)|f(x)=y\}$
 
