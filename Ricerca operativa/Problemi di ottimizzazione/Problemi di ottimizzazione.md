@@ -124,6 +124,16 @@ Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
 	- Il vincolo 5 è superfluo in questo caso, ma quando un punto è identificato da più di $n$ vincoli, non è vero che è un vincolo sia necessariamente superfluo (anche se è vero con $n=2$)
 		- Per esempio, in ℝ³, una piramide a base quadrata ha il vertice identificato 4 volte.
 
+$\bar{x}∈P\quad I(\bar{x})=\{i:A_i\bar{x}=b_i\}$ (insieme degli indici dei *vincoli attivi* in $\bar{x}$)
+
+Per esempio, $I((-4,0))=\{1,4,5\}$.
+
+$A_I$ è la sottomatrice di $A$ ottenuta prendendo la righe $A_i$ per $i∈I$.
+
+$A_{I(\bar{x})}$ è la sottomatrice di $A$ che contiene solo le righe i cui indici appartengono a $I(\bar{x})$.
+
+$A_{I(\bar{x})}\bar{x}=b_{I(\bar{x})}$.
+
 ### Programmazione non lineare
 
 Almeno una funzione è non lineare.
