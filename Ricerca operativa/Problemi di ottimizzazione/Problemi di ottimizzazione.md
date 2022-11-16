@@ -119,7 +119,7 @@ Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
 - $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{(5,0)\}$ (vertice)
 - $I=\{1,2\}→\begin{cases}-x_1+x_2=4 \\ x_1+x_2=5 \end{cases}→P_{\{1,2\}}=∅$
 - $I=∅→P_∅=P$ (faccia "non propria")
-- $I=\{1,4,5\}→P_{\{1,4,5\}}=\{(-4,0\}$ (vertice)
+- $I=\{1,4,5\}→P_{\{1,4,5\}}=\{(-4,0)\}$ (vertice)
 	- $P_{\{1,4\}}=P_{\{1,5\}}=P_{\{4,5\}}=P_{\{1,4,5\}}$
 	- Il vincolo 5 è superfluo in questo caso, ma quando un punto è identificato da più di $n$ vincoli, non è vero che è un vincolo sia necessariamente superfluo (anche se è vero con $n=2$)
 		- Per esempio, in ℝ³, una piramide a base quadrata ha il vertice identificato 4 volte.
@@ -132,7 +132,11 @@ $A_I$ è la sottomatrice di $A$ ottenuta prendendo la righe $A_i$ per $i∈I$.
 
 $A_{I(\bar{x})}$ è la sottomatrice di $A$ che contiene solo le righe i cui indici appartengono a $I(\bar{x})$.
 
-$A_{I(\bar{x})}\bar{x}=b_{I(\bar{x})}$.
+$A_{I(\bar{x})}\bar{x}=b_{I(\bar{x})}$
+
+Per esempio: $I=\{1,4\} \quad P_I=\{(-4,0)\} \quad A_I=\begin{bmatrix} A_1 \\ A_4 \end{bmatrix}=\begin{bmatrix} -1 & 2 \\ 0 & -1 \end{bmatrix}∈R^{2×2}$
+
+$\bar{xA_I\bar{x}=b_I\quad A_I\text{ è invertibile}→\bar{x}=A_I^{-1}b_I$
 
 ### Programmazione non lineare
 
