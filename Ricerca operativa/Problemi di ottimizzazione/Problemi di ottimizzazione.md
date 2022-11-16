@@ -84,6 +84,7 @@ Con:
 $s∈ℝ$ variabile di scarto
 
 ###### Esempio
+
 $\max 2x_1+x_2$
 
 Vincoli:
@@ -95,11 +96,11 @@ Vincoli:
 
 $x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come variabile di scarto. $x_3$ si può usare come sostituzione ($x_3=2-x_2$).
 
-- $-x_1+2x_2≤4$
-- $x_1+x_2≤5$
-- $x_2≤2$
-- $-x_2≤0$
-- $-x_1≤4$
+1. $-x_1+2x_2≤4$
+2. $x_1+x_2≤5$
+3. $x_2≤2$
+4. $-x_2≤0$
+5. $-x_1≤4$
 
 ##### Risolviamo
 
@@ -110,6 +111,13 @@ $x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come var
 Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$ poliedro.
 
 ![[Regione ammissibile.jpg]]
+
+Per alcuni $I⊆\{1,…,n\}$ si può associare una faccia del poliedro: $P_I=\{x∈P:A_ix=b_i \quad i∈I\}≠ ∅$ (se è $=∅$ non è una faccia).
+
+Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
+- $I=\{3\}→x_2=2$
+- $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{5,0\}$ (vertice)
+- I=\{1,2\}
 
 ### Programmazione non lineare
 
