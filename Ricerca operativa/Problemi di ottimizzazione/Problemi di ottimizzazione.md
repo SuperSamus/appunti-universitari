@@ -116,8 +116,13 @@ Per alcuni $I⊆\{1,…,n\}$ si può associare una faccia del poliedro: $P_I=\{x
 
 Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
 - $I=\{3\}→x_2=2$
-- $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{5,0\}$ (vertice)
-- I=\{1,2\}
+- $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{(5,0)\}$ (vertice)
+- $I=\{1,2\}→\begin{cases}-x_1+x_2=4 \\ x_1+x_2=5 \end{cases}→P_{\{1,2\}}=∅$
+- $I=∅→P_∅=P$ (faccia "non propria")
+- $I=\{1,4,5\}→P_{\{1,4,5\}}=\{(-4,0\}$ (vertice)
+	- $P_{\{1,4\}}=P_{\{1,5\}}=P_{\{4,5\}}=P_{\{1,4,5\}}$
+	- Il vincolo 5 è superfluo in questo caso, ma quando un punto è identificato da più di $n$ vincoli, non è vero che è un vincolo sia necessariamente superfluo (anche se è vero con $n=2$)
+		- Per esempio, in ℝ³, una piramide a base quadrata ha il vertice identificato 4 volte.
 
 ### Programmazione non lineare
 
