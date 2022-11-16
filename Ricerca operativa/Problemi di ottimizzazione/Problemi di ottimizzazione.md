@@ -146,6 +146,10 @@ $A_Bx=b_B⤳x=A_B^{-1}b_B$ unica soluzione (**soluzione di base**) $→P_B=\begi
 
 Vertici ≡ Soluzioni di base ammissibili
 
+Esempio: $I=\{3,4\} \quad A_I=\begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}$ non è invertibile, quindi $\{3,4\}$ non è una base.
+
+Attenzione, non tutti i poliedri hanno vertici, come $\{0≤x_2≤2\}$.
+
 ### Programmazione non lineare
 
 Almeno una funzione è non lineare.
