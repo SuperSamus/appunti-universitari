@@ -140,7 +140,7 @@ for:
     B for
 ```
 
-### Confronto stringhe
+%%### Confronto stringhe
 
 ```
 str1 = "abcd"; // Indirizzo parte da R0
@@ -156,7 +156,7 @@ loop:
     BEQ loop
     B ...
 ```
-
+%%
 ## Direttive
 
 - `text`
