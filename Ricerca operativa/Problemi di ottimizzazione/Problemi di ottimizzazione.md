@@ -112,6 +112,8 @@ Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$ poliedro.
 
 ![[Regione ammissibile.jpg]]
 
+##### Faccia
+
 Per alcuni $I⊆\{1,…,n\}$ si può associare una faccia del poliedro: $P_I=\{x∈P:A_ix=b_i \quad i∈I\}≠ ∅$ (se è $=∅$ non è una faccia).
 
 Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
@@ -136,7 +138,7 @@ $A_{I(\bar{x})}\bar{x}=b_{I(\bar{x})}$
 
 Per esempio: $I=\{1,4\} \quad P_I=\{(-4,0)\} \quad A_I=\begin{bmatrix} A_1 \\ A_4 \end{bmatrix}=\begin{bmatrix} -1 & 2 \\ 0 & -1 \end{bmatrix}∈R^{2×2}$
 
-Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadrata, $A_I$ è invertibile $→\bar{x}=A_I^{-1}b_I$
+Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadrata, $A_I$ può essere invertibile $→\bar{x}=A_I^{-1}b_I$
 
 $B⊆\{1,...,m\}$ è una **base** se $\begin{cases} |B|=n \\ A_B∈R^{n×n}\text{ è invertibile}\end{cases}$
 
