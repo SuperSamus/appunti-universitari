@@ -107,7 +107,9 @@ $x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come var
 - $b=\begin{bmatrix} 4 \\ 5 \\ 2 \\ 0 \\ 4 \end{bmatrix}$
 - $A=\begin{bmatrix} -1 & 2 \\ 1 & 1 \\ 0 & 1 \\ 0 & -1 \\ -1 & 0 \end{bmatrix}$
 
-Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$
+Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$ poliedro.
+
+![[Regione ammissibile.jpg]]
 
 ### Programmazione non lineare
 
