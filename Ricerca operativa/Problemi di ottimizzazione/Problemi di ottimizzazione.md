@@ -142,7 +142,9 @@ Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadr
 
 $B⊆\{1,...,m\}$ è una **base** se $\begin{cases} |B|=n \\ A_B∈R^{n×n}\text{ è invertibile}\end{cases}$
 
-$A_Bx=b_B⤳x=A_B^{-1}b_B\text{ unica soluzione}→P_B=\begin{cases}\{A_B^{-1}b_B\} & \text{se }A_B^{-1}b_B\text{ è ammissibile} \\ ∅ & \text{se }A_B^{-1}b_B\text{ non è ammissibile}\end{cases}$
+$A_Bx=b_B⤳x=A_B^{-1}b_B$ unica soluzione (**soluzione di base**) $→P_B=\begin{cases}\{A_B^{-1}b_B\} & \text{se }A_B^{-1}b_B\text{ è ammissibile} \\ ∅ & \text{se }A_B^{-1}b_B\text{ non è ammissibile}\end{cases}$
+
+Vertici ≡ Soluzioni di base ammissibili
 
 ### Programmazione non lineare
 
