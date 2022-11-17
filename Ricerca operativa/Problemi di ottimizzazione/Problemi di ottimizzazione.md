@@ -118,7 +118,8 @@ Per alcuni $I⊆\{1,…,n\}$ si può associare una faccia del poliedro: $P_I=\{x
 
 Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
 - $I=\{3\}→x_2=2$
-- $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{(5,0)\}$ (vertice)
+- $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{(5,0)\}$
+	-  È un **vertice**: faccia costituita da un solo punto
 - $I=\{1,2\}→\begin{cases}-x_1+x_2=4 \\ x_1+x_2=5 \end{cases}→P_{\{1,2\}}=∅$
 - $I=∅→P_∅=P$ (faccia "non propria")
 - $I=\{1,4,5\}→P_{\{1,4,5\}}=\{(-4,0)\}$ (vertice)
@@ -144,11 +145,13 @@ $B⊆\{1,...,m\}$ è una **base** se $\begin{cases} |B|=n \\ A_B∈R^{n×n}\text
 
 $A_Bx=b_B⤳x=A_B^{-1}b_B$ unica soluzione (**soluzione di base**) $→P_B=\begin{cases}\{A_B^{-1}b_B\} & \text{se }A_B^{-1}b_B\text{ è ammissibile} \\ ∅ & \text{se }A_B^{-1}b_B\text{ non è ammissibile}\end{cases}$
 
-Vertici ≡ Soluzioni di base ammissibili
+Vertici ≡ Soluzioni di basi ammissibili
 
-Esempio: $I=\{3,4\} \quad A_I=\begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}$ non è invertibile, quindi $\{3,4\}$ non è una base.
+Esempio: $I=\{3,4\} \quad A_I=\begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}$ non è invertibile, quindi $\{3,4\}$ non è una base, e non crea quindi un vertice.
 
 Attenzione, non tutti i poliedri hanno vertici, come $\{0≤x_2≤2\}$.
+
+Se $rango(A)=n$, allora $P$ possiede almeno un vertice. Ricorda che alcune variabili sono eliminabili (abbiamo rimosso $x_3$ e $x_4$ per esempio), abbassando $n$.
 
 ### Programmazione non lineare
 
