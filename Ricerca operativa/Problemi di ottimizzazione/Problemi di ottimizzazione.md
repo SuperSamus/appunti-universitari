@@ -156,14 +156,22 @@ Attenzione, non tutti i poliedri hanno vertici, come $\{0≤x_2≤2\}$.
 
 Se $rango(A)=n$, allora $P$ possiede almeno un vertice. Ricorda che alcune variabili sono eliminabili (abbiamo rimosso $x_3$ e $x_4$ per esempio), abbassando $n$.
 
-##### Involucro convesso
+###### Involucro convesso
 
-Dati i punti $x^1,x^2,…,x^k∈ℝ^n$
+Dati i punti $x^1,x^2,…,x^s∈ℝ^n$:
 
-$conv(\{x^1,...,x^k\})=\{∑\limits^k_{i=1} λ_ix^i:λ_i≥0∧∑\limits^k_{i=1} λ_i=1\}$
+$conv(\{x^1,…,x^s\})=\{∑\limits^s_{i=1} λ_ix^i:λ_i≥0∧∑\limits^s_{i=1} λ_i=1\}$
+
+Si può considerare un'interpolazione tra tutti i punti.
+
+###### Involucro conico
+
+Dati i vettori $v^1,v^2,…,v^t∈ℝ^n$:
+
+$cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} ɣ_iv^i:ɣ_i≥0\}$
 
 Si può considerare un'interpolazione tra tutti i punti.
 
 ### Programmazione non lineare
 
-Almeno una funzione è non lineare.
+Almeno una funzione è non lineare. Non si vedrà qui.
