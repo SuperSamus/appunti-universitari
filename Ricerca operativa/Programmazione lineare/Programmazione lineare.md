@@ -124,7 +124,7 @@ Si può considerare un'interpolazione tra tutti i punti.
 Dati i vettori $v^1,v^2,…,v^t∈ℝ^n$:
 
 $cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} k_iv^i:k_i≥0\}$
-
+%%Non gli piace la lettera ɣ, al posto di k...%%
 Ogni vettore può essere allungato indipendentemente quanto vuole (fino all'infinito).
 
 ---
@@ -146,7 +146,7 @@ Col problema di prima, togliendo l'ultimo vincolo, abbiamo:
 Sia $P=conv(\{x_1,…,x^s\})+cono(\{v_1,…,v^t\})⊆ℝ^n$ un poliedro
 
 >[!important]
-$\max\{c·x:x∈P\}$ ha ottimo finito $⇔c·v^i≤0 \quad ∀i=1…t$.
+$\max\{c·x:x∈P\}$ ha ottimo finito ⇔ $c·v^i≤0 \quad ∀i=1…t$.
 In tal caso esiste $k∈\{1,...,s\}$ tale che $x^k$ è una soluzione ottima.
 
 >[!info]
