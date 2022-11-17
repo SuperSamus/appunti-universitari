@@ -118,8 +118,7 @@ Per alcuni $I⊆\{1,…,n\}$ si può associare una faccia del poliedro: $P_I=\{x
 
 Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
 - $I=\{3\}→x_2=2$
-- $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{(5,0)\}$
-	-  È un **vertice**: faccia costituita da un solo punto
+- $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{(5,0)\}$ (vertice)
 - $I=\{1,2\}→\begin{cases}-x_1+x_2=4 \\ x_1+x_2=5 \end{cases}→P_{\{1,2\}}=∅$
 - $I=∅→P_∅=P$ (faccia "non propria")
 - $I=\{1,4,5\}→P_{\{1,4,5\}}=\{(-4,0)\}$ (vertice)
@@ -139,13 +138,17 @@ $A_{I(\bar{x})}\bar{x}=b_{I(\bar{x})}$
 
 Per esempio: $I=\{1,4\} \quad P_I=\{(-4,0)\} \quad A_I=\begin{bmatrix} A_1 \\ A_4 \end{bmatrix}=\begin{bmatrix} -1 & 2 \\ 0 & -1 \end{bmatrix}∈R^{2×2}$
 
-Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadrata, $A_I$ può essere invertibile $→\bar{x}=A_I^{-1}b_I$
+Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadrata, $A_I$ può essere invertibile $→\bar{x}=A_I^{-1}b_I$.
+
+###### Vertice
+
+Faccia costituita da un solo punto.
+
+Vertici ≡ Soluzioni di basi ammissibili
 
 $B⊆\{1,...,m\}$ è una **base** se $\begin{cases} |B|=n \\ A_B∈R^{n×n}\text{ è invertibile}\end{cases}$
 
 $A_Bx=b_B⤳x=A_B^{-1}b_B$ unica soluzione (**soluzione di base**) $→P_B=\begin{cases}\{A_B^{-1}b_B\} & \text{se }A_B^{-1}b_B\text{ è ammissibile} \\ ∅ & \text{se }A_B^{-1}b_B\text{ non è ammissibile}\end{cases}$
-
-Vertici ≡ Soluzioni di basi ammissibili
 
 Esempio: $I=\{3,4\} \quad A_I=\begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}$ non è invertibile, quindi $\{3,4\}$ non è una base, e non crea quindi un vertice.
 
