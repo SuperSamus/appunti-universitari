@@ -162,3 +162,5 @@ Dato che $x=∑\limits^s_{i=1} λ_ix^i+∑\limits^t_{j=1}μ_jy^j$
 $\max c·x≡\max ∑\limits^s_{i=1} λ_ic·x^i+∑\limits^t_{j=1}μ_jc·v^j$
 
 Con $\begin{cases}x∈P \\ ∑\limits^s_{i=1} λ_i=1 \\ λ_i≥0 \\ μ_j≥0 \end{cases}$. Se accadesse che $c·v^i>0$, allora niente previene di mettere $μ_j→+∞$, rendendo il massimo infinito.
+
+TODO: Seconda metà 16/11
