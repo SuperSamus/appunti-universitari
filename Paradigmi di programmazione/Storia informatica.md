@@ -74,4 +74,4 @@ Church: definizione di funzione come regola. **Astrazione**.
 
 #### Tesi di Church-Turing
 
-> Se un problema è umanamente calcolabile, allora esisterà una [[macchina di Turing]] in grado di risolverlo (cioè di calcolarlo)
+Se un problema è umanamente calcolabile, allora esisterà una [[macchina di Turing]] in grado di risolverlo (cioè di calcolarlo)

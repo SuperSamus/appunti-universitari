@@ -45,7 +45,7 @@ $x^* ∈ A \text{ è soluzione ottima} ⟺ f(x^*) \; \text{valore ottimo}$
 
 ## Tipi di programmazione
 
-- [[Programmazione lineare]]: $f$ lineare, $g_i$ affini
+- **[[Programmazione lineare]]**: $f$ lineare, $g_i$ affini
     - **Lineare intera**: $X= ℤ^n, X=\{0,1\}^n$
     - Con le funzioni lineari, la soluzione ottima esiste sempre
 - **Programmazione non lineare**: almeno una funzione è non lineare

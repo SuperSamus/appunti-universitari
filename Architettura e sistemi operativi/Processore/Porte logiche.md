@@ -10,7 +10,7 @@ Circuito digitale in grado di implementare una particolare operazione logica di 
 
 Queste immagini sono semplificazioni. Vedi [[Transistor.excalidraw]].
 
-Nota che in realtà una normale porta AND o OR supportano solo 2 ingressi. Per creare un circuito che "simula" una porta AND con 4 ingressi, usando solo AND da 2 ingressi:
+Di solito una porta AND o OR supportano solo 2 ingressi. Per creare un circuito che "simula" una porta AND con 4 ingressi, usando solo AND da 2 ingressi:
 
 ```mermaid
 flowchart LR

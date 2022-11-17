@@ -92,13 +92,13 @@ endmodule
 ```
 
 >[!info]
-Nota che Verilog permette di usare scorciatoie per evitare di creare le prime due primitive:
+>Verilog permette di usare scorciatoie per evitare di creare le prime due primitive:
 >
 >```Verilog
-module fa(output c, output z, input x, input y, input r);
-    assign { c, z } = a + b + r;
-endmodule;
-```
+>module fa(output c, output z, input x, input y, input r);
+>    assign { c, z } = a + b + r;
+>endmodule;
+>```
 
 ## Testbench
 

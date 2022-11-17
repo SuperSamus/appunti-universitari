@@ -146,18 +146,19 @@ Che tipo sono $'a → 'b → ?$? Abbiamo questi vincoli:
 - `>:'a->'a->bool`, tuttavia `>` non si può fare su tutti i tipi (come le funzioni)
 	- OCaml *non* previene l'utilizzo di tipi incompatibili, prende solo il tipo più generico possibile, che vuol dire che si può avere errori di runtime (altri linguaggi come Haskell o Rust invece hanno meccanismi per prevenirlo)
 
-Nota che il corpo della funzione non viene eseguito finché non viene eseguita. Queste due funzioni sono diverse:
-
-```OCaml
-fun x -> x + 2
-fun x -> x + (1+1)
-```
-
-In altre parole, OCaml *non* riduce le funzioni alla forma normale, quindi *non* fa questo:
-
-$$
-\cfrac{t→_βs}{λx.t→_βλx.s}
-$$
+>[!attention]
+>Il corpo della funzione non viene eseguito finché non viene eseguita. Queste due funzioni sono diverse:
+>
+>```OCaml
+>fun x -> x + 2
+>fun x -> x + (1+1)
+>```
+>
+>In altre parole, OCaml *non* riduce le funzioni alla forma normale, quindi *non* fa questo:
+>
+>$$
+>\cfrac{t→_βs}{λx.t→_βλx.s}
+>$$
 
 ### Option
 
