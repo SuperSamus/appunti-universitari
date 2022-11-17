@@ -123,8 +123,8 @@ Si può considerare un'interpolazione tra tutti i punti.
 
 Dati i vettori $v^1,v^2,…,v^t∈ℝ^n$:
 
-$cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} k_iv^i:k_i≥0\}$
-%%Non gli piace la lettera ɣ, al posto di k...%%
+$cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} μ_iv^i:μ_i≥0\}$
+
 Ogni vettore può essere allungato indipendentemente quanto vuole (fino all'infinito).
 
 ---
@@ -151,3 +151,11 @@ In tal caso esiste $k∈\{1,...,s\}$ tale che $x^k$ è una soluzione ottima.
 
 >[!info]
 Prodotto scalare negativo vuol dire i vettori sono diversi di più di 90°
+
+### Dimostrazione
+
+Dato che $x=∑\limits^s_{i=1} λ_ix^i+∑\limits^t_{j=1}μ_jy^j$
+
+$\max c·x≡\max ∑\limits^s_{i=1} λ_ic·x^i+∑\limits^t_{j=1}μ_jc·y^j$
+
+Con $x∈P\quad 
