@@ -108,7 +108,7 @@ $x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come var
 - $b=\begin{bmatrix} 4 \\ 5 \\ 2 \\ 0 \\ 4 \end{bmatrix}$
 - $A=\begin{bmatrix} -1 & 2 \\ 1 & 1 \\ 0 & 1 \\ 0 & -1 \\ -1 & 0 \end{bmatrix}$
 
-Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$ poliedro.
+Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$ poliedro (convesso).
 
 ![[Regione ammissibile.jpg]]
 
@@ -140,13 +140,13 @@ Per esempio: $I=\{1,4\} \quad P_I=\{(-4,0)\} \quad A_I=\begin{bmatrix} A_1 \\ A_
 
 Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadrata, $A_I$ può essere invertibile $→\bar{x}=A_I^{-1}b_I$.
 
-###### Vertice
+##### Vertice
 
 Faccia costituita da un solo punto.
 
 Vertici ≡ Soluzioni di basi ammissibili
 
-$B⊆\{1,...,m\}$ è una **base** se $\begin{cases} |B|=n \\ A_B∈R^{n×n}\text{ è invertibile}\end{cases}$
+$B⊆\{1,…,m\}$ è una **base** se $\begin{cases} |B|=n \\ A_B∈R^{n×n}\text{ è invertibile}\end{cases}$
 
 $A_Bx=b_B⤳x=A_B^{-1}b_B$ unica soluzione (**soluzione di base**) $→P_B=\begin{cases}\{A_B^{-1}b_B\} & \text{se }A_B^{-1}b_B\text{ è ammissibile} \\ ∅ & \text{se }A_B^{-1}b_B\text{ non è ammissibile}\end{cases}$
 
@@ -155,6 +155,14 @@ Esempio: $I=\{3,4\} \quad A_I=\begin{bmatrix} 0 & 1 \\ 0 & -1 \end{bmatrix}$ non
 Attenzione, non tutti i poliedri hanno vertici, come $\{0≤x_2≤2\}$.
 
 Se $rango(A)=n$, allora $P$ possiede almeno un vertice. Ricorda che alcune variabili sono eliminabili (abbiamo rimosso $x_3$ e $x_4$ per esempio), abbassando $n$.
+
+##### Involucro convesso
+
+Dati i punti $x^1,x^2,…,x^k∈ℝ^n$
+
+$conv(\{x^1,...,x^k\})=\{∑\limits^k_{i=1} λ_ix^i:λ_i≥0∧∑\limits^k_{i=1} λ_i=1\}$
+
+Si può considerare un'interpolazione tra tutti i punti.
 
 ### Programmazione non lineare
 
