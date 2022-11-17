@@ -2,7 +2,7 @@
 
 Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$$ per ogni unità trasportata.
 
-Abbiamo i soliti vincoli di [[ottimizzazione grafi]].
+Abbiamo i soliti vincoli di [[Ottimizzazione grafi]].
 
 ```mermaid
 flowchart LR

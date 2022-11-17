@@ -1,51 +1,4 @@
-# Problemi di ottimizzazione
-
-- $X$ spazio delle soluzioni
-	- $A ⊆ X$ insieme delle soluzioni ammissibili (regione ammissibile)
-- $f:X → R$ misura della "qualità" delle soluzioni (funzione obiettivo)
-- $(P) \quad min\{f(x):x ∈ A\}$
-- **Valore ottimo**: $∈f\{f(x):x ∈ A\}$
-	* *$z^* ∈ R$ valore ottimo di $(P)$ se
-		- $z^* ≤ f(x) \; ∀x ∈ A$
-		- $z^* ≤ f(x) \; ∀x ∈ A ⇒ z ≤ z^*$
-	* *$x^* ∈ X$ soluzione ottima di $(P)$ se
-		- $x^* ∈ A$
-		- $f(x^*) ≤ f(x) \; ∀x ∈ A$
-
-$x^* ∈ A \text{ è soluzione ottima} ⟺ f(x^*) \; \text{valore ottimo}$
-
-## Possibili situazioni
-
-- $A = ∅$ (valore ottimo = +∞)
-	- Esempio: $A=\{x ∈ ℝ: x ≤ 0, x ≥ 1\}$
-- ∃ valore ottimo e ∃soluzione ottima
-	- Esempio: $min\{x^2: x ∈ ℝ\}$
-- ∃ valore ottimo e ∄ soluzione ottima
-	- Esempio: $min\{e^{-x}: x ∈ ℝ\}$
-- ∄ valore ottimo
-	- Esempio: $min\{log(x): x > 0\}$
-	- Problema inferiormente illimitato: (valore ottimo = −∞)
-	- $∀k ∈ ℕ \; ∃ x^k ∈ A : f(x^k) < -k$
-
-## Classificazione problemi di ottimizzazione
-
-- $X= ℝ^n$ *ottimizzazione continua*
-- X finito/numerabile *ottimizzazione discreta* ($X ⊆ ℝ^n$)
-	- $X=\{0,1\}^n$ *ottimizzazione combinatoria*
-	- $X= ℤ^n$ *ottimizzazione intera*
-- $X= ℝ^{n_1} ⨉ ℤ^{n_2}$ *ottimizzazione mista*
-- $f: X → ℝ$
-	- Lineare ($f(x)=cx=c_1x_1+c_2x_2+…+c_nx_n \; (c ∈ ℝ^n))$
-	- Non lineare
-		- Esempio: $f(t)=max\{t,2t\}=\begin{cases} 2t &\text{se } t ≥ 0 \\ t &\text{se } t < 0 \end{cases}$
-- $A=\{x ∈ X : g_1(x) ≤ 0,…,g_n(x) ≤ 0\}$ (Minore/maggiore rimpiazzabili a piacimento)
-	- $g_i:X → ℝ$
-		- Affine (= $f$ lineare + costante)
-		- Non lineare
-
-## Tipi di programmazione
-
-### Programmazione lineare
+# Programmazione lineare
 
 $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste sempre.
 
@@ -57,7 +10,7 @@ $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste s
 - Vincoli: $a_i·x=a_{i_1}x_1+…+a_{i_n}x_n \begin{matrix}≥ \\ = \\ ≤ \end{matrix}$
 	- $a_i=(a_{i_1},…,a_{i_n})∈ℝ^n$
 
-#### Formulazione canonica
+## Formulazione canonica
 
 - Funzione obiettivo: $\max c·x$
 - Vincolo: $Ax≤b$
@@ -73,7 +26,7 @@ Con:
 - $b∈ℝ^m$ e $b_i∈ℝ$
 - $m≥n$ (il numero di vincoli è ≥ il numero di variabili)
 
-##### Trasformazioni equivalenti
+### Trasformazioni equivalenti
 
 - $\min c·x≡-\max(-c)·x$
 - $A_i·x=b_i≡A_i·x≤b_i∧A_ix≥b_i$
@@ -83,7 +36,7 @@ Con:
 
 $s∈ℝ$ variabile di scarto
 
-###### Esempio
+#### Esempio
 
 $\max 2x_1+x_2$
 
@@ -102,7 +55,7 @@ $x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come var
 4. $-x_2≤0$
 5. $-x_1≤4$
 
-##### Risolviamo
+### Risolviamo
 
 - $c=(2,1)$
 - $b=\begin{bmatrix} 4 \\ 5 \\ 2 \\ 0 \\ 4 \end{bmatrix}$
@@ -110,9 +63,9 @@ $x_4$ è usata solo per un vincolo (oltre a ≥0), quindi si può usare come var
 
 Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$ poliedro (convesso).
 
-![[Regione ammissibile.jpg]]
+![[Regione ammissibile 1.jpg]]
 
-##### Faccia
+### Faccia
 
 Per alcuni $I⊆\{1,…,n\}$ si può associare una faccia del poliedro: $P_I=\{x∈P:A_ix=b_i \quad i∈I\}≠ ∅$ (se è $=∅$ non è una faccia).
 
@@ -140,7 +93,7 @@ Per esempio: $I=\{1,4\} \quad P_I=\{(-4,0)\} \quad A_I=\begin{bmatrix} A_1 \\ A_
 
 Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadrata, $A_I$ può essere invertibile $→\bar{x}=A_I^{-1}b_I$.
 
-##### Vertice
+### Vertice
 
 Faccia costituita da un solo punto.
 
@@ -156,9 +109,9 @@ Attenzione, non tutti i poliedri hanno vertici, come $\{0≤x_2≤2\}$.
 
 Se $rango(A)=n$, allora $P$ possiede almeno un vertice. Ricorda che alcune variabili sono eliminabili (abbiamo rimosso $x_3$ e $x_4$ per esempio), abbassando $n$.
 
-##### Involucro
+### Involucro
 
-###### Involucro convesso
+#### Involucro convesso
 
 Dati i punti $x^1,x^2,…,x^s∈ℝ^n$:
 
@@ -166,7 +119,7 @@ $conv(\{x^1,…,x^s\})=\{∑\limits^s_{i=1} λ_ix^i:λ_i≥0∧∑\limits^s_{i=1
 
 Si può considerare un'interpolazione tra tutti i punti.
 
-###### Involucro conico
+#### Involucro conico
 
 Dati i vettori $v^1,v^2,…,v^t∈ℝ^n$:
 
@@ -178,13 +131,18 @@ Ogni vettore può essere allungato indipendentemente quanto vuole (fino all'infi
 
 $P$ è un poliedro $⇔ ∃x^1,…,x^s,v^1,…,v^t∈ℝ^n \text{ t.c. }P=conv(\{x^1,…,x^s\})+cono(\{v^1,…,v^t\})$
 
-$X=\{x^1,...,x^s\},\quad V=\{v^1,...,v^t\}$
+$X=\{x^1,…,x^s\},\quad V=\{v^1,…,v^t\}$
 
 - $P=\{x∈ℝ^n:Ax≤b\}⇒cono(V)=\{v∈ℝ^n:Av≤\underline{0}\}$
 - $v∈cono(V)⇔∀x∈P\quad ∀α≥0:x+αv∈P$
 - $P$ limitato $⇔V=\{\underline{0}\}$
 - Se $P$ possiede vertice, allora $X=\{\text{vertici}\}$
 
-### Programmazione non lineare
+Col problema di prima, togliendo l'ultimo vincolo, abbiamo:
+![[Regione ammissibile 2.jpg]]
 
-Almeno una funzione è non lineare. Non si vedrà qui.
+## Teorema fondamentale della programmazione lineare
+
+Sia $P=conv(\{x_1,…,x^s\})+cono(\{v_1,…,v^t\})⊆ℝ^n$ un poliedro
+
+$\max\{c·x:x∈P\}$ ha ottimo finito $⇔·v^i≤0 \quad ∀i
