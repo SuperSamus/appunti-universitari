@@ -180,7 +180,10 @@ $P$ è un poliedro $⇔ ∃x^1,…,x^s,v^1,…,v^t∈ℝ^n \text{ t.c. }P=conv(\
 
 $X=\{x^1,...,x^s\},\quad V=\{v^1,...,v^t\}$
 
-- $P=\{x∈ℝ^n:Ax≤b\}⇒cono(V)=\{v∈ℝ^n\}
+- $P=\{x∈ℝ^n:Ax≤b\}⇒cono(V)=\{v∈ℝ^n:Av≤\underline{0}\}$
+- $v∈cono(V)⇔∀x∈P\quad ∀α≥0:x+αv∈P$
+- $P$ limitato $⇔V=\{\underline{0}\}$
+- Se $P$ possiede vertice, allora $X=\{\text{vertici}\}$
 
 ### Programmazione non lineare
 
