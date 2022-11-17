@@ -156,6 +156,8 @@ Attenzione, non tutti i poliedri hanno vertici, come $\{0≤x_2≤2\}$.
 
 Se $rango(A)=n$, allora $P$ possiede almeno un vertice. Ricorda che alcune variabili sono eliminabili (abbiamo rimosso $x_3$ e $x_4$ per esempio), abbassando $n$.
 
+##### Involucro
+
 ###### Involucro convesso
 
 Dati i punti $x^1,x^2,…,x^s∈ℝ^n$:
@@ -168,9 +170,17 @@ Si può considerare un'interpolazione tra tutti i punti.
 
 Dati i vettori $v^1,v^2,…,v^t∈ℝ^n$:
 
-$cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} ɣ_iv^i:ɣ_i≥0\}$
+$cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} k_iv^i:k_i≥0\}$
 
-Si può considerare un'interpolazione tra tutti i punti.
+Ogni vettore può essere allungato indipendentemente quanto vuole (fino all'infinito).
+
+---
+
+$P$ è un poliedro $⇔ ∃x^1,…,x^s,v^1,…,v^t∈ℝ^n \text{ t.c. }P=conv(\{x^1,…,x^s\})+cono(\{v^1,…,v^t\})$
+
+$X=\{x^1,...,x^s\},\quad V=\{v^1,...,v^t\}$
+
+- $P=\{x∈ℝ^n:Ax≤b\}⇒cono(V)=\{v∈ℝ^n\}
 
 ### Programmazione non lineare
 
