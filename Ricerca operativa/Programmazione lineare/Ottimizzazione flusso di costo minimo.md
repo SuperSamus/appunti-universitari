@@ -119,6 +119,7 @@ Sbilanciamento complessivo di $x$: $∑\limits_{i∈O_x}e_i(x)$
 
 Se nel grafo residuo c'è un ciclo aumentante di costo negativo, allora il flusso non può essere di costo minimo:
 
+>[!important]
 $x$ flusso ammissibile di costo minimo
 ⇔
 $x$ non ammette cicli aumentanti di costo negativo
@@ -190,8 +191,9 @@ Il ciclo $\{2,3,5,4\}$ è aumentante: costo $=-4+1+2-1=-2$, con capacità $2$: s
 
 ### Pseudoflusso minimale
 
-Pseudoflusso di costo minimo tra tutti gli pseudoflussi con gli stessi sbilanciamenti
+Pseudoflusso di costo minimo tra tutti gli pseudoflussi con gli stessi sbilanciamenti.
 
+>[!important]
 $x$ pseudoflusso minimale
 ⇔
 $x$ non ammette cicli aumentanti di costo negativo

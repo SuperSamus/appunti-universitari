@@ -91,9 +91,10 @@ module adder(output carry, output [N-1:0] z, input [N-1:0] a, input [N-1:0] b);
 endmodule
 ```
 
+>[!info]
 Nota che Verilog permette di usare scorciatoie per evitare di creare le prime due primitive:
-
-```Verilog
+>
+>```Verilog
 module fa(output c, output z, input x, input y, input r);
     assign { c, z } = a + b + r;
 endmodule;

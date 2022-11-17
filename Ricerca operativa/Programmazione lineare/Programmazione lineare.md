@@ -145,7 +145,9 @@ Col problema di prima, togliendo l'ultimo vincolo, abbiamo:
 
 Sia $P=conv(\{x_1,…,x^s\})+cono(\{v_1,…,v^t\})⊆ℝ^n$ un poliedro
 
+>[!important]
 $\max\{c·x:x∈P\}$ ha ottimo finito $⇔c·v^i≤0 \quad ∀i=1…t$.
 In tal caso esiste $k∈\{1,...,s\}$ t.c. $x^k$ è una soluzione ottima.
 
-(Ricorda che prodotto scalare negativo vuol dire i vettori sono diversi di più di 90°)
+>[!info]
+Prodotto scalare negativo vuol dire i vettori sono diversi di più di 90°

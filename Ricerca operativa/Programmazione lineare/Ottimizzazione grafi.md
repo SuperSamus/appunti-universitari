@@ -263,12 +263,14 @@ flowchart LR
 
 ##### Ottimalità per cicli
 
+>[!important]
 $(N,A_T)$ albero di copertura di costo minimo
 ⇔
 costo di ciascun arco $(i,j)∉A_T$ è ≥ costo di ciascun arco del ciclo che si viene a creare aggiungendo l'arco $(i,j)$ a $A_T$
 
 ##### Ottimalità per tagli
 
+>[!important]
 $(N,A_T)$ albero di copertura di costo minimo
 ⇔
 costo di ciascun arco $(i,j)∈A_T$ è ≤ costo di ciascun arco del ciclo che si viene a creare rimuovendo l'arco $(i,j)$ da $A_T$
