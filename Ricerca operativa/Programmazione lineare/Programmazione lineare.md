@@ -127,9 +127,12 @@ $cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} μ_iv^i:μ_i≥0\}$
 
 Ogni vettore può essere allungato indipendentemente quanto vuole (fino all'infinito).
 
----
+### Decomposizione di poliedri (Motzkin 1936)
 
-$P$ è un poliedro $⇔ ∃x^1,…,x^s,v^1,…,v^t∈ℝ^n \text{ t.c. }P=conv(\{x^1,…,x^s\})+cono(\{v^1,…,v^t\})$
+>[!important]
+>$P$ è un poliedro
+⇔
+$∃x^1,…,x^s,v^1,…,v^t∈ℝ^n \text{ t.c. }P=conv(\{x^1,…,x^s\})+cono(\{v^1,…,v^t\})$
 
 $X=\{x^1,…,x^s\},\quad V=\{v^1,…,v^t\}$
 
@@ -156,6 +159,6 @@ Prodotto scalare negativo vuol dire i vettori sono diversi di più di 90°
 
 Dato che $x=∑\limits^s_{i=1} λ_ix^i+∑\limits^t_{j=1}μ_jy^j$
 
-$\max c·x≡\max ∑\limits^s_{i=1} λ_ic·x^i+∑\limits^t_{j=1}μ_jc·y^j$
+$\max c·x≡\max ∑\limits^s_{i=1} λ_ic·x^i+∑\limits^t_{j=1}μ_jc·v^j$
 
-Con $x∈P\quad 
+Con $\begin{cases}x∈P \\ ∑\limits^s_{i=1} λ_i=1 \\ λ_i≥0 \\ μ_j≥0 \end{cases}$. Se accadesse che $c·v^i>0$, allora niente previene di mettere $μ_j→+∞$, rendendo il massimo infinito.
