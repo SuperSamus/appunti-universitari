@@ -179,7 +179,19 @@ $$
 \cfrac{Γ⊢e:[l_1:τ_1,…,l_k:τ_k]\quad 1≤i≤k}{Γ⊢e.l_i:τ_i}
 $$
 
-## Type weakening
+## [[Programmazione orientata agli oggetti|Oggetti]]
+
+### Polimorfismo nello structural subtyping
+
+^5d3e5a
+
+Quando si passa un oggetto a una funzione che prende un oggetto come parametro, si applica la regola di **subsumption**:
+
+$$
+\cfrac{Γ⊢e:S\quad s<:T}{Γ⊢e:T}
+$$
+
+### Type weakening
 
 ```OCaml
 let s = object
