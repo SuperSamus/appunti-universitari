@@ -33,8 +33,21 @@ I metodi descrivono il comportamento dell'oggetto, per esempio come un oggetto "
 
 Ogni linguaggi li può implementare in modi diversi:
 
-- Incpsulamento
+- Incapsulamento
 - Astrazione
 - Ereditarietà (come un oggetto può fare proprie la funzionalità di un altro oggetto)
 - Principio di sostituzione (quando un oggetto può essere usato al posto di un altro in maniera trasparente e controllata)
 - Polimorfismo (come si può processore altri oggetti indipendentemente anche tipi diversi)
+
+## Approccio object-based
+
+- Gli oggetti vengono trattati nel linguaggio in maniera simile ai record
+- I campi (/membri/proprietà/variabili) possono essere associati a funzioni
+- Una funzione in un oggetto (metodo) può accedere ai campi dell'oggetto stesso tramite il riferimento `this` (o simili)
+- Linguaggi
+
+## Approccio class-based
+
+- Un linguaggio class-based prevede un concetto di *classe* a cui corrispondono determinati costrutti linguistici
+- Una classe definisce il contenuto degli oggetti di un certo tipo
+- Gli oggetti vengono creati successivamente come *istanze* di una certa classe
