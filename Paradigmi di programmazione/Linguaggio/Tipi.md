@@ -181,3 +181,19 @@ $$
 
 ## Type weakening
 
+```OCaml
+let s = object
+    val mutable v = []
+
+    method pop = (* *)
+    method push hd (* *)
+end ;;
+```
+
+Se `v` fosse iniziato con qualcosa come `[0; 2]` avrebbe tipo `<pop: int option; push: int -> unit>`
+
+Che succede invece se nell'oggetto `s` inizializziamo `v` come lista vuota? Che tipo viene inferito?
+
+`< pop: '_weak option; push: '_weak -> unit >`
+
+Il tipo inferito contiene variabili di tipo, ma non è veramente polimorfo. Benché sia mutabile, `v` non potrà avere tipi diversi in momenti diversi dell'esecuzione. Il tipo sarà ricalcolato appena possibile, andando ad istanziare definitivamente la variabile provvisoria con un tipo concreto.
