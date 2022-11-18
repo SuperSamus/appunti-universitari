@@ -7,12 +7,17 @@ Dobbiamo sfamare dei polli al minor costo possibile. Abbiamo le seguenti miscele
 | A3         | 3        | 4        | 95       |
 | Fabbisogno | 15       | 3        | /         |
 
-Funzione obiettivo min: $120y_1+75y_2+95y_3$
+Possiamo quindi dire che abbiamo:
+- $A=\begin{bmatrix} 4 & 2 \\ 2 & 1 \\ 3 & 4 \end{bmatrix}$
+- $b=\begin{bmatrix} 120 \\ 75 \\ 95 \end{bmatrix}$
+- $c=\begin{bmatrix} 15 \\ 3 \end{bmatrix}$
 
-Vincoli:
-- $y_i≥0$
+Funzione obiettivo min: $120y_1+75y_2+95y_3$ ($y·b$)
+
+Vincoli ($A^Ty≥c↔yA≥c$):
 - $4y_1+2y_2+3y_3≥15$
 - $2y_1+y_2+4y_3≥3$
+- $y_i,y_2,y_3≥0$
 
 È molto lontano dalla [[Programmazione lineare#^03350f|forma canonica]]...
 
@@ -29,3 +34,4 @@ Vincoli (il prezzo deve essere conveniente):
 - $4x_1+2x_2≤120$
 - $2x_1+x_2≤75$
 - $3x_1+4x_2≤95$
+- $x_1,x_2≥0$
