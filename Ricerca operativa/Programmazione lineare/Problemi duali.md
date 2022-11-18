@@ -87,7 +87,10 @@ Allora $c·x≤y·b$.
 Dimostrazione: $c·x=(yA)·x=y·(Ax)≤y·b$
 
 Conseguenze:
-- Se ($P$) è superiormente illimitato, allora ($D$) è vuoto
-- Se ($D$) è inferiormente illimitato, allora ($P$) è vuoto
-- Se $\bar{x}∈ℝ^n$ soluzione ammissibile per ($P$), $\bar{y}∈ℝ^n$ soluzione ammissibile per ($D$):
-	- Se $c\bar{x}=\bar{y}b$ allora \bar{x}
+- Se ($P$) è superiormente illimitato, allora ($D$) è vuoto.
+- Se ($D$) è inferiormente illimitato, allora ($P$) è vuoto.
+- Sia $\bar{x}∈ℝ^n$ soluzione ammissibile per ($P$), $\bar{y}∈ℝ^n$ soluzione ammissibile per ($D$). Se $c\bar{x}=\bar{y}b$ allora $\bar{x}$ è una soluzione ottima di (P) e $\bar{y}$ è una soluzione ottima di ($D$).
+
+Dimostrazione dell'ultimo punto:
+- $x$ ammissibile per ($P$), allora $cx≤\bar{y}b=c\bar{x}$
+- $y$ ammissibile per ($D$), allora $\bar{y}·b=c·\bar{x}≤y·b$
