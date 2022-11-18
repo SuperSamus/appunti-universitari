@@ -23,4 +23,9 @@ Vediamo un altro problema. Siamo un venditore di pillole, e vogliamo convincere 
 - $x_1=$ prezzo di 1 pillola da 1 gr di proteine
 - $x_2=$ prezzo di 1 pillola da 1 gr di vitamine
 
-Funzione obiettivo max: $
+Funzione obiettivo max: $15x_1+3x_2$ (conosciamo il fabbisogno)
+
+Vincoli (il prezzo deve essere conveniente):
+- $4x_1+2x_2≤120$
+- $2x_1+x_2≤75$
+- $3x_1+4x_2≤95$
