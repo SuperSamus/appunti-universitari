@@ -335,3 +335,7 @@ for <variabile> = <start> to <end> do
     <comando che ritorna ()>;<comando che ritorna ()>;<...>;
 done
 ```
+
+## [[Programmazione orientata agli oggetti|Oggetti]]
+
+Un oggetto in OCaml è un valore costituito da campi e metodi. Sebbene esistano costrutti linguistici per la definizione di classi, gli oggetti si possono creare direttamente, senza prima specificare una classe (come in JavaScript). Il tipo di un oggetto è dato dai metodi che esso contiene (i campi non influiscono sul tipo).

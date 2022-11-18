@@ -178,3 +178,6 @@ $$
 $$
 \cfrac{Γ⊢e:[l_1:τ_1,…,l_k:τ_k]\quad 1≤i≤k}{Γ⊢e.l_i:τ_i}
 $$
+
+## Type weakening
+
