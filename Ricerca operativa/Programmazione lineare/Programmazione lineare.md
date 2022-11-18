@@ -152,7 +152,7 @@ Sia $P=conv(\{x_1,…,x^s\})+cono(\{v_1,…,v^t\})⊆ℝ^n$ un poliedro
 
 >[!important]
 $\max\{c·x:x∈P\}$ ha ottimo finito ⇔ $c·v^i≤0 \quad ∀i=1…t$.
-In tal caso esiste $k∈\{1,...,s\}$ tale che $x^k$ è una soluzione ottima.
+In tal caso esiste $k∈\{1,…,s\}$ tale che $x^k$ è una soluzione ottima.
 
 >[!info]
 Prodotto scalare negativo vuol dire i vettori sono diversi di più di 90°
@@ -164,5 +164,3 @@ Dato che $x=∑\limits^s_{i=1} λ_ix^i+∑\limits^t_{j=1}μ_jy^j$
 $\max c·x≡\max ∑\limits^s_{i=1} λ_ic·x^i+∑\limits^t_{j=1}μ_jc·v^j$
 
 Con $\begin{cases}x∈P \\ ∑\limits^s_{i=1} λ_i=1 \\ λ_i≥0 \\ μ_j≥0 \end{cases}$. Se accadesse che $c·v^i>0$, allora niente previene di mettere $μ_j→+∞$, rendendo il massimo infinito.
-
-TODO: Seconda metà 16/11

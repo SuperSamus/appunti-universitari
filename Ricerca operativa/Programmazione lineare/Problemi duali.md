@@ -1,3 +1,5 @@
+# Problemi duali
+
 Dobbiamo sfamare dei polli al minor costo possibile. Abbiamo le seguenti miscele di mangime:
 
 |            | Proteine | Vitamine | Costo Hg |
@@ -21,7 +23,7 @@ Vincoli ($A^Ty≥c↔yA≥c$):
 ($y≥0$)
 - $y_i,y_2,y_3≥0$
 
-È molto lontano dalla [[Programmazione lineare#^03350f|forma canonica]]...
+È molto lontano dalla [[Programmazione lineare#^03350f|forma canonica]]…
 
 ---
 
@@ -39,6 +41,8 @@ Vincoli (il prezzo deve essere conveniente) ($Ax≤b$):
 ($x≥0$)
 - $x_1,x_2≥0$
 
+---
+
 Abbiamo usato lo stesso insieme di dati per entrambi i problemi.
 
 $\min\{y·b:yA≥c∧y≥0\}\quad\max\{c·x:Ax≤b∧x≥0\}$
@@ -52,4 +56,19 @@ Proviamo a fare una piccola alterazione ai vincoli del secondo problema. Sapendo
 - $y_2(2x_1+x_2)≤75y_2$
 - $y_3(3x_1+4x_2)≤95y_3$
 
-Sommiamo le disuguaglianze e si ottiene $x_1(4y_1+2y_2+3y_3)+x_2(2y_1+y_2+4y_2)≤120y_1+75y_2+95y_3$
+Sommiamo le disuguaglianze e si ottiene:
+$x_1(4y_1+2y_2+3y_3)+x_2(2y_1+y_2+4y_2)≤120y_1+75y_2+95y_3$
+
+Per via dei vincoli del primo problema: $15x_1+3x_2≤…≤120y_1+75y_2+95y_3$
+
+La funzione obiettivo del secondo problema (un $\max$) non vale più della funzione obiettivo del primo problema (un $\min$).
+
+## Coppia asimmetrica della programmazione lineare
+
+$\max\{cx:Ax≤b\}$
+
+Si può scrivere come:
+- $x_i=x^+_i-x^-_i$
+- $x_i^+,x_i^-≥0$
+
+Cambierà la matrice $A$.
