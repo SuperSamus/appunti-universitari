@@ -65,10 +65,29 @@ La funzione obiettivo del secondo problema (un $\max$) non vale più della funzi
 
 ## Coppia asimmetrica della programmazione lineare
 
-$\max\{cx:Ax≤b\}$
+Abbiamo un problema nella forma:
+$\max\{cx:Ax≤b\}$ **($P$) problema primale**
 
 Si può scrivere come:
 - $x_i=x^+_i-x^-_i$
 - $x_i^+,x_i^-≥0$
 
 Cambierà la matrice $A$.
+Si può fare l'altro problema, che verrà nella forma:
+$\min\{y·b:yA=c∧y≥0\}$ **($D$) problema duale**
+
+$A∈ℝ^{m×n},b∈ℝ^n,c∈ℝ^n$
+
+## Dualità debole
+
+>[!important]
+Siano $x∈ℝ^n$ una soluzione ammissibile per ($P$), e $y∈ℝ^n$ soluzione amissibile per ($D$).
+Allora $c·x≤y·b$.
+
+Dimostrazione: $c·x=(yA)·x=y·(Ax)≤y·b$
+
+Conseguenze:
+- Se ($P$) è superiormente illimitato, allora ($D$) è vuoto
+- Se ($D$) è inferiormente illimitato, allora ($P$) è vuoto
+- Se $\bar{x}∈ℝ^n$ soluzione ammissibile per ($P$), $\bar{y}∈ℝ^n$ soluzione ammissibile per ($D$):
+	- Se $c\bar{x}=\bar{y}b$ allora \bar{x}
