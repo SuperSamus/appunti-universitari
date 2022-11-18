@@ -12,6 +12,8 @@ $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste s
 
 ## Formulazione canonica
 
+^03350f
+
 - Funzione obiettivo: $\max c·x$
 - Vincolo: $Ax≤b$
 	- $A_1·x≤b_1$
