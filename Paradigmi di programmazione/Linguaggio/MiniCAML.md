@@ -155,24 +155,21 @@ type exp = (*...*)
 ### Funzioni di valutazione
 
 ```OCaml
+(* Cerca un membro nel record *)
 let rec lookupRecord recordbody (Lab l) =
     match recordbody with
         | [] -> raise FieldNotFound
         | (Lab l', v)::t -> if l = l' then v else lookupRecord t (Lab l)
-```
 
-```OCaml
+(* Elabora tutte le espressioni del record *)
+let evalRecord recordbody = match recordbody with
+    | [] -> []
+    | (Lab l, e)::t -> (Lab l, eval e)::(evalRecord t)
+
 let rec eval e s = match e with
     (*...*)
 	| Record(rbody) -> Record(evalRecord rbody)
-    | Select(e, l) -> match eval e with
+    | Select(e', l) -> match eval e' s with
         | Record(rbody) -> lookupRecord rbody l
         | _ -> raise TypeMismatch
-```
-
-%%
-```OCaml
-let eval Record recordbody = match recordbody with
-    | [] -> []
-    | (Lab l, e)::t -> (Lab l, eval e)::evalRecord t
 ```

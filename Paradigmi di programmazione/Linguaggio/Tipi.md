@@ -156,7 +156,7 @@ $$
 Regole di eliminazione: dato in termine di un certo tipo, cosa ci si può fare
 
 $$
-\cfrac{Γ⊢t:τ_1→τ_2 \quad Γ⊢s:τ_1}{Γ⊢ts:τ_2}
+\cfrac{Γ⊢t:τ_1→τ_2 \quad Γ⊢s:τ_1}{Γ⊢t\:s:τ_2}
 $$
 
 Combiniamo le regole:
