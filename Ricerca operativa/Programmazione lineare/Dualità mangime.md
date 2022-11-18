@@ -38,3 +38,18 @@ Vincoli (il prezzo deve essere conveniente) ($Ax≤b$):
 - $3x_1+4x_2≤95$
 ($x≥0$)
 - $x_1,x_2≥0$
+
+Abbiamo usato lo stesso insieme di dati per entrambi i problemi.
+
+$\min\{y·b:yA≥c∧y≥0\}\quad\max\{c·x:Ax≤b∧x≥0\}$
+
+**Coppia simmetrica** della [[programmazione lineare]].
+
+Il primo ha $m$ variabili e $n$ vincoli. Il secondo ha $n$ variabili e $m$ vincoli.
+
+Proviamo a fare una piccola alterazione ai vincoli del secondo problema. Sapendo che $y≥0$:
+- $y_1(4x_1+2x_2)≤120y_1$
+- $y_2(2x_1+x_2)≤75y_2$
+- $y_3(3x_1+4x_2)≤95y_3$
+
+Sommiamo le disuguaglianze e si ottiene $x_1(4y_1+2y_2+3y_3)+x_2(2y_1+y_2+4y_2)≤120y_1+75y_2+95y_3$
