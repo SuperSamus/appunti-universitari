@@ -65,4 +65,6 @@ Funzionalità creata tramite opportuni costrutti linguistici che consente di def
 
 I linguaggi object-based mantengono per ogni oggetto una lista di prototipi, che sono tutti gli oggetti da cui esso eredita funzionalità.
 
+**Subtyping nominale**: 
+
 I linguaggi class-based consentono di definire una classe come estensione di un altra. La nuova classe eredita tutti i membri (valori e metodi) della precedente, con la possibilità di aggiungerne altri (o ridefinirne alcuni (*overriding*)).
