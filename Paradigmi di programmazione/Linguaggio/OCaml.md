@@ -338,6 +338,14 @@ done
 
 ## [[Programmazione orientata agli oggetti|Oggetti]]
 
-Un oggetto in OCaml è un valore costituito da campi e metodi. Sebbene esistano costrutti linguistici per la definizione di classi, gli oggetti si possono creare direttamente, senza prima specificare una classe (come in JavaScript). Il tipo di un oggetto è dato dai metodi che esso contiene (i campi non influiscono sul tipo).
+Un oggetto in OCaml è un valore costituito da campi e metodi. Sebbene esistano costrutti linguistici per la definizione di classi, gli oggetti si possono creare direttamente, senza prima specificare una classe (come in JavaScript). Il tipo di un oggetto è dato dai metodi che esso contiene (i campi non influiscono sul tipo). Per esempio: `<pop: int option; push: int -> unit>.
 
-La conversione da un sottotipo a un tipo è implicita in alcuni casi (passaggio di funzioni, vedi [[Tipi#^5d3e5a|polimorfismo nello structural subtyping]]), ma deve essere espliticta in altri (lista)
+La conversione da un tipo a un supertipo (più generale, con metodi in meno) è implicita in alcuni casi (passaggio in una funzione che prende oggetti almeno di un certo tipo, vedi [[Tipi#^5d3e5a|polimorfismo nello structural subtyping]]), ma deve essere esplicita in altri (l'oggetto entra in una lista) con l'operatore `:>`.
+
+### Classi
+
+Una classe è una "ricetta" che descrive come creare oggetti di un certo tipo. Si definisce con `class` e si istanzia con `new`.
+
+Una classe può prevedere parametri:
+- Di `costruzione`, che vanno passati al momento dell'istanziazione
+- Di tipi (es. `'a`) che la rendono polimorfa
