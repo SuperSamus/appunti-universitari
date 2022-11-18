@@ -344,8 +344,16 @@ La conversione da un tipo a un supertipo (più generale, con metodi in meno) è 
 
 ### Classi
 
-Una classe è una "ricetta" che descrive come creare oggetti di un certo tipo. Si definisce con `class` e si istanzia con `new`.
+Una classe è una "ricetta" che descrive come creare oggetti di un certo tipo. Si definisce con `class` (introducendo quindi un tipo con lo stesso nome) e si istanzia con `new`.
 
 Una classe può prevedere parametri:
 - Di `costruzione`, che vanno passati al momento dell'istanziazione
 - Di tipi (es. `'a`) che la rendono polimorfa
+
+Puoi [[Programmazione orientata agli oggetti#^53db25|ereditare]] metodi da altre stringhe con `inherit [class_name] method1 method 2`.
+
+Alla fine però una classe è solo un *alias* del tipo-oggetto che si otterrebbe costruendoli direttamente. OCaml combina gli approcci:
+- [[Programmazione orientata agli oggetti#^6a1a24|Object-based]], favorendo la definizione di object-types e lo structural subtyping
+- [[Programmazione orientata agli oggetti#^83e369|Class-based]], per definire una naturale definizione di meccanismi di ereditarietà e altro
+
+La non modificabilità della struttura degli oggetti favorisce i controlli statici a tempo di compilazione.

@@ -41,6 +41,8 @@ Ogni linguaggi li può implementare in modi diversi:
 
 ## Approccio object-based
 
+^6a1a24
+
 - Gli oggetti vengono trattati nel linguaggio in maniera simile ai [[Tipi#^4de39f|record]]
 - I campi (/membri/proprietà/variabili) possono essere associati a funzioni
 - Una funzione in un oggetto (metodo) può accedere ai campi dell'oggetto stesso tramite il riferimento `this` (o simili)
@@ -53,6 +55,8 @@ Rende però difficile prevedere il tipo dell'oggetto, e ostacola i controlli sta
 
 ## Approccio class-based
 
+^83e369
+
 - Un linguaggio class-based prevede un concetto di *classe* a cui corrispondono determinati costrutti linguistici
 - Una classe definisce il contenuto degli oggetti di un certo tipo
 - Gli oggetti vengono creati successivamente come *istanze* di una certa classe, il tipo di un oggetto corrisponde alla classe da cui è stato dichiarato
@@ -60,6 +64,8 @@ Rende però difficile prevedere il tipo dell'oggetto, e ostacola i controlli sta
 Questo approccio richiede più disciplina, in quanto ogni classe deve essere dichiarata prima di poter creare un oggetto basata su di essa (*nominal typing*), ma rende facile prevedere il tipo dell'oggetto e consente i controlli statici.
 
 ## Ereditarietà e subtyping
+
+^53db25
 
 Funzionalità creata tramite opportuni costrutti linguistici che consente di definire una classe (o, più in generale, una tipologia di oggetti) sulla base di un'altra già esistente.
 
