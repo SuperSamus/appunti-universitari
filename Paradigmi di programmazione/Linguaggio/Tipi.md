@@ -153,7 +153,7 @@ $$
 \cfrac{Γ,x:τ_1⊢t:τ_2}{Γ⊢λx.t:τ_1→τ_2}
 $$
 
-Regole di eliminazione: dato in termine di un certo tipo, cosa ci si può fare
+Regole di eliminazione: dato in termine di un certo tipo, cosa ci si può fare ^5ce74b
 
 $$
 \cfrac{Γ⊢t:τ_1→τ_2 \quad Γ⊢s:τ_1}{Γ⊢t\:s:τ_2}
