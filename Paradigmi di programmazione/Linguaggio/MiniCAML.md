@@ -124,10 +124,6 @@ let rec eval e s = match e with
 	        | Closure(x,t,p) -> eval t (bind p x v)
 	        | ClosureRec(f,x,t,p) -> eval t (bind (bind p x v) f ClosureRec(f,x,t,p))
 	        | _ -> error
-	| Record(rbody) -> Record(evalRecord rbody)
-    | Select(e, l) -> match eval e with
-        | Record(rbody) -> lookupRecord rbody l
-        | _ -> raise TypeMismatch
 	(*...*)
 
 let intplus v1 v2 = match v1, v2 with
@@ -156,6 +152,25 @@ type exp = (*...*)
 (* Record[(Lab "size", Int 7); (Lab "weight", Int 255)] *)
 ```
 
+### Funzioni di valutazione
+
+```OCaml
+let rec lookupRecord recordbody (Lab l) =
+    match recordbody with
+        | [] -> raise FieldNotFound
+        | (Lab l', v)::t -> if l = l' then v else lookupRecord t (Lab l)
+```
+
+```OCaml
+let rec eval e s = match e with
+    (*...*)
+	| Record(rbody) -> Record(evalRecord rbody)
+    | Select(e, l) -> match eval e with
+        | Record(rbody) -> lookupRecord rbody l
+        | _ -> raise TypeMismatch
+```
+
+%%
 ```OCaml
 let eval Record recordbody = match recordbody with
     | [] -> []
