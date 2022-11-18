@@ -59,10 +59,10 @@ Rende però difficile prevedere il tipo dell'oggetto, e ostacola i controlli sta
 
 Questo approccio richiede più disciplina, in quanto ogni classe deve essere dichiarata prima di poter creare un oggetto basata su di essa (*nominal typing*), ma rende facile prevedere il tipo dell'oggetto e consente i controlli statici.
 
-## Ereditarietà
+## Ereditarietà e subtyping
 
 Funzionalità creata tramite opportuni costrutti linguistici che consente di definire una classe (o, più in generale, una tipologia di oggetti) sulla base di un'altra già esistente.
 
 I linguaggi object-based mantengono per ogni oggetto una lista di prototipi, che sono tutti gli oggetti da cui esso eredita funzionalità.
 
-I linguaggi class-based consentono di definire una classe come estensione di un altra
+I linguaggi class-based consentono di definire una classe come estensione di un altra. La nuova classe eredita tutti i membri (valori e metodi) della precedente, con la possibilità di aggiungerne altri (o ridefinirne alcuni (*overriding*)).
