@@ -215,7 +215,13 @@ $$
 
 Quindi, per esempio, $[x:nat,y:[a:nat,b:bool],z:bool]<:[z:bool,y:[a:nat]]$
 
-Similmente, per le funzioni (relazione controvariante):
+Similmente per le liste:
+
+$$
+\cfrac{τ<:τ'}{list\:τ<:listτ'}
+$$
+
+E per le funzioni (la relazione è controvariante: puoi dare alla funzione più di quello che chiede, e puoi usare meno di quello che restituisce) (non tutti i linguaggi rispettano questa regola):
 
 $$
 \cfrac{τ'_1<:τ_1 \quad τ_2<:τ'_2}{τ_1→τ_2<:τ'_1→τ'_2}
