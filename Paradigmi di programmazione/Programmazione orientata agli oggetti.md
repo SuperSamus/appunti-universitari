@@ -82,6 +82,8 @@ I linguaggi class-based consentono di definire una classe come estensione di un 
 
 ## Abstract Data Types (ADT)
 
+^63e8cc
+
 È un insieme di dati e collezione di operazioni per operare sui dati di quel tipo:
 - Estendibili
 - Astratti

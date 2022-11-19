@@ -357,3 +357,36 @@ Alla fine però una classe è solo un *alias* del tipo-oggetto che si otterrebbe
 - [[Programmazione orientata agli oggetti#^83e369|Class-based]], per definire una naturale definizione di meccanismi di ereditarietà e altro
 
 La non modificabilità della struttura degli oggetti favorisce i controlli statici a tempo di compilazione.
+
+### Moduli
+
+La forma di OCaml per gli [[Programmazione orientata agli oggetti#^63e8cc|Abstract Data Types]]. Per esempio:
+
+```OCaml
+module type BOOL = sig
+    type t
+    val yes: t
+    val no: t
+    val choose: t -> 'a -> 'a -> 'a
+```
+
+Da qui si può implementare:
+
+```OCaml
+module M1: BOOL = struct
+    type t = unit option
+    let yes = Some ()
+    let no = None
+    let choose v ifyes ifno =
+        match v with
+            | Some () -> ifyes
+            | None -> ifno
+        end
+
+module M2: BOOL = struct
+    type t = int
+    let yes = 1
+    let no = 0
+    let choose b ifyes ifno =
+        if b = 1 then if yes else ifno
+```
