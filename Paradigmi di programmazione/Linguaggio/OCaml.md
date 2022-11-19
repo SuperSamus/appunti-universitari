@@ -390,3 +390,5 @@ module M2: BOOL = struct
     let choose b ifyes ifno =
         if b = 1 then if yes else ifno
 ```
+
+E per l'utente finale, il *come* è implementato è irrilevante.
