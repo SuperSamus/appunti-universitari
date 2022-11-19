@@ -215,7 +215,7 @@ $$
 
 Quindi, per esempio, $[x:nat,y:[a:nat,b:bool],z:bool]<:[z:bool,y:[a:nat]]$
 
-Similmente, per le funzioni:
+Similmente, per le funzioni (relazione controvariante):
 
 $$
 \cfrac{τ'_1<:τ_1 \quad τ_2<:τ'_2}{τ_1→τ_2<:τ'_1→τ'_2}
