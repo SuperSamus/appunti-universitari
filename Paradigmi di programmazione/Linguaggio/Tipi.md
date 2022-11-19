@@ -185,6 +185,10 @@ $$
 
 ^5d3e5a
 
+Una funzione è polimorfa se ha la caratteristica di essere applicabile ad argomenti di tipo diverso.
+
+Più in generale: il polimorfismo per sottotipo si basa sull'assunzione che valori di un tipo
+
 Quando si passa un oggetto a una funzione che prende un oggetto come parametro, si applica la regola di **subsumption**:
 
 $$

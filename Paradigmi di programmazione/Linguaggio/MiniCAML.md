@@ -179,4 +179,4 @@ let rec eval e s = match e with
 Una funzione definita come `(fun r: [x: Nat] = r.x)` prende un record con un campo di nome `x` e restituisce il valore associato al campo di nome `x`. Possiamo applicarla all'argomento `[x:0]`.
 `App((fun r: [x: Nat] = r.x), [x:0]) -> 0`
 
-Una funzione è polimorfa se ha la caratteristica di essere applicabile ad argomenti di tipo diverso. Quindi, si può fare la stessa cosa con il record `[x: 0, y: 1]`? In teoria sì, ma l'analisi statica non lo accetta [[Tipi#^5ce74b|perché non è lo stesso tipo]].
+Quindi, si può fare la stessa cosa con il record `[x: 0, y: 1]`? In teoria sì, ma l'analisi statica non lo accetta [[Tipi#^5ce74b|perché non è lo stesso tipo]].
