@@ -187,12 +187,12 @@ $$
 
 Una funzione è polimorfa se ha la caratteristica di essere applicabile ad argomenti di tipo diverso.
 
-Più in generale: il polimorfismo per sottotipo si basa sull'assunzione che valori di un tipo
+Più in generale: il polimorfismo per sottotipo si basa sull'assunzione che valori di un tipo $τ_1$ possano sempre essere usati al posto di valori di un altro tipo $τ_2$. Se $τ_1$ è sottotipo di $τ_2$, si scrive $τ_1<:τ_2$.
 
-Quando si passa un oggetto a una funzione che prende un oggetto come parametro, si applica la regola di **subsumption**:
+Un sistema di tipi che consente al tipo $τ_1$ di assere considerato anche di tipo $τ_2$ usa la regola di **subsumption**:
 
 $$
-\cfrac{Γ⊢e:S\quad s<:T}{Γ⊢e:T}
+\cfrac{Γ⊢e:τ_1\quad τ_1<:τ_2}{Γ⊢e:τ_2}
 $$
 
 ### Type weakening
