@@ -195,6 +195,26 @@ $$
 \cfrac{Γ⊢e:τ_1\quad τ_1<:τ_2}{Γ⊢e:τ_2}
 $$
 
+#### Definendo $<:$ con i record:
+
+$$
+\cfrac{}{[l_1:τ_1,…,l_n:τ_n,…,l_{n+k}:τ_{n+k}]<:[l_1:τ_1,…,l_n:τ_n]}
+$$
+
+L'ordine dei campi non importa:
+
+$$
+\cfrac{[l_1:τ_1,…,l_n:τ_n] \text{ permutazione di }[l'_1:τ'_1,…,l'_n:τ'_n]}{[l_1:τ_1,…,l_n:τ_n]<:[l'_1:τ'_1,…,l'_n:τ'_n]}
+$$
+
+Il sottotipo può anche operare in "profondità":
+
+$$
+\cfrac{∀i.τ_i<:τ'_i}{[l_1:τ_1,…,l_n:τ_n]<:[l'_1:τ'_1,…,l'_n:τ'_n]}
+$$
+
+Quindi, per esempio, $[x:nat,y:[a:nat]]
+
 ### Type weakening
 
 ```OCaml

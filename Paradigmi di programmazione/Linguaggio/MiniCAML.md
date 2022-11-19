@@ -179,4 +179,4 @@ let rec eval e s = match e with
 Una funzione definita come `(fun r: [x: Int] = r.x)` prende un record con un campo di nome `x` e restituisce il valore associato al campo di nome `x`. Possiamo applicarla all'argomento `[x:0]`.
 `App((fun r: [x: Int] = r.x), [x:0]) -> 0`
 
-Quindi, si può fare la stessa cosa con il record `[x: 0, y: 1]`, dato che `[x: Int, y: Int] <: [x: Int]`? In teoria sì, l'analisi statica potrebbe non accettarlo [[Tipi#^5ce74b|perché non è lo stesso tipo]], a meno che non sia implementata la regola di subsumption..
+Quindi, si può fare la stessa cosa con il record `[x: 0, y: 1]`, dato che `[x: Int, y: Int] <: [x: Int]`? In teoria sì, l'analisi statica potrebbe non accettarlo [[Tipi#^5ce74b|perché non è lo stesso tipo]], se non è implementata la regola di subsumption..
