@@ -85,7 +85,7 @@ Generalmente:
 - $u(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}u_{ij}$ capacità nel taglio
 - $x(N_s,N_t)=∑\limits_{(i,j)∈A^+(N_s,N_t)}x_{ij}-∑\limits_{(i,j)∈A^-(N_s,N_t)}x_{ij}$ flusso nel taglio
 
-**Proposizione**: sia $y$ il valore di un flusso ammissibile $x=(x_{ij}$) e sia $(N_s.N_t)$ un taglio che separa $s$ da $t$. Allora $v=x(N_s,N_t)≤u(N_s,N_t)$.
+**Proposizione**: sia $v$ il valore di un flusso ammissibile $x=(x_{ij}$) e sia $(N_s.N_t)$ un taglio che separa $s$ da $t$. Allora $v=x(N_s,N_t)≤u(N_s,N_t)$.
 
 Se $v=x(N_s,N_t)=u(N_s,N_t)$, allora il flusso è di valore massimo e il taglio è di capacità minima. (Nota: è possibile che esista più di un flusso massimo)
 
