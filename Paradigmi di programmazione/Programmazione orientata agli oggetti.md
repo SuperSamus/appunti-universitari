@@ -79,3 +79,15 @@ Grazie a questo debole relazione, il polimorfismo è facile.
 I linguaggi class-based consentono di definire una classe come estensione di un altra. La nuova classe eredita tutti i membri (valori e metodi) della precedente, con la possibilità di aggiungerne altri (o ridefinirne alcuni (*overriding*)).
 
 **Subtyping nomiale**: un tipo-classe B è sottotipo di un tipo-classe A quando la classe A è definita sintatticamente come estensione della classe A. Vale la proprietà transitiva.
+
+## Abstract Data Types (ADT)
+
+È un insieme di dati e collezione di operazioni per operare sui dati di quel tipo:
+- Estendibili
+- Astratti
+- Incapsulati
+- Distinzione tra specifica e implementazione
+
+La specifica di un ADT non contiene l'implementazione, ma solo la semantica delle operazioni: descrivono il *cosa* delle funzionalità, ma lasciano il *come* a qualcun altro.
+
+Definiscono in modo formale moduli riutilizzabili in un modo matematicamente valido, preciso e non ambiguo.
