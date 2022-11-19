@@ -213,7 +213,25 @@ $$
 \cfrac{∀i.τ_i<:τ'_i}{[l_1:τ_1,…,l_n:τ_n]<:[l'_1:τ'_1,…,l'_n:τ'_n]}
 $$
 
-Quindi, per esempio, $[x:nat,y:[a:nat]]
+Quindi, per esempio, $[x:nat,y:[a:nat,b:bool],z:bool]<:[z:bool,y:[a:nat]]$
+
+Similmente, per le funzioni:
+
+$$
+\cfrac{τ'_1<:τ_1 \quad τ_2<:τ'_2}{τ_1→τ_2<:τ'_1→τ'_2}
+$$
+
+La relazione $<:$ è simmetrica e transitiva:
+
+$$
+\cfrac{}{τ<:τ} \quad \cfrac{τ_1<:τ_2,τ_2<:τ_3}{τ_1<:τ_3}
+$$
+
+È conveniente avere un tipo che è supertipo di ogni tipo (Java per esempio ha `Object`):
+
+$$
+\cfrac{}{τ<:Top}
+$$
 
 ### Type weakening
 
