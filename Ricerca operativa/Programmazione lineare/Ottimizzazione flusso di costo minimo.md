@@ -111,7 +111,7 @@ $x=(x_{ij})∈ℝ^n$ pseudoflusso se rispetta i vincoli di capacità $0≤x_{ij}
 
 Sbilanciamento del nodo $i$ rispetto alle pseudoflusso $x$: se è $0$, il flusso è bilanciato: $e_i(x)=∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} - b_i$
 
-Nodi con accesso di flusso (surplus): $O_x=\{i∈N:e_i(x)>0\}$
+Nodi con eccesso di flusso (surplus): $O_x=\{i∈N:e_i(x)>0\}$
 
 Nodi con difetto di flusso (deficit): $D_x=\{i∈N:e_i(x)<0\}$
 
