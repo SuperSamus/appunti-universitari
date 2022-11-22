@@ -63,7 +63,7 @@ I test consentono di identificare errori di programmazione (rispetto alle specif
 
 Esistono metodi di analisi statici e type checking che consentono di verificare in modo automatico la sicurezza del codice rispetto alle specifiche..
 
-## Principio di sotituzione di Liskov
+## Principio di sostituzione di Liskov
 
 L'esistenza di una specifica consente di ragionare sul rapporto tra superclasse e sottoclasse da un punto di vista comportamentale.
 
@@ -79,3 +79,35 @@ $$
 $$
 
 $t≃s⇔∀C.C[T]⇓↔C[s]⇓$
+
+Questo principio va oltre il semplice concetto di sottotipo sostituibile per subsumption
+- Esprime una relazione tra i comportamenti degli oggetti dei due tipi
+- La relazione deve valere per tutti i possibili contesti in cui la sostituzione può avvenire
+
+Problemi:
+- I contesti possibili sono infiniti
+- I contesti sono programmi
+
+#### Regole indotte dal LSP
+
+Il principio di sostituzione di Liskov nella pratica si trace in un insieme di regola da seguire:
+- La regola della segatura
+	- Gli oggetti del sottotipo devono avere tutti i metodi del supertipo
+	- Le segnature (firme) dei metodi del sottotipo devono essere compatibili con le segnature dei corrispondenti metodi del super tipo
+- Le regola dei metodi
+	- Le chiamate dei metodi del sottotipo devono comportarsi come le chiamate dei corrispondenti metodi del supertipo
+- La regola delle proprietà
+	- Il sottotipo deve preservare tutte le proprietà che possono essere provate sugli oggetti del supertipo
+
+#### Regola della segnatura
+
+>[!important]
+> - Gli oggetti del sottotipo dei devono avere tutti i metodi del supertipo
+> - Le segnature (firme) dei metodi del sottotipo devono essere compatibili con le segnature dei corrispondenti metodi del supertipo
+
+Le presenza di tutti i metodi è garantita dal compilatore tramite i meccanismi di ereditarietà.
+
+In caso di overriding, il metodo nella sottoclasse:
+- Deve avere la stessa firma del metodo della superclasse
+- Può sollevare meno eccezioni
+- Può avere un return type più specifico (sottotipo di quello del metodo della superclasse
