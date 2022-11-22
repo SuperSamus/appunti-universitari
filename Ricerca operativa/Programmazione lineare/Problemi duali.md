@@ -140,4 +140,20 @@ $ξ∈ℝ^n$ direzione di crescita per $c·\bar{x}$ se esiste $\bar{λ}>0$ tale 
 
 $c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c-ξ>0$
 
-Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}
+>[!important]
+Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}$ è una soluzione ottima per (P) ⇒ $\bar{x}$ non ammette direzioni ammissibili di crescita.
+
+Dimostrare ⇒ è ovvio.
+
+Dimostrazione ⇐: $\bar{x}$ non ottima: esiste $x∈ℝ^n$ ammissibile per (P) tale che $cx>c\bar{x}$.
+
+$ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=cx-c\bar{x}>0$
+
+$\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$ è ammissibile per $λ∈[0,1]$
+
+$A_i(\bar{x}+λξ)≤b_i$ è veramente ≤?
+\=
+$A_i\bar{x}+A_iλξ$
+
+$i∈I(\bar{x})$ ovvero $A_i\bar{x}=b_i$
+
