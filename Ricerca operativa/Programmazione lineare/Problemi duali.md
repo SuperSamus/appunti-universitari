@@ -126,3 +126,18 @@ Vincoli:
 E aggiungendo $y_1+3y_2+y_3=8$ si risolve $y_1=\frac{1}{2},y_2=\frac{5}{2},y_3=0$.
 
 Quindi $\bar{x}=(2,1)$ risolve il problema.
+
+
+
+
+
+
+$\bar{x}∈ℝ^n$ ammissibile per (P)$: A\bar{x}≤b$
+
+$ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ se esiste $\bar{λ}>0$ tale che $\bar{x}+λξ$ è ammissibile per (P). $∀λ∈[0,\bar{λ}$]
+
+$ξ∈ℝ^n$ direzione di crescita per $c·\bar{x}$ se esiste $\bar{λ}>0$ tale che $c·(\bar{x}+λξ)>c\bar{x}$. $∀λ∈[0,\bar{λ}$]
+
+$c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c-ξ>0$
+
+Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}
