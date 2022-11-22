@@ -54,3 +54,28 @@ Con $s$ lo stato:
 $$
 \cfrac{s⊨φ \quad 〈s,P〉⇒〈s',-〉}{s'⊨ψ}
 $$
+
+## Verifica delle specifiche
+
+I test consentono di identificare errori di programmazione (rispetto alle specifiche)
+- Non sono esaustivi
+- Esistono strumenti di generazione automatica test
+
+Esistono metodi di analisi statici e type checking che consentono di verificare in modo automatico la sicurezza del codice rispetto alle specifiche..
+
+## Principio di sotituzione di Liskov
+
+L'esistenza di una specifica consente di ragionare sul rapporto tra superclasse e sottoclasse da un punto di vista comportamentale
+
+>[!important]
+>Un oggetto di un sottotipo può sostituire un oggetto del supertipo senza influire sul comportamento dei programmi che usano il supertipo.
+
+La sotto
+
+Dato $C[X]$ un qualsiasi codice che utilizza $X$:
+
+$$
+\cfrac{X<Y \quad \{PRE\}C[Y]\{POST\}}{\{PRE\}C[X]\{POST\}}
+$$
+
+$t≃s⇔∀C.C[T]⇓↔C[s]⇓$
