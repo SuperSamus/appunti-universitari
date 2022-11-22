@@ -113,3 +113,16 @@ $\bar{x}=(2,1)$ è soluzione ottima?
 - $b=\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}$
 
 $c·\bar{x}=8$
+
+(D)
+
+Funzione obiettivo: $\min y_1+3y_2+y_3$
+
+Vincoli:
+- $y_1+y_2-y_3=3$
+- $-y_1+y_2+y_3=2$
+- $y_1,y_2,y_3≥0$
+
+E aggiungendo $y_1+3y_2+y_3=8$ si risolve $y_1=\frac{1}{2},y_2=\frac{5}{2},y_3=0$.
+
+Quindi $\bar{x}=(2,1)$ risolve il problema.
