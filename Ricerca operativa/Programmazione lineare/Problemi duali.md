@@ -94,3 +94,22 @@ Conseguenze:
 Dimostrazione dell'ultimo punto:
 - $x$ ammissibile per ($P$), allora $cx≤\bar{y}b=c\bar{x}$
 - $y$ ammissibile per ($D$), allora $\bar{y}·b=c·\bar{x}≤y·b$
+
+### Esempio
+
+(P)
+
+Funzione obiettivo: $\max 3x_1+2x_2$
+
+Vincoli:
+- $x_1-x_2≤1$
+- $x_1+x_2≤3$
+- $-x_1+x_2≤1$
+
+$\bar{x}=(2,1)$ è soluzione ottima?
+
+- $c=(3,2)$
+- $A=\begin{bmatrix}1 & -1 \\ 1 & 1 \\ -1 & 1 \end{bmatrix}$
+- $b=\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}$
+
+$c·\bar{x}=8$
