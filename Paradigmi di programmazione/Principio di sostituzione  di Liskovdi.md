@@ -65,12 +65,12 @@ Esistono metodi di analisi statici e type checking che consentono di verificare 
 
 ## Principio di sotituzione di Liskov
 
-L'esistenza di una specifica consente di ragionare sul rapporto tra superclasse e sottoclasse da un punto di vista comportamentale
+L'esistenza di una specifica consente di ragionare sul rapporto tra superclasse e sottoclasse da un punto di vista comportamentale.
 
 >[!important]
 >Un oggetto di un sottotipo può sostituire un oggetto del supertipo senza influire sul comportamento dei programmi che usano il supertipo.
 
-La sotto
+La sottoclasse deve soddisfare le specifiche della superclasse.
 
 Dato $C[X]$ un qualsiasi codice che utilizza $X$:
 
