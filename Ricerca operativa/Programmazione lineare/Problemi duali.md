@@ -76,7 +76,7 @@ Cambierà la matrice $A$.
 Si può fare l'altro problema, che verrà nella forma:
 $\min\{y·b:yA=c∧y≥0\}$ **($D$) problema duale**
 
-$A∈ℝ^{m×n},b∈ℝ^n,c∈ℝ^n$
+$A∈ℝ^{m×n},b∈ℝ^n,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
 
 ## Dualità debole
 
