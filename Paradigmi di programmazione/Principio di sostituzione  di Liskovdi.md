@@ -44,3 +44,13 @@ public class IntSet {
 Per ogni metodo, le specifiche indicano:
 - **Precondizioni** (`// REQUIRES`): condizioni sui parametri e sul valore delle variabili che devono essere soddisfatte all'inizio dell'esecuzione del metodo
 - **Postcondizioni** (`// EFFECTS`): condizione sul risultato e sul valore delle variabili che devono essere soddisfatte al termine dell'esecuzione del metodo, assumendo che all'inizio fossero vere le precondizioni.
+
+#### Logica di Hoare
+
+Pre P Post
+$\{φ\}P\{ψ\}$
+
+Con $s$ lo stato:
+$$
+\cfrac{s⊨φ \quad 〈s,P〉⇒〈s',-〉}{s'⊨ψ}
+$$
