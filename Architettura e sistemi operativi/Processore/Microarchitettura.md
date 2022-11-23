@@ -13,7 +13,7 @@ while (true) {
 
 Più gli stati necessari (come PC e REG).
 
-Esempio implementazione [[Memoria]]:
+Esempio implementazione Load e Store dalla [[Memoria]]:
 
 ```mermaid
 flowchart LR
@@ -27,4 +27,22 @@ IndR2["Ind(R)2"] --> Demul2
 Demul1 & Demul2 --> ...1[...]
 ```
 
-Bisogna anche implementare un **ALU** (Arithmetic Logic Unit), che deve anche setta il .
+Bisogna anche implementare un **ALU** (Arithmetic Logic Unit), che deve anche poter settare i FLAG.
+
+Vediamo `ADD Ra, Rb, Rc`:
+
+```mermaid
+flowchart LR
+PC --> IM[Instruction Memory]
+IM --> |/4| ...
+IM --> |Cond OP| ...
+IM --> |/4| ...
+IM --> |/4| Rs
+IM --> |/4| Rd
+IM --> |/4| Rsrc2
+Rs & Rd & Rsrc2 --> REG
+REG --> |SrcA| ALU+
+REG --> |SrcB| ALU+
+ALU+ --> FLAG
+ALU+ --> |/32| REG
+```
