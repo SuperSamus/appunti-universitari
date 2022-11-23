@@ -81,20 +81,20 @@ $A∈ℝ^{m×n},b∈ℝ^m,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
 ## Dualità debole
 
 >[!important]
-Siano $x∈ℝ^n$ una soluzione ammissibile per (P), e $y∈ℝ^n$ soluzione amissibile per (D).
+Siano $x∈ℝ^n$ una soluzione ammissibile per (P), e $y∈ℝ^n$ soluzione ammissibile per (D).
 Allora $c·x≤y·b$.
 
 Dimostrazione: $c·x=(yA)·x=y·(Ax)≤y·b$
 
 Conseguenze:
-- Se ($P$) è superiormente illimitato, allora ($D$) è vuoto.
-- Se ($D$) è inferiormente illimitato, allora ($P$) è vuoto.
+- Se (P) è superiormente illimitato, allora (D) è vuoto.
+- Se (D) è inferiormente illimitato, allora (P) è vuoto.
 >[!important]
->- Sia $\bar{x}∈ℝ^n$ soluzione ammissibile per ($P$), $\bar{y}∈ℝ^n$ soluzione ammissibile per ($D$). Se $c\bar{x}=\bar{y}b$ allora $\bar{x}$ è una soluzione ottima di (P) e $\bar{y}$ è una soluzione ottima di ($D$).
+>- Sia $\bar{x}∈ℝ^n$ soluzione ammissibile per (P), $\bar{y}∈ℝ^n$ soluzione ammissibile per (D). Se $c·\bar{x}=\bar{y}·b$ allora $\bar{x}$ è una soluzione ottima di (P) e $\bar{y}$ è una soluzione ottima di (D).
 
 Dimostrazione dell'ultimo punto:
-- $x$ ammissibile per ($P$), allora $c·x≤\bar{y}·b=c·\bar{x}$
-- $y$ ammissibile per ($D$), allora $\bar{y}·b=c·\bar{x}≤y·b$
+- $x$ ammissibile per (P), allora $c·x≤\bar{y}·b=c·\bar{x}$
+- $y$ ammissibile per (D), allora $\bar{y}·b=c·\bar{x}≤y·b$
 
 ### Esempio
 
@@ -140,7 +140,7 @@ $\bar{x}∈ℝ^n$ ammissibile per (P)$: A\bar{x}≤b$
 
 $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ se esiste $\bar{λ}>0$ tale che $\bar{x}+λξ$ è ammissibile per (P). $∀λ∈[0,\bar{λ}$]
 
-$ξ∈ℝ^n$ direzione di crescita per $c·\bar{x}$ se esiste $\bar{λ}>0$ tale che $c·(\bar{x}+λξ)>c\bar{x}$. $∀λ∈[0,\bar{λ}$]
+$ξ∈ℝ^n$ direzione di crescita per $c·\bar{x}$ se esiste $\bar{λ}>0$ tale che $c·(\bar{x}+λξ)>c·\bar{x}$. $∀λ∈[0,\bar{λ}$]
 
 $c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c-ξ>0$
 
@@ -149,9 +149,9 @@ Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}$ è una soluzione ott
 
 Dimostrare ⇒ è ovvio.
 
-Dimostrazione ⇐: $\bar{x}$ non ottima: esiste $x∈ℝ^n$ ammissibile per (P) tale che $cx>c\bar{x}$.
+Dimostrazione ⇐: $\bar{x}$ non ottima: esiste $x∈ℝ^n$ ammissibile per (P) tale che $c·x>c·\bar{x}$.
 
-$ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=cx-c\bar{x}>0$
+$ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=c·x-c·\bar{x}>0$
 
 $\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$ è ammissibile per $λ∈[0,1]$
 
