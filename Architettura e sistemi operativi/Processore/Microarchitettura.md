@@ -1,0 +1,1 @@
+Insieme di componenti hardware che implementano un interprete per una certa specifica (per esempio ARMv7)
