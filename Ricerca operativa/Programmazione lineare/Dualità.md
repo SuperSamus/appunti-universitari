@@ -143,11 +143,11 @@ Quindi $\bar{x}=(2,1)$ è soluzione ottima.
 
 
 
-$\bar{x}∈ℝ^n$ ammissibile per (P)$: A\bar{x}≤b$. Mi voglio spostare in un altro punto della regione ammissibile, così che
+$\bar{x}∈ℝ^n$ ammissibile per (P) tale che $A\bar{x}≤b$. Mi voglio spostare in un altro punto della regione ammissibile, così che la funzione valga di più.
 
-$ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ se esiste $\bar{λ}>0$ tale che $\bar{x}+λξ$ è ammissibile per (P). $∀λ∈[0,\bar{λ}$]
-
-$ξ∈ℝ^n$ direzione di crescita per $c·\bar{x}$ se esiste $\bar{λ}>0$ tale che $c·(\bar{x}+λξ)>c·\bar{x}$. $∀λ∈[0,\bar{λ}$]
+Introduciamo $ξ∈ℝ^n$:
+- *Direzione ammissibile* per $\bar{x}$ se esiste una spostamento massimo $\bar{λ}>0$ tale che $∀λ∈[0,\bar{λ}]\quad \bar{x}+λξ$ è ancora ammissibile per (P).
+- *Direzione di crescita* per $c·\bar{x}$ se esiste una spostamento massimo $\bar{λ}>0$ tale che $∀λ∈[0,\bar{λ}]\quad c·(\bar{x}+λξ)>c·\bar{x}$.
 
 $c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c-ξ>0$
 
