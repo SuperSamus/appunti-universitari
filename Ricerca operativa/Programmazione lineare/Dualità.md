@@ -68,22 +68,22 @@ Tuttavia si preferirebbe una forma senza vincoli di segno per le variabili:
 
 ## Coppia asimmetrica della programmazione lineare
 
+>[!important]
 $\max\{cx:Ax≤b\}\quad\min\{y·b:yA=c∧y≥0\}$
 
 **(P) problema primale** e **(D) problema duale**
 
-Si può fare l'altro problema, che verrà nella forma:
-
-Anche se sembra strano veder
-
 $A∈ℝ^{m×n},b∈ℝ^m,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
 
->[!caution]
-Nota che, nonostante la forma canonica non abbia il vincolo di segno ($x≥0$), il nostro problema ce l'ha. Si può aggirare con:
+>[!info]
+>Da dove salta fuori il problema duale? Il vincolo $x≥0$ si può replicare con:
 >- $x_i=x^+_i-x^-_i$
 >- $x_i^+,x_i^-≥0$
 >
-> Cambierà la matrice $A$.
+> Ciò cambierà il problema primale (P) in $\max\{cx^+−cx^−:Ax^+−Ax^−≤b\}$
+> 
+>e, applicando la definizione di coppia simmetrica, si ottiene il duale (D)
+>$\min\{yb:yA≥c,−yA≥−c,y≥0\}$
 
 ## Dualità debole
 
