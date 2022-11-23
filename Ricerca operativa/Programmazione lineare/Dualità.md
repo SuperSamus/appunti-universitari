@@ -68,9 +68,10 @@ La funzione obiettivo del secondo problema (un $\max$) non vale più della funzi
 Abbiamo un problema nella forma:
 $\max\{cx:Ax≤b\}$ **(P) problema primale**
 
-Si può scrivere come:
-- $x_i=x^+_i-x^-_i$
-- $x_i^+,x_i^-≥0$
+>[!caution]
+Nota che, nonostante la forma canonica non abbia il vincolo di segno ($x≥0$), il nostro problema ce l'ha. Si può aggirare con:
+>- $x_i=x^+_i-x^-_i$
+>- $x_i^+,x_i^-≥0$
 
 Cambierà la matrice $A$.
 Si può fare l'altro problema, che verrà nella forma:
