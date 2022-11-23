@@ -146,11 +146,9 @@ Introduciamo $ξ∈ℝ^n$:
 - *Direzione ammissibile* per $\bar{x}$ se esiste una spostamento massimo $\bar{λ}>0$ tale che $∀λ∈[0,\bar{λ}]\quad \bar{x}+λξ$ è ancora ammissibile per (P).
 - *Direzione di crescita* per $c·\bar{x}$ se esiste una spostamento massimo $\bar{λ}>0$ tale che $∀λ∈[0,\bar{λ}]\quad c·(\bar{x}+λξ)>c·\bar{x}$.
 
-$$
-c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c·ξ>0↔c-ξ>0
-$$
+$c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c·ξ>0$
 
-Ancora in altre parole, l'angolo tra i vettori $c$ e $ξ$ è minore di 90°.
+In altre parole, l'angolo tra i vettori $c$ e $ξ$ è minore di 90°.
 
 ---
 
@@ -165,9 +163,10 @@ $ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=c·x-c·\bar{x}>0$
 
 Per $λ∈[0,1]$, affermo che $\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$ (cioè la combinazione convessa tra $x$ e $\bar{x}$) è ammissibile.
 
-$A_i(\bar{x}+λξ)≤b_i$ è veramente ≤?
+$A_i(\bar{x}+λξ)\stackrel{?}{≤}b_i$
 \=
 $A_i\bar{x}+A_iλξ$
 
-$i∈I(\bar{x})$ ovvero $A_i\bar{x}=b_i$
-
+Possibili casi, vincolo per vincolo:
+- $i∈I(\bar{x})$ ovvero $A_i\bar{x}=b_i$
+	- $A_i\bar{x}+λA_iξ≤b_i↔A_iξ≤0$
