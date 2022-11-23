@@ -165,8 +165,10 @@ Per $λ∈[0,1]$, affermo che $\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λ
 
 $A_i(\bar{x}+λξ)\stackrel{?}{≤}b_i$
 \=
-$A_i\bar{x}+A_iλξ$
+$A_i\bar{x}+λA_i·ξ$
 
 Possibili casi, vincolo per vincolo:
 - $i∈I(\bar{x})$ ovvero $A_i\bar{x}=b_i$
-	- $A_i\bar{x}+λA_iξ≤b_i↔A_iξ≤0$
+	- $A_i\bar{x}+λA_i·ξ≤b_i↔A_i·ξ≤0$
+- $i∉I(\bar{x})$ ovvero $A_i\bar{x}<b_i$
+	- $A_i\bar{x}+λA_i·ξ≤b_i↔λA_i·ξ≤b_i-A_i\bar{x}$
