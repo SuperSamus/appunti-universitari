@@ -123,6 +123,8 @@ Si può considerare un'interpolazione tra tutti i punti.
 
 #### Involucro conico
 
+^15fa21
+
 Dati i vettori $v^1,v^2,…,v^t∈ℝ^n$:
 
 $cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} μ_iv^i:μ_i≥0\}$

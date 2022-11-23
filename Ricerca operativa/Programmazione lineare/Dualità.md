@@ -46,7 +46,7 @@ Abbiamo usato lo stesso insieme di dati per entrambi i problemi.
 ## Coppia simmetrica della programmazione lineare
 
 >[!important]
-$\min\{y·b:yA≥c∧y≥0\}\quad\max\{c·x:Ax≤b∧x≥0\}$
+$\min\{y·b:yA≥c,y≥0\}\quad\max\{c·x:Ax≤b,x≥0\}$
 
 Il primo ha $m$ variabili e $n$ vincoli. Il secondo ha $n$ variabili e $m$ vincoli.
 
@@ -69,7 +69,7 @@ Tuttavia si preferirebbe una forma senza vincoli di segno per le variabili:. Esi
 ## Coppia asimmetrica della programmazione lineare
 
 >[!important]
-$\max\{cx:Ax≤b\}\quad\min\{y·b:yA=c∧y≥0\}$
+$\max\{cx:Ax≤b\}\quad\min\{y·b:yA=c,y≥0\}$
 
 **(P) problema primale** e **(D) problema duale**
 
@@ -187,7 +187,7 @@ I suoi vari lemmi legano l'impossibilità del risolvere un sistema con la possib
 Tornando alla possibile crescita di $\bar{x}$:
 
 >[!important]
->$\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$ non ha soluzione $ξ∈ℝ^n$ ⇔ $∃y_{I(\bar{x})}:\begin{cases}y_{I(\bar{x})}A=c \\ y_{I(\bar{x})}≥0 \end{cases}$ 
+>$\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$ non ha soluzione $ξ∈ℝ^n$ ⇔ $∃y_{I(\bar{x})}:\begin{cases}y_{I(\bar{x})}A_{I(\bar{x})}=c \\ y_{I(\bar{x})}≥0 \end{cases}$ 
 
 ---
 
@@ -205,4 +205,12 @@ $y_{I(\bar{x})}A_{I(\bar{x})}=c→\begin{bmatrix} y_1 & y_2 \end{bmatrix}\begin{
 
 Riotteniamo gli stessi risultati: $\begin{cases}y_1+y_2=3 \\ -y_1+y_2=2 \end{cases}→y_2=\frac{5}{2}→y_1=\frac{1}{2}$
 
-In generale: $c=y_{I(\bar{x})}A_{I(\bar{x})}=∑\limits_{i∈I(\bar{x})}y_iA_i$
+In generale: $c=y_{I(\bar{x})}A_{I(\bar{x})}=∑\limits_{i∈I(\bar{x})}y_iA_i$. In altri termini , $c$ deve far parte dell'[[Programmazione lineare#^15fa21|involucro conico]] generati dai vettori $A_i$.
+
+Questo equivale a rendere uguale a 0 tutti i componenti dove $i∉I(\bar{x})$:
+
+$yA=\begin{bmatrix} y_{I(\bar{x})} & 0 \end{bmatrix}\begin{bmatrix}A_{I(\bar{x})} \\ A_{I(\bar{x})^c}\end{bmatrix}=y_{I(\bar{x})}A_{I(\bar{x})}$
+
+#### Dualità forte
+
+Supponiamo che (P) e (D) abbiano regioni ammissibili non vuote. Allora $\max\{c·x:Ax≤b\}=\min\{y·b:yA=c,y≥0\}$
