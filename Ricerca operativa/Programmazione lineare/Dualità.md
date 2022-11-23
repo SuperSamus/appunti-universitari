@@ -41,15 +41,16 @@ Vincoli (il prezzo deve essere conveniente) ($Ax≤b$):
 ($x≥0$)
 - $x_1,x_2≥0$
 
----
-
 Abbiamo usato lo stesso insieme di dati per entrambi i problemi.
 
+## Coppia simmetrica della programmazione lineare
+
+>[!important]
 $\min\{y·b:yA≥c∧y≥0\}\quad\max\{c·x:Ax≤b∧x≥0\}$
 
-**Coppia simmetrica** della [[programmazione lineare]].
-
 Il primo ha $m$ variabili e $n$ vincoli. Il secondo ha $n$ variabili e $m$ vincoli.
+
+---
 
 Proviamo a fare una piccola alterazione ai vincoli del secondo problema. Sapendo che $y≥0$:
 - $y_1(4x_1+2x_2)≤120y_1$
@@ -63,21 +64,26 @@ Per via dei vincoli del primo problema: $15x_1+3x_2≤…≤120y_1+75y_2+95y_3$
 
 La funzione obiettivo del secondo problema (un $\max$) non vale più della funzione obiettivo del primo problema (un $\min$).
 
+Tuttavia si preferirebbe una forma senza vincoli di segno per le variabili:
+
 ## Coppia asimmetrica della programmazione lineare
 
-Abbiamo un problema nella forma:
-$\max\{cx:Ax≤b\}$ **(P) problema primale**
+$\max\{cx:Ax≤b\}\quad\min\{y·b:yA=c∧y≥0\}$
+
+**(P) problema primale** e **(D) problema duale**
+
+Si può fare l'altro problema, che verrà nella forma:
+
+Anche se sembra strano veder
+
+$A∈ℝ^{m×n},b∈ℝ^m,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
 
 >[!caution]
 Nota che, nonostante la forma canonica non abbia il vincolo di segno ($x≥0$), il nostro problema ce l'ha. Si può aggirare con:
 >- $x_i=x^+_i-x^-_i$
 >- $x_i^+,x_i^-≥0$
-
-Cambierà la matrice $A$.
-Si può fare l'altro problema, che verrà nella forma:
-$\min\{y·b:yA=c∧y≥0\}$ **(D) problema duale**
-
-$A∈ℝ^{m×n},b∈ℝ^m,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
+>
+> Cambierà la matrice $A$.
 
 ## Dualità debole
 
