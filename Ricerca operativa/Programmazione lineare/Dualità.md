@@ -143,7 +143,7 @@ Quindi $\bar{x}=(2,1)$ è soluzione ottima.
 
 
 
-$\bar{x}∈ℝ^n$ ammissibile per (P)$: A\bar{x}≤b$
+$\bar{x}∈ℝ^n$ ammissibile per (P)$: A\bar{x}≤b$. Mi voglio spostare in un altro punto della regione ammissibile, così che
 
 $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ se esiste $\bar{λ}>0$ tale che $\bar{x}+λξ$ è ammissibile per (P). $∀λ∈[0,\bar{λ}$]
 
