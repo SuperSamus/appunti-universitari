@@ -138,10 +138,7 @@ Si risolve $y_1=\frac{1}{2},y_2=\frac{5}{2},y_3=0$, che è una soluzione ammissi
 
 Quindi $\bar{x}=(2,1)$ è soluzione ottima.
 
-
-
-
-
+## Crescita
 
 $\bar{x}∈ℝ^n$ ammissibile per (P) tale che $A\bar{x}≤b$. Mi voglio spostare in un altro punto della regione ammissibile, così che la funzione valga di più.
 
@@ -149,18 +146,24 @@ Introduciamo $ξ∈ℝ^n$:
 - *Direzione ammissibile* per $\bar{x}$ se esiste una spostamento massimo $\bar{λ}>0$ tale che $∀λ∈[0,\bar{λ}]\quad \bar{x}+λξ$ è ancora ammissibile per (P).
 - *Direzione di crescita* per $c·\bar{x}$ se esiste una spostamento massimo $\bar{λ}>0$ tale che $∀λ∈[0,\bar{λ}]\quad c·(\bar{x}+λξ)>c·\bar{x}$.
 
-$c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c-ξ>0$
+$$
+c·(\bar{x}+λξ)=c·\bar{x}+λc·ξ>c·\bar{x}↔c·ξ>0↔c-ξ>0
+$$
+
+Ancora in altre parole, l'angolo tra i vettori $c$ e $ξ$ è minore di 90°.
+
+---
 
 >[!important]
-Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}$ è una soluzione ottima per (P) ⇒ $\bar{x}$ non ammette direzioni ammissibili di crescita.
+Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}$ è una soluzione ottima per (P) ⇔ $\bar{x}$ non ammette direzioni ammissibili di crescita.
 
 Dimostrare ⇒ è ovvio.
 
-Dimostrazione ⇐: $\bar{x}$ non ottima: esiste $x∈ℝ^n$ ammissibile per (P) tale che $c·x>c·\bar{x}$.
+Dimostrazione ⇐ per assurdo: supponiamo $\bar{x}$ non ottima, ovvero $∃x∈ℝ^n$ ammissibile per (P) tale che $c·x>c·\bar{x}$.
 
 $ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=c·x-c·\bar{x}>0$
 
-$\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$ è ammissibile per $λ∈[0,1]$
+Per $λ∈[0,1]$, affermo che $\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$ (cioè la combinazione convessa tra $x$ e $\bar{x}$) è ammissibile.
 
 $A_i(\bar{x}+λξ)≤b_i$ è veramente ≤?
 \=
