@@ -66,7 +66,7 @@ La funzione obiettivo del secondo problema (un $\max$) non vale più della funzi
 ## Coppia asimmetrica della programmazione lineare
 
 Abbiamo un problema nella forma:
-$\max\{cx:Ax≤b\}$ **($P$) problema primale**
+$\max\{cx:Ax≤b\}$ **(P) problema primale**
 
 Si può scrivere come:
 - $x_i=x^+_i-x^-_i$
@@ -74,14 +74,14 @@ Si può scrivere come:
 
 Cambierà la matrice $A$.
 Si può fare l'altro problema, che verrà nella forma:
-$\min\{y·b:yA=c∧y≥0\}$ **($D$) problema duale**
+$\min\{y·b:yA=c∧y≥0\}$ **(D) problema duale**
 
-$A∈ℝ^{m×n},b∈ℝ^n,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
+$A∈ℝ^{m×n},b∈ℝ^m,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
 
 ## Dualità debole
 
 >[!important]
-Siano $x∈ℝ^n$ una soluzione ammissibile per ($P$), e $y∈ℝ^n$ soluzione amissibile per ($D$).
+Siano $x∈ℝ^n$ una soluzione ammissibile per (P), e $y∈ℝ^n$ soluzione amissibile per (D).
 Allora $c·x≤y·b$.
 
 Dimostrazione: $c·x=(yA)·x=y·(Ax)≤y·b$
@@ -89,7 +89,8 @@ Dimostrazione: $c·x=(yA)·x=y·(Ax)≤y·b$
 Conseguenze:
 - Se ($P$) è superiormente illimitato, allora ($D$) è vuoto.
 - Se ($D$) è inferiormente illimitato, allora ($P$) è vuoto.
-- Sia $\bar{x}∈ℝ^n$ soluzione ammissibile per ($P$), $\bar{y}∈ℝ^n$ soluzione ammissibile per ($D$). Se $c\bar{x}=\bar{y}b$ allora $\bar{x}$ è una soluzione ottima di (P) e $\bar{y}$ è una soluzione ottima di ($D$).
+>[!important]
+>- Sia $\bar{x}∈ℝ^n$ soluzione ammissibile per ($P$), $\bar{y}∈ℝ^n$ soluzione ammissibile per ($D$). Se $c\bar{x}=\bar{y}b$ allora $\bar{x}$ è una soluzione ottima di (P) e $\bar{y}$ è una soluzione ottima di ($D$).
 
 Dimostrazione dell'ultimo punto:
 - $x$ ammissibile per ($P$), allora $c·x≤\bar{y}·b=c·\bar{x}$
@@ -118,14 +119,17 @@ $c·\bar{x}=8$
 
 Funzione obiettivo: $\min y_1+3y_2+y_3$
 
-Vincoli ($\begin{bmatrix} y_1 & y_2 & y_3 \end{bmatrix}A=\begin{bmatrix} c_1 \\ c_2 \end{bmatrix}$):
-- $y_1+y_2-y_3=3$
-- $-y_1+y_2+y_3=2$
+Vincoli:
+- $\begin{bmatrix} y_1 & y_2 & y_3 \end{bmatrix}A=\begin{bmatrix} c_1 \\ c_2 \end{bmatrix}$
+	- $y_1+y_2-y_3=3$
+	- $-y_1+y_2+y_3=2$
+- $\bar{y}·b=c·\bar{x}$
+	- $y_1+3y_2+y_3=8$
 - $y_1,y_2,y_3≥0$
 
-E aggiungendo $y_1+3y_2+y_3=8$ si risolve $y_1=\frac{1}{2},y_2=\frac{5}{2},y_3=0$.
+Si risolve $y_1=\frac{1}{2},y_2=\frac{5}{2},y_3=0$, che è una soluzione ammissibile.
 
-Quindi $\bar{x}=(2,1)$ risolve il problema.
+Quindi $\bar{x}=(2,1)$ è soluzione ottima.
 
 
 
