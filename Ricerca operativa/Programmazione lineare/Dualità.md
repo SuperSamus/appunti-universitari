@@ -184,4 +184,22 @@ $\bar{x}$ non ammette direzioni ammissibili di crescita ⇔ non esiste $ξ∈ℝ
 
 I suoi vari lemmi legano l'impossibilità del risolvere un sistema con la possibilità del risolverne un altro.
 
-$\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$ non ha soluzione $ξ∈ℝ^n$ ⇔ $∃y_{I(\bar{x})}:\begin{cases}y_{I(\bar{x})}A=c \\ y_{I(\bar{x})}≥0 \end{cases}$ 
+Tornando alla possibile crescita di $\bar{x}$:
+
+>[!important]
+>$\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$ non ha soluzione $ξ∈ℝ^n$ ⇔ $∃y_{I(\bar{x})}:\begin{cases}y_{I(\bar{x})}A=c \\ y_{I(\bar{x})}≥0 \end{cases}$ 
+
+---
+
+Tornando al problema.
+
+- $c=(3,2)$
+- $A=\begin{bmatrix}1 & -1 \\ 1 & 1 \\ -1 & 1 \end{bmatrix}$
+- $b=\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}$
+
+$I(\bar{x})=\{1,2\}$
+- $y_{I(\bar{x})}=\begin{bmatrix} y_1 & y_2 \end{bmatrix}$
+- $A_{I(\bar{x})}=\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}$
+
+$y_{I(\bar{x})}A_{I(\bar{x})}=c→\begin{bmatrix} y_1 & y_2 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}=\begin{bmatrix} 3 \\ 2 \end{bmatrix}$
+$\begin{cases}y_1+y_2=3 \\ -y_1+y_2=2 \end{cases}→y_2=\frac{5}{2}→y_1=y_2$
