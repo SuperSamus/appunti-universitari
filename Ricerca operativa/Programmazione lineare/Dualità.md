@@ -177,3 +177,5 @@ Possibili casi, vincolo per vincolo:
 		- In entrambi i casi, siamo a posto ($λ$ si può scegliere).
 
 $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_i·ξ≤0\quad ∀i∈I(\bar{x})$
+
+$A_{I(\bar{x})}
