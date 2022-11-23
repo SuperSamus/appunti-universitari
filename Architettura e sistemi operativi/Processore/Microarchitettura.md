@@ -36,13 +36,16 @@ flowchart LR
 PC --> IM[Instruction Memory]
 IM --> |/4| ...
 IM --> |Cond OP| ...
-IM --> |/4| ...
 IM --> |/4| Rs
 IM --> |/4| Rd
 IM --> |/4| Rsrc2
-Rs & Rd & Rsrc2 --> REG
+Rs & Rd & Rsrc2 ---> REG
 REG --> |SrcA| ALU+
-REG --> |SrcB| ALU+
+REG --> |SrcB| Multiplexer
+8 --> EXT --> |/32| Multiplexer
+Multiplexer --> ALU+
 ALU+ --> FLAG
 ALU+ --> |/32| REG
+ALU+ --> PC
+CLOCK -..-> PC & IM & ALU+
 ```
