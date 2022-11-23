@@ -118,7 +118,7 @@ $c·\bar{x}=8$
 
 Funzione obiettivo: $\min y_1+3y_2+y_3$
 
-Vincoli:
+Vincoli ($\begin{bmatrix} y_1 & y_2 & y_3 \end{bmatrix}A=\begin{bmatrix} c_1 \\ c_2 \end{bmatrix}$):
 - $y_1+y_2-y_3=3$
 - $-y_1+y_2+y_3=2$
 - $y_1,y_2,y_3≥0$
