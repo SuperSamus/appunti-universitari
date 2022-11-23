@@ -171,4 +171,7 @@ Possibili casi, vincolo per vincolo:
 - $i∈I(\bar{x})$ ovvero $A_i\bar{x}=b_i$
 	- $A_i\bar{x}+λA_i·ξ≤b_i↔A_i·ξ≤0$
 - $i∉I(\bar{x})$ ovvero $A_i\bar{x}<b_i$
-	- $A_i\bar{x}+λA_i·ξ≤b_i↔λA_i·ξ≤b_i-A_i\bar{x}$
+	- $A_i\bar{x}+λA_i·ξ≤b_i↔λA_i·ξ≤b_i-A_i\bar{x}>0$
+		- Se $A_i·ξ>0$, ok! ↔ $λ≤\cfrac{(b_i-A_i\bar{x})}{A_i·ξ}>0$
+
+$ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_i·ξ≤0\quad ∀i∈I(\bar{x})$
