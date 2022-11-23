@@ -202,4 +202,7 @@ $I(\bar{x})=\{1,2\}$
 - $A_{I(\bar{x})}=\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}$
 
 $y_{I(\bar{x})}A_{I(\bar{x})}=c→\begin{bmatrix} y_1 & y_2 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}=\begin{bmatrix} 3 \\ 2 \end{bmatrix}$
-$\begin{cases}y_1+y_2=3 \\ -y_1+y_2=2 \end{cases}→y_2=\frac{5}{2}→y_1=y_2$
+
+Riotteniamo gli stessi risultati: $\begin{cases}y_1+y_2=3 \\ -y_1+y_2=2 \end{cases}→y_2=\frac{5}{2}→y_1=\frac{1}{2}$
+
+In generale: $c=y_{I(\bar{x})}A_{I(\bar{x})}=∑\limits_{i∈I(\bar{x})}y_iA_i$
