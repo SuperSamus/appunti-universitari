@@ -87,6 +87,8 @@ $A∈ℝ^{m×n},b∈ℝ^m,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
 
 ## Dualità debole
 
+^b4e2a8
+
 >[!important]
 Siano $x∈ℝ^n$ una soluzione ammissibile per (P), e $y∈ℝ^n$ soluzione ammissibile per (D).
 Allora $c·x≤y·b$.
@@ -97,13 +99,14 @@ Conseguenze:
 - Se (P) è superiormente illimitato, allora (D) è vuoto.
 - Se (D) è inferiormente illimitato, allora (P) è vuoto.
 >[!important]
->- Sia $\bar{x}∈ℝ^n$ soluzione ammissibile per (P), $\bar{y}∈ℝ^n$ soluzione ammissibile per (D). Se $c·\bar{x}=\bar{y}·b$ allora $\bar{x}$ è una soluzione ottima di (P) e $\bar{y}$ è una soluzione ottima di (D).
+>- Sia $\bar{x}∈ℝ^n$ soluzione ammissibile per (P), $\bar{y}∈ℝ^n$ soluzione ammissibile per (D).
+>Se $c·\bar{x}=\bar{y}·b$ ⇒ $\bar{x}$ è una soluzione ottima di (P) e $\bar{y}$ è una soluzione ottima di (D).
+
+La [[Dualità#^2361d6|dualità forte]] dichiara il ⇐.
 
 Dimostrazione dell'ultimo punto:
 - $x$ ammissibile per (P), allora $c·x≤\bar{y}·b=c·\bar{x}$
 - $y$ ammissibile per (D), allora $\bar{y}·b=c·\bar{x}≤y·b$
-
-Con la [[Dualità#^2361d6|dualità forte]] scopriremo che vale anche viceversa.
 
 ### Esempio
 
@@ -219,7 +222,9 @@ $yA=\begin{bmatrix} y_{I(\bar{x})} & 0 \end{bmatrix}\begin{bmatrix}A_{I(\bar{x})
 
 >[!important]
 >Supponiamo che (P) e (D) abbiano regioni ammissibili non vuote.
->Allora $\max\{c·x:Ax≤b\}=\min\{y·b:yA=c,y≥0\}$.
+>⇒ $\max\{c·x:Ax≤b\}=\min\{y·b:yA=c,y≥0\}$.
+
+Dichiara il ⇐ della [[Dualità#^b4e2a8|dualità debole]].
 
 Conseguenze:
 - Se (P) è superiormente illimitato, allora (D) è vuoto.
@@ -231,3 +236,11 @@ Conseguenze:
 | ottimo finito            | ✅             | ❌                      | ❌     |
 | superiormente illimitato | ❌             | ❌                      | ✅     |
 | vuoto                    | ❌             | ✅                      | ✅     | 
+
+$c\bar{x}=\bar{y}b↔(\bar{y}A)·\bar{x}=\bar{y}·b↔\bar{y}·b-\bar{y}A\bar{x}=0↔\bar{y}·(b-A\bar{x})=0$
+
+>[!important]
+>#### Teorema degli scarti complementari
+>$$
+>\begin{matrix}\bar{x}\text{ è una soluzione ottima per (P)} \\ \bar{y}\text{ è una soluzione ottima per (D)}\end{matrix}⇔\bar{y}·(b-A)
+>$$
