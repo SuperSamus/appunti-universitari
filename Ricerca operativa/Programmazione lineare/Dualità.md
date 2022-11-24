@@ -103,6 +103,8 @@ Dimostrazione dell'ultimo punto:
 - $x$ ammissibile per (P), allora $c·x≤\bar{y}·b=c·\bar{x}$
 - $y$ ammissibile per (D), allora $\bar{y}·b=c·\bar{x}≤y·b$
 
+Con la [[Dualità#^2361d6|dualità forte]] scopriremo che vale anche viceversa.
+
 ### Esempio
 
 (P)
@@ -213,4 +215,19 @@ $yA=\begin{bmatrix} y_{I(\bar{x})} & 0 \end{bmatrix}\begin{bmatrix}A_{I(\bar{x})
 
 #### Dualità forte
 
-Supponiamo che (P) e (D) abbiano regioni ammissibili non vuote. Allora $\max\{c·x:Ax≤b\}=\min\{y·b:yA=c,y≥0\}$
+^2361d6
+
+>[!important]
+>Supponiamo che (P) e (D) abbiano regioni ammissibili non vuote.
+>Allora $\max\{c·x:Ax≤b\}=\min\{y·b:yA=c,y≥0\}$.
+
+Conseguenze:
+- Se (P) è superiormente illimitato, allora (D) è vuoto.
+- Se (D) è inferiormente illimitato, allora (P) è vuoto.
+- (P) ottimo finito ⇔ (D) ha ottimo finito
+
+| (P)\\(D)                 | ottimo finito | inferiormente illimitato | vuoto |
+| ------------------------ | ------------- | ---------------------- | ----- |
+| ottimo finito            | ✅             | ❌                      | ❌     |
+| superiormente illimitato | ❌             | ❌                      | ✅     |
+| vuoto                    | ❌             | ✅                      | ✅     | 
