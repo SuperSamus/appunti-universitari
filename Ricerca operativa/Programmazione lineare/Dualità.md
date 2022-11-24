@@ -81,7 +81,7 @@ $A∈ℝ^{m×n},b∈ℝ^m,c∈ℝ^n→x∈ℝ^n,y∈ℝ^m$
 >- $x_i^+,x_i^-≥0$
 >
 > Ciò cambierà il problema primale (P) in $\max\{cx^+−cx^−:Ax^+−Ax^−≤b\}$
-> 
+>
 >e, applicando la definizione di coppia simmetrica, si ottiene il duale (D)
 >$\min\{yb:yA≥c,−yA≥−c,y≥0\}$
 
@@ -192,7 +192,7 @@ I suoi vari lemmi legano l'impossibilità del risolvere un sistema con la possib
 Tornando alla possibile crescita di $\bar{x}$:
 
 >[!important]
->$\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$ non ha soluzione $ξ∈ℝ^n$ ⇔ $∃y_{I(\bar{x})}:\begin{cases}y_{I(\bar{x})}A_{I(\bar{x})}=c \\ y_{I(\bar{x})}≥0 \end{cases}$ 
+>$\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$ non ha soluzione $ξ∈ℝ^n$ ⇔ $∃y_{I(\bar{x})}:\begin{cases}y_{I(\bar{x})}A_{I(\bar{x})}=c \\ y_{I(\bar{x})}≥0 \end{cases}$
 
 ---
 
@@ -235,12 +235,16 @@ Conseguenze:
 | ------------------------ | ------------- | ---------------------- | ----- |
 | ottimo finito            | ✅             | ❌                      | ❌     |
 | superiormente illimitato | ❌             | ❌                      | ✅     |
-| vuoto                    | ❌             | ✅                      | ✅     | 
+| vuoto                    | ❌             | ✅                      | ✅     |
 
 $c\bar{x}=\bar{y}b↔(\bar{y}A)·\bar{x}=\bar{y}·b↔\bar{y}·b-\bar{y}A\bar{x}=0↔\bar{y}·(b-A\bar{x})=0$
 
 >[!important]
 >#### Teorema degli scarti complementari
 >$$
->\begin{matrix}\bar{x}\text{ è una soluzione ottima per (P)} \\ \bar{y}\text{ è una soluzione ottima per (D)}\end{matrix}⇔\bar{y}·(b-A)
+>\begin{matrix}\bar{x}\text{ è una soluzione ottima per (P)} \\ \bar{y}\text{ è una soluzione ottima per (D)}\end{matrix}⇔\bar{y}·(b-A\bar{x})=0
 >$$
+
+$\bar{y}·(b-A\bar{x})=∑\limits_{i=1}^m\bar{y_i}(b_i-A_i\bar{x})=0⇔\bar{y_i}(b_i-A_i\bar{x})=0\quad i=1…m$
+
+In altro modo, $\bar{y_i}=0$ oppure $A_i\bar{x}=b_i$ ($↔i∈I(\bar{x}$))
