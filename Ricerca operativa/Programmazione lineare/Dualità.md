@@ -250,3 +250,23 @@ $\bar{y}·(b-A\bar{x})=∑\limits_{i=1}^m\bar{y_i}(b_i-A_i\bar{x})=0⇔\bar{y_i}
 Detto in altro modo:
 - $A_i\bar{x}<b_i⇒\bar{y_i}=0 \quad i∉I(\bar{x})$
 - $\bar{y_i}>0⇒A_i\bar{x}=b_i \quad i∈I(\bar{x}$))
+
+## Esercizio
+
+Problema in formato (P):
+
+Funzione obiettivo: $\max x_1+2x_2$
+
+Vincoli:
+- $x_2≤4$
+- $x_1+2x_2≤2$
+- $x_1≤0$
+- $x_1-x_2≤-2$
+- $x_1+2x_2≤-2$
+
+$\bar{x}=(-2,4)$ è ottima?
+
+- $c=(1\;2)$
+- $A=\begin{bmatrix}0 & 1 \\ 1 & 1 \\ 1 & 0 \\ 1 & -1 \\ 1 & -2\end{bmatrix}$
+- $b=\begin{bmatrix}4 \\ 2 \\0 \\ -2 \\ -2 \end{bmatrix}$
+- 
