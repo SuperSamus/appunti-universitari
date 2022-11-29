@@ -130,6 +130,12 @@ Vincoli:
 - $I(\bar{x})=\{2,3,4\}$
 - $\bar{y_1}=\bar{y_5}=0$
 - $y_2,y_3,y_4≥0$
-	- $y_2+
+	- $y_2+y_3+y_4=0$
+	- $y_2-y_4=1$
+	- Questo è impossibile: la prima condizione chiede che siano tutti uguali a 0, ma ciò impedisce di soddisfare la seconda condizione.
 
-Urrà! $\bar{x}$ è ottima.
+$\bar{x}$ non è ottima.
+
+$ξ$ direzione ammissibile per $\bar{x}⇔A_{I(\bar{x})}≤0$
+
+$A_{I(\bar{x})}ξ=\begin{bmatrix} 1 & 1 \\ 1 & 0 \\ 1 & -1\end{bmatrix}\begin{bmatrix}ξ_1 \\ ξ_2\end{bmatrix}≤0⇔\begin{cases}ξ_1+ξ_2≤0 \\ ξ_1≤0 \\ ξ_1-ξ_2≤0\end{cases}$
