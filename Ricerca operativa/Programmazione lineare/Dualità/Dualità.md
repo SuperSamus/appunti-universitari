@@ -200,4 +200,4 @@ $\bar{y}·(b-A\bar{x})=∑\limits_{i=1}^m\bar{y_i}(b_i-A_i\bar{x})=0⇔\bar{y_i}
 
 Detto in altro modo:
 - $A_i\bar{x}<b_i⇒\bar{y_i}=0 \quad i∉I(\bar{x})$
-- $\bar{y_i}>0⇒A_i\bar{x}=b_i \quad i∈I(\bar{x}$))
+- $\bar{y_i}>0⇒A_i\bar{x}=b_i \quad i∈I(\bar{x})$
