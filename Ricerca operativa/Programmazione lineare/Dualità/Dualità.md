@@ -64,7 +64,7 @@ Per via dei vincoli del primo problema: $15x_1+3x_2≤…≤120y_1+75y_2+95y_3$
 
 La funzione obiettivo del secondo problema (un $\max$) non vale più della funzione obiettivo del primo problema (un $\min$).
 
-Tuttavia si preferirebbe una forma senza vincoli di segno per le variabili:. Esiste un altro formato apposta:
+Tuttavia si preferirebbe una forma senza vincoli di segno per le variabili. Esiste un altro formato apposta:
 
 ## Coppia asimmetrica della programmazione lineare
 
