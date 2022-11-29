@@ -55,10 +55,10 @@ Funzione obiettivo: $\max x_1+2x_2$
 
 Vincoli:
 - $x_2≤4$
-- $x_1+2x_2≤2$
+- $x_1+x_2≤2$
 - $x_1≤0$
 - $x_1-x_2≤-2$
-- $x_1+2x_2≤-2$
+- $x_1-2x_2≤-2$
 
 - $c=(1\;2)$
 - $A=\begin{bmatrix}0 & 1 \\ 1 & 1 \\ 1 & 0 \\ 1 & -1 \\ 1 & -2\end{bmatrix}$
