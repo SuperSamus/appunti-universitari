@@ -108,41 +108,6 @@ Dimostrazione dell'ultimo punto:
 - $x$ ammissibile per (P), allora $c·x≤\bar{y}·b=c·\bar{x}$
 - $y$ ammissibile per (D), allora $\bar{y}·b=c·\bar{x}≤y·b$
 
-### Esempio
-
-(P)
-
-Funzione obiettivo: $\max 3x_1+2x_2$
-
-Vincoli:
-- $x_1-x_2≤1$
-- $x_1+x_2≤3$
-- $-x_1+x_2≤1$
-
-$\bar{x}=(2,1)$ è soluzione ottima?
-
-- $c=(3,2)$
-- $A=\begin{bmatrix}1 & -1 \\ 1 & 1 \\ -1 & 1 \end{bmatrix}$
-- $b=\begin{bmatrix}1 \\ 3 \\ 1\end{bmatrix}$
-
-$c·\bar{x}=8$
-
-(D)
-
-Funzione obiettivo: $\min y_1+3y_2+y_3$
-
-Vincoli:
-- $\begin{bmatrix} y_1 & y_2 & y_3 \end{bmatrix}A=\begin{bmatrix} c_1 \\ c_2 \end{bmatrix}$
-	- $y_1+y_2-y_3=3$
-	- $-y_1+y_2+y_3=2$
-- $\bar{y}·b=c·\bar{x}$
-	- $y_1+3y_2+y_3=8$
-- $y_1,y_2,y_3≥0$
-
-Si risolve $y_1=\frac{1}{2},y_2=\frac{5}{2},y_3=0$, che è una soluzione ammissibile.
-
-Quindi $\bar{x}=(2,1)$ è soluzione ottima.
-
 ## Crescita
 
 $\bar{x}∈ℝ^n$ ammissibile per (P) tale che $A\bar{x}≤b$. Mi voglio spostare in un altro punto della regione ammissibile, così che la funzione valga di più.
