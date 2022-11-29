@@ -110,6 +110,8 @@ Dimostrazione dell'ultimo punto:
 
 ## Crescita
 
+^247330
+
 $\bar{x}∈ℝ^n$ ammissibile per (P) tale che $A\bar{x}≤b$. Mi voglio spostare in un altro punto della regione ammissibile, così che la funzione valga di più.
 
 Introduciamo $ξ∈ℝ^n$:

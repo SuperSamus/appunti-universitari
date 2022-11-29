@@ -134,8 +134,10 @@ Vincoli:
 	- $y_2-y_4=1$
 	- Questo è impossibile: la prima condizione chiede che siano tutti uguali a 0, ma ciò impedisce di soddisfare la seconda condizione.
 
-$\bar{x}$ non è ottima.
+$\bar{x}$ non è ottimo. Cerchiamo di farlo [[Dualità#^247330|crescere]].
 
 $ξ$ direzione ammissibile per $\bar{x}⇔A_{I(\bar{x})}≤0$
 
 $A_{I(\bar{x})}ξ=\begin{bmatrix} 1 & 1 \\ 1 & 0 \\ 1 & -1\end{bmatrix}\begin{bmatrix}ξ_1 \\ ξ_2\end{bmatrix}≤0⇔\begin{cases}ξ_1+ξ_2≤0 \\ ξ_1≤0 \\ ξ_1-ξ_2≤0\end{cases}$
+
+Il sistema descrive il [[Programmazione lineare#^15fa21|cono]] dove può crescere.
