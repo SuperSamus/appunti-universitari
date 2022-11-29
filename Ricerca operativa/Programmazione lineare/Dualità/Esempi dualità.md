@@ -82,3 +82,10 @@ Usiamo il [[Dualità#^4e2ee6|teorema degli scarti complementari]].
 - $y_1,y_2≥0$
 	- $\bar{y_1}=\bar{y_2}=1$
 	- $\bar{y}=(1,1,0,0,0)$
+
+Urrà! $\bar{x}$ è ottima.
+
+Cosa succede se cambiano la funzione obiettivo in $c=\{α,β\}$?
+
+- $y_2+y_3+y_4+y_5=$
+- $y_1+y_2-y_4-2y_5=β$
