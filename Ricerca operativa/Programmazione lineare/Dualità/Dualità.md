@@ -154,7 +154,7 @@ $\bar{x}$ non ammette direzioni ammissibili di crescita ⇔ non esiste $ξ∈ℝ
 
 ^15b491
 
-I suoi vari lemmi legano l'impossibilità del risolvere un sistema con la possibilità del risolverne un altro.
+I suoi vari lemmi legano l'impossibilità del risolvere un sistema con la possibilità del risolverne un altro. Qui non si dimostrerà.
 
 Tornando alla possibile crescita di $\bar{x}$:
 
