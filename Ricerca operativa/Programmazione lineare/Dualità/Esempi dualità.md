@@ -142,7 +142,7 @@ $A_{I(\bar{x})}ξ=\begin{bmatrix} 1 & 1 \\ 1 & 0 \\ 1 & -1\end{bmatrix}\begin{bm
 
 Il sistema descrive il [[Programmazione lineare#^15fa21|cono]] dove può crescere.
 
-# Problema 3
+## Problema 3
 
 (P)
 
@@ -184,7 +184,9 @@ Proviamo la base $B=\{2,4\}$.
 	- $\bar{y}=(0,1,0,1,0)$
 	- Questa è ammissibile. $\bar{x}$ è ottima.
 
-# Problema 4
+## Problema 4
+
+^84747c
 
 (P)
 
@@ -218,5 +220,9 @@ Cerchiamo di eliminare l'elemento problematico della base:
 	- Qui, $h=5$.
 - $B(h)=$ posizione di $h$ nella base
 	- Qui, $B(h)=2$
-- $u_{B(h)}∈ℝ^n \text{ t.c. } [u_{B(h)}]_i=\begin{cases}1 & i=B(h) \\ 0 & i≠B(h) \end{cases}$
-- $ξ=-A_B^{-1}u_{B(h)}=$
+- $u_{B(h)}∈ℝ^n \text{ t.c. } [u_{B(h)}]_i=\begin{cases}1 & i=B(h) \\ 0 & i≠B(h)\end{cases}$
+- $ξ=-A_B^{-1}u_{B(h)}=\begin{bmatrix}0 & 1 \\ -1 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 1\end{bmatrix}$
+	- È sostanzialmente la $B(h)$-esima colonna di $-A_B^{-1}$
+	- $c·ξ=-cA_B^{-1}u_{B(h)}=-\bar{y}_B·u_{B(h)}=-\bar{y}_h>0$
+	- $A_Bξ=-A_BA_B^{-1}u_{B(h)}=-u_B(h)≤0$
+		- $A_iξ=\begin{cases}-1 & \text{se }i=h \\ 0 & \text{se }i≠h\end{cases}$

@@ -155,6 +155,8 @@ $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_i·ξ≤0\quad ∀i∈I(
 >⇔
 >non esiste $ξ∈ℝ^n$ tale che $\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$
 
+[[Esempi dualità#^84747c|Esempio su come risolvere un problema con la crescita.]]
+
 ### Lemma di Farkas (1902)
 
 ^15b491
