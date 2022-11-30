@@ -226,3 +226,9 @@ Cerchiamo di eliminare l'elemento problematico della base:
 	- $c·ξ=-cA_B^{-1}u_{B(h)}=-\bar{y}_B·u_{B(h)}=-\bar{y}_h>0$
 	- $A_Bξ=-A_BA_B^{-1}u_{B(h)}=-u_B(h)≤0$
 		- $A_iξ=\begin{cases}-1 & \text{se }i=h \\ 0 & \text{se }i≠h\end{cases}$
+			- Questo vuol dire che se ci si sposta da $\bar{x}$ di un passo $λ$ nella direzione $ξ$:
+			- $\bar{x}+λξ\quad A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ=\begin{cases}A_i\bar{x}=b & i≠h \\ <A_i\bar{x}=b & i=h\end{cases}$
+			- Detto in altro modo: tutti vincoli della base rimangono attivi.
+	- Spostandoci anche all'infinito continueremo a rispettare i vincoli appartenenti alla base. Ma di quanto ci si può spostare rispettando i vincoli non appartenenti alla base?
+		- $i∈N\quad A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ\stackrel{?}{≤}b_i$
+			- Abbiamo visto 
