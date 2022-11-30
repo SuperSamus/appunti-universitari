@@ -141,6 +141,8 @@ Da qui, definiamo:
 
 ### Direzione ammissibile di crescita
 
+^ff2cae
+
 $A_i(\bar{x}+λξ)\stackrel{?}{≤}b_i$ quale condizioni vanno imposte affinché sia vero?
 
 $A_i(\bar{x}+λξ)=A_i\bar{x}+λA_i·ξ$
