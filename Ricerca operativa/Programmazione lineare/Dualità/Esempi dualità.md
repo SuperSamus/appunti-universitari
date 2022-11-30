@@ -169,7 +169,7 @@ Argh, è [[Dualità#^e880fd|degenere]]. Proviamo la base $B=\{2,3\}$.
 - $A_B^{-1}=\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}$
 
 - $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 \\ 3\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
-- $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 \\ 2\end{bmatrix}\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}3 & -1\end{bmatrix}$
+- $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 & 2\end{bmatrix}\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}3 & -1\end{bmatrix}$
 	- $\bar{y}=(0,3,-1,0,0)$
 	- $\bar{y}_3<0$, quindi non è ammissibile
 		- Non vuol dire che $\bar{x}$ non sia ottima. Dobbiamo provare le altre basi.
@@ -180,7 +180,7 @@ Proviamo la base $B=\{2,4\}$.
 - $A_B^{-1}=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}$
 
 - $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
-- $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 \\ 2\end{bmatrix}\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}1 & 1\end{bmatrix}$
+- $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 & 2\end{bmatrix}\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}1 & 1\end{bmatrix}$
 	- $\bar{y}=(0,1,0,1,0)$
 	- Questa è ammissibile. $\bar{x}$ è ottima.
 
@@ -204,5 +204,7 @@ Vincoli:
 Stavolta prendiamo il vertice da una base. Scegliamo $B=\{4,5\}$:
 - $N=\{1,2,3\}$
 - $A_B=\begin{bmatrix}-1 & 1 \\ -1 & 0\end{bmatrix}$
-- $A_B^{-1}=\begin{bmatrix}0 & -1 \\ 1 & 1\end{bmatrix}$
-- $\bar{x}=
+- $A_B^{-1}=\begin{bmatrix}0 & -1 \\ 1 & -1\end{bmatrix}$
+- $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}0 & -1 \\ 1 & -1\end{bmatrix}\begin{bmatrix}1 \\ 0\end{bmatrix}=\begin{bmatrix}0 \\ 1\end{bmatrix}$
+- $I(\bar{x})=\{4,5\}=B$, non degenere
+- $\bar{y}=cA_B^{-1}=\begin{bmatrix}2 & 1\end{bmatrix}\begin{bmatrix}0 & -1 \\ 1 & -1\end{bmatrix}=\begin{bmatrix}1 & -3\end{bmatrix}$
