@@ -97,6 +97,8 @@ Con $\bar{x}=(-4,0)$, abbiamo che $A_I\bar{x}=b_I$. Dato che la matrice è quadr
 
 ### Vertice
 
+^1cbebb
+
 Faccia costituita da un solo punto.
 
 Vertici ≡ Soluzioni di basi ammissibili

@@ -205,3 +205,11 @@ $\bar{y}·(b-A\bar{x})=∑\limits_{i=1}^m\bar{y_i}(b_i-A_i\bar{x})=0⇔\bar{y_i}
 Detto in altro modo:
 - $A_i\bar{x}<b_i⇒\bar{y_i}=0 \quad i∉I(\bar{x})$
 - $\bar{y_i}>0⇒A_i\bar{x}=b_i \quad i∈I(\bar{x})$
+
+## Basi
+
+Rivedi [[Programmazione lineare#^1cbebb|basi]].
+
+$B⊆I(\bar{x})$
+
+Una soluzione di base si dice **degenere** se È possibile che ci siano più vincoli attivi di quanti ne servano per una base.
