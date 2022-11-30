@@ -296,4 +296,4 @@ Per evitare di riusare le stesse basi.
 
 $h=\min\{i∈B:\bar{y}_i<0\}\quad k=\min\{i∈N:\bar{λ}=\bar{λ}_i\}$
 
-La dimostrazione è complicata. Sono sugli appunti del prof.
+La dimostrazione è complicata (è sugli appunti del prof).
