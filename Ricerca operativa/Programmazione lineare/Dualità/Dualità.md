@@ -165,7 +165,12 @@ $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_i·ξ≤0\quad ∀i∈I(
 >⇔
 >non esiste $ξ∈ℝ^n$ tale che $\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$
 
-[[Esempi dualità#^84747c|Esempio su come risolvere un problema con la crescita.]]
+Quindi, per [Esempi dualità#^84747c|risolvere un problema]:
+
+- $\bar{λ}_i=+∞$ se $A_iξ≤0$
+- $\bar{λ}_i=\cfrac{b_i-A_i\bar{x}}{A_iξ}$ se $A_iξ>0$:
+			- $A_i\bar{x}+λA_iξ≤b_i⇔λ≤\cfrac{b_i-A_i\bar{x}}{A_iξ}$ (che è $>0$)
+- $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$ è il massimo spostamento "ammissibile"
 
 ### Lemma di Farkas (1902)
 
