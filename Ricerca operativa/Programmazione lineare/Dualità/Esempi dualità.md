@@ -240,9 +240,14 @@ Finalmente: $\bar{x}+\bar{λ}\bar{ξ}=\begin{bmatrix}0 \\ 1\end{bmatrix}+1\begin
 Agli indici attivi si aggiungono tutti quelli di spostamento minimo:
 $k∈N \text{ t.c }\bar{λ}=λ_k$ **indice entrante**
 
-$B_2=B∖\{h\}∪\{k\}$ è una base di cui $\bar{x}+\bar{λ}\bar{ξ}$ è soluzione primale di base ammissibile (→vertice)
-
-Qui $B_2=\{2,4\}$ (stavolta è degenere, abbiamo escluso $3$)
+$B_{nuova}=B∖\{h\}∪\{k\}$ è una base di cui $\bar{x}+\bar{λ}\bar{ξ}$ è soluzione primale di base ammissibile (→vertice)
 
 
-Rifacciamo tutti i conti con la nuova base:
+Abbiamo il nuovo $I(\bar{x})=\{2,3,4\}$
+
+Rifacciamo tutti i conti con la nuova base $B=\{2,4\}$ (stavolta è degenere, abbiamo escluso $3$):
+- $A_B=\begin{bmatrix}0 & 1 \\ -1 & 1\end{bmatrix}$
+- $A_B^{-1}=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}$
+- $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
+- $\bar{y}=cA_B^{-1}=\begin{bmatrix}2 & 1\end{bmatrix}\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}3 & -2\end{bmatrix}$
+	- $\bar{y}=(0,3,0,-2,0)$ non ammissibile
