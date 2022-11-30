@@ -291,6 +291,8 @@ Input: $B$ base primale ammissibile
 8. $B=B∖\{h\}∪\{k\}$ (cambio di base)
 9. Ritornare a 1.
 
+Non si può eseguire l'algoritmo nella forma duale. Quello che si fa è convertirlo in forma primale. Trasformare le uguaglianze in disuguaglianze però porterà a una situazione degenere. TODO
+
 La complessità è NP. Esiste un algoritmo polinomiale, ma è estremamente complesso.
 
 L'input è una base primale ammissibile, ma cosa si fa se non ce l'abbiamo?
@@ -311,7 +313,7 @@ $\min∑\limits_iv_i$
 - $A_Jx-v≤b_J$
 - $v≤0$
 
-$B∪J$ è una base ammissibile e (\bar{x},A_J\bar{x}-b_J) la corrispondente soluzione primale.
+$B∪J$ è una base ammissibile e $(\bar{x},A_J\bar{x}-b_J)$ la corrispondente soluzione primale.
 
 Dopo l'algoritmo simplesso primale → $(x*,v*)$ soluzione ottima
 - $v*≠0⇒$ (P) non ammette soluzioni ammissibili
