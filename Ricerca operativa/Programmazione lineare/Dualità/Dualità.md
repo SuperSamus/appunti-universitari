@@ -313,7 +313,9 @@ $\min∑\limits_iv_i$
 
 $B∪J$ è una base ammissibile e (\bar{x},A_J\bar{x}-b_J) la corrispondente soluzione primale.
 
-Dopo l'algoritmo simplesso primale → $(x*,v*)
+Dopo l'algoritmo simplesso primale → $(x*,v*)$ soluzione ottima
+- $v*≠0⇒$ (P) non ammette soluzioni ammissibili
+- $v*=0⇒$ $x^k$ è soluzione ammissibile per (P)
 
 ### Regola anticiclo di Bland
 
