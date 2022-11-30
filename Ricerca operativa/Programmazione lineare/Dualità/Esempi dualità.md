@@ -251,3 +251,7 @@ Rifacciamo tutti i conti con la nuova base $B=\{2,4\}$ (stavolta è degenere, ab
 - $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
 - $\bar{y}=cA_B^{-1}=\begin{bmatrix}2 & 1\end{bmatrix}\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}3 & -2\end{bmatrix}$
 	- $\bar{y}=(0,3,0,-2,0)$ non ammissibile
+
+Se proviamo a crescere, otterremo (salto i passaggi) $ξ=\begin{bmatrix}1 \\ 0\end{bmatrix}$, che non è [[Dualità#^ff2cae|ammissibile]] ($A_3ξ=\begin{bmatrix}1 & 1\end{bmatrix}\begin{bmatrix}1 \\ 0\end{bmatrix}=1>0$).
+
+Però, si potrebbe dire che $\bar{λ}=0$, che ci ridà lo stesso $\bar{x}$. È ora di provare una nuova base (**cambiamento di base degenere**), 
