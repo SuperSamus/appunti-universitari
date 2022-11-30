@@ -125,7 +125,9 @@ In altre parole, l'angolo tra i vettori $c$ e $ξ$ è minore di 90°.
 ---
 
 >[!important]
-Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}$ è una soluzione ottima per (P) ⇔ $\bar{x}$ non ammette direzioni ammissibili di crescita.
+Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}$ è una soluzione ottima per (P)
+⇔
+$\bar{x}$ non ammette direzioni ammissibili di crescita.
 
 Dimostrare ⇒ è ovvio.
 
@@ -135,9 +137,13 @@ $ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=c·x-c·\bar{x}>0$
 
 Per $λ∈[0,1]$, affermo che $\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$ (cioè la combinazione convessa tra $x$ e $\bar{x}$) è ammissibile.
 
-$A_i(\bar{x}+λξ)\stackrel{?}{≤}b_i$
-\=
-$A_i\bar{x}+λA_i·ξ$
+Da qui, definiamo:
+
+### Direzione ammissibile di crescita
+
+$A_i(\bar{x}+λξ)\stackrel{?}{≤}b_i$ quale condizioni vanno imposte affinché sia vero?
+
+$A_i(\bar{x}+λξ)=A_i\bar{x}+λA_i·ξ$
 
 Possibili casi, vincolo per vincolo:
 - $i∈I(\bar{x})$ ovvero $A_i\bar{x}=b_i$
@@ -147,6 +153,8 @@ Possibili casi, vincolo per vincolo:
 		- Se $A_i·ξ≤0$, ok!
 		- Se $A_i·ξ>0$, ok ↔ $λ≤\cfrac{(b_i-A_i\bar{x})}{A_i·ξ}$ (che è $>0$)
 		- In entrambi i casi, siamo a posto ($λ$ si può scegliere).
+
+Quindi, i vincoli attivi sono gli unici "problematici".
 
 $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_i·ξ≤0\quad ∀i∈I(\bar{x})$
 
