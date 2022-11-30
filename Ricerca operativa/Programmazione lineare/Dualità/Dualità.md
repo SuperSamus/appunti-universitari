@@ -284,3 +284,12 @@ Input: $B$ base primale ammissibile
 2. Se $\bar{y}_B≥0$, STOP → $\bar{x}$ ottima per (P), $\bar{y}$ ottima per (D)
 3. Scegliere $h∈B \text{ t.c. } \bar{y}_h>0$ (indice uscente)
 4. $\bar{ξ}=-A_B^{-1}u_{B(h)}$ (direzione di crescita)
+5. $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$ (passo) con $\bar{λ}=\begin{cases}\bar{λ}_i=+∞ & \text{se } A_iξ≤0 \\ \bar{λ}_i=\cfrac{b_i-A_i\bar{x}}{A_iξ} & \text{se }A_iξ>0\end{cases}$
+6. Se $\bar{λ}=+∞$ (ovvero $A_iξ≤0$), STOP → $\begin{matrix}\text{(P) superiormente illimitato} \\ \text{(D) vuoto}\end{matrix}$
+7. Scegliere $k∈N \text{ t.c } \bar{λ}=\bar{λ}_k$ (indice entrante)
+8. $B=B∖\{h\}∪\{k\}$ (cambio di base)
+9. Ritornare a 1.
+
+Regola anticiclo di Bland
+
+$
