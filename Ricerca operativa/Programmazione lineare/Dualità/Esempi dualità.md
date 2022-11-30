@@ -80,7 +80,7 @@ Usiamo il [[Dualità#^4e2ee6|teorema degli scarti complementari]].
 - $I(\bar{x})=\{1,2\}$
 - $\bar{y_3}=\bar{y_4}=\bar{y_5}=0$
 - $y_1,y_2≥0$
-	- $\bar{y_1}=\bar{y_2}=1$
+	- $\bar{y}_1=\bar{y}_2=1$
 	- $\bar{y}=(1,1,0,0,0)$
 
 Urrà! $\bar{x}$ è ottima.
@@ -94,7 +94,7 @@ Cosa succede se cambiano la funzione obiettivo in $c=\{α,β\}$? Per quali valor
 - $y_1.y_2,y_3,y_4,y_5≥0$
 
 Quindi:
-- $\bar{y_2}=α$
+- $\bar{y}_2=α$
 - $\bar{y_1}+\bar{y_2}=β→\bar{y_1}=β-α$
 
 Allora $\bar{y}=\{β-α,α,0,0,0\}$, con $β≥α≥0$.
@@ -172,4 +172,14 @@ Argh, è [[Dualità#^e880fd|degenere]]. Proviamo la base $B=\{2,3\}$.
 - $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 \\ 2\end{bmatrix}\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}3 & -1\end{bmatrix}$
 	- $\bar{y}=(0,3,-1,0,0)$
 	- $\bar{y}_3<0$, quindi non è ammissibile
-		- Non vuol dire che $\bar{x}$
+		- Non vuol dire che $\bar{x}$ non sia ottima. Dobbiamo provare le altre basi.
+
+Proviamo la base $B=\{2,4\}$.
+- $N=\{1,3,5\}$
+- $A_B=\begin{bmatrix}0 & 1 \\ -1 & 1\end{bmatrix}$
+- $A_B^{-1}=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}$
+
+- $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
+- $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 \\ 2\end{bmatrix}\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}1 & 1\end{bmatrix}$
+	- $\bar{y}=(0,1,0,1,0)$
+	- Questa è ammissibile. $\bar{x}$ è ottima.

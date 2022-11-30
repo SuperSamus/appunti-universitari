@@ -201,11 +201,11 @@ $c\bar{x}=\bar{y}b↔(\bar{y}A)·\bar{x}=\bar{y}·b↔\bar{y}·b-\bar{y}A\bar{x}
 
 ^4e2ee6
 
-$\bar{y}·(b-A\bar{x})=∑\limits_{i=1}^m\bar{y_i}(b_i-A_i\bar{x})=0⇔\bar{y_i}(b_i-A_i\bar{x})=0\quad i=1…m$
+$\bar{y}·(b-A\bar{x})=∑\limits_{i=1}^m\bar{y}_i(b_i-A_i\bar{x})=0⇔\bar{y}_i(b_i-A_i\bar{x})=0\quad i=1…m$
 
 Detto in altro modo:
-- $A_i\bar{x}<b_i⇒\bar{y_i}=0 \quad i∉I(\bar{x})$
-- $\bar{y_i}>0⇒A_i\bar{x}=b_i \quad i∈I(\bar{x})$
+- $A_i\bar{x}<b_i⇒\bar{y}_i=0 \quad i∉I(\bar{x})$
+- $\bar{y}_i>0⇒A_i\bar{x}=b_i \quad i∈I(\bar{x})$
 
 ## Basi
 
@@ -222,15 +222,15 @@ $B⊆I(\bar{x})$
 
 **Ammissibilità**: $A_N\bar{x}≤b_N$ con $N=\{1,…,n\}∖B$
 
-### **Soluzione duale di base**: $\bar{y}=(\bar{y_B},\bar{y_N})$, con:
-- $\bar{y_N}=0$
+### **Soluzione duale di base**: $\bar{y}=(\bar{y}_B,\bar{y}_N)$, con:
+- $\bar{y}_N=0$
 	- Per soddisfare gli [[Dualità#^4e2ee6|scarti complementari]]
-- $\bar{y_B}=cA_B^{-1}$
+- $\bar{y}_B=cA_B^{-1}$
 	- Vogliamo che $\bar{y}A=c$
-	- In questo modo $(\bar{y_B},0)\begin{bmatrix}A_B \\ A_N\end{bmatrix}=\bar{y_B}A_B=cA_B^{-1}A_B=c$
+	- In questo modo $(\bar{y}_B,0)\begin{bmatrix}A_B \\ A_N\end{bmatrix}=\bar{y}_BA_B=cA_B^{-1}A_B=c$
 
-**Ammissibilità**: $\bar{y_B}=cA_B^{-1}≥0$
-**Degenere**: $∃i∈B \text{ t.c. }\bar{y_i}=0$
+**Ammissibilità**: $\bar{y}_B=cA_B^{-1}≥0$
+**Degenere**: $∃i∈B \text{ t.c. }\bar{y}_i=0$
 
 >[!important]
 Sia $B$ una base. Allora la coppia di soluzione di base $\bar{x}=A_B^{-1}b_B$ e $\bar{y}=(cA_B^{-1},0)$ soddisfano la [[Dualità#^4e2ee6|condizione degli scarti complementari]].
@@ -255,4 +255,4 @@ Solo perché la soluzione sembra ottimale, non vuole dire che è ammissibile!
 >esiste una base B assoluta a $\bar{y}$ tale che la corrispondente soluzione di base primale $\bar{x}=A_B^{-1}b_B$ è ammissibile.
 
 >[!info]
-Se la soluzione è non degenere, esiste una soluzione sola. Se invece è degenere, bisogna verificare tutte le possibile soluzioni (qualcuna potrebbe anche non essere ammissibile).
+Se la soluzione è non degenere, esiste una soluzione sola. Se invece è degenere, qualche soluzione potrebbe non assere ammissibile, e dobbiamo provarne un'altra.
