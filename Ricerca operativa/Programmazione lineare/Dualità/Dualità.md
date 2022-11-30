@@ -293,10 +293,23 @@ Input: $B$ base primale ammissibile
 
 La complessità è NP. Esiste un algoritmo polinomiale, ma è estremamente complesso.
 
-L'input è una base primale ammissibile, ma cosa si fa se n
+L'input è una base primale ammissibile, ma cosa si fa se non ce l'abbiamo?
 
 ### Base di partenza
 
+$B$ base$:\bar{x}=A_B^{-1}b_B$
+
+$H=\{i∈N:A_i\bar{x}≤b_i\}\quad J=\{i∈N:A_i\bar{x}>b_i\}$
+
+$\bar{x}$ ammissibile $⇔J=∅$
+
+$v∈ℝ^{|J|}$ (una nuova variabile per ogni vincolo violato da $\bar{x}$)
+
+$\min∑\limits_iv_i$
+- $A_B≤b_B$
+- $A_H≤b_H$
+- $A_Jx-v≤b_J$
+- $v≤0$
 
 ### Regola anticiclo di Bland
 
