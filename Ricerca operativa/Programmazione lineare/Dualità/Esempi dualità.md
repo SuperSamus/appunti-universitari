@@ -229,10 +229,8 @@ Cerchiamo di eliminare l'elemento problematico della base:
 			- Questo vuol dire che se ci si sposta da $\bar{x}$ di un passo $λ$ nella direzione $ξ$:
 			- $\bar{x}+λξ\quad A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ=\begin{cases}A_i\bar{x}=b & i≠h \\ <A_i\bar{x}=b & i=h\end{cases}$
 			- Detto in altro modo: tutti vincoli della base rimangono attivi.
-	- Spostandoci anche all'infinito continueremo a rispettare i vincoli appartenenti alla base. Ma di quanto ci si può spostare al massimo $\bar{λ}_i$ rispettando i vincoli non appartenenti alla base? Sfruttiamo quello che [[Dualità#^ff2cae|abbiamo visto]]: troviamo le condizioni che soddisfano $i∈N\quad A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ\stackrel{?}{≤}b_i$
-		- $\bar{λ}_i=+∞$ se $A_iξ≤0$
-			- $A_i(\bar{x}+λξ)≤A_i\bar{x}≤b_i$
-		- $\bar{λ}_i=\cfrac{b_i-A_i\bar{x}}{A_iξ}$ se $A_iξ>0$:
-			- $A_i\bar{x}+λA_iξ≤b_i⇔λ≤\cfrac{b_i-A_i\bar{x}}{A_iξ}$ (che è $>0$)
-		- $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$ è il massimo spostamento "ammissibile"
-
+	- Spostandoci (anche all'infinito) continueremo a rispettare i vincoli appartenenti alla base. Ma di quanto ci si può spostare al massimo $\bar{λ}_i$ rispettando i vincoli non appartenenti alla base? Sfruttiamo quello che [[Dualità#^ff2cae|abbiamo visto]].
+		- $\bar{λ}_1=+∞←\begin{bmatrix}1 & -1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}=0≤0$
+		- $\bar{λ}_2=\cfrac{2-\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}}{\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}}=1$
+		- $\bar{λ}_3=\cfrac{3-\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}}{\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}}=1$
+		- $\bar{λ}=1$
