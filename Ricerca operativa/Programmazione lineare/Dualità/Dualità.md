@@ -210,6 +210,16 @@ Detto in altro modo:
 
 Rivedi [[Programmazione lineare#^1cbebb|basi]].
 
+**Soluzione primale di base**: $\bar{x}=A_B^{-1}b_B$
+
 $B⊆I(\bar{x})$
 
-Una soluzione di base si dice **degenere** se È possibile che ci siano più vincoli attivi di quanti ne servano per una base.
+È possibile che ci siano più vincoli attivi di quanti ne servano per una base. Una soluzione di base si dice **degenere** se $∃i∉B \text{ t.c. }A_i\bar{x}=b_i\quad (i∈I(\bar{x}))$
+
+Ammissibilità: $A_N\bar{x}≤b_N$ con $N=\{1,…,n\}∖B$
+
+**Soluzione duale di base**: $\bar{y}=(\bar{y_B},\bar{y_N})$, con $\bar{y_N}=0$ (per soddisfare gli [[Dualità#^4e2ee6|scarti complementari]])
+
+$\bar{y}A=c$
+
+$(\bar{y_B},0)\begin{bma}
