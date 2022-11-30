@@ -280,6 +280,7 @@ Se la soluzione è non degenere, esiste una soluzione sola. Se invece è degener
 ^7f28a7
 
 Input: $B$ base primale ammissibile
+
 1. $\bar{x}=A_B^{-1}b_B\quad\bar{y}=(cA_B^{-1},0)$
 2. Se $\bar{y}_B≥0$, STOP → $\bar{x}$ ottima per (P), $\bar{y}$ ottima per (D)
 3. Scegliere $h∈B \text{ t.c. } \bar{y}_h>0$ (indice uscente)
@@ -289,6 +290,13 @@ Input: $B$ base primale ammissibile
 7. Scegliere $k∈N \text{ t.c } \bar{λ}=\bar{λ}_k$ (indice entrante)
 8. $B=B∖\{h\}∪\{k\}$ (cambio di base)
 9. Ritornare a 1.
+
+La complessità è NP. Esiste un algoritmo polinomiale, ma è estremamente complesso.
+
+L'input è una base primale ammissibile, ma cosa si fa se n
+
+### Base di partenza
+
 
 ### Regola anticiclo di Bland
 
