@@ -311,6 +311,10 @@ $\min∑\limits_iv_i$
 - $A_Jx-v≤b_J$
 - $v≤0$
 
+$B∪J$ è una base ammissibile e (\bar{x},A_J\bar{x}-b_J) la corrispondente soluzione primale.
+
+Dopo l'algoritmo simplesso primale → $(x*,v*)
+
 ### Regola anticiclo di Bland
 
 Per evitare di riusare le stesse basi.
