@@ -62,7 +62,7 @@ Vincoli:
 
 - $c=(1,2)$
 - $A=\begin{bmatrix}0 & 1 \\ 1 & 1 \\ 1 & 0 \\ 1 & -1 \\ 1 & -2\end{bmatrix}$
-- $b=\begin{bmatrix}4 \\ 2 \\0 \\ -2 \\ -2 \end{bmatrix}$
+- $b=\begin{bmatrix}4 \\ 2 \\ 0 \\ -2 \\ -2 \end{bmatrix}$
 
 $\bar{x}=(-2,4)$ è ottima?
 
@@ -156,7 +156,20 @@ Vincoli:
 - $-x_1≤0$
 
 - $c=(-1,2)$
-- $A=\begin{bmatrix}1 & -1 \\ 0 & 1 \\ 1 & 1 \\ -1 & 1 \\ -1 & -2\end{bmatrix}$
-- $b=\begin{bmatrix}4 \\ 2 \\0 \\ -2 \\ -2 \end{bmatrix}$
+- $A=\begin{bmatrix}1 & -1 \\ 0 & 1 \\ 1 & 1 \\ -1 & 1 \\ -1 & 0\end{bmatrix}$
+- $b=\begin{bmatrix}1 \\ 2 \\ 3 \\ 1 \\ 0 \end{bmatrix}$
 
-$\bar{x}=(-2,4)$ è ottima?
+$\bar{x}=(1,2)$ è ottima?
+
+$I(\bar{x})=\{2,3,4\}$
+
+Argh, è [[Dualità#^e880fd|degenere]]. Proviamo la base $B=\{2,3\}$.
+- $N=\{1,4,5\}$
+- $A_B=\begin{bmatrix}0 & 1 \\ 1 & 1\end{bmatrix}$
+- $A_B^{-1}=\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}$
+
+- $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 \\ 3\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
+- $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 \\ 2\end{bmatrix}\begin{bmatrix}-1 & 1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}3 & -1\end{bmatrix}$
+	- $\bar{y}=(0,3,-1,0,0)$
+	- $\bar{y}_3<0$, quindi non è ammissibile
+		- Non vuol dire che $\bar{x}$

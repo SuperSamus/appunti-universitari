@@ -209,6 +209,8 @@ Detto in altro modo:
 
 ## Basi
 
+^e880fd
+
 Rivedi [[Programmazione lineare#^1cbebb|basi]].
 
 $B⊆I(\bar{x})$
