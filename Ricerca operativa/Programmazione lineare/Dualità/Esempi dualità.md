@@ -211,3 +211,12 @@ Stavolta prendiamo il vertice da una base. Scegliamo $B=\{4,5\}$:
 	- $\bar{y}=(0,0,0,1,-3)$ non ammissibile
 
 Esisterà una direzione di [[Dualità#^247330|crescita]].
+
+Cerchiamo di eliminare l'elemento problematico della base:
+
+- $h∈B \text{ t.c. } \bar{y}_h<0$ indice uscente
+	- Qui, $h=5$.
+- $B(h)=$ posizione di $h$ nella base
+	- Qui, $B(h)=2$
+- $u_{B(h)}∈ℝ^n \text{ t.c. } [u_{B(h)}]_i=\begin{cases}1 & i=B(h) \\ 0 & i≠B(h) \end{cases}$
+- $ξ=-A_B^{-1}u_{B(h)}=$

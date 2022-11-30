@@ -150,7 +150,10 @@ Possibili casi, vincolo per vincolo:
 
 $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_i·ξ≤0\quad ∀i∈I(\bar{x})$
 
-$\bar{x}$ non ammette direzioni ammissibili di crescita ⇔ non esiste $ξ∈ℝ^n$ tale che $\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$
+>[!important]
+>$\bar{x}$ non ammette direzioni ammissibili di crescita
+>⇔
+>non esiste $ξ∈ℝ^n$ tale che $\begin{cases}A_{I(\bar{x})}ξ≤0 \\ c·ξ>0 \end{cases}$
 
 ### Lemma di Farkas (1902)
 
