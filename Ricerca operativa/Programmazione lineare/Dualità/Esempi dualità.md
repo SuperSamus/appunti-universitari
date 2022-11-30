@@ -146,7 +146,7 @@ Il sistema descrive il [[Programmazione lineare#^15fa21|cono]] dove può crescer
 
 (P)
 
-Funzione obiettivo: $\max -x_1+x_2$
+Funzione obiettivo: $\max -x_1+2x_2$
 
 Vincoli:
 - $x_1-x_2≤1$
@@ -183,3 +183,26 @@ Proviamo la base $B=\{2,4\}$.
 - $\bar{y}=cA_B^{-1}=\begin{bmatrix}-1 \\ 2\end{bmatrix}\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}1 & 1\end{bmatrix}$
 	- $\bar{y}=(0,1,0,1,0)$
 	- Questa è ammissibile. $\bar{x}$ è ottima.
+
+# Problema 4
+
+(P)
+
+Funzione obiettivo: $\max 2x_1+x_2$
+
+Vincoli:
+- $x_1-x_2≤1$
+- $x_2≤2$
+- $x_1+x_2≤3$
+- $-x_1+x_2≤1$
+- $-x_1≤0$
+
+- $c=(2,1)$
+- $A=\begin{bmatrix}1 & -1 \\ 0 & 1 \\ 1 & 1 \\ -1 & 1 \\ -1 & 0\end{bmatrix}$
+- $b=\begin{bmatrix}1 \\ 2 \\ 3 \\ 1 \\ 0 \end{bmatrix}$
+
+Stavolta prendiamo il vertice da una base. Scegliamo $B=\{4,5\}$:
+- $N=\{1,2,3\}$
+- $A_B=\begin{bmatrix}-1 & 1 \\ -1 & 0\end{bmatrix}$
+- $A_B^{-1}=\begin{bmatrix}0 & -1 \\ 1 & 1\end{bmatrix}$
+- $\bar{x}=
