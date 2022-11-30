@@ -214,9 +214,9 @@ Stavolta prendiamo il vertice da una base. Scegliamo $B=\{4,5\}$:
 
 Esisterà una direzione di [[Dualità#^247330|crescita]].
 
-Cerchiamo di eliminare l'elemento problematico della base:
+Cerchiamo di rimuovere l'elemento problematico della base:
 
-- $h∈B \text{ t.c. } \bar{y}_h<0$ indice uscente
+- $h∈B \text{ t.c. } \bar{y}_h<0$ **indice uscente**
 	- Qui, $h=5$.
 - $B(h)=$ posizione di $h$ nella base
 	- Qui, $B(h)=2$
@@ -229,8 +229,20 @@ Cerchiamo di eliminare l'elemento problematico della base:
 			- Questo vuol dire che se ci si sposta da $\bar{x}$ di un passo $λ$ nella direzione $ξ$:
 			- $\bar{x}+λξ\quad A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ=\begin{cases}A_i\bar{x}=b & i≠h \\ <A_i\bar{x}=b & i=h\end{cases}$
 			- Detto in altro modo: tutti vincoli della base rimangono attivi.
-	- Spostandoci (anche all'infinito) continueremo a rispettare i vincoli appartenenti alla base. Ma di quanto ci si può spostare al massimo $\bar{λ}_i$ rispettando i vincoli non appartenenti alla base? Sfruttiamo quello che [[Dualità#^ff2cae|abbiamo visto]].
-		- $\bar{λ}_1=+∞←\begin{bmatrix}1 & -1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}=0≤0$
-		- $\bar{λ}_2=\cfrac{2-\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}}{\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}}=1$
-		- $\bar{λ}_3=\cfrac{3-\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}}{\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}}=1$
-		- $\bar{λ}=1$
+- Spostandoci (anche all'infinito) continueremo a rispettare i vincoli appartenenti alla base. Ma di quanto ci si può spostare al massimo $\bar{λ}_i$ rispettando i vincoli non appartenenti alla base? Sfruttiamo quello che [[Dualità#^ff2cae|abbiamo visto]].
+	- $\bar{λ}_1=+∞←\begin{bmatrix}1 & -1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}=0≤0$
+	- $\bar{λ}_2=\cfrac{2-\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}}{\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}}=1$
+	- $\bar{λ}_3=\cfrac{3-\begin{bmatrix}1 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}}{\begin{bmatrix}1 & 1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}}=1$
+	- $\bar{λ}=\min\{+∞,1,1\}=1$
+
+Finalmente: $\bar{x}+\bar{λ}\bar{ξ}=\begin{bmatrix}0 \\ 1\end{bmatrix}+1\begin{bmatrix}1 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
+
+Agli indici attivi si aggiungono tutti quelli di spostamento minimo:
+$k∈N \text{ t.c }\bar{λ}=λ_k$ **indice entrante**
+
+$B_2=B∖\{h\}∪\{k\}$ è una base di cui $\bar{x}+\bar{λ}\bar{ξ}$ è soluzione primale di base ammissibile (→vertice)
+
+Qui $B_2=\{2,4\}$ (stavolta è degenere, abbiamo escluso $3$)
+
+
+Rifacciamo tutti i conti con la nuova base:
