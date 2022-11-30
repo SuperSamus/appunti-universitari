@@ -170,8 +170,6 @@ Di quanto ci si può spostare al massimo $\bar{λ}$?
 - $\bar{λ}_i=\cfrac{b_i-A_i\bar{x}}{A_iξ}$ se $A_iξ>0$:
 - $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$
 
-[[Esempi dualità#^84747c|Esempio su come risolvere un problema]].
-
 ### Lemma di Farkas (1902)
 
 ^15b491
@@ -276,3 +274,13 @@ Solo perché la soluzione sembra ottimale, non vuole dire che è ammissibile!
 
 >[!info]
 Se la soluzione è non degenere, esiste una soluzione sola. Se invece è degenere, qualche soluzione potrebbe non assere ammissibile, e dobbiamo provarne un'altra.
+
+## Algoritmo del simplesso primale
+
+^7f28a7
+
+Input: $B$ base primale ammissibile
+1. $\bar{x}=A_B^{-1}b_B\quad\bar{y}=(cA_B^{-1},0)$
+2. Se $\bar{y}_B≥0$, STOP → $\bar{x}$ ottima per (P), $\bar{y}$ ottima per (D)
+3. Scegliere $h∈B \text{ t.c. } \bar{y}_h>0$ (indice uscente)
+4. $\bar{ξ}=-A_B^{-1}u_{B(h)}$ (direzione di crescita)
