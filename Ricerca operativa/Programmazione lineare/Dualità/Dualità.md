@@ -290,6 +290,10 @@ Input: $B$ base primale ammissibile
 8. $B=B∖\{h\}∪\{k\}$ (cambio di base)
 9. Ritornare a 1.
 
-Regola anticiclo di Bland
+### Regola anticiclo di Bland
 
-$
+Per evitare di riusare le stesse basi.
+
+$h=\min\{i∈B:\bar{y}_i<0\}\quad k=\min\{i∈N:\bar{λ}=\bar{λ}_i\}$
+
+La dimostrazione è complicata. Sono sugli appunti del prof.
