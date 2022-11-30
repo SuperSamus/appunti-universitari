@@ -194,6 +194,7 @@ $c\bar{x}=\bar{y}b↔(\bar{y}A)·\bar{x}=\bar{y}·b↔\bar{y}·b-\bar{y}A\bar{x}
 
 >[!important]
 >#### Teorema degli scarti complementari
+>Siano $\bar{x}$ una soluzione ammissibile per (P), $\bar{y}$ una soluzione ammissibile per (D):
 >$$
 >\begin{matrix}\bar{x}\text{ è una soluzione ottima per (P)} \\ \bar{y}\text{ è una soluzione ottima per (D)}\end{matrix}⇔\bar{y}·(b-A\bar{x})=0
 >$$
@@ -232,4 +233,9 @@ $B⊆I(\bar{x})$
 >[!important]
 Sia $B$ una base. Allora la coppia di soluzione di base $\bar{x}=A_B^{-1}b_B$ e $\bar{y}=(cA_B^{-1},0)$ soddisfano la [[Dualità#^4e2ee6|condizione degli scarti complementari]].
 
-$(cA_B^{-1},0)·\begin{bmatrix}b_B-A_B\bar{x} \\ b_N-A_N\bar{x}\end{bmatrix}=c
+Dimostrazione: $(cA_B^{-1},0)·\begin{bmatrix}b_B-A_B\bar{x} \\ b_N-A_N\bar{x}\end{bmatrix}=cA_B^{-1}(b_B-A_B\bar{x})=cA_B^{-1}b_B-cA_B^{-1}A_B\bar{x}=c\bar{x}-c\bar{x}=0$
+
+>[!warning]
+Solo perché la soluzione sembra ottimale, non vuole dire che è ammissibile!
+
+Sia $\bar{x}∈ℝ^n$ una soluzione primale di base. Allora $\bar{x}$ è una soluzione ottima di (P) ⇔ esiste una base B assoluta a $\bar{x}$ tale che la corrispondente soluzione di base duale $\bar{y}=(cA_B^{-1},0)$ è ammissibile.
