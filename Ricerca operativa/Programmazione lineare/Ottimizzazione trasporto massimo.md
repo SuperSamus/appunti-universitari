@@ -15,7 +15,7 @@ Dati:
 - $t=7$ destinazione
 - $b_i = \begin{cases} -V &\text{se } i=s \\ V &\text{se } i=t \\ 0 &\text{altrimenti} \end{cases}$
 
-Funzione obiettivo max: $V$
+Funzione obiettivo: $\max V$
 
 Proviamo una soluzione ammissibile (negli archi c'è scritto $x_{ij}/u_{ij}$):
 

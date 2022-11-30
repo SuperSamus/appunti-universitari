@@ -14,7 +14,7 @@ Possiamo quindi dire che abbiamo:
 - $b=\begin{bmatrix} 120 \\ 75 \\ 95 \end{bmatrix}$
 - $c=\begin{bmatrix} 15 \\ 3 \end{bmatrix}$
 
-Funzione obiettivo min: $120y_1+75y_2+95y_3$ ($y·b$)
+Funzione obiettivo: $\min 120y_1+75y_2+95y_3$ ($y·b$)
 
 Vincoli ($A^Ty≥c↔yA≥c$):
 - $4y_1+2y_2+3y_3≥15$
@@ -32,7 +32,7 @@ Vediamo un altro problema. Siamo un venditore di pillole, e vogliamo convincere 
 - $x_1=$ prezzo di 1 pillola da 1 gr di proteine
 - $x_2=$ prezzo di 1 pillola da 1 gr di vitamine
 
-Funzione obiettivo max: $15x_1+3x_2$ (conosciamo il fabbisogno) ($c·x$)
+Funzione obiettivo: $\max 15x_1+3x_2$ (conosciamo il fabbisogno) ($c·x$)
 
 Vincoli (il prezzo deve essere conveniente) ($Ax≤b$):
 - $4x_1+2x_2≤120$

@@ -14,4 +14,4 @@ Vincoli:
 - Ogni magazzino sceglie al massimo una capacità: $∑\limits_{h=1}^3 k_{hj} ≤ 1   j=1…m$
 - Ogni magazzino ha abbastanza capacità per tutti i negozi: $∑\limits_{h=1}^3 u_hk_{hj} ≥ ∑_{i=1}^n d_is_{ij}   j=1…m$
 
-Funzione obiettivo min: $∑\limits_{j=1}^m∑\limits_{h=1}^3 c_{hj}k_{hj}$
+Funzione obiettivo: $\min ∑\limits_{j=1}^m∑\limits_{h=1}^3 c_{hj}k_{hj}$

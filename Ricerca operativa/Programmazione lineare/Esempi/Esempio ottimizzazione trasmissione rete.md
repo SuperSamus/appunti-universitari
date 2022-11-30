@@ -16,4 +16,4 @@ Vincoli:
 - Vincoli di capacità: $x_{ij}≤y_{ij}u_{ij} \quad (i,j)∈A$
 - Conservazione del flusso: $∑\limits_{j∈BN(i)} x_{ji} - ∑\limits_{j∈FN(i)} x_{ij} = \begin{cases} -p &\text{se } i=s \\ p &\text{se } i=t \\ 0 &\text{altrimenti} \end{cases} \quad i ∈ N$
 
-Funzione obiettivo min: $∑\limits_{(i,j)∈A}y_{ij}c_{ij}$
+Funzione obiettivo: $\min ∑\limits_{(i,j)∈A}y_{ij}c_{ij}$

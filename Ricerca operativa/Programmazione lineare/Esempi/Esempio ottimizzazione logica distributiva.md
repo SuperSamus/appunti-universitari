@@ -12,7 +12,7 @@ Vincoli:
 	- Inoltre, se il deposito non viene usato, non ha capacità.
 - Vincoli di semiassegnamento: $∑\limits_{j=1}^m x_{ij}=1 \quad i=1…n$
 
-Funzione obiettivo min: $∑\limits_{j=1}^m (f_jy_j + ∑\limits_{i=1}^n c_{ij}b_ix_{ij})$
+Funzione obiettivo: $\min ∑\limits_{j=1}^m (f_jy_j + ∑\limits_{i=1}^n c_{ij}b_ix_{ij})$
 
 ## Variante
 
@@ -28,4 +28,4 @@ Vincoli:
 - Vincoli di capacità: $∑\limits_{i=1}^n x_{ij} ≤ u_jy_j \quad j=1…m$
 - Vincoli di domanda: $∑\limits_{j=1}^m x_{ij}=b_i \quad i=1…n$
 
-Funzione obiettivo min: $∑\limits_{j=1}^m (f_jy_j + ∑\limits_{i=1}^n c_{ij}s_{ij})$
+Funzione obiettivo: $\min ∑\limits_{j=1}^m (f_jy_j + ∑\limits_{i=1}^n c_{ij}s_{ij})$

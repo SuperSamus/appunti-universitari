@@ -34,4 +34,4 @@ Vincoli:
 	- Stella entrante: $BN(i)=\{j ∈ N : (j,i) ∈ A\}$
 	- Stella uscente: $FN(i)=\{j ∈ N : (i,j) ∈ A\}$
 
-Funzione obiettivo min: $∑\limits_{i,j ∈ A} c_{ij}x_{ij}$
+Funzione obiettivo: $\min ∑\limits_{i,j ∈ A} c_{ij}x_{ij}$

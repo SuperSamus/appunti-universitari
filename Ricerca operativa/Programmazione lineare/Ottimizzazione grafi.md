@@ -22,7 +22,7 @@ Vincoli:
 Da trovare:
 - $x_{ij}=\begin{cases} 1 &\text{se si passa per l'arco } (i,j)∈A \\ 0 &\text{altrimenti} \end{cases}$
 
-Funzione obiettivo min: $∑\limits_{(i,j)∈A}x_{ij}c_{ij}$
+Funzione obiettivo: $\min ∑\limits_{(i,j)∈A}x_{ij}c_{ij}$
 
 ### Problema non intero
 

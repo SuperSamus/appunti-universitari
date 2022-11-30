@@ -10,4 +10,4 @@ Vincoli:
 - Ogni quartiere sceglie un presidio: $∑\limits_{j=1}^m s_{ij}=1 \quad i=1…n$
 - Vincolo di equilibrio: $∑\limits_{i=1}^n a_is_{ij} \geq \frac{1}{2}∑\limits_{i=1}^n a_is_{ik} \quad j=1…m \quad k=1...m$
 
-Funzione obiettivo min: $∑\limits_{i=1}^n∑\limits_{j=1}^m c_{ij}s_{ij}$
+Funzione obiettivo: $\min ∑\limits_{i=1}^n∑\limits_{j=1}^m c_{ij}s_{ij}$

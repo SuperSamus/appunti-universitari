@@ -18,7 +18,7 @@ Vincoli:
 	- Con $=$: vincolo di partizione
 	- Con $≤$: vincolo di riempimento (obiettivo max)
 
-Funzione obiettivo min: $∑\limits_{j=1}^m c_jx_j$
+Funzione obiettivo: $\min ∑\limits_{j=1}^m c_jx_j$
 
 ### Selezione di sottoinsiemi
 
@@ -38,4 +38,4 @@ VIncoli:
 	- Con $≤$: vincolo di riempimento (obiettivo max)
 
 
-Funzione obiettivo min: $∑\limits_{j=1}^m c_jx_j$
+Funzione obiettivo: $\min ∑\limits_{j=1}^m c_jx_j$

@@ -78,7 +78,7 @@ Vincoli:
 Usiamo il [[Dualità#^4e2ee6|teorema degli scarti complementari]].
 
 - $I(\bar{x})=\{1,2\}$
-- $\bar{y_3}=\bar{y_4}=\bar{y_5}=0$
+- $\bar{y}_3=\bar{y}_4=\bar{y}_5=0$
 - $y_1,y_2≥0$
 	- $\bar{y}_1=\bar{y}_2=1$
 	- $\bar{y}=(1,1,0,0,0)$
@@ -95,7 +95,7 @@ Cosa succede se cambiano la funzione obiettivo in $c=\{α,β\}$? Per quali valor
 
 Quindi:
 - $\bar{y}_2=α$
-- $\bar{y_1}+\bar{y_2}=β→\bar{y_1}=β-α$
+- $\bar{y}_1+\bar{y}_2=β→\bar{y}_1=β-α$
 
 Allora $\bar{y}=\{β-α,α,0,0,0\}$, con $β≥α≥0$.
 
@@ -128,7 +128,7 @@ Vincoli:
 - $y_1.y_2,y_3,y_4,y_5≥0$
 
 - $I(\bar{x})=\{2,3,4\}$
-- $\bar{y_1}=\bar{y_5}=0$
+- $\bar{y}_1=\bar{y}_5=0$
 - $y_2,y_3,y_4≥0$
 	- $y_2+y_3+y_4=0$
 	- $y_2-y_4=1$

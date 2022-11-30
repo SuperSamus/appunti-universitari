@@ -18,7 +18,7 @@ Vincoli:
 - Vincolo di budget: $∑\limits_{i=1}^n x_ic_i ≤ E$
 - $x_i ≥ 0 \quad i=1…n$
 
-Funzione obiettivo min: $f(x_1,…,x_n)=\displaystyle\max_{i=1…n} x_i/d_i$
+Funzione obiettivo: $\min f(x_1,…,x_n)=\displaystyle\max_{i=1…n} x_i/d_i$
 
 Questa non è una funzione lineare! Non sappiamo risolverla!
 
@@ -31,7 +31,7 @@ $t ≥ \displaystyle\max_{i=1…n} x_i/d_i ⟺ t ≥ x_i/d_i \quad i=1…n$
 Nuovi vincoli:
 - Vincolo di soglia: $t ≥ x_i/d_i \quad i=1…n$
 
-Funzione obiettivo min: $t$
+Funzione obiettivo: $\min t$
 
 ## Aggiunta
 
@@ -53,4 +53,4 @@ Abbiamo un budget infinito che vogliamo minimizzare, e un limite di tempo $D$.
 Nuovo vincolo:
 - $x_i/d_i ≤ D$
 
-Nuova funzione obiettivo min: $∑\limits_{i=1}^n (x_ic_i+cy_i)$ (che rimpiazza il rispettivo vincolo)
+Nuova Funzione obiettivo: $\min ∑\limits_{i=1}^n (x_ic_i+cy_i)$ (che rimpiazza il rispettivo vincolo)

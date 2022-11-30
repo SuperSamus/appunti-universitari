@@ -16,7 +16,7 @@ Vincoli:
 
 - $∑\limits_{i=1}^n p_ix_i ≤ c$
 
-Funzione obiettivo max: $∑\limits_{i=1}^n b_ix_i$
+Funzione obiettivo: $\max ∑\limits_{i=1}^n b_ix_i$
 
 ## Ottimizzazione bin packing/impacchettamento
 
@@ -38,7 +38,7 @@ Vincoli[^3]:
 - Vincolo di semiassegnamento: $∑\limits_{j=1}^n x_{ij}=1 \quad i=1…n$
 - Vincolo di capacità: $∑\limits_{i=1}^n p_ix_{ij} ≤ c_jy_j \quad j=1…n$
 
-Funzione obiettivo min: $∑\limits_{i=1}^n y_i$
+Funzione obiettivo: $\min ∑\limits_{i=1}^n y_i$
 
 ### Esempio
 

@@ -20,7 +20,7 @@ Vincoli:
 - $x_P ≤ 400000$
 - ${x_C \over 500 * 0,6} + {x_P \over 300 * 0,5} ≤ 3000$
 
-Funzione obiettivo max: $200x_C+300x_C$
+Funzione obiettivo: $\max 200x_C+300x_C$
 
 Si poteva anche fare in un altro modo?
 
