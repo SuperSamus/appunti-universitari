@@ -210,19 +210,26 @@ Detto in altro modo:
 
 Rivedi [[Programmazione lineare#^1cbebb|basi]].
 
-**Soluzione primale di base**: $\bar{x}=A_B^{-1}b_B$
-
 $B⊆I(\bar{x})$
 
-È possibile che ci siano più vincoli attivi di quanti ne servano per una base. Una soluzione di base si dice **degenere** se $∃i∉B \text{ t.c. }A_i\bar{x}=b_i\quad (i∈I(\bar{x}))$
+### Soluzione primale di base: $\bar{x}=A_B^{-1}b_B$
 
-Ammissibilità: $A_N\bar{x}≤b_N$ con $N=\{1,…,n\}∖B$
+È possibile che ci siano più vincoli attivi di quanti ne servano per una base.
+**Degenere**: $∃i∉B \text{ t.c. }A_i\bar{x}=b_i\quad (i∈I(\bar{x}))$
 
-**Soluzione duale di base**: $\bar{y}=(\bar{y_B},\bar{y_N})$, con:
+**Ammissibilità**: $A_N\bar{x}≤b_N$ con $N=\{1,…,n\}∖B$
+
+### **Soluzione duale di base**: $\bar{y}=(\bar{y_B},\bar{y_N})$, con:
 - $\bar{y_N}=0$
 	- Per soddisfare gli [[Dualità#^4e2ee6|scarti complementari]]
 - $\bar{y_B}=cA_B^{-1}$
 	- Vogliamo che $\bar{y}A=c$
 	- In questo modo $(\bar{y_B},0)\begin{bmatrix}A_B \\ A_N\end{bmatrix}=\bar{y_B}A_B=cA_B^{-1}A_B=c$
 
-Ammissibilità: $\bar{y_B}=cA_B^{-1}≥0$
+**Ammissibilità**: $\bar{y_B}=cA_B^{-1}≥0$
+**Degenere**: $∃i∈B \text{ t.c. }\bar{y_i}=0$
+
+>[!important]
+Sia $B$ una base. Allora la coppia di soluzione di base $\bar{x}=A_B^{-1}b_B$ e $\bar{y}=(cA_B^{-1},0)$ soddisfano la [[Dualità#^4e2ee6|condizione degli scarti complementari]].
+
+$(cA_B^{-1},0)·\begin{bmatrix}b_B-A_B\bar{x} \\ b_N-A_N\bar{x}\end{bmatrix}=c
