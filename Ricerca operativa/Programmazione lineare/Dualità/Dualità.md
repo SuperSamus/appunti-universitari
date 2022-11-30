@@ -238,4 +238,19 @@ Dimostrazione: $(cA_B^{-1},0)·\begin{bmatrix}b_B-A_B\bar{x} \\ b_N-A_N\bar{x}\e
 >[!warning]
 Solo perché la soluzione sembra ottimale, non vuole dire che è ammissibile!
 
-Sia $\bar{x}∈ℝ^n$ una soluzione primale di base. Allora $\bar{x}$ è una soluzione ottima di (P) ⇔ esiste una base B assoluta a $\bar{x}$ tale che la corrispondente soluzione di base duale $\bar{y}=(cA_B^{-1},0)$ è ammissibile.
+>[!important]
+>Sia $\bar{x}∈ℝ^n$ una soluzione primale di base ammissibile. Allora:
+>
+>$\bar{x}$ è una soluzione ottima di (P)
+>⇔
+>esiste una base B assoluta a $\bar{x}$ tale che la corrispondente soluzione di base duale $\bar{y}=(cA_B^{-1},0)$ è ammissibile.
+
+>[!important]
+>Sia $\bar{y}∈ℝ^n$ una soluzione duale di base ammissibile. Allora:
+>
+>$\bar{y}$ è una soluzione ottima di (D)
+>⇔
+>esiste una base B assoluta a $\bar{y}$ tale che la corrispondente soluzione di base primale $\bar{x}=A_B^{-1}b_B$ è ammissibile.
+
+>[!info]
+Se la soluzione è non degenere, esiste una soluzione sola. Se invece è degenere, bisogna verificare tutte le possibile soluzioni (qualcuna potrebbe anche non essere ammissibile).

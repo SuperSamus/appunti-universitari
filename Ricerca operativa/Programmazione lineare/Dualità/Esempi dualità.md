@@ -1,6 +1,6 @@
 # Esempi [[dualità]]
 
-## 1
+## Problema 1
 
 (P)
 
@@ -47,7 +47,7 @@ $y_{I(\bar{x})}A_{I(\bar{x})}=c→\begin{bmatrix} y_1 & y_2 \end{bmatrix}\begin{
 
 Riotteniamo gli stessi risultati: $\begin{cases}y_1+y_2=3 \\ -y_1+y_2=2 \end{cases}→y_2=\frac{5}{2}→y_1=\frac{1}{2}$
 
-## 2
+## Problema 2
 
 (P)
 
@@ -60,7 +60,7 @@ Vincoli:
 - $x_1-x_2≤-2$
 - $x_1-2x_2≤-2$
 
-- $c=(1\;2)$
+- $c=(1,2)$
 - $A=\begin{bmatrix}0 & 1 \\ 1 & 1 \\ 1 & 0 \\ 1 & -1 \\ 1 & -2\end{bmatrix}$
 - $b=\begin{bmatrix}4 \\ 2 \\0 \\ -2 \\ -2 \end{bmatrix}$
 
@@ -112,7 +112,7 @@ Vincoli:
 - $x_1-x_2≤-2$
 - $x_1-2x_2≤-2$
 
-- $c=(0\;1)$
+- $c=(0,1)$
 - $A=\begin{bmatrix}0 & 1 \\ 1 & 1 \\ 1 & 0 \\ 1 & -1 \\ 1 & -2\end{bmatrix}$
 - $b=\begin{bmatrix}4 \\ 2 \\0 \\ -2 \\ -2 \end{bmatrix}$
 
@@ -141,3 +141,22 @@ $ξ$ direzione ammissibile per $\bar{x}⇔A_{I(\bar{x})}≤0$
 $A_{I(\bar{x})}ξ=\begin{bmatrix} 1 & 1 \\ 1 & 0 \\ 1 & -1\end{bmatrix}\begin{bmatrix}ξ_1 \\ ξ_2\end{bmatrix}≤0⇔\begin{cases}ξ_1+ξ_2≤0 \\ ξ_1≤0 \\ ξ_1-ξ_2≤0\end{cases}$
 
 Il sistema descrive il [[Programmazione lineare#^15fa21|cono]] dove può crescere.
+
+# Problema 3
+
+(P)
+
+Funzione obiettivo: $\max -x_1+x_2$
+
+Vincoli:
+- $x_1-x_2≤1$
+- $x_2≤2$
+- $x_1+x_2≤3$
+- $-x_1+x_2≤1$
+- $-x_1≤0$
+
+- $c=(-1,2)$
+- $A=\begin{bmatrix}1 & -1 \\ 0 & 1 \\ 1 & 1 \\ -1 & 1 \\ -1 & -2\end{bmatrix}$
+- $b=\begin{bmatrix}4 \\ 2 \\0 \\ -2 \\ -2 \end{bmatrix}$
+
+$\bar{x}=(-2,4)$ è ottima?
