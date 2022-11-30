@@ -218,8 +218,11 @@ $B⊆I(\bar{x})$
 
 Ammissibilità: $A_N\bar{x}≤b_N$ con $N=\{1,…,n\}∖B$
 
-**Soluzione duale di base**: $\bar{y}=(\bar{y_B},\bar{y_N})$, con $\bar{y_N}=0$ (per soddisfare gli [[Dualità#^4e2ee6|scarti complementari]])
+**Soluzione duale di base**: $\bar{y}=(\bar{y_B},\bar{y_N})$, con:
+- $\bar{y_N}=0$
+	- Per soddisfare gli [[Dualità#^4e2ee6|scarti complementari]]
+- $\bar{y_B}=cA_B^{-1}$
+	- Vogliamo che $\bar{y}A=c$
+	- In questo modo $(\bar{y_B},0)\begin{bmatrix}A_B \\ A_N\end{bmatrix}=\bar{y_B}A_B=cA_B^{-1}A_B=c$
 
-$\bar{y}A=c$
-
-$(\bar{y_B},0)\begin{bma}
+Ammissibilità: $\bar{y_B}=cA_B^{-1}≥0$
