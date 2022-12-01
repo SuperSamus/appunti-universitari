@@ -1,4 +1,4 @@
-# Programmazione concorrent
+# Programmazione concorrente
 
 Un programma concorrente contiene due o più processi (o sottoprocessi - thread) che lavorano assieme per eseguire una determinata applicazione
 
