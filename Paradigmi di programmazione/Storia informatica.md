@@ -18,7 +18,7 @@ La matematica sta perdendo il suo criterio di certezza.
 
 ### Cantor, Dedekind
 
-- Consistenza delle analisi <- Geometria
+- Consistenza delle analisi ← Geometria
     - Teoria dei sistemi numerici
         - **Aritmetica** ($ℕ,+,…$)
 
@@ -26,7 +26,7 @@ La matematica sta perdendo il suo criterio di certezza.
 
 - **Logismo**: fondare la matematica sulla logica (invece che il contrario)
 - *Ideografia*
-    - Libro che introduce tra le varie cose la **logica del primo ordine** (#FOL)
+    - Libro che introduce tra le varie cose la **logica del primo ordine** #FOL
     - Modus ponens: $A → B, A \vdash B$
 
 Mancava solo di costruire l'aritmetica su questo linguaggio. Ma la teoria che creò è risultata inconsistente.
