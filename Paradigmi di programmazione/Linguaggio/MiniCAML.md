@@ -64,40 +64,48 @@ let bind s x v = fun y -> if (x = y) then v else (s y)
 ```
 
 ### Definizioni
+
 Rispetto all'altra descrizione formale di un [[linguaggio]], con queste semantica operazionale non è necessario descrivere la regole di [[sostituzione]].
 
 #### Somma
+
 $$
 \cfrac{Σ🢒e_1⇒\underline{n_1} \quad Σ🢒e_1⇒\underline{n_2}}{Σ🢒Add(e_1,e_2)⇒\underline{n_1+n_2}}
 $$
 
 #### Let
+
 $$
 \cfrac{Σ🢒e⇒v \quad Σ[x↦v]🢒e'⇒v'}{Σ🢒\text{let }x=e \text{ in } e'⇒v'}
 $$
 
 ##### LetRec
+
 $$
 \cfrac{Σ[f↦〈f,x,e,e'〉]🢒e'⇒v'}{Σ🢒\text{let rec }f\:x=e \text{ in } e'⇒v'}
 $$
 
 #### Chiusura
+
 $$
 \cfrac{}{Σ🢒λx.e⇒〈x,e,Σ〉}
 $$
 (Se venisse restituita la λ-espressione direttamente, si avrebbe uno *scoping dinamico* invece che *statico*)
 
 #### Applicazione
+
 $$
 \cfrac{Σ🢒e⇒〈x,t,Δ〉 \quad Σ🢒e'⇒v \quad Δ[x↦v]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
 ##### Applicazione ricorsiva
+
 $$
 \cfrac{Σ🢒e⇒〈f,x,t,Φ〉 \quad Σ🢒e'⇒v \quad Φ[f↦〈f,x,t,Φ〉][x↦v]🢒t⇒v'}{Σ🢒e\:e'⇒v'}
 $$
 
 #### "Esecuzione" variabile
+
 $$
 \cfrac{}{Σ🢒x⇒Σ(x)}
 $$
@@ -126,7 +134,7 @@ let rec eval e s = match e with
 	        | _ -> error
 	(*...*)
 
-let intplus v1 v2 = match v1, v2 with
+let int_plus v1 v2 = match v1, v2 with
     | Int n1, Int n2 -> Int(n1+n2)
     (*...*)
 ```

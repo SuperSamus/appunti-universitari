@@ -102,15 +102,15 @@ Output: $τ \text{ t.c. } Γ⊢e:τ \text{ se esiste, fail altrimenti}$
 
 ```
 case e of
-    e==n => τ ≜ nat
-    e=="s" => τ ≜ str
-    e==x => if (x:τ)∈Γ then τ else fail
+    e == n => τ ≜ nat
+    e == "s" => τ ≜ str
+    e == x => if (x:τ)∈Γ then τ else fail
 ```
 
 Esempio:
 
 ```
-e=let x = e1 in e2
+e = let x = e1 in e2
     => if TI(Γ, e1) == τ
         then if TI(Γ,x:τ,e2) == σ
         then σ
@@ -218,7 +218,7 @@ Quindi, per esempio, $[x:nat,y:[a:nat,b:bool],z:bool]<:[z:bool,y:[a:nat]]$
 Similmente per le liste:
 
 $$
-\cfrac{τ<:τ'}{list\:τ<:listτ'}
+\cfrac{τ<:τ'}{list\:τ<:list\:τ'}
 $$
 
 E per le funzioni (la relazione è controvariante: puoi dare alla funzione più di quello che chiede, e puoi usare meno di quello che restituisce) (non tutti i linguaggi rispettano questa regola):

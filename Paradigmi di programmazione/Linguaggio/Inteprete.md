@@ -52,10 +52,10 @@ Implementazione:
 ```OCaml
 let scanner s =
     let rec scanner_rec s pos =
-        if pos = String.length s then [Tkn_end]
+        if (pos = (String.length s)) then [Tkn_end]
         else
             let c = String.sub s pos 1 in
-            let tokens = scanner_rec s (pos + 1)
+            let tokens = scanner_rec s (pos + 1) in
             match c with
                 | " " -> tokens
                 | "(" -> Tkn_lpar::tokens
@@ -79,7 +79,7 @@ Per assicurarsi di avere una grammatica deterministica (non ambigua), definiamo:
 - Fattore $f:=n|(e)$
 
 ```OCaml
-(* Implementata in manier imperativa *)
+(* Implementata in maniera imperativa *)
 let parse s =
     let tokens = ref (scanner s) in
         (* unit -> token *)

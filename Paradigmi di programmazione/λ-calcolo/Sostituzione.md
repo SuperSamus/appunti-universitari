@@ -27,12 +27,12 @@ Non dobbiamo consentire alla funzione di catturare variabili.
 
 ## Strategie di valutazione
 
-$(λx.x^2+2x+3)(2+3))$
+$(λx.x^2+2x+3)(2+3)$
 
 - Chiamata per nome (CbN): rimpiazza $x$ con $2+3$
 	- $→_β t[s/x]$
 - Chiamata per valore (CbV): valuta $2+3$, e rimpiazza $x$ con il risultato
-	- $→^*(λx.t)v →_β t[v/x]$
+	- $→_β^*(λx.t)v →_β t[v/x]$
 
 ### Teoremi
 

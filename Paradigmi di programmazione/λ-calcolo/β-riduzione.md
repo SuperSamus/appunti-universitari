@@ -23,16 +23,6 @@ $(λx.x(xy))t →_β t(ty)$
 
 La β-riduzione non è deterministica nei passaggi:
 
-%%
-$A=(λx.(λy.yx)z)v$
-
-$B=(λy.yv)z$
-
-$C=(λx.zx)v$
-
-$D=zv$
-%%
-
 ```mermaid
 flowchart LR
 A["(λx.(λy.yx)z)v"] --> B["(λy.yv)z"] --> D[zv]
@@ -58,9 +48,19 @@ flowchart LR
 A[kΩ] --> A & y
 ```
 
+## Forma normale
+
+^8fa7d3
+
+Un termine è in forma normale se non si può β-ridurre.
+
+Un termine $t$ ha una forma normale se esiste un termine $s$ tale che $t$ β-riduce ad $s$ in un numero finito di passi.
+
+$∃ s ∈ NF.t \longrightarrow^*_β s$.
+
 ## Teorema di Church-Rosser
 
-$t →_β^* s_1 ∧ t →_β^* s_2 ⇒ ∃ u. s_1 →_β^* n ∧ s_2 →_β^* u$
+$t →_β^* s_1 ∧ t →_β^* s_2 ⇒ ∃ u. s_1 →_β^* u ∧ s_2 →_β^* u$
 
 ```mermaid
 flowchart LR
@@ -80,7 +80,7 @@ Unicità forme normali (modulo $=_α$).
 
 ### Corollario 2
 
-$t =_β s ⟺ ∃ u.t →_β^* u _β^*← s$
+$t =_β s ⇔ ∃ u.t →_β^* u _β^*← s$
 
 ### Corollario 3
 
@@ -92,15 +92,7 @@ Ciò rende facilmente parallelizzabile il λ-calcolo.
 
 $(λx.t)s=_β t[s/x]$
 
-$t=_β s ⟺ t (_β ← u →_β)^* s$
-
-## Forma normale
-
-Un termine è in forma normale se non si può β-ridurre.
-
-Un termine $t$ ha una forma normale se esiste un termine $s$ tale che $t$ β-riduce ad $s$ in un numero finito di passi.
-
-$∃ s ∈ NF.t \longrightarrow^*_β s$.
+$t=_β s ⇔ t (_β ← u →_β)^* s$
 
 ## Effetti collaterali
 
@@ -114,7 +106,7 @@ Esempio: $e_1+e_2=e_2+e_1$ sono uguali, ma non se ci sono effetti collaterali:
 - $e_1≜print(a);return(2)$
 - $e_2≜print(b);return(3)$
 - $e_1+e_2$ scrive $ab$, poi ritorna $5$
-- $e_1+e_2$ scrive $ba$, poi ritorna $5$
+- $e_2+e_1$ scrive $ba$, poi ritorna $5$
 
 ### Trasparenza referenziale
 

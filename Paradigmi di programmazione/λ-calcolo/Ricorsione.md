@@ -4,7 +4,7 @@
 
 Come si può definire nel [[λ-calcolo]] una funzione che chiama se stessa?
 
-In un linguaggio $e::=z|succ(e)$, il principio di induzione per una funzione $F:Exp → ℕ$ si definisce come $∀e. P(e) ⇐arrow P(z) ∧ ∀x.P(x) → P(succ(x))$
+In un linguaggio $e::=z|succ(e)$, il principio di induzione per una funzione $F:Exp → ℕ$ si definisce come $∀e. P(e) ⇐ P(z) ∧ ∀x.P(x) → P(succ(x))$
 
 In modo simile, si può costruire una funzione $φ: P(u) → P(u)$[^1], definita come $φ(A)=\{z\} ∪ \{succ(a)|a ∈ A\} ∪ A$. Per esempio:
 - $φ(∅)=\{z\}$
@@ -50,7 +50,7 @@ Ora che tutto è definito, definiamo $F \: n=e[F]$[^3] come zucchero sintattico 
 
 ## Definizione Fix
 
-Da $HH$$ si può creare il **combinatore Curry**: $Y ≜ λf.(λx.f(xx))(λx.f(xx))$.
+Da $HH$ si può creare il **combinatore Curry**: $Y ≜ λf.(λx.f(xx))(λx.f(xx))$.
 
 Con $Δ_f ≜ λx.f(xx)$
 

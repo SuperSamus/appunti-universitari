@@ -55,7 +55,7 @@ La parte "interna" dei tipi composti è immutabile, perché sennò rappresentere
 
 Per esempio:
 ```OCaml
-let x: int*bool*string = (10, true, "hello")
+let x: int * bool * string = (10, true, "hello")
 
 fun x -> t: int -> int
 (fun x -> t) s u
@@ -64,8 +64,8 @@ fun x -> fun y -> x + y
 
 let p: {x: float; y: float} = {x = 4.0; y = -3.0}
 let distanza p q =
-    let dx = (p.x-q.x)**2.0
-    and dy + (p.y-q.y)**2.0
+    let dx = (p.x - q.x) ** 2.0
+    and dy + (p.y - q.y) ** 2.0
     in sqrt (dx + dy)
 ```
 
