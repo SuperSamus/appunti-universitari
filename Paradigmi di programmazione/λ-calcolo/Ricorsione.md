@@ -55,7 +55,7 @@ Da $HH$ si può creare il **combinatore Curry**: $Y ≜ λf.(λx.f(xx))(λx.f(xx
 Con $Δ_f ≜ λx.f(xx)$
 
 Da qui:
-- $Yf →_β (λx.f(xx))(λx.f(xx)) →_β f((λx.f(xx))(λx.f(xx)))=f(Δ_fΔ_f)$
+- $Yf →_β (λf.(λx.f(xx))(λx.f(xx)))f →_β (λx.f(xx))(λx.f(xx)) →_β f((λx.f(xx))(λx.f(xx)))=f(Δ_fΔ_f)$
 - $f(Yf) →_β f((λf.(λx.f(xx))(λx.f(xx)))f) →_β f((λx.f(xx))(λx.f(xx)))=f(Δ_fΔ_f)$
 
 Quindi $Yf =_β f(Yf)$. Tuttavia per $fix$ si cerca una β-riduzione, non una β-equivalenza.
