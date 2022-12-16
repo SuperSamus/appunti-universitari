@@ -100,6 +100,6 @@ $(λx.xy)x$: x è un segnaposto solo dentro la parentesi, fuori è solo una vari
 
 - $FV(x)=\{x\}$
 - $FV(ts)=FV(t) ∪ FV(s)$
-- $FV(λx.t)=FV(t) \\ \{x\}$
+- $FV(λx.t)=FV(t) ∖ \{x\}$
 
 $t$ è *chiuso* se $FV(t)=∅$
