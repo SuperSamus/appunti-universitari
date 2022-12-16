@@ -1,6 +1,6 @@
 # λ-calcolo
 
-Sono un linguaggio generale per descrivere funzione e operatori come si combinano tra di loro. È di *ordine superiore*: può avere funzioni come input e output. Arricchibile.
+Linguaggio generale per descrivere come funzioni e operatori si combinano tra di loro. È di *ordine superiore*: può avere funzioni come input e output. Arricchibile.
 
 ## Esempio in matematica
 

@@ -221,7 +221,7 @@ $$
 \cfrac{τ<:τ'}{list\:τ<:list\:τ'}
 $$
 
-E per le funzioni (la relazione è controvariante: puoi dare alla funzione più di quello che chiede, e puoi usare meno di quello che restituisce) (non tutti i linguaggi rispettano questa regola):
+E per le funzioni, la relazione è controvariante per l'argomento (una funzione che chiede di meno è sottotipo) e covariante per il ritorno (una funzione che restituisce di più è sottotipo). Non tutti i linguaggi rispettano questa regola.
 
 $$
 \cfrac{τ'_1<:τ_1 \quad τ_2<:τ'_2}{τ_1→τ_2<:τ'_1→τ'_2}
