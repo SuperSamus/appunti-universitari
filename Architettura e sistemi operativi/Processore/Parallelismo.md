@@ -77,7 +77,7 @@ xm...x1 --> s1 --> s2 --> s3 --> s4 -->
 	- Di solito nel mondo reale $m>>k$, quindi $T_C≈m(T_S)$
 - $t_i$: latenza di $f_i$
 
-Si può aumentare l'efficienza facendo lavorare più stati adiacente a uno stesso worker. Per esempio:
+Si può aumentare l'efficienza (nei costi) facendo lavorare più stati adiacenti a uno stesso worker. Per esempio:
 ```mermaid
 flowchart LR
 subgraph 3t

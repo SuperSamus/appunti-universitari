@@ -34,13 +34,6 @@ Cerchiamo di rimuovere l'elemento problematico della base:
 	- Qui, $B(h)=2$
 - $u_{B(h)}∈ℝ^n \text{ t.c. } [u_{B(h)}]_i=\begin{cases}1 & i=B(h) \\ 0 & i≠B(h)\end{cases}$
 - $ξ=-A_B^{-1}u_{B(h)}=\begin{bmatrix}0 & 1 \\ -1 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 1\end{bmatrix}$
-	- È sostanzialmente la $B(h)$-esima colonna di $-A_B^{-1}$
-	- $c·ξ=-cA_B^{-1}u_{B(h)}=-\bar{y}_B·u_{B(h)}=-\bar{y}_h>0$
-	- $A_Bξ=-A_BA_B^{-1}u_{B(h)}=-u_B(h)≤0$
-		- $A_iξ=\begin{cases}-1 & \text{se }i=h \\ 0 & \text{se }i≠h\end{cases}$
-			- Questo vuol dire che se ci si sposta da $\bar{x}$ di un passo $λ$ nella direzione $ξ$:
-			- $\bar{x}+λξ\quad A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ=\begin{cases}A_i\bar{x}=b & i≠h \\ <A_i\bar{x}=b & i=h\end{cases}$
-			- Detto in altro modo: tutti vincoli della base rimangono attivi.
 - Spostandoci (anche all'infinito) continueremo a rispettare i vincoli appartenenti alla base. Ma di quanto ci si può spostare al massimo $\bar{λ}_i$ rispettando i vincoli non appartenenti alla base? Sfruttiamo quello che [[Dualità#^ff2cae|abbiamo visto]].
 	- $\bar{λ}_1=+∞←\begin{bmatrix}1 & -1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}=0≤0$
 	- $\bar{λ}_2=\cfrac{2-\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}}{\begin{bmatrix}0 & 1\end{bmatrix}\begin{bmatrix}1 \\ 1\end{bmatrix}}=1$
@@ -50,20 +43,20 @@ Cerchiamo di rimuovere l'elemento problematico della base:
 Finalmente: $\bar{x}+\bar{λ}\bar{ξ}=\begin{bmatrix}0 \\ 1\end{bmatrix}+1\begin{bmatrix}1 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
 
 Agli indici attivi si aggiungono tutti quelli di spostamento minimo:
-$k∈N \text{ t.c }\bar{λ}=λ_k$ **indice entrante**
+$k∈N \text{ t.c }\bar{λ}=\bar{λ}_k$ **indice entrante**
 
 $B_{nuova}=B∖\{h\}∪\{k\}$ è una base di cui $\bar{x}+\bar{λ}\bar{ξ}$ è soluzione primale di base ammissibile (→vertice)
 
 
 Abbiamo il nuovo $I(\bar{x})=\{2,3,4\}$
 
-Rifacciamo tutti i conti con la nuova base $B=\{2,4\}$ (stavolta è degenere, abbiamo escluso $3$):
+Rifacciamo tutti i conti con la nuova base $B=\{2,4\}$ (stavolta è [[Dualità#^e880fd|degenere]], abbiamo escluso $3$):
 - $A_B=\begin{bmatrix}0 & 1 \\ -1 & 1\end{bmatrix}$
 - $A_B^{-1}=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}$
 - $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 2\end{bmatrix}$
 - $\bar{y}=cA_B^{-1}=\begin{bmatrix}2 & 1\end{bmatrix}\begin{bmatrix}1 & -1 \\ 1 & 0\end{bmatrix}=\begin{bmatrix}3 & -2\end{bmatrix}$
 	- $\bar{y}=(0,3,0,-2,0)$ non ammissibile
 
-Se proviamo a crescere, otterremo (salto i passaggi) $ξ=\begin{bmatrix}1 \\ 0\end{bmatrix}$, che non è [[Dualità#^ff2cae|ammissibile]] perché $A_3ξ=\begin{bmatrix}1 & 1\end{bmatrix}\begin{bmatrix}1 \\ 0\end{bmatrix}=1>0$. (L'ammissibilità guarda gli indici attivi, non la base, ecco perché $3$ viene controllato)
+Se proviamo a crescere, otterremo $ξ=-A_B^{-1}u_{B(h)}=\begin{bmatrix}-1 & 1 \\ -1 & 0\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 0\end{bmatrix}$, che non è [[Dualità#^ff2cae|ammissibile]] perché $A_3ξ=\begin{bmatrix}1 & 1\end{bmatrix}\begin{bmatrix}1 \\ 0\end{bmatrix}=1>0$.
 
 Però, si potrebbe dire che $\bar{λ}=0$, che ci ridà lo stesso $\bar{x}$. È ora di provare una nuova base (**cambiamento di base degenere**).

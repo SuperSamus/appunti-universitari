@@ -205,6 +205,8 @@ Non è restrittivo supporre $c_{ij}≥0$. Questo *non* è vero per l'albero dei 
 
 ### Albero di copertura
 
+^e2b662
+
 $G=(N,A)$ grafo non orientato $(i,j)≡(j,i)$ (si preferisce $i<j$)
 
 Gli archi hanno un costo $c_{ij}$, con $(i,j)∈A$

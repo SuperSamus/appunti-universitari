@@ -26,7 +26,7 @@ Senza un circuito dedicato (per fare i conti in parallelo) o una porta dedicata,
 
 Per fare esercizi si fa il percorso:
 
-Definizione funzione a parole → Tabella di verità → Espressione somma prodotti → Rete /AND/OR/NOT
+Definizione funzione a parole → Tabella di verità → Espressione somma prodotti → Rete AND/OR/NOT
 
 ## Tabella di verità XOR
 

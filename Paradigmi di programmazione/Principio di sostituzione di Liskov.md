@@ -1,6 +1,6 @@
 ## Fasi della progettazione e sviluppo
 
-Idealmente lo sviluppo dovrebbe attraversare queste fasi:
+Idealmente lo sviluppo di un programma [[Java]] dovrebbe attraversare queste fasi:
 - Definizione della gerarchia di classi
 - Identificazione dei membri pubblici
 - Definizione delle specifiche di ogni metodo pubblico
@@ -16,26 +16,26 @@ Come fare:
 - Aggiungendo opportuni commenti al codice
 - Esprimendo delle condizioni sui parametri e sulle variabili che siano verificabili o testabili (per esempio `assert`)
 
-Per esempio: TODO
+Per esempio:
 ```java
+// OVERVIEW: un IntSet è un insieme di interi
 public class IntSet {
-    public IntSet(int capacity) {
-        // REQUIRES: capacity non negativo
-        // EFFECTS: crea un insieme vuoto che può ospitare capacity aggiuntivi
-    }
 
-    /**
-     * Aggiunge un elemento all'insieme
-     * @param elem
-    */
-    public boolean add(int elem) throws FullSetException {
-        // ...
-    }
+  public IntSet(int capacity) {
+  // REQUIRES: capacity non negativo
+  // EFFECTS: crea un insieme vuoto che può ospitare capacity elementi
+  }
 
-    public boolean contains(int elem) {
-        // REQUIRES:
-        // EFFECTS: restituisce true se elem p presente nel set...
-    }
+  public boolean add(int elem) throws FullSetException {
+  // REQUIRES: numero di elementi contenuti nell'insieme minore di capienza
+  // EFFECTS: se elem non è presente nell'insieme lo aggiunge e restituisce true,
+  //          restituisce false altrimenti
+  }
+
+  public boolean contains(int elem) {
+  // REQUIRES:
+  // EFFECTS: restituisce true se elem p presente nell'insieme, false altrimenti
+  }
 }
 ```
 

@@ -132,10 +132,8 @@ $\bar{x}$ non ammette direzioni ammissibili di crescita.
 Dimostrare ⇒ è ovvio.
 
 Dimostrazione ⇐ per assurdo: supponiamo $\bar{x}$ non ottima, ovvero $∃x∈ℝ^n$ ammissibile per (P) tale che $c·x>c·\bar{x}$.
-
-$ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=c·x-c·\bar{x}>0$
-
-Per $λ∈[0,1]$, affermo che $\bar{x}+ξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$ (cioè la combinazione convessa tra $x$ e $\bar{x}$) è ammissibile.
+- La direzione di crescita è $ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=c·x-c·\bar{x}>0$
+- Per $λ∈[0,1]$, la combinazione convessa tra $x$ e $\bar{x}$, ovvero $\bar{x}+λξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$, è ammissibile
 
 Da qui, definiamo:
 
@@ -145,20 +143,20 @@ Da qui, definiamo:
 
 $A_i(\bar{x}+λξ)\stackrel{?}{≤}b_i$ quale condizioni vanno imposte affinché sia vero?
 
-$A_i(\bar{x}+λξ)=A_i\bar{x}+λA_i·ξ$
+$A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ$
 
 Possibili casi, vincolo per vincolo:
 - $i∈I(\bar{x})$ ovvero $A_i\bar{x}=b_i$
-	- $A_i\bar{x}+λA_i·ξ≤b_i↔A_i·ξ≤0$
+	- $A_i\bar{x}+λA_i·ξ≤b_i↔A_iξ≤0$
 - $i∉I(\bar{x})$ ovvero $A_i\bar{x}<b_i$
-	- $A_i\bar{x}+λA_i·ξ≤b_i↔λA_i·ξ≤b_i-A_i\bar{x}$ (che è $>0$)
-		- Se $A_i·ξ≤0$, ok!
-		- Se $A_i·ξ>0$, ok ↔ $λ≤\cfrac{(b_i-A_i\bar{x})}{A_i·ξ}$ (che è $>0$)
-		- In entrambi i casi, siamo a posto ($λ$ si può scegliere).
+	- $A_i\bar{x}+λA_iξ≤b_i↔λA_iξ≤b_i-A_i\bar{x}$ (che è $>0$)
+		- Se $A_iξ≤0$, ok!
+		- Se $A_iξ>0$, ok ↔ $λ≤\cfrac{(b_i-A_i\bar{x})}{A_iξ}$ (che è $>0$)
+		- In entrambi i casi, la direzione di crescita è ammissibile ($λ$ si può scegliere).
 
-Quindi, i vincoli attivi sono gli unici "problematici".
+Quindi, i vincoli attivi sono gli unici "problematici" per scegliere una direzione ammissibile di crescita.
 
-$ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_i·ξ≤0\quad ∀i∈I(\bar{x})$
+$ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_iξ≤0\quad ∀i∈I(\bar{x})$
 
 >[!important]
 >$\bar{x}$ non ammette direzioni ammissibili di crescita
@@ -208,7 +206,7 @@ Conseguenze:
 | superiormente illimitato | ❌             | ❌                      | ✅     |
 | vuoto                    | ❌             | ✅                      | ✅     |
 
-$c\bar{x}=\bar{y}b↔(\bar{y}A)·\bar{x}=\bar{y}·b↔\bar{y}·b-\bar{y}A\bar{x}=0↔\bar{y}·(b-A\bar{x})=0$
+$c·\bar{x}=\bar{y}·b↔(\bar{y}A)·\bar{x}=\bar{y}·b↔\bar{y}·b-\bar{y}·A\bar{x}=0↔\bar{y}·(b-A\bar{x})=0$
 
 >[!important]
 >#### Teorema degli scarti complementari
@@ -235,10 +233,10 @@ $B⊆I(\bar{x})$
 
 ### Soluzione primale di base: $\bar{x}=A_B^{-1}b_B$
 
+**Ammissibilità**: $A_N\bar{x}≤b_N$ con $N=\{1,…,n\}∖B$
+
 È possibile che ci siano più vincoli attivi di quanti ne servano per una base.
 **Degenere**: $∃i∉B \text{ t.c. }A_i\bar{x}=b_i\quad (i∈I(\bar{x}))$
-
-**Ammissibilità**: $A_N\bar{x}≤b_N$ con $N=\{1,…,n\}∖B$
 
 ### **Soluzione duale di base**: $\bar{y}=(\bar{y}_B,\bar{y}_N)$, con:
 - $\bar{y}_N=0$
@@ -281,43 +279,33 @@ Se la soluzione è non degenere, esiste una soluzione sola. Se invece è degener
 
 Input: $B$ base primale ammissibile
 
-1. $\bar{x}=A_B^{-1}b_B\quad\bar{y}=(cA_B^{-1},0)$
+1. $\bar{x}=A_B^{-1}b_B\quad\bar{y}=(\bar{y}_B,\bar{y}_N)=(cA_B^{-1},0)$
 2. Se $\bar{y}_B≥0$, STOP → $\bar{x}$ ottima per (P), $\bar{y}$ ottima per (D)
-3. Scegliere $h∈B \text{ t.c. } \bar{y}_h>0$ (indice uscente)
-4. $\bar{ξ}=-A_B^{-1}u_{B(h)}$ (direzione di crescita)
+3. Scegliere $h∈B \text{ t.c. } \bar{y}_h<0$ (indice uscente)
+4. $ξ=-A_B^{-1}u_{B(h)}$ (direzione di crescita)
+	- $u_{B(h)}∈ℝ^n \text{ t.c. } [u_{B(h)}]_i=\begin{cases}1 & i=B(h) \\ 0 & i≠B(h)\end{cases}$
+		- È sostanzialmente la $B(h)$-esima colonna di $-A_B^{-1}$
+	- $c·ξ=-cA_B^{-1}u_{B(h)}=-\bar{y}_B·u_{B(h)}=-\bar{y}_h>0$
+	- $A_Bξ=-A_BA_B^{-1}u_{B(h)}=-u_{B(h)}≤0$
+		- Per $i∈B$, dato che $A_iξ=\begin{cases}-1 & \text{se }i=h \\ 0 & \text{se }i≠h\end{cases}$, se ci si sposta da $\bar{x}$ di un passo $λ$ nella direzione $ξ$, $A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ=\begin{cases}A_i\bar{x}=b & i≠h \\ <A_i\bar{x}=b & i=h\end{cases}$
+			- Detto in altro modo: tutti i vincoli della base rimangono attivi.
+>[!warning]
+>La proprietà $A_{I(\bar{x})}ξ≤0$ non resta per forza vera (lo resta solo sulla base), quindi su basi [[Dualità#^e880fd|degeneri]] bisogna controllare manualmente che la proprietà sia rimasta vera nei vincoli attivi che non sono nella base.
 5. $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$ (passo) con $\bar{λ}=\begin{cases}\bar{λ}_i=+∞ & \text{se } A_iξ≤0 \\ \bar{λ}_i=\cfrac{b_i-A_i\bar{x}}{A_iξ} & \text{se }A_iξ>0\end{cases}$
 6. Se $\bar{λ}=+∞$ (ovvero $A_iξ≤0$), STOP → $\begin{matrix}\text{(P) superiormente illimitato} \\ \text{(D) vuoto}\end{matrix}$
 7. Scegliere $k∈N \text{ t.c } \bar{λ}=\bar{λ}_k$ (indice entrante)
 8. $B=B∖\{h\}∪\{k\}$ (cambio di base)
 9. Ritornare a 1.
 
-Non si può eseguire l'algoritmo nella forma duale. Quello che si fa è convertirlo in forma primale. Trasformare le uguaglianze in disuguaglianze però porterà a una situazione degenere. TODO
+>[!info]
+>$y_{I(\bar{x})}≥0$ si può facilmente verificare graficamente:
+>- $c$ è la direzione verso cui si massimizza l'obiettivo
+>- $A_i$ graficamente rappresenta la direzione normale dell'area coperta dal vincolo
+>- $y_i∈ℝ$, è solo uno scalare
+>
+>Se la combinazione lineare (cioè $∑\limits_{i∈I(\bar{x})}y_iA_i$) per ottenere $c$ richiede un $y_i$ negativo, e ti sposti attraverso il vincolo che non è rappresentato da $A_i$. 
 
 La complessità è NP. Esiste un algoritmo polinomiale, ma è estremamente complesso.
-
-L'input è una base primale ammissibile, ma cosa si fa se non ce l'abbiamo?
-
-### Base di partenza
-
-$B$ base$:\bar{x}=A_B^{-1}b_B$
-
-$H=\{i∈N:A_i\bar{x}≤b_i\}\quad J=\{i∈N:A_i\bar{x}>b_i\}$
-
-$\bar{x}$ ammissibile $⇔J=∅$
-
-$v∈ℝ^{|J|}$ (una nuova variabile per ogni vincolo violato da $\bar{x}$)
-
-$\min∑\limits_iv_i$
-- $A_B≤b_B$
-- $A_H≤b_H$
-- $A_Jx-v≤b_J$
-- $v≤0$
-
-$B∪J$ è una base ammissibile e $(\bar{x},A_J\bar{x}-b_J)$ la corrispondente soluzione primale.
-
-Dopo l'algoritmo simplesso primale → $(x*,v*)$ soluzione ottima
-- $v*≠0⇒$ (P) non ammette soluzioni ammissibili
-- $v*=0⇒$ $x^k$ è soluzione ammissibile per (P)
 
 ### Regola anticiclo di Bland
 
@@ -326,3 +314,62 @@ Per evitare di riusare le stesse basi.
 $h=\min\{i∈B:\bar{y}_i<0\}\quad k=\min\{i∈N:\bar{λ}=\bar{λ}_i\}$
 
 La dimostrazione è complicata (è sugli appunti del prof).
+
+### Algoritmo del simplesso duale
+
+^a27b21
+
+>[!important]
+>Sia $\bar{y}∈ℝ^n$ una soluzione duale di base ammissibile. Allora:
+>$\bar{y}$ è soluzione ottima di (D)
+>⇔
+>Esiste una base $B$ associata a $\bar{y}$ tale che la soluzione primale di base $\bar{x}=A_B^{-1}b_B$ è ammissibile per (P)
+
+Simplesso duale ≡ Implementazione intelligente del simplesso primale applicato a (D) riscritto in formato primale.
+
+Se non si fa in maniera intelligente, ogni base sarà degenere.
+
+Input: $B$ base duale ammissibile
+
+- $\bar{y}=(cA_B^{-1},0)≥0$
+- Vediamo se la corrispondente base primale è ammissibile, cioè dato $\bar{x}=A_B^{-1}b_B$, verifica $A_N\bar{x}≤b_N$
+- Se non è ammissibile, esiste almeno un vincolo violato: $k=\min\{i∈N:A_i\bar{x}>b_i\}$
+- Direzione di decrescita per indice: $d_i=\begin{cases}-η_B & i∈B \\ 1 & i = k \\ 0 & i∈N∖\{k\}\end{cases}$, con $η_B=A_kA_B^{-1}$
+	- $d·b=-η_Bb_B+b_k=-A_kA_B^{-1}b_B+b_k=-A_k\bar{x}+b_k<0$
+- Ammissibilità direzione ($\bar{y}+θd$ è ammissibile?)
+	- ($\bar{y}+θd)A=\bar{y}A+θdA=\bar{y}A=c$
+		- $dA=-η_BA_B+A_k=-A_kA_B^{-1}A_B+A_k=-A_k+A_k=0$
+- Massimo passo di spostamento
+	- $\bar{y}+θd≥0⇔θ≤\bar{θ}=\min\{\bar{θ}_i:i∈B\}$
+		- $\bar{θ}_i=\begin{cases}\cfrac{\bar{y}_i}{η_i} & η_i>0 \\ +∞ & η_i≤0\end{cases}$
+		- Per $i∈N$, allora $d_i≥0$ (è 0 o 1)
+		- Per $i∈B$. allora $(\bar{y}+θd)_i=\bar{y}_i-θη_i$ (che è $>0$ se $θ<\bar{θ}$, oppure $=0$ se $θ=\bar{θ}$)
+- Indice uscente $h=\min\{i∈B:\bar{θ}=\bar{θ}_i\}$
+- Nuova base $B'=b∖\{h\}∪\{k\}$ è duale ammissibile e $\bar{y}+θd$ è la corrispondente soluzione di base
+
+### Base di partenza (problema ausiliario)
+
+L'input dell'algoritmo è una base primale ammissibile, cosa si fa non ne ce l'abbiamo?
+
+Inventa una base $B$, da cui$:\bar{x}=A_B^{-1}b_B$
+- Vincoli soddisfatti: $H=\{i∈N:A_i\bar{x}≤b_i\}$
+- Vincoli non soddisfatti: $J=\{i∈N:A_i\bar{x}>b_i\}$
+
+$\bar{x}$ ammissibile $⇔J=∅$
+
+Riscrivo la regione ammissibile. Oltre ai soliti vincoli...
+- della base $A_Bx≤b_B$
+- non della base soddisfatti $A_Hx≤b_H$
+
+...aggiungo dei nuovi vincoli, con una nuova variabile $v∈ℝ^{|J|}$
+- Vincoli non della base non soddisfatti $A_Jx-v≤b_J$
+	- Sottraggo quanto manca ad essere soddisfatto
+- $-v≤0$
+
+Cerco di ottimizzare $\min∑\limits_iv_i$.
+
+$B∪J$ (di dimensione $n+|J|$, dato che il numero di variabili è aumentato di $|J|$) è una base ammissibile.
+
+Eseguendo l'algoritmo simplesso primale con questa base e vincoli, si otterrà la soluzione ottima $(x^*,v^*)$, cioè la soluzione "normale" e i resti degli scarti ($A_Jx^*-b_J$):
+- $v^*≠0⇒$ (P) non ammette soluzioni ammissibili
+- $v^*=0⇒$ $x^*$ è soluzione ammissibile per (P)

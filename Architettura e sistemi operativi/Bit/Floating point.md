@@ -2,8 +2,8 @@
 
 Si potrebbe fare così:
 
-| Peso | 2   | 1   | 1/2 | 1/4 |
-| --- | --- | --- | --- | --- |
+| Peso  | 2   | 1   | ½   | ¼   | 
+| ----- | --- | --- | --- | --- |
 | Cifra | 1   | 0   | .0  | 1   |
 
 Ma si preferisce fare in notazione scientifica:

@@ -58,7 +58,7 @@ $Z0=\bar{S0}X+S0\bar{X}$
 
 $Z1=\bar{S1}S0X+S1\bar{S0}+S1S0\bar{X}$
 
-### Verilog
+### [[Verilog]]
 
 ```Verilog
 module statouscita(output [1:0]z, input [1:0]s, input x);

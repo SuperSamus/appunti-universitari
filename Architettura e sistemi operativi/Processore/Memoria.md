@@ -41,17 +41,18 @@ Questo design è di solito usato per le RAM: Random Access Memory
 - Statiche
 	- Mantiene l'informazione se alimentato
 
-Se si vogliono combinare più moduli RAM (per esempio 2 moduli di RAM di 1GB di 8 bit), ci sono due opzioni:
+Come si potrebbe combinare più moduli RAM (per esempio 2 moduli di RAM di 1GB di 8 bit)?
 - Il bit più significativo indica il modulo, gli altri bit indicano l'indirizzo
 	- Il primo modulo in questo caso occupa gli indirizzi $[0,2^{30})$, e il secondo $[2^{30}, 2^{31})$
 	- Serve sempre un multiplexer per scegliere il modulo giusto
+		- Dato che l'altro metodo non ha questo difetto, questo metodo non è mai usato nel mondo reale
 - Gli altri bit indicano l'indirizzo, il bit meno significativo indica il modulo
 	- Il primo modulo occupa gli indirizzi pari, il secondo gli indirizzi dispari, insieme $[0,2^{31})$
-	- Se si vuole accedere a due indirizzi consecutivi (partendo da un indirizzo pari), non serve un multiplexer, risparmiando quindi un accesso
+	- Se si vuole accedere a due indirizzi consecutivi (partendo da un indirizzo pari), non serve un multiplexer, e si risparmia un accesso
 
 ![[Moduli RAM.excalidraw]]
 
-Esistono anche le ROM (Read Only Memoria), ma negli incroci wordline/bitline c'è un fusibile bruciabile con corrente sulla wordline/bitline corrispondente: lasciarlo intatto equivale a 0, bruciarlo equivale a 1.
+Esistono anche le ROM (Read Only Memory), ma negli incroci wordline/bitline c'è un fusibile bruciabile con corrente sulla wordline/bitline corrispondente: lasciarlo intatto equivale a 0, bruciarlo equivale a 1.
 
 Ci sono anche le EEPROM (Electrically Erasable Programmable ROM), dove il fusibile è scrivibile un numero limitato di volte (più di uno almeno).
 

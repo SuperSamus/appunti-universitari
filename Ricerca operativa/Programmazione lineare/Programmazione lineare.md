@@ -30,6 +30,8 @@ Con:
 
 ### Trasformazioni equivalenti
 
+^4d0160
+
 - $\min c·x≡-\max(-c)·x$
 - $A_i·x=b_i≡A_i·x≤b_i∧A_ix≥b_i$
 - $A_i·x≥b_i≡(-A_i)·x≤-b_i$

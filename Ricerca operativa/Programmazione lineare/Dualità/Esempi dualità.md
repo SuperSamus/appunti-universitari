@@ -59,11 +59,12 @@ Vincoli:
 - $x_1≤0$
 - $x_1-x_2≤-2$
 - $x_1-2x_2≤-2$
+
+$\bar{x}=(-2,4)$ è ottima?
+
 - $c=(1,2)$
 - $A=\begin{bmatrix}0 & 1 \\ 1 & 1 \\ 1 & 0 \\ 1 & -1 \\ 1 & -2\end{bmatrix}$
 - $b=\begin{bmatrix}4 \\ 2 \\ 0 \\ -2 \\ -2 \end{bmatrix}$
-
-$\bar{x}=(-2,4)$ è ottima?
 
 (D)
 
@@ -110,11 +111,12 @@ Vincoli:
 - $x_1≤0$
 - $x_1-x_2≤-2$
 - $x_1-2x_2≤-2$
+
+$\bar{x}=(0,2)$ è ottima?
+
 - $c=(0,1)$
 - $A=\begin{bmatrix}0 & 1 \\ 1 & 1 \\ 1 & 0 \\ 1 & -1 \\ 1 & -2\end{bmatrix}$
 - $b=\begin{bmatrix}4 \\ 2 \\0 \\ -2 \\ -2 \end{bmatrix}$
-
-$\bar{x}=(0,2)$ è ottima?
 
 (D)
 
@@ -124,6 +126,7 @@ Vincoli:
 - $y_2+y_3+y_4+y_5=0$
 - $y_1+y_2-y_4-2y_5=1$
 - $y_1.y_2,y_3,y_4,y_5≥0$
+
 - $I(\bar{x})=\{2,3,4\}$
 - $\bar{y}_1=\bar{y}_5=0$
 - $y_2,y_3,y_4≥0$
@@ -133,7 +136,7 @@ Vincoli:
 
 $\bar{x}$ non è ottimo. Cerchiamo di farlo [[Dualità#^247330|crescere]].
 
-$ξ$ direzione ammissibile per $\bar{x}⇔A_{I(\bar{x})}≤0$
+$ξ$ direzione ammissibile per $\bar{x}⇔A_{I(\bar{x})}ξ≤0$
 
 $A_{I(\bar{x})}ξ=\begin{bmatrix} 1 & 1 \\ 1 & 0 \\ 1 & -1\end{bmatrix}\begin{bmatrix}ξ_1 \\ ξ_2\end{bmatrix}≤0⇔\begin{cases}ξ_1+ξ_2≤0 \\ ξ_1≤0 \\ ξ_1-ξ_2≤0\end{cases}$
 
@@ -151,11 +154,12 @@ Vincoli:
 - $x_1+x_2≤3$
 - $-x_1+x_2≤1$
 - $-x_1≤0$
+
+$\bar{x}=(1,2)$ è ottima?
+
 - $c=(-1,2)$
 - $A=\begin{bmatrix}1 & -1 \\ 0 & 1 \\ 1 & 1 \\ -1 & 1 \\ -1 & 0\end{bmatrix}$
 - $b=\begin{bmatrix}1 \\ 2 \\ 3 \\ 1 \\ 0 \end{bmatrix}$
-
-$\bar{x}=(1,2)$ è ottima?
 
 $I(\bar{x})=\{2,3,4\}$
 
