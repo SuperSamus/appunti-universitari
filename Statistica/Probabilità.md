@@ -1,3 +1,3 @@
 TODO
 
-Sigma additività
+σ-additività
