@@ -28,12 +28,12 @@ $\frac{2}{3}=\frac{\#(A∩B)}{\#B}=\frac{\#(A∩B)/\#Ω}{\#B/\#Ω}=\frac{P(A∩B
 
 Questo è varo in molti casi.
 
-Definizione: Dato $(Ω,F,P)$ spazio di probabilità, $B$ evento non trascurabile (cioè probabilità non nulla), definiamo probabilità condizionata di $A$ dato $B$, con $A$ evento:
+Definizione: Dato $(Ω,𝔉,P)$ spazio di probabilità, $B$ evento non trascurabile (cioè probabilità non nulla), definiamo probabilità condizionata di $A$ dato $B$, con $A$ evento:
 $P(A|B)=\frac{P(A∩B)}{P(B)}$
 
 Essa indica la probabilità che accada $A$, sapendo che accade $B$. ($P(A|B)≠P(A∖B)$)
 
-Fatto (TODO, esercizio a casa): fissato $B$ (non trascurabile), $A↦P(A|B)$ è una probabilità su (Ω,F) (mentre $B↦P(A|B)$ non è una probabilità)
+Fatto (TODO, esercizio a casa): fissato $B$ (non trascurabile), $A↦P(A|B)$ è una probabilità su $(Ω,𝔉)$ (mentre $B↦P(A|B)$ non è una probabilità)
 
 Se $A$, $B$ sono eventi, $B$ non trascurabile, $P(A∩B)=P(A|B)P(B)$
 
