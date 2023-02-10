@@ -54,5 +54,6 @@ b) Estrazione senza ordine senza rimpiazzo di 3 oggetti su 10
   $\#Ω=(\begin{pmatrix}40\\3\end{pmatrix})=40!/(3!*37!)=40*39*38/6=9880$
   A={esattamente 2 carte di denari}
   \#A=\# scelte delle 2 carte di denari * \#scelte della carta non di denari=$\begin{pmatrix}10\\2\end{pmatrix}\begin{pmatrix}30\\1\end{pmatrix}$
-  $P(A)=\cfrac{\begin{pmatrix}10\\2\end{pmatrix}\begin{pmatrix}30\\1\end{pmatrix}}{\begin{pmatrix}40\\3\end{pmatrix}}=\cfrac{\cfrac{10*9}{2}}{\cfrac{40*39*38}{3*2}}=$
-  
+  $P(A)=\cfrac{\begin{pmatrix}10\\2\end{pmatrix}\begin{pmatrix}30\\1\end{pmatrix}}{\begin{pmatrix}40\\3\end{pmatrix}}=\cfrac{\cfrac{10*9}{2}}{\cfrac{40*39*38}{3*2}}=\cfrac{9}{1976}$
+  Estrazioni senza ordine e senza rimpiazzo:
+  - Da un'urna di N elementi di cui TODO
