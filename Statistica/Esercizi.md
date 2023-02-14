@@ -35,7 +35,7 @@ Esercizio 2
 Da un matto di 40 carte napoletane, se ne estraggono tre, senza rimpiatto (una dopo l'altra).
 (Carte napoletane = quattro semi (bastoni, coppe, denari, spade), da 1 a 10 per seme)
 
-S={carte}={1_B,2_B,...,10_B,1_C,2_C,...,10_C,1_D,2_D,...,10_D,1_S,2_S,...,10_S}
+S={carte}={1_B,2_B,…,10_B,1_C,2_C,…,10_C,1_D,2_D,…,10_D,1_S,2_S,…,10_S}
 
 a) Probabilità che le prime due carte sinao di denari e l'ultima di coppe?
 b) Probabilità che esattamente due carte su tre (in qualunque ordine) siano di denari?
