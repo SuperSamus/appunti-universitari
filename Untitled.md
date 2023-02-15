@@ -41,4 +41,5 @@ $p_i$ riciclabilità del componente $i$-esimo
 Sistema $S=S_r∪\overline{S_r}$
 - $\overline{S_r}$: componenti non riciclabili con l'aggiornamento o un'altra microarchitettura
 
-Riciclabilità $R_S=\cfrac{∑\$
+Riciclabilità $R_S=\cfrac{∑\limits_{i∈\overline{S_r}}p_i}{|\overline{S_r}|}$
+- $|\overline{S_r}|$ cardinalità dell'insieme $\overline{S_r}$
