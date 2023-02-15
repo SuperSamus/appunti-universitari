@@ -21,7 +21,7 @@ $E_u=\int_{t=0}^{t=\text{fine vita}}dt≃P∪E∑\limits_{i∈S}ε_ih_i\;[kWh]$
 Esempio: switch in una rete LAN
 - $P_u=0+σ∑\min\limits_{i∈\text{porta}}\{1,δω_i\}$
 - Stato idle + potenza di 1 porta al 100% * somma di uso della porta $i$-esima
-- δ: ≃18, aumento potenza dovuto al traffico (gain) 
+- δ: ≃18, aumento potenza dovuto al traffico (*gain*) 
 
 ## Emissioni di $CO_2$
 
@@ -30,4 +30,15 @@ $C=C_i+C_u+C_f$
 $C=(α_pE_p+α_mE_m+a_{t_i}E_{t_i})+αu\int_{t=0}^{t=\text{fine vita}} P_u(t)dt+(α_{t_f}E_{t_f}+α_rE_r)$
 
 Ipotesi: facciamo finta che vada tutto a corrente elettrica:
-- $C=\cfrac{α_i}{τ_i}C_i+α_uC_u+α_fC_f$
+- $C=\cfrac{α_i}{τ_i}C_i+\cfrac{α_u}{τ_u}C_u+\cfrac{α_f}{τ_f}C_f$
+	- $τ≃0.95$, energia non persa durante il trasporto
+- $C=∑\limits_{s∈\{e,u,f\}}\cfrac{α_s}{τ_s}E_s$
+
+## Riciclabilità
+
+$p_i$ riciclabilità del componente $i$-esimo
+
+Sistema $S=S_r∪\overline{S_r}$
+- $\overline{S_r}$: componenti non riciclabili con l'aggiornamento o un'altra microarchitettura
+
+Riciclabilità $R_S=\cfrac{∑\$
