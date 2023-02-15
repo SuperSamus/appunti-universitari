@@ -12,8 +12,14 @@ Per calcolare consumo energetico, emissione e riciclabilità di un sistema ICT.
 
 $E=(E_p+E_m+E_{t_i})+\int_{t=0}^{t=\text{fine vita}} P_u(t)dt+(E_{t_f}+E_r)$
 
-$P∪E=\cfrac{P_{it}+P_{\max it}}{P_{it}}=$
+$P∪E=\cfrac{P_\text{IT}+P_{\text{non } IT}}{P_\text{IT}}=1+\cfrac{P_{¬\text{IT}}}{P_\text{IT}}$
+- Non IT: non legata al calcolo (es. raffreddamento)
 
 $E_u=\int_{t=0}^{t=\text{fine vita}}dt≃P∪E∑\limits_{i∈S}ε_ih_i\;[kWh]$
 - $ε_i$ potenza componente $i$-esimo
 - $h_i$ ore di uso attese del componente $i$-esimo nel periodo
+
+Esempio: switch in una rete LAN
+- $P_u=0+σ∑\min\limits_{i∈\text{porta}}\{1,δω_i\}$
+- Stato idle + potenza di 1 porta al 100% * somma di uso della porta $i$-esima
+- δ: ≃18, aumento potenza dovuto al traffico (gain) 
