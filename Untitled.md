@@ -29,7 +29,7 @@ Esempio: switch in una rete LAN
 
 $C=C_i+C_u+C_f$
 
-$C=(α_pE_p+α_mE_m+a_{t_i}E_{t_i})+αu\int_{t=0}^{t=\text{fine vita}} P_u(t)dt+(α_{t_f}E_{t_f}+α_rE_r)$
+$C=(α_pE_p+α_mE_m+a_{t_i}E_{t_i})+α_u\int_{t=0}^{t=\text{fine vita}} P_u(t)dt+(α_{t_f}E_{t_f}+α_rE_r)$
 
 Ipotesi: facciamo finta che vada tutto a corrente elettrica:
 - $C=\cfrac{α_i}{τ_i}C_i+\cfrac{α_u}{τ_u}C_u+\cfrac{α_f}{τ_f}C_f$
