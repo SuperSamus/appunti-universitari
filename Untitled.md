@@ -19,9 +19,9 @@ $E_u=\int_{t=0}^{t=\text{fine vita}}dt≃P∪E∑\limits_{i∈S}ε_ih_i\;[kWh]$
 - $h_i$ ore di uso attese del componente $i$-esimo nel periodo
 
 Esempio: switch in una rete LAN
-- $P_u=0+σ∑\min\limits_{i∈\text{porta}}\{1,δω_i\}$
-- Stato idle + potenza di 1 porta al 100% * somma di uso della porta $i$-esima
-- δ: ≃18, aumento potenza dovuto al traffico (*gain*) 
+- $P_u=𝜙+σ∑\limits_{i∈\text{porta}}\min\{1,δω_i\}$
+	- Stato idle + potenza di 1 porta al 100% * somma di uso della porta $i$-esima
+	- δ: ≃18, aumento potenza dovuto al traffico (*gain*) 
 
 ## Emissioni di $CO_2$
 
