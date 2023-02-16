@@ -20,7 +20,9 @@ $E_u=\int_{t=0}^{t=\text{fine vita}}dt≃P∪E∑\limits_{i∈S}ε_ih_i\;[kWh]$
 
 Esempio: switch in una rete LAN
 - $P_u=𝜙+σ∑\limits_{i∈\text{porta}}\min\{1,δω_i\}$
-	- Stato idle + potenza di 1 porta al 100% * somma di uso della porta $i$-esima
+	- 𝜙: Potenza base dello switch
+	- σ: Potenza di 1 porta al 100%
+	- $ω_i$: Carico ($∈[0,1]$) della porta $i$-esima
 	- δ: ≃18, aumento potenza dovuto al traffico (*gain*) 
 
 ## Emissioni di $CO_2$
