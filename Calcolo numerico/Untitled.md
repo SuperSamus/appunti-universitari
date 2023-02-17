@@ -28,8 +28,20 @@ $|f(x)-g(x)|=|\frac{x^3}{3}||(\frac{12}{(η+2)^4}-\frac{1}{(ξ+1)^3})|≤\frac{|
 
 Assegnando $x=-\frac{1}{2}$:
 
-$≤\frac{|x^3|}{3}(\frac{12*2^4}{3^4}+2^3)=\frac{|x^3|}{3}8(\frac{8}{27}+1)≤\frac{x^3}{3}(\frac{8}{27}+1)<\frac{16}{3}|x^3|$
+$≤\frac{|x^3|}{3}(\frac{12*2^4}{3^4}+2^3)=\frac{|x^3|}{3}8(\frac{8}{27}+1)<\frac{16}{3}|x^3|$
 
 E con questo abbiamo il limite dell'errore assoluto. Ci vuole quello relativo.
 
-$|\frac{f(x)-g(x)}{g(x)}|≤\frac{16}{3}\frac{|x^3|}{|\log(x+1)|}=\frac{16}{3}\frac{x^2}{|\frac{\log(1+x)}{x}|}$
+$|\frac{f(x)-g(x)}{g(x)}|≤\frac{16}{3}\frac{|x^3|}{|\log(x+1)|}=\frac{16}{3}\frac{x^2}{|\frac{\log(1+x)}{x}|}<\frac{16}{3}\frac{1}{4}=\frac{4}{3}$
+
+## Condizionamento del calcolo
+
+$ε_{IN}=\frac{f(\tilde{x})-f(x)}{f(x)}$
+
+$\tilde{x}=x(1+ε_x)\quad |ε_x|<u$
+
+$C_x=\frac{x}{f(x)}f'(x)=\frac{x(x+2)}{2x}·\frac{4}{(x+2)^2}=\frac{2}{x+2} \quad -\frac{1}{2}≤x≤0$
+
+$|C_x|=|\frac{2}{x+2}|≤\frac{4}{3}$
+
+$|ε_{IN}|≤\frac{4}{3}u$
