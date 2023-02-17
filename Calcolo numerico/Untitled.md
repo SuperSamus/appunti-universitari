@@ -45,3 +45,17 @@ $C_x=\frac{x}{f(x)}f'(x)=\frac{x(x+2)}{2x}·\frac{4}{(x+2)^2}=\frac{2}{x+2} \qua
 $|C_x|=|\frac{2}{x+2}|≤\frac{4}{3}$
 
 $|ε_{IN}|≤\frac{4}{3}u$
+
+### Stabilità
+
+$h(x)=(2⊗︀x)⊘(x⊕2)$
+
+```mermaid
+flowchart LR
+A((x)) --> B((2x)) & C((x+2)) --> D(("h(x)"))
+```
+
+$ε_{alg}=ε_2+1δ^{(1)}+1δ^{(2)}=ε_2-ε_1$
+($ε_1$ è l'errore di $x+2$)
+
+$|ε_{alg}|≤|ε_2|+|ε_1|≤2u$
