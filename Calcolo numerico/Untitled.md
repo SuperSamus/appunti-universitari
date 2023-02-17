@@ -59,3 +59,13 @@ $ε_{alg}=ε_2+1δ^{(1)}+1δ^{(2)}=ε_2-ε_1$
 ($ε_1$ è l'errore di $x+2$)
 
 $|ε_{alg}|≤|ε_2|+|ε_1|≤2u$
+
+---
+
+$f(x)=\sqrt{1-\sqrt{x}}\quad x≥0$
+
+Supponiamo di avere una funzione di libreria `sqrt` che ha un errore $<u$:
+
+$|\frac{sqrt(x)-\sqrt{x}}{\sqrt{x}}|<u \quad ∀x$
+
+$ε_{IN}=\frac{x}{\sqrt{1-\sqrt{x}}}·\frac{1}{2\sqrt{1-\sqrt{x}}}(-\frac{1}{2}\frac{1}{\sqrt{x}})ε_x=-\frac{1}{4}\frac{\sqrt{x}}{1-\sqrt{x}}ε_x$
