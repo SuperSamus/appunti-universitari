@@ -68,4 +68,11 @@ Supponiamo di avere una funzione di libreria `sqrt` che ha un errore $<u$:
 
 $|\frac{sqrt(x)-\sqrt{x}}{\sqrt{x}}|<u \quad ∀x$
 
-$ε_{IN}=\frac{x}{\sqrt{1-\sqrt{x}}}·\frac{1}{2\sqrt{1-\sqrt{x}}}(-\frac{1}{2}\frac{1}{\sqrt{x}})ε_x=-\frac{1}{4}\frac{\sqrt{x}}{1-\sqrt{x}}ε_x$
+$|ε_{IN}|=|\frac{x}{\sqrt{1-\sqrt{x}}}·\frac{1}{2\sqrt{1-\sqrt{x}}}(-\frac{1}{2}\frac{1}{\sqrt{x}})||ε_x|=|-\frac{1}{4}\frac{\sqrt{x}}{1-\sqrt{x}}||ε_x|$
+
+Il problema è malcondizionato $x→1^-$
+
+```mermaid
+flowchart LR
+A((x)) --> B(("sqrt(x)")) --> C(("1-sqrt(x)")) --> D(("sqrt(1-sqrt(x))"))
+```
