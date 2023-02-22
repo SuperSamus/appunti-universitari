@@ -56,7 +56,8 @@ A((x)) --> B((2x)) & C((x+2)) --> D(("h(x)"))
 ```
 
 $ε_{alg}=ε_2+1δ^{(1)}+1δ^{(2)}=ε_2-ε_1$
-($ε_1$ è l'errore di $x+2$)
+- $ε_1$ è l'errore di $x+2$
+- $2x$, essendo una moltiplicazione per 2, non causa errori (aumento di 1 l'esponente nella macchina)
 
 $|ε_{alg}|≤|ε_2|+|ε_1|≤2u$
 
