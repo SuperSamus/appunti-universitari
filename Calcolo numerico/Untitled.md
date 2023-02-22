@@ -24,11 +24,11 @@ $f(x)=0+x-\frac{x^2}{2}+\frac{4}{(η+2)^4}x^3$
 
 Vogliamo diminuire il più possibile l'errore.
 
-$|f(x)-g(x)|=|\frac{x^3}{3}||(\frac{12}{(η+2)^4}-\frac{1}{(ξ+1)^3})|$
+$|f(x)-g(x)|=|\frac{x^3}{3}(\frac{12}{(η+2)^4}-\frac{1}{(ξ+1)^3})|$
 
 La funzione ha valore più grande con $ξ=η=-\frac{1}{2}$ (le due frazioni sono decrescenti tra $-\frac{1}{2}≤x≤0$):
 
-$≤\frac{|x^3|}{3}(\frac{12}{(-\frac{1}{2}+2)^4}-\frac{1}{(-\frac{1}{2}+1)^3})≤\frac{|x^3|}{3}(\frac{12*2^4}{3^4}+2^3)=\frac{|x^3|}{3}8(\frac{8}{27}+1)<\frac{16}{3}|x^3|$
+$≤\frac{|x^3|}{3}(\frac{12}{(-\frac{1}{2}+2)^4}+\frac{1}{(-\frac{1}{2}+1)^3})≤\frac{|x^3|}{3}(\frac{12·2^4}{3^4}+2^3)=\frac{|x^3|}{3}8(\frac{8}{27}+1)<\frac{16}{3}|x^3|$
 
 E con questo abbiamo il limite dell'errore assoluto. Ci vuole quello relativo.
 
