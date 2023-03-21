@@ -13,7 +13,7 @@ Possiamo quindi dire che abbiamo:
 - $A=\begin{bmatrix} 4 & 2 \\ 2 & 1 \\ 3 & 4 \end{bmatrix}$
 - $b=\begin{bmatrix} 120 \\ 75 \\ 95 \end{bmatrix}$
 - $c=\begin{bmatrix} 15 \\ 3 \end{bmatrix}$
-
+ff
 Funzione obiettivo: $\min 120y_1+75y_2+95y_3$ ($y·b$)
 
 Vincoli ($A^Ty≥c↔yA≥c$):
