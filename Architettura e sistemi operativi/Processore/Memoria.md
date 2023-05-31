@@ -23,9 +23,9 @@ Esempio implementazione:
 
 ```mermaid
 flowchart TB
-Ind --> |/2| Mux & Demux
-WE --> |/1| Mux
-Mux & In --> r1[reg 00] & r2[reg 01] & r3[reg 10] & r4[reg 11] --> Demux
+Ind --> |/2| Decode & Mux
+WE --> |/1| Decode
+Decode & In --> r1[reg 00] & r2[reg 01] & r3[reg 10] & r4[reg 11] --> Mux
 ```
 
 Questo è estremamente costoso, soprattutto con così tanti registri. Inoltre, dato che i [[Porte logiche#^b31833|Multiplexer]] costano più dei [[Porte logiche#^5e85c1|Demultiplexer]], leggere richiede più tempo che scrivere.
