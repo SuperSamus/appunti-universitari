@@ -33,8 +33,8 @@ Per ogni oggetto, dobbiamo scegliere in quale contenitore inserirlo. Oppure, pre
 $y_j$ non è "necessario", ma lo sfruttiamo per la funzione obiettivo. Di conseguenza, bisogna ricordarsi di usarlo anche nei vincoli.
 
 Vincoli[^3]:
-- Vincolo di semiassegnamento: $∑\limits_{j=1}^n x_{ij}=1 \quad i=1…n$
-- Vincolo di capacità: $∑\limits_{i=1}^n p_ix_{ij} ≤ c_jy_j \quad j=1…n$
+- Vincolo di semiassegnamento: $∑\limits_{j=1}^m x_{ij}=1 \quad i=1…n$
+- Vincolo di capacità: $∑\limits_{i=1}^n p_ix_{ij} ≤ c_jy_j \quad j=1…m$
 
 Funzione obiettivo: $\min ∑\limits_{i=1}^n y_i$
 
@@ -61,5 +61,5 @@ Se non ci fosse stato il vincolo di interezza ($x_{ij} ∈ \{0,1\}$), potevamo f
 [^1]: **Variabili quantitative**: rappresentano un valore numerico
 [^2]: **Variabili logiche**: discriminano tra 2 scelte alternative
 [^3]: Errori possibili:
-	- Vincolo di semiassegnamento sbagliato: $∑\limits_{j=1}^n ∑\limits_{i=1}^nx_{ij}$ non assicura che lo stesso oggetto sia stato inserito più volte.
-	- Vincolo di capacità sbagliato: $∑\limits_{i=1}^n x_i ≤ ∑\limits_{j=1}^n c_jy_j$ permette agli oggetti di essere smistati in modi impossibili.
+	- Vincolo di semiassegnamento sbagliato: $∑\limits_{j=1}^m ∑\limits_{i=1}^nx_{ij}=n$ permette allo stesso oggetto di essere inserito più volte (e di non inserire altri oggetti).
+	- Vincolo di capacità sbagliato: $∑\limits_{j=1}^m ∑\limits_{i=1}^n p_ix_{ij} ≤ ∑\limits_{j=1}^m c_jy_j$ permette agli oggetti di essere smistati in modi impossibili.

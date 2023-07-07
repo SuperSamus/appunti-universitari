@@ -6,8 +6,8 @@ $f$ lineare, $g_i$ affini. Con le funzioni lineari, la soluzione ottima esiste s
 
 - Variabili: $x=(x_1,…,x_n)∈ℝ^n$
 - Funzione obiettivo: $f(x)=c_1x_1+…+c_nx_n=c·x$
-	- ($c=(c_1,…,c_n)∈ℝ^n$)
-- Vincoli: $a_i·x=a_{i_1}x_1+…+a_{i_n}x_n \begin{matrix}≥ \\ = \\ ≤ \end{matrix}$
+	- $c=(c_1,…,c_n)∈ℝ^n$
+- Vincoli: $a_i·x=a_{i_1}x_1+…+a_{i_n}x_n \begin{matrix}≥ \\ ≤ \\ = \end{matrix}b_i$
 	- $a_i=(a_{i_1},…,a_{i_n})∈ℝ^n$
 
 ## Formulazione canonica
@@ -26,7 +26,7 @@ Con:
 - $A∈ℝ^{m×n}$ e $A_i∈ℝ^n$
 - $x∈ℝ^n$
 - $b∈ℝ^m$ e $b_i∈ℝ$
-- $m≥n$ (il numero di vincoli è ≥ il numero di variabili)
+- $m≥n$ (numero di vincoli ≥ numero di variabili)
 
 ### Trasformazioni equivalenti
 
@@ -71,17 +71,20 @@ Cercheremo la regione ammissibile: $P=\{x∈ℝ^n:Ax≤b\}$ poliedro (convesso).
 
 ### Faccia
 
+^14f224
+
 Per alcuni $I⊆\{1,…,n\}$ si può associare una faccia del poliedro: $P_I=\{x∈P:A_ix=b_i \quad i∈I\}≠ ∅$ (se è $=∅$ non è una faccia).
 
 Esempi (bisogna anche assicurarsi che i vincoli restino soddisfatti):
 - $I=\{3\}→x_2=2$
 - $I=\{2,4\}→x_1+x_2=5,x_2=0→P=\{(5,0)\}$ (vertice)
-- $I=\{1,2\}→\begin{cases}-x_1+x_2=4 \\ x_1+x_2=5 \end{cases}→P_{\{1,2\}}=∅$
+- $I=\{1,2\}→\begin{cases}-x_1+2x_2=4 \\ x_1+x_2=5 \end{cases}→P_{\{1,2\}}=∅$
+	- L'intersezione $(2,3)$ non rientra nella regione ammissibile (non soddisfa il vincolo 3)
 - $I=∅→P_∅=P$ (faccia "non propria")
 - $I=\{1,4,5\}→P_{\{1,4,5\}}=\{(-4,0)\}$ (vertice)
 	- $P_{\{1,4\}}=P_{\{1,5\}}=P_{\{4,5\}}=P_{\{1,4,5\}}$
-	- Il vincolo 5 è superfluo in questo caso, ma quando un punto è identificato da più di $n$ vincoli, non è vero che è un vincolo sia necessariamente superfluo (anche se è vero con $n=2$)
-		- Per esempio, in ℝ³, una piramide a base quadrata ha il vertice identificato 4 volte.
+	- Il vincolo 5 è completamente superfluo in questo caso, ma non è vero che, quando un punto è identificato da più di $n$ vincoli, uno di essi sia superfluo (anche se è vero con $n=2$)
+		- Per esempio, in ℝ³, una piramide a base quadrata ha il vertice identificato da 4 vincoli
 
 $\bar{x}∈P\quad I(\bar{x})=\{i:A_i\bar{x}=b_i\}$ (insieme degli indici dei *vincoli attivi* in $\bar{x}$)
 
@@ -133,7 +136,7 @@ Dati i vettori $v^1,v^2,…,v^t∈ℝ^n$:
 
 $cono(\{v^1,…,v^t\})=\{∑\limits^t_{i=1} μ_iv^i:μ_i≥0\}$
 
-Ogni vettore può essere allungato indipendentemente quanto vuole (fino all'infinito).
+Ogni vettore può essere allungato indipendentemente quanto si vuole (fino all'infinito).
 
 ### Decomposizione di poliedri (Motzkin 1936)
 
@@ -149,12 +152,12 @@ $X=\{x^1,…,x^s\},\quad V=\{v^1,…,v^t\}$
 - $P$ limitato $⇔V=\{\underline{0}\}$
 - Se $P$ possiede vertice, allora $X=\{\text{vertici}\}$
 
-Col problema di prima, togliendo l'ultimo vincolo, abbiamo:
+Con un problema simile a quello di prima, senza il vincolo 4, abbiamo:
 ![[Regione ammissibile 2.jpg]]
 
 ## Teorema fondamentale della programmazione lineare
 
-Sia $P=conv(\{x_1,…,x^s\})+cono(\{v_1,…,v^t\})⊆ℝ^n$ un poliedro
+Sia $P=conv(\{x^1,…,x^s\})+cono(\{v^1,…,v^t\})⊆ℝ^n$ un poliedro
 
 >[!important]
 $\max\{c·x:x∈P\}$ ha ottimo finito ⇔ $c·v^i≤0 \quad ∀i=1…t$.

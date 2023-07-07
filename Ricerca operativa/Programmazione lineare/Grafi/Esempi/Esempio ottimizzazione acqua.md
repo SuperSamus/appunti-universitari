@@ -2,7 +2,7 @@
 
 I numeri tra parentesi sono la quantità d'acqua che viene prodotta in quel nodo, identificato dal numero fuori dalla parentesi.
 
-Tutta questa acqua deve essere mandata nel depuratore  rappresentato dal nodo 1, minimizzando i costi (mostrati negli archi, per unità d'acqua).
+Tutta questa acqua deve essere mandata nel depuratore rappresentato dal nodo 1, minimizzando i costi (mostrati negli archi, per unità d'acqua).
 
 Per esempio:
 

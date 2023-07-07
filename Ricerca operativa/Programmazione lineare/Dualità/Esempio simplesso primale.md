@@ -19,7 +19,7 @@ Stavolta prendiamo il vertice da una base. Scegliamo $B=\{4,5\}$:
 - $N=\{1,2,3\}$
 - $A_B=\begin{bmatrix}-1 & 1 \\ -1 & 0\end{bmatrix}$
 - $A_B^{-1}=\begin{bmatrix}0 & -1 \\ 1 & -1\end{bmatrix}$
-- $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}0 & -1 \\ 1 & -1\end{bmatrix}\begin{bmatrix}1 \\ 0\end{bmatrix}=\begin{bmatrix}0 \\ 1\end{bmatrix}$
+- $\bar{x}=A_B^{-1}b_B=\begin{bmatrix}0 & -1 \\ 1 & -1\end{bmatrix}\begin{bmatrix}1 \\ 0\end{bmatrix}=\begin{bmatrix}0 \\ 1\end{bmatrix}$, è ammissibile
 - $I(\bar{x})=\{4,5\}=B$, non degenere
 - $\bar{y}=cA_B^{-1}=\begin{bmatrix}2 & 1\end{bmatrix}\begin{bmatrix}0 & -1 \\ 1 & -1\end{bmatrix}=\begin{bmatrix}1 & -3\end{bmatrix}$
 	- $\bar{y}=(0,0,0,1,-3)$ non ammissibile
@@ -30,7 +30,7 @@ Cerchiamo di rimuovere l'elemento problematico della base:
 
 - $h∈B \text{ t.c. } \bar{y}_h<0$ **indice uscente**
 	- Qui, $h=5$.
-- $B(h)=$ posizione di $h$ nella base
+- $B(h)=$ indice di $h$ relativamente alla base
 	- Qui, $B(h)=2$
 - $u_{B(h)}∈ℝ^n \text{ t.c. } [u_{B(h)}]_i=\begin{cases}1 & i=B(h) \\ 0 & i≠B(h)\end{cases}$
 - $ξ=-A_B^{-1}u_{B(h)}=\begin{bmatrix}0 & 1 \\ -1 & 1\end{bmatrix}\begin{bmatrix}0 \\ 1\end{bmatrix}=\begin{bmatrix}1 \\ 1\end{bmatrix}$

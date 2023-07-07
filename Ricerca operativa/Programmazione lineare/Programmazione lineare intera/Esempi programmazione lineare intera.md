@@ -38,7 +38,7 @@ $\tilde{A}=A_NA_B^{-1}=\begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}\begin{bmatrix}
 
 Aggiungiamo quindi il vincolo: $∑\limits_{j∈N}\{\tilde{A}_{jr}\}\bar{y}_j≥\{\bar{y}_r\}→\{\frac{1}{4}\}y_3+\{\frac{1}{4}\}y_4≥\{\frac{3}{2}\}→\frac{1}{4}s_1+\frac{1}{4}s_2≥\frac{1}{2}→s_1+s_2≥2$
 
-Per riportare il problema alla forma originale:
+Per portare il vincolo alla forma originale:
 - $s_1=6-3x_1-2x_2$
 - $s_2=3x_1-2x_2$
 
@@ -82,7 +82,7 @@ $\tilde{A}=A_NA_B^{-1}=\begin{bmatrix}7 & 1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}
 
 Aggiungiamo quindi il vincolo: $∑\limits_{j∈N}\{\tilde{A}_{jr}\}\bar{y}_j≥\{\bar{y}_r\}→\{\frac{7}{2}\}y_2+\{\frac{1}{2}\}y_3≥\{\frac{7}{2}\}→\frac{1}{2}x_2+\frac{1}{2}s_1≥\frac{1}{2}→x_2+s_1≥1$
 
-Per riportare il problema alla forma originale:
+Per portare il vincolo alla forma originale:
 - $s_1=7-2x_1-7x_2$
 
 $x_2+s_1≥1→x_2+7-2x_1-7x_2≥1→-2x_1-6x_2≥-6→x_1+3x_2≤3$
@@ -127,7 +127,7 @@ $\tilde{A}=A_NA_B^{-1}=\begin{bmatrix}1 & 0 & 0 \\ 0 & 0 & 1\end{bmatrix}\begin{
 
 Aggiungiamo quindi il vincolo: $∑\limits_{j∈N}\{\tilde{A}_{jr}\}\bar{y}_j≥\{\bar{y}_r\}→\{\frac{1}{12}\}y_3+\{-\frac{1}{6}\}y_5≥\{\frac{8}{3}\}→\frac{1}{12}s_1+\frac{5}{6}s_3≥\frac{2}{3}→s_1+10s_3≥8$
 
-Per riportare il problema alla forma originale:
+Per portare il vincolo alla forma originale:
 - $s_1=36-12x_1-2x_2$
 - $s_3=2-x_2$
 

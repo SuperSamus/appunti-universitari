@@ -1,8 +1,8 @@
 # [[Problemi di ottimizzazione|Ottimizzazione]] flusso di costo minimo
 
-Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$$ per ogni unità trasportata.
+Gli archi hanno una capacità $u_{ij}$ e una costo di $c_{ij}$ per ogni unità trasportata.
 
-Abbiamo i soliti vincoli di [[Ottimizzazione grafi]].
+Abbiamo i soliti vincoli di [[ottimizzazione grafi]].
 
 ```mermaid
 flowchart LR
@@ -41,7 +41,7 @@ flowchart LR
 3 <-- |2 -1$| 4
 ```
 
-Il [[Ottimizzazione trasporto massimo#^8f170a|cammino aumentante]] di costo minimo è $1→3→4$, aggiungiamoci un'unità:
+Il [[Ottimizzazione trasporto massimo#^8f170a|cammino aumentante]] di costo minimo è $\{1,3,4\}$, aggiungiamoci un'unità:
 
 ```mermaid
 flowchart LR
@@ -52,7 +52,7 @@ flowchart LR
 3 ==> |3/3 1$| 4
 ```
 
-Costo $=6+1+3=10$, ma mancano ancora 2 unità.
+$\text{Costo}=6+1+3=10$, ma mancano ancora 2 unità.
 
 Grafo residuo:
 
@@ -94,7 +94,7 @@ flowchart LR
 3 <-- |3 -1$| 4
 ```
 
-Il grafo mostra chiaramente un unico cammino rimasto per l'ultima unità: $1→3→2→4$.
+Il grafo mostra chiaramente un unico cammino rimasto per l'ultima unità: $\{1,3,2,4\}$.
 
 ```mermaid
 flowchart LR
@@ -187,7 +187,7 @@ flowchart LR
 5 <-- |2 -3$| 6
 ```
 
-Il ciclo $\{2,3,5,4\}$ è aumentante: costo $=-4+1+2-1=-2$, con capacità $2$: si può risparmiare un costo $-2*2=-4$ senza cambiare il bilanciamento.
+Il ciclo $\{2,3,5,4\}$ è aumentante di costo negativo: $-4+1+2-1=-2$, con capacità $2$: si può risparmiare $-2*2=-4$ senza cambiare il bilanciamento.
 
 ### Pseudoflusso minimale
 
@@ -209,20 +209,20 @@ Inizializzazione: $x$ pseudoflusso minimale
 
 Si basa sulla proprietà:
 
-$x$ pseudoflusso minimale, $p$ cammino aumentante di costo minimo tra tutti i cammini da $s∈O_x$ e $t∈O_x$
+$x$ pseudoflusso minimale, $p$ cammino aumentante di costo minimo tra tutti i cammini da $s∈O_x$ a $t∈D_x$
 ⇓
 Inviando flusso sul cammino si ottiene un altro pseudoflusso minimale (con sbilanciamento complessivo diminuito di $θ$)
 
-(E ovviamente con tutti i flussi a 0 si parte con uno pseudoflusso minimale. escludendo cicli aumentanti di costo negativo)
+(E ovviamente con tutti i flussi a 0 si parte con uno pseudoflusso minimale, se non ci sono cicli aumentanti di costo negativo)
 
 $\bar{x_{ij}}=\begin{cases}0 & \text{se } c_{ij}≥0 \\ u_{ij} & \text{se }c_{ij}<0 \end{cases}$
 
-Nel suo grafo residuo: costi ≥ 0
+Così nel suo grafo residuo, tutti i costi ≥ 0
 ↓
 Pseudoflusso minimale
 
 Complessità:
-- SPT.L - Bellman-For per iterazione $O(mn)$
+- SPT.L - Bellman-Ford per iterazione $O(mn)$
 - \# iterazione $g(x)=∑\limits_{i∈O_x}e_i(x)≤∑\limits_{(i,j)∈A:c_{ij}<0}u_{ij}+∑\limits_{i∈N:b_i>0}b_i$
 
 Complessivamente: $O(\bar{g}mn)$

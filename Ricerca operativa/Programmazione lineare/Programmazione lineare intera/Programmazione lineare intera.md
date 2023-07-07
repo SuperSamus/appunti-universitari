@@ -11,7 +11,7 @@
 - $y∈ℤ^m_+$
 
 Poliedri:
-$P=\{c∈ℝ^n:Ax≤b\}\quad ჲ=\{y∈ℝ^m:yA=c\}$
+$P=\{x∈ℝ^n:Ax≤b\}\quad ჲ=\{y∈ℝ^m:yA=c\}$
 
 Regioni ammissibili:
 $S=P∩ℤ^n\quad T=ჲ∩ℤ^m$
@@ -29,7 +29,7 @@ Prendere il problema intero e cancellare il vincolo di interezza.
 - $yA=c$
 - $y≥0$
 
-Se $\bar{x}∈P$ soluzione ottima di (P) è a componenti intere, cioè $\bar{x}∈ℤ^n$, allora $\bar{x}$ è soluzione ottima di ($P_I$) (analogamente per ჲ ($D_I$), (D) $\min\{yb:y∈ჲ\}$)
+Se $\bar{x}∈P$ soluzione ottima di (P) è a componenti intere, cioè $\bar{x}∈ℤ^n$, allora $\bar{x}$ è soluzione ottima di ($P_I$) (analogamente per ($D_I$))
 
 Se tutti i vertici di P sono a componenti intere (**proprietà dell'interezza**), allora (P) ammette una soluzione ottima a componenti intere.
 
@@ -44,13 +44,14 @@ $$
 PLI \quad \begin{matrix}\max cx \\ x∈S\end{matrix} ≡ \begin{matrix}\max cx \\ x∈conv\:S\end{matrix} \quad PL
 $$
 
-Tuttavia, ci serve nella forma $conv\:S=\{x∈ℝ^n:\hat{A}x≤\hat{b}\}$, ma trovare $\hat{A}$ e $\hat{b}$ è difficile.
-%%
-Esempio di reticolo infinito che non dà origine a un poliedro:
-$P=\{x∈ℝ^2_+:x_2≥\sqrt{2}x_1\} \quad S=P∩ℤ^2$
-$S$ non è finito
-$conv\:S=\{x∈ℝ^2_+:x_2>\sqrt{2}x_1\}$ non è un poliedro!
-%%
+Si cerca di avere il problema PL nella forma $conv\:S=\{x∈ℝ^n:\hat{A}x≤\hat{b}\}$, ma trovare $\hat{A}$ e $\hat{b}$ è difficile. Cercheremo di approssimarli meglio che si può.
+
+Non sempre si può ottenere un poliedro.
+Se $P=\{x∈ℝ^n:Ax≤b\}$ con $A∈ℤ^{m×n},b∈ℤ^m$, allora $conv(P∩ℤ^n)$ è un poliedro convesso.
+
+Altrimenti, potrebbe non esserlo: per esempio: $P=\{x∈ℝ^2_+:x_2≥\sqrt{2}x_1\} \quad S=P∩ℤ^2$
+$conv\:S=\{x∈ℝ^2_+:x_2>\sqrt{2}x_1\}$ non è un poliedro convesso.
+
 #### Piano di taglio
 
 Disuguaglianza valida: un vincolo di disuguaglianza soddisfatto da tutti i punti del reticolo intero. Per essere utile, deve tagliare una porzione del poliedro del PL, e preferibilmente taglia via la sua soluzione ottima (dato che non è ammissibile nel PLI).
@@ -91,7 +92,7 @@ La dimostrazione su perché il reticolo intero sia tutto incluso nel piano di ta
 ###### Algoritmo
 
 1. Si prende il problema in formato duale
-	- Se il problema è in formato primale, si usano le [[Programmazione lineare#^4d0160|trasformazioni equivalenti]] per trasformarlo in formato duale (NON fare il suo duale). La soluzione non cambierà (anche se si potrebbero aggiungere scarti).
+	- Se il problema è in formato primale, si usano le [[Programmazione lineare#^4d0160|trasformazioni equivalenti]] per trasformarlo in formato duale (NON prendere il suo duale: la [[Dualità#^2361d6|dualità forte]] non è garantita). La soluzione non cambierà (anche se si potrebbero aggiungere scarti).
 1. Se ne prende il rilassamento continuo
 2. Si calcola una sua soluzione ottima di base
 3. Se la soluzione è a componenti intere, STOP

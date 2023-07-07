@@ -8,7 +8,7 @@ flowchart LR
 3 --> |2| 6 --> |2| 2
 ```
 
-L'obiettivo è di trasportare la maggior quantità di flusso possibile da $1$ e $7$. Tuttavia, i tubi (archi) hanno una capacità massima nel trasporto di acqua ($u_{ij}$), e i nodi non ammettono di ricevere più acqua di quella mandano (e ovviamente anche il contrario). Come si distribuisce il flusso?
+L'obiettivo è di trasportare la maggior quantità di flusso possibile da $1$ e $7$. Tuttavia, i tubi (archi) hanno una capacità massima nel trasporto di acqua ($u_{ij}$), e i nodi non ammettono di ricevere più acqua di quella che mandano (e ovviamente anche il contrario). Come si distribuisce il flusso?
 
 Dati:
 - $s=1$ origine
@@ -29,8 +29,13 @@ flowchart LR
 
 In questo caso la soluzione ammissibile è $V=8$. Si può fare di meglio?
 
+## Cammino aumentante
+
+>[!info]
+>Dato un flusso ammissibile, un cammino aumentante è un cammino orientato da una sorgente $s$ a un pozzo $t$ nel [[Ottimizzazione trasporto massimo#^8639e2|grafo residuo]].
+
 Si potrebbe aumentare la quantità di flusso lungo questo cammino orientato:
-$P=\{1,2,4,5,7\}$ (cammino aumentante)
+$P=\{1,2,4,5,7\}$
 
 Di quanto si aumenta? Del minimo della capacità residua degli archi.
 
@@ -48,7 +53,7 @@ flowchart LR
 
 Ora $V=8+1=9$
 
-Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $\{1,2,4,7\}$, ma $(4,7)$ è già saturo, quindi in $4$ si accumula un'unità di flusso. Possiamo allora riportare questo eccesso indietro, verso il nodo $6$, causando ora un eccesso di 1 lì. Si può rifare la stessa cosa verso il nodo $3$, che però ha spazio libero in $(3,5)$, come c'è spazio in $(5,7)$. Abbiamo quindi questo cammino con $V=10$, anche se non è orientato.
+Si può fare ancora di più? Sembra quasi che si potrebbe aumentare il flusso in $\{1,2,4,7\}$, ma $(4,7)$ è già saturo, quindi in $4$ si accumula un'unità di flusso. Possiamo allora riportare questo eccesso indietro, verso il nodo $6$, causando ora un eccesso di 1 lì. Si può rifare la stessa cosa verso il nodo $3$. Da lì, c'è capacità residua in $(3,5)$, e si può finalmente arrivare tramite $(5,7)$. Abbiamo quindi questo cammino (non orientato) che ci porta a $V=10$.
 
 ```mermaid
 flowchart LR
@@ -74,7 +79,7 @@ $P$ è un *cammino aumentante* se: ^8f170a
 
 ## [[Ottimizzazione grafi#^64bc6c|Tagli]]
 
-Si può fare ancora meglio? Facendo un taglio che separa l'origine da tutto e prendendo gli archi diretti nel taglio, sembra che al massimo si possa ottenere $6+1+4=11$, idem separando la destinazione da tutto, $6+5=11$. Tuttavia il taglio che separa $\{1,2\}$ da tutto il resto dice un altra storia: $5+1+4=10$ (si esclude l'arco inverso nel taglio $(6,2)$), e abbiamo già raggiunto un $V=10$.
+Si può fare ancora meglio? Facendo un taglio che separa l'origine da tutto e prendendo gli archi diretti nel taglio, sembra che il massimo che possa scorrere sia $6+1+4=11$, idem separando la destinazione da tutto, $6+5=11$. Tuttavia il taglio che separa $\{1,2\}$ da tutto il resto dice un altra storia: $5+1+4=10$ (si esclude l'arco inverso nell'arco $(6,2)$), e avevamo già raggiunto un $V=10$.
 
 Generalmente:
 - $(N_s,N_t)$ taglio che separa $s$ da $t$
@@ -89,7 +94,7 @@ Generalmente:
 
 Se $v=x(N_s,N_t)=u(N_s,N_t)$, allora il flusso è di valore massimo e il taglio è di capacità minima. (Nota: è possibile che esista più di un flusso massimo)
 
-Quindi formalmente, proviamo a trovare un cammino aumentante. L'unico arco possibile è $(1,2)$, e il cammino è già terminato.
+Quindi formalmente, proviamo a trovare un cammino aumentante. L'unico arco non saturo è $(1,2)$, e il cammino già non può più andare avanti.
 
 - $N_s=\{\text{nodi visitati}\}=\{1,2\}$
 - $N_t=\{\text{nodi non visitati}\}=\{3,4,5,6,7\}$
@@ -145,7 +150,7 @@ Ciò si può sfruttare per:
 
 Assumendo un $x$ iniziale "intero" ($x_{ij}∈ℤ_+$) e una capacità del taglio finita ($u_{ij}∈ℤ_+)$:
 - $u(\{s\},N∖\{s\})≤(n-1)U$
-- $U=\max\{u_{ij}:(i,j)∈A\}$
+	- $U=\max\{u_{ij}:(i,j)∈A\}$
 - Complessità: $O(nmu)$
 	- Numero di iterazioni: $O(nU)$
 	- Costo iterazione: $O(m)$
@@ -195,7 +200,7 @@ i1[i] --> j1[j]
 end
 Arco --> |"non vuoto xij&gt;0"| TestaCoda
 subgraph TestaCoda
-i2[j] <-- j2[i]
+i2[i] <-- j2[j]
 end
 ```
 

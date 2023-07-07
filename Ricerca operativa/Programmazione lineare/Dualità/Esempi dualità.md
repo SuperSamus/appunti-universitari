@@ -37,11 +37,12 @@ Quindi $\bar{x}=(2,1)$ è soluzione ottima.
 
 ---
 
-Con il [[Dualità#^15b491|lemma di Farkas]]:
+Con il [[Dualità#^4e2ee6|teorema degli scarti complementari]]:
 
 $I(\bar{x})=\{1,2\}$
 - $y_{I(\bar{x})}=\begin{bmatrix} y_1 & y_2 \end{bmatrix}$
 - $A_{I(\bar{x})}=\begin{bmatrix} A_1 \\ A_2 \end{bmatrix}$
+- $y_3=0$
 
 $y_{I(\bar{x})}A_{I(\bar{x})}=c→\begin{bmatrix} y_1 & y_2 \end{bmatrix}\begin{bmatrix} 1 & -1 \\ 1 & 1 \end{bmatrix}=\begin{bmatrix} 3 \\ 2 \end{bmatrix}$
 
@@ -132,7 +133,7 @@ Vincoli:
 - $y_2,y_3,y_4≥0$
 	- $y_2+y_3+y_4=0$
 	- $y_2-y_4=1$
-	- Questo è impossibile: la prima condizione chiede che siano tutti uguali a 0, ma ciò impedisce di soddisfare la seconda condizione.
+		- Questo è impossibile: la prima condizione richiede che $y_2,y_4=0$.
 
 $\bar{x}$ non è ottimo. Cerchiamo di farlo [[Dualità#^247330|crescere]].
 

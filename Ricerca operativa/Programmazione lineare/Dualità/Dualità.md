@@ -13,7 +13,7 @@ Possiamo quindi dire che abbiamo:
 - $A=\begin{bmatrix} 4 & 2 \\ 2 & 1 \\ 3 & 4 \end{bmatrix}$
 - $b=\begin{bmatrix} 120 \\ 75 \\ 95 \end{bmatrix}$
 - $c=\begin{bmatrix} 15 \\ 3 \end{bmatrix}$
-ff
+
 Funzione obiettivo: $\min 120y_1+75y_2+95y_3$ ($y·b$)
 
 Vincoli ($A^Ty≥c↔yA≥c$):
@@ -124,18 +124,19 @@ In altre parole, l'angolo tra i vettori $c$ e $ξ$ è minore di 90°.
 
 ---
 
+Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora:
 >[!important]
-Sia $\bar{x}∈ℝ^n$ ammissibile per (P). Allora $\bar{x}$ è una soluzione ottima per (P)
+$\bar{x}$ è una soluzione ottima per (P)
 ⇔
 $\bar{x}$ non ammette direzioni ammissibili di crescita.
 
 Dimostrare ⇒ è ovvio.
 
-Dimostrazione ⇐ per assurdo: supponiamo $\bar{x}$ non ottima, ovvero $∃x∈ℝ^n$ ammissibile per (P) tale che $c·x>c·\bar{x}$.
+Dimostrazione ⇐ per assurdo, supponiamo $\bar{x}$ non ottima:
+- $∃x∈ℝ^n$ ammissibile per (P) tale che $c·x>c·\bar{x}$.
 - La direzione di crescita è $ξ=x-\bar{x}→c·ξ=c·(x-\bar{x})=c·x-c·\bar{x}>0$
-- Per $λ∈[0,1]$, la combinazione convessa tra $x$ e $\bar{x}$, ovvero $\bar{x}+λξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$, è ammissibile
-
-Da qui, definiamo:
+- La direzione di crescita $ξ$ è quindi ammissibile per $\bar{x}$, contraddicendo l'ipotesi
+	- Se vogliamo essere pedanti, c'è un'intera combinazione lineare convessa tra $x$ e $\bar{x}$, tutta ammissibile: per $λ∈[0,1]$, $\bar{x}+λξ=\bar{x}+λ(x-\bar{x})=(1-λ)\bar{x}+λx$
 
 ### Direzione ammissibile di crescita
 
@@ -154,10 +155,10 @@ Possibili casi, vincolo per vincolo:
 		- Se $A_iξ>0$, ok ↔ $λ≤\cfrac{(b_i-A_i\bar{x})}{A_iξ}$ (che è $>0$)
 		- In entrambi i casi, la direzione di crescita è ammissibile ($λ$ si può scegliere).
 
-Quindi, i vincoli attivi sono gli unici "problematici" per scegliere una direzione ammissibile di crescita.
+Quindi, i [[Programmazione lineare#^14f224|vincoli attivi]] sono gli unici "problematici" per scegliere una direzione ammissibile di crescita.
 
 $ξ∈ℝ^n$ direzione ammissibile per $\bar{x}$ ⇔ $A_iξ≤0\quad ∀i∈I(\bar{x})$
-
+Scritto in modo più compatto: $A_{I(\bar{x})}ξ≤0$
 >[!important]
 >$\bar{x}$ non ammette direzioni ammissibili di crescita
 >⇔
@@ -169,8 +170,6 @@ Di quanto ci si può spostare al massimo $\bar{λ}$?
 - $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$
 
 ### Lemma di Farkas (1902)
-
-^15b491
 
 I suoi vari lemmi legano l'impossibilità del risolvere un sistema con la possibilità del risolverne un altro. Qui non si dimostrerà.
 
@@ -229,7 +228,7 @@ Detto in altro modo:
 
 Rivedi [[Programmazione lineare#^1cbebb|basi]].
 
-$B⊆I(\bar{x})$
+I vincoli della base sono attivi: $B⊆I(\bar{x})$
 
 ### Soluzione primale di base: $\bar{x}=A_B^{-1}b_B$
 
@@ -284,14 +283,15 @@ Input: $B$ base primale ammissibile
 3. Scegliere $h∈B \text{ t.c. } \bar{y}_h<0$ (indice uscente)
 4. $ξ=-A_B^{-1}u_{B(h)}$ (direzione di crescita)
 	- $u_{B(h)}∈ℝ^n \text{ t.c. } [u_{B(h)}]_i=\begin{cases}1 & i=B(h) \\ 0 & i≠B(h)\end{cases}$
+		- $B(h)$ è l'indice di $h$ relativamente alla base
 		- È sostanzialmente la $B(h)$-esima colonna di $-A_B^{-1}$
 	- $c·ξ=-cA_B^{-1}u_{B(h)}=-\bar{y}_B·u_{B(h)}=-\bar{y}_h>0$
 	- $A_Bξ=-A_BA_B^{-1}u_{B(h)}=-u_{B(h)}≤0$
-		- Per $i∈B$, dato che $A_iξ=\begin{cases}-1 & \text{se }i=h \\ 0 & \text{se }i≠h\end{cases}$, se ci si sposta da $\bar{x}$ di un passo $λ$ nella direzione $ξ$, $A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ=\begin{cases}A_i\bar{x}=b & i≠h \\ <A_i\bar{x}=b & i=h\end{cases}$
+		- Per $i∈B$, dato che $A_iξ=\begin{cases}-1 & \text{se }i=h \\ 0 & \text{se }i≠h\end{cases}$, se ci si sposta da $\bar{x}$ di un passo $λ$ nella direzione $ξ$, allora $A_i(\bar{x}+λξ)=A_i\bar{x}+λA_iξ=\begin{cases}<A_i\bar{x}=b & i=h \\ A_i\bar{x}=b & i≠h\end{cases}$
 			- Detto in altro modo: tutti i vincoli della base rimangono attivi.
 >[!warning]
 >La proprietà $A_{I(\bar{x})}ξ≤0$ non resta per forza vera (lo resta solo sulla base), quindi su basi [[Dualità#^e880fd|degeneri]] bisogna controllare manualmente che la proprietà sia rimasta vera nei vincoli attivi che non sono nella base.
-5. $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$ (passo) con $\bar{λ}=\begin{cases}\bar{λ}_i=+∞ & \text{se } A_iξ≤0 \\ \bar{λ}_i=\cfrac{b_i-A_i\bar{x}}{A_iξ} & \text{se }A_iξ>0\end{cases}$
+5. $\bar{λ}=\min\{\bar{λ}_i:i∈N\}$ (passo) con $\begin{cases}\bar{λ}_i=+∞ & \text{se } A_iξ≤0 \\ \bar{λ}_i=\cfrac{b_i-A_i\bar{x}}{A_iξ} & \text{se }A_iξ>0\end{cases}$
 6. Se $\bar{λ}=+∞$ (ovvero $A_iξ≤0$), STOP → $\begin{matrix}\text{(P) superiormente illimitato} \\ \text{(D) vuoto}\end{matrix}$
 7. Scegliere $k∈N \text{ t.c } \bar{λ}=\bar{λ}_k$ (indice entrante)
 8. $B=B∖\{h\}∪\{k\}$ (cambio di base)
@@ -303,7 +303,10 @@ Input: $B$ base primale ammissibile
 >- $A_i$ graficamente rappresenta la direzione normale dell'area coperta dal vincolo
 >- $y_i∈ℝ$, è solo uno scalare
 >
->Se la combinazione lineare (cioè $∑\limits_{i∈I(\bar{x})}y_iA_i$) per ottenere $c$ richiede un $y_i$ negativo, e ti sposti attraverso il vincolo che non è rappresentato da $A_i$. 
+>Il punto $\bar{x}$ si troverà in una combinazione lineare dei vettori rappresentati da $A_i$ (con $i∈B$). Se uno degli $A_i$ è rivolto in una direzione che peggiora l'obiettivo, allora $y_i<0$.
+>
+> Per esempio, in questa immagine $\bar{x}$ usa $B=\{5,6\}$, e si può vedere che entrambi i vincoli stanno peggiorando l'obiettivo: $y_5,y_6<0$.
+>![[Simplesso grafico.png]]
 
 La complessità è NP. Esiste un algoritmo polinomiale, ma è estremamente complesso.
 
@@ -334,16 +337,16 @@ Input: $B$ base duale ammissibile
 - $\bar{y}=(cA_B^{-1},0)≥0$
 - Vediamo se la corrispondente base primale è ammissibile, cioè dato $\bar{x}=A_B^{-1}b_B$, verifica $A_N\bar{x}≤b_N$
 - Se non è ammissibile, esiste almeno un vincolo violato: $k=\min\{i∈N:A_i\bar{x}>b_i\}$
-- Direzione di decrescita per indice: $d_i=\begin{cases}-η_B & i∈B \\ 1 & i = k \\ 0 & i∈N∖\{k\}\end{cases}$, con $η_B=A_kA_B^{-1}$
+- Direzione di decrescita per indice: $d_i=\begin{cases}-[η_B]_{B(i)} & i∈B \\ 1 & i = k \\ 0 & i∈N∖\{k\}\end{cases}$, con $η_B=A_kA_B^{-1}$
 	- $d·b=-η_Bb_B+b_k=-A_kA_B^{-1}b_B+b_k=-A_k\bar{x}+b_k<0$
-- Ammissibilità direzione ($\bar{y}+θd$ è ammissibile?)
-	- ($\bar{y}+θd)A=\bar{y}A+θdA=\bar{y}A=c$
-		- $dA=-η_BA_B+A_k=-A_kA_B^{-1}A_B+A_k=-A_k+A_k=0$
+	- Ammissibilità direzione ($\bar{y}+θd$ è ammissibile?)
+		- ($\bar{y}+θd)A=\bar{y}A+θdA=\bar{y}A=c$
+			- $dA=-η_BA_B+A_k=-A_kA_B^{-1}A_B+A_k=-A_k+A_k=0$
 - Massimo passo di spostamento
 	- $\bar{y}+θd≥0⇔θ≤\bar{θ}=\min\{\bar{θ}_i:i∈B\}$
 		- $\bar{θ}_i=\begin{cases}\cfrac{\bar{y}_i}{η_i} & η_i>0 \\ +∞ & η_i≤0\end{cases}$
-		- Per $i∈N$, allora $d_i≥0$ (è 0 o 1)
-		- Per $i∈B$. allora $(\bar{y}+θd)_i=\bar{y}_i-θη_i$ (che è $>0$ se $θ<\bar{θ}$, oppure $=0$ se $θ=\bar{θ}$)
+		- Per $i∈N$, allora $d_i≥0$ (è 0 o 1), quindi ci si può spostare all'infinito
+		- Per $i∈B$, allora $(\bar{y}+θd)_i=\bar{y}_i-θη_i$
 - Indice uscente $h=\min\{i∈B:\bar{θ}=\bar{θ}_i\}$
 - Nuova base $B'=b∖\{h\}∪\{k\}$ è duale ammissibile e $\bar{y}+θd$ è la corrispondente soluzione di base
 
@@ -368,8 +371,10 @@ Riscrivo la regione ammissibile. Oltre ai soliti vincoli...
 
 Cerco di ottimizzare $\min∑\limits_iv_i$.
 
-$B∪J$ (di dimensione $n+|J|$, dato che il numero di variabili è aumentato di $|J|$) è una base ammissibile.
+$B∪J$ è una base ammissibile.
+- $|B∪J|=n+|J|$
+- $|\text{vincoli}|=m+|J|$
 
-Eseguendo l'algoritmo simplesso primale con questa base e vincoli, si otterrà la soluzione ottima $(x^*,v^*)$, cioè la soluzione "normale" e i resti degli scarti ($A_Jx^*-b_J$):
+Eseguendo l'algoritmo del simplesso primale con questa base e vincoli, si otterrà la soluzione ottima $(x^*,v^*)$, cioè la soluzione "normale" e i resti degli scarti ($A_Jx^*-b_J$):
 - $v^*≠0⇒$ (P) non ammette soluzioni ammissibili
 - $v^*=0⇒$ $x^*$ è soluzione ammissibile per (P)
