@@ -32,7 +32,7 @@ Problema di copertura: selezionare sottoinsiemi in modo che ciascun elemento di 
 Da trovare:
 - $x_j ∈ \{0,1\} \quad x_j=\begin{cases} 1 &\text{se selezioniamo } F_j \\ 0 &\text{altrimenti} \end{cases}$
 
-VIncoli:
+Vincoli:
 - Vincolo di copertura: $∑\limits_{j=1}^m a_{ij}x_j ≥ 1 \quad i ∈ N$
 	- Con $=$: vincolo di partizione
 	- Con $≤$: vincolo di riempimento (obiettivo max)

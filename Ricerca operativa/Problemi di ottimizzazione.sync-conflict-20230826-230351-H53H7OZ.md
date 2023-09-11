@@ -3,7 +3,7 @@
 - $X$ spazio delle soluzioni
 	- $A ⊆ X$ insieme delle soluzioni ammissibili (regione ammissibile)
 - $f:X → R$ misura della "qualità" delle soluzioni (funzione obiettivo)
-- $(P) \quad \min\{f(x):x ∈ A\}$
+- $(P) \quad min\{f(x):x ∈ A\}$
 - **Valore ottimo**: estremo inferiore di $\{f(x):x ∈ A\}$
 	* *$z^* ∈ R$ valore ottimo di $(P)$ se
 		- $z^* ≤ f(x) \; ∀x ∈ A$
@@ -19,11 +19,11 @@ $x^* ∈ A \text{ è soluzione ottima} ⟺ f(x^*) \; \text{valore ottimo}$
 - $A = ∅$ (valore ottimo = +∞)
 	- Esempio: $A=\{x ∈ ℝ: x ≤ 0, x ≥ 1\}$
 - ∃ valore ottimo e ∃soluzione ottima
-	- Esempio: $\min\{x^2: x ∈ ℝ\}$
+	- Esempio: $min\{x^2: x ∈ ℝ\}$
 - ∃ valore ottimo e ∄ soluzione ottima
-	- Esempio: $\min\{e^{-x}: x ∈ ℝ\}$
+	- Esempio: $min\{e^{-x}: x ∈ ℝ\}$
 - ∄ valore ottimo
-	- Esempio: $\min\{log(x): x > 0\}$
+	- Esempio: $min\{log(x): x > 0\}$
 	- Problema inferiormente illimitato: (valore ottimo = −∞)
 	- $∀k ∈ ℕ \; ∃ x^k ∈ A : f(x^k) < -k$
 
@@ -48,6 +48,6 @@ $A=\{x ∈ X : g_1(x) ≤ 0,…,g_n(x) ≤ 0\}$ (Minore/maggiore rimpiazzabili a
 ## Tipi di programmazione
 
 - **[[Programmazione lineare]]**: $f$ lineare, $g_i$ affini
-    - **Lineare intera**: $X=ℤ^n, X=\{0,1\}^n$
+    - **Lineare intera**: $X= ℤ^n, X=\{0,1\}^n$
     - Con le funzioni lineari, la soluzione ottima esiste sempre
 - **Programmazione non lineare**: almeno una funzione è non lineare

@@ -1,44 +1,60 @@
 - $E[X]=∑\limits_{i=1}^nx_i*P\{X=x_i\}$
 	- $E[f(X)]=∑\limits_{i=1}^nf(x_i)*P\{X=x_i\}$
-	- Se $X∈\{0,1\}$, allora $E[X]=P(X)$
+	- $E[X+Y]=E[X]+E[Y]$
+	- $E[aX+b]=aE[X]+b$
 - $Var(X)=E[(X-μ_X)^2]=E[X^2]-E[X]^2$
-	- Se $X∈\{0,1\}$, allora $Var(X)=P(X)(1-P(X))$
+	- $Var(X+Y)=Var(X)+Var(Y)+Cov(X,Y)$
+	- $Var(aX+b)=a^2Var(X)$
 - $Cov(X, Y)=E[(X-μ_X)(Y-μ_Y)]=E[XY]-E[X]E[Y]$
+	- È uguale a $0$ se $X$ e $Y$ sono indipendenti.
 - $Corr(X, Y)=\frac{Cov(X, Y)}{\sqrt{Var(X)Var(Y)}}$
 - $φ(t) = E[e^{tX}]$
 	- $φ'(0) = E[X]$
 
-- Disuguaglianza di Markov: $P\{X≥a\}≤\frac{E[x]}{a}$
-- Disuguaglianza di Chebyshev: $P\{|X-μ|≥ε\}≤\frac{σ^2}{ε^2}$
-- Legge dei grandi numeri: $\lim\limits_{n→+∞}P\{|\frac{X_1+…+X_n}{n}-μ|>ε\}=0$
+- **Disuguaglianza di Markov**: $P\{X≥a\}≤\frac{E[x]}{a}$
+- **Disuguaglianza di Chebyshev**: $P\{|X-μ|≥k\}≤\frac{σ^2}{k^2}$
+- **Legge dei grandi numeri**: $\lim\limits_{n→+∞}P\{|\frac{X_1+…+X_n}{n}-μ|>ε\}=0$
 	- $X_1+…+X_n$ sono indipendenti e identicamente distribuiti
-- Teorema centrale limite: $\lim\limits_{n→+∞} \frac{\sqrt{n}(\bar{X}_n-μ)}{σ}$ converge verso la normale standard $\mathcal{N}(0,1)$
+- **Teorema centrale limite**: $\lim\limits_{n→+∞} P\{\frac{\sqrt{n}(\bar{X}_n-μ)}{σ}≤z\}=Φ(z)$
 	- $\bar{X}_n=\frac{X_1+…+X_n}{n}$, indipendenti e identicamente distribuite
 	- $\frac{\sqrt{n}(\bar{X}_n-μ)}{σ}=\frac{X_1+…+X_n-nμ}{σ\sqrt{n}}$
 	- Si applica anche per le distribuzioni non standard (in questo caso, indipendentemente da $n$)
 
 Esempi notevoli di variabili aleatorie:
-- Binomiale: $X=\begin{cases}1 & \text{se successo} \\ 0 & \text{altrimenti}\end{cases}$
-	- $E[X]=P\{X=1\}$
-	- $Var(X)=P\{X=1\}(1-P\{X=1\})$
-	- Bernoulli: $P\{X=i\}=\begin{pmatrix}n \\ i\end{pmatrix}p^i(1-p)^{n-1}$
+- **Bernoulli**: $X=\begin{cases}1 & \text{se successo} \\ 0 & \text{altrimenti}\end{cases}$
+	- $E[X]=P\{X=1\}=p$
+	- $Var(X)=P\{X=1\}(1-P\{X=1\})=p(1-p)$
+	- **Geometrica**: $P\{X=i\}=(1-p)^{i-1}p$
+		- Probabilità di avere successo dopo $i$ tentativi
+		- $E[X]=\frac{1-p}{p}$
+		- $Var(X)=\frac{1-p}{p^2}$
+	- **Binomiale**: $P\{X=i\}=\begin{pmatrix}n \\ i\end{pmatrix}p^i(1-p)^{n-1}$
 		- Dopo aver fatto $n$ prove che hanno probabilità $p$ di avere successo, qual è la probabilità che $i$ di esse abbiano avuto successo? (Distribuzione binomiale)
 		- $E[X]=nP\{X=1\}$
 		- $Var(X)=nP\{X=1\}(1-P\{X=1\})$
-- Poisson: $P\{X=i\}=e^{-λ}\frac{λ^i}{i!}$
+- **Poisson**: $P\{X=i\}=e^{-λ}\frac{λ^i}{i!}$
 	- $E[X]=λ$
 	- $Var(X)=λ$
+	- Date due variabili di Poisson $X$ e $Y$ indipendenti, con parametri $λ$ e $μ$ rispettivamente, la variabile $X+Y$ è una variabile di Poisson con parametro $λ+μ$
 	- Con $λ=np$, se $n$ alto e $p$ basso, Poisson approssima bene la distribuzione binomiale
-- Ipergeometrica: $P\{X=i\}=\frac{\begin{pmatrix}N \\ i\end{pmatrix}\begin{pmatrix}M \\ n-i\end{pmatrix}}{\begin{pmatrix}N+M \\ n\end{pmatrix}}$
+%% - **Ipergeometrica**: $P\{X=i\}=\frac{\begin{pmatrix}N \\ i\end{pmatrix}\begin{pmatrix}M \\ n-i\end{pmatrix}}{\begin{pmatrix}N+M \\ n\end{pmatrix}}$
 	- Dato un gruppo di $N$ oggetti e un altro gruppo di $M$ oggetti, ne prendi $n$. Qual è la probabilità di prendere $i$ oggetti del gruppo $N$?
 	- $E[X]=\frac{nN}{N+M}$
-	- $Var(X)=\frac{nNM}{(N+M)^2}(1-\frac{n-1}{N+M-1})$
-- Uniforme: $f(x)=\begin{cases}\frac{1}{β-α} & α≤x≤β \\ 0 & \text{altrimenti}\end{cases}$
+	- $Var(X)=\frac{nNM}{(N+M)^2}(1-\frac{n-1}{N+M-1})$ %%
+- **Uniforme**: $\begin{cases}\frac{1}{β-α} & α≤x≤β \\ 0 & \text{altrimenti}\end{cases}$
 	- $E[X]=\frac{a+b}{2}$
 	- $Var(X)=0$
-- Esponenziale: $f(x)=λe^{-λx} \quad x>0$
+- **Esponenziale**: $λe^{-λx} \quad x>0$
 	- $E[X]=\frac{1}{λ}$
 	- $Var(X)=\frac{1}{λ^2}$
-- Normale (gaussiana): $f(x)=\frac{1}{\sqrt{2π}σ}e^\frac{-(x-μ)^2}{2σ^2}$
+- **Normale (gaussiana)**: $\mathcal{N}(μ,σ^2)=\frac{1}{\sqrt{2π}σ}e^\frac{-(x-μ)^2}{2σ^2}$
 	- $E[X]=μ$, dove la funzione raggiunge il punto più alto
 	- $Var(X)=σ^2$
+	-  Date due variabili di gaussiane $X$ e $Y$ indipendenti, con parametri $μ_1$, $σ_1^2$ e  $μ_2$, $σ_2^2$ rispettivamente, la variabile $X+Y$ è una variabile gaussiana con parametri $μ_1+μ_2$, $σ_1^2+σ_2^2$
+	- $Φ(z)$ è la probabilità che un evento con distribuzione normale standard $\mathcal{N}(0,1)$ abbia risultato inferiore a $z$
+		- $q_β$ è il valore tale che $β=Φ(q_β)$
+	- **Distribuzione t di Student**: $c_ν(1+\frac{x^2}{ν})^{-\frac{ν+1}{2}}$
+		- Funzione generalizzata della normale standard, con $ν$ gradi di libertà.
+			- A $ν→∞$ è uguale, altrimenti, ha la testa più bassa e la coda più alta: ovvero, $P\{T>γ\}≥P\{z>γ\}$ per $γ$ grande.
+		- $c_ν$ è una costante che dipende da $ν$, ovvero $c_ν=\frac{Γ(\frac{ν+1}{2})}{\sqrt{νπ}Γ(\frac{ν}{2})}$
+		- $τ_{β,ν}$ è l'equivalente di $q_β$ (ma per la distribuzione t di Student). Sono praticamente uguali quando $ν≥60$.
