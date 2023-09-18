@@ -1,0 +1,1 @@
+Definizione IEEE: l'approccio sistematico allo sviluppo, all'operatività, alla manutenzione e al ritiro del software
