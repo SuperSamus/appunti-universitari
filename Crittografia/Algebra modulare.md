@@ -27,4 +27,6 @@ function euclid(a, b) {
 }
 ```
 
-Costo: ogni due chiamate ricorsive, il parametro $a$ si riduce di almeno la metà. Quindi nel peggior caso $\log_2(\max\{a,b\})$
+Costo: ogni due chiamate ricorsive, il parametro $a$ si riduce di almeno la metà. Dato che l'operazione modulo si esegue in tempo $O(\log_2 a✕\log_2 b$), nel peggior caso $O(\log_2^3(a))$.
+
+## Generazione sequenza casuale
