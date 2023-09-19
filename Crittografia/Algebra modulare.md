@@ -30,3 +30,7 @@ function euclid(a, b) {
 Costo: ogni due chiamate ricorsive, il parametro $a$ si riduce di almeno la metà. Dato che l'operazione modulo si esegue in tempo $O(\log_2 a✕\log_2 b$), nel peggior caso $O(\log_2^3(a))$.
 
 ## Generazione sequenza casuale
+
+Cos'è esattamente una sequenza casuale?
+Idea: una sequenza binaria $h$ è casuale se NON ammette un algoritmo di generazione la cui rappresentazione binaria sia più corta di $h$.
+Per esempio, un algoritmo che genera soltanto $1$ è più corto di una lunga sequenza di $1$, quindi una sequenza di soli $1$ non è una sequenza casuale.
