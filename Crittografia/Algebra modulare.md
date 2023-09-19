@@ -13,4 +13,18 @@ Proprietà:
 - $a^{r×s} \mod m=(a^r \mod m)^s \mod m$
 
 Nell'aritmetica modulare le funzioni tendono a comportarsi in modo imprevedibile. Rende difficili li cose che sarebbero facili.
-Per esempio, $2^x \mod 13=5$, trova $x$. Ci vuole la forza bruta a capire che $x=5$
+Per esempio, $2^x \mod 13=5$, trova $x$. Ci vuole la forza bruta a capire che $x=9 \mod 12$
+
+## Algoritmo di Euclide
+
+Numero coprimi: il loro MCD è 1.
+
+Funzione di Euclide, ritorna l'MCD di $a$ e $b$:
+```
+function euclid(a, b) {
+    if (b == 0) return a
+    else return euclid(b, a mod b)
+}
+```
+
+Costo: ogni due chiamate ricorsive, il parametro $a$ si riduce di almeno la metà. Quindi nel peggior caso $\log_2(\max\{a,b\})$
