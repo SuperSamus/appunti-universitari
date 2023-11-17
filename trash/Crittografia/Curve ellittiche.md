@@ -49,4 +49,5 @@ Tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere
 
 Trovare $k$ dati $P$ e $Q$ scelti bene invece richiede forza bruta. Non si conoscono metodi migliori.
 
-TODO: Più algoritmi
+#### [[Cifrari asimmetrici#^2ac74b|ElGamal]]
+

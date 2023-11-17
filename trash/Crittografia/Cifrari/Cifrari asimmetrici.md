@@ -74,6 +74,8 @@ Attacco a tempo: più grande è $d$, più tempo ci vuole a decifrare il messaggi
 %%
 ### Cifrario di ElGamal
 
+^2ac74b
+
 Viene svolto in tre fasi.
 
 **Generazione chiavi**, svolta dal destinatario, usando il metodo di **Diffie-Hellman**:
