@@ -26,6 +26,8 @@ L'ordine della curva è il numero dei suoi punti, che può essere al massimo $2p
 
 Dato un $x$, esiste un $y$ che formano un $(x,y)∈E_p(a,b)$ solo se $x^3+ax+b$ forma un *residuo quadratico* (così da poter ottenere i risultati della radice quadrata di $y^2$). Si può dimostrare che in $\frac{p-1}{2}$ elementi di $ℤ_p$ (escluso $0$) sono residui quadratici.
 
+Esistono algoritmi (come quello di Schoof) che permettono di trovare velocemente quali sono i punti della curva, ma si può fare anche con la forza bruta
+
 >[!info]
 >#### Teorema di Hasse
 >Dato $N$ il numero di punti:
