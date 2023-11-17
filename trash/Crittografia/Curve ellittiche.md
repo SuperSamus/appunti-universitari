@@ -49,5 +49,24 @@ Tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere
 
 Trovare $k$ dati $P$ e $Q$ scelti bene invece richiede forza bruta. Non si conoscono metodi migliori.
 
-#### [[Cifrari asimmetrici#^2ac74b|ElGamal]]
+Il numero $n$ più basso tale che $nP=O$ è l'*ordine* del punto.
 
+#### [[Cifrari asimmetrici#^2ac74b|ElGamal]] ellittico
+
+**Generazione chiavi**:
+- Si ha una curva ellittica $E_p(a,b)$ e un punto $B$ della curva di ordine $n$ alto
+- Sceglie a caso $n_U<n$
+- Calcola $P_U=n_UB$
+- Chiave pubblica: $P_U$, chiave privata: $n_U$
+
+**Cifratura** del messaggio $m$:
+- Usa una funzione invertibile (pubblica) $f:m↦P_m$ per ottenere $P_m$
+- Calcola il *segreto condiviso* $s=h^y\mod p$
+- Calcola le cifrature e le invia al destinatario:
+	- $c_1=g^y\mod p$
+	- $c_2=m×s\mod p$
+
+**Decifrazione**, svolta dal destinatario
+- Calcola $s=c_1^x\mod p$
+	- $c_1^x=g^{xy}=h^y$
+- Calcola $m=c_2×s^{-1}\mod p$
