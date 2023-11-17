@@ -82,7 +82,7 @@ Viene svolto in tre fasi.
 - Dato un gruppo ciclico $\mod p$, viene scelto un generatore $g$ (il cui ordine si rappresenta con $n$) e un numero casuale $x∈\{1,...,n-1\}$
 	- Preferibilmente, si vuole che $g$ sia una [[Generatore#^80b90a|radice primitiva]]
 - Calcola $h=g^x\mod p$
-- Chiave pubblica: $<p,n,g,h>$, chiave privata: $x$
+- Chiave pubblica: $<p,h,g,n>$, chiave privata: $x$
 
 **Cifratura**, svolta dal mittente del messaggio $m$:
 - Sceglie un numero casuale $y∈\{1,...,m-1\}$
