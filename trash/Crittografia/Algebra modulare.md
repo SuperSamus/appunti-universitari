@@ -102,3 +102,11 @@ Se il numero è composto, la probabilità di scegliere un $y$ che comunque soddi
  Per calcolare efficientemente $y^z\mod N$, ricorda:
  - Scomponi $z$ in $1+2+4+8+…$ (metti solo quelli rilevanti).
  - $y^{2i}\mod N=(y^i\mod N)^2\mod N$
+
+### Logaritmo discreto
+
+^865e42
+
+Se $n$ non è primo, dato $y=x^z\mod s$, trovare $z$ nella funzione inversa $x=y^{\frac{1}{z}}\mod s$ è difficile. (Miglior algoritmo conosciuto: *index calculus*)
+**Trap door**: se si conosce $v=z^{-1}\mod ϕ(s)$ (chiave segreta), allora $x=y^v\mod s$.
+$$y^v\mod s=x^{zv}\mod s\\=x^{1+kϕ(s)}\mod s=xx^{kϕ(s)}\mod s\\=x\mod s$$

@@ -1,3 +1,5 @@
+Vedere [[algebra modulare]].
+
 ## Generazione numeri pseudocasuali
 
 Ci vuole un algoritmo tale che:
@@ -49,7 +51,7 @@ Affinché il periodo sia lungo, ci vuole che:
 	- $GCD(\frac{p-3}{2},\frac{q-3}{2})$ deve essere più basso possibile (preferibilmente $1$)
 - $x_0$ è il seme
 
-Per sapere se $p$ e $q$ sono primo, usa il [[trash/Crittografia/Algebra modulare#^e0c1c1|test di Miller-Rabin]].
+Per sapere se $p$ e $q$ sono primi, usa il [[trash/Crittografia/Algebra modulare#^e0c1c1|test di Miller-Rabin]].
 
  ---
  
@@ -92,11 +94,3 @@ Ci sono degli $n$ per cui non esistono generatori (per esempio 8).
 >[!info]
 >Se $n$ è primo, avrà $ϕ(n-1)$ generatori.
 >$a=1$ non è mai un generatore.
-
-#### Logaritmo discreto
-
-^865e42
-
-Se $n$ non è primo, dato $y=x^z\mod s$, trovare $z$ nella funzione inversa $x=y^{\frac{1}{z}}\mod s$ è difficile.
-Se però si conosce $v=z^{-1}\mod ϕ(s)$ (chiave segreta), allora $x=y^v\mod s$.
-$$y^v\mod s=x^{zv}\mod s\\=x^{1+kϕ(s)}\mod s=xx^{kϕ(s)}\mod s\\=x\mod s$$

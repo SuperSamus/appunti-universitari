@@ -44,10 +44,10 @@ Sono simili agli algoritmi classici (e.g. ElGamal), ma con:
 
 $Q=kP$
 
-È una funzione one-way trap-door, equivalente al [[Generatore#^865e42|logaritmo discreto]] per l'algebra modulare:
+È una funzione one-way trap-door, equivalente al [[Algebra modulare#^865e42|logaritmo discreto]] per l'algebra modulare:
 Tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere $k$ come somma di potenze di 2, calcolare in successione i punti $2P,4P,8P,…$, e sommare i punti appropriati.
 
-Trovare $k$ dati $P$ e $Q$ scelti bene invece richiede forza bruta. Non si conoscono metodi migliori.
+Il miglior algoritmo conosciuto per trovare $k$ dati $P$ e $Q$ scelti bene (Pollard ρ) è molto peggio rispetto all'index calculus.
 
 Il numero $n$ più basso tale che $nP=O$ è l'*ordine* del punto.
 
