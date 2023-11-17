@@ -6,7 +6,7 @@ Questi due classi non esauriscono i possibili esempi di probabilità su ℝ, ma 
 
 ## 1° classe di esempi: probabilità discrete
 
-Una probabilità discreta su Ω=ℝ è una probabilità su Ω=ℝ, $𝔉=\mathcal{P}(ℝ)$, che sia concentrata su una successione finita o numerabile di punti $x_0,x_1,x_2,…$
+Una probabilità discreta su $Ω=ℝ$ è una probabilità su $Ω=ℝ$, $𝔉=\mathcal{P}(ℝ)$, che sia concentrata su una successione finita o numerabile di punti $x_0,x_1,x_2,…$
 
 Ad esempio, la probabilità associata al n° di "testa" in due lanci di moneta è una probabilità discreta, concentrata su $\{0,1,2\}=\{x_1,x_2,x_3\}$
 
