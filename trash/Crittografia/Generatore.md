@@ -8,7 +8,7 @@ L'algoritmo ha:
 - Input: seme
 	- $s$: Lunghezza del seme
 - Output: flusso di bit arbitrariamente lungo
-	- $n$: Lunghezza del periodo
+	- $n$: Lunghezza del periodo (a.k.a. *ordine*)
 	- La (sotto)sequenza avrà un *periodo*, che si cercherà di avere più lungo possibile ($n>>s$)
 
 
@@ -81,10 +81,10 @@ Per computer normali, non c'è alcuna dimostrazione che non si possa risolvere i
 
 $a∈Z_n^*$ è un generatore di $Z_n^*$ (si veda [[Algebra modulare#^bb0f2f|numeri primi]]) se la funzione
 $a^k\mod n \qquad 1≤k≤ϕ(n)$
-genera tutti e soli gli elementi di $Z_n^*$
+genera tutti e soli gli elementi di $Z_n^*$ (ed è quindi di ordine $ϕ(n)$)
 
 >[!note]
->Per via del teorema di Eulero, $a^k≡1\mod n$ se e solo $k=ϕ(n)$.
+>Per via del teorema di Eulero, $a^k≡1\mod n$ se $k=ϕ(n)$.
 >Se succede anche quando $k≠ϕ(n)$, allora $a$ non è un generatore per $n$.
 
 Ci sono degli $n$ per cui non esistono generatori (per esempio 8).
