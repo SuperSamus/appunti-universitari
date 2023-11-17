@@ -21,7 +21,7 @@ Funzione di decifrazione: $m=D(c,k_{priv})$
 
 È *facile* dalla chiave privata generare quella privata, ma è *difficile* dalla chiave pubblica generare quella privata.
 
-Difetto: è vulnerabile al chosen plain-text attack. 
+Difetto: è vulnerabile al chosen plain-text attack.
 
 ### RSA
 
@@ -72,6 +72,7 @@ Dimostrazione che $D(C(m, e), d)=m$, cioè che $c^d\mod n=(m^e\mod n)^d=m^{ed}\m
 %%
 Attacco a tempo: più grande è $d$, più tempo ci vuole a decifrare il messaggio. Un attaccante può stimare $d$ a seconda della velocità con cui i due utenti comunicano.
 %%
+
 ### Cifrario di ElGamal
 
 ^2ac74b
@@ -79,13 +80,13 @@ Attacco a tempo: più grande è $d$, più tempo ci vuole a decifrare il messaggi
 Viene svolto in tre fasi.
 
 **Generazione chiavi**, svolta dal destinatario, usando il metodo di **Diffie-Hellman**:
-- Dato un gruppo ciclico $\mod p$, viene scelto un generatore $g$ (il cui ordine si rappresenta con $n$) e un numero casuale $x∈\{1,...,n-1\}$
+- Dato un gruppo ciclico $\mod p$, viene scelto un generatore $g$ (il cui ordine si rappresenta con $n$) e un numero casuale $x∈\{1,…,n-1\}$
 	- Preferibilmente, si vuole che $g$ sia una [[Generatore#^80b90a|radice primitiva]]
 - Calcola $h=g^x\mod p$
 - Chiave pubblica: $<p,h,g,n>$, chiave privata: $x$
 
 **Cifratura**, svolta dal mittente del messaggio $m$:
-- Sceglie un numero casuale $y∈\{1,...,m-1\}$
+- Sceglie un numero casuale $y∈\{1,…,m-1\}$
 - Calcola il *segreto condiviso* $s=h^y\mod p$
 - Calcola le cifrature e le invia al destinatario:
 	- $c_1=g^y\mod p$
@@ -96,7 +97,7 @@ Viene svolto in tre fasi.
 	- $c_1^x=g^{xy}=h^y$
 - Calcola $m=c_2×s^{-1}\mod p$
 
-Un attaccante deve ricostruire $s$ con il logaritmo discreto per trovare $x$ o $y$, che è difficile.
+Un attaccante ha bisogno di ricostruire $s$, e per farlo deve trovare $x$ o $y$ con il logaritmo discreto, che è difficile.
 
 Debolezze, che un attaccante può sfruttare:
 - Man-in-the-middle: se non si può conoscere $x$ o $y$, ma si può manipolare i messaggi per la via, allora ci si può inventare uno $z$
@@ -105,4 +106,3 @@ Debolezze, che un attaccante può sfruttare:
 	- Calcola $s_{dest}=h_{real}^z$ per cifrare $m$ e inviare $c_1$ e $c_2$ al destinatario, così che non si accorga di niente
 - Se per qualche motivo conosce un $m$, può calcolare facilmente il segreto condiviso, e sfruttarlo per i messaggi futuri: $s=c_2×m^{-1}\mod q$
 	- Per aggirare il problema, i comunicante generano le chiavi di continuo
-

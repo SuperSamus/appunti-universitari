@@ -71,5 +71,20 @@ Il numero $n$ più basso tale che $nP=O$ è l'*ordine* del punto.
 	- $k(xP)+P_m-x(kP)$
 - Calcola $m=f^{-1}(P_m)$
 
-Un esempio di $f(m)$ sarebbe prendere il punto $(m,\sqrt{m^3+ax+b})$, ma c'è circa il 50% di probabilità che questo non sia un punto valido.
-Alternativa: scegliere un $h$ (pubblico) tale che $(m+1)h<p$
+Un attaccante ha bisogno di trovare $x$ (e decifrare come farebbe il destinatario) o $k$ ($P_m=c_2-kY$), ma per farlo deve usare il logaritmo discreto, che è difficile.
+
+Un esempio di $f(m)$ sarebbe il punto $(m,\sqrt{m^3+ax+b})$, ma c'è circa il 50% di probabilità che questo non sia un punto valido.
+Alternativa: scegliere un $h$ (pubblico) tale che $(m+1)h<p$, e:
+```
+for i=0 to h-1 {
+  x = m * h + i;
+  y = sqrt(x^3 + a*x + b);
+  if is_int(y) {
+    return (x, y);
+  }
+}
+failure!
+```
+
+Probabilità di successo: circa $1-(\frac{1}{2})^h$
+$f^{-1}(x)=⌊\frac{x}{h}⌋$
