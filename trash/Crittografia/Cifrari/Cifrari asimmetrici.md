@@ -91,7 +91,7 @@ Viene svolto in tre fasi.
 	- $c_1=g^y\mod p$
 	- $c_2=m×s\mod p$
 
-**Decifrazione**, svolta dal destinatario
+**Decifrazione**, svolta dal destinatario:
 - Calcola $s=c_1^x\mod p$
 	- $c_1^x=g^{xy}=h^y$
 - Calcola $m=c_2×s^{-1}\mod p$

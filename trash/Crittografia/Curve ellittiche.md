@@ -53,20 +53,23 @@ Il numero $n$ più basso tale che $nP=O$ è l'*ordine* del punto.
 
 #### [[Cifrari asimmetrici#^2ac74b|ElGamal]] ellittico
 
-**Generazione chiavi**:
+**Generazione chiavi**, svolta dal destinatario:
 - Si ha una curva ellittica $E_p(a,b)$ e un punto $P$ della curva di ordine $n$ alto
 - Sceglie a caso $x<n$
 - Calcola $Y=xP$
 - Chiave pubblica: $<Y,P,<p,a,b>,n>$, chiave privata: $x$
 
-**Cifratura** del messaggio $m$:
+**Cifratura**, svolta dal mittente del messaggio $m$:
 - Usa una funzione invertibile (pubblica) $f:m↦P_m$ per ottenere $P_m$
 - Sceglie un numero casuale $k<n$
 - Calcola le cifrature e le invia al destinatario:
 	- $c_1=kP$
 	- $c_2=kY+P_m$
 
-**Decifrazione**, svolta dal destinatario
-- Calcola $s=c_1^x\mod p$
-	- $c_1^x=g^{xy}=h^y$
-- Calcola $m=c_2×s^{-1}\mod p$
+**Decifrazione**, svolta dal destinatario:
+- Calcola $P_m=c_2-xc_1$
+	- $k(xP)+P_m-x(kP)$
+- Calcola $m=f^{-1}(P_m)$
+
+Un esempio di $f(m)$ sarebbe prendere il punto $(m,\sqrt{m^3+ax+b})$, ma c'è circa il 50% di probabilità che questo non sia un punto valido.
+Alternativa: scegliere un $h$ (pubblico) tale che $(m+1)h<p$
