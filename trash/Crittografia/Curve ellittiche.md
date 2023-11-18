@@ -47,7 +47,7 @@ $Q=kP$
 È una funzione one-way trap-door, equivalente al [[Algebra modulare#^865e42|logaritmo discreto]] per l'algebra modulare:
 Tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere $k$ come somma di potenze di 2, calcolare in successione i punti $2P,4P,8P,…$, e sommare i punti appropriati.
 
-Il miglior algoritmo conosciuto per trovare $k$ dati $P$ e $Q$ scelti bene (Pollard ρ) è molto peggio rispetto all'index calculus.
+Il miglior algoritmo conosciuto per trovare $k$ dati $P$ e $Q$ scelti bene (Pollard ρ) è molto peggio rispetto all'index calculus (per la normale algebra modulare), il che rende le curve ellittiche più sicure.
 
 Il numero $n$ più basso tale che $nP=O$ è l'*ordine* del punto.
 
