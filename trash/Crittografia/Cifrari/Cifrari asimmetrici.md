@@ -25,6 +25,8 @@ Difetto: è vulnerabile al chosen plain-text attack.
 
 ### RSA
 
+^63a12b
+
 Vedere [[Generatore#^ec9676|fattorizzazione numeri primi]].
 
 Chiave pubblica: $<e,n>$
