@@ -37,4 +37,8 @@ Un alternativa è apporre la firma, magari usando un MAC per ottenerla.
 Una funzione pubblica $A(m,k)$ di cui il mittente invia il risultato al destinatario, che riapplica la funzione per vedere se riottiene lo stesso risultato.
 Un esempio di funzione è l'[[hash]].
 
-Tutto 
+Tutto questo però non protegge da attacchi man-in-the-middle
+
+## Certificato digitale
+
+Gestiti dalle Certification Authorities (CA), infrastrutture che garantiscono la validità delle chiavi pubbliche.
