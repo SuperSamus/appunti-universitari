@@ -22,6 +22,15 @@ Problema: con la firma stai praticamente consegnando il messaggio in chiaro.
 
 ### Sign & encrypt
 
+Cifrare il messaggio firmato.
+
+Non fare nell'ordine opposto (cifrare e firmare): sennò chiunque può ottenere la cifratura e metterci la propria firma.
+
+È meglio usare un cifrario simmetrico: con un cifrario asimmetrico si sa solo che ha firmato il messaggio, ma tutti possono mandarlo a chiunque (e chi è il destinatario?).
+
+Per server che mandano ACK, potrebbero decidere di rispondere firmando il messaggio  con la propria chiave e cifrandolo con la chiave pubblica del mittente. Attenzione: non devono farlo per messaggi insensati.
+Vogliono dire che un attaccante ha intercettato la cifratura originale per fingersi il mittente (quindi la chiave pubblica della firma che il server userà sarà sbagliata), e con la risposta ricevuta possono risalire al messaggio originale.
+
 ## MAC
 
 Una funzione pubblica $A(m,k)$ di cui il mittente invia il risultato al destinatario, che riapplica la funzione per vedere se riottiene lo stesso risultato.
