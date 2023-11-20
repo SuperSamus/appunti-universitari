@@ -33,7 +33,6 @@ Esistono algoritmi (come quello di Schoof) che permettono di trovare in tempo po
 >Dato $N$ il numero di punti:
 > $|N-(p+1)|≤2{\sqrt{p}}$
 
-
 ### Applicazioni in crittografia
 
 Sono simili agli algoritmi classici (e.g. ElGamal), ma con:
@@ -115,4 +114,12 @@ $f^{-1}(x)=⌊\frac{x}{h}⌋$
 - Calcola $v=X_x\mod n$
 - Se $v=r$, accetta la firma
 
-TODO: Correttezza
+Correttezza:
+- $k=s^{-1}(e+xr)\mod n=w(e+xr)\mod n=(we+wxr)\mod n=(u_1+xu_2)\mod n$
+- $X=u_1P+u_2Q=u_1PB+u_2xP=(u_1+u_2x)P=kP=R$
+	- $r=R_x\mod n$
+	- $v=X_x\mod n$
+
+Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ usato per lo stesso messaggio:
+- $k=\frac{e-e'}{s-s'}\mod n$
+- $x=\frac{sk-e}{r}\mod n$
