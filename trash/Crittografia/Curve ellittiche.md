@@ -91,20 +91,22 @@ $f^{-1}(x)=⌊\frac{x}{h}⌋$
 
 ### Elliptic Curve [[Firma|Digital Signature]] Algorithm
 
-**Generazione chiavi**, svolta dal destinatario:
-- Si ha una curva ellittica $E_p(a,b)$ e un punto $P$ della curva di ordine $n$ alto
+**Generazione chiavi**:
+- Si ha una curva ellittica $E_p(a,b)$ e un punto $P$ della curva di ordine $n$ alto e primo
 - Sceglie a caso $x<n$
-- Calcola $Y=xP$
-- Chiave pubblica: $<Y,P,<p,a,b>,n>$, chiave privata: $x$
+- Calcola $Q=xP$
+- Chiave pubblica: $<Q,P,<p,a,b>,n>$, chiave privata: $x$
 
-**Cifratura**, svolta dal mittente del messaggio $m$:
-- Usa una funzione invertibile (pubblica) $f:m↦P_m$ per ottenere $P_m$
+**Generazione firma**, svolta dal mittente del messaggio $m$:
 - Sceglie un numero casuale $k<n$
-- Calcola le cifrature e le invia al destinatario:
-	- $c_1=kP$
-	- $c_2=kY+P_m$
+- Calcola il punto $R=kP$, e dato $R_x$ la coordinata dell'ascisse, poni $r=R_x\mod n$
+	- Se $r=0$, riprova con un altro $k$
+- Calcola $e=H(m)$, con $H$ funzione di [[hash]]
+- Calcola $s=k^{-1}(e+xr)\mod n$
+	- Se $s=0$, riprova da capo con un altro $k$
+- La firma del messaggio è la coppia $(r,s)$
 
-**Decifrazione**, svolta dal destinatario:
-- Calcola $P_m=c_2-xc_1$
-	- $k(xP)+P_m-x(kP)$
-- Calcola $m=f^{-1}(P_m)$
+**Verifica firma**, svolta dal destinatario:
+- Calcola $e=H(m)$
+- Calcola $w=s^{-1}\mod n$
+- Calcola
