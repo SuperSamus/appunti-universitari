@@ -90,3 +90,21 @@ Probabilità di successo: circa $1-(\frac{1}{2})^h$
 $f^{-1}(x)=⌊\frac{x}{h}⌋$
 
 ### Elliptic Curve [[Firma|Digital Signature]] Algorithm
+
+**Generazione chiavi**, svolta dal destinatario:
+- Si ha una curva ellittica $E_p(a,b)$ e un punto $P$ della curva di ordine $n$ alto
+- Sceglie a caso $x<n$
+- Calcola $Y=xP$
+- Chiave pubblica: $<Y,P,<p,a,b>,n>$, chiave privata: $x$
+
+**Cifratura**, svolta dal mittente del messaggio $m$:
+- Usa una funzione invertibile (pubblica) $f:m↦P_m$ per ottenere $P_m$
+- Sceglie un numero casuale $k<n$
+- Calcola le cifrature e le invia al destinatario:
+	- $c_1=kP$
+	- $c_2=kY+P_m$
+
+**Decifrazione**, svolta dal destinatario:
+- Calcola $P_m=c_2-xc_1$
+	- $k(xP)+P_m-x(kP)$
+- Calcola $m=f^{-1}(P_m)$
