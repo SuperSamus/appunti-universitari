@@ -88,3 +88,5 @@ failure!
 
 Probabilità di successo: circa $1-(\frac{1}{2})^h$
 $f^{-1}(x)=⌊\frac{x}{h}⌋$
+
+### Elliptic Curve [[Firma|Digital Signature]] Algorithm

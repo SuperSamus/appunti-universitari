@@ -1,6 +1,3 @@
-Identificazione
-
-
 ## Firma digitale
 
 Un utente $U$ si vuole connettere a un servizio $S$. $U$ possiede la sua chiave privata $k_U[priv]$, mentre entrambi conoscono quella pubblica $k_U[pub]$.
