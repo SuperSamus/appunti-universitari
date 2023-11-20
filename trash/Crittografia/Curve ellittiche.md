@@ -109,4 +109,10 @@ $f^{-1}(x)=⌊\frac{x}{h}⌋$
 **Verifica firma**, svolta dal destinatario:
 - Calcola $e=H(m)$
 - Calcola $w=s^{-1}\mod n$
-- Calcola
+- Calcola $u_1=ew$ e $u_2=rw$
+- Calcola il punto $X=u_1P+u_2Q$
+	- Se $X=O$, rifiuta la firma
+- Calcola $v=X_x\mod n$
+- Se $v=r$, accetta la firma
+
+TODO: Correttezza
