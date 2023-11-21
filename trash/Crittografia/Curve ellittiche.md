@@ -136,4 +136,13 @@ I vari algoritmi non sono perfetti: per ogni volta che vengono ripetuti, c'è un
 
 ### Euristica di Fiat–Shamir
 
-Dati $p$ e $q$ primi, $n=
+Esempio: Peggy vuole a dimostrare a Victor di conoscere $s=\sqrt{t}\mod n$ (con $n=pq$).
+
+Dati $t$ e $n$ pubblici:
+1. $P$ genera casualmente $r<n$, calcola $u=r^2\mod n$, e invia $u$ a $V$
+2. $V$ genera casualmente $e∈\{0,1\}$ e lo invia a $P$
+3. $P$ calcola $z=rs^e\mod n$ e lo invia a $V$
+4. Se $z^2\mod n$ è diverso da $ut^e\mod n$, allora $P$ è un bugiardo
+	- $z^2=r^2(s^2)^e=ut^e$
+
+In teoria, $P$ potrebbe ingannare $u$ calcolando nel primo passo
