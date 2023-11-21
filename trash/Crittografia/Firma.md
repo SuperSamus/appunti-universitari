@@ -39,3 +39,32 @@ Tutto questo però non protegge da attacchi man-in-the-middle
 ## Certificato digitale
 
 Gestiti dalle Certification Authorities (CA), infrastrutture che garantiscono la validità delle chiavi pubbliche.
+
+## Schema di firma di ElGamal
+
+**Generazione chiavi**:
+- Si ha un numero primo $p$, e $g$ generatore di $ℤ_p*$
+- Sceglie a caso $2≤x≤p-2$
+- Calcola $y=g^x\mod p$
+- Chiave pubblica: $<p,g,y>$, chiave privata: $x$
+
+**Generazione firma**, svolta dal mittente del messaggio $m$:
+- Sceglie un numero casuale $k$ coprimo con $p-1$
+- Calcola il punto $r=g^k\mod p$
+- Calcola $s=k^{-1}(m+xr)\mod (p-1)$
+	- Volendo puoi usare $H(m)$, con $H$ funzione di [[hash]]
+- La firma del messaggio è la coppia $(r,s)$
+
+**Verifica firma**, svolta dal destinatario:
+- Calcola $w=s^{-1}\mod n$
+- Calcola $v_1=g^m\mod p$ e $v_2=y^rr^s\mod p$
+- Se $v_1=v_2$, accetta la firma
+
+Correttezza:
+- $sk\mod(p-1)=(m-xr)\mod(p-1)$
+	- $m≡sk+xr\mod(p-1)$
+- $v_1=g^m\mod p=g^{sk+xr+t(p-1)}\mod p=g^{sk+xr}(g^{p-1})^t\mod p=g^{sk+xr}\mod p=(g^k)^s(g^x)^r\mod p=r^sy^s\mod p=v_2$
+
+Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ usato per lo stesso messaggio:
+- $k=\frac{e-e'}{s-s'}\mod n$
+- $x=\frac{sk-e}{r}\mod n$

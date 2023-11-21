@@ -70,7 +70,7 @@ Calcolare $n=p×q$ è facile.
 Ricostruire $p$ e $q$ a partire da $n$ è difficile, ma non è NP hard.
 Oggi, il migliore algoritmo (GNFS) è di tempo $O(2^{\sqrt{b\log b}})$.
 Un computer quantistico lo risolve in tempo polinomiale.
-Per computer normali, non c'è alcuna dimostrazione che non si possa risolvere in tempo polinomiale (anche se probabilmente non si può)
+Per computer normali, non c'è alcuna dimostrazione che non si possa risolvere in tempo polinomiale (anche se probabilmente non si può).
 
 >[!info]
 >Calcolare $ϕ(n)$ è computazionalmente equivalente.
