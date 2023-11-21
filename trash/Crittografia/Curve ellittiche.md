@@ -125,3 +125,15 @@ Correttezza:
 Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ noti firmati con lo stesso $k$:
 - $k=\frac{e-e'}{s-s'}\mod n$
 - $x=\frac{sk-e}{r}\mod n$
+
+## Protocollo a conoscenza zero
+
+Permette a un "provatore" $P$ di (Peggy) dimostrare a un verificatore $V$ (Victor) di conoscere un fatto, senza però rivelargli il fatto stesso. (Per esempio, per farsi pagare primo di rivelarlo.)
+
+Un esempio di fatto è conoscere l'$x$ che soddisfa $y=g^x\mod n$.
+
+I vari algoritmi non sono perfetti: per ogni volta che vengono ripetuti, c'è una probabilità per cui $P$ può comunque avere successo senza sapere niente, quindi vengono ripetuti più volte per ridurre la probabilità.
+
+### Euristica di Fiat–Shamir
+
+Dati $p$ e $q$ primi, $n=
