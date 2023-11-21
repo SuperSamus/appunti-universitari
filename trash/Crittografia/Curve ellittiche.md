@@ -90,6 +90,8 @@ $f^{-1}(x)=⌊\frac{x}{h}⌋$
 
 ### Elliptic Curve [[Firma|Digital Signature]] Algorithm
 
+Variante del DSA, a sua volta variante dello [[Firma#^1aa34e|schema di firma di ElGamal]].
+
 **Generazione chiavi**:
 - Si ha una curva ellittica $E_p(a,b)$ e un punto $P$ della curva di ordine $n$ alto e primo
 - Sceglie a caso $x<n$
@@ -120,6 +122,6 @@ Correttezza:
 	- $r=R_x\mod n$
 	- $v=X_x\mod n$
 
-Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ usato per lo stesso messaggio:
+Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ noti firmati con lo stesso $k$:
 - $k=\frac{e-e'}{s-s'}\mod n$
 - $x=\frac{sk-e}{r}\mod n$

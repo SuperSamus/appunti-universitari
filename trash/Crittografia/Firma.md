@@ -42,6 +42,8 @@ Gestiti dalle Certification Authorities (CA), infrastrutture che garantiscono la
 
 ## Schema di firma di ElGamal
 
+^1aa34e
+
 **Generazione chiavi**:
 - Si ha un numero primo $p$, e $g$ generatore di $ℤ_p*$
 - Sceglie a caso $2≤x≤p-2$
@@ -64,7 +66,6 @@ Correttezza:
 - $sk\mod(p-1)=(m-xr)\mod(p-1)$
 	- $m≡sk+xr\mod(p-1)$
 - $v_1=g^m\mod p=g^{sk+xr+t(p-1)}\mod p=g^{sk+xr}(g^{p-1})^t\mod p=g^{sk+xr}\mod p=(g^k)^s(g^x)^r\mod p=r^sy^s\mod p=v_2$
-
-Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ usato per lo stesso messaggio:
-- $k=\frac{e-e'}{s-s'}\mod n$
-- $x=\frac{sk-e}{r}\mod n$
+Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ noti firmati con lo stesso $k$:
+- $k=\frac{m-m'}{s-s'}\mod(p-1)$
+- $x=\frac{sk-m}{r}\mod(p-1)$
