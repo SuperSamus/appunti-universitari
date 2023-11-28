@@ -145,4 +145,6 @@ Dati $t$ e $n$ pubblici:
 4. Se $z^2\mod n$ è diverso da $ut^e\mod n$, allora $P$ è un bugiardo
 	- $z^2=r^2(s^2)^e=ut^e$
 
-In teoria, $P$ potrebbe ingannare $u$ calcolando nel primo passo
+A cosa serve la generazione casuale di $e$? Mettiamo che $P$ non conosce $s$, e fosse sempre $e=1$.
+Se nel passo 1 modifica $u=r^2t^{-1}\mod n$ e nel passo 3 $z=r$, allora $ut\mod n=r^2t^{-1}t\mod n=r^2=z^2\mod n$.
+Ma se nel passo 2 $e=0$, allora $P$ si ritrova a dover calcolare $z=\sqrt{u}\mod n=r\sqrt{t^{-1}}\mod n=rs^{-1}\mod n$, e non conoscendo $s$ verrà beccato.
