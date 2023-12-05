@@ -88,7 +88,7 @@ failure!
 Probabilità di successo: circa $1-(\frac{1}{2})^h$
 $f^{-1}(x)=⌊\frac{x}{h}⌋$
 
-### Elliptic Curve [[Firma|Digital Signature]] Algorithm
+### Elliptic Curve [[Firma|Digital Signature]] Algorithm (ECDSA)
 
 Variante del DSA, a sua volta variante dello [[Firma#^1aa34e|schema di firma di ElGamal]].
 
