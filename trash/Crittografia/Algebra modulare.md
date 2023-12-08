@@ -55,6 +55,7 @@ Function Euclid
     else return Euclid (b, a mod b)
 ```
 
+Complessità: $O(\log a)$
 Esiste la versione estesa per trovare anche $x$ e $y$ nell'equazione $ax+by=MCD(a,b)$
 
 ```
@@ -97,9 +98,9 @@ Scegli un numero a caso un intero $2≤y≤N-2$ tale che:
 Per ogni $y$, queste condizioni sono necessarie ma non sufficienti affinché il numero sia primo.
 Se il numero è composto, la probabilità di scegliere un $y$ che comunque soddisfa entrambi i predicati è circa ¼.
 
- Strategia: scegli un $y$ casuale $k$ volte: se tutte le volte i predicati vengono soddisfatti, la probabilità di errore è $<\frac{1}{4^k}$.
+Strategia: scegli un $y$ casuale $k$ volte: se tutte le volte i predicati vengono soddisfatti, la probabilità di errore è $<\frac{1}{4^k}$.
 
- Per calcolare efficientemente $y^z\mod N$, ricorda:
+Per calcolare efficientemente $y^z\mod N$, ricorda:
  - Scomponi $z$ in $1+2+4+8+…$ (metti solo quelli rilevanti).
  - $y^{2i}\mod N=(y^i\mod N)^2\mod N$
 
