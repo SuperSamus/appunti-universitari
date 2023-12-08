@@ -59,10 +59,10 @@ Se dovesse succedere che con lo stesso $e$ venga cifrato lo stesso messaggio:
 Calcola $d=e^{-1}\mod ϕ(n)$
 
 Dimostrazione che $D(C(m, e), d)=m$, cioè che $c^d\mod n=(m^e\mod n)^d=m^{ed}\mod n=m$:
-- Se $p$ e $q$ non dividono $m$ (quindi $n$ è coprimo a $m$):
+- Se $p$ e $q$ non dividono $m$ (quindi $n$ è coprimo a $m$ e si può applicare [[Algebra modulare#^5407c3|Eulero]]):
 	- $ed≡1\mod ϕ(n)=1+kϕ(n) \quad k∈ℕ$
 	- $m^{ed}\mod n=m^{1+kϕ(n)}\mod n=m(m^{ϕ(n)})^k\mod n=m×1^k\mod n=m$
-- Se $p|m$ (quindi $MCD(m,n)=p$)
+- Se $p|m$ (quindi $MCD(m,n)=p$, non si può applicare [[Algebra modulare#^5407c3|Eulero]])
 	- Per $\mod p$:
 		- $m≡0\mod p≡m^k \quad k∈ℕ$
 		- $m^{ed}≡0\mod p⇒m^{ed}-m≡0\mod p$

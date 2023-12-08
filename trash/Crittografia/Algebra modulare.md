@@ -30,7 +30,7 @@ Se $n$ non è primo, $Z_n^*$ è computazionalmente difficile da calcolare (bisog
 	- $p_1,…,p_k$ sono i diversi fattori primi di $n$
 	- $n=pq$ ⇒ $ϕ(n)=(p-1)(q-1)$
 
-**Teorema di Eulero**: per $n>1$ e per ogni $a$ co-primo rispetto a $n$:
+**Teorema di Eulero**: per $n>1$ e per ogni $a$ co-primo rispetto a $n$: ^5407c3
 - $a^{ϕ(n)}≡1\mod n$
 	- **Piccolo teorema di Fermat**: Per n primo e per ogni $a∈Z_n^*$:
 		- $a^{n-1}≡1\mod n$
