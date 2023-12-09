@@ -9,7 +9,7 @@ In ℝ:
 - Sostituendo $y$ con l'espressione di una retta, si ottiene un'equazione di terzo grado in $x$. Questo vuol dire che una retta può intersecare sulla curva fino a tre volte (si contano anche i punti di intersezione in $ℂ$)
 - Dati tre punti disposti su una retta $P$, $Q$, e $R$ ($P≡Q$ per un'intersezione tangente), la somma è definita in modo tale che $P+Q+R=O$
 	- Dato che quindi $P+Q=-R$, la somma di $P$ e $Q$ è il punto simmetrico a $R$ rispetto all'asse delle ascisse
-	- $x_R=λ^2-x_p-x_Q$
+	- $x_R=λ^2-x_P-x_Q$
 	- $y_R=-y_P+λ(x_P-x_R)$
 		- $λ$ è il coefficiente angolare della retta:
 			- Se $P≠Q$, allora $λ=\frac{y_Q-y_P}{x_Q-x_P}$
