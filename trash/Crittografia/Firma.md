@@ -58,7 +58,6 @@ Gestiti dalle Certification Authorities (CA), infrastrutture che garantiscono la
 - La firma del messaggio è la coppia $(r,s)$
 
 **Verifica firma**, svolta dal destinatario:
-- Calcola $w=s^{-1}\mod n$
 - Calcola $v_1=g^m\mod p$ e $v_2=y^rr^s\mod p$
 - Se $v_1=v_2$, accetta la firma
 
