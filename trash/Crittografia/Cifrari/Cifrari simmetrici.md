@@ -81,7 +81,7 @@ Cifrario simmetrico, con chiavi di 128 bit o 256 bit.
 Divide il messaggio in blocchi lunghi quanto la chiave, e la chiave viene applicata indipendentemente per blocco.
 TODO
 
-### Cipher Block Chaining
+### Cipher Block Chaining (CBC)
 
 Avere la cifratura applicata per blocco costituisce dei problemi:
 - La diffusione è limitata al blocco
