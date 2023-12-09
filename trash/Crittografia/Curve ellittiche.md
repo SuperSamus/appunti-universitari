@@ -14,6 +14,7 @@ In ℝ:
 		- $λ$ è il coefficiente angolare della retta:
 			- Se $P≠Q$, allora $λ=\frac{y_Q-y_P}{x_Q-x_P}$
 			- Se $P=Q$ (intersezione tangenziale), allora $λ=\frac{3x_P^2+a}{2y_P}$
+				- È la derivata di $y=\sqrt{x^3+ax+b}$
 			- Se $P=-Q$, la loro somma è $O$
 
 Nella crittografia, queste cosa non si fanno in $ℝ$, ma su *campi finiti*:
@@ -59,13 +60,15 @@ Il numero $n$ più basso tale che $nP=O$ è l'*ordine* del punto.
 **Cifratura**, svolta dal mittente del messaggio $m$:
 - Usa una funzione invertibile (pubblica) $f:m↦P_m$ per ottenere $P_m$
 - Sceglie un numero casuale $k<n$
+- Calcola il punto segreto $P_s=kY$
 - Calcola le cifrature e le invia al destinatario:
 	- $c_1=kP$
-	- $c_2=kY+P_m$
+	- $c_2=P_s+P_m$
 
 **Decifrazione**, svolta dal destinatario:
-- Calcola $P_m=c_2-xc_1$
-	- $k(xP)+P_m-x(kP)$
+- Calcola $P_s=xc_1$
+	- $xc_1=xkP=kY$
+- Calcola $P_m=c_2-P_s$
 - Calcola $m=f^{-1}(P_m)$
 
 Un attaccante ha bisogno di trovare $x$ (e decifrare come farebbe il destinatario) o $k$ ($P_m=c_2-kY$), ma per farlo deve usare il logaritmo discreto, che è difficile.
