@@ -22,9 +22,7 @@ Nella crittografia, queste cosa non si fanno in $ℝ$, ma su *campi finiti*:
 
 La "curva" è simmetrica in $\frac{p}{2}$. $P=(x,y)∈E_p(a,b)⇒-P=(x,-y)=(x,p-y)∈E_p(a,b)$
 
-L'ordine della curva è il numero dei suoi punti, che può essere al massimo $2p+1$ (i punti $(x,y)$ e $(x,p-y)$ che soddisfano l'equazione, più il punto all'infinito).
-
-Dato un $x$, esiste un $y$ che forma un $(x,y)∈E_p(a,b)$ solo se $x^3+ax+b$ forma un *residuo quadratico* (così da poter ottenere i risultati della radice quadrata di $y^2$). Si può dimostrare che esattamente $\frac{p-1}{2}$ elementi di $ℤ_p$ (oltre lo $0$) sono residui quadratici.
+Dato un $x$, esiste un $y$ che forma un $(x,y)∈E_p(a,b)$ solo se $x^3+ax+b$ forma un *residuo quadratico* (così da poter ottenere i risultati della radice quadrata di $y^2$). Approssimativamente $\frac{p-1}{2}$ elementi di $ℤ_p$ (oltre lo $0$) sono residui quadratici.
 
 Esistono algoritmi (come quello di Schoof) che permettono di trovare in tempo polinomiale quali sono i punti della curva.
 
