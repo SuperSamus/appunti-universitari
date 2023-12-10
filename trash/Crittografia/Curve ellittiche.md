@@ -104,21 +104,21 @@ Variante del DSA, a sua volta variante dello [[Firma#^1aa34e|schema di firma di 
 - Calcola il punto $R=kP$, e dato $R_x$ la coordinata dell'ascisse, poni $r=R_x\mod n$
 	- Se $r=0$, riprova con un altro $k$
 - Calcola $e=H(m)$, con $H$ funzione di [[hash]]
-- Calcola $s=k^{-1}(e+xr)\mod n$
+- Calcola $s=k^{-1}(m+xr)\mod n$
 	- Se $s=0$, riprova da capo con un altro $k$
+	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[hash]]
 - La firma del messaggio è la coppia $(r,s)$
 
 **Verifica firma**, svolta dal destinatario:
-- Calcola $e=H(m)$
 - Calcola $w=s^{-1}\mod n$
-- Calcola $u_1=ew$ e $u_2=rw$
+- Calcola $u_1=mw$ e $u_2=rw$
 - Calcola il punto $X=u_1P+u_2Q$
 	- Se $X=O$, rifiuta la firma
 - Calcola $v=X_x\mod n$
 - Se $v=r$, accetta la firma
 
 Correttezza:
-- $k=s^{-1}(e+xr)\mod n=w(e+xr)\mod n=(we+wxr)\mod n=(u_1+xu_2)\mod n$
+- $k=s^{-1}(m+xr)\mod n=w(m+xr)\mod n=(wm+wxr)\mod n=(u_1+xu_2)\mod n$
 - $X=u_1P+u_2Q=u_1PB+u_2xP=(u_1+u_2x)P=kP=R$
 	- $r=R_x\mod n$
 	- $v=X_x\mod n$

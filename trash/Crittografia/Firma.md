@@ -44,17 +44,18 @@ Gestiti dalle Certification Authorities (CA), infrastrutture che garantiscono la
 
 ^1aa34e
 
-**Generazione chiavi**:
-- Si ha un numero primo $p$, e $g$ generatore di $ℤ_p*$
-- Sceglie a caso $2≤x≤p-2$
-- Calcola $y=g^x\mod p$
-- Chiave pubblica: $<p,g,y>$, chiave privata: $x$
+Dato un gruppo ciclico $\mod p$, e un generatore $g$:
+
+- Chiave privata: $x$
+	- $2≤x≤p-2$
+- Chiave pubblica: $<p,g,y>$
+	- $y=g^x\mod p$
 
 **Generazione firma**, svolta dal mittente del messaggio $m$:
 - Sceglie un numero casuale $k$ coprimo con $p-1$
-- Calcola il punto $r=g^k\mod p$
-- Calcola $s=k^{-1}(m+xr)\mod (p-1)$
-	- Volendo puoi usare $H(m)$, con $H$ funzione di [[hash]]
+- Calcola $r=g^k\mod p$
+- Calcola $s=k^{-1}(m-xr)\mod (p-1)$
+	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[hash]]
 - La firma del messaggio è la coppia $(r,s)$
 
 **Verifica firma**, svolta dal destinatario:
