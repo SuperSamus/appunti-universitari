@@ -23,4 +23,7 @@ Facilmente rompibili con l'*analisi statistica*.
 
 TODO
 $P(M=m|C=c)=P(M=m)$
+
+**Teorema di Shannon**: affinché il cifrario sia perfetto, il numero delle chiavi deve essere uguale o maggiore del numero dei messaggi.
+
 Per confondere il criptoanalista, è opportuno che molte coppie $(m,k)$ corrispondono allo stesso crittogramma.

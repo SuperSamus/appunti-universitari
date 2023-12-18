@@ -34,13 +34,13 @@ $R[16]$ e $L[16]$ insieme subiscono una permutazione finale FP (che è l'inverso
 >Le permutazioni IP e FP non hanno un ruolo crittografico, ma solo di performance.
 
 La funzione $f$:
-- $D[i-1]$ viene espanso da 32 bit a 48 bit, usando la tabella di selezione bit E
-	- Quello che E fa: dividi $D[i-1]$ in 8 blocchi da 4 bit: $b_i,b_{i+1},b_{i+2},b_{i+3}$.
-	  Per ogni blocco, l'output $E(D[i-1])$ è un altro blocco da 6 bit: $b_{i-1},b_i,b_{i+1},b_{i+2},b_{i+3},b_{i+4}$ (ovviamente, $i$ subisce avvolgimento aritmetico a 32)
-- Esegue $E(D[i-1])⊕k[i]$
+- $R[i-1]$ viene espanso da 32 bit a 48 bit, usando la tabella di selezione bit E
+	- Quello che E fa: dividi $R[i-1]$ in 8 blocchi da 4 bit: $b_i,b_{i+1},b_{i+2},b_{i+3}$.
+	  Per ogni blocco, l'output $E(R[i-1])$ è un altro blocco da 6 bit: $b_{i-1},b_i,b_{i+1},b_{i+2},b_{i+3},b_{i+4}$ (ovviamente, $i$ subisce avvolgimento aritmetico a 32)
+- Esegue $E(R[i-1])⊕k[i]$
 - Usa le *S-box* per applicare la sostituzione, e per portare l'output da 48 bit a 32 bit
 	- Dividi l'input in 8 blocchi $B_i$ da 6 bit: per $i$ da 1 a 8, applica $S_i(B_i)$, ciascuno con un output da 4 bit
-		- Ogni tabella $S_i$ ha 4 righe e 16 colonne. Con l'input di 6 bit, il primo e l'ultimo bit determinano la riga, e i 4 bit in mezzo determinano la colonna.
+		- Ogni tabella $S_i$ ha 4 righe e 16 colonne. Con l'input di 6 bit, il primo e l'ultimo bit (cioè quelli aggiunti da $E$) determinano la riga, e i 4 bit in mezzo determinano la colonna.
 - Finalmente, combina gli output delle S-box e applica la permutazione $P$
 	- Questo affinché le S-box non lavorino sempre con gli stessi input
 
@@ -55,6 +55,12 @@ La funzione $f$:
 >Infatti:
 >- Tutte le sottochiavi sono ottenute con permutazioni e spostamenti, quindi se per ogni $i$ le sottochiavi di $k$ sono $k[i]$, allora per $\bar{k}$ sono $\overline{k[i]}$
 >- $f(R[i-1],k[i])=f(\overline{R[i-1]},\overline{k[i]})$
+
+Per decifrare, si procede al contrario:
+- $R[i]=L[i+1]$
+- $L[i]=R[i+1]⊕f(L[i+1],k[i])$
+
+Si può notare che non c'è bisogno di usare l'inversa di $f$ (che non esiste, dato che l'S-Box non è invertibile).
 
 Per attaccare il DES, c'è bisogno di usare attacchi di forza bruta: esistono altri tipi di attacchi, ma sono praticabili solo in teoria.
 Tuttavia, una chiave di 56 bit è considerata corta al giorno d'oggi.

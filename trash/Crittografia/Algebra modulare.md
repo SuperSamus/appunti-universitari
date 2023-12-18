@@ -1,4 +1,4 @@
-# Algebra modulare
+obs# Algebra modulare
 
 Dati gli interi $a$, $b$ e $n>0$, $a$ è congruo a $b$ modulo $n$
 $$a≡b\mod n$$
@@ -48,6 +48,8 @@ Qual è un modo più facile?
 
 ### Algoritmo di Euclide
 
+^57f0f6
+
 Algoritmo per il calcolo del $MCD(a, b)$ di due interi $a > 0$, $b ≥ 0,$ con $a ≥ b$
 ```
 Function Euclid
@@ -78,7 +80,8 @@ ax=bz+1
 ax+by=MCD(a,b)
 $$
 Dove $y=-z$ e $MCD(a,b)=1$.
-Allora $x=a^{-1}$ e si trova facilmente con l'algoritmo di Euclide esteso.
+
+Allora $x=a^{-1}\mod b$  si trova facilmente con l'algoritmo di Euclide esteso.
 
 ### Test di Miller-Rabin
 

@@ -45,22 +45,16 @@ Per massimizzare la difficoltà (e impedire attacchi brute-force):
 
 Finalmente si sceglie la $e$. È necessario che:
 - $MCD(e,ϕ(n))=1$
+	- Altrimenti non si può calcolare $d$
 - $e$ sia grosso, per evitare:
 	- $m^e<n$
 	- Che venga scelto identico tra diversi utenti.
-%%
-Se dovesse succedere che con lo stesso $e$ venga cifrato lo stesso messaggio:
-		- Abbiamo $c_i=m^e\mod n_i$ per $1≤i≤e$
-			- Assumiamo che $m<n_i$ e che i vari $n_i$ siano primi tra loro
-		- Per via del teorema cinese del resto, esiste (ed è calcolabile in tempo polinomiale) un unico $m'<n=∏n_i$ che soddisfa $m'≡m^e\mod n$.
-			- Dato che $m^e<n$, allora $m'=m^e$, e una semplice radice trova $m$.
-%%
 
 Calcola $d=e^{-1}\mod ϕ(n)$
 
 Dimostrazione che $D(C(m, e), d)=m$, cioè che $c^d\mod n=(m^e\mod n)^d=m^{ed}\mod n=m$:
 - Se $p$ e $q$ non dividono $m$ (quindi $n$ è coprimo a $m$ e si può applicare [[Algebra modulare#^5407c3|Eulero]]):
-	- $ed≡1\mod ϕ(n)=1+kϕ(n) \quad k∈ℕ$
+	- $ed\mod ϕ(n)≡ee^{-1}\mod ϕ(n)≡1\mod ϕ(n)≡1+kϕ(n) \quad k∈ℕ$
 	- $m^{ed}\mod n=m^{1+kϕ(n)}\mod n=m(m^{ϕ(n)})^k\mod n=m×1^k\mod n=m$
 - Se $p|m$ (quindi $MCD(m,n)=p$, non si può applicare [[Algebra modulare#^5407c3|Eulero]])
 	- Per $\mod p$:
@@ -70,6 +64,13 @@ Dimostrazione che $D(C(m, e), d)=m$, cioè che $c^d\mod n=(m^e\mod n)^d=m^{ed}\m
 		- $m^{ed}\mod q=m^{1+kϕ(n)}\mod q=m(m^{ϕ(n)})^k\mod q=m(m^{(p-1)(q-1)})^k\mod q=m(m^{ϕ(q)})^{(p-1)k}\mod q=m×1^{(p-1)k}\mod q=m\mod q$
 	- $\begin{rcases}m^{ed}-m≡0\mod p \\ m^{ed}-m≡0\mod q\end{rcases}⇒m^{ed}-m≡0\mod pq=m^{ed}-m≡0\mod n$
 		- E dato che $m<n$, allora $m^{ed}\mod n=m\mod n=m$
+
+
+Se dovesse succedere che con lo stesso $e$ venga cifrato lo stesso messaggio:
+- Abbiamo $c_i=m^e\mod n_i$ per $1≤i≤e$
+	- Assumiamo che $m<n_i$ e che i vari $n_i$ siano primi tra loro
+- Per via del teorema cinese del resto, esiste (ed è calcolabile in tempo polinomiale) un unico $m'<n'=∏n_i$ che soddisfa $m'≡m^e\mod n'$.
+	- Dato che $m^e<n'$, allora $m'=m^e$, e una semplice radice trova $m$.
 
 %%
 Attacco a tempo: più grande è $d$, più tempo ci vuole a decifrare il messaggio. Un attaccante può stimare $d$ a seconda della velocità con cui i due utenti comunicano.
