@@ -36,7 +36,7 @@ Una funzione pubblica $A(m,k)$.
 
 Il mittente e il destinatario concordano a priori un $k$. (Se fatto su un canale insicuro, sono vulnerabili a man-in-the-middle)
 
-Il mittente allega il MAC al messaggio (eventualmente cifrato)
+Il mittente allega il MAC al messaggio (eventualmente cifrato).
 Il destinatario riapplica la funzione: se riottiene lo stesso risultato, allora l'autenticazione ha successo.
 
 Un esempio di funzione è l'[[hash]].
