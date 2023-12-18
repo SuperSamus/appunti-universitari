@@ -42,13 +42,13 @@ Generalizzato: $x_i=(a_1x_{i-1}^t+a_2x_{i-1}^{t-1}+a_3x_{i-1}^{t-2}+…+a_{t+1})
 È lo stesso tipo di trasformazione del *cifrario affine*, che la applica una volta sola. Lì ci vuole che la funzione sia iniettiva, e lo è quando $MCD(a,m)=1$.
 
 ### Blum Blum Shub
-
+ 
 $x_i=x_{i-1}^2\mod n$
 
 Affinché il periodo sia lungo, ci vuole che:
 - $n=p×q$ primi
 	- $p$ e $q$ sono $≡3 \mod 4$
-	- $GCD(\frac{p-3}{2},\frac{q-3}{2})$ deve essere più basso possibile (preferibilmente $1$)
+	- $MCD(\frac{p-3}{2}+1,\frac{q-3}{2})+1$ deve essere più basso possibile (preferibilmente 1) %%TODO: È la formula giusta?%%
 - $x_0$ è il seme
 
 Per sapere se $p$ e $q$ sono primi, usa il [[trash/Crittografia/Algebra modulare#^e0c1c1|test di Miller-Rabin]].
