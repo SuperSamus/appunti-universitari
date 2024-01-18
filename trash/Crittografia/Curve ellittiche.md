@@ -43,7 +43,7 @@ Sono simili agli algoritmi classici (e.g. ElGamal), ma con:
 $Q=kP$
 
 È una funzione one-way trap-door, equivalente al [[Algebra modulare#^865e42|logaritmo discreto]] per l'algebra modulare:
-Tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere $k$ come somma di potenze di 2, calcolare in successione i punti $2P,4P,8P,…$, e sommare i punti appropriati.
+tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere $k$ come somma di potenze di 2, calcolare in successione i punti $2P,4P,8P,…$, e sommare i punti appropriati.
 
 Il miglior algoritmo conosciuto per trovare $k$ dati $P$ e $Q$ scelti bene (Pollard ρ) è molto peggio rispetto all'index calculus (per la normale algebra modulare), il che rende le curve ellittiche più sicure.
 
@@ -75,6 +75,7 @@ Un attaccante ha bisogno di trovare $x$ (e decifrare come farebbe il destinatari
 
 Un esempio di $f(m)$ sarebbe il punto $(m,\sqrt{m^3+ax+b})$, ma c'è circa il 50% di probabilità che questo non sia un punto valido.
 Alternativa: scegliere un $h$ (pubblico) tale che $(m+1)h<p$, e:
+%%La prof lo chiama di Koblitz. Non trovo alcuna fonte su ciò%%
 ```
 for i=0 to h-1 {
   x = m * h + i;
