@@ -1,4 +1,4 @@
-Vedere [[algebra modulare]].
+Vedere [[Algebra modulare]].
 
 ## Generazione numeri pseudocasuali
 
@@ -51,7 +51,7 @@ Affinché il periodo sia lungo, ci vuole che:
 	- $MCD(\frac{p-3}{2}+1,\frac{q-3}{2})+1$ deve essere più basso possibile (preferibilmente 1) %%TODO: È la formula giusta?%%
 - $x_0$ è il seme
 
-Per sapere se $p$ e $q$ sono primi, usa il [[trash/Crittografia/Algebra modulare#^e0c1c1|test di Miller-Rabin]].
+Per sapere se $p$ e $q$ sono primi, usa il [[Algebra modulare#^e0c1c1|test di Miller-Rabin]].
 
  ---
  

@@ -1,4 +1,4 @@
-L'[[algebra modulare]] è imprevedibile. Ancora più imprevedibili sono le curve ellittiche. Per quello che ci interessa, sono una curva piana:
+L'[[Algebra modulare]] è imprevedibile. Ancora più imprevedibili sono le curve ellittiche. Per quello che ci interessa, sono una curva piana:
 $$E(a,b)=\{(x,y)∈ℝ^2:y^2=x^3+ax+b\}$$
 
 In ℝ:
@@ -104,10 +104,10 @@ Variante del DSA, a sua volta variante dello [[Firma#^1aa34e|schema di firma di 
 - Sceglie un numero casuale $k<n$
 - Calcola il punto $R=kP$, e dato $R_x$ la coordinata dell'ascisse, poni $r=R_x\mod n$
 	- Se $r=0$, riprova con un altro $k$
-- Calcola $e=H(m)$, con $H$ funzione di [[hash]]
+- Calcola $e=H(m)$, con $H$ funzione di [[Hash]]
 - Calcola $s=k^{-1}(m+xr)\mod n$
 	- Se $s=0$, riprova da capo con un altro $k$
-	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[hash]]
+	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[Hash]]
 - La firma del messaggio è la coppia $(r,s)$
 
 **Verifica firma**, svolta dal destinatario:

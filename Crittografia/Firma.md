@@ -1,7 +1,7 @@
 ## Firma digitale
 
 Un utente $U$ si vuole connettere a un servizio $S$. $U$ possiede la sua chiave privata $k_U[priv]$, mentre entrambi conoscono quella pubblica $k_U[pub]$.
-I passaggi sono praticamente l'inverso dei [[cifrari asimmetrici]].
+I passaggi sono praticamente l'inverso dei [[Cifrari asimmetrici]].
 - $U$ genera la firma $f=D(m,k_U[priv])$
 - $S$ controlla che $C(f,k_U[pub])=m$
 
@@ -39,7 +39,7 @@ Il mittente e il destinatario concordano a priori un $k$. (Se fatto su un canale
 Il mittente allega il MAC al messaggio (eventualmente cifrato).
 Il destinatario riapplica la funzione: se riottiene lo stesso risultato, allora l'autenticazione ha successo.
 
-Un esempio di funzione è l'[[hash]].
+Un esempio di funzione è l'[[Hash]].
 %%Alternativamente si può usare un algoritmo CBC%%
 
 ## Certificato digitale
@@ -63,7 +63,7 @@ Dato un gruppo ciclico $\mod p$, e un generatore $g$:
 - Sceglie un numero casuale $k$ coprimo con $p-1$
 - Calcola $r=g^k\mod p$
 - Calcola $s=k^{-1}(m-xr)\mod (p-1)$
-	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[hash]]
+	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[Hash]]
 - La firma del messaggio è la coppia $(r,s)$
 
 **Verifica firma**, svolta dal destinatario:

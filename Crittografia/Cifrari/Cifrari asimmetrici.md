@@ -83,13 +83,13 @@ Attacco a tempo: più grande è $d$, più tempo ci vuole a decifrare il messaggi
 Viene svolto in tre fasi.
 
 **Generazione chiavi**, svolta dal destinatario, usando il metodo di **Diffie-Hellman**:
-- Dato un gruppo ciclico $\mod p$, viene scelto un generatore $g$ (il cui ordine è definito da $n$) e un numero casuale $x∈\{1,…,n-1\}$
+- Dato un gruppo ciclico $\mod p$, viene scelto un generatore $g$ (il cui ordine è definito da $n$) e un numero casuale $x∈\{2,…,n-2\}$
 	- Preferibilmente, si vuole che $g$ sia una [[Generatore#^80b90a|radice primitiva]]
 - Calcola $h=g^x\mod p$
 - Chiave pubblica: $<p,h,g,n>$, chiave privata: $x$
 
 **Cifratura**, svolta dal mittente del messaggio $m$:
-- Sceglie un numero casuale $y∈\{1,…,m-1\}$
+- Sceglie un numero casuale $y∈\{2,…,m-2\}$
 - Calcola il *segreto condiviso* $s=h^y\mod p$
 - Calcola le cifrature e le invia al destinatario:
 	- $c_1=g^y\mod p$
