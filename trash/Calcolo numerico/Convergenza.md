@@ -4,9 +4,10 @@ Metodi che richiedono due estremità $a$ e $b$, dove $f(a)$ è positiva e $f(b) 
 - Bisezione
 - Secanti
 
-### Punto fisso
+## Punto fisso
 
-Itera con $x_{i+1}=g(x_i)$
+Dato $x^*$ il punto ricercato, $x=g(x)$.
+Itera con $x_{i+1}=g(x_i)$, se la funzione converge verso $x^*$.
 
 Per assicurare la convergenza, serve che $|g'(x)|<1$ nel raggio dove si itera.
 
@@ -29,3 +30,10 @@ L'ordine di convergenza verso $α$, è $p$ tale che:
 $x_{i+1}=x_i-\frac{f(x_i)}{f'(x_i)}$
 
 In questo caso $g'(x)=\frac{f(x)f''(x)}{f'(x)^2}$
+
+### Matrici
+
+I metodi iterativi sono utili in matrici sparse (cioè quasi diagonali, ma con pochi valori non nulli sparsi in giro).
+Presi $M$ e $N$ tali che $A=M-N$:
+$b=Mx-Nx$
+$x=
