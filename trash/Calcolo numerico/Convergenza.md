@@ -45,4 +45,21 @@ Alcuni condizioni sufficienti per la convergenza:
 - $ρ(P)<1$
 - Esiste una [[norma]] matriciale dove $||P||<1$
 
-Si può dimostrare applicando queste funzioni all'errore $e_i=|x^*-x_i|$, dato che: $e_{i+1}=Pe_i$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
+Si può dimostrare applicando queste funzioni all'errore $e^{(i)}=|x^*-x^{(i)}|$, dato che: $e^{(i+1)}=Pe^{(i)}$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
+
+
+#### Composizioni da particolari
+
+Dato $D$ la parte diagonale di $A$, $-C$ la parte diagonale inferiore (esclusiva) di $A$, e $-E$ la parte diagonale superiore (esclusiva) di A.
+
+$A=D-C-E$
+
+- *Metodo di Jacobi*: $M=D$ e $N=C+E$
+L'iterazione si può quindi calcolare (per riga $i$):
+$x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1,j≠i}^na_{ij}x_j^{(k)})$
+
+- *Metodo di Gaudd-Seidel: $M=D-C$ e $N=E$
+L'iterazione si può quindi calcolare (per riga $i$):
+$x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1}^{i-1}a_{ij}x_j^{(k+1)}-∑\limits_{j=i+1}^na_{ij}x_j^{(k)})$
+
+Il vettore $x$ può essere sostituito in-place.
