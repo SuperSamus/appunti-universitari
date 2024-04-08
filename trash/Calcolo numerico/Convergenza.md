@@ -36,4 +36,13 @@ In questo caso $g'(x)=\frac{f(x)f''(x)}{f'(x)^2}$
 I metodi iterativi sono utili in matrici sparse (cioè quasi diagonali, ma con pochi valori non nulli sparsi in giro).
 Presi $M$ e $N$ tali che $A=M-N$:
 $b=Mx-Nx$
-$x=
+$x=M^{-1}Nx+M^{-1}b$
+$x=Px+q$
+
+Dove $P=M^{-1}N$ e $q=M^{-1}b$
+
+Alcuni condizioni sufficienti per la convergenza:
+- $ρ(P)<1$
+- Esiste una [[norma]] matriciale dove $||P||<1$
+
+Si può dimostrare applicando queste funzioni all'errore $e_i=|x^*-x_i|$, dato che: $e_{i+1}=Pe_i$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
