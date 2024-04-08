@@ -1,6 +1,6 @@
 Sono molto comode:
-- Risolverle è facile, dato che non serve l'eliminazione di Gauss
-- Trovare il determinante è facile (basta moltiplicare i valori nella diagonale, si può vedre con Laplace)
+- Risolverle è facile
+- Trovare il determinante è facile (basta moltiplicare i valori nella diagonale, si può vedere con Laplace)
 
 ## Fattorizzazione LU
 
