@@ -6,7 +6,9 @@ $Av=λv$
 
 Dato $n$ la dimensione della matrice quadrata, in $ℝ$, è possibile che ogni vettore sia un'autovettore (matrici diagonali), che ci siano $n$ autovettori (il caso tipico), o che ci siano meno di $n$ autovettori (rotazioni, stiramenti...).
 
-Se $A$ ha $n$ autovalori (avere autovalori uguali per autovettori diversi conta), il suo determinante è uguale al prodotto degli autovalori.
+Se $A$ ha $n$ autovalori (avere autovalori uguali per autovettori diversi conta):
+- Il suo *determinante* è uguale al prodotto degli autovalori.
+- La sua *traccia* (somma di elementi in diagonale) è uguale alla somma degli autovalori
 
 $ρ(A)$ indica il modulo massimo degli autovalori.
 
