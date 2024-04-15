@@ -43,7 +43,7 @@ Dove $P=M^{-1}N$ e $q=M^{-1}b$
 
 Alcuni condizioni sufficienti per la convergenza:
 - $ρ(P)<1$
-- Esiste una [[norma]] matriciale dove $||P||<1$
+- Esiste una [[norma]] matriciale dove $∥P∥<1$
 
 Si può dimostrare applicando queste funzioni all'errore $e^{(i)}=|x^*-x^{(i)}|$, dato che: $e^{(i+1)}=Pe^{(i)}$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
 
@@ -62,4 +62,4 @@ $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1,j≠i}^na_{ij}x_j^{(k)})$
 L'iterazione si può quindi calcolare (per riga $i$):
 $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1}^{i-1}a_{ij}x_j^{(k+1)}-∑\limits_{j=i+1}^na_{ij}x_j^{(k)})$
 
-Il vettore $x$ può essere sostituito in-place.
+Il vettore $x$ può essere sostituito in-place, ma non si possono calcolare i suoi valori in parallelo.
