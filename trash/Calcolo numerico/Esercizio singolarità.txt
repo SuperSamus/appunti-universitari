@@ -1,0 +1,33 @@
+Dati:
+- A = aB+I
+- B è una matrice di dimensione n con valori tutti 1
+  - Autovalori: 0 (molteplicità n-1) e n (molteplicità 1)
+
+C=A+2A²
+
+Autovalori di C? Per quali valori di a, C è non singolare?
+
+A²=
+- Diagonali: (a+1)²+(n-1)a² = na²+2a+1
+- Resto: 2a(a+1)+(n-2)a² = na²+2a
+
+A+2A²=
+- Diagonali: a+1+2(na²+2a+1) = 2na²+5a+3
+- Resto: a+2(na²+2a) = 2na²+5a
+
+C=(2na²+5a)B+3I
+
+Autovalori:
+Dato x autovettore di B:
+((2na²+5a)B+3I)x = (2na²+5a)λ_Bx+3x = ((2na²+5a)λ_B+3)x
+
+Quindi λ_C:
+- 3 con molteplicità n-1
+- (2na²+5a)n+3 con molteplicità 1
+
+Per quali valori di a, C è non singolare?
+
+2n²a²+5na+3≠0
+a≠-(5n±√(25n²-24n²))/4n²
+- a≠1/n
+- a≠3/(2n)
