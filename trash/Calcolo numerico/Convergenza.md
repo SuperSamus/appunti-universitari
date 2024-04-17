@@ -35,6 +35,7 @@ In questo caso $g'(x)=\frac{f(x)f''(x)}{f'(x)^2}$
 
 I metodi iterativi sono utili in matrici sparse (cioè quasi diagonali, ma con pochi valori non nulli sparsi in giro).
 Presi $M$ e $N$ tali che $A=M-N$:
+$Ax=b$
 $b=Mx-Nx$
 $x=M^{-1}Nx+M^{-1}b$
 $x=Px+q$
