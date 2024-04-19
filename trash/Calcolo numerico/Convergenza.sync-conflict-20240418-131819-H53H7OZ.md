@@ -9,10 +9,7 @@ Metodi che richiedono due estremità $a$ e $b$, dove $f(a)$ è positiva e $f(b) 
 Dato $x^*$ il punto ricercato, $x=g(x)$.
 Itera con $x_{i+1}=g(x_i)$, se la funzione converge verso $x^*$.
 
-Per assicurare la convergenza, serve che $|g'(x)|<1$ nel dominio dove si itera.
-- Se $0<g'(x)<1$, allora la successione è monotona crescente (se $x_0<a$) o monotona decrescente (se $x_0>a$).
-- Se $-1<g'(x)<0$, allora la successione è alternata.
-	- Se $x_0=α+r$, bisogna quindi assicurarsi che $|g'(x)|<1$ in tutto $(α-r,α+r]$
+Per assicurare la convergenza, serve che $|g'(x)|<1$ nel raggio dove si itera.
 
 >[!info]
 L'ordine di convergenza verso $α$, è $p$ tale che:
@@ -38,6 +35,7 @@ In questo caso $g'(x)=\frac{f(x)f''(x)}{f'(x)^2}$
 
 I metodi iterativi sono utili in matrici sparse (cioè quasi diagonali, ma con pochi valori non nulli sparsi in giro).
 Presi $M$ e $N$ tali che $A=M-N$:
+$Ax=b$
 $b=Mx-Nx$
 $x=M^{-1}Nx+M^{-1}b$
 $x=Px+q$
