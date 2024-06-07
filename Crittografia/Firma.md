@@ -1,7 +1,7 @@
 ## Firma digitale
 
 Un utente $U$ si vuole connettere a un servizio $S$. $U$ possiede la sua chiave privata $k_U[priv]$, mentre entrambi conoscono quella pubblica $k_U[pub]$.
-I passaggi sono praticamente l'inverso dei [[Cifrari asimmetrici]].
+I passaggi sono praticamente l'inverso dei [[cifrari asimmetrici]].
 - $U$ genera la firma $f=D(m,k_U[priv])$
 - $S$ controlla che $C(f,k_U[pub])=m$
 
@@ -25,7 +25,10 @@ Non fare nell'ordine opposto (cifrare e firmare): sennò chiunque può ottenere 
 
 È meglio usare un cifrario simmetrico: con un cifrario asimmetrico si sa solo che ha firmato il messaggio, ma tutti possono mandarlo a chiunque (e chi è il destinatario?).
 
-Per server che mandano ACK, potrebbero decidere di rispondere firmando il messaggio con la propria chiave e cifrandolo con la chiave pubblica del mittente. Attenzione: non devono farlo per messaggi insensati.
+Per server che mandano ACK, potrebbero decidere di rispondere firmando il messaggio con la propria chiave e cifrandolo con la chiave pubblica del mittente.
+
+>[!warning]
+Non devono farlo per messaggi insensati.
 Vogliono dire che un attaccante ha intercettato la cifratura originale per fingersi il mittente (quindi la chiave pubblica della firma che il server userà sarà sbagliata), e con la risposta ricevuta possono risalire al messaggio originale.
 
 Un alternativa è, al posto di avere come firma il messaggio modificato, apporre la firma separatamente.
@@ -39,7 +42,7 @@ Il mittente e il destinatario concordano a priori un $k$. (Se fatto su un canale
 Il mittente allega il MAC al messaggio (eventualmente cifrato).
 Il destinatario riapplica la funzione: se riottiene lo stesso risultato, allora l'autenticazione ha successo.
 
-Un esempio di funzione è l'[[Hash]].
+Un esempio di funzione è l'[[hash]].
 %%Alternativamente si può usare un algoritmo CBC%%
 
 ## Certificato digitale
@@ -52,7 +55,7 @@ TODO
 
 ^1aa34e
 
-Dato un gruppo ciclico $\mod p$, e un generatore $g$:
+Dato un gruppo ciclico $\mod p$ primo, e un generatore $g$:
 
 - Chiave privata: $x$
 	- $2≤x≤p-2$
@@ -61,6 +64,7 @@ Dato un gruppo ciclico $\mod p$, e un generatore $g$:
 
 **Generazione firma**, svolta dal mittente del messaggio $m$:
 - Sceglie un numero casuale $k$ coprimo con $p-1$
+	- Altrimenti, $k^{-1}$ non esiste
 - Calcola $r=g^k\mod p$
 - Calcola $s=k^{-1}(m-xr)\mod (p-1)$
 	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[Hash]]
@@ -72,11 +76,19 @@ Dato un gruppo ciclico $\mod p$, e un generatore $g$:
 
 Correttezza:
 - $sk\mod(p-1)=(m-xr)\mod(p-1)$
-	- $m≡sk+xr\mod(p-1)$
-- $v_1=g^m\mod p=g^{sk+xr+t(p-1)}\mod p=g^{sk+xr}(g^{p-1})^t\mod p=g^{sk+xr}\mod p=(g^k)^s(g^x)^r\mod p=r^sy^r\mod p=v_2$
+	- $m≡xr+sk\mod(p-1)$
+- $v_1=g^m\mod p=g^{xr+sk+t(p-1)}\mod p=g^{xr+sk}(g^{p-1})^t\mod p=g^{xr+sk}\mod p=(g^x)^r(g^k)^s\mod p=y^rr^s\mod p=v_2$
 Attenzione: non usare mai lo stesso $k$ per più messaggi. Dati $m$ e $m'$ noti firmati con lo stesso $k$:
 - $k=\frac{m-m'}{s-s'}\mod(p-1)$
 - $x=\frac{sk-m}{r}\mod(p-1)$
+
+### Digital Signature Algorithm (DSA)
+
+^0d344e
+
+Variante dello schema di firma di ElGamal.
+La differenza principale è che $s$ viene calcolato in modo diverso, rendendo i passaggi per la verifica completamente diversi.
+%%TODO%%
 
 ## Protocollo a conoscenza zero
 
@@ -98,5 +110,5 @@ Dati $t$ e $n$ pubblici:
 	- $z^2=r^2(s^2)^e=ut^e$
 
 A cosa serve la generazione casuale di $e$? Mettiamo che $P$ non conosce $s$, e fosse sempre $e=1$.
-Se nel passo 1 modifica $u=r^2t^{-1}\mod n$ e nel passo 3 $z=r$, allora $ut\mod n=r^2t^{-1}t\mod n=r^2=z^2\mod n$.
+Se $P$ nel passo 1 calcola $u=r^2t^{-1}\mod n$ e nel passo 3 $z=r$, allora $ut\mod n=r^2t^{-1}t\mod n=r^2=z^2\mod n$.
 Ma se nel passo 2 $e=0$, allora $P$ si ritrova a dover calcolare $z=\sqrt{u}\mod n=r\sqrt{t^{-1}}\mod n=rs^{-1}\mod n$, e non conoscendo $s$ verrà beccato.

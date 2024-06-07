@@ -17,13 +17,13 @@ In ℝ:
 				- È la derivata di $y=\sqrt{x^3+ax+b}$
 			- Se $P=-Q$, la loro somma è $O$
 
-Nella crittografia, queste cosa non si fanno in $ℝ$, ma su *campi finiti*:
+Nella crittografia, queste cose non si fanno in $ℝ$, ma su *campi finiti*:
 - $a,b∈ℤ_p\quad p>3$ (dove $p$ è primo, e la *caratteristica* è diversa da 2 o 3)
 - $E_p(a,b)=\{(x,y)∈ℤ_p^2:y^2\mod p=x^3+ax+b\mod p\}∪\{O\}$
 
 La "curva" è simmetrica in $\frac{p}{2}$. $P=(x,y)∈E_p(a,b)⇒-P=(x,-y)=(x,p-y)∈E_p(a,b)$
 
-Dato un $x$, esiste un $y$ che forma un $(x,y)∈E_p(a,b)$ solo se $x^3+ax+b$ forma un *residuo quadratico* (così da poter ottenere i risultati della radice quadrata di $y^2$). Approssimativamente $\frac{p-1}{2}$ elementi di $ℤ_p$ (oltre lo $0$) sono residui quadratici.
+Dato un $x$, esiste un $y$ che forma un $(x,y)∈E_p(a,b)$ solo se $x^3+ax+b$ forma un *residuo quadratico* (così da poter ottenere la radice quadrata di $y^2$). Approssimativamente $\frac{p-1}{2}$ elementi di $ℤ_p$ (oltre lo $0$) sono residui quadratici.
 
 Esistono algoritmi (come quello di Schoof) che permettono di trovare in tempo polinomiale quali sono i punti della curva.
 
@@ -35,15 +35,15 @@ Esistono algoritmi (come quello di Schoof) che permettono di trovare in tempo po
 ### Applicazioni in crittografia
 
 Sono simili agli algoritmi classici (e.g. ElGamal), ma con:
-- Prodotto sostituito da somma di punti
-- Esponenziazione sostituita da moltiplicazione scalare
+- Prodotto sostituito da somma
+- Potenza sostituita da moltiplicazione scalare
 
 #### Moltiplicazione scalare
 
 $Q=kP$
 
 È una funzione one-way trap-door, equivalente al [[Algebra modulare#^865e42|logaritmo discreto]] per l'algebra modulare:
-tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere $k$ come somma di potenze di 2, calcolare in successione i punti $2P,4P,8P,…$, e sommare i punti appropriati.
+Tempo di esecuzione: $O(\log k$). Come per le potenze %%TODO%%, si può scrivere $k$ come somma di potenze di 2, calcolare in successione i punti $2P,4P,8P,…$, e sommare i punti appropriati.
 
 Il miglior algoritmo conosciuto per trovare $k$ dati $P$ e $Q$ scelti bene (Pollard ρ) è molto peggio rispetto all'index calculus (per la normale algebra modulare), il che rende le curve ellittiche più sicure.
 
@@ -53,7 +53,7 @@ Il numero $n$ più basso tale che $nP=O$ è l'*ordine* del punto.
 
 **Generazione chiavi**, svolta dal destinatario:
 - Si ha una curva ellittica $E_p(a,b)$ e un punto $P$ della curva di ordine $n$ alto
-- Sceglie a caso $x<n$
+- Sceglie casualmente $x<n$
 - Calcola $Y=xP$
 - Chiave pubblica: $<Y,P,<p,a,b>,n>$, chiave privata: $x$
 
@@ -92,11 +92,11 @@ $f^{-1}(x)=⌊\frac{x}{h}⌋$
 
 ### Elliptic Curve [[Firma|Digital Signature]] Algorithm (ECDSA)
 
-Variante del DSA, a sua volta variante dello [[Firma#^1aa34e|schema di firma di ElGamal]].
+Variante del [[Firma#^0d344e|DSA]].
 
 **Generazione chiavi**:
 - Si ha una curva ellittica $E_p(a,b)$ e un punto $P$ della curva di ordine $n$ alto e primo
-- Sceglie a caso $x<n$
+- Sceglie casualmente $x<n$
 - Calcola $Q=xP$
 - Chiave pubblica: $<Q,P,<p,a,b>,n>$, chiave privata: $x$
 
@@ -104,23 +104,22 @@ Variante del DSA, a sua volta variante dello [[Firma#^1aa34e|schema di firma di 
 - Sceglie un numero casuale $k<n$
 - Calcola il punto $R=kP$, e dato $R_x$ la coordinata dell'ascisse, poni $r=R_x\mod n$
 	- Se $r=0$, riprova con un altro $k$
-- Calcola $e=H(m)$, con $H$ funzione di [[Hash]]
 - Calcola $s=k^{-1}(m+xr)\mod n$
 	- Se $s=0$, riprova da capo con un altro $k$
-	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[Hash]]
+	- Al posto di $m$ si può usare $H(m)$, con $H$ funzione di [[hash]]
 - La firma del messaggio è la coppia $(r,s)$
 
 **Verifica firma**, svolta dal destinatario:
 - Calcola $w=s^{-1}\mod n$
-- Calcola $u_1=mw$ e $u_2=rw$
+- Calcola $u_1=mw$ e $u_2=wr$
 - Calcola il punto $X=u_1P+u_2Q$
 	- Se $X=O$, rifiuta la firma
 - Calcola $v=X_x\mod n$
 - Se $v=r$, accetta la firma
 
 Correttezza:
-- $k=s^{-1}(m+xr)\mod n=w(m+xr)\mod n=(wm+wxr)\mod n=(u_1+xu_2)\mod n$
-- $X=u_1P+u_2Q=u_1PB+u_2xP=(u_1+u_2x)P=kP=R$
+- $k=s^{-1}(m+xr)\mod n=w(m+xr)\mod n=(wm+xwr)\mod n=(u_1+xu_2)\mod n$
+- $X=u_1P+u_2Q=u_1P+u_2xP=(u_1+u_2x)P=kP=R$
 	- $r=R_x\mod n$
 	- $v=X_x\mod n$
 

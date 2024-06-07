@@ -102,10 +102,10 @@ Viene svolto in tre fasi.
 
 Un attaccante ha bisogno di ricostruire $s$, e per farlo deve trovare $x$ o $y$ con il logaritmo discreto, che è difficile.
 
-Debolezze, che un attaccante può sfruttare:
+Debolezze che un attaccante può sfruttare:
 - Man-in-the-middle: se non si può conoscere $x$ o $y$, ma si può manipolare i messaggi per la via, allora ci si può inventare uno $z$
 	- Intercetta il destinatario, si inventa uno $z$, e invia al mittente un falso $h_{fake}=g^z$
 	- Intercetta il mittente e calcola $s_{mitt}$ e $m$ con i passaggi di decifrazione
 	- Calcola $s_{dest}=h_{real}^z$ per cifrare $m$ e inviare $c_1$ e $c_2$ al destinatario, così che non si accorga di niente
 - Se per qualche motivo conosce un $m$, può calcolare facilmente il segreto condiviso, e sfruttarlo per i messaggi futuri: $s=c_2×m^{-1}\mod q$
-	- Per aggirare il problema, i comunicante generano le chiavi di continuo
+	- Per aggirare il problema, i comunicante generano nuove chiavi di continuo

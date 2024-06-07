@@ -10,8 +10,7 @@ L'algoritmo ha:
 - Input: seme
 	- $s$: Lunghezza del seme
 - Output: flusso di bit arbitrariamente lungo
-	- $n$: Lunghezza del periodo (a.k.a. *ordine*)
-	- La (sotto)sequenza avrà un *periodo*, che si cercherà di avere più lungo possibile ($n>>s$)
+	- $n$: Lunghezza del periodo (a.k.a. *ordine*), deve essere più lungo possibile ($n>>s$)
 
 
 Dato che qui ci interessa ottenere sequenze di bit, si consuma $0$ o $1$ a seconda della parità del numero generato.
@@ -67,7 +66,7 @@ Per sapere se $p$ e $q$ sono primi, usa il [[Algebra modulare#^e0c1c1|test di Mi
 
 Calcolare $n=p×q$ è facile.
 
-Ricostruire $p$ e $q$ a partire da $n$ è difficile, ma non è NP hard.
+Ricostruire $p$ e $q$ a partire da $n$ è difficile (ma non è NP hard).
 Oggi, il migliore algoritmo (GNFS) è di tempo $O(2^{\sqrt{b\log b}})$.
 Un computer quantistico lo risolve in tempo polinomiale.
 Per computer normali, non c'è alcuna dimostrazione che non si possa risolvere in tempo polinomiale (anche se probabilmente non si può).

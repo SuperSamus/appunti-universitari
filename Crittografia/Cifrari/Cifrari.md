@@ -6,7 +6,7 @@
 
 >[!note]
 >La quantità di chiavi possibili non è sempre sufficiente a rendere la chiave sicura.
->Per esempio, se si usa una permutazione dell'alfabeto come chiave (con cui sostituire i caratteri del messaggio) si hanno $26!$ chiavi, ma le frequenze dei caratteri nel messaggio offre già un forte indizio sulla chiave.
+>Per esempio, se si usa una permutazione dell'alfabeto come chiave (con cui sostituire i caratteri del messaggio) si hanno $26!$ chiavi, ma le frequenze dei caratteri nel messaggio offre un forte indizio sulla chiave.
 >
 >I cifrari di oggi (come AES) sono considerati sicuri, ma non si sa se il metodo matematico per risolverli in tempo polinomiale non esiste o semplicemente se non è stato trovato.
 
@@ -24,6 +24,6 @@ Facilmente rompibili con l'*analisi statistica*.
 TODO
 $P(M=m|C=c)=P(M=m)$
 
-**Teorema di Shannon**: affinché il cifrario sia perfetto, il numero delle chiavi deve essere uguale o maggiore del numero dei messaggi.
+**Teorema di Shannon**: affinché un cifrario possa essere perfetto, il numero delle chiavi deve essere uguale o maggiore del numero dei messaggi.
 
 Per confondere il criptoanalista, è opportuno che molte coppie $(m,k)$ corrispondono allo stesso crittogramma.

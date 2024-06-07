@@ -1,6 +1,7 @@
 Sono molto comode:
 - Risolverle è facile
 - Trovare il determinante è facile (basta moltiplicare i valori nella diagonale, si può vedere con Laplace)
+- Trovare gli [[autovalori]] è facile (sono semplicemente i valori nella diagonale)
 
 ## Fattorizzazione LU
 

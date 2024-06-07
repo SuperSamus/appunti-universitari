@@ -12,7 +12,7 @@ Si basano sui *Principi di Shannon*:
 
 Divide il messaggio in blocchi di 64 bit, ciascuno cifrato e decifrato indipendentemente dagli altri.
 Queste operazioni vengono ripetute in $r$ fasi (round). Nel DES, $r=16$.
-La chiave segreta $k$ è effettivamente di 56 bit: per ogni byte (8), i primi 7 bit sono scelti arbitrariamente, mentre l'ottavo è per il controllo di parità. Dalla chiave vengono create le sottochiavi per $r$.
+La chiave segreta $k$ è effettivamente di 56 bit: per ogni byte (8), i primi 7 bit sono scelti casualmente, mentre l'ottavo è per il controllo di parità. Dalla chiave vengono create le sottochiavi per $r$.
 
 Per ottenere le sottochiavi, si prende la chiave originaria e gli applica la permutazione CP-1 (che tra l'altro scarta tutti i multipli di 8): i primi 28 bit del risultato compongono $C[0]$, gli altri 28 bit compongono $D[0]$.
 Per $i$ da $1$ a $16$:
@@ -36,7 +36,7 @@ $R[16]$ e $L[16]$ insieme subiscono una permutazione finale FP (che è l'inverso
 La funzione $f$:
 - $R[i-1]$ viene espanso da 32 bit a 48 bit, usando la tabella di selezione bit E
 	- Quello che E fa: dividi $R[i-1]$ in 8 blocchi da 4 bit: $b_i,b_{i+1},b_{i+2},b_{i+3}$.
-	  Per ogni blocco, l'output $E(R[i-1])$ è un altro blocco da 6 bit: $b_{i-1},b_i,b_{i+1},b_{i+2},b_{i+3},b_{i+4}$ (ovviamente, $i$ subisce avvolgimento aritmetico a 32)
+		Per ogni blocco, l'output $E(R[i-1])$ è un altro blocco da 6 bit: $b_{i-1},b_i,b_{i+1},b_{i+2},b_{i+3},b_{i+4}$ (ovviamente, $i$ subisce avvolgimento aritmetico a 32)
 - Esegue $E(R[i-1])⊕k[i]$
 - Usa le *S-box* per applicare la sostituzione, e per portare l'output da 48 bit a 32 bit
 	- Dividi l'input in 8 blocchi $B_i$ da 6 bit: per $i$ da 1 a 8, applica $S_i(B_i)$, ciascuno con un output da 4 bit
@@ -48,7 +48,7 @@ La funzione $f$:
 >#### S-box
 >
 >Componente base dei cifrari simmetrici per effettuare la sostituzione, allo scopo di assicurare la proprietà di confusione.
->È una tabella (che nei cifrari più complessi dipende da una chiave, ma nel DES sono 8 tabelle fisse) che trasforma un input di dimensione $m$ in un output di dimensione $n$.
+>È una tabella (che nei cifrari più complessi dipende da una chiave, ma nel DES sono 8 tabelle costanti) che trasforma un input di dimensione $m$ in un output di dimensione $n$.
 
 >[!note]
 >Se $C_{DES}(m,k)=c$, allora $C_{DES}(\bar{m},\bar{k})=\bar{c}$.
@@ -65,6 +65,9 @@ Si può notare che non c'è bisogno di usare l'inversa di $f$ (che non esiste, d
 Per attaccare il DES, c'è bisogno di usare attacchi di forza bruta: esistono altri tipi di attacchi, ma sono praticabili solo in teoria.
 Tuttavia, una chiave di 56 bit è considerata corta al giorno d'oggi.
 
+>[!note]
+Inoltre, approfittando del fatto che $c=C(m,k)$ implichi $\bar{c}=C(\bar{m},\bar{k})$, in realtà è equivalente a 55 bit...
+
 ##### Triple DES
 
 Date due chiavi arbitrarie $k_1$ e $k_2$, allora per tutte le chiavi $k_3$:
@@ -72,14 +75,15 @@ $$C_{DES}(C_{DES}(m, k_1), k_2)≠C_{DES}(m, k_3)$$
 
 Questo significherebbe che applicare due volte il DES con due chiavi, equivarrebbe ad avere una chiave da 112 bit.
 Problema: *meet-in-the-middle attack*, se l'attaccante conosce una qualsiasi coppia arbitraria $<m,c>$:
-- Per ogni $k_1$, calcola a salva $C_{DES}(m, k_1)$ in una tabella
-- Per ogni $k_2$ calcola $D_{DES}(c, k_2)$ e cercalo nella tabella
-Quindi, la complessità diventa cercare due chiavi da 56 bit (che è come cercarne una da 57 bit).
+- Per ogni $k_1$, calcola $C_{DES}(m, k_1)$ e salvalo in un set
+- Per ogni $k_2$ calcola $D_{DES}(c, k_2)$ e cercalo nel set
+	- Se si trova nel set, allora le chiavi sono giuste!
+Quindi, la complessità diventa cercare separatamente due chiavi da 56 bit (che è come cercarne una da 57 bit).
 
 Soluzione: usa tre chiavi:
-$$C_{DES}(D_{DES}(C_{DES}(m, k_1)), k_2),k_3)≠C_{DES}(m, k_3)$$
+$$C_{DES}(D_{DES}(C_{DES}(m, k_1)), k_2),k_3)$$
 
-Ora con il meet-in-the-middle attack, il costo è come cercare una chiave da 112 bit.
+Ora con il meet-in-the-middle attack il costo è come cercare una chiave da 112 bit.
 
 #### AES (Advanced Encryption Standard)
 
@@ -89,7 +93,7 @@ TODO
 
 ### Cipher Block Chaining (CBC)
 
-Avere la cifratura applicata per blocco costituisce dei problemi:
+In un messaggio lungo, avere la cifratura applicata per blocco costituisce dei problemi:
 - La diffusione è limitata al blocco
 - Se due blocchi sono uguali, anche la loro cifratura sarà la stessa
 - La periodicità del crittogramma rende la crittoanalisi più facile

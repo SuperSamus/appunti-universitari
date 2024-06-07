@@ -1,14 +1,14 @@
-obs# Algebra modulare
+# Algebra modulare
 
 Dati gli interi $a$, $b$ e $n>0$, $a$ è congruo a $b$ modulo $n$
 $$a≡b\mod n$$
-Se e solo se esiste un intero $k$ tale che:
+se e solo se esiste un intero $k$ tale che:
 $$a=kn+b$$
 
 Proprietà:
 - $(a + b) \mod m = (a \mod m + b \mod m) \mod m$
 - $(a - b) \mod m = (a \mod m - b \mod m) \mod m$
-- $(a × b) \mod m = (a \mod m × b \mod m) \mod m$
+- $(a × b) \mod m = ((a \mod m) × (b \mod m)) \mod m$
 - $a^{r × s} \mod m = (a^r \mod m)^s \mod m$
 
 Le operazioni nell'algebra modulare sono "imprevedibili".
@@ -26,7 +26,7 @@ Se $n$ non è primo, $Z_n^*$ è computazionalmente difficile da calcolare (bisog
 
 **Funzione di Eulero**: $ϕ(n)=|Z_n^*|$
 - $n$ primo ⇒ $ϕ(n)=n-1$
-- $n$ composto ⇒ $ϕ(n)=n×∏\limits_i^k(1-p_i)$
+- $n$ composto ⇒ $ϕ(n)=n×∏\limits_i^k(1-\frac{1}{p_i})$
 	- $p_1,…,p_k$ sono i diversi fattori primi di $n$
 	- $n=pq$ ⇒ $ϕ(n)=(p-1)(q-1)$
 
@@ -41,7 +41,7 @@ Se $n$ non è primo, $Z_n^*$ è computazionalmente difficile da calcolare (bisog
 >- $ax≡b\mod n$ ammette soluzione in $x$ se e solo se $MCD(a,n)|b$: in questo caso si hanno esattamente $MCD(a,n)$ soluzioni distinte
 >	- Ci deve essere solo una soluzione per ammettere l'inverso, quindi $MCD(a,n)=1$ ⇒ $a$ a $n$ sono co-primi
 >
->Affinché l'*anello* di interi $\mod n$ sia un *campo finito*, è necessario che $n$ sia primo (in questo modo, tutti i numeri non-zero hanno il proprio inverso)
+>Affinché l'*anello* di interi $\mod n$ sia un *campo finito* (cioè tutti i numeri non-zero hanno il proprio inverso), è condizione sufficiente che $n$ sia primo
 
 Trovare $a^{-1}$ nel modo sopra è un problema difficile perché occorre conoscere $ϕ(n)$.
 Qual è un modo più facile?
@@ -68,7 +68,7 @@ Function Extended_Euclid(a,b)
         <d, x, y> = <d', y', x' - ⎣a/b⎦ y'>;
         return <d, x, y>
 ```
-
+%%Spiegazione su https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/%%
 Entrambi gli algoritmi hanno un costo polinomiale.
 
 Quindi:
@@ -92,25 +92,26 @@ Come trovare un numero primo?
 Dato un potenziale numero primo $N$, trova il più grande $w$ possibile e lo $z$ (dispari) che soddisfano:
 $N-1=2^w×z$
 
-Scegli un numero a caso un intero $2≤y≤N-2$ tale che:
+Scegli un numero a caso un intero $2≤y≤N-2$.
+Per ogni $y$, queste condizioni sono necessarie ma non sufficienti affinché il numero sia primo.
 - $MCD(N,y)=1$
 - Uno dei due:
 	- $y^z\mod N=1$
 	- $∃i, 0≤i≤w-1:y^{2^i×z}\mod N=-1$
 
-Per ogni $y$, queste condizioni sono necessarie ma non sufficienti affinché il numero sia primo.
 Se il numero è composto, la probabilità di scegliere un $y$ che comunque soddisfa entrambi i predicati è circa ¼.
 
 Strategia: scegli un $y$ casuale $k$ volte: se tutte le volte i predicati vengono soddisfatti, la probabilità di errore è $<\frac{1}{4^k}$.
 
 Per calcolare efficientemente $y^z\mod N$, ricorda:
- - Scomponi $z$ in $1+2+4+8+…$ (metti solo quelli rilevanti).
+ - Scomponi $z$ in $1+2+4+8+…$ (tieni solo quelli rilevanti).
  - $y^{2i}\mod N=(y^i\mod N)^2\mod N$
 
 ### Logaritmo discreto
 
 ^865e42
 
-Se $n$ non è primo, dato $y=x^z\mod s$, trovare $z$ nella funzione inversa $x=y^{\frac{1}{z}}\mod s$ è difficile. (Miglior algoritmo conosciuto: *index calculus*)
+Se $n$ non è primo, dato $y=x^z\mod s$, trovare $z$ nella funzione inversa $x=y^{\frac{1}{z}}\mod s$ è difficile. (Miglior algoritmo conosciuto: *index calculus*.)
+
 **Trap door**: se si conosce $v=z^{-1}\mod ϕ(s)$ (chiave segreta), allora $x=y^v\mod s$.
-$$y^v\mod s=x^{zv}\mod s\\=x^{1+kϕ(s)}\mod s=xx^{kϕ(s)}\mod s\\=x\mod s$$
+Vedi [[Cifrari asimmetrici#^63a12b|RSA]].

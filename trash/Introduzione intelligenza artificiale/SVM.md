@@ -9,7 +9,7 @@ Sii $d$ il vettore più piccolo che va da un punto all'iperpiano. La proiezione 
 $x^P=x-d$
 $d$ è parallelo a $w$, quindi esiste $α∈ℝ$ tale che $d=αw$
 Dato che $x^P∈H$, quindi $w^Tx^P+b=0$.
-Quindi $w^Tx^P+b=w^T(x-d)+b=w^T(x-αw)+b=0$
+Allora $w^Tx^P+b=w^T(x-d)+b=w^T(x-αw)+b=0$
 $α=\frac{w^Tx+b}{w^Tw}$
 
 #### Trova il margine massimo
@@ -37,9 +37,10 @@ Abbiamo ottenuto un *problema di ottimizzazione quadratico*.
 
 #### Margine debole
 
-È possibile che il rumore faccia sì che l'iperpiano sia posizionato influenzato da un singolo punto anomalo, o che l'iperpiano non possa esistere proprio.
+È possibile che il rumore faccia sì che l'iperpiano sia pesantemente influenzato da un singolo punto anomalo, o che l'iperpiano non possa esistere proprio.
 
-Si può rimuovere il vincolo, modificando la funzione obiettivo.
+Si può modificare il vincolo e la funzione obiettivo.
 Scegliendo una penalità $C$:
-Funzione obiettivo: $\min_{w,b}∥w∥_2+C∑ξ_i$
-Dove $ξ_i=\max(1-y_i(w^Tx_i+b),0)$
+Funzione obiettivo: $\min_{w,b}∥w∥_2+C∑\limits_iξ_i$
+Vincolo: $y_i(w^Tx_i+b)≥1-ξ_i \quad ∀i$
+Dove $ξ_i≥0$
