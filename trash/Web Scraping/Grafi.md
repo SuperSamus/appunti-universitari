@@ -5,7 +5,7 @@
 **Diametro**:
 - Nodi $u$ e $v$: il numero di archi nel cammino minimo tra $u$ e $v$
 - Grafo: il diametro più grande tra tutte le coppie di nodi
-**Betweeness centrality**: rapporto dei cammini minimi che attraversano il nodo
+**Betweenness centrality**: rapporto dei cammini minimi che attraversano il nodo
 **Closeness centrality**: distanza media del nodo rispetto agli altri nodi del grafo
 **Eigenvector centrality**: l'importanza di un nodo dipende dall'importanza dei nodi vicini (definizione ricorsiva)
 **Coefficiente di clustering**: scelto un nodo, prendi l'insieme dei suoi nodi adiacenti (sarà grande $n$): calcola il rapporto tra archi presenti nell'insieme e $n⋅(n-1)$ (il numero di archi che potrebbero esistere)

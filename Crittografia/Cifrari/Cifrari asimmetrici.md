@@ -108,4 +108,4 @@ Debolezze che un attaccante può sfruttare:
 	- Intercetta il mittente e calcola $s_{mitt}$ e $m$ con i passaggi di decifrazione
 	- Calcola $s_{dest}=h_{real}^z$ per cifrare $m$ e inviare $c_1$ e $c_2$ al destinatario, così che non si accorga di niente
 - Se per qualche motivo conosce un $m$, può calcolare facilmente il segreto condiviso, e sfruttarlo per i messaggi futuri: $s=c_2×m^{-1}\mod q$
-	- Per aggirare il problema, i comunicante generano nuove chiavi di continuo
+	- Per aggirare il problema, i comunicanti generano nuove chiavi di continuo
