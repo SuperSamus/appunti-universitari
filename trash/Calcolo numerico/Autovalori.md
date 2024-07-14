@@ -19,17 +19,17 @@ $Av-λIv=0$
 $(A-λI)v=0$
 $\det(A-λI)=0$
 
-Trova quindi i λ tali che $\det(A-λI)=0$.
-Poi, per ciascun autovalore λ trova $v$ tale che $(A-λI)v=0$.
+Trova quindi i $λ$ tali che $\det(A-λI)=0$.
+Poi, per ciascun autovalore $λ$ trova $v$ tale che $(A-λI)v=0$.
 
 ### A cosa serve?
 
-Normalmente, applicare la stessa trasformazione $n$ volte è difficile, ma se l'input è un autovettore è facile: viene semplicemente scalato di $λ^n$.
+Normalmente, data una trasformazione $A$, applicarla $n$ volte è difficile, ma se l'input è un autovettore è facile: viene semplicemente scalato di $λ^n$.
 
-Difficilmente però l'input è già un autovettore, ma lo si può rendere tale.
-Se una matrice quadrata ha $n$ autovettori, questi vettori possono essere usati come matrice $B$ per fare un cambio di base:
+Difficilmente però $A$ è già un autovettore, ma lo si può rendere tale.
+Se una matrice quadrata ha $n$ autovettori, questi possono essere usati come matrice diagonale $B$ per fare un cambio di base:
 $C=B^{-1}AB$
-Questa matrice sarà sempre diagonale.
+$C$ sarà sempre diagonale.
 Quindi, per applicare A $n$ volte a un vettore $v$:
 $w=BC^nB^{-1}$
 
