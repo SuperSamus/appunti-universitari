@@ -26,7 +26,7 @@ $ϵ_{tot}=ϵ^{(2)}+\frac{\frac{1}{x}}{\frac{1}{x}-1}(ϵ^{(1)}-ϵ_x)=ϵ^{(2)}+\fr
 $ϵ_{alg}=ϵ^{(2)}+\frac{1}{1-x}ϵ^{(1)}$
 
 ---
-$f(x)=x^n=e^{n·\log x}$
+$f(x)=x^n=e^{n·\ln x}$
 Assumo che $n$ non abbia errori di rappresentazione.
 ```mermaid
 flowchart LR
@@ -40,22 +40,22 @@ L'algoritmo è stabile, se $n$ non è troppo grande.
 flowchart LR
 e -- ^ --> z3
 z2 -- ^ --> z3
-x -- log --> z1
-e -- log --> z1
+x -- ln --> z1
+e -- ln --> z1
 n -- · --> z2
 z1 -- · --> z2
 ```
 $ϵ_{tot}=ϵ^{(3)}+c_1ϵ_e+(n·\log x)(ϵ^{(2)}+(ϵ^{(1)}+\frac{1}{\log x}ϵ_x+c_2ϵ_e))=ϵ^{(3)}+(c_1+(n·\log x)c_2)ϵ_e+(n·\log x)ϵ^{(2)}+(n·\log x)ϵ^{(1)}+nϵ_x$
-$ϵ_{tot}=ϵ^{(3)}+(n·\log x)(ϵ^{(2)}$
-
+$ϵ_{tot}=ϵ^{(3)}+(n·\ln x)ϵ_e+c_1(ϵ^{(2)}+(ϵ^{(1)}+\frac{1}{\log x}ϵ_x+c_2ϵ_e))=ϵ^{(3)}+(c_1+(n·\log x)c_2)ϵ_e+(n·\log x)ϵ^{(2)}+(n·\log x)ϵ^{(1)}+nϵ_x$
 
 Dove:
-- $c_2=\frac{e\frac{d}{de}\log x}{\log x}$ (qualcuno sa fare questa derivata?)
-- $c_1=\frac{e\frac{d}{de}e^{n·\log x}}{e^{n·\log x}}$
+- $c_2=\frac{e·\frac{\ln x}{e·\ln^2 e}}{\log x}$ (qualcuno sa fare questa derivata?)
+- $c_1=\frac{e·e^{n·\ln x}\ln(n·\ln x)}{e^{n·\ln x}}=e·\ln(n·\ln x)$
 
 L'algoritmo è instabile per $x$ piccolo.
 
 ---
+
 
 $f(x)=x-1+\frac{1}{x+1}$
 ```mermaid
