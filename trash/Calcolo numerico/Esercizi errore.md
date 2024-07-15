@@ -34,7 +34,7 @@ x --> z1
 n --> z1
 ```
 $ϵ_{tot}=ϵ^{(1)}+nϵ_x$
-L'algoritmo è stabile.
+L'algoritmo è stabile, se $n$ non è troppo grande.
 
 ```mermaid
 flowchart LR
@@ -42,10 +42,13 @@ e -- ^ --> z3
 z2 -- ^ --> z3
 x -- log --> z1
 e -- log --> z1
-n -- * --> z2
-z1 -- * --> z2
+n -- · --> z2
+z1 -- · --> z2
 ```
 $ϵ_{tot}=ϵ^{(3)}+c_1ϵ_e+(n·\log x)(ϵ^{(2)}+(ϵ^{(1)}+\frac{1}{\log x}ϵ_x+c_2ϵ_e))=ϵ^{(3)}+(c_1+(n·\log x)c_2)ϵ_e+(n·\log x)ϵ^{(2)}+(n·\log x)ϵ^{(1)}+nϵ_x$
+$ϵ_{tot}=ϵ^{(3)}+(n·\log x)(ϵ^{(2)}$
+
+
 Dove:
 - $c_2=\frac{e\frac{d}{de}\log x}{\log x}$ (qualcuno sa fare questa derivata?)
 - $c_1=\frac{e\frac{d}{de}e^{n·\log x}}{e^{n·\log x}}$
@@ -65,12 +68,11 @@ z1 -- / --> z2
 x -- + --> z1
 1 -- + --> z1
 ```
-$ϵ_{tot}=ϵ^{(1)}+ϵ^{(2)}+\frac{xϵ_x+\frac{1}{x+1}ϵ_{\frac{1}{x+1}}}{\frac{x^2}{x+1}}=ϵ^{(1)}+ϵ^{(2)}+(xϵ_x+\frac{1}{x+1}(ϵ^{(3)}-ϵ_{x+1}))\frac{x+1}{x^2}={\frac{x^2}{x+1}}=ϵ^{(1)}+ϵ^{(2)}+(xϵ_x+\frac{1}{x+1}(ϵ^{(3)}-ϵ_4-\frac{x}{x+1}ϵ_x))\frac{x+1}{x^2}={\frac{x^2}{x+1}}=ϵ^{(1)}+ϵ^{(2)}+\frac{1}{x^2}ϵ^{(3)}-\frac{1}{x^2}ϵ_4+(\frac{x+1}{x}-\frac{1}{x(x+1)})ϵ_x=ϵ^{(1)}+ϵ^{(2)}+\frac{1}{x^2}ϵ^{(3)}-\frac{1}{x^2}ϵ_4+\frac{x+2}{x+1}ϵ_x$
-$ϵ_{tot}=ϵ^{(3)}+c^{(3)}_1ϵ_x+c^{(3)}_3ϵ^{(2)}_{tot}=$
-$c_1=\frac{x}{x-1+\frac{1}{x+1}}=\frac{x+1}{x}$
-$c_3=\frac{\frac{1}{x+1}}{x-1+\frac{1}{x+1}}=\frac{1}{x^2}$
+$ϵ_{tot}=ϵ^{(3)}+c^{(3)}_1ϵ_x+c^{(3)}_3ϵ^{(2)}_{tot}=ϵ^{(3)}+\frac{x+1}{x}ϵ_x+\frac{1}{x^2}(ϵ^{(2)}-(ϵ^{(1)}+\frac{x}{x+1}ϵ_x))=ϵ^{(3)}+\frac{x+1}{x}ϵ_x+\frac{1}{x^2}ϵ^{(2)}-\frac{1}{x^2}ϵ^{(1)}-\frac{1}{x(x+1)}ϵ_x=ϵ^{(3)}+\frac{1}{x^2}ϵ^{(2)}-\frac{1}{x^2}ϵ^{(1)}-\frac{x+2}{x+1}ϵ_x$
+$c^{(3)}_1=\frac{x}{x-1+\frac{1}{x+1}}=\frac{x+1}{x}$
+$c^{(3)}_3=\frac{\frac{1}{x+1}}{x-1+\frac{1}{x+1}}=\frac{1}{x^2}$
 $ϵ^{(2)}_{tot}=ϵ^{(2)}-ϵ^{(1)}_{tot}$
-$ϵ^{(1)}_{tot}=ϵ^{(1)}+
+$ϵ^{(1)}_{tot}=ϵ^{(1)}+\frac{x}{x+1}ϵ_x$
 
 Il problema è mal condizionato con $x$ vicino a $-1$.
 È algebricamente instabile anche con $x$ vicino a $0$.
