@@ -45,12 +45,11 @@ e -- ln --> z1
 n -- · --> z2
 z1 -- · --> z2
 ```
-$ϵ_{tot}=ϵ^{(3)}+c_1ϵ_e+(n·\log x)(ϵ^{(2)}+(ϵ^{(1)}+\frac{1}{\log x}ϵ_x+c_2ϵ_e))=ϵ^{(3)}+(c_1+(n·\log x)c_2)ϵ_e+(n·\log x)ϵ^{(2)}+(n·\log x)ϵ^{(1)}+nϵ_x$
-$ϵ_{tot}=ϵ^{(3)}+(n·\ln x)ϵ_e+c_1(ϵ^{(2)}+(ϵ^{(1)}+\frac{1}{\log x}ϵ_x+c_2ϵ_e))=ϵ^{(3)}+(c_1+(n·\log x)c_2)ϵ_e+(n·\log x)ϵ^{(2)}+(n·\log x)ϵ^{(1)}+nϵ_x$
+$ϵ_{tot}=ϵ^{(3)}+(n·\ln x)ϵ_e+c_1(ϵ^{(2)}+(ϵ^{(1)}+\frac{1}{\ln x}ϵ_x+c_2ϵ_e))=ϵ^{(3)}+eϵ^{(2)}+eϵ^{(1)}+(n·\ln x-e)ϵ_e+\frac{e}{\ln x}ϵ_x$
 
 Dove:
-- $c_2=\frac{e·\frac{\ln x}{e·\ln^2 e}}{\log x}$ (qualcuno sa fare questa derivata?)
-- $c_1=\frac{e·e^{n·\ln x}\ln(n·\ln x)}{e^{n·\ln x}}=e·\ln(n·\ln x)$
+- $c_2=\frac{e(-\frac{\ln x}{e·\ln^2 e})}{\ln x}=-1$
+- $c_1=\frac{e·e^{n·\ln x}}{e^{n·\ln x}}=e$
 
 L'algoritmo è instabile per $x$ piccolo.
 
@@ -75,18 +74,19 @@ $ϵ^{(2)}_{tot}=ϵ^{(2)}-ϵ^{(1)}_{tot}$
 $ϵ^{(1)}_{tot}=ϵ^{(1)}+\frac{x}{x+1}ϵ_x$
 
 Il problema è mal condizionato con $x$ vicino a $-1$.
-È algebricamente instabile anche con $x$ vicino a $0$.
+È algebricamente instabile con $x$ vicino a $0$.
 
 $f(x)=\frac{x^2}{x+1}$
 
 ```mermaid
 flowchart LR
-x --> z1
-x --> z1
-x --> y1
-1 --> y1
-z1 --> z2
-y1 --> z2
+x -- · --> z1
+x -- · --> z1
+x -- + --> z2
+1 -- + --> z2
+z1 -- / --> z3
+z2 -- / --> z3
 ```
-$ϵ_{tot}=ϵ^{(1)}+ϵ_{tot_{x^2}}-ϵ_{tot_{x+1}}=ϵ^{(1)}+(ϵ^{(2)}+2ϵ_x)-(ϵ^{(3)}+\frac{x}{x+1}ϵ_x)=ϵ^{(1)}+ϵ^{(2)}-ϵ^{(3)}+\frac{x+2}{x+1}ϵ_x$
-È algebricamente stabile, l'unica cosa peggiore è un basso rischio di overflow per via di $x^2$.
+$ϵ_{tot}=ϵ^{(3)}+ϵ^{(1)}_{tot}-ϵ^{(2)}_{tot}=ϵ^{(3)}+(ϵ^{(1)}+2ϵ_x)-(ϵ^{(2)}+\frac{x}{x+1}ϵ_x)=ϵ^{(3)}-ϵ^{(2)}+ϵ^{(1)}+\frac{x+2}{x+1}ϵ_x$
+È algebricamente stabile, c'è solo un basso rischio di overflow per via di $x^2$.
+
