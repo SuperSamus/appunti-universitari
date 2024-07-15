@@ -1,5 +1,5 @@
 Errore totale:
-- $ϵ_{tot}=ϵ_{alg}+ϵ_{in}$
+- $ϵ_{tot}≐ϵ_{alg}+ϵ_{in}$
 - $ϵ_{tot}=\frac{ψ(\tilde{x})-f(x)}{f(x)}$
 
 ### Errore inerente
@@ -43,4 +43,7 @@ $ϵ_{in}=\frac{1·10^{-5}-2·10^{-6}}{2·10^{-6}}=4$
 - $c_1=\frac{0.123456}{0.123456-0.123454}=\frac{0.123456}{2·10^{-6}}$
 - $c_2=\frac{0.123454}{0.123454-0.123456}=-\frac{0.123454}{2·10^{-6}}$
 
-$ϵ_{in}=c_1ϵ_1+c_2ϵ_2=2+2=4$
+$ϵ_{in}≐c_1ϵ_1+c_2ϵ_2=2+2=4$
+
+La sottrazione è così dannosa che si cerca di evitare il più possibile.
+Per esempio, nelle equazioni di secondo grado $ax^2+bx+c=0$, dove $x_1=\frac{-b+\sqrt{b^2-4ac}}{2a}$ (assumendo $b$ positivo), si approfitta invece della proprietà $x_1x_2=\frac{c}{a}$.
