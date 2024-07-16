@@ -1,6 +1,6 @@
 Come trovare in quali punti una funzione è uguale a 0?
 
-Metodi che richiedono due estremità $a$ e $b$, dove $f(a)$ è positiva e $f(b) è negativa (o viceversa):
+Metodi che richiedono due estremità $a$ e $b$, dove $f(a)$ è positiva e $f(b)$ è negativa (o viceversa):
 - Bisezione
 - Secanti
 
