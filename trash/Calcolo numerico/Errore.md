@@ -59,3 +59,7 @@ Per esempio, nelle equazioni di secondo grado $ax^2+bx+c=0$, dove $x_1=\frac{-b+
 ### Errore analitico
 
 Data una funzione non razionale $f(x)$, si deve utilizzare un'approssimazione razionale $g(x)$ per eseguire i calcoli, che si aggiunge all'errore totale:
+$ϵ_{an}=\frac{g(x)-f(x)}{f(x)}$
+
+Un'approssimazione più precisa (per esempio, $n$ più alto nell'approssimazione di Taylor) riduce l'errore analitico, ma aumenterà l'errore algebrico.
+È importante trovare il giusto equilibrio per minimizzare $ϵ_{alg}+ϵ_{an}$.
