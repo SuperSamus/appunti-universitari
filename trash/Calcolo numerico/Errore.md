@@ -3,11 +3,13 @@ Errore totale:
 - $ϵ_{tot}=\frac{ψ(\tilde{x})-f(x)}{f(x)}$
 
 ### Errore inerente
-$ϵ_{in}≐c_xϵ_x$
+
+$ϵ_{in}=\frac{f(\tilde{x})-f(x)}{f(x)}$
 
 - Errore relativo: $ϵ_x=\frac{\tilde{x}-x}{x}$
 - Coefficiente di amplificazione: $c_x=\frac{xf'(x)}{f(x)}$
- 
+- $ϵ_{in}≐c_xϵ_x$
+
  Per funzioni con più parametri:
 - $ϵ_{in}≐∑\limits_ic_iϵ_i$
 - $c_i=\frac{x_i}{f(x)}\frac{δf(x)}{δx_i}$
@@ -27,6 +29,12 @@ Esempi:
 	- $c_1=1$
 	- $c_2=-1$
 
+### Errore algoritmico
+
+$ϵ_{alg}=\frac{ψ(\tilde{x})-f(\tilde{x})}{f(\tilde{x})}$
+
+Dipende dalla serie di operazioni eseguite nell'aritmetica finita.
+
 #### Esempio sottrazione
 
 In un sistema con 5 cifre decimali, calcoliamo l'errore di $0.123456-0.123454$.
@@ -45,5 +53,9 @@ $ϵ_{in}=\frac{1·10^{-5}-2·10^{-6}}{2·10^{-6}}=4$
 
 $ϵ_{in}≐c_1ϵ_1+c_2ϵ_2=2+2=4$
 
-La sottrazione è così dannosa che si cerca di evitare il più possibile.
+La sottrazione è estremamente dannosa. Se è parte dell'errore algoritmico, si cerca di evitarla il più possibile.
 Per esempio, nelle equazioni di secondo grado $ax^2+bx+c=0$, dove $x_1=\frac{-b+\sqrt{b^2-4ac}}{2a}$ (assumendo $b$ positivo), si approfitta invece della proprietà $x_1x_2=\frac{c}{a}$.
+
+### Errore analitico
+
+Data una funzione non razionale $f(x)$, si deve utilizzare un'approssimazione razionale $g(x)$ per eseguire i calcoli, che si aggiunge all'errore totale:
