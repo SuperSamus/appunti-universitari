@@ -32,7 +32,13 @@ L'ordine di convergenza verso $α$, è $p$ tale che:
 
 $x_{i+1}=x_i-\frac{f(x_i)}{f'(x_i)}$
 
-In questo caso $g'(x)=\frac{f(x)f''(x)}{f'(x)^2}$
+In questo caso $g'(x)=1-\frac{f'(x)f'(x)-f(x)f''(x)}{f'(x)^2}=\frac{f(x)f''(x)}{f'(x)^2}$
+
+##### Metodo delle corde
+
+Se elaborare $f'(x)$ è troppo costoso, si può "riciclare" il valore per $n$ passi:
+
+$x_{i+1}=x_i-\frac{f(x_i)}{m}$
 
 ### Matrici
 
