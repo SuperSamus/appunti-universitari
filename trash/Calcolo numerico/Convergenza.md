@@ -15,7 +15,7 @@ Per assicurare la convergenza, serve che $|g'(x)|<1$ nel dominio dove si itera.
 	- Se $x_0=α+r$, bisogna quindi assicurarsi che $|g'(x)|<1$ in tutto $(α-r,α+r]$
 
 >[!info]
-L'ordine di convergenza verso $α$, è $p$ tale che:
+L'**ordine di convergenza** verso $α$, è $p$ tale che:
 >
 >$\lim\limits_{i→∞}\frac{|x_{i+1}-α|}{|x_i-α|^p}=γ$
 >
