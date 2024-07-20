@@ -42,8 +42,13 @@ $x_{i+1}=x_i-\frac{f(x_i)}{m}$
 
 ### Matrici
 
-I metodi iterativi sono utili in matrici sparse (cioè quasi diagonali, ma con pochi valori non nulli sparsi in giro).
-Presi $M$ e $N$ tali che $A=M-N$:
+Data una matrice $A$ e un vettore $b$, si cerca il vettore $x$ tale che $Ax=b$.
+Di solito si utilizzano metodo diretti, come quello di Gauss. Questo però ha una complessità $O(n^3)$, indipendentemente dal contenuto della matrice.
+Questo è grave specialmente nelle matrici sparse, cioè quasi diagonali ma con pochi valori non nulli fuori dalle diagonali.
+
+I metodi iterativi sono meno precisi ma possono essere più veloci, specialmente in questa situazione.
+
+Presi $M$ e $N$ tali che $M$ non singolare, e $A=M-N$:
 $Ax=b$
 $b=Mx-Nx$
 $x=M^{-1}Nx+M^{-1}b$
@@ -71,4 +76,4 @@ $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1,j≠i}^na_{ij}x_j^{(k)})$
 L'iterazione si può quindi calcolare (per riga $i$):
 $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1}^{i-1}a_{ij}x_j^{(k+1)}-∑\limits_{j=i+1}^na_{ij}x_j^{(k)})$
 
-Il vettore $x$ può essere sostituito in-place, ma non si possono calcolare i suoi valori in parallelo.
+Il vettore $x$ può essere sostituito in-place, ma non si possono calcolare i suoi elementi in parallelo.
