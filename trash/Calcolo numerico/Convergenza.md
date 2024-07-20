@@ -12,7 +12,7 @@ Itera con $x_{i+1}=g(x_i)$, se la funzione converge verso $x^*$.
 Per assicurare la convergenza, serve che $|g'(x)|<1$ nel dominio dove si itera.
 - Se $0<g'(x)<1$, allora la successione è monotona crescente (se $x_0<a$) o monotona decrescente (se $x_0>a$).
 - Se $-1<g'(x)<0$, allora la successione è alternata.
-	- Se $x_0=α+r$, bisogna quindi assicurarsi che $|g'(x)|<1$ in tutto $(α-r,α+r]$
+	- Assumendo che come $x_0$ venga scelta un'estremità del dominio, è possibile che $x_1$ si troverà fuori dal dominio. Si può risolvere il problema scegliendo come $x_0$ l'altra estremità.
 
 >[!info]
 L'**ordine di convergenza** verso $α$, è $p$ tale che:
@@ -24,7 +24,7 @@ L'**ordine di convergenza** verso $α$, è $p$ tale che:
 >[!note]
 >Se intorno ad $α$, $g'(α)=g''(α)=…=g^{(p-1)}(α)=0$ e $g^{(p)}(α)≠0$, allora è garantito che l'ordine di convergenza di $g(x)$ sia almeno $p$.
 >
->Questo perché, per via di Taylor, $x_{i+1}-α=g(x_i)-g(α)=\frac{(x_i-α)^p}{p!}g^{(p)}(ξ)$
+>Questo perché, per via di Taylor, $x_{i+1}-α=g(x_i)-g(α)=\frac{(x_i-α)^p}{p!}g^{(p)}(ξ)\quad |x_i-ξ|<|x_i-α|$
 >
 >Quindi $\lim\limits_{i→∞}\frac{|x_{i+1}-α|}{|x_i-α|^p}=\frac{1}{p!}g^{(p)}(α)≠0$
 
@@ -56,7 +56,6 @@ Alcuni condizioni sufficienti per la convergenza:
 - Esiste una [[norma]] matriciale dove $∥P∥<1$
 
 Si può dimostrare applicando queste funzioni all'errore $e^{(i)}=|x^*-x^{(i)}|$, dato che: $e^{(i+1)}=Pe^{(i)}$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
-
 
 #### Composizioni da particolari
 
