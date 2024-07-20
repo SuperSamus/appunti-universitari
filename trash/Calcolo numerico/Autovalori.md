@@ -10,6 +10,8 @@ Se $A$ ha $n$ autovalori (avere autovalori uguali per autovettori diversi conta)
 - Il suo *determinante* è uguale al prodotto degli autovalori.
 - La sua *traccia* (somma di elementi in diagonale) è uguale alla somma degli autovalori
 
+Se due matrici hanno autovalori, rango, determinante e traccia uguali, sono **simili**.
+
 $ρ(A)$ indica il modulo massimo degli autovalori.
 
 ### Come trovare gli autovalori?
@@ -26,12 +28,13 @@ Poi, per ciascun autovalore $λ$ trova $v$ tale che $(A-λI)v=0$.
 
 Normalmente, data una trasformazione $A$, applicarla $n$ volte è difficile, ma se l'input è un autovettore è facile: viene semplicemente scalato di $λ^n$.
 
-Difficilmente però $A$ è già un autovettore, ma lo si può rendere tale.
+Difficilmente però l'input è già un autovettore,.
 Se una matrice quadrata ha $n$ autovettori, questi possono essere usati come matrice diagonale $B$ per fare un cambio di base:
 $C=B^{-1}AB$
-$C$ sarà sempre diagonale.
+$C$ sarà sempre diagonale (quindi applicarla $n$ volte è facile), ed è *simile* ad A.
+
 Quindi, per applicare A $n$ volte a un vettore $v$:
-$w=BC^nB^{-1}$
+$w=BC^nB^{-1}v$
 
 ### Cerchi di Gershgorin
 
