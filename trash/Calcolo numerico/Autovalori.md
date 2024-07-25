@@ -10,6 +10,8 @@ Se $A$ ha $n$ autovalori (avere autovalori uguali per autovettori diversi conta)
 - Il suo *determinante* è uguale al prodotto degli autovalori.
 - La sua *traccia* (somma di elementi in diagonale) è uguale alla somma degli autovalori
 
+Gli autovalori di una matrice inversa sono il reciproco degli autovalori della matrice originale.
+
 Se due matrici hanno autovalori, rango, determinante e traccia uguali, sono **simili**.
 
 $ρ(A)$ indica il modulo massimo degli autovalori.
