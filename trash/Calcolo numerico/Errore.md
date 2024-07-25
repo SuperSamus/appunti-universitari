@@ -63,3 +63,12 @@ $ϵ_{an}=\frac{g(x)-f(x)}{f(x)}$
 
 Un'approssimazione più precisa (per esempio, $n$ più alto nell'approssimazione di Taylor) riduce l'errore analitico, ma aumenterà l'errore algebrico.
 È importante trovare il giusto equilibrio per minimizzare $ϵ_{alg}+ϵ_{an}$.
+
+## Sistemi lineari
+
+Dato un sistema lineare, con $b$ perturbato di $δb$:
+$A(x+δx)=b+δb$
+Dove $x+δx$ è la soluzione perturbata.
+
+$\frac{||δx||}{||x||}≤μ(A)\frac{||δb||}{||b||}$, scrivibile come $ϵ_x≤μ(A)ϵ_b$
+Il *numero di condizionamento* $μ(A)=||A||\:||A^{-1}||≥1$, per via della diseguaglianza triangolare della [[norma]].
