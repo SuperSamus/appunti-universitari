@@ -1,9 +1,11 @@
+## Matrici triangolari
+
 Sono molto comode:
 - Risolverle è facile
 - Trovare il determinante è facile (basta moltiplicare i valori nella diagonale, si può vedere con Laplace)
 - Trovare gli [[autovalori]] è facile (sono semplicemente i valori nella diagonale)
 
-## Fattorizzazione LU
+### Fattorizzazione LU
 
 Divide una matrice $A$ in due matrici triangolari $L$ e $U$, tali che:
 $A=LU$
@@ -15,3 +17,8 @@ Un modo per ottenerla è partire da:
 $A=IA$
 E fare l'eliminazione di Gauss (su $A$) per ottenere $U$, mettendo i fattori in $L$: https://math.libretexts.org/Bookshelves/Linear_Algebra/A_First_Course_in_Linear_Algebra_(Kuttler)/02%3A_Matrices/2.10%3A_LU_Factorization
 
+### Matrici unitarie
+
+Sono le matrici dove $M^HM=MM^H=I$.
+Dove $M^H$ è la trasposta coniugata.
+Esempio: matrici di permutazione, $M=[e_1|e_2|...|e_n]$ con gli $e_i$ permutati.
