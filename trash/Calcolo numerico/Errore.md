@@ -66,6 +66,8 @@ Un'approssimazione più precisa (per esempio, $n$ più alto nell'approssimazione
 
 ## Sistemi lineari
 
+### Errore inerente
+
 Dato un sistema lineare, con $b$ perturbato di $δb$:
 $A(x+δx)=b+δb$
 Dove $x+δx$ è la soluzione perturbata.
@@ -74,3 +76,9 @@ $\frac{||δx||}{||x||}≤μ(A)\frac{||δb||}{||b||}$, scrivibile come $ϵ_x≤μ
 Il *numero di condizionamento* $μ(A)=||A||\:||A^{-1}||≥1$, per via della diseguaglianza triangolare della [[norma]].
 
 Se si usa la norma 2, $μ(A)=\frac{λ_{max}}{λ_{min}}$ (dove $λ$ sono [[autovalori]])
+
+### Errore algoritmico
+
+Con l'algoritmo di Gauss, difficile da prevedere.
+L'algoritmo è instabile se gli elementi crescono troppo ad un passo.
+Per limitare la crescita, esiste la tecnica del *massimo pivot*, che consiste nello scambiare la prima riga con quella che ha il valore (nella colonna che ci interessa) di modulo più alto.
