@@ -31,12 +31,12 @@ Poi, per ciascun autovalore $λ$ trova $v$ tale che $(A-λI)v=0$.
 Normalmente, data una trasformazione $A$, applicarla $n$ volte è difficile, ma se l'input è un autovettore è facile: viene semplicemente scalato di $λ^n$.
 
 Difficilmente però l'input è già un autovettore,.
-Se una matrice quadrata ha $n$ autovettori, questi possono essere usati come matrice diagonale $B$ per fare un cambio di base:
-$C=B^{-1}AB$
-$C$ sarà sempre diagonale (quindi applicarla $n$ volte è facile), ed è *simile* ad A.
+Se una matrice quadrata ha $n$ autovettori, questi possono essere usati come matrice diagonale $P$ per fare un cambio di base:
+$D=P^{-1}AP$
+$D$ sarà sempre diagonale (quindi applicarla $n$ volte è facile), ed è *simile* ad A.
 
 Quindi, per applicare A $n$ volte a un vettore $v$:
-$w=BC^nB^{-1}v$
+$w=PD^nP^{-1}v$
 
 ### Cerchi di Gershgorin
 

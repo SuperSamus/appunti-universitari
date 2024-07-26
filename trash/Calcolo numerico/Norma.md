@@ -7,6 +7,7 @@ Esempi di norme vettoriali:
 - Norma 1: $∑\limits_{i=1}^n|x_i|$
 - Norma 2: $\sqrt{x^Tx}=\sqrt{∑\limits_{i=1}^nx_i^2}$
 - Norma ∞: $\max_i |x_i|$
+- Norma $p$: $\sqrt[p]{∑\limits_{i=1}^n|x_i|^p}$
 
 
 La *norma matriciale* per una matrice $A∈ℝ^{n×n}$ ha le stesse proprietà, più:
