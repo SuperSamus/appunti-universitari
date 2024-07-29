@@ -49,7 +49,7 @@ $K_i:=\{z∈ℂ:|z-a_{ii}≤R_i(A)\}$
 
 ## Metodo delle potenze
 
-Nella situazione in cui una matrice $A$ ha un autovalore $λ_1$ di modulo strettamente maggiore rispetto agli altri, intuitivamente, applicare la trasformazione su un qualunque vettore $v$ farà sì che il vetttore tenderà sempre di più ad essere l'autovettore $x_1$ (cioè quello associato a $λ_1$).
+Nella situazione in cui una matrice $A$ ha un autovalore $λ_1$ di modulo strettamente maggiore rispetto agli altri, intuitivamente, applicare la trasformazione su un qualunque vettore $v$ farà sì che il vettore tenderà sempre di più ad essere l'autovettore $x_1$ (cioè quello associato a $λ_1$).
 
 Matematicamente, definendo $v$ come:
 $v=∑\limits_{i=1}^nα_ix_i$
@@ -57,4 +57,8 @@ $v=∑\limits_{i=1}^nα_ix_i$
 Si può applicare $A$ un numero $k$ di volte:
 $A^kv=A^k∑\limits_{i=1}^nα_ix_i=∑\limits_{i=1}^nα_iA^kx_i=∑\limits_{i=1}^nα_iλ_i^kx_i=λ_1^k(α_1x_1+∑\limits_{i=2}^nα_i(\frac{λ_i}{λ_1})^kx_i)$
 
-Dove
+Dove:
+$\lim\limits_{k→+∞}A^kv∼λ_1^kα_1x_1$
+
+Quindi con la seguente successione:
+$\begin{cases} u^{(k)}=At^{(k-1)} \\ t^{(k)}=\frac{u^{(k-1)}} \end{cases}$
