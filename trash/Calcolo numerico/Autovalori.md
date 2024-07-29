@@ -4,7 +4,7 @@ Di quanto sono scalati si misura con gli **autovalori**.
 Abbiamo quindi autovettori $v$ scalati di $λ$:
 $Av=λv$
 
-Dato $n$ la dimensione della matrice quadrata, in $ℝ$, è possibile che ogni vettore sia un'autovettore (matrici diagonali), che ci siano $n$ autovettori (il caso tipico), o che ci siano meno di $n$ autovettori (rotazioni, stiramenti...).
+Dato $n$ la dimensione della matrice quadrata, in $ℝ$, è possibile che ogni vettore sia un'autovettore (matrici diagonali), che ci siano $n$ autovettori (il caso tipico), o che ci siano meno di $n$ autovettori (rotazioni, stiramenti…).
 
 Se $A$ ha $n$ autovalori (avere autovalori uguali per autovettori diversi conta):
 - Il suo *determinante* è uguale al prodotto degli autovalori.
@@ -46,3 +46,15 @@ Localizzati in posizione $a_{ii}$, quindi l'autovalore della riga $i$ si trova i
 $K_i:=\{z∈ℂ:|z-a_{ii}≤R_i(A)\}$
 
 "Riga" e "colonna" sono scambiabili nelle definizioni sopra. Calcolando i raggi sia per riga che per colonna, i cerchi finali sono l'intersezione dei risultati.
+
+## Metodo delle potenze
+
+Nella situazione in cui una matrice $A$ ha un autovalore $λ_1$ di modulo strettamente maggiore rispetto agli altri, intuitivamente, applicare la trasformazione su un qualunque vettore $v$ farà sì che il vetttore tenderà sempre di più ad essere l'autovettore $x_1$ (cioè quello associato a $λ_1$).
+
+Matematicamente, definendo $v$ come:
+$v=∑\limits_{i=1}^nα_ix_i$
+
+Si può applicare $A$ un numero $k$ di volte:
+$A^kv=A^k∑\limits_{i=1}^nα_ix_i=∑\limits_{i=1}^nα_iA^kx_i=∑\limits_{i=1}^nα_iλ_i^kx_i=λ_1^k(α_1x_1+∑\limits_{i=2}^nα_i(\frac{λ_i}{λ_1})^kx_i)$
+
+Dove
