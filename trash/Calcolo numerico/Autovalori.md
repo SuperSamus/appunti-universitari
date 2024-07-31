@@ -61,4 +61,7 @@ Dove:
 $\lim\limits_{k→+∞}A^kv∼λ_1^kα_1x_1$
 
 Quindi con la seguente successione:
-$\begin{cases} u^{(k)}=At^{(k-1)} \\ t^{(k)}=\frac{u^{(k-1)}} \end{cases}$
+$\begin{cases} u^{(k)}=At^{(k-1)} \\ t^{(k)}=\frac{u^{(k)}}{||u^{(k)}||_∞} \end{cases}$
+
+Dove $u^{(0)}=v$.
+Dopo $n$ iterazioni, l'autovettore sarà $t^{(n)}$, e l'autovalore $||u^{(n)}||_∞$ (si può assumere che l'indice maggiore a un certo punto sarà sempre lo stesso).
