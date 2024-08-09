@@ -34,6 +34,15 @@ $x_{i+1}=x_i-\frac{f(x_i)}{f'(x_i)}$
 
 In questo caso $g'(x)=1-\frac{f'(x)f'(x)-f(x)f''(x)}{f'(x)^2}=\frac{f(x)f''(x)}{f'(x)^2}$
 
+Garantisce che l'ordine di convergenza sia almeno 2, se $f(α)≠0$.
+
+>[!info]
+>##### Convergenza in largo
+>Intuitivamente, se $x_i$ è positivo in un punto della funzione convesso, oppure è negativo in un punto concavo, allora $x_{i+1} sarà più vicino ad $α$.
+>Quindi, se:
+>- $f(x_0)f''(x_0)>0$ (la condizione sopra)
+>- In tutto l'intervallo
+
 ##### Metodo delle corde
 
 Se elaborare $f'(x)$ è troppo costoso, si può "riciclare" il valore per $n$ passi:
