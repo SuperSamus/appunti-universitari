@@ -81,12 +81,12 @@ Dato $D$ la parte diagonale di $A$, $-C$ la parte diagonale inferiore (esclusiva
 $A=D-C-E$
 
 - *Metodo di Jacobi*: $M=D$ e $N=C+E$
-La matrice di iterazione è quindi $J=D^{-1}(C+E)$.
-L'iterazione si può quindi calcolare come (per riga $i$):
-$x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1,j≠i}^na_{ij}x_j^{(k)})$
-
+	- $J=D^{-1}(C+E)$.
+	- $x^{(k+1)}=Jx^{(k)}+D^{-1}b$
+	- $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1,j≠i}^na_{ij}x_j^{(k)})$
 - *Metodo di Gaudd-Seidel: $M=D-C$ e $N=E$
-L'iterazione si può quindi calcolare (per riga $i$):
-$x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1}^{i-1}a_{ij}x_j^{(k+1)}-∑\limits_{j=i+1}^na_{ij}x_j^{(k)})$
-
-Il vettore $x$ può essere sostituito in-place, ma non si possono calcolare i suoi elementi in parallelo.
+	- $G=(D-C)^{-1}E$
+	- $x^{(k+1)}=Gx^{(k)}+(D-C)^{-1}b$
+	- $x^{(k+1)}=D^{−1}Cx^{(k+1)}+D^{−1}Ex^{(k)}+D^{−1}b$
+	- $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1}^{i-1}a_{ij}x_j^{(k+1)}-∑\limits_{j=i+1}^na_{ij}x_j^{(k)})$
+	- Il vettore $x$ può essere sostituito in-place, ma non si possono calcolare i suoi elementi in parallelo.
