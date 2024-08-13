@@ -81,7 +81,8 @@ Dato $D$ la parte diagonale di $A$, $-C$ la parte diagonale inferiore (esclusiva
 $A=D-C-E$
 
 - *Metodo di Jacobi*: $M=D$ e $N=C+E$
-L'iterazione si può quindi calcolare (per riga $i$):
+La matrice di iterazione è quindi $J=D^{-1}(C+E)$.
+L'iterazione si può quindi calcolare come (per riga $i$):
 $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1,j≠i}^na_{ij}x_j^{(k)})$
 
 - *Metodo di Gaudd-Seidel: $M=D-C$ e $N=E$
