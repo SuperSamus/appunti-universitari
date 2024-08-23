@@ -41,7 +41,7 @@ Garantisce che l'ordine di convergenza sia almeno 2, se $f(α)≠0$.
 
 >[!info]
 >##### Convergenza in largo
->Intuitivamente, se $x_i$ è positivo in un punto della funzione convesso, oppure è negativo in un punto concavo, allora $x_{i+1} sarà più vicino ad $α$.
+>Intuitivamente, se $x_i$ è positivo in un punto della funzione convesso, oppure è negativo in un punto concavo, allora $x_{i+1}$ sarà più vicino ad $α$.
 >Quindi, se:
 >- $f(x_0)f''(x_0)>0$
 >- $∀x∈[a,b]∖α\quad f'(x),f''(x)≠0$ (convessità non cambia nell'intervallo fino ad $α$)
