@@ -37,7 +37,7 @@ $x_{i+1}=x_i-\frac{f(x_i)}{f'(x_i)}$
 
 In questo caso $g'(x)=1-\frac{f'(x)f'(x)-f(x)f''(x)}{f'(x)^2}=\frac{f(x)f''(x)}{f'(x)^2}$
 
-Garantisce che l'ordine di convergenza sia almeno 2, se $f(α)≠0$.
+Se $f'(α)≠0$, allora l'ordine di convergenza è almeno 2 (altrimenti è lineare).
 
 >[!info]
 >##### Convergenza in largo
