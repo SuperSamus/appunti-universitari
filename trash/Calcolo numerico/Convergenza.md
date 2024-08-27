@@ -84,7 +84,7 @@ $A=D-C-E$
 	- $J=D^{-1}(C+E)$.
 	- $x^{(k+1)}=Jx^{(k)}+D^{-1}b$
 	- $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1,j≠i}^na_{ij}x_j^{(k)})$
-- *Metodo di Gaudd-Seidel: $M=D-C$ e $N=E$
+- *Metodo di Gauss-Seidel: $M=D-C$ e $N=E$
 	- $G=(D-C)^{-1}E$
 	- $x^{(k+1)}=Gx^{(k)}+(D-C)^{-1}b$
 	- $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1}^{i-1}a_{ij}x_j^{(k+1)}-∑\limits_{j=i+1}^na_{ij}x_j^{(k)})$
