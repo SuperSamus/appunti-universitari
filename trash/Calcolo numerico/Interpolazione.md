@@ -21,6 +21,8 @@ Dove:
 $det(V)=∏\limits_{i>j}(x_i-x_j)$
 Essendo diverso da 0, questo dimostra esistenza e unicità.
 
+$V$ è però una matrice malcondizionata. Per questo è spesso meglio usare:
+
 #### Interpolazione di Lagrange
 
 $p(x)=∑\limits_jf(x_j)L_j(x)$
@@ -30,5 +32,18 @@ Dove $L_j(x)=∏\limits_{k≠j}\frac{x-x_k}{x_j-x_k}$
 Dimostrazione che $∀i\;p(x_i)=f(x_i)$:
 $L_j(x_i)=\begin{cases}1 & i=j \\ 0 & i≠j\end{cases}$
 
-Caso $n=2$:
-$$p(x)=f(x_1)\frac{x-x_2}{x_1-x_2}+f(x_2)\frac{x-x_1}{x_2-x_1}=\frac{f(x_1)(x-x_2)-f(x_2)(x-x_1)}{x_1-x_2}$$
+Caso $n=2$, interpolazione lineare:
+$$p(x)=f(x_1)\frac{x-x_2}{x_1-x_2}+f(x_2)\frac{x-x_1}{x_2-x_1}=\frac{f(x_2)(x-x_1)+f(x_1)(x_2-x)}{x_2-x_1}$$
+
+### Resto
+
+Dati $n$ unti $x_i$ presi da una $f$ derivabile $n$ volte, $a=\min x_i$ e $b=\max x_i$, esiste un $ξ∈(a,b)$ tale che:
+$r(x)=\frac{f^{(n)}(ξ)}{n!}∏(x-x_i)$
+
+>[!warning]
+>Più punti *non* implicano una migliore interpolazione.
+>
+>Esempio tipico, *funzione di Runge*:
+>$f(x)=\frac{1}{1-x^2}\quad x∈[-1,1]$
+>
+>La situazione peggiora nel caso non si conosca $f$, e i punti conosciuti sono affetti da rumore. In questo caso, è meglio minimizzare l'errore di un polinomio di grado più basso (e.g. regressione lineare).
