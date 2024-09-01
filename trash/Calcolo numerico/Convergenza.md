@@ -12,7 +12,7 @@ Metodi che richiedono due estremità $a$ e $b$, dove $f(a)$ è positiva e $f(b)$
 
 Questa è una proprietà desiderata se $f(α)=0$.
 
-Affinché ci sia convergenza verso $α$ (e solo $α$), è necessario e sufficiente che $|g'(x)|<1$ in un intorno circolare chiuso di $α$. (Non è necessario al di fuori dell'intorno.)
+Affinché ci sia convergenza verso $α$ (e solo $α$), è necessario e sufficiente che $|g'(x)|<1$ in un intorno circolare chiuso di $α$
 - Se $0<g'(x)<1$, allora la successione è monotona crescente (se $x_0<a$) o monotona decrescente (se $x_0>a$).
 - Se $-1<g'(x)<0$, allora la successione è alternata.
 	- Assumendo che come $x_0$ venga scelta un'estremità del dominio, è possibile che $x_1$ si troverà fuori dal dominio. Si può risolvere il problema scegliendo come $x_0$ l'altra estremità.
