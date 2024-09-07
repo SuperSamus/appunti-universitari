@@ -22,3 +22,12 @@ E fare l'eliminazione di Gauss (su $A$) per ottenere $U$, mettendo i fattori in 
 Sono le matrici dove $M^HM=MM^H=I$.
 Dove $M^H$ è la trasposta coniugata.
 Esempio: matrici di permutazione, $M=[e_1|e_2|...|e_n]$ con gli $e_i$ permutati.
+
+### Matrice elementare di Gauss
+
+Dato $e_k$ il $k$-esimo vettore delle basi canoniche, e $v$ un vettore dove $v_k=0$
+$A=I-ve_k^T$
+($ve_k^T$ è una matrice dove la $k$-esima colonna è uguale a $v$, e le altre 0.)
+
+Proprietà: $A^{-1}=I+ve_k^T$
+Infatti, $(I-ve_k^T)(I+ve_k^T)=I+ve_k^T-ve_k^T-ve_k^Tve_k^T=I$
