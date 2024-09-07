@@ -68,10 +68,11 @@ $x=Px+q$
 
 Dove $P=M^{-1}N$ e $q=M^{-1}b$
 
-Alcuni condizioni sufficienti per la convergenza:
-- $ρ(P)<1$
-- Esiste una [[norma]] matriciale dove $∥P∥<1$
-	- Dimostrazione: $||Px^{(k)}-Px||≤||P||\:||x^{(k)}-x||$
+Per la convergenza:
+- Condizione sufficiente: esiste una [[norma]] matriciale dove $∥P∥<1$
+	- Dimostrazione: $0≤||x^{(k+1)}-x||=||e^{(k+1)}||=||Pe^{(k)}||≤||P||\:||e^{(k)}||$
+- Condizione necessaria: $ρ(P)<1$
+
 
 Si può dimostrare applicando queste funzioni all'errore $e^{(i)}=|x^*-x^{(i)}|$, dato che: $e^{(i+1)}=Pe^{(i)}$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
 
