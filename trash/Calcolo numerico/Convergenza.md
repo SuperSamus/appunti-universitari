@@ -71,6 +71,7 @@ Dove $P=M^{-1}N$ e $q=M^{-1}b$
 Alcuni condizioni sufficienti per la convergenza:
 - $ρ(P)<1$
 - Esiste una [[norma]] matriciale dove $∥P∥<1$
+	- Dimostrazione: $||Px^{(k)}-Px||≤||P||\:||x^{(k)}-x||$
 
 Si può dimostrare applicando queste funzioni all'errore $e^{(i)}=|x^*-x^{(i)}|$, dato che: $e^{(i+1)}=Pe^{(i)}$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
 
