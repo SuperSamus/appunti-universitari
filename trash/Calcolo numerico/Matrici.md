@@ -1,6 +1,8 @@
 ### Matrici a predominanza diagonale
 
-Matrici dove $|a_{ii}|>∑\limits_{j≠i}a_{ij}\quad 1<i<n$.
+^dff2ed
+
+Matrici dove $|a_{ii}|>∑\limits_{j≠i}a_{ij}\quad 1<i<n$
 
 ### Matrici triangolari
 

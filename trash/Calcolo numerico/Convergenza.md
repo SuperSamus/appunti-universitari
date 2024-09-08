@@ -91,3 +91,10 @@ $A=D-C-E$
 	- $x^{(k+1)}=Gx^{(k)}+(D-C)^{-1}b$
 	- $x_i^{(k+1)}=\frac{1}{a_{ii}}(b_i-∑\limits_{j=1}^{i-1}a_{ij}x_j^{(k+1)}-∑\limits_{j=i+1}^na_{ij}x_j^{(k)})$
 	- Il vettore $x$ può essere sostituito in-place, ma non si possono calcolare i suoi elementi in parallelo.
+
+Se la matrice è a [[Matrici#^dff2ed|predominanza diagonale]], è garantita la convergenza.
+>[!note]
+Otteniamo gli autovalori:
+$0=\det(M^{-1}N-λI)=\det(-M^{-1})\det(λM-N)=\det(λM-N)$
+Affinché il determinante possa essere 0, $λM-N$ non può essere a predominanza diagonale, e l'unico modo per non esserlo è $|λ|<1$
+
