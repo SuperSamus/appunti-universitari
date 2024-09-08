@@ -12,7 +12,10 @@ Metodi che richiedono due estremità $a$ e $b$, dove $f(a)$ è positiva e $f(b)$
 
 Questa è una proprietà desiderata se $f(α)=0$.
 
-Affinché ci sia convergenza verso $α$ (e solo $α$), è necessario e sufficiente che $|g'(x)|<1$ in un intorno circolare chiuso di $α$
+Affinché ci sia convergenza verso $α$ (e solo $α$), è necessario e sufficiente che $|g'(x)|<1$ in un intorno circolare chiuso di $α$.
+Infatti, dato $p$ la distanza dell'intorno e $λ$ il valore massimo di $g'(x)$ nell'intorno:
+$|x_k-α|≤λ^kp<p$, di cui il $\lim\limits_{k→∞}$ è 0.
+
 - Se $0<g'(x)<1$, allora la successione è monotona crescente (se $x_0<a$) o monotona decrescente (se $x_0>a$).
 - Se $-1<g'(x)<0$, allora la successione è alternata.
 	- Assumendo che come $x_0$ venga scelta un'estremità del dominio, è possibile che $x_1$ si troverà fuori dal dominio. Si può risolvere il problema scegliendo come $x_0$ l'altra estremità.
@@ -35,7 +38,8 @@ L'**ordine di convergenza** verso $α$, è $p$ tale che:
 
 $x_{i+1}=x_i-\frac{f(x_i)}{f'(x_i)}$
 
-In questo caso $g'(x)=1-\frac{f'(x)f'(x)-f(x)f''(x)}{f'(x)^2}=\frac{f(x)f''(x)}{f'(x)^2}$
+In questo caso $g'(x)=1-\frac{f'(x)f'(x)-f(x)f''(x)}{f'(x)^2}=\frac{f(x)f''(x)}{f'(x)^2}$.
+È convergente dove $f(x)=0$, dato che $g'(x)=0<1$.
 
 Se $f'(α)≠0$, allora l'ordine di convergenza è almeno 2 (altrimenti è lineare).
 
