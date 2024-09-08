@@ -47,6 +47,8 @@ $K_i:=\{z∈ℂ:|z-a_{ii}≤R_i(A)\}$
 
 "Riga" e "colonna" sono scambiabili nelle definizioni sopra. Calcolando i raggi sia per riga che per colonna, i cerchi finali sono l'intersezione dei risultati.
 
+Una matrice a predominanza diagonale non può avere autovalori 0, ad è quindi invertibile.
+
 ## Metodo delle potenze
 
 Nella situazione in cui una matrice $A$ ha un autovalore $λ_1$ di modulo strettamente maggiore rispetto agli altri, intuitivamente, applicare la trasformazione su un qualunque vettore $v$ farà sì che il vettore tenderà sempre di più ad essere l'autovettore $x_1$ (cioè quello associato a $λ_1$).
