@@ -23,6 +23,9 @@ $||Ax||_v≤||A||_m||x||_v$
  per ogni $x∈ℝ^n$
 
 >[!info]
->Dato che $||λx||_v=|λ|\:||x||_v=||Ax||_m$, questo implica che $|λ|≤||A||_m$
+>#### Teorema di Hirsch
+>Dato che $||λx||_v=|λ|\:||x||_v=||Ax||_m≤||A||_m||x||_v$, allora $|λ|≤||A||_m$
+
+^eed90c
 
 Se $\max\limits_{||x||_v=1}||Ax||_v=||A||_m$, allora la norma è detta *indotta*.

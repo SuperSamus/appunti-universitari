@@ -69,12 +69,12 @@ $x=Px+q$
 Dove $P=M^{-1}N$ e $q=M^{-1}b$
 
 Per la convergenza:
+- Condizione necessaria: $ρ(P)<1$
+	- Dimostrazione: assumiamo che l'errore di $x^{(0)}$ sia un autovettore di $x$. Quindi $||P^ke^{(0)}||==||λ^ke^{(0)}||=|λ^k|\:||e^{(0)}||$, di cui il $\lim\limits_{k→∞}$ tende a 0, quindi $|k|<1$.
 - Condizione sufficiente: esiste una [[norma]] matriciale dove $∥P∥<1$
 	- Dimostrazione: $0≤||x^{(k+1)}-x||=||e^{(k+1)}||=||Pe^{(k)}||≤||P||\:||e^{(k)}||$
-- Condizione necessaria: $ρ(P)<1$
 
-
-Si può dimostrare applicando queste funzioni all'errore $e^{(i)}=|x^*-x^{(i)}|$, dato che: $e^{(i+1)}=Pe^{(i)}$, e vogliamo che $\lim\limits_{i→∞}e_i=0$.
+Dato che $ρ(P)≤||P||$ ([[Norma#^eed90c|teorema di Hirsch]]), e che se $ρ(P)<1$ allora esiste una norma indotta tale che $||P||<1$ (nessuna dimostrazione), allora sono entrambe condizioni necessarie e sufficienti.
 
 #### Composizioni da particolari
 
