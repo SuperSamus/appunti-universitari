@@ -15,7 +15,7 @@ La *norma matriciale* per una matrice $A∈ℝ^{n×n}$ ha le stesse proprietà, 
 
 Esempi di norme matriciali:
 - Norma 1: $\max_j ∑\limits_{i=1}^n|a_{ij}|$
-- Norma 2: $ρ(\sqrt{A^HA})$
+- Norma 2: $\sqrt{ρ(A^HA)}$
 - Norma ∞: $\max_i ∑\limits_{j=1}^n|a_{ij}|$
 
 Una norma vettoriale è detta *compatibile* con una norma matriciale se:
