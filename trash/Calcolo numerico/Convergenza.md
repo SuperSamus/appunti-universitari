@@ -10,9 +10,7 @@ Metodi che richiedono due estremità $a$ e $b$, dove $f(a)$ è positiva e $f(b)$
 
 È possibile che partendo da un punto $x_i$, si ottiene un $x_{i+1}=g(x_i)$ dove $|x_{i+1}-α|≤|x_i-α|$. In questo caso, si dice che la funzione *converge* verso $α$.
 
-Questa è una proprietà desiderata se $f(α)=0$.
-
-Affinché ci sia convergenza verso $α$ (e solo $α$), è necessario e sufficiente che $|g'(x)|<1$ in un intorno circolare chiuso di $α$.
+Affinché ci sia convergenza verso $α$, è necessario e sufficiente che $|g'(x)|<1$ in un intorno circolare chiuso di $α$.
 Infatti, dato $p$ la distanza dell'intorno e $λ$ il valore massimo di $g'(x)$ nell'intorno:
 $|x_k-α|≤λ^kp<p$, di cui il $\lim\limits_{k→∞}$ è 0.
 
@@ -74,7 +72,7 @@ Dove $P=M^{-1}N$ e $q=M^{-1}b$
 
 Per la convergenza:
 - Condizione necessaria: $ρ(P)<1$
-	- Dimostrazione: assumiamo che l'errore di $x^{(0)}$ sia un autovettore di $x$. Quindi $||P^ke^{(0)}||==||λ^ke^{(0)}||=|λ^k|\:||e^{(0)}||$, di cui il $\lim\limits_{k→∞}$ tende a 0, quindi $|k|<1$.
+	- Dimostrazione: assumiamo che l'errore di $x^{(0)}$ sia un autovettore di $x$. Quindi $||P^ke^{(0)}||=||λ^ke^{(0)}||=|λ^k|\:||e^{(0)}||$, di cui il $\lim\limits_{k→∞}$ tende a 0, quindi $|k|<1$.
 - Condizione sufficiente: esiste una [[norma]] matriciale dove $∥P∥<1$
 	- Dimostrazione: $0≤||x^{(k+1)}-x||=||e^{(k+1)}||=||Pe^{(k)}||≤||P||\:||e^{(k)}||$
 

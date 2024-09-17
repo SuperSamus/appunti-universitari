@@ -39,5 +39,5 @@ Proprietà:
 - È triangolare inferiore
 - $A^{-1}=I+ve_k^T$
 	- Infatti, $(I-ve_k^T)(I+ve_k^T)=I+ve_k^T-ve_k^T-ve_k^Tve_k^T=I$
-- Per ogni $x$ dove $x_k≠0$, esiste una matrice elementare di Gauss $E$ tale che $Ex=[x_1,…,x_k,0,…,0]$.
+- Per ogni $x$ dove $x_k≠0$, esiste una matrice elementare di Gauss $E$ tale che $Ex=[x_1,…,x_k,0,…,0]^T$.
 - TODO
