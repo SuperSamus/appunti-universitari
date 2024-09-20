@@ -4,6 +4,8 @@ Sistema che associa una sequenza di elementi di $S$ a una sequenza di simboli di
 Dato un alfabeto $A$ (con $|A|=d$) e l'insieme delle stringhe $A^*$, si sceglie un insieme di $k$ parole distinte detto *codice*, e si assegna in modo univoco una parola del codice a ogni carattere dell'alfabeto sorgente $Σ$.
 Una stringa di $Σ^*$ viene identificata come una sequenza di stringhe $A^*$.
 
+### Lunghezza media
+
 Le parole del codice $C$ hanno lunghezza $\{l_1,l_2,…,l_m\}$. La lunghezza media è:
 $L_S(C)=∑\limits_{i=1}^mp_il_i$
 
@@ -11,10 +13,15 @@ Per minimizzare la lunghezza media, i simboli probabili corrispondono a una paro
 Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 - Se sono uguali, il codice è *assolutamente ottimo*
 - Se non sono uguali ma $L_S(C)$ è comunque il minimo possibile per $S$, il codice è *ottimo*
-- Si può misurare l'*efficienza* di un codice con $\frac{H(S)}{L_S(C)}$
+- Si può misurare l'*efficienza* di un codice con $\frac{R}{r_b}=\frac{H(S)}{L_S(C)}$
 >[!warning]
 >La disuguaglianza sopra assume che il logaritmo usato per $H(S)$ sia di base $d$.
 >Se invece usa il logaritmo di base $2$, allora $\frac{H(S)}{\log_2(d)}≤L_S(C)$
+
+#### Dimostrazione
+
+Usando il [[Informazione#^aae359|lemma del logaritmo]], e la disuguaglianza di Kraft-McMillan:
+$-∑\limits_{i=1}^mp_i\log_bp_i≤-∑\limits_{i=1}^mp_i\log_bd^{-l}=∑\limits_{i=1}^mp_il_i\log_bd=L_S(C)\log_bd$
 
 ## Univocamente decifrabile
 

@@ -31,6 +31,8 @@ $H(S)=∑\limits_{i=1}^mp_iI(σ_i)=∑\limits_{i=1}^mp_i\log_b(\frac{1}{p_i})=-�
 >Date due distribuzioni di probabilità $\{p_1,p_2,…,p_m\}$ e $\{q_1,q_2,…,q_m\}$ , con $∑\limits_{i=1}^mp_i=1$ e $∑\limits_{i=1}^mq_i=1$, vale:
 >$$-∑\limits_{i=1}^mp_i\log_bp_i≤-∑\limits_{i=1}^mp_i\log_bq_i$$
 
+^aae359
+
 Usando il lemma, $H(S)=-∑\limits_{i=1}^mp_i\log(p_i)≤-∑\limits_{i=1}^mp_i\log(\frac{1}{m})=-\log(\frac{1}{m})∑\limits_{i=1}^mp_i=\log m$
 
 Quindi, $0≤H(S)≤\log m$ (l'upper limit è raggiunto se i simboli sono equiprobabili).
