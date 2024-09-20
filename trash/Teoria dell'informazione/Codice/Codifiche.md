@@ -10,9 +10,11 @@ Sia $C$ un codice prefisso ottimo per $S$ tale che $c_i$ è la parola di codice 
 	- I due simboli meno probabili hanno la stessa lunghezza (uno finisce con $0$, l'altro con $1$).
 		- È possibile che ci siano altri simboli poco probabili con questa lunghezza.
 
-Data $Huff(S)$ la lunghezza media del codice di Huffman per $S$: $H(S)≤Huff(S)<H(S)+1$
+Data $\text{Huff}(S)$ la lunghezza media del codice di Huffman per $S$: $H(S)≤\text{Huff}(S)<H(S)+1$
 
-#### Algoritmo di Huffman (per codici binari)
+#### Algoritmo di Huffman
+
+Permette di ottenere codici binari da un alfabeto.
 
 - Indichiamo con $R(S)$ la sorgente ridotta: i due simboli meno probabili sono sostituiti da simbolo che ha probabilità $p_m+p_{m-1}$.
 - Sia $C_R$ il codice prefisso per $R(S)$, in cui $z$ è la parola associata al simbolo sostitutivo. Se il codice $C$ usa per quei due simboli originali le parole $z+'0'$ e $z+'1'$, e per il resto le stesse di $C_R$, allora $C$ è codice prefisso.
@@ -44,7 +46,7 @@ Soluzione: codifica congiunta.
 | 10    | 0.09 | 3.474               |
 | 11    | 0.81 | 0.304               |
 
-Qui non solo lo spreco viene ridotto a $1-0.304=0.696$, ma dato che si utilizzerà 1 bit per rappresentarne 2, il vero spreco è ulteriormente dimezzato a $0.348$.
+Qui non solo lo spreco viene ridotto a $1-0.304=0.696$, ma dato che si sta rappresentando 2 bit (con una codifica che userà 1 bit in questa caso), il vero spreco è ulteriormente dimezzato a $0.348$.
 
 Volendo, si può usare codificare sequenze di simboli di lunghezza arbitraria (*parole*). Tuttavia, per un testo, scegliere un *dizionario* che pesi poco a comprima tanto (cioè, che massimizzi la compressione) è un problema difficile.
 

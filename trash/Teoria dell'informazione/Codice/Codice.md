@@ -7,7 +7,7 @@ Una stringa di $Σ^*$ viene identificata come una sequenza di stringhe $A^*$.
 Le parole del codice $C$ hanno lunghezza $\{l_1,l_2,…,l_m\}$. La lunghezza media è:
 $L_S(C)=∑\limits_{i=1}^mp_il_i$
 
-Per minimizzare la lunghezza media, i simboli probabili corrispondono a una parola corta mentre i simboli improbabili corrispondono a una parola lunga (si veda [[codice di Huffman]]).
+Per minimizzare la lunghezza media, i simboli probabili corrispondono a una parola corta mentre i simboli improbabili corrispondono a una parola lunga (si veda [[Codifiche|codice di Huffman]]).
 Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 - Se sono uguali, il codice è *assolutamente ottimo*
 - Se non sono uguali ma $L_S(C)$ è comunque il minimo possibile per $S$, il codice è *ottimo*
@@ -21,13 +21,14 @@ Una soluzione è avere tutte le parole della stessa lunghezza, ma non è desider
 
 >[!info]
 >#### Algoritmo di Sardinas-Patterson
+>Stabilisce se un codice è univocamente decifrabile.
 >
 >Dati gli insiemi $S_0,S_1,…,$ tali che:
 >- $S_0=C$
 >- $S_i=\{w∈A^*|∃a∈S_0,∃b∈S_{i-1} \text{ t.c. } a=bw∨b=aw\}$
 >	- Cioè, l'insieme dei suffissi tra $S_0$ e $S_{i-1}$
 >
->Allora condizione necessaria e sufficiente affinché C sia univocamente decifrabile è che
+>Allora condizione necessaria e sufficiente affinché C sia univocamente decifrabile è:
 >$∀n>0 \: S_0∩S_n=∅$
 >
 >L'algoritmo termina con successo in uno dei seguenti casi:
@@ -37,7 +38,7 @@ Una soluzione è avere tutte le parole della stessa lunghezza, ma non è desider
 >[!info]
 >#### Diseguaglianza di Kraft-McMillan
 >
->Dato un codice lunghezza delle parole $\{l_1,l_2,…,l_m\}$ su un alfabeto di dimensione $d$, per essere univocamente decifrabile è necessario (ma non sufficiente):
+>Dato un codice con lunghezza delle parole $\{l_1,l_2,…,l_m\}$ su un alfabeto di dimensione $d$, per essere univocamente decifrabile è necessario (ma non sufficiente):
 >$∑\limits_{i=1}^md^{-l_i}≤1$
 
 Potrebbe comunque essere essere necessario leggere $k$ simboli della parola successiva prima di decodificare il codice. In questo caso, il codice è detto essere con ritardo di decifrazione $k$ (può anche essere illimitato).

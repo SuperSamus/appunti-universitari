@@ -1,6 +1,6 @@
 La teoria dell’Informazione ha come oggetto principale di studio la *misurazione*, la *trasmissione* e la *preservazione* dell’informazione emessa da una **sorgente**.
 - **Sorgente** (S): emette dati utilizzando un alfabeto $Σ$ (di qualunque natura)
-- **Canale**: trasmette i dati utilizzando un alfabeto $A$, utilizzando una funzione (di costo $γ$) per trasformare i simboli $σ_i$ (appartenenti a $Σ$) in simboli di $A$ (di norma $|A|≤|Σ|$)
+- **Canale**: trasmette i dati utilizzando un alfabeto $A$, utilizzando una funzione (di costo $γ$) per trasformare i simboli $σ_i$ (appartenenti a $Σ$) in simboli di $A$ (di norma, $|A|≤|Σ|$)
 	- Un **rumore** lo può disturbare. Si può aggiungere *ridondanza* per evitare errori, ma aumenterà il *costo* della trasmissione.
 - **Destinatario**: riceve i dati codificati
 
@@ -24,14 +24,14 @@ La base del logaritmo determina l'unità di misura dell'informazione:
 
 Misura l'informazione media per evento.
 In una sorgente senza memoria:
-$H(S)=∑\limits_{i=1}^mp_iI(σ_i)=∑\limits_{i=1}^mp_i\log(\frac{1}{p_i})=-∑\limits_{i=1}^mp_i\log(p_i)$
+$H(S)=∑\limits_{i=1}^mp_iI(σ_i)=∑\limits_{i=1}^mp_i\log_b(\frac{1}{p_i})=-∑\limits_{i=1}^mp_i\log_b(p_i)$
 
 >[!note]
 >#### Lemma del logaritmo
 >Date due distribuzioni di probabilità $\{p_1,p_2,…,p_m\}$ e $\{q_1,q_2,…,q_m\}$ , con $∑\limits_{i=1}^mp_i=1$ e $∑\limits_{i=1}^mq_i=1$, vale:
 >$$-∑\limits_{i=1}^mp_i\log_bp_i≤-∑\limits_{i=1}^mp_i\log_bq_i$$
 
-Usando il lemma, $H(S)≤-∑\limits_{i=1}^mp_i\log(\frac{1}{m})≤-\log(\frac{1}{m})∑\limits_{i=1}^mp_i=\log m$
+Usando il lemma, $H(S)=-∑\limits_{i=1}^mp_i\log(p_i)≤-∑\limits_{i=1}^mp_i\log(\frac{1}{m})=-\log(\frac{1}{m})∑\limits_{i=1}^mp_i=\log m$
 
 Quindi, $0≤H(S)≤\log m$ (l'upper limit è raggiunto se i simboli sono equiprobabili).
 

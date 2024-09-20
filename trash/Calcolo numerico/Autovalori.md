@@ -4,7 +4,7 @@ Di quanto sono scalati si misura con gli **autovalori**.
 Abbiamo quindi autovettori $v$ scalati di $λ$:
 $Av=λv$
 
-Dato $n$ la dimensione della matrice quadrata, in $ℝ$, è possibile che ogni vettore sia un'autovettore (matrici diagonali), che ci siano $n$ autovettori (il caso tipico), o che ci siano meno di $n$ autovettori (rotazioni, stiramenti…).
+Dato $n$ la dimensione della matrice quadrata, in $ℝ$, è possibile che ogni vettore sia un autovettore (matrici diagonali), che ci siano $n$ autovettori (il caso tipico), o che ci siano meno di $n$ autovettori (rotazioni, stiramenti…).
 
 Se $A$ ha $n$ autovalori (avere autovalori uguali per autovettori diversi conta):
 - Il suo *determinante* è uguale al prodotto degli autovalori.
