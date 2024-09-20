@@ -41,7 +41,7 @@ Quindi, $0≤H(S)≤\log m$ (l'upper limit è raggiunto se i simboli sono equipr
 	- È la quantità di simboli dell'alfabeto sorgente trasmessi al secondo.
 - $R$ information rate (bit/sec)
 - $r_b$ signaling rate (bitnit/sec)
-	- Detto anche *bitrate*, è la quantità di simboli binari (codificati dall'alfabeto sorgente) trasmessi al secondo.
+	- Detto anche *bitrate*, è la quantità di simboli binari (dopo la codifica della sorgente) trasmessi al secondo.
 
 Entropia dell'alfabeto sorgente: $H(S)$
 $R=rH(S)≤r\log(m)$

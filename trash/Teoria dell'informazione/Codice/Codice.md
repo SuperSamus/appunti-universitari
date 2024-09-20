@@ -1,4 +1,4 @@
-### Codice
+# Codice
 
 Sistema che associa una sequenza di elementi di $S$ a una sequenza di simboli di un altro alfabeto.
 Dato un alfabeto $A$ (con $|A|=d$) e l'insieme delle stringhe $A^*$, si sceglie un insieme di $k$ parole distinte detto *codice*, e si assegna in modo univoco una parola del codice a ogni carattere dell'alfabeto sorgente $Σ$.
@@ -16,8 +16,26 @@ Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 >La disuguaglianza sopra assume che il logaritmo usato per $H(S)$ sia di base $d$.
 >Se invece usa il logaritmo di base $2$, allora $\frac{H(S)}{\log_2(d)}≤L_S(C)$
 
-Se non c'è un carattere separatore, un codice potrebbe essere *ambiguo*. Si vuole che il codice sia *univocamente decifrabile*.
-Una soluzione è avere tutte le parole della stessa lunghezza, ma non è desiderabile se i simboli hanno probabilità drasticamente diverse.
+## Univocamente decifrabile
+
+Se non c'è un carattere separatore, un codice potrebbe essere *ambiguo*. Si vuole che il codice sia *univocamente decifrabile* (UD).
+Possibile soluzione: avere tutte le parole della stessa lunghezza, ma non è desiderabile se i simboli hanno probabilità drasticamente diverse.
+
+### Codice istantaneo
+
+Se un codice è istantaneo, cioè si può decifrare senza dover aspettare altri caratteri, allora è UD.
+
+Condizione necessaria e sufficiente: nessuna parola del codice è *prefisso* di un altra.
+
+In un albero che rappresenta la codifica, le parole del codice sono solo in nodi foglia.
+Se non si possono aggiungere foglie all'albero, il codice è detto *completo*. Un codice ottimo è completo.
+
+### Codice con ritardo
+
+Se un codice è con ritardo $k$, potrebbe essere necessario leggere $k$ simboli della parola successiva prima di decodificare il codice. (Il ritardo può essere illimitato).
+Esempio, alfabeto sorgente con due simboli, codificati in:
+- 0
+- 01
 
 >[!info]
 >#### Algoritmo di Sardinas-Patterson
@@ -40,13 +58,6 @@ Una soluzione è avere tutte le parole della stessa lunghezza, ma non è desider
 >
 >Dato un codice con lunghezza delle parole $\{l_1,l_2,…,l_m\}$ su un alfabeto di dimensione $d$, per essere univocamente decifrabile è necessario (ma non sufficiente):
 >$∑\limits_{i=1}^md^{-l_i}≤1$
-
-Potrebbe comunque essere essere necessario leggere $k$ simboli della parola successiva prima di decodificare il codice. In questo caso, il codice è detto essere con ritardo di decifrazione $k$ (può anche essere illimitato).
-Un codice senza questo difetto è *istantaneo*. Un codice istantaneo è univocamente decifrabile.
-Condizione necessaria e sufficiente per un codice istantaneo: nessuna parola è *prefisso* di un'altra.
-Detto in altro modo, è possibile costruire un albero tale che le parole del codice siano soltanto le foglie.
-
-Se non si possono aggiungere foglie all'albero, il codice è detto *completo*. Ovviamente, un codice ottimo è completo.
 
 ### Primo teorema di Shannon
 
