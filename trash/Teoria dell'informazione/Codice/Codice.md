@@ -33,7 +33,7 @@ Se non si possono aggiungere foglie all'albero, il codice è detto *completo*. U
 ### Codice con ritardo
 
 Se un codice è con ritardo $k$, potrebbe essere necessario leggere $k$ simboli della parola successiva prima di decodificare il codice. (Il ritardo può essere illimitato).
-Esempio, alfabeto sorgente con due simboli, codificati in:
+Esempio di ritardo 1, alfabeto sorgente con due simboli, codificati in:
 - 0
 - 01
 
