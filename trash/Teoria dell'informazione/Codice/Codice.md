@@ -21,6 +21,14 @@ Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 Se non c'è un carattere separatore, un codice potrebbe essere *ambiguo*. Si vuole che il codice sia *univocamente decifrabile* (UD).
 Possibile soluzione: avere tutte le parole della stessa lunghezza, ma non è desiderabile se i simboli hanno probabilità drasticamente diverse.
 
+>[!info]
+>#### Somma di Kraft-McMillan
+>
+>Dato un codice $C$ con lunghezza delle parole $\{l_1,l_2,…,l_m\}$ e un alfabeto di dimensione $d$:
+>$K(C)=∑\limits_{i=1}^md^{-l_i}≤1$
+>
+> Se la condizione necessaria sopra è necessaria per la possibilità che un codice con queste lunghezze sia istantaneo, mentre per l'esistenza di un codice istantaneo con queste lunghezze è necessaria e sufficiente.
+
 ### Codice istantaneo
 
 Se un codice è istantaneo, cioè si può decifrare senza dover aspettare altri caratteri, allora è UD.
@@ -29,14 +37,6 @@ Condizione necessaria e sufficiente: nessuna parola del codice è *prefisso* di 
 
 In un albero che rappresenta la codifica, le parole del codice sono solo in nodi foglia.
 Se non si possono aggiungere foglie all'albero, il codice è detto *completo*. Un codice ottimo è completo.
-
->[!info]
->#### Somma di Kraft-McMillan
->
->Dato un codice $C$ con lunghezza delle parole $\{l_1,l_2,…,l_m\}$ e un alfabeto di dimensione $d$:
->$K(C)=∑\limits_{i=1}^md^{-l_i}≤1$
->
-> Se la condizione necessaria sopra è necessaria per la possibilità che un codice con queste lunghezze sia istantaneo, mentre per l'esistenza di un codice istantaneo con queste lunghezze è necessaria e sufficiente.
 
 ### Codice con ritardo
 
