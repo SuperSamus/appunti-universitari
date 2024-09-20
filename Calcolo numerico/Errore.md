@@ -73,9 +73,9 @@ $A(x+δx)=b+δb$
 Dove $x+δx$ è la soluzione perturbata.
 
 $\frac{||δx||}{||x||}≤μ(A)\frac{||δb||}{||b||}$, scrivibile come $ϵ_x≤μ(A)ϵ_b$
-Il *numero di condizionamento* $μ(A)=||A||\:||A^{-1}||≥1$, per via della diseguaglianza triangolare della [[norma]].
+Il *numero di condizionamento* $μ(A)=||A||\:||A^{-1}||≥1$, per via della diseguaglianza triangolare della [[Norma]].
 
-Se si usa la norma 2, $μ(A)=\frac{λ_{max}}{λ_{min}}$ (dove $λ$ sono [[autovalori]])
+Se si usa la norma 2, $μ(A)=\frac{λ_{max}}{λ_{min}}$ (dove $λ$ sono [[Autovalori]])
 
 ### Errore algoritmico
 

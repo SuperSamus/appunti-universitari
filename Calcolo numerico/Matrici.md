@@ -9,7 +9,7 @@ Matrici dove $|a_{ii}|>∑\limits_{j≠i}a_{ij}\quad 1<i<n$
 Sono molto comode:
 - Risolverle è facile
 - Trovare il determinante è facile (basta moltiplicare i valori nella diagonale, si può vedere con Laplace)
-- Trovare gli [[autovalori]] è facile (sono semplicemente i valori nella diagonale)
+- Trovare gli [[Autovalori]] è facile (sono semplicemente i valori nella diagonale)
 
 #### Fattorizzazione LU
 

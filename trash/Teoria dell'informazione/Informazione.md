@@ -1,6 +1,6 @@
 La teoria dell’Informazione ha come oggetto principale di studio la *misurazione*, la *trasmissione* e la *preservazione* dell’informazione emessa da una **sorgente**.
-- **Sorgente** (S): emette dati utilizzando un alfabeto $Σ$ (di qualunque natura)
-- **Canale**: trasmette i dati utilizzando un alfabeto $A$, utilizzando una funzione (di costo $γ$) per trasformare i simboli $σ_i$ (appartenenti a $Σ$) in simboli di $A$ (di norma, $|A|≤|Σ|$)
+- **Sorgente** (S): emette dati utilizzando un alfabeto $Σ$ (di qualunque natura) di cardinalità $m$.
+- **Canale**: trasmette i dati utilizzando un alfabeto $A$, utilizzando una funzione (di costo $γ$) per trasformare i simboli $σ_i$ (appartenenti a $Σ$) in simboli di $A$ (di solito, $|A|≤|Σ|$)
 	- Un **rumore** lo può disturbare. Si può aggiungere *ridondanza* per evitare errori, ma aumenterà il *costo* della trasmissione.
 - **Destinatario**: riceve i dati codificati
 
@@ -22,7 +22,7 @@ La base del logaritmo determina l'unità di misura dell'informazione:
 
 ### Entropia
 
-Misura l'informazione media per evento.
+Data una sorgente, misura l'informazione media per evento.
 In una sorgente senza memoria:
 $H(S)=∑\limits_{i=1}^mp_iI(σ_i)=∑\limits_{i=1}^mp_i\log_b(\frac{1}{p_i})=-∑\limits_{i=1}^mp_i\log_b(p_i)$
 
@@ -34,6 +34,20 @@ $H(S)=∑\limits_{i=1}^mp_iI(σ_i)=∑\limits_{i=1}^mp_i\log_b(\frac{1}{p_i})=-�
 Usando il lemma, $H(S)=-∑\limits_{i=1}^mp_i\log(p_i)≤-∑\limits_{i=1}^mp_i\log(\frac{1}{m})=-\log(\frac{1}{m})∑\limits_{i=1}^mp_i=\log m$
 
 Quindi, $0≤H(S)≤\log m$ (l'upper limit è raggiunto se i simboli sono equiprobabili).
+
+#### Notazioni
+
+- $r$ symbol rate (symboli/sec)
+	- È la quantità di simboli dell'alfabeto sorgente trasmessi al secondo.
+- $R$ information rate (bit/sec)
+- $r_b$ signaling rate (bitnit/sec)
+	- Detto anche *bitrate*, è la quantità di simboli binari (codificati dall'alfabeto sorgente) trasmessi al secondo.
+
+Entropia dell'alfabeto sorgente: $H(S)$
+$R=rH(S)≤r\log(m)$
+
+Entropia della codifica binaria: $Ω(p)≤1$
+$R=rH(S)=r_bΩ(p)≤r_b$
 
 #### Modelli markoviani
 
