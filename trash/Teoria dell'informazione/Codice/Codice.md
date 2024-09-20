@@ -21,6 +21,16 @@ Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 Se non c'è un carattere separatore, un codice potrebbe essere *ambiguo*. Si vuole che il codice sia *univocamente decifrabile* (UD).
 Possibile soluzione: avere tutte le parole della stessa lunghezza, ma non è desiderabile se i simboli hanno probabilità drasticamente diverse.
 
+>[!info]
+>#### Somma di Kraft-McMillan
+>
+>Dato un codice $C$ con lunghezza delle parole $\{l_1,l_2,…,l_m\}$ su un alfabeto di dimensione $d$:
+>$K(C)=∑\limits_{i=1}^md^{-l_i}$
+>
+> Affinché il codice sia UD, è necessario:
+> $K(C)≤1$
+> Se è s
+
 ### Codice istantaneo
 
 Se un codice è istantaneo, cioè si può decifrare senza dover aspettare altri caratteri, allora è UD.
@@ -52,12 +62,6 @@ Esempio di ritardo 1, alfabeto sorgente con due simboli, codificati in:
 >L'algoritmo termina con successo in uno dei seguenti casi:
 >- $∃i> 0 \: S_i=∅$
 >- $∃i,j> 0 \: S_i=S_j$
-
->[!info]
->#### Diseguaglianza di Kraft-McMillan
->
->Dato un codice con lunghezza delle parole $\{l_1,l_2,…,l_m\}$ su un alfabeto di dimensione $d$, per essere univocamente decifrabile è necessario (ma non sufficiente):
->$∑\limits_{i=1}^md^{-l_i}≤1$
 
 ### Primo teorema di Shannon
 
