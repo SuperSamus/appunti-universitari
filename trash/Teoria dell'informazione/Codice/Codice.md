@@ -21,7 +21,7 @@ Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 #### Dimostrazione
 
 Usando il [[Informazione#^aae359|lemma del logaritmo]], e la disuguaglianza di Kraft-McMillan:
-$-∑\limits_{i=1}^mp_i\log_bp_i≤-∑\limits_{i=1}^mp_i\log_bd^{-l}=∑\limits_{i=1}^mp_il_i\log_bd=L_S(C)\log_bd$
+$H(S)-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log d^{-l}=∑\limits_{i=1}^mp_il_i\log d=L_S(C)\log d$
 
 ## Univocamente decifrabile
 
