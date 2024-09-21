@@ -18,7 +18,7 @@ Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 >La disuguaglianza sopra assume che il logaritmo usato per $H(S)$ sia di base $d$.
 >Se invece usa il logaritmo di base $2$, allora $\frac{H(S)}{\log_2(d)}≤L_S(C)$
 
-#### Dimostrazione
+#### Dimostrazione (sorgente senza memoria)
 
 Usando il [[Informazione#^aae359|lemma del logaritmo]], e la [[Codice#^134141|somma di Kraft-McMillan]] uguale a 1:
 $H(S)=-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log d^{-l_i}=∑\limits_{i=1}^mp_il_i\log d=L_S(C)\log d$
