@@ -20,8 +20,10 @@ Per il lemma del logaritmo, $H(S)≤L_S(C)$.
 
 #### Dimostrazione
 
-Usando il [[Informazione#^aae359|lemma del logaritmo]], e la disuguaglianza di Kraft-McMillan:
-$H(S)-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log d^{-l}=∑\limits_{i=1}^mp_il_i\log d=L_S(C)\log d$
+Usando il [[Informazione#^aae359|lemma del logaritmo]], e la [[Codice#^134141|somma di Kraft-McMillan]] uguale a 1:
+$H(S)=-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log d^{-l_i}=∑\limits_{i=1}^mp_il_i\log d=L_S(C)\log d$
+
+Si ha quindi un codice assolutamente ottimo se e solo se $∀i\:p_i=d^{-l_i}$.
 
 ## Univocamente decifrabile
 
@@ -35,6 +37,15 @@ Possibile soluzione: avere tutte le parole della stessa lunghezza, ma non è des
 >$K(C)=∑\limits_{i=1}^md^{-l_i}≤1$
 >
 > Se la condizione necessaria sopra è necessaria per la possibilità che un codice con queste lunghezze sia istantaneo, mentre per l'esistenza di un codice istantaneo con queste lunghezze è necessaria e sufficiente.
+>
+>Stesso discorso per un codice *assolutamente ottimo* con:
+>$K(C)=1$
+>
+>Dimostrazione per ottimalità assoluta:
+>$H(S)=-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log \frac{d^{-l_i}}{K(C)}=-∑\limits_{i=1}^mp_i(\log d^{-l_i}-\log K(C))=∑\limits_{i=1}^mp_il_i \log d-\log K(C)=L_S(C)\log d -\log K(C)$
+>È quindi necessario che $\log K(C)=0$.
+
+^134141
 
 ### Codice istantaneo
 
