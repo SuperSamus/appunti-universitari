@@ -1,5 +1,7 @@
 ### Codice di Huffman
 
+^d3a9e9
+
 Un codice specifico a una determinata sorgente $S$ per minimizzarne la lunghezza.
 L'albero binario corrispondente è chiamato *albero di Huffman*.
 

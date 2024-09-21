@@ -33,12 +33,22 @@ Anche se il codice non può essere assolutamente ottimo, può però sempre soddi
 $H(S)≤L(S)<H(S)+1$.
 
 Dimostrazione:
-- $-\log_d(p_i)≤l_i<-\log_d(p_i)+1$
+- $-\log_d(p_i)≤l_i≤⌈-\log_d(p_i)⌉$
 	-  $-\log_d(p_i)≤l_i$
 	- $d^{-l_i}≤p_i$
 	- $∑\limits_{i=1}^md^{-l_i}≤1$
-- $-p_i\log_d(p_i)≤p_il_i<-p_i\log_d(p_i)+p_i$
-- Sommando per ogni $i$ si ottiene la tesi.
+- Moltiplica tutto per $p_i$:
+	- $-p_i\log_d(p_i)≤p_il_i≤p_i⌈-\log_d(p_i)⌉≤-p_i\log_d(p_i)+p_i$
+- Somma per ogni $i$:
+	- $-∑\limits_{i=1}^mp_i\log_d(p_i)≤∑\limits_{i=1}^mp_il_i≤-∑\limits_{i=1}^mp_i\log_d(p_i)+∑\limits_{i=1}^mp_i$
+	- Da qui si ottiene la tesi.
+
+Questo però non è ottimo, diversamente dalla [[Codifiche#^d3a9e9|codifica di Huffman]].
+
+>[!info]
+>##### Estensione
+>Data una sorgente $S'$, che ha gli stessi simboli di $S$ raggruppati in sequenze di lunghezza $n$:
+>$H(S')≤L(S')<H(S')+\frac{1}{n}$
 
 ## Univocamente decifrabile
 
