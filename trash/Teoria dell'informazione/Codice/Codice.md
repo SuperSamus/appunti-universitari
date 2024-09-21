@@ -25,6 +25,21 @@ $H(S)=-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log d^{-l_i}=∑\l
 
 Si ha quindi un codice assolutamente ottimo se e solo se $∀i\:p_i=d^{-l_i}$.
 
+#### Codifica di Shannon
+
+La codifica di Shannon consiste nell'avere per ogni parola del codice $-\log_d(p_i)≤l_i$.
+
+Anche se il codice non può essere assolutamente ottimo, può però sempre soddisfare:
+$H(S)≤L(S)<H(S)+1$.
+
+Dimostrazione:
+- $-\log_d(p_i)≤l_i<-\log_d(p_i)+1$
+	-  $-\log_d(p_i)≤l_i$
+	- $d^{-l_i}≤p_i$
+	- $∑\limits_{i=1}^md^{-l_i}≤1$
+- $-p_i\log_d(p_i)≤p_il_i<-p_i\log_d(p_i)+p_i$
+- Sommando per ogni $i$ si ottiene la tesi.
+
 ## Univocamente decifrabile
 
 Se non c'è un carattere separatore, un codice potrebbe essere *ambiguo*. Si vuole che il codice sia *univocamente decifrabile* (UD).
