@@ -14,9 +14,13 @@ Sia $C$ un codice prefisso ottimo per $S$ tale che $c_i$ è la parola di codice 
 - Se $p_j≥p_k$, allora $|c_j|≤|c_k|$
 - $|c_m|=|c_{m-1}|$
 	- I due simboli meno probabili hanno la stessa lunghezza (uno finisce con $0$, l'altro con $1$).
-		- È possibile che ci siano altri simboli poco probabili con questa lunghezza.
 
-Data $\text{Huff}(S)$ la lunghezza media del codice di Huffman per $S$: $H(S)≤\text{Huff}(S)<H(S)+1$
+Data $\text{Huff}(S)$ la lunghezza media del codice di Huffman per $S$: $H(S)≤\text{Huff}(S)<∑\limits_{i=1}^mp_i⌈-\log p_i⌉$
+
+>[!warning]
+>È possibile che ci siano diversi simboli con una identità bassa probabilità. In tal caso, si può scegliere qualunque.
+>Questo vuol dire che la lunghezza di ogni parola del codice può essere diversa, a seconda di cosa viene scelto.
+>In un implementazione reale, è meglio minimizzare la varianza.
 
 #### Algoritmo di Huffman
 
