@@ -1,3 +1,7 @@
+### Codice di Shannon-Fano
+
+TODO
+
 ### Codice di Huffman
 
 ^d3a9e9
