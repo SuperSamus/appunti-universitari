@@ -108,7 +108,7 @@ Nella decodifica, se le probabilità sono molto sbilanciate, c'è il rischio di 
 ### Trasformazione Burrows-Wheeler (BWT)
 
 - Si parte da un testo $T$
-- Si crea una matrice $n×n$, con $|T|=n$ che consiste in $T$ ruotato in ogni modo possibile
+- Si crea una matrice $n×n$, con $|T|=n$ che consiste in $T$ ruotato in tutti gli $n$ modi possibili
 - Si ordine (per righe) la matrice in ordine alfabetico
 - La prima colonna viene chiamata $F$, l'ultima colonna viene chiamata $L$
 
