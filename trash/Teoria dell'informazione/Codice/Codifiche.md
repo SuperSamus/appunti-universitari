@@ -136,13 +136,23 @@ Difetto: è possibile che la distanza sia maggiore del numero di simboli dell'al
 
 #### Move-to-Front (MTF)
 
-Una codifica che, dato un alfabeto ordinato, rimpiazza i simboli con un vettori di interi che rappresentano l'index $X$ dei "simboli usati recentemente".
+Una codifica che, dato un alfabeto ordinato, rimpiazza i simboli con un vettore di interi che rappresentano l'index $X$ dei "simboli usati recentemente".
 - Inizializza $X$ con l'alfabeto ordinato
 - Per ogni simbolo $s$ del testo:
 	- Codificalo nella posizione dove $s$ compare in $X$
 	- In $X$, sposta $s$ in prima posizione
 
 Dopo la codifica, i numeri più piccoli sono i più probabili.
+
+##### Codifica gamma
+
+I simboli utilizzati sono in codifica gamma, per codificare numeri positivi in un numero di bit non fisso (così che i numeri più piccoli richiedano meno bit per essere rappresentati).
+È composto da:
+- $\text{|n|-1}$ in codifica unaria
+	- Una codifica unaria che rappresenta il numero $m$, inserisce $m-1$ *zeri* e $1$ *uno*
+- I bit di $n$, eccetto il primo *uno*.
+
+`[1, 01`
 
 ### LZ77
 
