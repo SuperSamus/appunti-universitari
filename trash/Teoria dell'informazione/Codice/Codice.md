@@ -63,10 +63,11 @@ Possibile soluzione: avere tutte le parole della stessa lunghezza, ma non è des
 >
 > Se la condizione necessaria sopra è necessaria per la possibilità che un codice con queste lunghezze sia istantaneo, mentre per l'esistenza di un codice istantaneo con queste lunghezze è necessaria e sufficiente.
 >
->Stesso discorso per un codice *assolutamente ottimo* con:
->$K(C)=1$
+>##### Ottimalità assoluta
 >
->Dimostrazione per ottimalità assoluta:
+>Si può avere solo se $K(C)=1$.
+>
+>Dimostrazione:
 >$H(S)=-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log \frac{d^{-l_i}}{K(C)}=-∑\limits_{i=1}^mp_i(\log d^{-l_i}-\log K(C))=∑\limits_{i=1}^mp_il_i \log d-\log K(C)=L_S(C)\log d -\log K(C)$
 >È quindi necessario che $\log K(C)=0$.
 
