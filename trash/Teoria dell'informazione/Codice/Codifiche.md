@@ -146,13 +146,14 @@ Dopo la codifica, i numeri più piccoli sono i più probabili.
 
 ##### Codifica gamma
 
-I simboli utilizzati sono in codifica gamma, per codificare numeri positivi in un numero di bit non fisso (così che i numeri più piccoli richiedano meno bit per essere rappresentati).
+Se si vuole utilizzare la codifica MTF come compressione direttamente, si usa la codifica gamma.
+Il suo scopo per codificare numeri positivi in un numero di bit non fisso (così che i numeri più piccoli richiedano meno bit per essere rappresentati).
 È composto da:
 - $\text{|n|-1}$ in codifica unaria
 	- Una codifica unaria che rappresenta il numero $m$, inserisce $m-1$ *zeri* e $1$ *uno*
 - I bit di $n$, eccetto il primo *uno*.
 
-`[1, 01`
+`[1, 010, 011, 00100, 00101, 00110, 00111, 0001000, 0001001, …]`
 
 ### LZ77
 
