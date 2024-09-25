@@ -64,9 +64,12 @@ Una formula del genere è difficile da calcolare nella realtà per via del limit
 Per un *modello markoviano* di ordine $k$, si intendono le sorgenti dove le probabilità dei simboli dipendono dai $k$ simboli che lo hanno preceduto. In questo caso, l'entropia data una specifica sequenza $\overrightarrow{a}$ (lunga $k$) è:
 $H_k(S|\overrightarrow{a})=-∑\limits_{b∈Σ}p(b|\overrightarrow{a})\log p(b|\overrightarrow{a})$
 Mentre l'entropia per la sorgente è:
-$H_k(S)=-∑\limits_{\overrightarrow{a}∈Σ^{(k)}}p(\overrightarrow{a})H_k(S|\overrightarrow{a})$
+$H_k(S)=∑\limits_{\overrightarrow{a}∈Σ^{(k)}}p(\overrightarrow{a})H_k(S|\overrightarrow{a})$
 
 Aumentare $k$ riduce l'entropia.
 
 Nel caso di ordine 0, è semplicemente:
 $H_0(S)=-∑\limits_{a∈Σ}p(a)\log p(a)$
+
+Nel caso di ordine 1:
+$H_1(S)=-∑\limits_{a∈Σ}∑\limits_{b∈Σ}p(a,b)\log(a|b)$
