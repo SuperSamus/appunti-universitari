@@ -187,4 +187,3 @@ Frequentemente utilizzato per le [[Informazione#^87a4de|sorgenti con memoria]].
 - Una sequenza di $n$ 0 e un 1 è detta *run di lunghezza $n$*
 - Codifica questa sequenza in "tutte le lunghezze dei run" (località spaziale).
 	- Con parole di codice composte da $k$ bit, è possibile rappresentare stringhe di lunghezza massima $2^k-1$
-		- Se c'è una run $≥2^k-1$, allora si usa la parola $1^k$: il valore verrà sommato alla parola dopo
