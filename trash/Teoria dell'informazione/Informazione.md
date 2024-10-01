@@ -1,6 +1,6 @@
 La teoria dell’Informazione ha come oggetto principale di studio la *misurazione*, la *trasmissione* e la *preservazione* dell’informazione emessa da una **sorgente**.
 - **Sorgente** (S): emette dati utilizzando un alfabeto $Σ$ (di qualunque natura) di cardinalità $m$.
-- **Canale**: trasmette i dati utilizzando un alfabeto $A$, utilizzando una funzione (di costo $γ$) per trasformare i simboli $σ_i$ (appartenenti a $Σ$) in simboli di $A$ (di solito, $|A|≤|Σ|$)
+- **[[Canale]]**: trasmette i dati utilizzando un alfabeto $A$, utilizzando una funzione (di costo $γ$) per trasformare i simboli $σ_i$ (appartenenti a $Σ$) in simboli di $A$ (di solito, $|A|≤|Σ|$)
 	- Un **rumore** lo può disturbare. Si può aggiungere *ridondanza* per evitare errori, ma aumenterà il *costo* della trasmissione.
 - **Destinatario**: riceve i dati codificati
 
@@ -73,27 +73,3 @@ $H_0(S)=-∑\limits_{a∈Σ}p(a)\log p(a)$
 
 Nel caso di ordine 1:
 $H_1(S)=-∑\limits_{a∈Σ}∑\limits_{b∈Σ}p(a,b)\log(a|b)$
-
-##### Entropia congiunta
-
-Date due sorgenti, $X$ e $Y$, con $k$ e $h$ possibili uscite rispettivamente:
-$H(X,Y)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log p(x_i,y_j)≤H(X)+H(Y)$
-
-La disuguaglianza è dovuta dal lemma del logaritmo:
-- $H(X)=-∑\limits_{i=1}^kp(x_i)\log p(x_i)=-∑\limits_{i=1}^k(∑\limits_{j=1}^hp(x_i,y_j))\log p(x_i)$
-- $H(Y)=-∑\limits_{j=1}^hp(y_j)\log p(y_j)=-∑\limits_{j=1}^h(∑\limits_{i=1}^kp(x_i,y_j))\log p(y_j)$
-- $H(X)+H(Y)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)(\log p(x_i)+\log p(y_j))=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log (p(x_i)p(y_j))$
-
-Quindi, c'è uguaglianza se e solo se $X$ e $Y$ sono indipendenti.
-
-##### Entropia condizionata
-
-$H(X|Y)=-∑\limits_{j=1}^hp(y_j)H(X|Y=y_j)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log(p(x_i|y_j))$
-- $H(X,Y)=H(X)+H(Y|X)$
-- $H(X,Y)=H(Y)+H(X|Y)$
-- $H(X|Y)≤H(X)$
-	- Sono uguali se e solo se $X$ e $Y$ sono indipendenti.
-
-##### Informazione mutua
-
-$I(X;Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)=∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log\frac{p(x_i,y_j)}{p(x_i)p(y_j)}≥0$
