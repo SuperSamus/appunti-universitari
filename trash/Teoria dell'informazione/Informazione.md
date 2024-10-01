@@ -73,3 +73,10 @@ $H_0(S)=-∑\limits_{a∈Σ}p(a)\log p(a)$
 
 Nel caso di ordine 1:
 $H_1(S)=-∑\limits_{a∈Σ}∑\limits_{b∈Σ}p(a,b)\log(a|b)$
+
+#### Entropia congiunta
+
+TODO: Spostare da qualche altra parte
+
+Date due sorgenti, $X$ e $Y$, con $k$ e $h$ possibili uscite rispettivamente:
+$H(X,Y)=-∑\limits_{i=1}^k∑\limits_{b∈Σ}p(x_i,y_j)\log(p(x_i,y_j))$
