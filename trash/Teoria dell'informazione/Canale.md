@@ -34,5 +34,6 @@ Si definisce *capacità del canale*:
 $C_S=\max\limits_{p(x_i)}\{I(X;Y)\}$
 
 Nel cercare di creare una codifica di canale che minimizzi l'impatto del rumore, si vuole massimizzare la capacità del canale:
-- Un canale senza rumore ideale ha capacità $\log m$.
-- Un canale così rumoroso da essere inutile ha capacità $0$ ($X$ e $Y$ sono indipendenti).
+- Un canale senza rumore ideale ha capacità $\max\limits_{p(x_i)}H(X)=\log m$.
+	- Un *canale lossless* mappa
+- Un canale infinitamente rumoroso (inutile) ha capacità $0$ ($X$ e $Y$ sono indipendenti).
