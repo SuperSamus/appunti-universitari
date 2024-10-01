@@ -93,3 +93,7 @@ $H(X|Y)=-∑\limits_{j=1}^hp(y_j)H(X|Y=y_j)=-∑\limits_{i=1}^k∑\limits_{j=1}^
 - $H(X,Y)=H(Y)+H(X|Y)$
 - $H(X|Y)≤H(X)$
 	- Sono uguali se e solo se $X$ e $Y$ sono indipendenti.
+
+##### Informazione mutua
+
+$I(X;Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)=∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log\frac{p(x_i,y_j)}{p(x_i)p(y_j)}≥0$
