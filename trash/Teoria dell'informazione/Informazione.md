@@ -74,9 +74,22 @@ $H_0(S)=-∑\limits_{a∈Σ}p(a)\log p(a)$
 Nel caso di ordine 1:
 $H_1(S)=-∑\limits_{a∈Σ}∑\limits_{b∈Σ}p(a,b)\log(a|b)$
 
-#### Entropia congiunta
-
-TODO: Spostare da qualche altra parte
+##### Entropia congiunta
 
 Date due sorgenti, $X$ e $Y$, con $k$ e $h$ possibili uscite rispettivamente:
-$H(X,Y)=-∑\limits_{i=1}^k∑\limits_{b∈Σ}p(x_i,y_j)\log(p(x_i,y_j))$
+$H(X,Y)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log p(x_i,y_j)≤H(X)+H(Y)$
+
+La disuguaglianza è dovuta dal lemma del logaritmo:
+- $H(X)=-∑\limits_{i=1}^kp(x_i)\log p(x_i)=-∑\limits_{i=1}^k(∑\limits_{j=1}^hp(x_i,y_j))\log p(x_i)$
+- $H(Y)=-∑\limits_{j=1}^hp(y_j)\log p(y_j)=-∑\limits_{j=1}^h(∑\limits_{i=1}^kp(x_i,y_j))\log p(y_j)$
+- $H(X)+H(Y)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)(\log p(x_i)+\log p(y_j))=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log (p(x_i)p(y_j))$
+
+Quindi, c'è uguaglianza se e solo se $X$ e $Y$ sono indipendenti.
+
+##### Entropia condizionata
+
+$H(X|Y)=-∑\limits_{j=1}^hp(y_j)H(X|Y=y_j)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log(p(x_i|y_j))$
+- $H(X,Y)=H(X)+H(Y|X)$
+- $H(X,Y)=H(Y)+H(X|Y)$
+- $H(X|Y)≤H(X)$
+	- Sono uguali se e solo se $X$ e $Y$ sono indipendenti.
