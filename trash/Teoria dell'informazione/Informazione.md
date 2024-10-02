@@ -73,3 +73,19 @@ $H_0(S)=-∑\limits_{a∈Σ}p(a)\log p(a)$
 
 Nel caso di ordine 1:
 $H_1(S)=-∑\limits_{a∈Σ}∑\limits_{b∈Σ}p(a,b)\log(a|b)$
+
+### Teoremi di Shannon
+
+#### Primo
+
+Per codificare un testo $T$ di lunghezza $n$ prodotto da una sorgente $S$ di entropia $H(S)$, non si possono usare meno di $nH(S)$ bits.
+
+Un testo si può comprimere fino a una lunghezza che corrisponde al suo contenuto di informazione.
+
+#### Secondo
+
+(Vedere [[Canale#^dd30fc|informazione mutua]])
+
+Se $R<C$, esiste un sistema di codifica tale che la probabilità di errore sia arbitrariamente piccola.
+
+Se $R>C$, è impossibile trasmettere informazione senza errori.
