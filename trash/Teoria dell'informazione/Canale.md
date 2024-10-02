@@ -42,4 +42,26 @@ Nel cercare di creare una codifica di canale che minimizzi l'impatto del rumore,
 
 Un canale con due simboli di sorgente e destinazione.
 Per la sorgente, le probabilità dei due simboli sono $p$ e $1-p$.
-Nel canale, il rumore ha probabilità $a$ di cambiare il simbolo in uscita.
+Nel canale, il rumore ha probabilità $α$ di cambiare il simbolo in uscita.
+
+```mermaid
+flowchart LR
+subgraph X
+00[0]
+01[1]
+end
+subgraph Y
+10[0]
+11[1]
+end
+
+00 --> |1-α| 10
+00 --> |α| 11
+01 --> |α| 10
+01 --> |1-α| 11
+```
+
+Definendo $Ω(p)=-p\log p-(1-p)\log(1-p)$ l'entropia di una sorgente binaria:
+- $H(Y)=Ω(p(1-α)+(1-p)α)=Ω(p+α-2pα)$
+- $H(Y|X)=Ω(α)$
+- $i(X)
