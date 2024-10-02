@@ -30,7 +30,6 @@ $H(X|Y)=-∑\limits_{j=1}^hp(y_j)H(X|Y=y_j)=-∑\limits_{i=1}^k∑\limits_{j=1}^
 
 $I(X;Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)=∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log\frac{p(x_i,y_j)}{p(x_i)p(y_j)}≥0$
 
-
 Si definisce *capacità del canale*:
 $C_S=\max\limits_{p(x_i)}\{I(X;Y)\}$
 
@@ -38,3 +37,9 @@ Nel cercare di creare una codifica di canale che minimizzi l'impatto del rumore,
 - Un canale senza rumore ideale ha capacità $\max\limits_{p(x_i)}H(X)=\log m$.
 	- Un *canale lossless* ha una relazione da $X$ a $Y$ iniettiva (può essere uno-a-molti). $P(x_i|y_j)=1$ se $P(y_j|x_i)>0$, e $P(x_i|y_j)=0$ altrimenti.
 - Un canale infinitamente rumoroso (inutile) ha capacità $0$ ($X$ e $Y$ sono indipendenti).
+
+#### Canale simmetrico
+
+Un canale con due simboli di sorgente e destinazione.
+Per la sorgente, le probabilità dei due simboli sono $p$ e $1-p$.
+Nel canale, il rumore ha probabilità $a$ di cambiare il simbolo in uscita.
