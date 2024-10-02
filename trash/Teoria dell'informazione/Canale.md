@@ -28,15 +28,20 @@ $H(X|Y)=-∑\limits_{j=1}^hp(y_j)H(X|Y=y_j)=-∑\limits_{i=1}^k∑\limits_{j=1}^
 
 ### Informazione mutua
 
+^dd30fc
+
 $I(X;Y)=H(X)-H(X|Y)=H(Y)-H(Y|X)=∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log\frac{p(x_i,y_j)}{p(x_i)p(y_j)}≥0$
 
 Si definisce *capacità del canale*:
-$C_S=\max\limits_{p(x_i)}\{I(X;Y)\}$
+$C_S=\max\limits_{p(x_i)}\{I(X;Y)\}\text{ [bit/simbolo]}$
+
+In un canale capace di trasmettere $s$ simboli al secondo, la *capacità per unità di tempo* è:
+$C=s·C_S\text{ [bit/secondo]}$
 
 Nel cercare di creare una codifica di canale che minimizzi l'impatto del rumore, si vuole massimizzare la capacità del canale:
 - Un canale senza rumore ideale ha capacità $\max\limits_{p(x_i)}H(X)=\log m$.
 	- Un *canale lossless* ha una relazione da $X$ a $Y$ iniettiva (può essere uno-a-molti). $P(x_i|y_j)=1$ se $P(y_j|x_i)>0$, e $P(x_i|y_j)=0$ altrimenti.
-- Un canale infinitamente rumoroso (inutile) ha capacità $0$ ($X$ e $Y$ sono indipendenti).
+- Un canale con un rumore tale da essere inutile ha capacità $0$ ($X$ e $Y$ sono indipendenti).
 
 #### Canale simmetrico
 
@@ -64,4 +69,5 @@ end
 Definendo $Ω(p)=-p\log p-(1-p)\log(1-p)$ l'entropia di una sorgente binaria:
 - $H(Y)=Ω(p(1-α)+(1-p)α)=Ω(p+α-2pα)$
 - $H(Y|X)=Ω(α)$
-- $i(X)
+- $I(X;Y)=Ω(p+α-2pα)-Ω(α)$
+	- L'informazione muta massima si ha con $p=0.5$, quindi $C_S=1-Ω(α)$.

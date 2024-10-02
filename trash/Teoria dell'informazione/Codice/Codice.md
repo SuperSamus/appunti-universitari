@@ -105,8 +105,16 @@ Esempio di ritardo 1, alfabeto sorgente con due simboli, codificati in:
 >- $∃i> 0 \: S_i=∅$
 >- $∃i,j> 0 \: S_i=S_j$
 
-### Primo teorema di Shannon
+
+### Teoremi di Shannon
+
+#### Primo
 
 Per codificare un testo $T$ di lunghezza $n$ prodotto da una sorgente $S$ di entropia $H(S)$, non si possono usare meno di $nH(S)$ bits.
 
 Un testo si può comprimere fino a una lunghezza che corrisponde al suo contenuto di informazione.
+
+#### Secondo
+
+(Vedere [[Canale#^dd30fc|informazione mutua]])
+
