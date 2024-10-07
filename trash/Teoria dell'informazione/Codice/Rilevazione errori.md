@@ -47,9 +47,12 @@ Codice lineare, con la proprietà che per ogni parola valida $X$, la parola "ruo
 Rappresentando le parole come polinomi, con coefficienti modulo 2, si ha:
 $X(p)=x_{n-1}p^{n-1}+x_{n-2}p^{n-2}+...+x_1p+x_0$
 
-Dato $X'$ una rotazione a sinistra di 1, si ha:
-$pX(p)+X'(p)=x_{n-1}p^n+x_n{n-1}=x_{n-1}(p^n+1)$
-Che per linearità, è valido.
+Sono basati sui *campi di Galois*: quindi, le operazioni di addizione, sottrazione, moltiplicazione e divisione tra membri del campo avranno come risultato un membro del campo.
+
+Se $X'$ è $X$ ruotato a sinistra di 1, l'equivalente è:
+- $pX(p)+X'(p)=x_{n-1}p^n+x_{n-1}=x_{n-1}(p^n+1)$
+- $X'(p)=x_{n-1}(p^n+1)+pX(p)$
+Cioè il resto della divisione tra $pX(p)$ e $p^n+1$.
 
 Anche il blocco che rappresenta il messaggio e il generatore si possono rappresentare come polinomi $Q_M(p)$ (di grado $k$) e $G(p)$ (di grado $q$).
 $X(p)=Q_M(p)G(p)$
