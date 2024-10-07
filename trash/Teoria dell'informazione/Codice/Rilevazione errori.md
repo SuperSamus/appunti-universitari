@@ -27,7 +27,7 @@ Codice lineare con le seguenti proprietà ($q=n-k$):
 
 #### Codice sistematico
 
-Nel blocco, i $k$ bit del messaggio vengono tutti prima dei $n-k$  bit di ridondanza: $X=(M|C)$
+Nel blocco, i $k$ bit del messaggio vengono tutti prima dei $n-k$ bit di ridondanza: $X=(M|C)$
 
 Si può rappresentare la generazione di $X$ con una *matrice generatrice*: $X=MG$, dove $G=[I_k,P]$.
 
@@ -45,7 +45,7 @@ Per la correzione, dato che $|S|<|E|$, ci sono diversi possibili vettori di erro
 Codice lineare, con la proprietà che per ogni parola valida $X$, la parola "ruotata" $X'$ è anch'essa valida.
 
 Rappresentando le parole come polinomi, con coefficienti modulo 2, si ha:
-$X(p)=x_{n-1}p^{n-1}+x_{n-2}p^{n-2}+...+x_1p+x_0$
+$X(p)=x_{n-1}p^{n-1}+x_{n-2}p^{n-2}+…+x_1p+x_0$
 
 Sono basati sui *campi di Galois*: quindi, le operazioni di addizione, sottrazione, moltiplicazione e divisione tra membri del campo avranno come risultato un membro del campo.
 
