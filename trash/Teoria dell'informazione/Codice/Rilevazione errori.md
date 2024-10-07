@@ -54,10 +54,15 @@ Se $X'$ è $X$ ruotato a sinistra di 1, l'equivalente è:
 - $X'(p)=x_{n-1}(p^n+1)+pX(p)$
 Cioè il resto della divisione tra $pX(p)$ e $p^n+1$.
 
-Anche il blocco che rappresenta il messaggio e il generatore si possono rappresentare come polinomi $Q_M(p)$ (di grado $k$) e $G(p)$ (di grado $q$).
+Caso generico, con $X$ ruotato di $i$:
+$X^{(i)}(p)=Q(p)(p^n+1)+p^iX(p)$
+Dove $Q(p)$ è un polinomio di grado non superiore a $i-1$.
+
+
+Anche il blocco che rappresenta il messaggio e il generatore si possono rappresentare come polinomi $Q_M(p)$ (di grado $k$) e $G(p)$ (di grado $q$) rispettivamente.
 $X(p)=Q_M(p)G(p)$
 
-È quindi necessario che $G(P)$ sia un fattore di $p^n+1$. Non per forza vuol dire che produrrà un buon codice.
+$G(P)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori, e sono irriducibili.
 
 ##### Codice ciclico sistematico
 
