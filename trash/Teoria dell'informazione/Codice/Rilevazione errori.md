@@ -1,4 +1,4 @@
-### Codici a blocchi
+## Codici a blocchi
 
 In un codice a blocchi di dimensione $n$, ci sono $k$ bit sono utilizzati per il messaggio vero o proprio, e i restanti $n-k$ per ridondanza.
 - Codici a ripetizione
@@ -10,7 +10,7 @@ Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
 - È garantito che si può rilevare un errore se $t<d_{min}$
 - È garantito che si può correggere un errore se $t<\frac{1}{2}d_{min}$
 
-#### Codice lineare
+### Codice lineare
 
 Ha le seguenti proprietà:
 - Il vettore nullo è una parola valida
@@ -20,13 +20,13 @@ Ha le seguenti proprietà:
 - Distanza di Hamming: $d(X,Y)=w(X-Y)$
 - $d_{min}=\min_\limits{X≠\overrightarrow{0}} w(X)$
 
-##### Codice di Hamming
+#### Codice di Hamming
 
 Codice lineare con le seguenti proprietà ($q=n-k$):
 - $q≥3$
 - $n=2^{q-1}$
 
-#### Codice sistematico
+### Codice sistematico
 
 Nel blocco, i $k$ bit del messaggio vengono tutti prima dei $n-k$ bit di ridondanza: $X=(M|C)$
 
@@ -41,9 +41,9 @@ Chiamando $Y$ la parola $X$ passata per il canale rumoroso, si ha la *sindrome* 
 
 Per la correzione, dato che $|S|<|E|$, ci sono diversi possibili vettori di errore associati alla sindrome. Si cerca quindi il vettore di errore più probabile (di solito, quello che ha peso minore).
 
-#### Codice ciclico
+### Codice ciclico
 
-Codice lineare, con la proprietà che per ogni parola valida $X$, la parola "ruotata" $X'$ è anch'essa valida.
+Codice lineare, con la proprietà che per ogni parola valida, la parola "ruotata" è anch'essa valida.
 
 Rappresentando le parole come polinomi, con coefficienti modulo 2, si ha:
 $X(p)=x_{n-1}p^{n-1}+x_{n-2}p^{n-2}+…+x_1p+x_0$
@@ -62,7 +62,17 @@ Dove $Q(p)$ è un polinomio di grado non superiore a $i-1$.
 Anche il blocco che rappresenta il messaggio e il generatore si possono rappresentare come polinomi $Q_M(p)$ (di grado $k$) e $G(p)$ (di grado $q$) rispettivamente.
 $X(p)=Q_M(p)G(p)$
 
-$G(P)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori, e sono irriducibili.
+$G(p)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori, e sono irriducibili.
+
+Dato $H(p)$ un polinomio tale che:
+$G(p)H(p)=0\mod (p^n+1)$
+allora $H(p)$ è un *polinomio di controllo di parità*.
+
+Dato che $X(p)$ è multiplo di $G(p)$, allora si ha anche:
+$X(p)H(p)=0\mod (p^n+1)$
+
+Dato $Y(p)$ il polinomio codice che potrebbe essere stato modificato dal rumore del canale, si ha la *sindrome*:
+$S(p)=Y(p) \mod G(p)$
 
 ##### Codice ciclico sistematico
 
@@ -73,5 +83,4 @@ Dato che $X(p)=Q_M(p)G(p)$, allora:
 - $\frac{p^qM(p)}{G(p)}=Q_M(p)+\frac{C(p)}{G(p)}$
 - $C(p)=⌊p^qM(p)⌋ \mod G(p)$
 
-Infine, la sindrome:
-$S(p)=Y(p) \mod G(p)$
+
