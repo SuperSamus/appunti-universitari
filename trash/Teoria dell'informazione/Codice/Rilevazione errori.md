@@ -58,7 +58,6 @@ Caso generico, con $X$ ruotato di $i$:
 $X^{(i)}(p)=Q(p)(p^n+1)+p^iX(p)$
 Dove $Q(p)$ è un polinomio di grado non superiore a $i-1$.
 
-
 Anche il blocco che rappresenta il messaggio e il generatore si possono rappresentare come polinomi $Q_M(p)$ (di grado $k$) e $G(p)$ (di grado $q$) rispettivamente.
 $X(p)=Q_M(p)G(p)$
 
