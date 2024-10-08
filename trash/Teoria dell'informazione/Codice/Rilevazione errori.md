@@ -16,8 +16,9 @@ Ha le seguenti proprietà:
 - Il vettore nullo è una parola valida
 - La somma modulo 2 (per bit) di due parole è una parola valida
 
-Peso: $w(X)=\text{Numero di bit uguali a 1}$
-$d_{min}=\min_X w(X)$
+- Peso di Hamming: $w(X)=\text{Numero di bit uguali a 1 in }X$
+- Distanza di Hamming: $d(X,Y)=w(X-Y)$
+- $d_{min}=\min_\limits{X≠\overrightarrow{0}} w(X)$
 
 ##### Codice di Hamming
 
