@@ -34,7 +34,7 @@ Si può rappresentare la generazione di $X$ con una *matrice generatrice*: $X=MG
 
 Per la decodifica, si utilizza una matrice di controllo di parità $H=[P^T,I_q]$.
 
-Chiamando $Y$ la parola $X$ passata per il canale rumoroso, si ha la *sindrome* $S=YH^T$, di dimensione $q$. Se $S$ è un vettore nullo, allora $Y$ è una parola valida, altrimenti, non lo è.
+Chiamando $Y$ la parola $X$ passata per il canale rumoroso, si ha la *sindrome* $S=YH^T$, di dimensione $q$. Se $S$ è un vettore nullo, allora $Y$ è una parola valida, altrimenti non lo è.
 
 - $Y=X+E$
 - $S=EH^T$
