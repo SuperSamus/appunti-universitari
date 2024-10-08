@@ -59,6 +59,8 @@ Caso generico, con $X$ ruotato di $i$:
 $X^{(i)}(p)=Q(p)(p^n+1)+p^iX(p)$
 Dove $Q(p)$ è un polinomio di grado non superiore a $i-1$.
 
+##### Generazione
+
 Anche il blocco che rappresenta il messaggio e il generatore si possono rappresentare come polinomi $Q_M(p)$ (di grado $k$) e $G(p)$ (di grado $q$) rispettivamente.
 $X(p)=Q_M(p)G(p)$
 
@@ -71,10 +73,14 @@ allora $H(p)$ è un *polinomio di controllo di parità*.
 Dato che $X(p)$ è multiplo di $G(p)$, allora si ha anche:
 $X(p)H(p)=0\mod (p^n+1)$
 
-Dato $Y(p)$ il polinomio codice che potrebbe essere stato modificato dal rumore del canale, si ha la *sindrome*:
+##### Errore
+
+Dato $Y(p)=X(p)+E(p)$, con $E(p)$ l'errore causato dal rumore, si ha la *sindrome*:
 $S(p)=Y(p) \mod G(p)$
 
-##### Codice ciclico sistematico
+Se gli errori avvengono sui bit di parità, la capacità di correzione errori del codice è $e$, e $w(S(p))≤e$, allora $S(p)=E(p)$.
+
+#### Codice ciclico sistematico
 
 Il polinomio si può rappresentare come:
 $X(p)=p^qM(p)+C(p)$
