@@ -65,14 +65,14 @@ $X(p)=Q_M(p)G(p)$
 
 Un polinomio irriducibile (quindi di grado più basso possibile) $G(p)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori.
 
+##### Errore
+
 Dato $H(p)$ un polinomio tale che:
 $G(p)H(p)=0\mod (p^n+1)$
 allora $H(p)$ è un *polinomio di controllo di parità*.
 
 Dato che $X(p)$ è multiplo di $G(p)$, allora si ha anche:
 $X(p)H(p)=0\mod (p^n+1)$
-
-##### Errore
 
 Dato $Y(p)=X(p)+E(p)$, con $E(p)$ l'errore causato dal rumore, si ha la *sindrome*:
 $S(p)=Y(p) \mod G(p)$
