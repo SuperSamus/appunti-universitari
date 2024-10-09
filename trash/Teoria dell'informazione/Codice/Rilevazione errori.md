@@ -52,11 +52,10 @@ Sono basati sui *campi di Galois*: quindi, le operazioni di addizione, sottrazio
 
 Se $X'$ è $X$ ruotato a sinistra di 1, l'equivalente è:
 - $pX(p)+X'(p)=x_{n-1}p^n+x_{n-1}=x_{n-1}(p^n+1)$
-- $X'(p)=x_{n-1}(p^n+1)+pX(p)$
-Cioè il resto della divisione tra $pX(p)$ e $p^n+1$.
+- $X'(p)=x_{n-1}(p^n+1)+pX(p)=pX(p)\mod (p^n+1)$
 
 Caso generico, con $X$ ruotato di $i$:
-$X^{(i)}(p)=Q(p)(p^n+1)+p^iX(p)$
+$X^{(i)}(p)=Q(p)(p^n+1)+p^iX(p)=p^iX(p)\mod (p^n+1)$
 Dove $Q(p)$ è un polinomio di grado non superiore a $i-1$.
 
 ##### Generazione
@@ -64,7 +63,7 @@ Dove $Q(p)$ è un polinomio di grado non superiore a $i-1$.
 Anche il blocco che rappresenta il messaggio e il generatore si possono rappresentare come polinomi $Q_M(p)$ (di grado $k$) e $G(p)$ (di grado $q$) rispettivamente.
 $X(p)=Q_M(p)G(p)$
 
-$G(p)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori, e sono irriducibili.
+Un polinomio irriducibile (quindi di grado più basso possibile) $G(p)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori.
 
 Dato $H(p)$ un polinomio tale che:
 $G(p)H(p)=0\mod (p^n+1)$
