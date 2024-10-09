@@ -15,7 +15,6 @@ Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
 Ha le seguenti proprietà:
 - Il vettore nullo è una parola valida
 - La somma modulo 2 (per bit) di due parole è una parola valida
-
 - Peso di Hamming: $w(X)=\text{Numero di bit uguali a 1 in }X$
 - Distanza di Hamming: $d(X,Y)=w(X-Y)$
 - $d_{min}=\min_\limits{X≠\overrightarrow{0}} w(X)$
@@ -39,7 +38,7 @@ Chiamando $Y$ la parola $X$ passata per il canale rumoroso, si ha la *sindrome* 
 - $Y=X+E$
 - $S=EH^T$
 
-Per la correzione, dato che $|S|<|E|$, ci sono diversi possibili vettori di errore associati alla sindrome. Si cerca quindi il vettore di errore più probabile (di solito, quello che ha peso minore).
+Per la correzione, dato che $|S|<|E|$, ci sono diversi possibili vettori di errore associati alla sindrome. Si cerca quindi il vettore di errore più probabile (quello che ha peso minore).
 
 ### Codice ciclico
 
@@ -65,7 +64,10 @@ $X(p)=Q_M(p)G(p)$
 
 Un polinomio irriducibile (quindi di grado più basso possibile) $G(p)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori.
 
-##### Errore
+L'equivalente matrice generatrice è (1° algoritmo, non sistematico):
+$$G=\begin{bmatrix}g_0&g_1&…&g_q&0&0&…&0\\0&g_0&…&g_{q-1}&g_q&0&…&0\\⫶\\0&0&...&0&g_0&g_1&…&g_q\end{bmatrix}$$
+
+##### Parità
 
 Dato $H(p)$ un polinomio tale che:
 $H(p)=\frac{p^n+1}{G(p)}$
@@ -74,14 +76,17 @@ allora $H(p)$ è un *polinomio di controllo di parità*.
 Dato che $X(p)$ è multiplo di $G(p)$, allora si ha:
 $X(p)H(p)=0\mod (p^n+1)$
 
+L'equivalente matrice di parità è (1° algoritmo, non sistematico):
+$$H=\begin{bmatrix}h_k&h_{k-1}&…&h_0&0&0&…&0\\0&h_k&…&h_1&h_0&0&…&0\\⫶\\0&0&...&0&h_k&h_{k-1}&…&h_0\end{bmatrix}$$
+
+##### Sindrome
+
 Dato $Y(p)=X(p)+E(p)$, con $E(p)$ l'errore causato dal rumore, si ha la *sindrome*:
 $S(p)=Y(p) \mod G(p)$
 
-La dimensione della sindrome è di $n-k$, quindi gli errori sono solo quelli nei bit di parità, ma... il codice è ciclico.
-
 Data $e$ la capacità di correzione errori del codice, se $w(S(p))≤e$, allora $S(p)=E(p)$.
 
-La limitazione del fatto che gli errori devono avvenire sui bit di parità si può aggirare perché... il codice è ciclico.
+Nota che la dimensione della sindrome è di $n-k$, quindi i bit "coperti" dalla sindrome solo parziali (se il codice è sistematico, sono quelli di parità). Se gli errori sono da qualche altra parte, la condizione sopra non sarà soddisfatta. Il codice è ciclico: si può ruotare finché non si trova un codice che soddisfa la condizione sopra.
 
 #### Codice ciclico sistematico
 
@@ -91,5 +96,3 @@ $X(p)=p^qM(p)+C(p)$
 Dato che $X(p)=Q_M(p)G(p)$, allora:
 - $\frac{p^qM(p)}{G(p)}=Q_M(p)+\frac{C(p)}{G(p)}$
 - $C(p)=⌊p^qM(p)⌋ \mod G(p)$
-
-
