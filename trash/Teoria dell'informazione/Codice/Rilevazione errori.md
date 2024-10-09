@@ -78,7 +78,11 @@ $X(p)H(p)=0\mod (p^n+1)$
 Dato $Y(p)=X(p)+E(p)$, con $E(p)$ l'errore causato dal rumore, si ha la *sindrome*:
 $S(p)=Y(p) \mod G(p)$
 
-Se gli errori avvengono sui bit di parità, la capacità di correzione errori del codice è $e$, e $w(S(p))≤e$, allora $S(p)=E(p)$.
+La dimensione della sindrome è di $n-k$, quindi gli errori sono solo quelli nei bit di parità, ma... il codice è ciclico.
+
+Data $e$ la capacità di correzione errori del codice, se $w(S(p))≤e$, allora $S(p)=E(p)$.
+
+La limitazione del fatto che gli errori devono avvenire sui bit di parità si può aggirare perché... il codice è ciclico.
 
 #### Codice ciclico sistematico
 
