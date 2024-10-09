@@ -68,10 +68,10 @@ Un polinomio irriducibile (quindi di grado più basso possibile) $G(p)$ definisc
 ##### Errore
 
 Dato $H(p)$ un polinomio tale che:
-$G(p)H(p)=0\mod (p^n+1)$
+$H(p)=\frac{p^n+1}{G(p)}$
 allora $H(p)$ è un *polinomio di controllo di parità*.
 
-Dato che $X(p)$ è multiplo di $G(p)$, allora si ha anche:
+Dato che $X(p)$ è multiplo di $G(p)$, allora si ha:
 $X(p)H(p)=0\mod (p^n+1)$
 
 Dato $Y(p)=X(p)+E(p)$, con $E(p)$ l'errore causato dal rumore, si ha la *sindrome*:
