@@ -67,6 +67,8 @@ Un polinomio irriducibile (quindi di grado più basso possibile) $G(p)$ definisc
 L'equivalente matrice generatrice è (1° algoritmo, non sistematico):
 $$G=\begin{bmatrix}g_0&g_1&…&g_q&0&0&…&0\\0&g_0&…&g_{q-1}&g_q&0&…&0\\⫶\\0&0&...&0&g_0&g_1&…&g_q\end{bmatrix}$$
 
+Esempio generatore di Hamming $(7,4)$ è $X^3+X+1$
+
 ##### Parità
 
 Dato $H(p)$ un polinomio tale che:
