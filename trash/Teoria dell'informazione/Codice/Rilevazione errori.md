@@ -102,4 +102,14 @@ Dato che $X(p)=Q_M(p)G(p)$, allora:
 ## Codice convoluzionale
 
 Codice che ogni $k$ bit di input:
-- Prende gli ultimi $kL$ bit
+- Prende gli ultimi $kL$ bit di input ricevuti
+- Il generatore è una serie di $n<k$ somme di modulo 2: ciascuna, prende specifici ultimi $i$-esimi bit di input
+- Restituisce $n$ bit di output
+
+La codifica è facile, ma la decodifica?
+
+Per via della memoria di dimensione $L$, si può rappresentare questo sistema come una macchina di stati (con $2^{L-1}$ stati), le cui transizioni si possono a loro volta rappresentare come un traliccio.
+
+- Distanza per la colonna $i$: si considera $i=0$ la colonna di un percorso il cui output è solo 0. Il risultato è il peso minimo del percorso fino alla colonna $i$.
+- Distanza minima: distanza con $i=L$.
+- Distanza libera: distanza per $i→∞$, o il peso minimo del percorso che torna nello stato iniziale.
