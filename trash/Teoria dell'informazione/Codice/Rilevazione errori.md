@@ -98,3 +98,8 @@ $X(p)=p^qM(p)+C(p)$
 Dato che $X(p)=Q_M(p)G(p)$, allora:
 - $\frac{p^qM(p)}{G(p)}=Q_M(p)+\frac{C(p)}{G(p)}$
 - $C(p)=⌊p^qM(p)⌋ \mod G(p)$
+
+## Codice convoluzionale
+
+Codice che ogni $k$ bit di input:
+- Prende gli ultimi $kL$ bit
