@@ -110,6 +110,15 @@ La codifica è facile, ma la decodifica?
 
 Per via della memoria di dimensione $L$, si può rappresentare questo sistema come una macchina di stati (con $2^{L-1}$ stati), le cui transizioni si possono a loro volta rappresentare come un traliccio.
 
-- Distanza per la colonna $i$: si considera $i=0$ la colonna di un percorso il cui output è solo 0. Il risultato è il peso minimo del percorso fino alla colonna $i$.
+- Distanza per la colonna $i$: si considera $i=0$ la colonna di un percorso il cui output è solo 0. Il risultato equivale al peso minimo del percorso fino alla colonna $i$.
+	- La funzione è non decrescente all'aumentare di $i$.
 - Distanza minima: distanza con $i=L$.
 - Distanza libera: distanza per $i→∞$, o il peso minimo del percorso che torna nello stato iniziale.
+
+### Algoritmo di Viterbi
+
+Algoritmo che, ricevuto un messaggio modificato dal rumore, cerca il percorso con la distanza minima.
+Il miglior algoritmo in termini di accuratezza, ma il peggiore in termini di performance: il numero di percorsi equivale a $2^L$, quindi il tempo necessario per la decodifica cresce esponenzialmente all'aumentare di $L$.
+
+Dato che certi percorsi si ricongiungono, è possibile tagliare via quelli meno probabili.
+Per risparmiare memoria, i passaggi "vecchi" si possono decodificare quando, dopo un certo numero di passaggi (di solito 5), è difficile che i vecchi percorsi alternativi serviranno a qualcosa.
