@@ -102,6 +102,8 @@ Dato che $X(p)=Q_M(p)G(p)$, allora:
 - $\frac{p^qM(p)}{G(p)}=Q_M(p)+\frac{C(p)}{G(p)}$
 - $C(p)=⌊p^qM(p)⌋ \mod G(p)$
 
+Con questo, è possibile generare la matrice generatrice: basta fare questa operazione per tutti i messaggi da un bit ($I_k)$, e i vari resti sono le righe per $P$.
+
 ## Codice convoluzionale
 
 Codice che ogni $k$ bit di input:
