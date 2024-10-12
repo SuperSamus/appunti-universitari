@@ -21,9 +21,11 @@ Ha le seguenti proprietà:
 
 #### Codice di Hamming
 
-Codice lineare con le seguenti proprietà ($q=n-k$):
-- $q≥3$
-- $n=2^{q-1}$
+Codice lineare con la seguente proprietà ($q=n-k$):
+$2^q≥n+1$
+In questo modo, $d_{min}≥3$
+
+In caso di uguaglianza, è perfetto.
 
 ### Codice sistematico
 
@@ -65,7 +67,7 @@ $X(p)=Q_M(p)G(p)$
 Un polinomio irriducibile (quindi di grado più basso possibile) $G(p)$ definisce completamente il campo, ed è sempre un fattore di $p^n+1$. Tutti i fattori di $p^n+1$ sono generatori.
 
 L'equivalente matrice generatrice è (1° algoritmo, non sistematico):
-$$G=\begin{bmatrix}g_0&g_1&…&g_q&0&0&…&0\\0&g_0&…&g_{q-1}&g_q&0&…&0\\⫶\\0&0&...&0&g_0&g_1&…&g_q\end{bmatrix}$$
+$$G=\begin{bmatrix}g_0&g_1&…&g_q&0&0&…&0\\0&g_0&…&g_{q-1}&g_q&0&…&0\\⫶\\0&0&…&0&g_0&g_1&…&g_q\end{bmatrix}$$
 
 Esempio generatore di Hamming $(7,4)$ è $X^3+X+1$
 
@@ -79,7 +81,7 @@ Dato che $X(p)$ è multiplo di $G(p)$, allora si ha:
 $X(p)H(p)=0\mod (p^n+1)$
 
 L'equivalente matrice di parità è (1° algoritmo, non sistematico):
-$$H=\begin{bmatrix}h_k&h_{k-1}&…&h_0&0&0&…&0\\0&h_k&…&h_1&h_0&0&…&0\\⫶\\0&0&...&0&h_k&h_{k-1}&…&h_0\end{bmatrix}$$
+$$H=\begin{bmatrix}h_k&h_{k-1}&…&h_0&0&0&…&0\\0&h_k&…&h_1&h_0&0&…&0\\⫶\\0&0&…&0&h_k&h_{k-1}&…&h_0\end{bmatrix}$$
 
 ##### Sindrome
 
