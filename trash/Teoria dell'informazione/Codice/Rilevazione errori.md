@@ -25,13 +25,14 @@ Codice lineare con la seguente proprietà ($q=n-k$):
 $2^q≥n+1$
 In questo modo, $d_{min}≥3$
 
-In caso di uguaglianza, è perfetto.
-
 ### Codice sistematico
 
 Nel blocco, i $k$ bit del messaggio vengono tutti prima dei $n-k$ bit di ridondanza: $X=(M|C)$
 
 Si può rappresentare la generazione di $X$ con una *matrice generatrice*: $X=MG$, dove $G=[I_k,P]$.
+
+>[!info]
+>Per il codice di Hamming, è necessario e sufficient che ogni riga di $G$, e ogni combinazione lineare di ogni riga di $g$, abbia almeno 3 bit $1$.
 
 Per la decodifica, si utilizza una matrice di controllo di parità $H=[P^T,I_q]$.
 
