@@ -106,7 +106,7 @@ Codice che ogni $k$ bit di input:
 - Il generatore è una serie di $n<k$ somme di modulo 2: ciascuna, prende specifici ultimi $i$-esimi bit di input
 - Restituisce $n$ bit di output
 
-La codifica è facile, ma la decodifica?
+La codifica è facile, ma la decodifica non lo è. Questo tipo di codice è una buona idea, se l'input viene generato da un dispositivo poco potente, ma decodificato da un dispositivo potente.
 
 Per via della memoria di dimensione $L$, si può rappresentare questo sistema come una macchina di stati (con $2^{L-1}$ stati), le cui transizioni si possono a loro volta rappresentare come un traliccio.
 
@@ -115,10 +115,27 @@ Per via della memoria di dimensione $L$, si può rappresentare questo sistema co
 - Distanza minima: distanza con $i=L$.
 - Distanza libera: distanza per $i→∞$, o il peso minimo del percorso che torna nello stato iniziale.
 
-### Algoritmo di Viterbi
+#### Algoritmo di Viterbi
 
-Algoritmo che, ricevuto un messaggio modificato dal rumore, cerca il percorso con la distanza minima.
+Algoritmo di decodifica che, ricevuto un messaggio modificato dal rumore, cerca il percorso con la distanza minima.
 Il miglior algoritmo in termini di accuratezza, ma il peggiore in termini di performance: il numero di percorsi equivale a $2^L$, quindi il tempo necessario per la decodifica cresce esponenzialmente all'aumentare di $L$.
 
 Dato che certi percorsi si ricongiungono, è possibile tagliare via quelli meno probabili.
 Per risparmiare memoria, i passaggi "vecchi" si possono decodificare quando, dopo un certo numero di passaggi (di solito 5), è difficile che i vecchi percorsi alternativi serviranno a qualcosa.
+
+#### Decodifica sequenziale
+
+Per ogni passo, viene scelto il percorso con la metrica migliore. Si però il percorso si rivela troppo improbabile, viene fatto backtracking.
+
+Il valore atteso della metrica al nodo $i-esimo$ è $ikP_{be}$. Se viene superata la soglia $ikP_{be}+Δ$, viene eseguito il backtracking.
+
+- $Δ$ troppo alto: rischio di tenere un percorso sbagliato
+- $Δ$ troppo basso: il backtracking viene fatto così frequentemente, che si perde più tempo rispetto all'algoritmo di Viterbi.
+
+#### Decodifica a retroazione
+
+Implementazione a livello hardware. Molto veloce, ma grande rischio di errori.
+
+## Strategie ARQ e FEC
+
+Utilizzate nel caso gli errori sono un misto tra errori indipendenti e errori burst.
