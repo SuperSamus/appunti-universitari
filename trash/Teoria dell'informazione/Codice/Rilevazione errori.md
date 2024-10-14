@@ -4,6 +4,8 @@ In un codice a blocchi di dimensione $n$, ci sono $k$ bit sono utilizzati per il
 - Codici a ripetizione
 - Codici a controllo di parità
 
+Code rate: $R_C=\frac{k}{n}$
+
 Questi bit di ridondanza fanno sì che non tutte le parole di codice siano valide.
 Questa fa sì che ci sia *distanza* tra le parole.
 Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
