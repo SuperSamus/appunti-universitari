@@ -21,8 +21,9 @@ Ha le seguenti proprietà:
 
 #### Codice di Hamming
 
-Codice lineare con la seguente proprietà ($q=n-k$):
-$2^q≥n+1$
+Codice lineare con le seguenti proprietà ($q=n-k$):
+- $q≥3$
+- $2^q≥n+1$
 In questo modo, $d_{min}≥3$
 
 ### Codice sistematico
