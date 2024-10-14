@@ -4,7 +4,7 @@ La teoria dell’Informazione ha come oggetto principale di studio la *misurazio
 	- Un **rumore** lo può disturbare. Si può aggiungere *ridondanza* per evitare errori, ma aumenterà il *costo* della trasmissione.
 - **Destinatario**: riceve i dati codificati
 
-In una sorgente senza memoria, ogni simbolo $σ_i$ ha una probabilità $P(σ_i)=p_i$ di essere generato ($∑\limits_{i=1}^mp_i=1$)
+In una sorgente senza memoria, ogni simbolo $σ_i$ ha una probabilità $P(σ_i)=p_i$ di essere trasmesso ($∑\limits_{i=1}^mp_i=1$)
 
 ## **Informazione**
 

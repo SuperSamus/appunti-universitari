@@ -21,23 +21,10 @@ Ha le seguenti proprietà:
 - Distanza di Hamming: $d(X,Y)=w(X-Y)$
 - $d_{min}=\min_\limits{X≠\overrightarrow{0}} w(X)$
 
-#### Codice di Hamming
+ Si può definire la generazione di $X$ con una *matrice generatrice* $G$, dove: $X=MG$,
+ ($M$ il messaggio in un vettore riga.)
 
-Codice lineare con le seguenti proprietà ($q=n-k$):
-- $q≥3$
-- $2^q≥n+1$
-In questo modo, $d_{min}≥3$
-
-### Codice sistematico
-
-Nel blocco, i $k$ bit del messaggio vengono tutti prima dei $n-k$ bit di ridondanza: $X=(M|C)$
-
-Si può rappresentare la generazione di $X$ con una *matrice generatrice*: $X=MG$, dove $G=[I_k,P]$.
-
->[!info]
->Per il codice di Hamming, è necessario e sufficient che ogni riga di $G$, e ogni combinazione lineare di ogni riga di $g$, abbia almeno 3 bit $1$.
-
-Per la decodifica, si utilizza una matrice di controllo di parità $H=[P^T,I_q]$.
+Per la decodifica, si utilizza una matrice di controllo di parità $H$.
 
 Chiamando $Y$ la parola $X$ passata per il canale rumoroso, si ha la *sindrome* $S=YH^T$, di dimensione $q$. Se $S$ è un vettore nullo, allora $Y$ è una parola valida, altrimenti non lo è.
 
@@ -45,6 +32,24 @@ Chiamando $Y$ la parola $X$ passata per il canale rumoroso, si ha la *sindrome* 
 - $S=EH^T$
 
 Per la correzione, dato che $|S|<|E|$, ci sono diversi possibili vettori di errore associati alla sindrome. Si cerca quindi il vettore di errore più probabile (quello che ha peso minore).
+
+#### Codice di Hamming
+
+Codice lineare con le seguenti proprietà ($q=n-k$):
+- $q≥3$
+- $2^q≥n+1$
+In questo modo, $d_{min}≥3$
+
+>[!info]
+>Per rispettare queste proprietà nella matrice generatrice, è necessario e sufficiente che ogni riga di $G$, e ogni combinazione lineare di ogni riga di $G$, abbia almeno 3 bit $1$.
+
+### Codice sistematico
+
+Nel blocco, i $k$ bit del messaggio vengono tutti prima dei $n-k$ bit di ridondanza: $X=(M|C)$
+
+La matrice generatrice è nel formato $G=[I_k,P]$, mentre la matrice di controllo parità è $H=[P^T,I_q]$.
+
+Dato un codice lineare, esiste sempre un codice sistematico con capacità equivalenti.
 
 ### Codice ciclico
 
