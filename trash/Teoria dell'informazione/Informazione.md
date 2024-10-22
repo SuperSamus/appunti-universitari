@@ -78,9 +78,13 @@ $H_1(S)=-∑\limits_{a∈Σ}∑\limits_{b∈Σ}p(a,b)\log(a|b)$
 
 #### Primo
 
+(Vedere [[Codice#^1c7957|Lunghezza media]])
+
 Per codificare un testo $T$ di lunghezza $n$ prodotto da una sorgente $S$ di entropia $H(S)$, non si possono usare meno di $nH(S)$ bits.
 
 Un testo si può comprimere fino a una lunghezza che corrisponde al suo contenuto di informazione.
+
+$L(S)≥H(S)$
 
 #### Secondo
 

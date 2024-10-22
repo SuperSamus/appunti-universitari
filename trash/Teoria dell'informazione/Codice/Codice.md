@@ -6,6 +6,8 @@ Una stringa di $Σ^*$ viene identificata come una sequenza di stringhe $A^*$.
 
 ### Lunghezza media
 
+^1c7957
+
 Le parole del codice $C$ hanno lunghezza $\{l_1,l_2,…,l_m\}$. La lunghezza media è:
 $L_S(C)=∑\limits_{i=1}^mp_il_i$
 
