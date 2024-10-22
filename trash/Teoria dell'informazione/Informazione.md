@@ -86,6 +86,6 @@ Un testo si può comprimere fino a una lunghezza che corrisponde al suo contenut
 
 (Vedere [[Canale#^dd30fc|informazione mutua]])
 
-Se $R<C$, esiste un sistema di codifica tale che la probabilità di errore sia arbitrariamente piccola.
+Esiste un sistema di codifica tale che la probabilità di errore sia arbitrariamente piccola se e solo se $R<C$.
 
-Se $R>C$, è impossibile trasmettere informazione senza errori.
+Se $R>C$, è impossibile trasmettere informazione senza errori in modo affidabile.
