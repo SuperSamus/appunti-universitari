@@ -24,6 +24,14 @@ Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
 >Oppure:
 >$$R≤1-\frac{1}{n}\log_2(∑\limits_{i=0}^t\binom{n}{i})$$
 
+>[!info]
+>### Limite VGS
+>Condizione sufficiente, ma non necessaria:
+>$$2^{n-k}>∑\limits_{i=0}^{2t-1}\binom{n-1}{i}$$
+>
+>Quindi, il numero di bit di ridondanza usati si può limitare a:
+>$$n-k≤⌊1+\log(∑\limits_{i=0}^{2t-1}\binom{n-1}{i})⌋$$
+
 ### Codice lineare
 
 Ha le seguenti proprietà:
