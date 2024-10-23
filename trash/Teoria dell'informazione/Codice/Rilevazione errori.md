@@ -12,6 +12,12 @@ Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
 - È garantito che si può rilevare un errore se $t<d_{min}$
 - È garantito che si può correggere un errore se $t<\frac{1}{2}d_{min}$
 
+>[!info]
+>### Limite di Hamming
+>
+>Dato $t$ il numero massimo di errori che si possono correggere in un codice binario:
+>$$2^k≤\frac{2^n}{∑\limits_{i=0}^t\binom{n}{i}}$$
+
 ### Codice lineare
 
 Ha le seguenti proprietà:
