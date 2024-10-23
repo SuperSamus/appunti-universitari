@@ -39,6 +39,8 @@ Quindi, $0≤H(S)≤\log m$ (l'upper limit è raggiunto se i simboli sono equipr
 
 #### Notazioni
 
+^4a0ca6
+
 - $r$ symbol rate (symboli/sec)
 	- È la quantità di simboli dell'alfabeto sorgente trasmessi al secondo.
 - $R$ information rate (bit/sec)

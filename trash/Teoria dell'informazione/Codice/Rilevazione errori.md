@@ -4,7 +4,7 @@ In un codice a blocchi di dimensione $n$, ci sono $k$ bit sono utilizzati per il
 - Codici a ripetizione
 - Codici a controllo di parità
 
-Code rate: $R_C=\frac{k}{n}$
+[[Informazione#^4a0ca6|Information rate]]: $R=\frac{k}{n}$
 
 Questi bit di ridondanza fanno sì che non tutte le parole di codice siano valide.
 Questa fa sì che ci sia *distanza* tra le parole.
@@ -15,7 +15,7 @@ Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
 >[!info]
 >### Limite di Hamming
 >
->Dato $t$ il numero massimo di errori che si possono correggere in un codice binario:
+>Dato $t$ il numero massimo di errori che si possono correggere in un codice binario, è necessario (ma non sufficiente):
 >$$2^k≤\frac{2^n}{∑\limits_{i=0}^t\binom{n}{i}}$$
 
 ### Codice lineare
