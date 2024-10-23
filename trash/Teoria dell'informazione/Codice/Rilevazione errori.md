@@ -16,7 +16,13 @@ Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
 >### Limite di Hamming
 >
 >Dato $t$ il numero massimo di errori che si possono correggere in un codice binario, è necessario (ma non sufficiente):
->$$2^k≤\frac{2^n}{∑\limits_{i=0}^t\binom{n}{i}}$$
+>$$2^k=2^{nR}≤\frac{2^n}{∑\limits_{i=0}^t\binom{n}{i}}$$
+>
+>Si può scrivere anche come:
+>$$2^{n-k}≥∑\limits_{i=0}^t\binom{n}{i}$$
+>
+>Oppure:
+>$$R≤1-\frac{1}{n}\log_2(∑\limits_{i=0}^t\binom{n}{i})$$
 
 ### Codice lineare
 
