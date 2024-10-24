@@ -30,9 +30,10 @@ Data $d_{min}$ la distanza minima, e $t$ il numero di errori nella parola:
 >$$2^{n-k}>∑\limits_{i=0}^{2t-1}\binom{n-1}{i}$$
 >
 >Dimostrazione: https://math.stackexchange.com/questions/1817688/gilbert-varshamov-bound
->
->Quindi, è sufficiente avere un numero di bit di ridondanza limitato a:
->$$n-k≤⌊1+\log_2(∑\limits_{i=0}^{2t-1}\binom{n-1}{i})⌋$$
+
+
+Esistono sempre codici per cui:
+$$⌈log_2(∑\limits_{i=0}^t\binom{n}{i})⌉≤n-k≤⌊1+\log_2(∑\limits_{i=0}^{2t-1}\binom{n-1}{i})⌋$$
 
 ### Codice lineare
 
