@@ -63,9 +63,10 @@ Per la correzione, dato che $|S|<|E|$, ci sono diversi possibili vettori di erro
 Codice lineare con le seguenti proprietà ($q=n-k$):
 - $q≥3$
 - $2^q≥n+1$
+	- Se c'è uguaglianza, il codice è *perfetto*.
 In questo modo, $d_{min}≥3$
 
->[!info]
+>[!note]
 >Per rispettare queste proprietà nella matrice generatrice, è necessario e sufficiente che ogni riga di $G$, e ogni combinazione lineare di ogni riga di $G$, abbia almeno 3 bit $1$.
 
 ### Codice sistematico
