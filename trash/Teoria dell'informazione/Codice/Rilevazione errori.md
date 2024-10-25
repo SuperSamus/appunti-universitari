@@ -75,7 +75,11 @@ Nel blocco, i $k$ bit del messaggio vengono tutti prima dei $n-k$ bit di ridonda
 
 La matrice generatrice è nel formato $G=[I_k,P]$, mentre la matrice di controllo parità è $H=[P^T,I_q]$.
 
-Dato un codice lineare, esiste sempre un codice sistematico con capacità equivalenti.
+Dato un codice lineare $C$, esiste sempre un codice sistematico $C'$ con capacità equivalenti. Si può ottenere:
+1) Permutando le righe
+2) Sostituendo una riga con la somma di questa riga e un'altra
+3) Permutando le colonne
+Con 1 e 2, il $C=C'$ (come insieme di parole finali), mentre con 3 non lo è.
 
 ### Codice ciclico
 
