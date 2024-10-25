@@ -127,9 +127,9 @@ $$H=\begin{bmatrix}h_k&h_{k-1}&…&h_0&0&0&…&0\\0&h_k&…&h_1&h_0&0&…&0\\⫶
 Dato $Y(p)=X(p)+E(p)$, con $E(p)$ l'errore causato dal rumore, si ha la *sindrome*:
 $S(p)=Y(p) \mod G(p)$
 
-Data $e$ la capacità di correzione errori del codice, se $w(S(p))≤e$, allora $S(p)=E(p)$.
+Data $t$ la capacità di correzione errori del codice, se $w(S(p))≤t$, allora $S(p)=E(p)$.
 
-Nota che la dimensione della sindrome è di $n-k$, quindi i bit "coperti" dalla sindrome solo parziali (se il codice è sistematico, sono quelli di parità). Se gli errori sono da qualche altra parte, la condizione sopra non sarà soddisfatta. Il codice è ciclico: si può ruotare finché non si trova un codice che soddisfa la condizione sopra.
+Nota che la dimensione della sindrome è di $n-k$, quindi i bit "coperti" dalla sindrome sono solo alcuni (se il codice è sistematico, sono quelli di parità). Se gli errori sono da qualche altra parte, la condizione sopra non sarà soddisfatta. Il codice è ciclico: si può ruotare finché non si trova un codice che soddisfa la condizione sopra.
 
 #### Codice ciclico sistematico
 
