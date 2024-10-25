@@ -122,6 +122,9 @@ $X(p)H(p)=0\mod (p^n+1)$
 L'equivalente matrice di parità è (1° algoritmo, non sistematico):
 $$H=\begin{bmatrix}h_k&h_{k-1}&…&h_0&0&0&…&0\\0&h_k&…&h_1&h_0&0&…&0\\⫶\\0&0&…&0&h_k&h_{k-1}&…&h_0\end{bmatrix}$$
 
+Il motivo per cui i coefficienti sono "al contrario", è perché dato che $G(p)H(p)=p^n+1$, si vuole che:
+$∑\limits_{i=0}^{c}g_ih_{c-i}=0$
+
 ##### Sindrome
 
 Dato $Y(p)=X(p)+E(p)$, con $E(p)$ l'errore causato dal rumore, si ha la *sindrome*:
@@ -140,7 +143,7 @@ Dato che $X(p)=Q_M(p)G(p)$, allora:
 - $\frac{p^qM(p)}{G(p)}=Q_M(p)+\frac{C(p)}{G(p)}$
 - $C(p)=⌊p^qM(p)⌋ \mod G(p)$
 
-Con questo, è possibile generare una matrice generatrice: basta fare questa operazione per tutti i messaggi da un bit ($I_k)$, e i vari resti sono le righe per $P$.
+Con questo, è possibile generare una matrice generatrice (2° algoritmo, sistematico): basta fare questa operazione per tutti i messaggi da un bit ($I_k)$, e i vari resti sono le righe per $P$.
 
 ## Codice convoluzionale
 
