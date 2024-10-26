@@ -10,6 +10,7 @@ In un *canale discreto senza memoria tempo-invariante*, la probabilità che un $
 
 Date due sorgenti, $X$ e $Y$, con $k$ e $h$ possibili uscite rispettivamente:
 $H(X,Y)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log p(x_i,y_j)≤H(X)+H(Y)$
+Con uguaglianza se sono indipendenti.
 
 La disuguaglianza è dovuta dal [[Informazione#^aae359|lemma del logaritmo]]:
 - $H(X)=-∑\limits_{i=1}^kp(x_i)\log p(x_i)=-∑\limits_{i=1}^k(∑\limits_{j=1}^hp(x_i,y_j))\log p(x_i)$
