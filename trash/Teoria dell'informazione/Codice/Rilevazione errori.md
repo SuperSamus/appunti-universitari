@@ -122,8 +122,9 @@ $X(p)H(p)=0\mod (p^n+1)$
 L'equivalente matrice di parità è (1° algoritmo, non sistematico):
 $$H=\begin{bmatrix}h_k&h_{k-1}&…&h_0&0&0&…&0\\0&h_k&…&h_1&h_0&0&…&0\\⫶\\0&0&…&0&h_k&h_{k-1}&…&h_0\end{bmatrix}$$
 
-Il motivo per cui i coefficienti sono "al contrario", è perché dato che $G(p)H(p)=p^n+1$, si vuole che:
-$∑\limits_{i=0}^{c}g_ih_{c-i}=0$
+Il motivo per cui i coefficienti sono "al contrario", è perché dato che $G(p)H(p)=p^n+1$, abbiamo tutti gli altri termini uguali a 0:
+$∑\limits_{i=0}^{\min\{s,q\}}g_ih_{s-i}=0\quad ∀0<s<n$
+(Con $h_j=0$ se $j>k$)
 
 ##### Sindrome
 
