@@ -21,6 +21,8 @@ Quindi, c'è uguaglianza se e solo se $X$ e $Y$ sono indipendenti.
 
 ### Entropia condizionata
 
+^48225d
+
 $H(X|Y)=-∑\limits_{j=1}^hp(y_j)H(X|Y=y_j)=-∑\limits_{i=1}^k∑\limits_{j=1}^hp(x_i,y_j)\log(p(x_i|y_j))$
 - $H(X,Y)=H(X)+H(Y|X)$
 - $H(X,Y)=H(Y)+H(X|Y)$
