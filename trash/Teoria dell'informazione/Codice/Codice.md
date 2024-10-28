@@ -27,31 +27,6 @@ $H(S)=-∑\limits_{i=1}^mp_i\log p_i≤-∑\limits_{i=1}^mp_i\log d^{-l_i}=∑\l
 
 Si ha quindi un codice assolutamente ottimo se e solo se $∀i\:p_i=d^{-l_i}$.
 
-#### Codifica di Shannon
-
-La codifica di Shannon consiste nell'avere per ogni parola del codice $l_i=⌈-\log_d(p_i)⌉$.
-
-Anche nel caso in cui il codice non può essere assolutamente ottimo, può però sempre soddisfare:
-$H(S)≤L(S)<H(S)+1$.
-
-Dimostrazione:
-- $-\log_d(p_i)≤l_i=⌈-\log_d(p_i)⌉<-\log_d(p_i)+1$
-	-  $-\log_d(p_i)≤l_i$
-	- $d^{-l_i}≤p_i$
-	- $∑\limits_{i=1}^md^{-l_i}≤1$
-- Moltiplica tutto per $p_i$:
-	- $-p_i\log_d(p_i)≤p_il_i<-p_i\log_d(p_i)+p_i$
-- Somma per ogni $i$:
-	- $-∑\limits_{i=1}^mp_i\log_d(p_i)≤∑\limits_{i=1}^mp_il_i≤-∑\limits_{i=1}^mp_i\log_d(p_i)+∑\limits_{i=1}^mp_i$
-	- Da qui si ottiene la tesi.
-
-Questo però non è ottimo, diversamente dalla [[Codifiche#^d3a9e9|codifica di Huffman]].
-
->[!info]
->##### Estensione
->Data una sorgente $S'$, che ha gli stessi simboli di $S$ raggruppati in sequenze di lunghezza $n$:
->$H(S')≤L(S')<H(S')+\frac{1}{n}$
-
 ## Univocamente decifrabile
 
 Se non c'è un carattere separatore, un codice potrebbe essere *ambiguo*. Si vuole che il codice sia *univocamente decifrabile* (UD).
