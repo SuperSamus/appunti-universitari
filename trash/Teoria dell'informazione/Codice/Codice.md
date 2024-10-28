@@ -29,9 +29,9 @@ Si ha quindi un codice assolutamente ottimo se e solo se $∀i\:p_i=d^{-l_i}$.
 
 #### Codifica di Shannon
 
-La codifica di Shannon consiste nell'avere per ogni parola del codice $⌈-\log_d(p_i)⌉=l_i$.
+La codifica di Shannon consiste nell'avere per ogni parola del codice $l_i=⌈-\log_d(p_i)⌉$.
 
-Anche se il codice non può essere assolutamente ottimo, può però sempre soddisfare:
+Anche nel caso in cui il codice non può essere assolutamente ottimo, può però sempre soddisfare:
 $H(S)≤L(S)<H(S)+1$.
 
 Dimostrazione:
