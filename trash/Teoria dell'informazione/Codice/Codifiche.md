@@ -1,7 +1,10 @@
 ### Codice di Shannon-Fano
 
-Per costruire il codice, i simboli vengono divisi in 2 gruppi tali che la somma delle probabilità siano quasi identiche. Per i simboli del primo gruppo il codice comincerà con $0$, mentre nel secondo gruppo con $1$.
-Il processo viene ripetuto, finché i "gruppi" non saranno composti da un solo simbolo.
+Per costruire il codice, i simboli:
+1. Sono ordinati in modo non decrescente.
+2. Sono divisi in 2 gruppi tali che la somma delle probabilità siano quasi identiche.
+	- Per i simboli del primo gruppo il codice comincerà con $0$, mentre nel secondo gruppo con $1$.
+Il processo viene ripetuto per ogni gruppo, finché i non saranno tutti composti da un solo simbolo.
 
 Non è ottimale.
 
