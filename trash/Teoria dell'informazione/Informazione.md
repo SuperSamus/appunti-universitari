@@ -60,10 +60,10 @@ $R=rH(S)=r_bΩ(p)≤r_b$
 (Vedere [[Canale#^48225d|Entropia condizionata]])
 
 La formula precedente per l'entropia assume che la sorgente $S$ sia senza memoria. La vera formula è:
-$H(S)=\lim\limits_{n→∞}\frac{1}{n}H(X_1,…,X_n)=\lim\limits_{n→∞}\frac{1}{n}∑\limits_{\overrightarrow{a}∈Σ^{(n)}}p(\overrightarrow{a})\log (p(\overrightarrow{a}))$
-dove $Σ^{(n)}$ rappresenta l’insieme di stringhe formate da $n$ simboli dell'alfabeto $Σ$ e $p(\overrightarrow{a})$, con $\overrightarrow{a}∈Σ^{(n)}$, rappresenta la probabilità che $n$ simboli consecutivi emessi da $S$ siano uguali a $\overrightarrow{a}$.
+$H(S)=\lim\limits_{n→∞}\frac{1}{n}H(S_1,…,S_n)=\lim\limits_{n→∞}\frac{1}{n}∑\limits_{\overrightarrow{a}∈Σ^{(n)}}p(\overrightarrow{a})\log (p(\overrightarrow{a}))$
+dove $Σ^{(n)}$ rappresenta l’insieme di stringhe formate da $n$ simboli dell'alfabeto $Σ$ e $p(\overrightarrow{a})$ rappresenta la probabilità che $n$ simboli consecutivi emessi da $S$ siano uguali a $\overrightarrow{a}$.
 
-Alternativamente: $H(S)=H(X_n|X_{n-1},…,X_0)$
+Alternativamente: $H(S)=H(S_n|S_{n-1},…,S_0)$
 
 Una formula del genere è difficile da calcolare nella realtà per via del limite verso l'infinito.
 
