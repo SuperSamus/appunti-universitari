@@ -206,6 +206,14 @@ Il dizionario può essere implementato con un albero.
 Rispetto a LZ77, la decodifica è più lenta.
 Inoltre, funziona male in situazioni a entropia molto bassa: non si comporta bene se c'è una lunga sequenza ripetuta tante volte (dato che nel dizionario la frase deve essere completa, potrebbe non riuscire a costruire quella sequenza come si deve).
 
+##### LZW
+
+Variante di LZ78, dove la codifica usa solo indici del dizionario.
+Il dizionario viene inizializzato con ogni carattere dell'alfabeto.
+Durante la codifica, viene usata uno `stream` per gli ultimi caratteri letti. Chiamando `c` il prossimo carattere:
+-  Se `stream + c` è già parte del dizionario, allora `stream = stream + c`.
+- Altrimenti, *prima* `stream` è codificato come indice nell'output, *poi* viene aggiunto `stream + c` nel dizionario, e infine `stream = c`.
+
 ### Run Length Encoding
 
 Frequentemente utilizzato per le [[Informazione#^87a4de|sorgenti con memoria]].
