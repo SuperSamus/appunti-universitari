@@ -65,10 +65,7 @@ dove $Σ^{(n)}$ rappresenta l’insieme di stringhe formate da $n$ simboli dell'
 
 Alternativamente: $H(S)=H(S_n|S_{n-1},…,S_0)$
 
-Una formula del genere è difficile da calcolare nella realtà per via del limite verso l'infinito.
-
-Per un *modello markoviano* di ordine $k$, si intendono le sorgenti dove le probabilità dei simboli dipendono dai $k$ simboli che lo hanno preceduto:
-$H_k(S)=∑\limits_{\overrightarrow{a}∈Σ^{(k)}}p(\overrightarrow{a})H(S|\overrightarrow{a})$
+Una formula del genere è difficile da calcolare nella realtà per via del limite verso l'infinito. Per un *modello markoviano* di ordine $k$, si intendono le sorgenti dove le probabilità dei simboli dipendono dai $k$ simboli che lo hanno preceduto, quindi come sopra ma con $n-1=k$.
 
 ### Teoremi di Shannon
 
