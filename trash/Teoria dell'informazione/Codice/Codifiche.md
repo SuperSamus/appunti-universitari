@@ -211,8 +211,8 @@ Inoltre, funziona male in situazioni a entropia molto bassa: non si comporta ben
 Variante di LZ78, dove la codifica usa solo indici del dizionario.
 Il dizionario viene inizializzato con ogni carattere dell'alfabeto.
 Durante la codifica, viene usata uno `stream` per gli ultimi caratteri letti. Chiamando `c` il prossimo carattere:
--  Se `stream + c` è già parte del dizionario, allora `stream = stream + c`.
-- Altrimenti, *prima* `stream` è codificato come indice nell'output, *poi* viene aggiunto `stream + c` nel dizionario, e infine `stream = c`.
+- Se `stream + c` è già parte del dizionario, allora `stream = stream + c`.
+- Altrimenti, `stream` è codificato come indice nell'output, viene aggiunto `stream + c` nel dizionario, e infine `stream = c`.
 
 ### Run Length Encoding
 
