@@ -161,12 +161,7 @@ Se si vuole quindi cercare un pattern $P$, basterà fare una ricerca binaria, e 
 Problema: questa struttura è pesante, dati che gli indici pesano (almeno) 4 byte, in confronto al (di solito) singolo byte del carattere. Si moltiplica lo spazio usato per 5!
 Soluzione: con il BWT si ha una struttura compressa $L$ da cui si può ottenere i suffissi ordinati $F$. Anche se non ritorna gli indici, permette comunque di ottenere il testo intorno al pattern.
 
-### Distance coding (DC)
-
-Una codifica che per ogni parola d'ingresso, emette la distanza dalla precedente occorrenza dello stesso simbolo (se è la prima volta che compare, assumi che il testo sia cominciato digitando ordinatamente l'alfabeto).
-Difetto: è possibile che la distanza sia maggiore del numero di simboli dell'alfabeto
-
-#### Move-to-Front (MTF)
+### Move-to-Front (MTF)
 
 Una codifica che, dato un alfabeto ordinato, rimpiazza i simboli con un vettore di interi che rappresentano l'index $X$ dei "simboli usati recentemente".
 - Inizializza $X$ con l'alfabeto ordinato
@@ -176,7 +171,7 @@ Una codifica che, dato un alfabeto ordinato, rimpiazza i simboli con un vettore 
 
 Dopo la codifica, i numeri più piccoli sono i più probabili.
 
-##### Codifica gamma
+#### Codifica gamma
 
 Se si vuole utilizzare la codifica MTF come compressione direttamente, si usa la codifica gamma.
 Il suo scopo per codificare numeri positivi in un numero di bit non fisso (così che i numeri più piccoli richiedano meno bit per essere rappresentati).
