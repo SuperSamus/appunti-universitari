@@ -150,10 +150,10 @@ Con questo, è possibile generare una matrice generatrice (2° algoritmo, sistem
 
 Codice che ogni $k$ bit di input:
 - Prende gli ultimi $kL$ bit di input ricevuti
-- Il generatore è una serie di $n<k$ somme di modulo 2: ciascuna, prende specifici ultimi $i$-esimi bit di input
+- Il generatore è una serie di $n≥k$ somme di modulo 2: ciascuna, prende specifici ultimi $i$-esimi bit di input
 - Restituisce $n$ bit di output
 
-La codifica è facile, ma la decodifica non lo è. Questo tipo di codice è una buona idea, se l'input viene generato da un dispositivo poco potente, ma decodificato da un dispositivo potente.
+La codifica è facile, ma la decodifica non lo è. Questo tipo di codice è pensato per il caso in cui l'input viene generato da un dispositivo poco potente ma decodificato da un dispositivo potente.
 
 Per via della memoria di dimensione $L$, si può rappresentare questo sistema come una macchina di stati (con $2^{L-1}$ stati), le cui transizioni si possono a loro volta rappresentare come un traliccio.
 
