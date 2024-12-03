@@ -22,9 +22,19 @@ Lo stress non è grave di per sé, è affrontarlo male che causa problemi.
 - Decision making
 - Coping strategies
 
-**Intelligenza emotiva**
-
 ### Intelligenza emotiva e self empowerment
+
+Intelligenza emotiva**
+> Capacità di riconoscere i nostri sentimenti e quelli degli altri, di motivarci e di gestire bene le emozioni dentro di noi e dei nostri rapporti.
+ 
+\- Daniel Goleman
+
+- Autocoscienza
+- Gestione delle emozioni
+	- Es: rabbia, ti consuma energia per "difenderti". Perché mi sta venendo? È giustificato? Posso risolvere il conflitto (es. comunicando con la fonte della rabbia)?
+- Motivare se stessi
+- Riconoscere le emozioni degli altri
+- Gestione delle relazioni
 
 ### Interessi, valori, punti di forza e loro potenziamento
 
