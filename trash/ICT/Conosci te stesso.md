@@ -24,7 +24,7 @@ Lo stress non è grave di per sé, è affrontarlo male che causa problemi.
 
 ### Intelligenza emotiva e self empowerment
 
-Intelligenza emotiva**
+Intelligenza emotiva
 > Capacità di riconoscere i nostri sentimenti e quelli degli altri, di motivarci e di gestire bene le emozioni dentro di noi e dei nostri rapporti.
  
 \- Daniel Goleman
