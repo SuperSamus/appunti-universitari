@@ -1,4 +1,5 @@
 ### Assertività
+
 - La capacità di difendere i propri interessi portando a favore una situazione senza prevaricare né essere prevaricati.
 - Esprimere i propri pensieri, affermare il proprio punto di vista
 Il tutto con disinvoltura, empatia, rispetto dell'altro.
@@ -17,3 +18,10 @@ Il tutto con disinvoltura, empatia, rispetto dell'altro.
 - Esplode in situazioni frustranti
 - Mette a disagio a gli altri e li offende
 - Non ascolta e impone la propria visione
+
+**Passivo-aggressivo**
+- Evita il confronto, ghosting
+- Risponde in modo sarcastico
+- Atteggiamento polemico
+- In accordo, ma evita di fare quello che si accorda
+- Sfoga le emozioni dietro una maschera di indifferenza

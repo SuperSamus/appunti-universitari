@@ -26,7 +26,7 @@ Lo stress non è grave di per sé, è affrontarlo male che causa problemi.
 
 Intelligenza emotiva
 > Capacità di riconoscere i nostri sentimenti e quelli degli altri, di motivarci e di gestire bene le emozioni dentro di noi e dei nostri rapporti.
- 
+
 \- Daniel Goleman
 
 - Autocoscienza
@@ -37,4 +37,3 @@ Intelligenza emotiva
 - Gestione delle relazioni
 
 ### Interessi, valori, punti di forza e loro potenziamento
-
