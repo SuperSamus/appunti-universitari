@@ -164,7 +164,7 @@ Per via della memoria di dimensione $L$, si può rappresentare questo sistema co
 
 #### Algoritmo di Viterbi
 
-Algoritmo di decodifica che, ricevuto un messaggio modificato dal rumore, cerca il percorso con la distanza minima.
+Algoritmo di decodifica che cerca il percorso con la distanza minima rispetto al messaggio ricevuto (modificato dal rumore).
 Il miglior algoritmo in termini di accuratezza, ma il peggiore in termini di performance: il numero di percorsi equivale a $2^L$, quindi il tempo necessario per la decodifica cresce esponenzialmente all'aumentare di $L$.
 
 Dato che certi percorsi si ricongiungono, è possibile tagliare via quelli meno probabili.
@@ -174,10 +174,10 @@ Per risparmiare memoria, i passaggi "vecchi" si possono decodificare quando, dop
 
 Per ogni passo, viene scelto il percorso con la metrica migliore. Si però il percorso si rivela troppo improbabile, viene fatto backtracking.
 
-Il valore atteso della metrica al nodo $i-esimo$ è $ikP_{be}$. Se viene superata la soglia $ikP_{be}+Δ$, viene eseguito il backtracking.
+Data $P_{be}$ la probabilità di errore per ogni bit, il valore atteso della metrica al nodo $i-esimo$ è $ikP_{be}$. Se viene superata la soglia $ikP_{be}+Δ$, viene eseguito il backtracking.
 
 - $Δ$ troppo alto: rischio di tenere un percorso sbagliato
-- $Δ$ troppo basso: il backtracking viene fatto così frequentemente, che si perde più tempo rispetto all'algoritmo di Viterbi.
+- $Δ$ troppo basso: il backtracking viene fatto così frequentemente che si perde più tempo rispetto all'algoritmo di Viterbi.
 
 #### Decodifica a retroazione
 
