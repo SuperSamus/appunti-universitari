@@ -16,3 +16,12 @@ Resilienza:
 - Tolleranza alla frustrazione
 - Ristrutturazione cognitiva
 
+Adattabilità:
+1. Comprendiamo bene il problema
+2. Capiamo cosa genera il problema
+3. Individuiamo la miglior azione per la risoluzione del problema
+4. Agiamo e verifichiamo i risultati
+
+**Tolleranza alla frustrazione**: va allenata con trial and error
+
+Una parte della **creatività** è la *flessibilità*.
