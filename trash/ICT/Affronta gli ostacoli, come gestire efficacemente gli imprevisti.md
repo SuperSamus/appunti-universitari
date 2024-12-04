@@ -25,3 +25,13 @@ Adattabilità:
 **Tolleranza alla frustrazione**: va allenata con trial and error
 
 Una parte della **creatività** è la *flessibilità*.
+
+### Coping
+(Lazarus e Folkman): come affrontare le difficoltà:
+- Coping orientato al problema
+- Coping orientato all'emotività
+
+- Evitamento
+- Dissociazione
+- Scaricamento
+- Ruminazione
