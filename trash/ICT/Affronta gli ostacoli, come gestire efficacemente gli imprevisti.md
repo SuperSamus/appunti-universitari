@@ -35,3 +35,24 @@ Una parte della **creatività** è la *flessibilità*.
 - Dissociazione
 - Scaricamento
 - Ruminazione
+
+**Bias cognitivi**, per farti prendere una decisione più velocemente (meccanismo difensivo):
+- Bias di conferma
+- Bias effetto galatea
+- Bias della negatività
+- Bias dell'euristica dell'influenza
+
+Ristrutturare i bias:
+- Trovare alternative
+- Imparare ad adottare altri punti di vista
+
+- Pensiero catastrofico
+- Generalizzazione eccessiva
+- Etichettatura
+- Filtro mentale
+- Personalizzazione
+- Lettura del pensiero
+- Profezia che si auto-avvera
+- Esagerazione del negativo
+- Bianco-nero
+- Minimizzazione del positivo
