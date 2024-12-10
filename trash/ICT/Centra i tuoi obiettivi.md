@@ -22,3 +22,15 @@ Perfezionismo
 - Rigidità
 - Alte aspettative
 - Attenzione ai dettagli
+
+Is it good enough? It is good. Enough.
+Ambizione ≠ Superbia
+
+
+Procrastinazione:
+- Evitante
+- Tutto-o-niente
+- Passivo-aggressivo
+- Disorganizzato
+- Edonista
+- Perfezionista
