@@ -34,3 +34,8 @@ Procrastinazione:
 - Disorganizzato
 - Edonista
 - Perfezionista
+
+ Routine: aumenta la produttività eliminando la necessità di prendere decisioni, che toglie energie.
+
+> Si faccia una vita interiore - di studio, di affetti, d'interessi umani che non siano solamente di "arrivare", ma di "essere" - e vedrà che la vita avrà un significato.
+
