@@ -11,3 +11,13 @@ Il colloquio inizia dalla telefonata.
 L'abito fa il monaco. Si preferisci la neutralità.
 
 Presentarsi 10 minuti prima.
+
+- Contatto oculare
+- Contatto umano
+- Eventuali indicazioni
+- Assertività
+	- Ci sono recruiter che fanno intenzionalmente i polemici per "metterti alla prova"
+
+- Essere se stessi
+- Essere onesti
+- Essere assertivi
