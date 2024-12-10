@@ -31,6 +31,7 @@ Una parte della **creatività** è la *flessibilità*.
 - Coping orientato al problema
 - Coping orientato all'emotività
 
+Strategie disfunzionali:
 - Evitamento
 - Dissociazione
 - Scaricamento
