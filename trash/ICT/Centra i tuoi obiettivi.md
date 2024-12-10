@@ -8,3 +8,17 @@ Influenza esterne: per chi/cosa lo scelgo/faccio?
 | Intrinseca |             |           |
 | Estrinseca |             |           |
 Per esempio, il sorriso della madre è fortissima fonte di motivazione estrinseca. Idem l'approvazione sociale.
+
+Raggiungimento obiettivi: metodologia SMART
+- Specific
+- Measurable
+- Achievable
+- Realistic
+- Time-based
+
+
+Perfezionismo
+- Doverizzazione
+- Rigidità
+- Alte aspettative
+- Attenzione ai dettagli
