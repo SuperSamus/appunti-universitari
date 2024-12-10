@@ -7,3 +7,7 @@ Cosa fare prima dei colloqui
 - Studiare la job description
 
 Il colloquio inizia dalla telefonata.
+
+L'abito fa il monaco. Si preferisci la neutralità.
+
+Presentarsi 10 minuti prima.
