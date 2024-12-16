@@ -43,7 +43,7 @@ Emittente --> Messaggio --> Destinatario
 - Tono di voce
 - Tieni la giusta distanza dal microfono
 
-Rit### Comunicazione verbale mo:
+Ritmo:
 - Non troppo veloce, non troppo lento
 - Fare le pause giuste
 - Non "comprimere" i discorsi quando manca poco tempo
@@ -54,5 +54,18 @@ Abbigliamento
 
 - Font
 - Colori (contrasto)
+- Se possibile, evita testo e comunica graficamente
 
 ### Esempi di presentazioni
+
+Testi di laurea
+- *4 minuti* indice
+- *6 minuti* descrizione ricerca e illustrazione lavoro
+- *5 minuti* Conclusioni e riassunto
+
+Elevator pitch, 5 slide in 5 minuti:
+- Presentati
+- Spiega il problema
+- Spiega la soluzione
+- Condividi la tua proposta di valore (cioè, è superiore rispetto a quello che c'è sul mercato)
+- Aggiungi un invito all'azione (ho bisogno di soldi, lavoratori...)
