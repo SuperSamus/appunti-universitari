@@ -1,3 +1,5 @@
+### Comunicazione verbale
+
 > Parlare in pubblico è una forma di espressione personale e ciò che qualifica chi lo fa non è tanto il fatto di parlare, quanto l'**argomento** cui parla.
 \- Scott Berkun
 
@@ -18,6 +20,7 @@
 **Gestione del tempo**:
 - Fare il numero slide appropriate (e.g. mediamente una slide per minuto)
 - Allenarsi a casa, monitorando il tempo.
+
 #### Modello di Jakobson
 
 ```mermaid
@@ -35,10 +38,21 @@ end
 Emittente --> Messaggio --> Destinatario
 ```
 
-### Comunicazione verbale e non verbale
+### Comunicazione non verbale
 
+- Tono di voce
+- Tieni la giusta distanza dal microfono
 
+Rit### Comunicazione verbale mo:
+- Non troppo veloce, non troppo lento
+- Fare le pause giuste
+- Non "comprimere" i discorsi quando manca poco tempo
+
+Abbigliamento
 
 ### Come fare le slide
+
+- Font
+- Colori (contrasto)
 
 ### Esempi di presentazioni
