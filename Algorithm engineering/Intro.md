@@ -28,3 +28,7 @@ Let's say you get a machine that is $k$ times faster. How much slower is the old
 - $T_1(n)=n\quad n=t→n'=kt$
 - $T_2(n)=n^2\quad n=\sqrt{t}→n'=\sqrt{kt}$
 - $T_3(n)=2^n\quad \log_2 n=t→n'=\log_2 k+\log_2 t$
+
+Given a random disk access, the probability of needing an I/O read if the disk is $ε$ times bigger than memory, is $p(ε)=\frac{εM}{(1+ε)M}=\frac{ε}{1+ε}$
+
+If the cost of a disk access is $c$, the cost of a regular operation is $1$, and the ratio of memory operations is $a$, the formula of slowdown due to reads is $(1-a)·1+a[(1-p(ε))·1+p(ε)·c]≃a·p(ε)·c$
