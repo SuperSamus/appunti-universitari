@@ -30,8 +30,8 @@ How to solve the I/O problem? Let's make permutation a sorting problem.
 Explanation of Sort I/O, for k-way mergesort:
 - $\frac{n}{B}$: Scan items
 - $\log_k\frac{n}{M}$: Phases passes
-	- The optimal $k$ is $\frac{M}{B}$
-	- To achieve $\frac{n}{M}$ instead of $\frac{n}{B}$:
+	- The optimal $k$ is $\frac{M}{B}$ (-1, since mergesort isn't in-place)
+	- To achieve $\frac{n}{M}$ instead of $\frac{n}{B}$, start by:
 		- Fetch as much as it fits on memory ($\frac{M}{B}$ reads)
 		- Sort "normally"
 		- Write back to disk ($\frac{M}{B}$ writes)
