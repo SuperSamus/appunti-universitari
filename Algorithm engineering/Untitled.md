@@ -27,9 +27,15 @@ How to solve the I/O problem? Let's make permutation a sorting problem.
 5. Sort by destination $→<C,1><A,2><B,3><D,4>$
 6. Scan $→CABD$
 
-Explanation of Sort I/O, in multi-way mergesort:
+Explanation of Sort I/O, for k-way mergesort:
 - $\frac{n}{B}$: Scan items
-- $\log_{\frac{M}{B}}\frac{n}{M}$: Phases passes
-($\frac{n}{M}$ is sometimes $\frac{n}{B}$ instead)
+- $\log_k\frac{n}{M}$: Phases passes
+	- The optimal $k$ is $\frac{M}{B}$
+	- To achieve $\frac{n}{M}$ instead of $\frac{n}{B}$:
+		- Fetch as much as it fits on memory ($\frac{M}{B}$ reads)
+		- Sort "normally"
+		- Write back to disk ($\frac{M}{B}$ writes)
+		- Repeat until all of $n$ is sorted in each "block of memory"
+(Regular mergesort is $\frac{n}{B}\log_2 \frac{n}{B}$)
 
 $\text{Permuting}=\text{Sorting}⟺\frac{n}{B}\log_{\frac{M}{B}}\frac{n}{M}≤n⟺B≥\log_{\frac{M}{B}}\frac{n}{M}$
