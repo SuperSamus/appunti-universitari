@@ -17,6 +17,7 @@ def permutation(s, π):
 | ---- | ----------- | ------------------------------------------ |
 | RAM  | $n$         | $n\log n$                                  |
 | Disk | $n$ (worst) | $\frac{n}{B}\log_{\frac{M}{B}}\frac{n}{M}$ |
+(See [[Intro#External memory model]])
 How to solve the I/O problem? Let's make permutation a sorting problem.
 
 1. Scan $S→<A,1><B,2><C,3><D,4>$
@@ -30,3 +31,5 @@ Explanation of Sort I/O, in multi-way mergesort:
 - $\frac{n}{B}$: Scan items
 - $\log_{\frac{M}{B}}\frac{n}{M}$: Phases passes
 ($\frac{n}{M}$ is sometimes $\frac{n}{B}$ instead)
+
+$\text{Permuting}=\text{Sorting}⟺\frac{n}{B}\log_{\frac{M}{B}}\frac{n}{M}≤n⟺B≥\log_{\frac{M}{B}}\frac{n}{M}$
