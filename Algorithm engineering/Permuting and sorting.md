@@ -17,7 +17,7 @@ def permutation(s, π):
 | ---- | ----------- | ------------------------------------------ |
 | RAM  | $n$         | $n\log n$                                  |
 | Disk | $n$ (worst) | $\frac{n}{B}\log_{\frac{M}{B}}\frac{n}{M}$ |
-(See [[Intro#External memory model]])
+(See [[AE intro#External memory model]])
 How to solve the I/O problem? Let's make permutation a sorting problem.
 
 1. Scan $S→<A,1><B,2><C,3><D,4>$
