@@ -42,7 +42,7 @@ $p \text{ bad prime}\iff p\text{ divides }D=|k_1-k_2|$
 $k_1,k_2∈[0..2^n-1]⇒D∈[0..2^n-1]$
 
 Factorization of $D$ into primes
-$D=p_1^{e_1}\dot p_2^{e_2} ... p_2^{e_r}$
+$D=p_1^{e_1}⋅p_2^{e_2} ... p_2^{e_r}$
 
 $r?→ r<n\text{ as }p_i \geq 2$
 $r \geq n⇒D \geq2^n$, which is impossible
