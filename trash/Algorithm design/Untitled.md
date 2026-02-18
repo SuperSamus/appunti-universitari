@@ -35,7 +35,7 @@ Probability space is given by *all* primes in $[2..τ]$, the number of which is 
 Recall that $k_1,k_2∈[0..2^n]$
 
 >[!info]
->$\#\text{BAD primes }$dividing (k_1-k_2) is $\leq n$
+>$\#\text{BAD primes }$dividing $k_1-k_2$ is $\leq n$
 
 $k_1\%p=k_2\%p\iff (k_1-k_2)\%p=0$
 $p \text{ bad prime}\iff p\text{ divides }D=|k_1-k_2|$
