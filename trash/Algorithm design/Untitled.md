@@ -58,5 +58,4 @@ In our case, $Pr(\text{error})\leq \frac{n}{τ/\ln τ}\leq \frac{1}{n^c}$ with c
 
 $( n^{c+1}\leq \frac{τ}{\ln τ} \leq τ) ⇒ \text{fix }τ=n^{c+1}$
 
-
-String matching
+### String matching
